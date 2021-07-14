@@ -4,6 +4,12 @@
 local plugin, settings = plugin, settings
 
 local EngineFeatureModelPivotApi = game:GetEngineFeature("ModelPivotApi")
+-----------------------------------
+-------------FAST FLAGS------------
+-----------------------------------
+--local Flags =  script.Parent.Parent.Flags
+local getFFlagFixTransformScalingSpheresAndCylinders =
+	require(script.Parent.Flags.getFFlagFixTransformScalingSpheresAndCylinders)
 
 -----------------------------------
 -----------MODULE SCRIPTS----------
@@ -808,6 +814,36 @@ end
 local function resetDragger()
 	Adorn.resetDragger()
 end
+
+--[[
+	Makes spheres scale uniformly on all axes, and cylinders on YZ axes
+	Returns adjusted distance vector
+]]
+local function adjustScalingInCaseOfSpecialParts(part, dist, handle)
+	-- don't try to modify distance unless we're dealing with a part
+	-- also, we don't care about rotation and translation here
+	if not part:IsA("Part") or handle == T_Y_POS or handle == R_YZ or handle == R_XZ or handle == R_XY then
+		return dist
+	end
+
+	-- we hide all adornments except S_Y_POS when it's a sphere
+	if part.Shape == Enum.PartType.Ball then
+		local r = dist.Y
+		return handle == S_Y_POS  and Vector3.new(r, r, r) or dist
+	elseif part.Shape == Enum.PartType.Cylinder then
+		if handle == S_Y_POS then
+			local r = dist.Y
+			return Vector3.new(0, r, r)
+		else
+			-- all other adornments are in the XZ plane
+			local r = dist.Z
+			local h = dist.X
+			return Vector3.new(h, r, r)
+		end
+	end
+	--fallback for all other cases
+	return dist
+end
 ------------------------------------------------------------------------------------------
 ------------------------------Adornment Drag Part Update----------------------------------
 ------------------------------------------------------------------------------------------
@@ -1077,6 +1113,13 @@ function updatePart()
 			isPreviouslyColliding = true
 		end
 		invisiblePart.Parent = nil
+	end
+
+	-- Fast Flag for MOD-652
+	if (getFFlagFixTransformScalingSpheresAndCylinders()) then
+		-- prevents attmpets to scale cylinders and spheres unevenly by adjusting currentDist
+		-- to force uniform scaling on 2 or 3 axes
+		currentDist = adjustScalingInCaseOfSpecialParts(selectedPart, currentDist, currentHandle)
 	end
 
 	if currentHandle == S_Y_POS then

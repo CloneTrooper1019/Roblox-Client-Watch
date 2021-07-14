@@ -12,7 +12,9 @@ local Cryo = require(Plugin.Packages.Cryo)
 local Templates = require(Plugin.Src.Util.Templates)
 local SortAndSetTracks = require(Plugin.Src.Thunks.SortAndSetTracks)
 
-return function(instanceName, trackName, analytics)
+local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
+
+local function wrappee(instanceName, trackName, trackType, analytics)
 	return function(store)
 		local state = store:getState()
 		local status = state.Status
@@ -32,10 +34,25 @@ return function(instanceName, trackName, analytics)
 		local newTrack = Templates.trackListEntry()
 		newTrack.Name = trackName
 		newTrack.Instance = instanceName
+		if GetFFlagFacialAnimationSupport() then
+			newTrack.Type = trackType
+		end
 
 		local newTracks = Cryo.List.join(tracks, {newTrack})
 
 		store:dispatch(SortAndSetTracks(newTracks))
-		analytics:report("onTrackAdded", trackName)
+		if analytics then
+			analytics:report("onTrackAdded", trackName)
+		end
+	end
+end
+
+if GetFFlagFacialAnimationSupport() then
+	return function(instanceName, trackName, trackType, analytics)
+		return wrappee(instanceName, trackName, trackType, analytics)
+	end
+else
+	return function(instanceName, trackName, analytics)
+		return wrappee(instanceName, trackName, nil, analytics)
 	end
 end

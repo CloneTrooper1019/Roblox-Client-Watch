@@ -1,6 +1,7 @@
 return function()
 	local Plugin = script.Parent.Parent
 	local isEmpty = require(Plugin.Src.Util.isEmpty)
+	local Constants = require(Plugin.Src.Util.Constants)
 
 	local ValueChanged = require(Plugin.Src.Thunks.ValueChanged)
 	local DeleteSelectedKeyframes = require(Plugin.Src.Thunks.Selection.DeleteSelectedKeyframes)
@@ -8,7 +9,6 @@ return function()
 	local PasteKeyframes = require(Plugin.Src.Thunks.PasteKeyframes)
 
 	local Framework = require(Plugin.Packages.Framework)
-	local ContextServices = Framework.ContextServices
 
 	local Analytics = Framework.ContextServices.Analytics
 
@@ -20,12 +20,17 @@ return function()
 	local runTest = TestHelpers.runTest
 
 	local Templates = require(Plugin.Src.Util.Templates)
+
+	local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
+
 	local emptyData = Templates.animationData()
 	local testAnimationData = Templates.animationData()
+
 	testAnimationData.Instances = {
 		Root = {
 			Tracks = {
 				Head = {
+					Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 					Keyframes = {0, 1},
 					Data = {
 						[0] = {
@@ -37,6 +42,7 @@ return function()
 					},
 				},
 				UpperTorso = {
+					Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 					Keyframes = {0, 1},
 					Data = {
 						[0] = {
@@ -58,7 +64,11 @@ return function()
 			local analytics = Analytics.mock()
 
 			TestHelpers.loadAnimation(store, emptyData)
-			store:dispatch(ValueChanged("Root", "Head", 0, CFrame.new(), analytics))
+			if GetFFlagFacialAnimationSupport() then
+				store:dispatch(ValueChanged("Root", "Head", Constants.TRACK_TYPES.CFrame, 0, CFrame.new(), analytics))
+			else
+				store:dispatch(ValueChanged("Root", "Head", 0, CFrame.new(), analytics))
+			end
 			TestHelpers.delay()
 
 			local testTrack = TestPaths.getTrack(container, "Track_Head")
@@ -77,8 +87,13 @@ return function()
 			local container = test:getContainer()
 			local analytics = Analytics.mock()
 			TestHelpers.loadAnimation(store, emptyData)
-			store:dispatch(ValueChanged("Root", "Head", 0, CFrame.new(), analytics))
-			store:dispatch(ValueChanged("Root", "Head", 1, CFrame.new(), analytics))
+			if GetFFlagFacialAnimationSupport() then
+				store:dispatch(ValueChanged("Root", "Head", Constants.TRACK_TYPES.CFrame, 0, CFrame.new(), analytics))
+				store:dispatch(ValueChanged("Root", "Head", Constants.TRACK_TYPES.CFrame, 1, CFrame.new(), analytics))
+			else
+				store:dispatch(ValueChanged("Root", "Head", 0, CFrame.new(), analytics))
+				store:dispatch(ValueChanged("Root", "Head", 1, CFrame.new(), analytics))
+			end
 			TestHelpers.delay()
 
 			local testTrack = TestPaths.getTrack(container, "Track_Head")
@@ -95,8 +110,13 @@ return function()
 			local analytics = Analytics.mock()
 
 			TestHelpers.loadAnimation(store, emptyData)
-			store:dispatch(ValueChanged("Root", "Head", 0, CFrame.new(), analytics))
-			store:dispatch(ValueChanged("Root", "UpperTorso", 0, CFrame.new(), analytics))
+			if GetFFlagFacialAnimationSupport() then
+				store:dispatch(ValueChanged("Root", "Head", Constants.TRACK_TYPES.CFrame, 0, CFrame.new(), analytics))
+				store:dispatch(ValueChanged("Root", "UpperTorso", Constants.TRACK_TYPES.CFrame, 0, CFrame.new(), analytics))
+			else
+				store:dispatch(ValueChanged("Root", "Head", 0, CFrame.new(), analytics))
+				store:dispatch(ValueChanged("Root", "UpperTorso", 0, CFrame.new(), analytics))
+			end
 			TestHelpers.delay()
 
 			local testTrack = TestPaths.getTrack(container, "Track_Head")

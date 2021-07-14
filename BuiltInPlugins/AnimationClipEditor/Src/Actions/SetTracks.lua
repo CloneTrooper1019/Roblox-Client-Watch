@@ -5,9 +5,10 @@
 
 local Action = require(script.Parent.Action)
 
-return Action(script.Name, function(tracks, unusedTracks)
+return Action(script.Name, function(tracks, unusedTracks, unusedFacs)
 	return {
 		tracks = tracks,
 		unusedTracks = unusedTracks,
+		unusedFacs = unusedFacs,
 	}
 end)

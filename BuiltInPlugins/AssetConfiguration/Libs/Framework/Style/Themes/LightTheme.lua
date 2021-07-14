@@ -3,6 +3,7 @@ local StyleKey = require(Framework.Style.StyleKey)
 local Colors = require(Framework.Style.Colors)
 
 local FFlagDevFrameworkFixButtonStyles = game:GetFastFlag("DevFrameworkFixButtonStyles")
+local FFlagDevFrameworkRefactorScrollbarColor = game:GetFastFlag("DevFrameworkRefactorScrollbarColor")
 
 return {
 	[StyleKey.Border] = Color3.fromRGB(182, 182, 182),
@@ -55,7 +56,7 @@ return {
 	[StyleKey.RibbonTab] = Color3.fromRGB(243, 243, 243),
 
 	[StyleKey.ScrollBarBackground] = Color3.fromRGB(238, 238, 238),
-	[StyleKey.ScrollBar] = Colors.White,
+	[StyleKey.ScrollBar] = FFlagDevFrameworkRefactorScrollbarColor and Colors.Gray_Light or Colors.White,
 	[StyleKey.SliderKnobColor] = Colors.White,
 	[StyleKey.SliderKnobImage] = "rbxasset://textures/DeveloperFramework/slider_knob_light.png",
 	[StyleKey.SliderBackground] = Color3.fromRGB(204, 204, 204),
@@ -66,8 +67,13 @@ return {
 	[StyleKey.ToggleOffImage] = "rbxasset://textures/RoactStudioWidgets/toggle_off_light.png",
 	[StyleKey.ToggleDisabledImage] = "rbxasset://textures/RoactStudioWidgets/toggle_disable_light.png",
 
+	-- Remove with FFlagDevFrameworkCheckbox
 	[StyleKey.CheckboxDefaultImage] = "rbxasset://textures/DeveloperFramework/checkbox_unchecked_light.png",
 	[StyleKey.CheckboxSelectedImage] = "rbxasset://textures/DeveloperFramework/checkbox_checked_light.png",
+
+	[StyleKey.CheckboxUncheckedImage] = "rbxasset://textures/DeveloperFramework/checkbox_unchecked_light.png",
+	[StyleKey.CheckboxCheckedImage] = "rbxasset://textures/DeveloperFramework/checkbox_checked_light.png",
+	[StyleKey.CheckboxIndeterminateImage] = "rbxasset://textures/DeveloperFramework/checkbox_indeterminate_light.png",
 	[StyleKey.CheckboxDisabledImage] = "rbxasset://textures/DeveloperFramework/checkbox_unchecked_disabled_light.png",
 
 	[StyleKey.WarningText] = Color3.fromRGB(255, 128, 0),

@@ -26,6 +26,7 @@ local LIST_PADDING = 30
 local DROPDOWN_WIDTH = 120
 local DROPDOWN_ICON_SIZE = 20
 local CLOSE_ICON_SIZE = 16
+local DROPDOWN_ITEM_WIDTH = 300
 
 local Plugin = script.Parent.Parent.Parent.Parent.Parent
 
@@ -158,12 +159,21 @@ function CollaboratorItem:init()
 
 	self.isMounted = false
 
-	self.onRenderItem = function(item, index, activated)
+	self.onItemActivated = function(item)
+		local props = self.props
+		if props.Enabled and props.PermissionChanged then
+			props.PermissionChanged(item.Key)
+		end
+		self.toggleDropdown(false)
+	end
+
+	self.onDropdownRenderItem = function(item, index)
 		return Roact.createElement(DetailedDropdownItem, {
 			Key = item.Key,
-			Title = item.Display,
 			Description = item.Description,
+			OnActivated = function() self.onItemActivated(item) end,
 			Selected = item.Key == self.props.SelectedItem,
+			Title = item.Display,
 		})
 	end
 
@@ -261,14 +271,8 @@ function CollaboratorItem:render()
 						Hide = (not (props.Enabled and #props.Items > 0)) or (not self.state.showDropdown),
 						OnFocusLost = function() self.toggleDropdown(false) end,
 						Items = props.Items,
-						OnRenderItem = function(item, index, activated)
-							return self.onRenderItem(item, index, activated)
-						end,
-						OnItemActivated = function(item)
-							if props.Enabled and props.PermissionChanged then
-								props.PermissionChanged(item)
-							end
-						end,
+						OnRenderItem = self.onDropdownRenderItem,
+						Width = DROPDOWN_ITEM_WIDTH,
 					}),
 				}),
 				Dropdown = FFlagToolboxReplaceUILibraryComponentsPt3 and Roact.createElement(IconButton, {

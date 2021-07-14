@@ -32,7 +32,7 @@ Studio.PublishPlaceAs.Error.NameModerated,The name didn't go through our moderat
 Studio.PublishPlaceAs.FooterButton.Create,Create,Create,만들기,Создать,创建
 Studio.PublishPlaceAs.Genre.Funny,Comedy,Comedy,코미디,Комедия,幽默
 Studio.PublishPlaceAs.FooterButton.Overwrite,Overwrite,Overwrite,덮어쓰기,Записать поверх,覆盖
-Studio.PublishPlaceAs.Button.Cancel,Cancel,Cancel, , , 
+Studio.PublishPlaceAs.Button.Cancel,Cancel,Cancel,취소, , 
 Studio.PublishPlaceAs.FooterButton.Cancel,Cancel,Cancel,취소,Отмена,取消
 Studio.PublishPlaceAs.GroupDropdown.MyGames,My Games,My Games,내 게임,Мои игры,我的游戏
 Studio.PublishPlaceAs.MenuItem.BasicInfo,Basic Info,Basic Info,기본 정보,Основные сведения,基本信息
@@ -43,7 +43,7 @@ Studio.PublishPlaceAs.Genre.Fantasy,Medieval,Medieval,중세,Средневек�
 Studio.PublishPlaceAs.Genre.Scary,Horror,Horror,공포,Хоррор,恐怖
 Studio.PublishPlaceAs.PageTitle.Description,Description,Description,설명,Описание,描述
 Studio.PublishPlaceAs.ScreenHeader.ChoosePlace,Overwrite or add a new place to {1},Overwrite or add a new place to {1},덮어쓰거나 새 플레이스를 {1}에 추가하세요,Перезаписать или добавить новое место в: {1},覆盖或向 {1} 添加一个新场景
-Studio.PublishPlaceAs.General.TermsDialogBodyLink,You can download the LuoBuLeSi app here.,You can download the LuoBuLeSi app here., , , 
+Studio.PublishPlaceAs.General.TermsDialogBodyLink,You can download the LuoBuLeSi app here.,You can download the LuoBuLeSi app here.,여기에서 LuoBuLeSi 앱을 다운로드할 수 있습니다., , 
 Studio.PublishPlaceAs.Genre.All,All,All,모두,Все,全部
 Studio.PublishPlaceAs.Genre.WildWest,Western,Western,서부극,Вестерн,西部
 Studio.PublishPlaceAs.Genre.Tutorial,Building,Building,건설,Постройки,建筑
@@ -83,13 +83,13 @@ Studio.PublishPlaceAs.OptInLocations.China,China,China,중국, ,中国
 Studio.PublishPlaceAs.OptInLocations.TitleOptInLocations,Opt-In Locations,Opt-In Locations,옵트인 위치, ,选择加入的位置
 Studio.PublishPlaceAs.OptInLocations.Tooltip,Your creation will be published globally in addition to all the selected opt-in locations. See each location for specific requirements.,Your creation will be published globally in addition to all the selected opt-in locations. See each location for specific requirements.,선택한 모든 옵트인 위치를 포함해 전 세계에 본인의 작품이 게시됩니다. 각 위치별로 특정 요구 사항 여부를 확인하세요., ,你的作品将会发布到全球及所有选择加入的位置，请查看每个位置了解其需求。
 Studio.PublishPlaceAs.OptInLocations.RequirementsLinkText,Requirements,Requirements,요구 사항, ,要求
-Studio.PublishPlaceAs.Button.Submit,Submit,Submit, , , 
-Studio.PublishPlaceAs.General.ReplyOK,OK,OK, , , 
-Studio.PublishPlaceAs.General.TermsDialogHeader,Terms of Use and Privacy Policy,Terms of Use and Privacy Policy, , , 
-Studio.PublishPlaceAs.General.TermsDialogBody,"In order to publish on the LuoBuLeSi app published and operated by Tencent, you need to register an account with Tencent, and accept Tencent’s Terms of Use and Privacy Policy. [link]","In order to publish on the LuoBuLeSi app published and operated by Tencent, you need to register an account with Tencent, and accept Tencent’s Terms of Use and Privacy Policy. [link]", , , 
-Studio.PublishPlaceAs.OptInLocations.EmailDialogHeader,Email for Review Feedback,Email for Review Feedback, , , 
-Studio.PublishPlaceAs.OptInLocations.EmailDialogBody,"Your game will be reviewed by moderators to ensure that your game is compliant with Chinese content regulations. After your game is reviewed, we will send you review feedback. The review will take 3-5 days.","Your game will be reviewed by moderators to ensure that your game is compliant with Chinese content regulations. After your game is reviewed, we will send you review feedback. The review will take 3-5 days.", , , 
-Studio.PublishPlaceAs.OptInLocations.EmailDialogDescription,Please enter the email where you would like to receive review feedback:,Please enter the email where you would like to receive review feedback:, , , 
-Studio.PublishPlaceAs.OptInLocations.ErrorEmailNotEqual,The emails you have entered do not match. Please try again.,The emails you have entered do not match. Please try again., , , 
-Studio.PublishPlaceAs.OptInLocations.EmailAddress,Email address,Email address, , , 
-Studio.PublishPlaceAs.OptInLocations.ConfirmEmailAddress,Confirm email address,Confirm email address, , , 
+Studio.PublishPlaceAs.Button.Submit,Submit,Submit,제출, , 
+Studio.PublishPlaceAs.General.ReplyOK,OK,OK,확인, , 
+Studio.PublishPlaceAs.General.TermsDialogHeader,Terms of Use and Privacy Policy,Terms of Use and Privacy Policy,이용 약관 및 개인정보 처리방침, , 
+Studio.PublishPlaceAs.General.TermsDialogBody,"In order to publish on the LuoBuLeSi app published and operated by Tencent, you need to register an account with Tencent, and accept Tencent’s Terms of Use and Privacy Policy. [link]","In order to publish on the LuoBuLeSi app published and operated by Tencent, you need to register an account with Tencent, and accept Tencent’s Terms of Use and Privacy Policy. [link]","Tencent에서 게시하고 운영하는 LuoBuLeSi 앱에 게시하려면, Tencent 계정을 생성하고, Tencent의 이용 약관 및 개인정보 처리방침에 동의해야 합니다. [link]", , 
+Studio.PublishPlaceAs.OptInLocations.EmailDialogHeader,Email for Review Feedback,Email for Review Feedback,검토 피드백 수신 이메일, , 
+Studio.PublishPlaceAs.OptInLocations.EmailDialogBody,"Your game will be reviewed by moderators to ensure that your game is compliant with Chinese content regulations. After your game is reviewed, we will send you review feedback. The review will take 3-5 days.","Your game will be reviewed by moderators to ensure that your game is compliant with Chinese content regulations. After your game is reviewed, we will send you review feedback. The review will take 3-5 days.",게임이 중국 콘텐츠 규정을 준수하는지 확인하기 위해 검열팀에서 게임을 검토합니다. 게임 검토가 완료되면 검토 피드백을 보내드립니다. 검토에는 3~5일이 소요됩니다., , 
+Studio.PublishPlaceAs.OptInLocations.EmailDialogDescription,Please enter the email where you would like to receive review feedback:,Please enter the email where you would like to receive review feedback:,검토 피드백을 받을 이메일 주소를 입력하세요:, , 
+Studio.PublishPlaceAs.OptInLocations.ErrorEmailNotEqual,The emails you have entered do not match. Please try again.,The emails you have entered do not match. Please try again.,입력하신 이메일이 일치하지 않습니다. 다시 시도하세요., , 
+Studio.PublishPlaceAs.OptInLocations.EmailAddress,Email address,Email address,이메일 주소, , 
+Studio.PublishPlaceAs.OptInLocations.ConfirmEmailAddress,Confirm email address,Confirm email address,이메일 주소 확인, , 

@@ -4,7 +4,7 @@
 
 	Necessary Props:
 		Size, UDim2
-		assetTypeEnum, Enum, a enum type that contians the name and value of the assetType.
+		assetTypeEnum, Enum, a enum type that contains the name and value of the assetType.
 		resultsArray, an array of tables, contains the data for overriding assets.
 		onOverrideAssetSelected, function, will be called when a asset is selected.
 		getOverrideAssets, function, funtion used to reuqest more asset data for override asset.
@@ -13,7 +13,7 @@
 		LayoutOrder, number, will be used by the layout to change the component's position.
 ]]
 
-local FFlagAssetConifgOverrideAssetScrollingFrame = game:DefineFastFlag("AssetConifgOverrideAssetScrollingFrame", false)
+local FFlagToolboxUseInfiniteScroller = game:DefineFastFlag("ToolboxUseInfiniteScroller", false)
 local FFlagToolboxReplaceUILibraryComponentsPt3 = game:GetFastFlag("ToolboxReplaceUILibraryComponentsPt3")
 
 local Plugin = script.Parent.Parent.Parent.Parent
@@ -35,19 +35,10 @@ local Images = require(Util.Images)
 local Colors = require(Util.Colors)
 local AssetConfigConstants = require(Util.AssetConfigConstants)
 
-local UILibrary = require(Libs.UILibrary)
 local DEPRECATED_InfiniteScrollingFrame = require(Plugin.Core.Components.InfiniteScrollingFrame)
+local InfiniteScrollingFrame = Framework.UI.InfiniteScrollingFrame
 
-local ContextServices = require(Libs.Framework).ContextServices
-
-local InfiniteScrollingFrame
-if FFlagToolboxReplaceUILibraryComponentsPt3 then
-    local Framework = require(Libs.Framework)
-    InfiniteScrollingFrame = Framework.UI.InfiniteScrollingFrame
-else
-	InfiniteScrollingFrame = UILibrary.Component.InfiniteScrollingFrame
-end
-
+local ContextServices = Framework.ContextServices
 local withTheme = ContextHelper.withTheme
 
 local OverrideAssetView = Roact.PureComponent:extend("OverrideAssetView")
@@ -88,7 +79,7 @@ function OverrideAssetView:init(props)
 	self.onAssetActivated = function(asset)
 		local assetId = asset.Asset.Id
 
-		if FFlagAssetConifgOverrideAssetScrollingFrame and assetId == self.state.selectedAssetId then
+		if assetId == self.state.selectedAssetId then
 			return
 		end
 
@@ -132,7 +123,7 @@ function OverrideAssetView:createAssets(resultsArray, theme)
 			PaddingTop = UDim.new(0, PADDING),
 		}),
 
-		UIGridLayout = (not FFlagToolboxReplaceUILibraryComponentsPt3) and Roact.createElement("UIGridLayout", {
+		UIGridLayout = Roact.createElement("UIGridLayout", {
 			FillDirection = Enum.FillDirection.Horizontal,
 			HorizontalAlignment = Enum.HorizontalAlignment.Left,
 			VerticalAlignment = Enum.VerticalAlignment.Top,
@@ -143,7 +134,7 @@ function OverrideAssetView:createAssets(resultsArray, theme)
 			StartCorner = Enum.StartCorner.TopLeft,
 
 			[Roact.Ref] = self.layouterRef,
-			[Roact.Change.AbsoluteContentSize] = FFlagAssetConifgOverrideAssetScrollingFrame and self.onLayoutContentSizeChange or nil,
+			[Roact.Change.AbsoluteContentSize] = self.onLayoutContentSizeChange,
 		}),
 	}
 
@@ -263,7 +254,7 @@ function OverrideAssetView:renderContent(theme)
 
 	local layouterRef = self.layouterRef
 
-	if FFlagToolboxReplaceUILibraryComponentsPt3 then
+	if FFlagToolboxUseInfiniteScroller then
 		return Roact.createElement(InfiniteScrollingFrame, {
 			LoadNext = self.requestOverrideAsset,
 			LayoutOrder = props.LayoutOrder,

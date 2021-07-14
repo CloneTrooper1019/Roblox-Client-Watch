@@ -1,3 +1,5 @@
+local FFlagDevFrameworkCheckbox = game:GetFastFlag("DevFrameworkCheckbox")
+
 local Main = script.Parent.Parent.Parent
 local Roact = require(Main.Packages.Roact)
 local RoactRodux = require(Main.Packages.RoactRodux)
@@ -11,6 +13,7 @@ local findIndex = Dash.findIndex
 local UI = Framework.UI
 local Decoration = UI.Decoration
 local Button = UI.Button
+local Checkbox = UI.Checkbox
 local Pane = UI.Pane
 local SelectInput = UI.SelectInput
 local ToggleButton = UI.ToggleButton
@@ -113,18 +116,23 @@ function TopBar:render()
 				Image = "rbxasset://textures/DeveloperStorybook/Embed.png"
 			})
 		}),
-		Live = Roact.createElement(ToggleButton, {
+		Live = FFlagDevFrameworkCheckbox and Roact.createElement(Checkbox, {
+			LayoutOrder = 5,
+			Checked = props.Live,
+			OnClick = self.onToggleLive,
+			Text = "Live",
+		}) or Roact.createElement(ToggleButton, {
 			LayoutOrder = 5,
 			Selected = props.Live,
 			Size = UDim2.fromOffset(20, 20),
 			Style = "Checkbox",
 			OnClick = self.onToggleLive,
 		}),
-		LiveLabel = Roact.createElement(TextLabel, {
+		LiveLabel = not FFlagDevFrameworkCheckbox and Roact.createElement(TextLabel, {
 			Text = "Live",
 			AutomaticSize = Enum.AutomaticSize.XY,
 			LayoutOrder = 6,
-		}),
+		}) or nil,
 		ThemeLabel = Roact.createElement(TextLabel, {
 			Text = "Theme:",
 			AutomaticSize = Enum.AutomaticSize.XY,

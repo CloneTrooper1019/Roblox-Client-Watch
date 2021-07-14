@@ -1,3 +1,5 @@
+local FFlagDevFrameworkCheckbox = game:GetFastFlag("DevFrameworkCheckbox")
+
 local Framework = script.Parent.Parent.Parent
 local Roact = require(Framework.Parent.Roact)
 
@@ -17,10 +19,12 @@ function ExampleToggleButton:init()
 			toggleOn1 = (not self.state.toggleOn1),
 		})
 	end
-	self.onToggle2 = function()
-		self:setState({
-			toggleOn2 = (not self.state.toggleOn2),
-		})
+	if not FFlagDevFrameworkCheckbox then
+		self.onToggle2 = function()
+			self:setState({
+				toggleOn2 = (not self.state.toggleOn2),
+			})
+		end
 	end
 end
 
@@ -45,14 +49,14 @@ function ExampleToggleButton:render()
 			OnClick = self.onToggle1,
 			Size = UDim2.fromOffset(40, 24),
 		}),
-		CheckboxToggle = Roact.createElement(ToggleButton, {
+		CheckboxToggle = not FFlagDevFrameworkCheckbox and Roact.createElement(ToggleButton, {
 			Disabled = false,
 			Selected = self.state.toggleOn2,
 			LayoutOrder = 2,
 			OnClick = self.onToggle2,
 			Size = UDim2.fromOffset(20, 20),
 			Style = "Checkbox",
-		}),
+		}) or nil,
 	})
 end
 

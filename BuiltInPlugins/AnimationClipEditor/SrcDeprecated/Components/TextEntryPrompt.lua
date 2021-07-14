@@ -38,8 +38,6 @@ local withTheme = Theme.withTheme
 local FocusedPrompt = require(Plugin.SrcDeprecated.Components.EditEventsDialog.FocusedPrompt)
 local TextBox = require(Plugin.SrcDeprecated.Components.TextBox)
 
-local UseCustomFPS = require(Plugin.LuaFlags.GetFFlagAnimEditorUseCustomFPS)
-
 local TextEntryPrompt = Roact.PureComponent:extend("TextEntryPrompt")
 
 function TextEntryPrompt:init(initialProps)
@@ -59,15 +57,11 @@ function TextEntryPrompt:init(initialProps)
 			local result
 			if submitted and text ~= "" then
 				result = self.props.OnTextSubmitted(text)
-			elseif not UseCustomFPS() then
-				self.setCurrentText(text)
 			end
-			if UseCustomFPS() then
-				if result == true then
-					self.onClose()
-				else
-					self.setCurrentText(text)
-				end
+			if result == true then
+				self.onClose()
+			else
+				self.setCurrentText(text)
 			end
 		end
 	end
@@ -116,7 +110,7 @@ function TextEntryPrompt:render()
 					if button then
 						if currentText ~= "" then
 							local result = onTextSubmitted(currentText)
-							if not UseCustomFPS() or (result ~= false) then
+							if result ~= false then
 								self.onClose()
 							end
 						end

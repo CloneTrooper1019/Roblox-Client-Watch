@@ -25,6 +25,8 @@ local getRawComponentStyle = FrameworkStyle.getRawComponentStyle
 local Util = Framework.Util
 local StyleModifier = Util.StyleModifier
 
+local getFFlagDevFrameworkCheckbox = require(Plugin.Src.Flags.getFFlagDevFrameworkCheckbox)
+
 if THEME_REFACTOR then
 	local darkThemeOverride = {
 		[StyleKey.HelpIconColor] = Colors.Gray_Light,
@@ -38,8 +40,8 @@ if THEME_REFACTOR then
 	}
 
 	local PluginTheme = {
-		CheckboxImageSize = UDim2.new(0, 16, 0, 16),
-		CheckboxLabelSpacing = 6,
+		CheckboxImageSize = not getFFlagDevFrameworkCheckbox() and UDim2.new(0, 16, 0, 16) or nil,
+		CheckboxLabelSpacing = not getFFlagDevFrameworkCheckbox() and 6 or nil,
 
 		SectionPadding = UDim.new(0, 15),
 		SectionContentPadding = UDim.new(0, 10),

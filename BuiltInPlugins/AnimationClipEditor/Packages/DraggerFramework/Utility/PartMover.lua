@@ -15,6 +15,8 @@ local FFlagDraggerPerf = getFFlagDraggerPerf()
 
 local getEngineFeatureModelPivotApi = require(DraggerFramework.Flags.getEngineFeatureModelPivotApi)
 
+local getFFlagOnlyGetGeometryOnce = require(DraggerFramework.Flags.getFFlagOnlyGetGeometryOnce)
+
 local DEFAULT_COLLISION_THRESHOLD = 0.001
 
 -- Get all the instances the user has directly selected (actually part of the
@@ -192,15 +194,45 @@ end
 	and load the initial geometry of the parts to move into the cache.
 ]]
 function PartMover:_setupGeometryTracking(parts)
+	if getFFlagOnlyGetGeometryOnce() then
+		-- Remove the parts argument with OnlyGetGeometryOnce flag
+		assert(parts == nil)
+		assert(not self._hasSetupGeometryTracking)
+	end
 	self._nearbyGeometry = {}
 	self._rootPartSet = {}
-	for _, part in ipairs(parts) do
-		-- We have to track the roots separately, because some of the root parts
-		-- of the dragged parts may not be in the set of dragged parts.
-		self._rootPartSet[part:GetRootPart()] = true
-		if not FFlagDraggerPerf then
-			self:_getGeometry(part)
+
+	if getFFlagOnlyGetGeometryOnce() then
+		for _, part in ipairs(self._workspaceParts) do
+			-- If the part somehow got removed from the workspace (for instance,
+			-- by a user plugin) since we added it to the _workspaceParts table,
+			-- then it won't have a root part.
+			local root = part:GetRootPart()
+			if root then
+				-- We have to track the roots separately, because some of the root parts
+				-- of the dragged parts may not be in the set of dragged parts.
+				self._rootPartSet[root] = true
+			end
 		end
+	else
+		for _, part in ipairs(parts) do
+			-- We have to track the roots separately, because some of the root parts
+			-- of the dragged parts may not be in the set of dragged parts.
+			self._rootPartSet[part:GetRootPart()] = true
+			if not FFlagDraggerPerf then
+				self:_getGeometry(part)
+			end
+		end
+	end
+end
+
+--[[
+	Call once per move, setup geometry tracking.
+]]
+function PartMover:_ensureGeometryTrackingHasBeenSetup()
+	if not self._hasSetupGeometryTracking then
+		self:_setupGeometryTracking()
+		self._hasSetupGeometryTracking = true
 	end
 end
 
@@ -320,8 +352,12 @@ end
 function PartMover:computeJointPairs(globalTransform)
 	assert(self._moving)
 
-	if FFlagDraggerPerf and not self._hasSetupGeometryTracking then
-		self:_setupGeometryTracking(self._workspaceParts)
+	if getFFlagOnlyGetGeometryOnce() then
+		self:_ensureGeometryTrackingHasBeenSetup()
+	else
+		if FFlagDraggerPerf and not self._hasSetupGeometryTracking then
+			self:_setupGeometryTracking(self._workspaceParts)
+		end
 	end
 
 	local jointPairs = JointPairs.new(self._parts, self._partSet, self._rootPartSet,
@@ -337,7 +373,11 @@ function PartMover:computeJointPairs(globalTransform)
 		end)
 
 	if RunService:IsRunning() then
-		self:_clearOtherGeometry()
+		if getFFlagOnlyGetGeometryOnce() then
+			self:_flushNonDraggedGeometryCache()
+		else
+			self:_clearOtherGeometry()
+		end
 	end
 
 	return jointPairs
@@ -436,8 +476,21 @@ end
 ]]
 function PartMover:isIntersectingOthers(overlapToIgnore)
 	assert(self._moving)
-	return Workspace:ArePartsTouchingOthers(self._workspaceParts,
-		overlapToIgnore or DEFAULT_COLLISION_THRESHOLD)
+	if getFFlagOnlyGetGeometryOnce() then
+		-- Pcall because a user plugin may have removed some of the _workspaceParts
+		-- from the workspace mid-move, and ArePartsTouchingOthers requires all the
+		-- passed parts to be in a WorldRoot.
+		local st, result = pcall(Workspace.ArePartsTouchingOthers, Workspace,
+			self._workspaceParts, overlapToIgnore or DEFAULT_COLLISION_THRESHOLD)
+		if st then
+			return result
+		else
+			return true
+		end
+	else
+		return Workspace:ArePartsTouchingOthers(self._workspaceParts,
+			overlapToIgnore or DEFAULT_COLLISION_THRESHOLD)
+	end
 end
 
 --[[
@@ -506,10 +559,12 @@ end
 	we still want to keep them cached _within_ a frame, because multiple parts
 	may need to check for joints vs a given part's geometry.
 ]]
-function PartMover:_clearOtherGeometry()
-	for part, _ in pairs(self._nearbyGeometry) do
-		if not self._partSet[part] then
-			self._nearbyGeometry[part] = nil
+if not getFFlagOnlyGetGeometryOnce() then
+	function PartMover:_clearOtherGeometry()
+		for part, _ in pairs(self._nearbyGeometry) do
+			if not self._partSet[part] then
+				self._nearbyGeometry[part] = nil
+			end
 		end
 	end
 end

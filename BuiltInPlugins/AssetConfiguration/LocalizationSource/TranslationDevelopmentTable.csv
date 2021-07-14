@@ -69,7 +69,8 @@ Search,Search,Studio.Toolbox.General.AssetTypePlugin
 Plugin,Plugin,Studio.Toolbox.General.SortByFavorites
 Favorites,Favorites,Studio.Toolbox.General.SearchBarCreatorText
 Search for users,Search for users,Studio.Toolbox.General.SuggestionsIntroText
-Try searching for:,Try searching for:,Studio.Toolbox.General.SuggestionsNPC
+Try searching for:,Try searching for:,Studio.Toolbox.General.CategoryCreationsGroupHair
+Group Hair,Group Hair,Studio.Toolbox.General.SuggestionsNPC
 NPC,NPC,Studio.Toolbox.General.SuggestionsVehicle
 Vehicle,Vehicle,Studio.Toolbox.General.SortByRelevance
 Relevance,Relevance,Studio.Toolbox.General.SortByUpdated
@@ -104,7 +105,16 @@ Add Premium benefits,Add Premium benefits,Studio.Toolbox.AssetConfigUpload.IDCop
 ID Copied!,ID Copied!,Studio.Toolbox.General.CategoryCreationsShoulderAccessory
 Shoulder Accessories,Shoulder Accessories,Studio.Toolbox.General.CategoryCreationsFrontAccessory
 Front Accessories,Front Accessories,Studio.Toolbox.General.CategoryCreationsBackAccessory
-Back Accessories,Back Accessories,Studio.Toolbox.General.TabCreations
+Back Accessories,Back Accessories,Studio.Toolbox.AssetUploadResult.Failure
+Submission failed,Submission failed,Studio.Toolbox.General.CategoryCreationsGroupHats
+Group Hats,Group Hats,Studio.Toolbox.General.CategoryCreationsGroupFaceAccessory
+Group Face Accessories,Group Face Accessories,Studio.Toolbox.General.AssetTypeWaistAccessory
+Waist Accessory,Waist Accessory,Studio.Toolbox.General.CategoryCreationsGroupNeckAccessory
+Group Neck Accessories,Group Neck Accessories,Studio.Toolbox.General.CategoryCreationsGroupShoulderAccessory
+Group Shoulder Accessories,Group Shoulder Accessories,Studio.Toolbox.General.CategoryCreationsGroupFrontAccessory
+Group Front Accessories,Group Front Accessories,Studio.Toolbox.General.CategoryCreationsGroupBackAccessory
+Group Back Accessories,Group Back Accessories,Studio.Toolbox.General.CategoryCreationsGroupWaistAccessory
+Group Waist Accessories,Group Waist Accessories,Studio.Toolbox.General.TabCreations
 Creations,Creations,Studio.Toolbox.General.RightClickMenuCopyAssetID
 Copy Asset ID,Copy Asset ID,Studio.Toolbox.General.RightClickMenuCopyAssetURI
 Copy Asset URI,Copy Asset URI,Studio.Toolbox.General.RightClickMenuViewInBrowser
@@ -134,8 +144,7 @@ Face Accessory,Studio.Toolbox.General.AssetTypeNeckAccessory,Neck Accessory
 Neck Accessory,Studio.Toolbox.General.AssetTypeShoulderAccessory,Shoulder Accessory
 Shoulder Accessory,Studio.Toolbox.General.AssetTypeFrontAccessory,Front Accessory
 Front Accessory,Studio.Toolbox.General.AssetTypeBackAccessory,Back Accessory
-Back Accessory,Studio.Toolbox.General.AssetTypeWaistAccessory,Waist Accessory
-Waist Accessory,Studio.Toolbox.General.DiscardMessage,Would you like to discard all changes?
+Back Accessory,Studio.Toolbox.General.DiscardMessage,Would you like to discard all changes?
 Would you like to discard all changes?,Studio.Toolbox.General.Discard,Discard
 Discard,Studio.Toolbox.General.NoPluginsFound.TextLine1,Can’t find what you’re looking for?
 Can’t find what you’re looking for?,Studio.Toolbox.General.Description,Description
@@ -223,8 +232,7 @@ to,Studio.Toolbox.General.SearchOptionAudioLength,Sound Length
 Sound Length,Studio.Toolbox.AssetConfigAnimation.FilterID,Filter ID
 Filter ID,Studio.Toolbox.General.CategoryMyVideos,My Videos
 My Videos,Studio.Toolbox.General.CategoryVideos,Videos
-Videos,Studio.Toolbox.AssetUploadResult.Failure,Submission failed
-Submission failed,Studio.Toolbox.General.NoPluginsFound.TextLine2,"For more plugins, try searching in the {link} on our website."
+Videos,Studio.Toolbox.General.NoPluginsFound.TextLine2,"For more plugins, try searching in the {link} on our website."
 "For more plugins, try searching in the {link} on our website.",Studio.Toolbox.General.NoPluginsFound.LinkText,Library
 Library,Studio.Toolbox.AssetConfigAnimation.InvalidAnimationID,Invalid Animation ID
 Invalid Animation ID

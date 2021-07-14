@@ -22,6 +22,21 @@ function GameOptionsController:universesShutdownV2POST(gameId)
 	})
 end
 
+function GameOptionsController:voiceUniverseSettingsPOST(gameId, optIn)
+	local networking = self.__networking
+
+	return networking:post("voice", "/v1/settings/universe/" .. gameId, {
+        Body = {
+			optIn = optIn,
+		},
+	})
+end
+
+function GameOptionsController:voiceUniverseSettingsGET(gameId)
+    local networking = self.__networking
+    return networking:get("voice", "/v1/settings/universe/" .. gameId)
+end
+
 function GameOptionsController:getScriptCollaborationEnabled(game)
 	local StudioData = game:GetService("StudioData")
 
@@ -36,6 +51,15 @@ end
 
 function GameOptionsController:shutdownAllServers(gameId)
 	self:universesShutdownV2POST(gameId):await()
+end
+
+function GameOptionsController:getVoiceChatEnabled(gameId)
+    local response = self:voiceUniverseSettingsGET(gameId):await()
+	return response.responseBody.isUniverseEnabledForVoice
+end
+
+function GameOptionsController:setVoiceChatEnabled(gameId, optIn)
+    self:voiceUniverseSettingsPOST(gameId, optIn):await()
 end
 
 return GameOptionsController

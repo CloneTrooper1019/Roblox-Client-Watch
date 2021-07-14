@@ -6,11 +6,14 @@
 
 	See https://confluence.rbx.com/display/RDE/Developer+Storybook for the story API.
 ]]
+local FFlagDevFrameworkCheckbox = game:GetFastFlag("DevFrameworkCheckbox")
+
 local Main = script.Parent.Parent.Parent
 local Roact = require(Main.Packages.Roact)
 
 local Framework = require(Main.Packages.Framework)
 local UI = Framework.UI
+local Checkbox = UI.Checkbox
 local Pane = UI.Pane
 local ToggleButton = UI.ToggleButton
 local TextInput = UI.TextInput
@@ -38,24 +41,36 @@ type Props = {
 
 -- A toggle button for boolean values
 local function getToggleButton(key: string, value: any, props: Props)
-	return Roact.createFragment({
-		Button = Roact.createElement(ToggleButton, {
-			Style = "Checkbox",
-			Size = UDim2.new(0, 20, 0, 20),
-			Selected = value,
+	if FFlagDevFrameworkCheckbox then
+		return Roact.createElement(Checkbox, {
+			Checked = value,
+			Text = key,
 			OnClick = function()
 				props.SetControls({
 					[key] = not value
 				})
 			end,
-			LayoutOrder = 1,
-		}),
-		Label = Roact.createElement(TextLabel, {
-			AutomaticSize = Enum.AutomaticSize.XY,
-			Text = key,
-			LayoutOrder = 2,
 		})
-	})
+	else
+		return Roact.createFragment({
+			Button = Roact.createElement(ToggleButton, {
+				Style = "Checkbox",
+				Size = UDim2.new(0, 20, 0, 20),
+				Selected = value,
+				OnClick = function()
+					props.SetControls({
+						[key] = not value
+					})
+				end,
+				LayoutOrder = 1,
+			}),
+			Label = Roact.createElement(TextLabel, {
+				AutomaticSize = Enum.AutomaticSize.XY,
+				Text = key,
+				LayoutOrder = 2,
+			})
+		})
+	end
 end
 
 -- A text input for number or string values

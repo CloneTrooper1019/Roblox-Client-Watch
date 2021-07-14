@@ -8,7 +8,6 @@ return function()
 	local SetKeyframeData = require(Plugin.SrcDeprecated.Thunks.SetKeyframeData)
 	local QuantizeKeyframes = require(Plugin.SrcDeprecated.Thunks.QuantizeKeyframes)
 	local UpdateMetadata = require(Plugin.SrcDeprecated.Thunks.UpdateMetadata)
-	local GetFFlagAutoCreateBasePoseKeyframe = require(Plugin.LuaFlags.GetFFlagAutoCreateBasePoseKeyframe)
 
 	local function makeAnimationData(tracks)
 		return {
@@ -98,13 +97,8 @@ return function()
 
 			expect(track.Keyframes).to.be.ok()
 			expect(track.Data).to.be.ok()
-			if GetFFlagAutoCreateBasePoseKeyframe() then
-				expect(#track.Keyframes).to.equal(5)
-				expect(track.Keyframes[5]).to.equal(4)
-			else
-				expect(#track.Keyframes).to.equal(4)
-				expect(track.Keyframes[4]).to.equal(4)
-			end
+			expect(#track.Keyframes).to.equal(5)
+			expect(track.Keyframes[5]).to.equal(4)
 			expect(track.Data[4]).to.be.ok()
 			expect(track.Data[4].Value).to.be.ok()
 			expect(track.Data[4].Value).to.equal(CFrame.new())
@@ -126,25 +120,16 @@ return function()
 			local state = store:getState()
 			local track = state.Instances.Root.Tracks.TestTrack
 
-			if GetFFlagAutoCreateBasePoseKeyframe() then
-				expect(track.Keyframes[1]).to.equal(0)
-				expect(track.Keyframes[2]).to.equal(1)
-				expect(track.Keyframes[3]).to.equal(2)
-				expect(track.Keyframes[4]).to.equal(3)
-				expect(track.Keyframes[5]).to.equal(4)
-				expect(track.Data[0]).to.be.ok()
-				expect(track.Data[1]).to.be.ok()
-				expect(track.Data[2]).to.be.ok()
-				expect(track.Data[3]).to.be.ok()
-				expect(track.Data[4]).to.be.ok()
-			else
-				expect(track.Keyframes[1]).to.equal(1)
-				expect(track.Keyframes[2]).to.equal(2)
-				expect(track.Keyframes[3]).to.equal(3)
-				expect(track.Data[1]).to.be.ok()
-				expect(track.Data[2]).to.be.ok()
-				expect(track.Data[3]).to.be.ok()
-			end
+			expect(track.Keyframes[1]).to.equal(0)
+			expect(track.Keyframes[2]).to.equal(1)
+			expect(track.Keyframes[3]).to.equal(2)
+			expect(track.Keyframes[4]).to.equal(3)
+			expect(track.Keyframes[5]).to.equal(4)
+			expect(track.Data[0]).to.be.ok()
+			expect(track.Data[1]).to.be.ok()
+			expect(track.Data[2]).to.be.ok()
+			expect(track.Data[3]).to.be.ok()
+			expect(track.Data[4]).to.be.ok()
 		end)
 
 		it("should preserve the other tracks", function()

@@ -1,5 +1,3 @@
-game:DefineFastFlag("FixPlaybackWithEndFrameAtZero", false)
-
 local Plugin = script.Parent.Parent.Parent
 
 local Roact = require(Plugin.Packages.Roact)
@@ -18,7 +16,7 @@ function Playback:didMount()
 		local playhead = props.Playhead
 		if props.IsPlaying and props.AnimationData ~= nil then
 			local metadata = props.AnimationData.Metadata
-			if not game:GetFastFlag("FixPlaybackWithEndFrameAtZero") or metadata.EndFrame > 0 then
+			if metadata.EndFrame > 0 then
 				local now = tick()
 				if not self.StartTime then
 					self.StartTime = now

@@ -21,8 +21,11 @@
 		function OnTrackAdded(instanceName, trackName) = A callback for when the user
 			selects a track to add.
 		function OnTrackSelected(trackName) = A callback for when the user selects a track.
-		function OnValueChanged(instanceName, trackName, frame, value) = A callback for
+		function OnValueChanged(instanceName, trackName, trackType, frame, value) = A callback for
 			when the user changes a value by expanding a track and modifying properties.
+		function OnValueChangedDeprecated(instanceName, trackName, frame, value) = A callback for
+			when the user changes a value by expanding a track and modifying properties.
+			(Until GetFFlagFacialAnimationSupport() is retired)
 		function OnChangeBegan() = A function that is called when the user starts interacting
 			with a track before changing properties. Used to dispatch AddWaypoint for History.
 ]]
@@ -43,9 +46,11 @@ local ExpandableTrack = require(Plugin.Src.Components.TrackList.ExpandableTrack)
 local SummaryTrack = require(Plugin.Src.Components.TrackList.SummaryTrack)
 local TrackListEntry = require(Plugin.Src.Components.TrackList.TrackListEntry)
 local NumberTrack = require(Plugin.Src.Components.TrackList.NumberTrack)
+local Track = require(Plugin.Src.Components.TrackList.Track)
 local WideScrollingFrame = require(Plugin.Src.Components.TrackList.WideScrollingFrame)
 
 local GetFFlagNoValueChangeDuringPlayback = require(Plugin.LuaFlags.GetFFlagNoValueChangeDuringPlayback)
+local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
 
 local TrackList = Roact.PureComponent:extend("TrackList")
 
@@ -94,9 +99,9 @@ function TrackList:init()
 		end
 	end
 
-	self.onTrackAdded = function(instance, track)
+	self.onTrackAdded = function(instance, track, trackType)
 		if self.props.OnTrackAdded then
-			self.props.OnTrackAdded(instance, track)
+			self.props.OnTrackAdded(instance, track, trackType)
 		end
 	end
 
@@ -107,10 +112,24 @@ function TrackList:init()
 	end
 
 	self.onValueChanged = function(instanceName, trackName, frame, value, analytics)
+		if GetFFlagFacialAnimationSupport() then
+			if self.props.OnValueChanged then
+				self.props.OnValueChanged(instanceName, trackName, Constants.TRACK_TYPES.CFrame, frame, value, analytics)
+				local selectionSignal = self.props.Signals:get(Constants.SIGNAL_KEYS.SelectionChanged)
+				selectionSignal:Fire()
+			end
+		else
+			if self.props.OnValueChangedDeprecated then
+				self.props.OnValueChangedDeprecated(instanceName, trackName, frame, value, analytics)
+				local selectionSignal = self.props.Signals:get(Constants.SIGNAL_KEYS.SelectionChanged)
+				selectionSignal:Fire()
+			end
+		end
+	end
+
+	self.onFacsChanged = function(instanceName, facsName, frame, value, analytics)
 		if self.props.OnValueChanged then
-			self.props.OnValueChanged(instanceName, trackName, frame, value, analytics)
-			local selectionSignal = self.props.Signals:get(Constants.SIGNAL_KEYS.SelectionChanged)
-			selectionSignal:Fire()
+			self.props.OnValueChanged(instanceName, facsName, Constants.TRACK_TYPES.Facs, frame, value, analytics)
 		end
 	end
 
@@ -129,6 +148,8 @@ function TrackList:renderSummaryTrack(name, children, theme)
 		Name = name,
 		UnusedTracks = self.props.UnusedTracks,
 		OnTrackAdded = self.onTrackAdded,
+		UnusedFacs = self.props.UnusedFacs,
+		OnFacsAdded = self.onFacsAdded,
 	})
 
 	self.incrementTrackCount()
@@ -157,25 +178,47 @@ function TrackList:renderExpandedCFrameTrack(track, children, theme)
 	self.maxTrackWidth = math.max(self.maxTrackWidth, trackWidth)
 
 	local function makeNumberTrack(name, targetProperty)
-		children[name .. "_" .. targetProperty] = Roact.createElement(NumberTrack, {
-			LayoutOrder = self.trackCount,
-			Name = targetProperty,
-			NameWidth = nameWidth,
-			Items = items[targetProperty],
-			Height = Constants.TRACK_HEIGHT,
-			Indent = indent,
-			ReadOnly = readOnly,
-			OnItemChanged = function(key, value)
-				for _, item in ipairs(items[targetProperty]) do
-					if item.Key == key then
-						item.Value = value
+		if GetFFlagFacialAnimationSupport() then
+			children[name .. "_" .. targetProperty] = Roact.createElement(Track, {
+				LayoutOrder = self.trackCount,
+				Name = targetProperty,
+				NameWidth = nameWidth,
+				Items = items[targetProperty],
+				Height = Constants.TRACK_HEIGHT,
+				Indent = indent,
+				ReadOnly = readOnly,
+				OnItemChanged = function(key, value)
+					for _, item in ipairs(items[targetProperty]) do
+						if item.Key == key then
+							item.Value = value
+						end
 					end
-				end
-				local newValue = TrackUtils.getPropertyForItems(track, items)
-				self.onValueChanged(instance, name, playhead, newValue, props.analytics)
-			end,
-			OnChangeBegan = props.OnChangeBegan,
-		})
+					local newValue = TrackUtils.getPropertyForItems(track, items)
+					self.onValueChanged(instance, name, playhead, newValue, props.analytics)
+				end,
+				OnChangeBegan = props.OnChangeBegan,
+			})
+		else
+			children[name .. "_" .. targetProperty] = Roact.createElement(NumberTrack, {
+				LayoutOrder = self.trackCount,
+				Name = targetProperty,
+				NameWidth = nameWidth,
+				Items = items[targetProperty],
+				Height = Constants.TRACK_HEIGHT,
+				Indent = indent,
+				ReadOnly = readOnly,
+				OnItemChanged = function(key, value)
+					for _, item in ipairs(items[targetProperty]) do
+						if item.Key == key then
+							item.Value = value
+						end
+					end
+					local newValue = TrackUtils.getPropertyForItems(track, items)
+					self.onValueChanged(instance, name, playhead, newValue, props.analytics)
+				end,
+				OnChangeBegan = props.OnChangeBegan,
+			})
+		end
 		self.incrementTrackCount()
 	end
 
@@ -217,41 +260,78 @@ function TrackList:isSelected(name)
 end
 
 function TrackList:renderTrack(track, children, theme)
-	local indent = track.Depth
-	local expanded = track.Expanded
+	local props = self.props
 	local name = track.Name
+	local instance = track.Instance
 
-	local selected = self:isSelected(name)
+	if not GetFFlagFacialAnimationSupport() or track.Type == Constants.TRACK_TYPES.CFrame then
+		local indent = track.Depth
+		local expanded = track.Expanded
 
-	local textWidth = self.getTextWidth(name, theme)
-	local trackWidth = self.getTrackWidth(indent, Constants.ARROW_SIZE * 2
-		+ textWidth + Constants.TRACKLIST_BUTTON_SIZE)
-	self.maxTrackWidth = math.max(self.maxTrackWidth, trackWidth)
+		local selected = self:isSelected(name)
 
-	children["Track_" .. name] = Roact.createElement(ExpandableTrack, {
-		LayoutOrder = self.trackCount,
-		Indent = indent,
-		Name = name,
-		Expanded = expanded,
-		Selected = selected,
+		local textWidth = self.getTextWidth(name, theme)
+		local trackWidth = self.getTrackWidth(indent, Constants.ARROW_SIZE * 2
+			+ textWidth + Constants.TRACKLIST_BUTTON_SIZE)
+		self.maxTrackWidth = math.max(self.maxTrackWidth, trackWidth)
 
-		OnTrackSelected = function()
-			self.onTrackSelected(track)
-		end,
+		children["Track_" .. name] = Roact.createElement(ExpandableTrack, {
+			LayoutOrder = self.trackCount,
+			Indent = indent,
+			Name = name,
+			Expanded = expanded,
+			Selected = selected,
 
-		OnExpandToggled = function(newExpandedState)
-			self.onTrackExpandToggled(track, newExpandedState)
-		end,
+			OnTrackSelected = function()
+				self.onTrackSelected(track)
+			end,
 
-		OnContextButtonClick = function()
-			self.onContextButtonClick(track)
-		end,
-	})
+			OnExpandToggled = function(newExpandedState)
+				self.onTrackExpandToggled(track, newExpandedState)
+			end,
 
-	self.incrementTrackCount()
+			OnContextButtonClick = function()
+				self.onContextButtonClick(track)
+			end,
+		})
 
-	if expanded then
-		self:renderExpandedTracks(track, children, theme)
+		self.incrementTrackCount()
+
+		if expanded then
+			self:renderExpandedTracks(track, children, theme)
+		end
+	else
+		local playhead = props.Playhead
+		local animationData = props.AnimationData
+		local isPlaying = self.props.IsPlaying
+
+		local nameWidth = self.getTextWidth(name, theme)
+		local readOnly = GetFFlagNoValueChangeDuringPlayback() and isPlaying
+		local trackWidth = self.getTrackWidth(0, nameWidth) + (Constants.NUMBERBOX_WIDTH + Constants.NUMBERTRACK_PADDING * 2)
+
+		local currentValue = TrackUtils.getCurrentValue(track, playhead, animationData)
+		local items = TrackUtils.getItemsForProperty(track, currentValue)
+
+		self.maxTrackWidth = math.max(self.maxTrackWidth, trackWidth)
+
+		children["Facs_" .. name] = Roact.createElement(Track, {
+			LayoutOrder = self.trackCount,
+			Name = name,
+			NameWidth = nameWidth,
+			Items = items,
+			Height = Constants.TRACK_HEIGHT,
+			Indent = 0,
+			ReadOnly = readOnly,
+			OnItemChanged = function(key, value)
+				self.onFacsChanged(instance, name, playhead, value, props.Analytics)
+			end,
+			OnChangeBegan = props.OnChangeBegan,
+			OnContextButtonClick = function()
+				self.onContextButtonClick(track)
+			end,
+		})
+
+		self.incrementTrackCount()
 	end
 end
 

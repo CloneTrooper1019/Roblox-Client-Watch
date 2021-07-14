@@ -7,6 +7,6 @@ return function(contactEmail)
 
         local universeId = game.GameId
 
-        policyInfoController:postContactEmail(universeId, contactEmail)
+        return policyInfoController:postContactEmail(universeId, contactEmail)
 	end
 end

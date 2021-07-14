@@ -6,7 +6,6 @@
 
 -- New Plugin Setup: Define initial fast flag
 
-game:DefineFastFlag("DebuggerPlugin", false)
 game:DefineFastFlag("DebuggerPluginEditBreakpoint_alpha", false)
 game:DefineFastFlag("LuaUIDebuggerCallstack", false)
 

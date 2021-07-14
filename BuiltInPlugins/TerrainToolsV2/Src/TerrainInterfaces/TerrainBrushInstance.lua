@@ -1,11 +1,7 @@
 game:DefineFastFlag("TerrainToolsBrushUseIsKeyDown", false)
-game:DefineFastFlag("TerrainToolsAddOnMouseHold", false)
-game:DefineFastFlag("TerrainToolsExtendedAnalytics", false)
 
 local FFlagTerrainToolsPartInteractToggle = game:GetFastFlag("TerrainToolsPartInteractToggle")
 local FFlagTerrainToolsBrushUseIsKeyDown = game:GetFastFlag("TerrainToolsBrushUseIsKeyDown")
-local FFlagTerrainToolsAddOnMouseHold = game:GetFastFlag("TerrainToolsAddOnMouseHold")
-local FFlagTerrainToolsExtendedAnalytics = game:GetFastFlag("TerrainToolsExtendedAnalytics")
 
 local Plugin = script.Parent.Parent.Parent
 
@@ -546,10 +542,8 @@ function TerrainBrush:_run()
 				self._mouseClick = false
 
 				if reportClick then
-					if FFlagTerrainToolsExtendedAnalytics and self._analytics then
+					if self._analytics then
 						self._analytics:report("useBrushToolExtended", createToolAnalytics(self._operationSettings))
-					elseif self._analytics then
-						self._analytics:report("useBrushTool", currentTool)
 					end
 					reportClick = false
 				end
@@ -576,24 +570,16 @@ function TerrainBrush:_run()
 						local dragDistance = math.min(dragDistance, (crawlDistance * 2) + 20)
 						local samples = math.ceil((dragDistance / crawlDistance) - 0.1)
 
-						if FFlagTerrainToolsAddOnMouseHold then
-							if currentTool == ToolId.Add and not planeLock then
-								-- calculate a cos from two unit vectors unitRay and difference.unit to check
-								-- if the direction of the next BrushOperation points towards the currentCamera
-								local directionCos = unitRay:Dot(difference.unit)
-								if math.abs(directionCos) > 0.99 then
-									shouldPerformOperation = false
-								end
+						if currentTool == ToolId.Add and not planeLock then
+							-- calculate a cos from two unit vectors unitRay and difference.unit to check
+							-- if the direction of the next BrushOperation points towards the currentCamera
+							local directionCos = unitRay:Dot(difference.unit)
+							if math.abs(directionCos) > 0.99 then
+								shouldPerformOperation = false
 							end
+						end
 
-							if shouldPerformOperation then
-								for i = 1, samples, 1 do
-									self._operationSettings.centerPoint = lastMainPoint + (differenceVector * dragDistance * (i / samples))
-									performTerrainBrushOperation(self._terrain, self._operationSettings)
-								end
-								mainPoint = lastMainPoint + differenceVector * dragDistance
-							end
-						else
+						if shouldPerformOperation then
 							for i = 1, samples, 1 do
 								self._operationSettings.centerPoint = lastMainPoint + (differenceVector * dragDistance * (i / samples))
 								performTerrainBrushOperation(self._terrain, self._operationSettings)
@@ -601,27 +587,22 @@ function TerrainBrush:_run()
 							mainPoint = lastMainPoint + differenceVector * dragDistance
 						end
 					else
-						if FFlagTerrainToolsAddOnMouseHold then
-							if currentTool == ToolId.Add and not planeLock then
-								-- calculate a cos from two unit vectors unitRay and difference.unit to check
-								-- if the direction of the next BrushOperation points towards the currentCamera
-								local directionCos = unitRay:Dot(difference.unit)
-								if not ((difference - Vector3.new(0, 0, 0)).magnitude < 0.01 or math.abs(directionCos) < 0.99) then
-									shouldPerformOperation = false
-								end
+						if currentTool == ToolId.Add and not planeLock then
+							-- calculate a cos from two unit vectors unitRay and difference.unit to check
+							-- if the direction of the next BrushOperation points towards the currentCamera
+							local directionCos = unitRay:Dot(difference.unit)
+							if not ((difference - Vector3.new(0, 0, 0)).magnitude < 0.01 or math.abs(directionCos) < 0.99) then
+								shouldPerformOperation = false
 							end
+						end
 
-							if shouldPerformOperation then
-								self._operationSettings.centerPoint = mainPoint
-								performTerrainBrushOperation(self._terrain, self._operationSettings)
-							end
-						else
+						if shouldPerformOperation then
 							self._operationSettings.centerPoint = mainPoint
 							performTerrainBrushOperation(self._terrain, self._operationSettings)
 						end
 					end
 
-					if not FFlagTerrainToolsAddOnMouseHold or shouldPerformOperation then
+					if shouldPerformOperation then
 						self._isTerrainDirty = true
 						lastMainPoint = mainPoint
 					end

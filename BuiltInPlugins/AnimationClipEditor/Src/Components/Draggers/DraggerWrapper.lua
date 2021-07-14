@@ -22,6 +22,7 @@ local AddWaypoint = require(Plugin.Src.Thunks.History.AddWaypoint)
 local GetFFlagNoValueChangeDuringPlayback = require(Plugin.LuaFlags.GetFFlagNoValueChangeDuringPlayback)
 local GetFFlagRevertExplorerSelection = require(Plugin.LuaFlags.GetFFlagRevertExplorerSelection)
 local GetFFlagCreateSelectionBox = require(Plugin.LuaFlags.GetFFlagCreateSelectionBox)
+local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
 
 local DraggerWrapper = Roact.PureComponent:extend("DraggerWrapper")
 
@@ -58,7 +59,11 @@ local function mapDraggerContextToProps(draggerContext, props)
 		end
 
 		for trackName, value in pairs(values) do
-			props.ValueChanged(instanceName, trackName, props.Playhead, value, props.Analytics)
+			if GetFFlagFacialAnimationSupport() then
+				props.ValueChanged(instanceName, trackName, Constants.TRACK_TYPES.CFrame, props.Playhead, value, props.Analytics)
+			else
+				props.ValueChanged_deprecated(instanceName, trackName, props.Playhead, value, props.Analytics)
+			end
 		end
 	end
 end
@@ -134,9 +139,16 @@ local function mapDispatchToProps(dispatch)
 				dispatch(SetSelectedTracks(trackNames))
 			end
 		end,
-		ValueChanged = function(instanceName, trackName, frame, value, analytics)
+
+		ValueChanged = function(instanceName, trackName, trackType, frame, value, analytics)
+			dispatch(ValueChanged(instanceName, trackName, trackType, frame, value, analytics))
+		end,
+
+		-- Remove when GetFFlagFacialAnimationSupport() is retired
+		ValueChanged_deprecated = function(instanceName, trackName, frame, value, analytics)
 			dispatch(ValueChanged(instanceName, trackName, frame, value, analytics))
 		end,
+
 		AddWaypoint = function()
 			dispatch(AddWaypoint())
 		end,

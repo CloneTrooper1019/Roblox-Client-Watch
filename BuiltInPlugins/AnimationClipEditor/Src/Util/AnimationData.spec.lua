@@ -1,8 +1,10 @@
 return function()
 	local Plugin = script.Parent.Parent.Parent
-	local GetFFlagEnforceMaxAnimLength = require(Plugin.LuaFlags.GetFFlagEnforceMaxAnimLength)
+	local Constants = require(Plugin.Src.Util.Constants)
+
 	local GetFFlagDebugExtendAnimationLimit = require(Plugin.LuaFlags.GetFFlagDebugExtendAnimationLimit)
 	local GetFFlagExtendAnimationLimit = require(Plugin.LuaFlags.GetFFlagExtendAnimationLimit)
+	local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
 
 	local AnimationData = require(script.Parent.AnimationData)
 
@@ -19,6 +21,7 @@ return function()
 				Type = "Skeleton",
 				Tracks = {
 					["TestTrack"] = {
+						Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 						Keyframes = {1, 2, 3},
 						Data = {
 							[1] = {
@@ -39,6 +42,7 @@ return function()
 						}
 					},
 					["OtherTrack"] = {
+						Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 						Keyframes = {1, 2, 3},
 						Data = {
 							[1] = {
@@ -287,6 +291,7 @@ return function()
 	describe("addKeyframe", function()
 		it("should add a new keyframe", function()
 			local track = {
+				Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 				Keyframes = {},
 				Data = {},
 			}
@@ -298,6 +303,7 @@ return function()
 
 		it("should preserve the old keyframes", function()
 			local track = {
+				Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 				Keyframes = {1},
 				Data = {
 					[1] = {},
@@ -310,6 +316,7 @@ return function()
 
 		it("should sort the Keyframes table after adding", function()
 			local track = {
+				Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 				Keyframes = {1, 3},
 				Data = {
 					[1] = {},
@@ -326,6 +333,7 @@ return function()
 	describe("moveKeyframe", function()
 		it("should move a keyframe", function()
 			local track = {
+				Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 				Keyframes = {1},
 				Data = {
 					[1] = {},
@@ -340,6 +348,7 @@ return function()
 
 		it("should preserve the old keyframes", function()
 			local track = {
+				Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 				Keyframes = {1, 2},
 				Data = {
 					[1] = {},
@@ -353,6 +362,7 @@ return function()
 
 		it("should clobber a keyframe if another is moved onto it", function()
 			local track = {
+				Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 				Keyframes = {1, 2},
 				Data = {
 					[1] = {
@@ -370,6 +380,7 @@ return function()
 
 		it("should sort the Keyframes table after moving", function()
 			local track = {
+				Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 				Keyframes = {2, 3},
 				Data = {
 					[2] = {},
@@ -385,6 +396,7 @@ return function()
 	describe("deleteKeyframe", function()
 		it("should delete a keyframe", function()
 			local track = {
+				Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 				Keyframes = {1, 2},
 				Data = {
 					[1] = {},
@@ -398,6 +410,7 @@ return function()
 
 		it("should preserve the old keyframes", function()
 			local track = {
+				Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 				Keyframes = {1, 2},
 				Data = {
 					[1] = {},
@@ -412,6 +425,7 @@ return function()
 	describe("setKeyframeData", function()
 		it("should set a keyframe's data", function()
 			local track = {
+				Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 				Keyframes = {1},
 				Data = {
 					[1] = {},
@@ -430,6 +444,7 @@ return function()
 
 		it("should merge with the keyframe's existing data", function()
 			local track = {
+				Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 				Keyframes = {1},
 				Data = {
 					[1] = {
@@ -739,7 +754,7 @@ return function()
 		end)
 	end)
 
-	if GetFFlagEnforceMaxAnimLength() and (not GetFFlagDebugExtendAnimationLimit() or not GetFFlagExtendAnimationLimit()) then
+	if not GetFFlagDebugExtendAnimationLimit() or not GetFFlagExtendAnimationLimit() then
 		describe("removeExtraKeyframes", function()
 			it("should remove keyframes from animations that exceed 30 seconds in length", function()
 				local excessAnimationData = {

@@ -28,11 +28,20 @@ local ShutdownAllServers = require(Page.Thunks.ShutdownAllServers)
 
 local LayoutOrderIterator = FFlagGameSettingsDisplayCollaborativeEditingWarning and require(Plugin.Framework.Util).LayoutOrderIterator or nil
 
+local FFlagGameSettingsUseKeyProvider = game:GetFastFlag("GameSettingsUseKeyProvider")
+local KeyProvider = FFlagGameSettingsUseKeyProvider and require(Plugin.Src.Util.KeyProvider) or nil
+
+local FFlagGameSettingsEnableVoiceChat = game:GetFastFlag("GameSettingsEnableVoiceChat")
+
+local GetVoiceChatEnabledKeyName = FFlagGameSettingsUseKeyProvider and FFlagGameSettingsEnableVoiceChat and KeyProvider.getVoiceChatEnabledKeyName or nil
+local voiceChatEnabledKey = FFlagGameSettingsUseKeyProvider and FFlagGameSettingsEnableVoiceChat and GetVoiceChatEnabledKeyName and GetVoiceChatEnabledKeyName() or "VoiceChatEnabled"
+
 local LOCALIZATION_ID = script.Name
 
 local function loadSettings(store, contextItems)
 	local state = store:getState()
 	local game = state.Metadata.game
+	local gameId = state.Metadata.gameId
 	local gameOptionsController = contextItems.gameOptionsController
 
 	return {
@@ -41,12 +50,21 @@ local function loadSettings(store, contextItems)
 
 			loadedSettings["ScriptCollabEnabled"] = enabled
 		end,
+
+		function(loadedSettings)
+			if FFlagGameSettingsEnableVoiceChat then
+				local optIn = gameOptionsController:getVoiceChatEnabled(gameId)
+
+				loadedSettings[voiceChatEnabledKey] = optIn
+			end
+		end,
 	}
 end
 
 local function saveSettings(store, contextItems)
 	local state = store:getState()
 	local game = state.Metadata.game
+	local gameId = state.Metadata.gameId
 	local gameOptionsController = contextItems.gameOptionsController
 
 	return {
@@ -57,6 +75,15 @@ local function saveSettings(store, contextItems)
 				gameOptionsController:setScriptCollaborationEnabled(game, changed)
 			end
 		end,
+		function()
+			if FFlagGameSettingsEnableVoiceChat then
+				local changed = state.Settings.Changed.VoiceChatEnabled
+
+				if changed ~= nil then
+					gameOptionsController:setVoiceChatEnabled(gameId, changed)
+				end
+			end
+		end,
 	}
 end
 
@@ -64,7 +91,8 @@ end
 local function loadValuesToProps(getValue, state)
 	local loadedProps = {
 		ScriptCollabEnabled = getValue("ScriptCollabEnabled"),
-		CurrentScriptCollabEnabled = FFlagGameSettingsDisplayCollaborativeEditingWarning and state.Settings.Current.ScriptCollabEnabled or nil
+		CurrentScriptCollabEnabled = FFlagGameSettingsDisplayCollaborativeEditingWarning and state.Settings.Current.ScriptCollabEnabled or nil,
+		VoiceChatEnabled = FFlagGameSettingsEnableVoiceChat and getValue(voiceChatEnabledKey) or nil,
 	}
 	return loadedProps
 end
@@ -76,6 +104,7 @@ local function dispatchChanges(setValue, dispatch)
 		dispatchShutdownAllServers = function()
 			dispatch(ShutdownAllServers())
 		end,
+		VoiceChatEnabledChanged = setValue(voiceChatEnabledKey),
 	}
 
 	return dispatchFuncs
@@ -99,7 +128,7 @@ function Options:render()
 		0, shutdownButtonTextExtents.Y + shutdownButtonPaddingY)
 
 	local dispatchShutdownAllServers = props.dispatchShutdownAllServers
-	
+
 	local shouldDisplayWarning
 	local layoutIndex
 	if FFlagGameSettingsDisplayCollaborativeEditingWarning then
@@ -193,6 +222,17 @@ function Options:render()
 						TextXAlignment = Enum.TextXAlignment.Left,
 						TextWrapped = true,
 					})),
+			}),
+
+			EnableVoiceChat = FFlagGameSettingsEnableVoiceChat and Roact.createElement(ToggleButtonWithTitle, {
+				Title = localization:getText("General", "VoiceChatTitle"),
+				Description = localization:getText("General", "VoiceChatText"),
+				LayoutOrder = FFlagGameSettingsDisplayCollaborativeEditingWarning and layoutIndex:getNextOrder() or 8,
+				Disabled = false,
+				Selected = props.VoiceChatEnabled,
+				OnClick = function()
+					props.VoiceChatEnabledChanged(not props.VoiceChatEnabled)
+				end,
 			}),
 		}
 	end

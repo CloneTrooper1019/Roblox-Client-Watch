@@ -3,7 +3,6 @@ local Plugin = script.Parent.Parent.Parent
 local isCJV = require(Plugin.Src.Util.isCJV)
 
 local FFlagStudioCreatePluginPolicyService = game:GetFastFlag("StudioCreatePluginPolicyService")
-local FFlagStudioEnableBadgesInMonetizationPage = game:GetFastFlag("StudioEnableBadgesInMonetizationPage")
 local FFlagLuobuDevPublishLua = game:GetFastFlag("LuobuDevPublishLua")
 local FFlagLuobuDevPublishLuaTempOptIn = game:GetFastFlag("LuobuDevPublishLuaTempOptIn")
 
@@ -41,8 +40,6 @@ function GameSettingsUtilities.shouldDisablePrivateServersAndPaidAccess()
 end
 
 function GameSettingsUtilities.shouldAllowBadges()
-    assert(FFlagStudioEnableBadgesInMonetizationPage)
-
     return (not FFlagStudioCreatePluginPolicyService and not StudioService:BaseURLHasChineseHost())
         or (FFlagStudioCreatePluginPolicyService and GameSettingsPolicy["ShowBadges"])
 end

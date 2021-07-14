@@ -22,8 +22,6 @@
     Optional props:
         PriceError = string, error message to be shown for this component
 ]]
-local FFlagStudioEnableBadgesInMonetizationPage = game:GetFastFlag("StudioEnableBadgesInMonetizationPage")
-
 local Page = script.Parent.Parent
 local Plugin = script.Parent.Parent.Parent.Parent
 
@@ -140,7 +138,7 @@ function PaidAccess:render()
         PriceConfigPaidOnly = selected and Roact.createElement(TitledFrame, {
             Title = priceTitle,
 
-            TextSize = FFlagStudioEnableBadgesInMonetizationPage and theme.fontStyle.Normal.TextSize or theme.fontStyle.Title.TextSize,
+            TextSize = theme.fontStyle.Normal.TextSize,
             LayoutOrder = 2,
         },{
             RobuxFeeBase = Roact.createElement(RobuxFeeBase, {

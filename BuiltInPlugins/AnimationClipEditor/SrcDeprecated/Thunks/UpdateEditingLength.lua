@@ -8,8 +8,6 @@ local Constants = require(Plugin.SrcDeprecated.Util.Constants)
 local SetScrollZoom = require(Plugin.SrcDeprecated.Actions.SetScrollZoom)
 local SetEditingLength = require(Plugin.SrcDeprecated.Actions.SetEditingLength)
 
-local UseCustomFPS = require(Plugin.LuaFlags.GetFFlagAnimEditorUseCustomFPS)
-
 return function(length)
 	return function(store)
 		local state = store:getState()
@@ -19,7 +17,7 @@ return function(length)
 		end
 
 		local endFrame = animationData.Metadata.EndFrame
-		length = math.max(length, endFrame, UseCustomFPS() and animationData.Metadata.FrameRate or Constants.DEFAULT_FRAMERATE)
+		length = math.max(length, endFrame, animationData.Metadata.FrameRate)
 		store:dispatch(SetEditingLength(length))
 		store:dispatch(SetScrollZoom(0, 0))
 	end

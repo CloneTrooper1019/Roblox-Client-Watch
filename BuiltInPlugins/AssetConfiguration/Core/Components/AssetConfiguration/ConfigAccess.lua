@@ -4,6 +4,8 @@
 	Props:
 	onDropDownSelect, function, will return current selected item if selected.
 ]]
+local FFlagUGCGroupUploads = game:GetFastFlag("UGCGroupUploads")
+
 local Plugin = script.Parent.Parent.Parent.Parent
 
 local Libs = Plugin.Libs
@@ -22,6 +24,7 @@ local DropdownMenu = require(Plugin.Core.Components.DropdownMenu)
 
 local Requests = Plugin.Core.Networking.Requests
 local GetAssetConfigManageableGroupsRequest = require(Requests.GetAssetConfigManageableGroupsRequest)
+local GetAvatarAssetsValidGroupsRequest = require(Requests.GetAvatarAssetsValidGroupsRequest)
 local GetGroupMetadata = require(Plugin.Core.Thunks.GetGroupMetadata)
 
 local ConfigTypes = require(Plugin.Core.Types.ConfigTypes)
@@ -44,7 +47,15 @@ end
 
 function ConfigAccess:didMount()
 	-- Initial request
-	self.props.getManageableGroups(getNetwork(self))
+	if FFlagUGCGroupUploads then
+		if AssetConfigUtil.isCatalogAsset(self.props.assetTypeEnum) then
+			self.props.getAvatarAssetsValidGroups(getNetwork(self), self.props.assetTypeEnum)
+		else
+			self.props.getManageableGroups(getNetwork(self))
+		end
+	else
+		self.props.getManageableGroups(getNetwork(self))
+	end
 end
 
 function ConfigAccess:render()
@@ -62,7 +73,14 @@ function ConfigAccess:render()
 			-- User is 0, howerver in source code, User is 1.
 			-- TODO: Notice UX to change the website.
 			local ownerIndex = (owner.typeId or 1)
-			self.dropdownContent = AssetConfigUtil.getOwnerDropDownContent(props.manageableGroups, localizedContent)
+			if FFlagUGCGroupUploads then
+				local groups = AssetConfigUtil.isCatalogAsset(props.assetTypeEnum)
+					and props.avatarAssetsValidGroups
+					or props.manageableGroups
+				self.dropdownContent = AssetConfigUtil.getOwnerDropDownContent(groups, localizedContent)
+			else
+				self.dropdownContent = AssetConfigUtil.getOwnerDropDownContent(props.manageableGroups, localizedContent)
+			end
 
 			local onDropDownSelect = props.onDropDownSelect
 
@@ -157,19 +175,22 @@ local function mapStateToProps(state, props)
 	local owner = (state.assetConfigData and state.assetConfigData.Creator) or props.owner
 
 	return {
+		assetTypeEnum = state.assetTypeEnum,
 		screenFlowType = state.screenFlowType,
 		manageableGroups = state.manageableGroups or {},
-		groupsArray = state.groupsArray or {},
+		avatarAssetsValidGroups = state.avatarAssetsValidGroups or {},
 		assetGroupData = assetGroupData,
 		owner = owner,
-		isPackageAsset = state.isPackageAsset,
 	}
 end
 
 local function mapDispatchToProps(dispatch)
 	return {
-		getManageableGroups = function(networkInterface, DEPRECATED_userId)
-			dispatch(GetAssetConfigManageableGroupsRequest(networkInterface, DEPRECATED_userId))
+		getManageableGroups = function(networkInterface)
+			dispatch(GetAssetConfigManageableGroupsRequest(networkInterface))
+		end,
+		getAvatarAssetsValidGroups = function(networkInterface, assetType)
+			dispatch(GetAvatarAssetsValidGroupsRequest(networkInterface, assetType))
 		end,
 	}
 end

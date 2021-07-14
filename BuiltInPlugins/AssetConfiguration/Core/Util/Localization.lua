@@ -415,6 +415,14 @@ function Localization:_recalculateContent()
 			CreationsFrontAccessories = self:_safeLocalize("Studio.Toolbox.General.CategoryCreationsFrontAccessory"),
 			CreationsBackAccessories = self:_safeLocalize("Studio.Toolbox.General.CategoryCreationsBackAccessory"),
 			CreationsWaistAccessories = self:_safeLocalize("Studio.Toolbox.General.CategoryCreationsWaistAccessory"),
+			CreationsGroupHats = self:_safeLocalize("Studio.Toolbox.General.CategoryCreationsGroupHats"),
+			CreationsGroupHair = self:_safeLocalize("Studio.Toolbox.General.CategoryCreationsGroupHair"),
+			CreationsGroupFaceAccessories = self:_safeLocalize("Studio.Toolbox.General.CategoryCreationsGroupFaceAccessory"),
+			CreationsGroupNeckAccessories = self:_safeLocalize("Studio.Toolbox.General.CategoryCreationsGroupNeckAccessory"),
+			CreationsGroupShoulderAccessories = self:_safeLocalize("Studio.Toolbox.General.CategoryCreationsGroupShoulderAccessory"),
+			CreationsGroupFrontAccessories = self:_safeLocalize("Studio.Toolbox.General.CategoryCreationsGroupFrontAccessory"),
+			CreationsGroupBackAccessories = self:_safeLocalize("Studio.Toolbox.General.CategoryCreationsGroupBackAccessory"),
+			CreationsGroupWaistAccessories = self:_safeLocalize("Studio.Toolbox.General.CategoryCreationsGroupWaistAccessory"),
 		},
 
 		Suggestions = {

@@ -53,6 +53,7 @@ local SetPackagePermission = require(Actions.SetPackagePermission)
 local SetTagSuggestions = require(Actions.SetTagSuggestions)
 local SetFieldError = require(Actions.SetFieldError)
 local SetUploadFee = require(Actions.SetUploadFee)
+local SetAssetConfigAvatarAssetsValidGroups = require(Actions.SetAssetConfigAvatarAssetsValidGroups)
 
 local ConfigTypes = require(Plugin.Core.Types.ConfigTypes)
 
@@ -94,6 +95,7 @@ return Rodux.createReducer({
 	filteredResultsArray = {}, -- Remove with FFlagImproveAssetCreationsPageFetching2
 
 	manageableGroups = {},
+	avatarAssetsValidGroups = {},
 
 	isVerifiedCreator = true,
 
@@ -463,6 +465,12 @@ return Rodux.createReducer({
 			isUploadFeeEnabled = action.isUploadFeeEnabled,
 			uploadFee = action.uploadFee,
 			canAffordUploadFee = action.canAffordUploadFee,
+		})
+	end,
+
+	[SetAssetConfigAvatarAssetsValidGroups.name] = function(state, action)
+		return Cryo.Dictionary.join(state, {
+			avatarAssetsValidGroups = action.avatarAssetsValidGroups
 		})
 	end,
 })

@@ -1,13 +1,11 @@
 --[[
 	A back button with a little separator below it.
 ]]
-local FFlagGameSettingsMigrateToDevFrameworkSeparator = game:GetFastFlag("GameSettingsMigrateToDevFrameworkSeparator")
-
 local Plugin = script.Parent.Parent.Parent
 local Roact = require(Plugin.Roact)
 local UILibrary = require(Plugin.UILibrary)
 
-local Separator = FFlagGameSettingsMigrateToDevFrameworkSeparator and require(Plugin.Framework).UI.Separator or require(Plugin.Src.Components.Separator)
+local Separator = require(Plugin.Framework).UI.Separator
 
 local createFitToContent = UILibrary.Component.createFitToContent
 

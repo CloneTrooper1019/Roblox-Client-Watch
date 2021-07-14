@@ -7,6 +7,8 @@ local Constants = require(Util.Constants)
 local Framework = require(Libs.Framework)
 local ContextServices = Framework.ContextServices
 
+local Button = Framework.UI.Button
+
 local THUMBNAIL_SIZE = 32
 local COLLABORATOR_SEARCH_ITEM_HEIGHT = 50
 
@@ -19,8 +21,6 @@ function CollaboratorSearchItem:render()
 	local name = props.Name
 	local layoutOrder = props.LayoutOrder
 	local onActivated = props.OnActivated
-	local onMouseEnter = props.OnMouseEnter
-	local onMouseLeave = props.OnMouseLeave
 	local size = props.Size
 	local textPadding = props.TextPadding
 
@@ -34,15 +34,10 @@ function CollaboratorSearchItem:render()
 	local textLabelOffset = -iconOffset
 	local backgroundColor = isHovered and searchBarTheme.dropDown.hovered.backgroundColor or searchBarTheme.dropDown.backgroundColor
 
-	return Roact.createElement("ImageButton", {
+	return Roact.createElement(Button, {
 		Size = size,
-		BackgroundColor3 = backgroundColor,
-		BorderSizePixel = 0,
 		LayoutOrder = layoutOrder,
-		AutoButtonColor = false,
-		[Roact.Event.Activated] = onActivated,
-		[Roact.Event.MouseEnter] = onMouseEnter,
-		[Roact.Event.MouseLeave] = onMouseLeave,
+		OnClick = onActivated,
 	}, {
 		Container = Roact.createElement("Frame", {
 			AutomaticSize = Enum.AutomaticSize.X,

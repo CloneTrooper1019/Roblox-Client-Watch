@@ -8,6 +8,7 @@
 ]]
 
 local FFlagTextInputDialogDevFramework = game:GetFastFlag("TextInputDialogDevFramework")
+local FFlagDevFrameworkCheckbox = game:GetFastFlag("DevFrameworkCheckbox")
 
 local function newDefaults()
 	return {
@@ -24,6 +25,7 @@ function FrameworkStyles.new()
 		Box = newDefaults(),
 		BulletList = newDefaults(),
 		Button = newDefaults(),
+		Checkbox = FFlagDevFrameworkCheckbox and newDefaults() or nil,
 		DropdownMenu = newDefaults(),
 		DropShadow = newDefaults(),
 		IconButton = newDefaults(),

@@ -11,6 +11,8 @@ local isEmpty = require(Plugin.Src.Util.isEmpty)
 local SetClipboard = require(Plugin.Src.Actions.SetClipboard)
 local Constants = require(Plugin.Src.Util.Constants)
 
+local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
+
 return function()
 	return function(store)
 		local state = store:getState()
@@ -28,10 +30,17 @@ return function()
 				for trackName, keyframes in pairs(instance) do
 					if animationData.Instances[instanceName].Tracks[trackName] then
 						local track = animationData.Instances[instanceName].Tracks[trackName]
-						clipboard[instanceName][trackName] = {}
+						clipboard[instanceName][trackName] = GetFFlagFacialAnimationSupport() and {
+							Type = track.Type,
+							Data = {},
+						} or {}
 						for keyframe, _ in pairs(keyframes) do
 							local data = track.Data[keyframe]
-							clipboard[instanceName][trackName][keyframe] = deepCopy(data)
+							if GetFFlagFacialAnimationSupport() then
+								clipboard[instanceName][trackName].Data[keyframe] = deepCopy(data)
+							else
+								clipboard[instanceName][trackName][keyframe] = deepCopy(data)
+							end
 						end
 					end
 				end

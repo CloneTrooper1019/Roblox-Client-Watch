@@ -14,8 +14,11 @@ local Plugin = script.Parent.Parent.Parent
 local Cryo = require(Plugin.Packages.Cryo)
 local SkeletonUtils = require(Plugin.Src.Util.SkeletonUtils)
 local RigUtils = require(Plugin.Src.Util.RigUtils)
+local FacsUtils = require(Plugin.Src.Util.FacsUtils)
 
 local SetTracks = require(Plugin.Src.Actions.SetTracks)
+
+local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
 
 local function depthFirstTraverse(node, callback, depth)
 	local keys = Cryo.Dictionary.keys(node)
@@ -43,6 +46,7 @@ local function sortByHierarchy(tracks, hierarchy)
 			end
 		end
 	end, 0)
+
 	return sorted
 end
 
@@ -93,12 +97,24 @@ return function(newTracks)
 			-- and set depths so we can display the data at
 			-- different levels of indentation
 			sorted = sortByHierarchy(newTracks, hierarchy)
+
+			if GetFFlagFacialAnimationSupport() then
+				-- Facs tracks have been skipped during sortByHierarchy.
+				-- Add them now
+				local facs = FacsUtils.filterFacsTracks(newTracks)
+				sorted = Cryo.List.join(sorted, sortAlphabetically(facs))
+			end
 		else
 			-- If there is no hierarchy do the data, just alphabetically sort
 			-- and display every track at the same level of indentation.
 			sorted = sortAlphabetically(newTracks)
 		end
 
-		store:dispatch(SetTracks(sorted, unusedTracks))
+		if GetFFlagFacialAnimationSupport() then
+			local unusedFacs = FacsUtils.getUnusedFacs(newTracks)
+			store:dispatch(SetTracks(sorted, unusedTracks, unusedFacs))
+		else
+			store:dispatch(SetTracks(sorted, unusedTracks))
+		end
 	end
 end

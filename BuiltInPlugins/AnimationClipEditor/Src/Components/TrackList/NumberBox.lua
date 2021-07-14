@@ -103,6 +103,8 @@ function NumberBox:render()
 
 		local name = props.Name
 		local size = props.Size
+		local position = props.Position
+		local anchorPoint = props.AnchorPoint
 		local number = props.Number
 		local layoutOrder = props.LayoutOrder
 		local readOnly = props.ReadOnly
@@ -114,6 +116,8 @@ function NumberBox:render()
 
 		return Roact.createElement(RoundFrame, {
 			Size = size,
+			Position = position,
+			AnchorPoint = anchorPoint,
 			BackgroundColor3 = textBoxTheme.backgroundColor,
 			BorderColor3 = borderColor,
 			LayoutOrder = layoutOrder,

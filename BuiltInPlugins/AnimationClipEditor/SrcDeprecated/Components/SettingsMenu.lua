@@ -22,8 +22,6 @@ local ToggleSnapToKeys = require(Plugin.SrcDeprecated.Thunks.ToggleSnapToKeys)
 local SetFrameRate = require(Plugin.SrcDeprecated.Thunks.SetFrameRate)
 local SetShowEvents = require(Plugin.SrcDeprecated.Actions.SetShowEvents)
 
-local UseCustomFPS = require(Plugin.LuaFlags.GetFFlagAnimEditorUseCustomFPS)
-
 local SettingsMenu = Roact.PureComponent:extend("SettingsMenu")
 
 function SettingsMenu:makeTimelineUnitMenu(localization)
@@ -90,10 +88,8 @@ function SettingsMenu:makeMenuActions(localization)
 	table.insert(actions, self:makeTimelineUnitMenu(localization))
 	table.insert(actions, Constants.MENU_SEPARATOR)
 
-	if UseCustomFPS() then
-		table.insert(actions, self:makeFrameRateMenu(localization))
-		table.insert(actions, Constants.MENU_SEPARATOR)
-	end
+	table.insert(actions, self:makeFrameRateMenu(localization))
+	table.insert(actions, Constants.MENU_SEPARATOR)
 
 	table.insert(actions, {
 		Name = localization:getText("Settings", "ShowEvents"),
@@ -136,9 +132,7 @@ local function mapStateToProps(state, props)
 		Analytics = state.Analytics,
 	}
 
-	if UseCustomFPS() then
-		stateToProps["AnimationData"] = state.AnimationData
-	end
+	stateToProps["AnimationData"] = state.AnimationData
 
 	return stateToProps
 end
@@ -158,10 +152,8 @@ local function mapDispatchToProps(dispatch)
 		end,
 	}
 
-	if UseCustomFPS() then
-		dispatchToProps["SetFrameRate"] = function(frameRate)
-			dispatch(SetFrameRate(frameRate))
-		end
+	dispatchToProps["SetFrameRate"] = function(frameRate)
+		dispatch(SetFrameRate(frameRate))
 	end
 
 	return dispatchToProps

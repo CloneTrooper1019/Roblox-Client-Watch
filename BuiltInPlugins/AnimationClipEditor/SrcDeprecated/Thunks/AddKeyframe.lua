@@ -8,7 +8,6 @@ local deepCopy = require(Plugin.SrcDeprecated.Util.deepCopy)
 local AnimationData = require(Plugin.SrcDeprecated.Util.AnimationData)
 local AddTrack = require(Plugin.SrcDeprecated.Thunks.AddTrack)
 local UpdateAnimationData = require(Plugin.SrcDeprecated.Thunks.UpdateAnimationData)
-local GetFFlagAutoCreateBasePoseKeyframe = require(Plugin.LuaFlags.GetFFlagAutoCreateBasePoseKeyframe)
 
 return function(instanceName, trackName, frame, value)
 	return function(store)
@@ -38,7 +37,7 @@ return function(instanceName, trackName, frame, value)
 			AnimationData.addKeyframe(track, frame, value)
 
 			-- if no base pose kf exists at time 0, create one now
-			if GetFFlagAutoCreateBasePoseKeyframe() and frame ~= 0 and trackData[0] == nil then
+			if frame ~= 0 and trackData[0] == nil then
 				AnimationData.addKeyframe(track, 0, CFrame.new())
 			end
 

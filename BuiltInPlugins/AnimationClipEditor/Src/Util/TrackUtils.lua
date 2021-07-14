@@ -8,6 +8,8 @@ local Cryo = require(Plugin.Packages.Cryo)
 local KeyframeUtils = require(Plugin.Src.Util.KeyframeUtils)
 local Constants = require(Plugin.Src.Util.Constants)
 
+local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
+
 local TrackUtils = {}
 
 local function removeNegativeZero(val)
@@ -115,15 +117,41 @@ function TrackUtils.getExpandedSize(track)
 	end
 end
 
--- Returns the default value for a new keyframe based on track type.
-function TrackUtils.getDefaultValue(track)
-	if track and track.Type then
-		local trackType = track.Type
-		if trackType == Constants.TRACK_TYPES.CFrame then
+-- Returns the default value for a new keyframe based on a track type.
+function TrackUtils.getDefaultValueByType(trackType)
+	if trackType == Constants.TRACK_TYPES.CFrame then
+		return CFrame.new()
+	elseif trackType == Constants.TRACK_TYPES.Facs then
+		return 0
+	end
+end
+
+if GetFFlagFacialAnimationSupport() then
+	function TrackUtils.getDefaultValue(track)
+		if track and track.Type then
+			return TrackUtils.getDefaultValueByType(track.Type)
+		end
+	end
+else
+	function TrackUtils.getDefaultValue(track)
+		if track and track.Type then
+			local trackType = track.Type
+			if trackType == Constants.TRACK_TYPES.CFrame then
+				return CFrame.new()
+			end
+		else
 			return CFrame.new()
 		end
-	else
-		return CFrame.new()
+	end
+end
+
+-- Given a track name and a list of trackEntries, find the
+-- type of the corresponding track
+function TrackUtils.getTrackTypeFromName(trackName, tracks)
+	for _, track in pairs(tracks) do
+		if track.Name == trackName then
+			return track.Type
+		end
 	end
 end
 
@@ -244,6 +272,14 @@ function TrackUtils.getItemsForProperty(track, value)
 					Key = "Z",
 					Value = removeNegativeZero(math.deg(zRot)),
 				},
+			},
+		}
+	elseif trackType == Constants.TRACK_TYPES.Facs then
+		items = {
+			{
+				Name = "V",
+				Key = "Value",
+				Value = value,
 			},
 		}
 	end

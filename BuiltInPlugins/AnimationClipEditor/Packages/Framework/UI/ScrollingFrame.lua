@@ -3,6 +3,7 @@
 	with the native Studio Start Page.
 
 	Optional Props:
+		boolean EnableScrollBarBackground: Whether or not to show a background coor for the scrollbar
 		callback OnScrollUpdate: A callback function that will update the index change.
 		UDim2 Position: The position of the scrolling frame.
 		UDim2 Size: The size of the scrolling frame.
@@ -29,8 +30,11 @@
 		UDim2 CanvasSize: The size of the scrolling frame's canvas.
 		integer ScrollBarPadding: The padding which appears on either side of the scrollbar.
 		integer ScrollBarThickness: The horizontal width of the scrollbar.
+		Color3 ScrollBarBackgroundColor: Background color of the scrollbar.
 		integer ZIndex: The draw index of the frame.
 ]]
+local FFlagDevFrameworkRefactorScrollbarColor = game:GetFastFlag("DevFrameworkRefactorScrollbarColor")
+
 local Framework = script.Parent.Parent
 local Roact = require(Framework.Parent.Roact)
 local Util = require(Framework.Util)
@@ -123,6 +127,8 @@ function ScrollingFrame:init()
 			Style = Cryo.None,
 			Stylizer = Cryo.None,
 			getUILibraryTheme = Cryo.None,
+			ScrollBarBackgroundColor = FFlagDevFrameworkRefactorScrollbarColor and Cryo.None or nil,
+			EnableScrollBarBackground = FFlagDevFrameworkRefactorScrollbarColor and Cryo.None or nil,
 		},
 	}
 
@@ -151,7 +157,8 @@ function ScrollingFrame:init()
 				[Roact.Change.CanvasPosition] = self.onScroll,
 				[Roact.Change.AbsoluteSize] = self.updateCanvasSize,
 				[Roact.Ref] = self.scrollingRef,
-			})
+			}
+		)
 	end
 end
 
@@ -163,6 +170,7 @@ function ScrollingFrame:render()
 	local props = self.props
 	local style = getStyle(self)
 
+	local enableScrollBarBackground = props.EnableScrollBarBackground
 	local position = props.Position
 	local size = props.Size
 	local layoutOrder = props.LayoutOrder
@@ -189,14 +197,21 @@ function ScrollingFrame:render()
 		}
 	end
 
-	local scrollingFrame = Roact.createElement("ScrollingFrame", scrollingFrameProps, children)
-
 	return Roact.createElement(Container, {
 		Position = position,
 		Size = size,
 		LayoutOrder = layoutOrder,
 	}, {
-		Scroller = scrollingFrame,
+		ScrollBarBackground = FFlagDevFrameworkRefactorScrollbarColor and enableScrollBarBackground and Roact.createElement("Frame", {
+			AnchorPoint = Vector2.new(1, 0),
+			Position = UDim2.new(1, 0, 0, 0),
+			Size = UDim2.new(0, style.ScrollBarThickness, 1, 0),
+			BorderSizePixel = 0,
+			BackgroundColor3 = style.ScrollBarBackgroundColor,
+			ZIndex = 0,
+		}),
+
+		Scroller = Roact.createElement("ScrollingFrame", scrollingFrameProps, children),
 	})
 end
 

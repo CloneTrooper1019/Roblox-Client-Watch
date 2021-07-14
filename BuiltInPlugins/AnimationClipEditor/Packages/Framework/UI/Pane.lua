@@ -10,6 +10,7 @@
 		Spacing: An optional number or UDim to space elements out by.
 		HorizontalAlignment: Property on UIListLayout
 		VerticalAlignment: Property on UIListLayout
+		callback OnClick: Triggered when the user clicks on this component.
 		callback OnPress: Triggered when the user clicks or taps on this component.
 	Styles:
 		Default: The pane has no background
@@ -18,6 +19,7 @@
 		BorderBox: The pane has the current theme's main background with square border.
 ]]
 local FFlagDevFrameworkPaneSupportTheme1 = game:GetFastFlag("DevFrameworkPaneSupportTheme1")
+local FFlagDevFrameworkPaneOnClick = game:GetFastFlag("DevFrameworkPaneOnClick")
 
 local Framework = script.Parent.Parent
 local ContextServices = require(Framework.ContextServices)
@@ -32,6 +34,22 @@ local join = Dash.join
 local omit = Dash.omit
 
 local Pane = Roact.PureComponent:extend("Pane")
+
+local function getClassName(props, style)
+	local className
+	if style.Image then
+		if props.OnClick then
+			className = "ImageButton"
+		else
+			className = "ImageLabel"
+		end
+	elseif props.OnClick then
+		className = "TextButton"
+	else
+		className = "Frame"
+	end
+	return className
+end
 
 Pane.defaultProps = {
 	HorizontalAlignment = Enum.HorizontalAlignment.Center,
@@ -106,7 +124,13 @@ function Pane:render()
 		end
 	end
 
-	local className = "Frame"
+	local className
+	if FFlagDevFrameworkPaneOnClick then
+		className = getClassName(props, style)
+	else
+		className = "Frame"
+	end
+
 	local defaultProps = {
 		BackgroundTransparency = 1,
 		BorderSizePixel = 0,
@@ -116,8 +140,18 @@ function Pane:render()
 	if color then
 		defaultProps.BackgroundTransparency = 0
 	end
+
+	if FFlagDevFrameworkPaneOnClick and props.OnClick then
+		props[Roact.Event.Activated] = props.OnClick
+		if not style.Image then
+			props.Text = ""
+		end
+	end
+
 	if style.Image then
-		className = "ImageLabel"
+		if not FFlagDevFrameworkPaneOnClick then
+			className = "ImageLabel"
+		end
 		assign(defaultProps, {
 			Image = style.Image,
 			ImageColor3 = color,
@@ -154,6 +188,7 @@ function Pane:render()
 		"Theme",
 		"HorizontalAlignment",
 		"VerticalAlignment",
+		"OnClick",
 		"OnPress",
 	}
 	or {
@@ -168,6 +203,7 @@ function Pane:render()
 		"Stylizer",
 		"HorizontalAlignment",
 		"VerticalAlignment",
+		"OnClick",
 		"OnPress",
 	})
 

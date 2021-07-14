@@ -1,3 +1,4 @@
+local FFlagDevFrameworkRefactorScrollbarColor = game:GetFastFlag("DevFrameworkRefactorScrollbarColor")
 local Framework = script.Parent.Parent.Parent
 
 local Util = require(Framework.Util)
@@ -10,6 +11,7 @@ local StudioFrameworkStyles = Framework.StudioUI.StudioFrameworkStyles
 local Common = require(StudioFrameworkStyles.Common)
 local UIFolderData = require(Framework.UI.UIFolderData)
 local InfiniteScrollingFrame = require(UIFolderData.InfiniteScrollingFrame.style)
+local StyleKey = require(Framework.Style.StyleKey)
 
 if THEME_REFACTOR then
 	local infiniteScrollingFrame = deepCopy(InfiniteScrollingFrame)
@@ -19,6 +21,7 @@ if THEME_REFACTOR then
 		AutoSizeLayoutOptions = {
 			Padding = UDim.new(0, 4),
 		},
+		ScrollBarBackgroundColor = FFlagDevFrameworkRefactorScrollbarColor and StyleKey.ScrollBarBackground or nil,
 	})
 else
 	return function(theme, getColor)
@@ -30,6 +33,7 @@ else
 			AutoSizeLayoutOptions = {
 				Padding = UDim.new(0, 4),
 			},
+			ScrollBarBackgroundColor = FFlagDevFrameworkRefactorScrollbarColor and theme:GetColor("ScrollBarBackground") or nil,
 		})
 
 		return {

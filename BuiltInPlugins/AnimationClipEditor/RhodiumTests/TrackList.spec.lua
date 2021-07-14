@@ -1,10 +1,14 @@
 return function()
 	local Plugin = script.Parent.Parent
 
+	local Constants = require(Plugin.Src.Util.Constants)
+
 	local TestHelpers = require(Plugin.RhodiumTests.TestHelpers)
 	local TestPaths = require(Plugin.RhodiumTests.TestPaths)
 	local VirtualInput = require(Plugin.Rhodium.VirtualInput)
 	local runTest = TestHelpers.runTest
+
+	local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
 
 	local Templates = require(Plugin.Src.Util.Templates)
 
@@ -13,6 +17,7 @@ return function()
 		Root = {
 			Tracks = {
 				Head = {
+					Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 					Keyframes = {0},
 					Data = {
 						[0] = {
@@ -21,6 +26,7 @@ return function()
 					},
 				},
 				UpperTorso = {
+					Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 					Keyframes = {0},
 					Data = {
 						[0] = {
@@ -32,7 +38,7 @@ return function()
 		},
 	}
 
-	itSKIP("should display an element for every track", function()
+	it("should display an element for every track", function()
 		runTest(function(test)
 			local store = test:getStore()
 			local container = test:getContainer()
@@ -93,7 +99,7 @@ return function()
 		end)
 	end)
 
-	itSKIP("should toggle a track expanded state when its arrow is clicked", function()
+	it("should toggle a track expanded state when its arrow is clicked", function()
 		runTest(function(test)
 			local store = test:getStore()
 			local container = test:getContainer()
@@ -111,7 +117,7 @@ return function()
 		end)
 	end)
 
-	itSKIP("should toggle the selected track expanded state with the arrow keys", function()
+	it("should toggle the selected track expanded state with the arrow keys", function()
 		runTest(function(test)
 			local store = test:getStore()
 			local container = test:getContainer()

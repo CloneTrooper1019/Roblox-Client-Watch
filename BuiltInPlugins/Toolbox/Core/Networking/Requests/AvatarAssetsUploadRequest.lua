@@ -3,6 +3,7 @@ local HttpService = game:GetService("HttpService")
 local Plugin = script.Parent.Parent.Parent.Parent
 
 local FFlagCMSUploadAccessoryMeshPartFormat2 = game:GetFastFlag("CMSUploadAccessoryMeshPartFormat2")
+local FFlagUGCGroupUploads = game:GetFastFlag("UGCGroupUploads")
 
 local SetAssetId = require(Plugin.Core.Actions.SetAssetId)
 local NetworkError = require(Plugin.Core.Actions.NetworkError)
@@ -11,6 +12,7 @@ local UploadResult = require(Plugin.Core.Actions.UploadResult)
 
 local Util = Plugin.Core.Util
 local DebugFlags = require(Util.DebugFlags)
+local getUserId = require(Util.getUserId)
 local AssetConfigConstants = require(Util.AssetConfigConstants)
 local SerializeInstances = require(Util.SerializeInstances)
 local Analytics = require(Util.Analytics.Analytics)
@@ -20,14 +22,23 @@ local createMultipartFormDataBody = require(Util.createMultipartFormDataBody)
 local ConfigureItemTagsRequest = require(Plugin.Core.Networking.Requests.ConfigureItemTagsRequest)
 local UploadCatalogItemMeshPartFormatRequest = require(Plugin.Core.Networking.Requests.UploadCatalogItemMeshPartFormatRequest)
 
-local function createConfigDataTable(nameWithoutExtension, assetTypeId, description)
-	return {
-		name = nameWithoutExtension,
-		description = description,
-	}
+local function createConfigDataTable(nameWithoutExtension, assetTypeId, description, groupId)
+	if FFlagUGCGroupUploads then
+		return {
+			name = nameWithoutExtension,
+			description = description,
+			creatorType = groupId ~= nil and "Group" or "User",
+			creatorTargetId = groupId ~= nil and groupId or getUserId(),
+		}
+	else
+		return {
+			name = nameWithoutExtension,
+			description = description,
+		}
+	end
 end
 
-return function(networkInterface, nameWithoutExtension, extension, description, assetTypeId, instances, tags)
+return function(networkInterface, nameWithoutExtension, extension, description, assetTypeId, instances, tags, groupId)
 	return function(store)
 		nameWithoutExtension = string.sub(nameWithoutExtension or "", 1, AssetConfigConstants.NAME_CHARACTER_LIMIT)
 		description = string.sub(description or "", 1, AssetConfigConstants.DESCRIPTION_CHARACTER_LIMIT)
@@ -77,7 +88,7 @@ return function(networkInterface, nameWithoutExtension, extension, description, 
 		end
 
 		local fileDataString = SerializeInstances(instances)
-		local configDataTable = createConfigDataTable(nameWithoutExtension, assetTypeId, description)
+		local configDataTable = createConfigDataTable(nameWithoutExtension, assetTypeId, description, groupId)
 		local configDataBlob = networkInterface:jsonEncode(configDataTable)
 
 		local formBodyData = createMultipartFormDataBody({

@@ -1,4 +1,8 @@
+local UnvalidatedAssetService = game:GetService("UnvalidatedAssetService")
+
 local ImportAssetHandler = require(script.Parent.ImportAssetHandler)
+
+local EMPTY_USERID = 0
 
 return function()
 	local function createAssetFile(id, name, contents)
@@ -15,20 +19,20 @@ return function()
 
 	it("should be creatable", function()
 		local imageUploader = {}
-		local importAssetHandler = ImportAssetHandler.new(imageUploader)
+		local importAssetHandler = ImportAssetHandler.new(imageUploader, UnvalidatedAssetService, EMPTY_USERID)
 		expect(importAssetHandler).to.be.ok()
 	end)
 
 	it("should expect an ImageUploader instance", function()
 		expect(function()
-			ImportAssetHandler.new()
+			ImportAssetHandler.new(nil, UnvalidatedAssetService, EMPTY_USERID)
 		end).to.throw()
 	end)
 
 	describe("handleAsset", function()
 		it("should expect an AssetFile instance", function()
 			local imageUploader = {}
-			local importAssetHandler = ImportAssetHandler.new(imageUploader)
+			local importAssetHandler = ImportAssetHandler.new(imageUploader, UnvalidatedAssetService, EMPTY_USERID)
 			expect(function()
 				importAssetHandler:handleAsset()
 			end).to.throw()
@@ -36,7 +40,7 @@ return function()
 
 		it("should expect a region", function()
 			local imageUploader = {}
-			local importAssetHandler = ImportAssetHandler.new(imageUploader)
+			local importAssetHandler = ImportAssetHandler.new(imageUploader, UnvalidatedAssetService, EMPTY_USERID)
 			expect(function()
 				local assetFile = {}
 				importAssetHandler:handleAsset(assetFile)
@@ -45,7 +49,7 @@ return function()
 
 		it("should expect temp id to be the right format", function()
 			local imageUploader = {}
-			local importAssetHandler = ImportAssetHandler.new(imageUploader)
+			local importAssetHandler = ImportAssetHandler.new(imageUploader, UnvalidatedAssetService, EMPTY_USERID)
 
 			expect(function()
 				local assetFile = createAssetFile("foo")

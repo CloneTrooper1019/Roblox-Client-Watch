@@ -8,8 +8,6 @@
 ]]
 
 local Plugin = script.Parent.Parent.Parent
-
-local FFlagStudioAssetManagerShowBadgesTeachingCallout = game:GetFastFlag("StudioAssetManagerShowBadgesTeachingCallout")
 local FFlagStudioAssetManagerAddRecentlyImportedView = game:GetFastFlag("StudioAssetManagerAddRecentlyImportedView")
 
 local Roact = require(Plugin.Packages.Roact)

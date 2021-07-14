@@ -6,14 +6,23 @@ local DraggerFramework = Packages.DraggerFramework
 local JointMaker = require(DraggerFramework.Utility.JointMaker)
 local getBoundingBoxScale = require(DraggerFramework.Utility.getBoundingBoxScale)
 local TemporaryTransparency = require(DraggerFramework.Utility.TemporaryTransparency)
+local Math = require(DraggerFramework.Utility.Math)
 
 local getEngineFeatureModelPivotApi = require(DraggerFramework.Flags.getEngineFeatureModelPivotApi)
 local getEngineFeatureModelPivotVisual = require(DraggerFramework.Flags.getEngineFeatureModelPivotVisual)
 
 local getFFlagFixRotatedBoneScaling = require(DraggerFramework.Flags.getFFlagFixRotatedBoneScaling)
 
+local getFFlagSimPartVisualSize = require(DraggerFramework.Flags.getFFlagSimPartVisualSize)
+
 local EMPTY_CFRAME = CFrame.new()
 local ZERO_VECTOR = Vector3.new()
+local ONES_VECTOR = Vector3.new(1, 1, 1)
+local HUGE_VECTOR = ONES_VECTOR * math.huge
+
+-- controls how large/small a part may be on any dimension
+local MIN_PART_SIZE = 0.05
+local MAX_PART_SIZE = 2048.0
 
 local ExtrudeHandlesImplementation = {}
 ExtrudeHandlesImplementation.__index = ExtrudeHandlesImplementation
@@ -66,6 +75,8 @@ function ExtrudeHandlesImplementation:shouldScaleFromCenter(selection, selection
 	return self._draggerContext:isCtrlKeyDown()
 end
 
+-- If FFlagLimitScaling is enabled, this function is no longer used
+-- as it is replaced by :axesToScale(...)
 function ExtrudeHandlesImplementation:shouldKeepAspectRatio(selection, selectionInfo, normalId)
 	if self._draggerContext:isShiftKeyDown() then
 		return true
@@ -85,6 +96,37 @@ function ExtrudeHandlesImplementation:shouldKeepAspectRatio(selection, selection
 	end
 end
 
+function ExtrudeHandlesImplementation:axesToScale(selectionInfo, normalId)
+	local ALL_AXES = {X = true, Y = true, Z = true}
+	-- UX: shift key forces equal aspect ratio scaling
+	if self._draggerContext:isShiftKeyDown() then
+		return ALL_AXES
+	end
+	local partsToResize, _ = selectionInfo:getObjectsToTransform()
+	-- multiple parts are only scaled with equal aspect ratio
+	if #partsToResize ~= 1 then
+		return ALL_AXES
+	end
+	local part = partsToResize[1]
+	if part:IsA("Part") and part.Shape == Enum.PartType.Ball then
+		-- special case: sphere only scales uniformly
+		return ALL_AXES
+	elseif  part:IsA("UnionOperation") or part:IsA("NegateOperation") then
+		-- special case: CSG operations are treated the same way as multiple parts
+		return ALL_AXES
+	elseif part:IsA("Part") and part.Shape == Enum.PartType.Cylinder then
+		-- assuming the axis of the cylinder is the X axis, allow increasing the height only
+		-- but the base must scale proportionately in both directions
+		return normalId == 1 and {X = true} or {Y = true, Z = true}
+	end
+	-- everything else is considered a regular single part, and can be scaled along one axis
+	-- without keeping aspect ratio
+	local axes = {{X = true}, {Y = true}, {Z = true}}
+	return axes[normalId]
+end
+
+-- If FFlagLimitScaling is enabled, this function is no longer used
+-- as it is replaced by :getMinMaxSizes()
 --[[
 	Find the smallest extents size that assures that all parts are larger
 	than the minimum allowed part size.
@@ -104,6 +146,9 @@ function ExtrudeHandlesImplementation:getMinimumSize(selection, selectionInfo, n
 	local boundsCFrame, boundsOffset, boundsSize = self:getBoundingBox(selection, selectionInfo)
 
 	local MIN_PART_SIZE = 0.05
+	if getFFlagSimPartVisualSize() then
+		MIN_PART_SIZE = 0.001
+	end
 	if #partsToResize == 1 then
 		-- The modulo covers resizing down to smaller than the initial size in
 		-- gridSize increments.
@@ -150,6 +195,44 @@ function ExtrudeHandlesImplementation:getMinimumSize(selection, selectionInfo, n
 		-- we started out smaller than the grid size.
 		return minimumSize:Min(boundsSize)
 	end
+end
+
+--[[
+	Find the min/max sizes the selection can be scaled to that ensure 
+	that all parts have sizes between MIN_PART_SIZE and MAX_PART_SIZE in all dimensions.
+]]
+function ExtrudeHandlesImplementation:getMinMaxSizes(selectionInfo, axesToScale, bounds)
+	if getFFlagSimPartVisualSize() then
+		MIN_PART_SIZE = 0.001
+	end
+	local axesVec = Math.setToVector3(axesToScale)
+	-- this vector has 0 for axes along which we scale, and a huge number elsewhere
+	local ignoredAxesVec = (ONES_VECTOR - axesVec) * MAX_PART_SIZE * 10
+	local partsToResize = selectionInfo:getObjectsToTransform()
+	local sizeMax = ZERO_VECTOR
+	local sizeMin = HUGE_VECTOR
+	local LOCAL_MAX_PART_SIZE = MAX_PART_SIZE
+	local LOCAL_MIN_PART_SIZE = MIN_PART_SIZE
+	-- special behavior for scaling a single truss part :(
+	-- if trusses are a part of a group, ignore them
+	if #partsToResize == 1 and partsToResize[1]:IsA("TrussPart") then
+		LOCAL_MAX_PART_SIZE = 64
+		LOCAL_MIN_PART_SIZE = 2
+	end
+	for _, part in ipairs(partsToResize) do
+		sizeMax = sizeMax:Max(part.Size)
+		sizeMin = sizeMin:Min(part.Size)
+	end
+	-- ignore axes that are not scaled by making them +/- huge
+	local largestScaledDimension = Math.maxComponent(sizeMax - ignoredAxesVec)
+	local smallestScaledDimension = Math.minComponent(sizeMin + ignoredAxesVec)
+	local maxRatio = LOCAL_MAX_PART_SIZE / largestScaledDimension
+	local minRatio = LOCAL_MIN_PART_SIZE / smallestScaledDimension
+	-- Make sure the largest dimension of ANY part is between MIN_PART_SIZE and MAX_PART_SIZE after scaling along the given axes
+	-- Leave other axes as they are.
+	local maximumAllowableSize = bounds:Max(maxRatio * bounds - ignoredAxesVec)
+	local minimumAllowableSize = bounds:Min(minRatio * bounds + ignoredAxesVec)
+	return minimumAllowableSize, maximumAllowableSize
 end
 
 function ExtrudeHandlesImplementation:beginScale(selection, initialSelectionInfo, normalId)

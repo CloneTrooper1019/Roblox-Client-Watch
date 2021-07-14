@@ -60,6 +60,7 @@ Studio.GameSettings.General.TitleThumbnails,Screenshots & Videos,Screenshots & V
 Studio.GameSettings.General.CategoryLocalization,Localization,Localization,로컬리제이션, ,本地化
 Studio.GameSettings.General.TitleGenre,Genre,Genre,장르,Жанр,类型
 Studio.GameSettings.General.GenreSciFi,Sci-Fi,Sci-Fi,SF,Фантастика,科幻
+Studio.GameSettings.OptInLocations.EmailSubmitFailure,Error submitting email for review feedback. Error code: ,Error submitting email for review feedback. Error code: , , , 
 Studio.GameSettings.General.TitleHttp,Allow HTTP Requests,Allow HTTP Requests,HTTP 요청 허용,Разрешить HTTP-запросы,允许 HTTP 请求
 Studio.GameSettings.General.PlayabilityPublic,Public,Public,공개,Общедоступная,公开
 Studio.GameSettings.General.ThumbnailsCount,Up to {maxThumbnails:int} items,Up to {maxThumbnails:int} items,최대 {maxThumbnails:int}개 아이템,До {maxThumbnails:int} элементов,最多 {maxThumbnails:int} 个项目
@@ -220,6 +221,7 @@ Studio.GameSettings.General.DevSubsImage,Image,Image,이미지,Изображе�
 Studio.GameSettings.General.DevSubsDuration,Pre-paid,Pre-paid,선불,Продолжительность,预付费
 Studio.GameSettings.General.CategoryMonetization,Monetization,Monetization,수익 창출, ,盈利
 Studio.GameSettings.General.DevSubsId,Id,Id,ID,Id,ID
+Studio.GameSettings.General.VoiceChatNonLinkText,Enables in-game voice chat. Voice chat will only work if your game meets the eligibility criteria outlined [link].,Enables in-game voice chat. Voice chat will only work if your game meets the eligibility criteria outlined [link]., , , 
 Studio.GameSettings.Places.VersionHistory,Version History,Version History,버전 기록, ,版本历史记录
 Studio.GameSettings.General.DevSubsActive,Active,Active,활성,Активная,活跃
 Studio.GameSettings.General.ButtonCreate,Create,Create,만들기, ,创建
@@ -264,7 +266,7 @@ Studio.GameSettings.Monetization.UnsavedDevProduct,(Not Saved),(Not Saved),(저�
 Studio.GameSettings.General.ErrorDevSubMaxPrice,Must be less than {maxRobuxAmount:int},Must be less than {maxRobuxAmount:int},{maxRobuxAmount:int} 이하여야 합니다.,Значение не должно превышать {maxRobuxAmount:int},必须少于 {maxRobuxAmount:int}
 Studio.GameSettings.Places.EditPlace,Edit Place,Edit Place,플레이스 편집, ,编辑场景
 Studio.GameSettings.General.ErrorImageRequired,You must provide an image,You must provide an image,이미지를 제공해야 합니다,Требуется изображение,必须提供一个图像
-Studio.GameSettings.OptInLocations.ErrorEmailNotEqual,The emails you have entered do not match. Please try again.,The emails you have entered do not match. Please try again., , , 
+Studio.GameSettings.OptInLocations.ErrorEmailNotEqual,The emails you have entered do not match. Please try again.,The emails you have entered do not match. Please try again.,입력하신 이메일이 일치하지 않습니다. 다시 시도하세요., , 
 Studio.GameSettings.General.ScaleSliderLabel,{number}%,{number}%,{number}%,{number}%,{number}%
 Studio.GameSettings.General.ScaleSliderUnits,%,%,%,%,%
 Studio.GameSettings.General.PublishingHintLinkExplanation, is required for changing Avatar game settings, is required for changing Avatar game settings,은(는) 아바타 게임 설정을 변경하는 데 필요합니다,требуется для изменения игровых настроек аватара,是更改虚拟形象游戏设置所必需的
@@ -348,9 +350,7 @@ Studio.GameSettings.General.SettingsFailedToLoad,Failed to load settings for pag
 Studio.GameSettings.Monetization.DEPRECATED_PaidAccessHint,VIP Servers must not be enabled and the game must be public to enable Paid Access.,VIP Servers must not be enabled and the game must be public to enable Paid Access.,유료 액세스를 활성화하려면 VIP 서버를 비활성화하고 게임을 공개해야 합니다., ,启用付费访问前，需要禁用 VIP 服务器并将游戏设为公开。
 Studio.GameSettings.Monetization.Free,Free,Free,무료, ,免费
 Studio.GameSettings.Monetization.MarketplaceFee,Marketplace Fee:,Marketplace Fee:,마켓플레이스 수수료:, ,商店费用：
-Studio.GameSettings.Message.TitlePrivateServers,Private Servers,Private Servers,비공개 서버, ,私人服务器
 Studio.GameSettings.Monetization.PrivateServersTitle,Private Servers,Private Servers,비공개 서버, ,私人服务器
-Studio.GameSettings.Monetization.TitlePrivateServers,Private Servers,Private Servers,비공개 서버, ,私人服务器
 Studio.GameSettings.Monetization.VIPServersPriceChangeWarning,Warning: Changing the price of VIP Servers will cancel all existing subscriptions.,Warning: Changing the price of VIP Servers will cancel all existing subscriptions.,주의: VIP 서버 가격을 변경하면 기존 구독 사항이 모두 취소됩니다., ,警告：更改 VIP 服务器价格后将会取消所有当前订阅。
 Studio.GameSettings.Monetization.PrivateServersHint,"Paid Access must not be enabled, and the game must be public to enable Private Servers.","Paid Access must not be enabled, and the game must be public to enable Private Servers.",비공개 서버를 활성화하려면 유료 액세스를 비활성화하고 게임을 공개해야 합니다., ,启用私人服务器前，需要禁用付费访问并将游戏设为公开。
 Studio.GameSettings.General.CategorySecurity,Security,Security,보안, ,安全
@@ -382,4 +382,7 @@ Studio.GameSettings.OptInLocations.EmailDialogHeader,Email for Review Feedback,E
 Studio.GameSettings.OptInLocations.EmailDialogBody,"Your game will be reviewed by moderators to ensure that your game is compliant with Chinese content regulations. After your game is reviewed, we will send you review feedback. The review will take 3-5 days.","Your game will be reviewed by moderators to ensure that your game is compliant with Chinese content regulations. After your game is reviewed, we will send you review feedback. The review will take 3-5 days.",게임이 중국 콘텐츠 규정을 준수하는지 확인하기 위해 검열팀에서 게임을 검토합니다. 게임 검토가 완료되면 검토 피드백을 보내드립니다. 검토에는 3~5일이 소요됩니다., ,你的游戏将由审核员进行审核，以确保游戏符合中国的内容规定。在游戏被审核后，我们将向你发送审核反馈。审核需要 3-5 天。
 Studio.GameSettings.OptInLocations.EmailDialogDescription,Please enter the email where you would like to receive review feedback:,Please enter the email where you would like to receive review feedback:,검토 피드백을 받을 이메일 주소를 입력하세요:, ,请输入接收审核反馈的电子邮件地址：
 Studio.GameSettings.OptInLocations.ErrorInvalidEmail,You entered an invalid email address.,You entered an invalid email address.,입력하신 이메일 주소가 유효하지 않습니다., ,你输入的电子邮件地址无效。
-Studio.GameSettings.OptInLocations.ConfirmEmailAddress,Confirm email address,Confirm email address, , , 
+Studio.GameSettings.OptInLocations.ConfirmEmailAddress,Confirm email address,Confirm email address,이메일 주소 확인, , 
+Studio.GameSettings.General.VoiceChatTitle,In-Game Voice Chat,In-Game Voice Chat, , , 
+Studio.GameSettings.General.VoiceChatText,Enables in-game voice chat. Voice chat will only work if players meet age eligibility criteria.,Enables in-game voice chat. Voice chat will only work if players meet age eligibility criteria., , , 
+Studio.GameSettings.General.VoiceChatLinkText,here,here, , , 

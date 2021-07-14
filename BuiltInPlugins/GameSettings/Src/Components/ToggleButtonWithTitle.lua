@@ -14,16 +14,23 @@
 ]]
 
 local FFlagGameSettingsDisplayCollaborativeEditingWarning = game:GetFastFlag("GameSettingsDisplayCollaborativeEditingWarning")
+local FFlagGameSettingsEnableVoiceChat = game:GetFastFlag("GameSettingsEnableVoiceChat")
+local FFlagDevFrameworkPaneSupportTheme1 = game:GetFastFlag("DevFrameworkPaneSupportTheme1")
 
 local Plugin = script.Parent.Parent.Parent
 local Roact = require(Plugin.Roact)
 local Cryo = require(Plugin.Cryo)
+local ContextServices = require(Plugin.Framework.ContextServices)
 
-local Framework = Plugin.Framework
-local ContextServices = require(Framework.ContextServices)
-local TitledFrame = require(Framework.StudioUI.TitledFrame)
-local ToggleButton = require(Framework.UI.ToggleButton)
-local FitTextLabel = require(Framework.Util).FitFrame.FitTextLabel
+local Framework = require(Plugin.Framework)
+local TitledFrame = Framework.StudioUI.TitledFrame
+local ToggleButton = Framework.UI.ToggleButton
+local TextWithInlineLink = Framework.UI.TextWithInlineLink
+
+local FrameworkUtil = require(Plugin.Framework.Util)
+local FitTextLabel = FrameworkUtil.FitFrame.FitTextLabel
+
+local LayoutOrderIterator = FFlagGameSettingsEnableVoiceChat and require(Plugin.Framework.Util).LayoutOrderIterator or nil
 
 local ToggleButtonWithTitle = Roact.PureComponent:extend("ToggleButtonWithTitle")
 
@@ -59,6 +66,12 @@ function ToggleButtonWithTitle:render()
 	local title = props.Title
 	local onClick = props.OnClick
 	local showWarning = FFlagGameSettingsDisplayCollaborativeEditingWarning and props.ShowWarning or nil
+	local linkProps = FFlagGameSettingsEnableVoiceChat and FFlagDevFrameworkPaneSupportTheme1 and props.LinkProps or nil
+
+	local layoutIndex
+	if FFlagGameSettingsEnableVoiceChat then
+		layoutIndex = LayoutOrderIterator.new()
+	end
 
 	return Roact.createElement(TitledFrame, {
 		Title = title,
@@ -67,15 +80,15 @@ function ToggleButtonWithTitle:render()
 		ToggleButton = Roact.createElement(ToggleButton, {
 			Disabled = disabled,
 			Selected = selected,
-			LayoutOrder = 1,
+			LayoutOrder = FFlagGameSettingsEnableVoiceChat and layoutIndex:getNextOrder() or 1,
 			OnClick = onClick,
 			Size = theme.settingsPage.toggleButtonSize,
 		}),
 
-		Description = props.Description and 
+		Description = props.Description and
 			Roact.createElement(FitTextLabel, Cryo.Dictionary.join(showWarning and theme.fontStyle.SmallError or theme.fontStyle.Subtext, {
 				BackgroundTransparency = 1,
-				LayoutOrder = 2,
+				LayoutOrder = FFlagGameSettingsEnableVoiceChat and layoutIndex:getNextOrder() or 2,
 				TextTransparency = props.Disabled and 0.5 or 0,
 				TextXAlignment = Enum.TextXAlignment.Left,
 				TextYAlignment = Enum.TextYAlignment.Top,
@@ -84,9 +97,18 @@ function ToggleButtonWithTitle:render()
 				width = UDim.new(0, descriptionWidth),
 			})),
 
+		LinkText = props.LinkProps and Roact.createElement(TextWithInlineLink, Cryo.Dictionary.join(linkProps, {
+			LinkPlaceholder = "[link]",
+			MaxWidth = descriptionWidth,
+			LayoutOrder = layoutIndex:getNextOrder(),
+			TextProps = Cryo.Dictionary.join(theme.fontStyle.Subtext, {
+				BackgroundTransparency = 1,
+			}),
+		})),
+
 		DescriptionWidth = Roact.createElement("Frame", {
 			BackgroundTransparency = 1,
-			LayoutOrder = 3,
+			LayoutOrder = FFlagGameSettingsEnableVoiceChat and layoutIndex:getNextOrder() or 3,
 			Size = UDim2.new(1,0,0,0),
 			[Roact.Ref] = self.descriptionRef,
 			[Roact.Change.AbsoluteSize] = self.onResize,

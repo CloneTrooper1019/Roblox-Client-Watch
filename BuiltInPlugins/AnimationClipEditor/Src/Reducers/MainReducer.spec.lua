@@ -1,7 +1,12 @@
+-- TODO: AVBURST-5073: These tests have been adapted for facial animation support, but they
+-- now default to CFrame values when the flag is OFF, and Number values when the flag is ON.
+-- Ideally, they should test both types.
+
 return function()
 	local Plugin = script.Parent.Parent.Parent
 	local Rodux = require(Plugin.Packages.Rodux)
 	local isEmpty = require(Plugin.Src.Util.isEmpty)
+	local deepCopy = require(Plugin.Src.Util.deepCopy)
 	local Constants = require(Plugin.Src.Util.Constants)
 	local deepCopy = require(Plugin.Src.Util.deepCopy)
 
@@ -47,6 +52,8 @@ return function()
 	local AddTrack = require(Plugin.Src.Thunks.AddTrack)
 	local SkipAnimation = require(Plugin.Src.Thunks.Playback.SkipAnimation)
 
+	local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
+
 	local testAnimationData = {
 		Metadata = {
 			FrameRate = 30,
@@ -75,6 +82,7 @@ return function()
 			Root = {
 				Tracks = {
 					["TestTrack"] = {
+						Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.Facs or nil,
 						Keyframes = {1, 2, 3},
 						Data = {
 							[1] = {
@@ -89,6 +97,7 @@ return function()
 						}
 					},
 					["OtherTrack"] = {
+						Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.Facs or nil,
 						Keyframes = {1, 4, 6, 8},
 						Data = {
 							[1] = {
@@ -246,20 +255,22 @@ return function()
 
 		it("should set all selected keyframes' Values", function()
 			local store = createTestStore()
+
 			store:dispatch(SelectKeyframe("Root", "TestTrack", 1, true))
 			store:dispatch(SetSelectedKeyframeData({
-				Value = CFrame.new(1, 0, 0)
+				Value = GetFFlagFacialAnimationSupport() and 5 or CFrame.new(1, 0, 0)
 			}))
 
 			local data = store:getState().AnimationData
 			local testTrack = data.Instances.Root.Tracks.TestTrack
-			expect(testTrack.Data[1].Value).to.equal(CFrame.new(1, 0, 0))
+			expect(testTrack.Data[1].Value).to.equal(GetFFlagFacialAnimationSupport() and 5 or CFrame.new(1, 0, 0))
 		end)
 	end)
 
 	describe("PasteKeyframes", function()
 		it("should add a new keyframe if none existed", function()
 			local store = createTestStore()
+
 			local analytics = Analytics.mock()
 			store:dispatch(SelectKeyframe("Root", "TestTrack", 1))
 			store:dispatch(CopySelectedKeyframes())
@@ -267,6 +278,7 @@ return function()
 
 			local data = store:getState().AnimationData
 			local testTrack = data.Instances.Root.Tracks.TestTrack
+
 			expect(#testTrack.Keyframes).to.equal(4)
 			expect(testTrack.Keyframes[4]).to.equal(4)
 			expect(testTrack.Data[4]).to.be.ok()
@@ -383,9 +395,18 @@ return function()
 
 			local status = store:getState().Status
 			local testTrack = status.Clipboard.Root.TestTrack
-			expect(#testTrack).to.equal(2)
-			expect(testTrack[1].Value).to.equal(1)
-			expect(testTrack[2].Value).to.equal(2)
+
+			if GetFFlagFacialAnimationSupport() then
+				local data = testTrack.Data
+				expect(data).to.be.ok()
+				expect(#data).to.equal(2)
+				expect(data[1].Value).to.equal(1)
+				expect(data[2].Value).to.equal(2)
+			else
+				expect(#testTrack).to.equal(2)
+				expect(testTrack[1].Value).to.equal(1)
+				expect(testTrack[2].Value).to.equal(2)
+			end
 		end)
 
 		it("should replace the old clipboard", function()
@@ -427,8 +448,13 @@ return function()
 
 			local animationData = store:getState().AnimationData
 			local testTrack = animationData.Instances.Root.Tracks.TestTrack
-			expect(testTrack.Data[1].Value).to.equal(CFrame.new())
-			expect(testTrack.Data[1].Value).to.equal(CFrame.new())
+			if GetFFlagFacialAnimationSupport() then
+				expect(testTrack.Data[1].Value).to.equal(0)
+				expect(testTrack.Data[2].Value).to.equal(0)
+			else
+				expect(testTrack.Data[1].Value).to.equal(CFrame.new())
+				expect(testTrack.Data[1].Value).to.equal(CFrame.new())
+			end
 		end)
 	end)
 

@@ -1,0 +1,4 @@
+Key,en-us
+Studio.UILibrary.Spec.greeting_formal,Hello
+Studio.UILibrary.Spec.greeting_informal,"Sup {1:translate}, I haven't seen you in {2:int} days"
+Studio.UILibrary.Spec.greeting_surprise,No one expects the Spanish Inquisition!

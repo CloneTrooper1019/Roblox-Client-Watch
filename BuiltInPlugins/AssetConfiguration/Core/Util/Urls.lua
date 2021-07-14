@@ -96,6 +96,7 @@ local GET_ITEM_DETAILS = Url.APIS_URL .. "toolbox-service/v1/items/details?"
 
 local AVATAR_ASSETS_GET_UPLOAD_FEE = Url.ITEM_CONFIGURATION_URL .. "v1/avatar-assets/%s/get-upload-fee"
 local AVATAR_ASSETS_UPLOAD = Url.ITEM_CONFIGURATION_URL .. "v1/avatar-assets/%s/upload"
+local AVATAR_ASSETS_VALID_GROUPS = Url.ITEM_CONFIGURATION_URL .. "v1/avatar-assets/%s/valid-groups"
 
 local DEFAULT_ASSET_SIZE = 100
 local DEFAULT_SEARCH_ROWS = 3
@@ -171,7 +172,7 @@ function Urls.ToolboxEndpointMigration_constructGetToolboxItemsUrl(category, sor
 	end
 
 	local targetUrl
-	if categoryData.ownershipType == Category.OwnershipType.MY then	
+	if categoryData.ownershipType == Category.OwnershipType.MY then
 		targetUrl = string.format("%s/inventory/user/%d/%s?", TOOLBOX_SERVICE_URL, ownerId, apiName)
 	elseif categoryData.ownershipType == Category.OwnershipType.GROUP then
 		targetUrl = string.format("%s/inventory/group/%d/%s?", TOOLBOX_SERVICE_URL, ownerId, apiName)
@@ -534,6 +535,10 @@ end
 
 function Urls.constructAvatarAssetsUploadUrl(assetType)
 	return AVATAR_ASSETS_UPLOAD:format(assetType.Name)
+end
+
+function Urls.constructAvatarAssetsValidGroupsUrl(assetType)
+	return AVATAR_ASSETS_VALID_GROUPS:format(assetType.Name)
 end
 
 return wrapStrictTable(Urls)

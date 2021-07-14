@@ -8,7 +8,9 @@ return function()
 	local SetKeyframeData = require(Plugin.Src.Thunks.SetKeyframeData)
 	local QuantizeKeyframes = require(Plugin.Src.Thunks.QuantizeKeyframes)
 	local UpdateMetadata = require(Plugin.Src.Thunks.UpdateMetadata)
-	local GetFFlagAutoCreateBasePoseKeyframe = require(Plugin.LuaFlags.GetFFlagAutoCreateBasePoseKeyframe)
+	local Constants = require(Plugin.Src.Util.Constants)
+
+	local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
 
 	local function makeAnimationData(tracks)
 		return {
@@ -92,19 +94,18 @@ return function()
 	describe("AddKeyframe", function()
 		it("should add a keyframe at the given frame", function()
 			local store = createTestStore()
-			store:dispatch(AddKeyframe("Root", "TestTrack", 4, CFrame.new()))
+			if GetFFlagFacialAnimationSupport() then
+				store:dispatch(AddKeyframe("Root", "TestTrack", Constants.TRACK_TYPES.CFrame, 4, CFrame.new()))
+			else
+				store:dispatch(AddKeyframe("Root", "TestTrack", 4, CFrame.new()))
+			end
 			local state = store:getState()
 			local track = state.Instances.Root.Tracks.TestTrack
 
 			expect(track.Keyframes).to.be.ok()
 			expect(track.Data).to.be.ok()
-			if GetFFlagAutoCreateBasePoseKeyframe() then
-				expect(#track.Keyframes).to.equal(5)
-				expect(track.Keyframes[5]).to.equal(4)
-			else
-				expect(#track.Keyframes).to.equal(4)
-				expect(track.Keyframes[4]).to.equal(4)
-			end
+			expect(#track.Keyframes).to.equal(5)
+			expect(track.Keyframes[5]).to.equal(4)
 			expect(track.Data[4]).to.be.ok()
 			expect(track.Data[4].Value).to.be.ok()
 			expect(track.Data[4].Value).to.equal(CFrame.new())
@@ -112,7 +113,11 @@ return function()
 
 		it("should add a new track if it does not exist", function()
 			local store = createTestStore()
-			store:dispatch(AddKeyframe("Root", "NewTrack", 1, CFrame.new()))
+			if GetFFlagFacialAnimationSupport() then
+				store:dispatch(AddKeyframe("Root", "NewTrack", Constants.TRACK_TYPES.CFrame, 1, CFrame.new()))
+			else
+				store:dispatch(AddKeyframe("Root", "NewTrack", 1, CFrame.new()))
+			end
 			local state = store:getState()
 			local track = state.Instances.Root.Tracks.NewTrack
 
@@ -121,35 +126,34 @@ return function()
 
 		it("should preserve the other keyframes", function()
 			local store = createTestStore()
-			store:dispatch(AddKeyframe("Root", "TestTrack", 4, CFrame.new()))
+			if GetFFlagFacialAnimationSupport() then
+				store:dispatch(AddKeyframe("Root", "TestTrack", Constants.TRACK_TYPES.CFrame, 4, CFrame.new()))
+			else
+				store:dispatch(AddKeyframe("Root", "TestTrack", 4, CFrame.new()))
+			end
 
 			local state = store:getState()
 			local track = state.Instances.Root.Tracks.TestTrack
 
-			if GetFFlagAutoCreateBasePoseKeyframe() then
-				expect(track.Keyframes[1]).to.equal(0)
-				expect(track.Keyframes[2]).to.equal(1)
-				expect(track.Keyframes[3]).to.equal(2)
-				expect(track.Keyframes[4]).to.equal(3)
-				expect(track.Keyframes[5]).to.equal(4)
-				expect(track.Data[0]).to.be.ok()
-				expect(track.Data[1]).to.be.ok()
-				expect(track.Data[2]).to.be.ok()
-				expect(track.Data[3]).to.be.ok()
-				expect(track.Data[4]).to.be.ok()
-			else
-				expect(track.Keyframes[1]).to.equal(1)
-				expect(track.Keyframes[2]).to.equal(2)
-				expect(track.Keyframes[3]).to.equal(3)
-				expect(track.Data[1]).to.be.ok()
-				expect(track.Data[2]).to.be.ok()
-				expect(track.Data[3]).to.be.ok()
-			end
+			expect(track.Keyframes[1]).to.equal(0)
+			expect(track.Keyframes[2]).to.equal(1)
+			expect(track.Keyframes[3]).to.equal(2)
+			expect(track.Keyframes[4]).to.equal(3)
+			expect(track.Keyframes[5]).to.equal(4)
+			expect(track.Data[0]).to.be.ok()
+			expect(track.Data[1]).to.be.ok()
+			expect(track.Data[2]).to.be.ok()
+			expect(track.Data[3]).to.be.ok()
+			expect(track.Data[4]).to.be.ok()
 		end)
 
 		it("should preserve the other tracks", function()
 			tracksPreservedTest(function(store)
-				store:dispatch(AddKeyframe("Root", "TestTrack", 4, CFrame.new()))
+				if GetFFlagFacialAnimationSupport() then
+					store:dispatch(AddKeyframe("Root", "TestTrack", Constants.TRACK_TYPES.CFrame, 4, CFrame.new()))
+				else
+					store:dispatch(AddKeyframe("Root", "TestTrack", 4, CFrame.new()))
+				end
 			end)
 		end)
 	end)

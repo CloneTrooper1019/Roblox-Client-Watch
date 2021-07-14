@@ -1,5 +1,4 @@
 local FFlagStudioCreatePluginPolicyService = game:GetFastFlag("StudioCreatePluginPolicyService")
-local FFlagStudioAssetManagerShowBadgesTeachingCallout = game:GetFastFlag("StudioAssetManagerShowBadgesTeachingCallout")
 
 local StudioService = game:GetService("StudioService")
 local AssetManagerPolicy = FFlagStudioCreatePluginPolicyService and game:GetService("PluginPolicyService"):getPluginPolicy("AssetManager") or nil
@@ -26,17 +25,13 @@ function AssetManagerUtilities.enableAudioImport()
 end
 
 --[[
-    EnableBadgesCallout will return true if Badges Callout flag is on, and:
+    EnableBadgesCallout will return true if :
     
         1. GUAC Flag is off and we don't have Chinese Host, or
         2. GUAC Flag is on and querying GUAC for 'ShowBadges' yields true
 ]]--
 
 function AssetManagerUtilities.enableBadgesCallout()
-    if not FFlagStudioAssetManagerShowBadgesTeachingCallout then
-        return false
-    end
-    
     return (not FFlagStudioCreatePluginPolicyService and not StudioService:BaseURLHasChineseHost())
         or (FFlagStudioCreatePluginPolicyService and AssetManagerPolicy["ShowBadges"])
 end

@@ -41,8 +41,9 @@ function Templates.instance()
 	}
 end
 
-function Templates.track()
+function Templates.track(trackType)
 	return {
+		Type = trackType,
 		Keyframes = {},
 		Data = {},
 	}

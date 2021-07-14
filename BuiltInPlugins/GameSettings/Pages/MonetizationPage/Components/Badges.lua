@@ -1,5 +1,3 @@
-local FFlagStudioEnableBadgesInMonetizationPage = game:GetFastFlag("StudioEnableBadgesInMonetizationPage")
-
 local Plugin = script.Parent.Parent.Parent.Parent
 
 local Roact = require(Plugin.Roact)
@@ -27,8 +25,6 @@ local GetConfigureKeyName = KeyProvider.getConfigureKeyName
 local ShouldAllowBadges = require(Plugin.Src.Util.GameSettingsUtilities).shouldAllowBadges
 
 function Badges:render()
-    assert(FFlagStudioEnableBadgesInMonetizationPage)
-
     if not ShouldAllowBadges() then 
         return nil
     end

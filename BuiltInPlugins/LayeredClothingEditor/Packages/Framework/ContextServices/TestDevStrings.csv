@@ -1,0 +1,4 @@
+Key,Source,en-us
+Studio.Framework.Spec.greeting_formal, ,Hello
+Studio.Framework.Spec.greeting_surprise, ,No one expects the Spanish Inquisition!
+Studio.Framework.Spec.greeting_informal,{friend}{days},"Sup {friend}, I haven't seen you in {days:int} days"

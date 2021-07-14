@@ -70,7 +70,6 @@ function ProjectHierarchy:render()
 	-- TODO: RIDE-3501. Be able to hide tests from hierarchy
 	local displayed = self.props.Displayed
 	local expansion = self.props.Expanded
-	local testInstances = self.props.TestInstances
 
 	return Roact.createElement(TreeView, {
 		Size = UDim2.new(0, 240, 1, 0),

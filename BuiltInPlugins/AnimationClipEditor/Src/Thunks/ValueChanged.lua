@@ -12,7 +12,9 @@ local SetKeyframeData = require(Plugin.Src.Thunks.SetKeyframeData)
 local AddTrack = require(Plugin.Src.Thunks.AddTrack)
 local StepAnimation = require(Plugin.Src.Thunks.Playback.StepAnimation)
 
-return function(instanceName, trackName, frame, value, analytics)
+local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
+
+local function wrappee(instanceName, trackName, trackType, frame, value, analytics)
 	return function(store)
 		local animationData = store:getState().AnimationData
 		if not animationData then
@@ -31,8 +33,14 @@ return function(instanceName, trackName, frame, value, analytics)
 
 		local track = tracks[trackName]
 		if track == nil then
-			store:dispatch(AddTrack(instanceName, trackName, analytics))
-			store:dispatch(AddKeyframe(instanceName, trackName, frame, value, analytics))
+			if GetFFlagFacialAnimationSupport() then
+				store:dispatch(AddTrack(instanceName, trackName, trackType, analytics))
+				store:dispatch(AddKeyframe(instanceName, trackName, trackType, frame, value, analytics))
+			else
+				store:dispatch(AddTrack(instanceName, trackName, analytics))
+				store:dispatch(AddKeyframe(instanceName, trackName, frame, value, analytics))
+			end
+
 			store:dispatch(StepAnimation(frame))
 			return
 		end
@@ -44,9 +52,23 @@ return function(instanceName, trackName, frame, value, analytics)
 				Value = value,
 			}))
 		else
-			store:dispatch(AddKeyframe(instanceName, trackName, frame, value, analytics))
+			if GetFFlagFacialAnimationSupport() then
+				store:dispatch(AddKeyframe(instanceName, trackName, trackType, frame, value, analytics))
+			else
+				store:dispatch(AddKeyframe(instanceName, trackName, frame, value, analytics))
+			end
 		end
 
 		store:dispatch(StepAnimation(frame))
+	end
+end
+
+if GetFFlagFacialAnimationSupport() then
+	return function(instanceName, trackName, trackType, frame, value, analytics)
+		return wrappee(instanceName, trackName, trackType, frame, value, analytics)
+	end
+else
+	return function(instanceName, trackName, frame, value, analytics)
+		return wrappee(instanceName, trackName, nil, frame, value, analytics)
 	end
 end

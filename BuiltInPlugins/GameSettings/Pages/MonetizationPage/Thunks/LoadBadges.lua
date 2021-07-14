@@ -1,15 +1,11 @@
 --[[
 	Called on scroll to load more Badges, or to refresh badges if refreshing == true
 ]]
-local FFlagStudioEnableBadgesInMonetizationPage = game:GetFastFlag("StudioEnableBadgesInMonetizationPage")
-
 local Plugin = script.Parent.Parent.Parent.Parent
 local Cryo = require(Plugin.Cryo)
 local SetCurrentSettings = require(Plugin.Src.Actions.SetCurrentSettings)
 
 return function(refreshing)
-    assert(FFlagStudioEnableBadgesInMonetizationPage)
-
     return function(store, contextItems)
         local state = store:getState()
         local gameId = state.Metadata.gameId

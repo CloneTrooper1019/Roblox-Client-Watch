@@ -49,12 +49,23 @@ local FFlagLuaUIDebuggerCallstack = game:GetFastFlag("LuaUIDebuggerCallstack")
 
 local MainPlugin = Roact.PureComponent:extend("MainPlugin")
 
+local CALLSTACK_META_NAME = "Callstack"
+local BREAKPOINTS_META_NAME = "Breakpoints"
+local WATCH_META_NAME = "Watch"
+local TOOLBAR_NAME = "Debugger"
+
 function MainPlugin:init(props)
 	self.state = {
 		editBreakpoint = {
 			Enabled = false,
 		},
 		callstackWindow = {
+			Enabled = false,
+		},
+		breakpointsWindow = {
+			Enabled = false,
+		},
+		watchWindow = {
 			Enabled = false,
 		},
 	}
@@ -108,6 +119,47 @@ end
 
 function MainPlugin:renderButtons(toolbar)
 	return {
+		ToggleCallstack = FFlagLuaUIDebuggerCallstack and Roact.createElement(PluginButton, {
+			Name = "callStackDockWidgetActionV2",
+			Toolbar = toolbar,
+			Active = true,
+			Title = CALLSTACK_META_NAME,
+			Tooltip = "",
+			Icon = "rbxasset://textures/Debugger/callStack.png",
+			OnClick = function()
+				self.toggleWidgetEnabled("callstackWindow")
+			end,
+			ClickableWhenViewportHidden = true,
+		}),
+		ToggleBreakpointsWindow = FFlagLuaUIDebuggerCallstack and Roact.createElement(PluginButton, {
+			Name = "breakpointsDockWidgetActionV2",
+			Toolbar = toolbar,
+			Active = true,
+			Title = BREAKPOINTS_META_NAME,
+			Tooltip = "",
+			Icon = "rbxasset://textures/Debugger/Breakpoint.png",
+			OnClick = function()
+				self.toggleWidgetEnabled("breakpointsWindow")
+			end,
+			ClickableWhenViewportHidden = true,
+		}),
+		ToggleWatchWindow = FFlagLuaUIDebuggerCallstack and Roact.createElement(PluginButton, {
+			Name = "watchDockWidgetActionV2",
+			Toolbar = toolbar,
+			Active = true,
+			Title = WATCH_META_NAME,
+			Tooltip = "",
+			Icon = "rbxasset://textures/Debugger/Watch-Window.png",
+			OnClick = function()
+				self.toggleWidgetEnabled("watchWindow")
+			end,
+			ClickableWhenViewportHidden = true,
+		}),
+	}
+end
+
+function MainPlugin:renderButtonsTemporary(toolbar)
+	return {
 		ToggleEditBreakpoint = FFlagDebuggerPluginEditBreakpoint and Roact.createElement(PluginButton, {
 			Toolbar = toolbar,
 			Active = true,
@@ -116,17 +168,6 @@ function MainPlugin:renderButtons(toolbar)
 			Icon = "rbxasset://textures/GameSettings/Error.png", -- Located under Client/content/textures
 			OnClick = function()
 				self.toggleWidgetEnabled("editBreakpoint")
-			end,
-			ClickableWhenViewportHidden = true,
-		}),
-		ToggleCallstack = FFlagLuaUIDebuggerCallstack and Roact.createElement(PluginButton, {
-			Toolbar = toolbar,
-			Active = true,
-			Title = self.localization:getText("Callstack", "WindowName"),
-			Tooltip = "",
-			Icon = "rbxasset://textures/GameSettings/Error.png", -- Located under Client/content/textures
-			OnClick = function()
-				self.toggleWidgetEnabled("callstackWindow")
 			end,
 			ClickableWhenViewportHidden = true,
 		}),
@@ -149,9 +190,15 @@ function MainPlugin:render()
 		self.analytics,
 	}, {
 		Toolbar = Roact.createElement(PluginToolbar, {
-			Title = self.localization:getText("Plugin", "Toolbar"),
+			Title = TOOLBAR_NAME,
 			RenderButtons = function(toolbar)
 				return self:renderButtons(toolbar)
+			end,
+		}),
+		TemporaryToolbar = Roact.createElement(PluginToolbar, {
+			Title = "Temporary",
+			RenderButtons = function(toolbar)
+				return self:renderButtonsTemporary(toolbar)
 			end,
 		}),
 		EditDebugpointDialog = FFlagDebuggerPluginEditBreakpoint and editBreakpointEnabled and Roact.createElement(EditDebugpointDialog, {

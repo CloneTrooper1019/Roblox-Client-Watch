@@ -6,6 +6,8 @@ local MockTerrain = require(TestHelpers.MockTerrain)
 
 local TerrainImporter = require(script.Parent.TerrainImporterInstance)
 
+local EMPTY_USERID = 0
+
 return function()
 	local heightmapImporterService = MockHeightmapImporterService.new()
 	local terrain = MockTerrain.new()
@@ -15,6 +17,7 @@ return function()
 			terrain = terrain,
 			imageUploader = {},
 			heightmapImporterService = heightmapImporterService,
+			userId = EMPTY_USERID,
 		})).to.be.ok()
 	end)
 
@@ -30,6 +33,7 @@ return function()
 				TerrainImporter.new({
 					terrain = terrain,
 					heightmapImporterService = heightmapImporterService,
+					userId = EMPTY_USERID,
 				})
 			end).to.throw()
 		end)

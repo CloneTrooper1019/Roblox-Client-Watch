@@ -18,8 +18,6 @@ local SetAnimationData = require(Plugin.Src.Actions.SetAnimationData)
 local SetStartingPose = require(Plugin.Src.Actions.SetStartingPose)
 local LoadKeyframeSequence = require(Plugin.Src.Thunks.Exporting.LoadKeyframeSequence)
 
-local allowPasteKeysBetweenAnimations = require(Plugin.LuaFlags.GetFFlagAllowPasteKeysBetweenAnimations)
-
 return function(rootInstance, analytics)
 	return function(store)
 		store:dispatch(ReleaseEditor(analytics))
@@ -65,10 +63,7 @@ return function(rootInstance, analytics)
 			store:dispatch(SetAnimationData(nil))
 		end
 
-		if allowPasteKeysBetweenAnimations() then
-			store:dispatch(SetClipboard({}))
-		end
-
+		store:dispatch(SetClipboard({}))
 		store:dispatch(AttachEditor(analytics))
 	end
 end

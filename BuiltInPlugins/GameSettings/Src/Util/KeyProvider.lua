@@ -1,21 +1,19 @@
 -- Centralized Place for Keys used throughout the widget
 
-local FFlagStudioEnableBadgesInMonetizationPage = game:GetFastFlag("StudioEnableBadgesInMonetizationPage")
 local FFlagGameSettingsUseKeyProvider = game:GetFastFlag("GameSettingsUseKeyProvider")
 local FFlagLuobuDevPublishLua = game:GetFastFlag("LuobuDevPublishLua")
 local FFlagLuobuDevPublishLuaTempOptIn = game:GetFastFlag("LuobuDevPublishLuaTempOptIn")
+local FFlagGameSettingsEnableVoiceChat = game:GetFastFlag("GameSettingsEnableVoiceChat")
 
 local KeyProvider = {}
 
 function KeyProvider.getCopyIdKeyName()
-    assert(FFlagStudioEnableBadgesInMonetizationPage or FFlagGameSettingsUseKeyProvider)
+    assert(FFlagGameSettingsUseKeyProvider)
 
     return "CopyIDToClipboard"
 end
 
 function KeyProvider.getConfigureKeyName()
-    assert(FFlagStudioEnableBadgesInMonetizationPage)
-
     return "Configure"
 end
 
@@ -63,6 +61,12 @@ function KeyProvider.getSelectedKeyName()
     assert(FFlagLuobuDevPublishLua)
 
     return "selected"
+end
+
+function KeyProvider.getVoiceChatEnabledKeyName()
+    assert(FFlagGameSettingsEnableVoiceChat)
+
+    return "VoiceChatEnabled"
 end
 
 return KeyProvider

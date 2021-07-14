@@ -6,6 +6,7 @@ local DEFAULT_TOLERANCE = 0.0001
 
 local Plugin = script.Parent.Parent.Parent
 local Roact = require(Plugin.Packages.Roact)
+local Cryo = require(Plugin.Packages.Cryo)
 local Framework = require(Plugin.Packages.Framework)
 
 local MathUtils = Framework.Util.Math
@@ -17,12 +18,8 @@ local Adorn = require(Plugin.Src.Util.Adorn)
 local Workspace = game:GetService("Workspace")
 
 local Constants = require(Plugin.Src.Util.Constants)
-local FindNestedParts = require(Plugin.LuaFlags.GetFFlagFindNestedParts)
-local FixDuplicateChildNames = require(Plugin.LuaFlags.GetFFlagFixDuplicateChildNames)
-local AllowDuplicateNamesOnNonAnimatedParts = require(Plugin.LuaFlags.GetFFlagAllowDuplicateNamesOnNonAnimatedParts)
 local GetFFlagPrecalculatePartPaths = require(Plugin.LuaFlags.GetFFlagPrecalculatePartPaths)
-
-local FFlagFixDuplicateNamedRoot = game:DefineFastFlag("FixDuplicateNamedRoot", false)
+local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
 
 local RigUtils = {}
 
@@ -413,9 +410,7 @@ local function findMotorErrors(errorData)
 	end
 end
 
-local rigHasErrors: (any) -> (boolean, any) = nil
-if FFlagFixDuplicateNamedRoot then
-function rigHasErrors(rig)
+function RigUtils.rigHasErrors(rig)
 	local errorData = {
 		errorList = {},
 		motorsMap = {},
@@ -437,127 +432,6 @@ function rigHasErrors(rig)
 
 	return #errorData.errorList > 0, errorData.errorList
 end
-
-else
-
-function rigHasErrors(rig)
-	local errorList = {}
-	local motorsMap = {}
-	local partsWithMultipleParents = {}
-	local motorsWithMissingPart0 = {}
-	local motorsWithMissingPart1 = {}
-	local unanchoredPartExists = false
-
-	local motors = RigUtils.getMotors(rig)
-	local parts = RigUtils.getRigInfo(rig)
-	local bones = RigUtils.getBones(rig)
-
-	for _, motor in pairs(motors) do
-		local part0 = motor.Part0
-		local part1 = motor.Part1
-		if not part0 or (part0 and part0.Parent == nil) then
-			table.insert(motorsWithMissingPart0, motor)
-		end
-		if not part1 or (part1 and part1.Parent == nil) then
-			table.insert(motorsWithMissingPart1, motor)
-		end
-		if part0 and part1 and (not part0.Anchored or not part1.Anchored) then
-			unanchoredPartExists = true
-		end
-		if part0 and part1 and rig:FindFirstChild(part0.Name, true) and rig:FindFirstChild(part1.Name, true) then
-			if motorsMap[part1] then
-				table.insert(partsWithMultipleParents, part1)
-			else
-				motorsMap[part1] = motor
-			end
-		end
-	end
-
-	if FixDuplicateChildNames() and not AllowDuplicateNamesOnNonAnimatedParts() then
-		local descendants = {}
-		getDescendants(descendants, rig)
-		local names = {}
-		for _, child in ipairs(descendants) do
-			if child:IsA("BasePart") then
-				if not names[child.Name] then
-					names[child.Name] = true
-				else
-					table.insert(errorList, {
-						ID = Constants.RIG_ERRORS.NameCollision,
-					})
-					break
-				end
-			end
-		end
-	else
-		local nameCollision = false
-		for _, part1 in ipairs(parts) do
-			for _, part2 in ipairs(parts) do
-				if part1 ~= part2 and part1.Name == part2.Name then
-					table.insert(errorList, {
-						ID = Constants.RIG_ERRORS.NameCollision,
-					})
-					nameCollision = true
-					break
-				end
-				if nameCollision then
-					break
-				end
-			end
-		end
-	end
-
-	local hasBones = bones ~= nil and #bones > 0
-	if #motors == 0 and not hasBones then
-		table.insert(errorList, {
-			ID = Constants.RIG_ERRORS.NoMotors,
-		})
-	end
-
-	if not unanchoredPartExists and not hasBones then
-		table.insert(errorList, {
-			ID = Constants.RIG_ERRORS.PartsAnchored,
-		})
-	end
-
-	if #partsWithMultipleParents > 0 then
-		table.insert(errorList, {
-			ID = Constants.RIG_ERRORS.MultipleParents_Migrated,
-			Data = partsWithMultipleParents,
-		})
-	end
-
-	if #motorsWithMissingPart0 > 0 then
-		table.insert(errorList, {
-			ID = Constants.RIG_ERRORS.MissingPart0_Migrated,
-			Data = motorsWithMissingPart0,
-		})
-	end
-
-	if #motorsWithMissingPart1 > 0 then
-		table.insert(errorList, {
-			ID = Constants.RIG_ERRORS.MissingPart1_Migrated,
-			Data = motorsWithMissingPart1,
-		})
-	end
-
-	if checkForCircularRig(motorsMap) then
-		table.insert(errorList, {
-			ID = Constants.RIG_ERRORS.CircularRig,
-		})
-	end
-
-	if getAnimator(rig) == nil then
-		table.insert(errorList, {
-			ID = Constants.RIG_ERRORS.NoAnimationController,
-		})
-	end
-
-	return #errorList > 0, errorList
-end
-
-end
-RigUtils.rigHasErrors = rigHasErrors
 
 function RigUtils.buildR15Constraints(rig)
 	local _, motorMap = RigUtils.getRigInfo(rig)
@@ -933,6 +807,7 @@ function RigUtils.getUnusedRigTracks(rig, tracks)
 				table.insert(unusedTracks, {
 					Name = part.Name,
 					Instance = "Root",
+					Type = Constants.TRACK_TYPES.CFrame,
 				})
 			end
 		end
@@ -988,13 +863,31 @@ end
 
 -- For KeyframeSequence animations, traverse all poses and sub-poses for a given keyframe.
 local function traversePoses(instance, func)
-	local poses = instance:IsA("Keyframe") and instance:GetPoses()
-		or instance:IsA("Pose") and instance:GetSubPoses()
+	local poses = {}
+	if GetFFlagFacialAnimationSupport() then
+		-- For now, we need to traverse Folders as well (For the FaceControls folder)
+		if instance:IsA("Keyframe") then
+			poses = instance:GetPoses()
+		elseif instance:IsA("PoseBase") or (instance:IsA("Folder") and instance.Name == Constants.FACE_CONTROLS_FOLDER) then
+			poses = instance:GetChildren()
+		end
+	else
+		poses = instance:IsA("Keyframe") and instance:GetPoses()
+			or instance:IsA("Pose") and instance:GetSubPoses()
+	end
 
 	for _, pose in pairs(poses) do
-		if pose:IsA("Pose") then
-			func(pose)
+		if GetFFlagFacialAnimationSupport() then
+			-- Do not call the function for folders
+			if pose:IsA("PoseBase") then
+				func(pose)
+			end
 			traversePoses(pose, func)
+		else
+			if pose:IsA("Pose") then
+				func(pose)
+				traversePoses(pose, func)
+			end
 		end
 	end
 end
@@ -1021,6 +914,8 @@ end
 -- if they exist.
 
 -- Unused when GetFFlagPrecalculatePartPaths is ON
+-- FFlagPrecalculatePartPaths is a pre-requisite of FFlagFacialAnimationSupport, so there's no need
+-- to support FACS tracks here
 local function makePoseChain_deprecated(keyframe, trackName, rig, trackData, partsToMotors, boneMap)
 	local poseInstance = keyframe:FindFirstChild(trackName, true)
 	if poseInstance == nil then
@@ -1059,7 +954,8 @@ local function makePoseChain_deprecated(keyframe, trackName, rig, trackData, par
 	poseChain.Parent = keyframe
 end
 
-local function makePoseChain(keyframe, trackName, trackData, pathMap)
+-- Unused when GetFFlagFacialAnimationSupport is ON
+local function makePoseChain_deprecated_too(keyframe, trackName, trackData, pathMap)
 	local path = pathMap[trackName]
 
 	-- We haven't found a path to this trackName in the rig, bail out
@@ -1091,15 +987,60 @@ local function makePoseChain(keyframe, trackName, trackData, pathMap)
 	end
 end
 
+local function makePoseChain(keyframe, trackName, trackType, trackData, pathMap)
+	local path = pathMap[trackName]
+
+	-- We haven't found a path to this trackName in the rig, bail out
+	if path == nil then
+		return
+	end
+
+	local current = keyframe
+
+	-- Add all intermediate poses (or FACS folder)
+	for _, poseName in ipairs(path) do
+		local pose = current:FindFirstChild(poseName)
+
+		if pose == nil then
+			if poseName == Constants.FACE_CONTROLS_FOLDER then
+				pose = Instance.new("Folder", current)
+			else
+				pose = Instance.new("Pose", current)
+				pose.Weight = 0
+			end
+			pose.Name = poseName
+		end
+
+		current = pose
+	end
+
+	-- Add or update the node containing the track data
+	local pose = current:FindFirstChild(trackName)
+	if trackType == Constants.TRACK_TYPES.Facs then
+		pose = pose or Instance.new("NumberPose", current)
+		pose.Value = trackData.Value
+	elseif trackType == Constants.TRACK_TYPES.CFrame then
+		pose = pose or Instance.new("Pose", current)
+		pose.CFrame = trackData.Value
+	end
+
+	pose.Name = trackName
+	pose.Weight = 1
+	pose.EasingStyle = trackData.EasingStyle.Name
+	pose.EasingDirection = trackData.EasingDirection.Name
+
+end
+
 -- For each track name (name of a part), find the parents leading to the root instance
 -- and store the path in a table
 local function createPathMap(tracks, partsToMotors, boneMap)
 	local pathMap = {}
-	for trackName, _ in pairs(tracks) do
+	local pathToHead = nil
+
+	local function getPartPath(trackName)
 		local path = {}
 		local current = trackName
 		while current ~= nil do
-			table.insert(path, 1, current)
 			local motor = partsToMotors[current]
 			local bone = boneMap[current]
 			if motor then
@@ -1107,11 +1048,46 @@ local function createPathMap(tracks, partsToMotors, boneMap)
 			elseif bone then
 				current = bone.Parent.Name
 			else
-				current = nil
+				break
 			end
+
+			table.insert(path, 1, current)
 		end
-		pathMap[trackName] = path
+		return path
 	end
+
+	for trackName, track in pairs(tracks) do
+		if GetFFlagFacialAnimationSupport() then
+			if track.Type == Constants.TRACK_TYPES.CFrame then
+				pathMap[trackName] = getPartPath(trackName)
+			elseif track.Type == Constants.TRACK_TYPES.Facs then
+				-- FACS tracks are children of the HEAD part. We will need to
+				-- revisit this when we add support for multiple heads.
+				if pathToHead == nil then
+					pathToHead = Cryo.List.join(getPartPath(Constants.R15_PARTS.Head), {Constants.R15_PARTS.Head})
+				end
+				-- Facs are supposed to be in a FaceControls folder
+				pathMap[trackName] = Cryo.List.join(pathToHead, {Constants.FACE_CONTROLS_FOLDER})
+			end
+		else
+			local path = {}
+			local current = trackName
+			while current ~= nil do
+				table.insert(path, 1, current)
+				local motor = partsToMotors[current]
+				local bone = boneMap[current]
+				if motor then
+					current = motor.Part0.Name
+				elseif bone then
+					current = bone.Parent.Name
+				else
+					current = nil
+				end
+			end
+			pathMap[trackName] = path
+		end
+	end
+
 	return pathMap
 end
 
@@ -1154,10 +1130,15 @@ function RigUtils.toRigAnimation(animationData, rig)
 				keyframeInstance = createKeyframeInstance(keyframeSequence, time)
 				kfsByFrame[keyframe] = keyframeInstance
 			end
+			local trackType = track.Type
 			local trackData = track.Data[keyframe]
 
 			if GetFFlagPrecalculatePartPaths() then
-				makePoseChain(keyframeInstance, trackName, trackData, pathMap)
+				if GetFFlagFacialAnimationSupport() then
+					makePoseChain(keyframeInstance, trackName, trackType, trackData, pathMap)
+				else
+					makePoseChain_deprecated_too(keyframeInstance, trackName, trackData, pathMap)
+				end
 			else
 				makePoseChain_deprecated(keyframeInstance, trackName, rig, trackData, partsToMotors, boneMap)
 			end
@@ -1258,12 +1239,25 @@ function RigUtils.fromRigAnimation(keyframeSequence, frameRate, snapTolerance)
 		-- Add keyframes at this frame
 		traversePoses(keyframe, function(pose)
 			local poseName = pose.Name
+			-- TODO: At some point we will need to differentiate NumberPoses into
+			-- FACS channels and generic float channels. On name? Parent?
+			local trackType = pose:IsA("Pose") and Constants.TRACK_TYPES.CFrame or Constants.TRACK_TYPES.Facs
+
 			if poseName ~= "HumanoidRootPart" and pose.Weight ~= 0 then
 				if tracks[poseName] == nil then
-					AnimationData.addTrack(tracks, poseName)
+					if GetFFlagFacialAnimationSupport() then
+						AnimationData.addTrack(tracks, poseName, trackType)
+					else
+						AnimationData.addTrack(tracks, poseName)
+					end
 				end
 				local track = tracks[poseName]
-				AnimationData.addKeyframe(track, frame, pose.CFrame)
+				if GetFFlagFacialAnimationSupport() then
+					local value = pose:IsA("Pose") and pose.CFrame or pose.Value
+					AnimationData.addKeyframe(track, frame, value)
+				else
+					AnimationData.addKeyframe(track, frame, pose.CFrame)
+				end
 				AnimationData.setKeyframeData(track, frame, {
 					EasingStyle = pose.EasingStyle,
 					EasingDirection = pose.EasingDirection,

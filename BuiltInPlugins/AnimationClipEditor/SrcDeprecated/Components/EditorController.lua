@@ -58,7 +58,6 @@ local JointSelector = require(Plugin.SrcDeprecated.Components.JointManipulator.J
 local AnimationControlPanel = require(Plugin.SrcDeprecated.Components.AnimationControlPanel.AnimationControlPanel)
 local TrackColors = require(Plugin.SrcDeprecated.Components.TrackList.TrackColors)
 
-local UseCustomFPS = require(Plugin.LuaFlags.GetFFlagAnimEditorUseCustomFPS)
 local GetFFlagDebugExtendAnimationLimit = require(Plugin.LuaFlags.GetFFlagDebugExtendAnimationLimit)
 
 local EditorController = Roact.PureComponent:extend("EditorController")
@@ -72,18 +71,16 @@ function EditorController:init()
 		showChangeFPSPrompt = false,
 	}
 
-	if UseCustomFPS() then
-		self.showChangeFPSPrompt = function()
-			self:setState({
-				showChangeFPSPrompt = true,
-			})
-		end
+	self.showChangeFPSPrompt = function()
+		self:setState({
+			showChangeFPSPrompt = true,
+		})
+	end
 
-		self.hideChangeFPSPrompt = function()
-			self:setState({
-				showChangeFPSPrompt = false,
-			})
-		end
+	self.hideChangeFPSPrompt = function()
+		self:setState({
+			showChangeFPSPrompt = false,
+		})
 	end
 
 	self.setTopTrackIndex = function(index)
@@ -377,7 +374,7 @@ function EditorController:render()
 			EndFrame = endFrame,
 			LastFrame = lastFrame,
 			Playhead = playhead,
-			FrameRate = UseCustomFPS() and animationData and animationData.Metadata and animationData.Metadata.FrameRate,
+			FrameRate = animationData and animationData.Metadata and animationData.Metadata.FrameRate,
 			ShowAsSeconds = showAsSeconds,
 			ShowEvents = showEvents,
 			Scroll = scroll,
@@ -391,7 +388,7 @@ function EditorController:render()
 			LayoutOrder = 3,
 		}, {
 			SettingsButton = Roact.createElement(SettingsButton, {
-				OnChangeFPS = UseCustomFPS() and self.showChangeFPSPrompt,
+				OnChangeFPS = self.showChangeFPSPrompt,
 			}),
 
 			TrackScrollbar = Roact.createElement(TrackScrollbar, {
@@ -461,7 +458,7 @@ function EditorController:render()
 			OnFocused = props.AttachEditor,
 		}),
 
-		ChangeFPSPrompt = UseCustomFPS() and showChangeFPSPrompt and Roact.createElement(ChangeFPSPrompt, {
+		ChangeFPSPrompt = showChangeFPSPrompt and Roact.createElement(ChangeFPSPrompt, {
 			FrameRate = animationData and animationData.Metadata and animationData.Metadata.FrameRate,
 			SetFrameRate = props.SetFrameRate,
 			OnClose = self.hideChangeFPSPrompt,
@@ -570,16 +567,14 @@ local function mapDispatchToProps(dispatch)
 			dispatch(SetIsDirty(false))
 		end,
 
+		SetFrameRate = function(frameRate)
+			dispatch(SetFrameRate(frameRate))
+		end,
+
 		SetIsPlaying = function(isPlaying)
 			dispatch(SetIsPlaying(isPlaying))
 		end,
 	}
-
-	if UseCustomFPS() then
-		dispatchToProps["SetFrameRate"] = function(frameRate)
-			dispatch(SetFrameRate(frameRate))
-		end
-	end
 
 	return dispatchToProps
 end

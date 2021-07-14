@@ -62,10 +62,10 @@ local JointSelector = require(Plugin.Src.Components.JointManipulator.JointSelect
 local AnimationControlPanel = require(Plugin.Src.Components.AnimationControlPanel.AnimationControlPanel)
 local TrackColors = require(Plugin.Src.Components.TrackList.TrackColors)
 
-local UseCustomFPS = require(Plugin.LuaFlags.GetFFlagAnimEditorUseCustomFPS)
 local GetFFlagDebugExtendAnimationLimit = require(Plugin.LuaFlags.GetFFlagDebugExtendAnimationLimit)
 local GetFFlagExtendAnimationLimit = require(Plugin.LuaFlags.GetFFlagExtendAnimationLimit)
 local GetFFlagNoValueChangeDuringPlayback = require(Plugin.LuaFlags.GetFFlagNoValueChangeDuringPlayback)
+local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
 
 local EditorController = Roact.PureComponent:extend("EditorController")
 
@@ -80,18 +80,16 @@ function EditorController:init()
 
 	self.nameToPart = {}
 
-	if UseCustomFPS() then
-		self.showChangeFPSPrompt = function()
-			self:setState({
-				showChangeFPSPrompt = true,
-			})
-		end
+	self.showChangeFPSPrompt = function()
+		self:setState({
+			showChangeFPSPrompt = true,
+		})
+	end
 
-		self.hideChangeFPSPrompt = function()
-			self:setState({
-				showChangeFPSPrompt = false,
-			})
-		end
+	self.hideChangeFPSPrompt = function()
+		self:setState({
+			showChangeFPSPrompt = false,
+		})
 	end
 
 	self.setTopTrackIndex = function(index)
@@ -121,6 +119,7 @@ function EditorController:init()
 		self.props.SetIsPlaying(false)
 		self.props.SetRightClickContextInfo({
 			TrackName = track.Name,
+			TrackType = GetFFlagFacialAnimationSupport() and track.Type or nil,
 			InstanceName = track.Instance,
 		})
 		self:setState({
@@ -239,20 +238,22 @@ function EditorController:init()
 		setSelectedTracks({trackName})
 	end
 
-	self.addTrackWrapper = function(instanceName, trackName)
-		if self.props.Analytics then
-			self.props.AddTrack(instanceName, trackName, self.props.Analytics)
+	self.addTrackWrapper = function(instanceName, trackName, trackType)
+		if GetFFlagFacialAnimationSupport() then
+			self.props.AddTrack(instanceName, trackName, trackType, self.props.Analytics)
+		elseif self.props.Analytics then
+			self.props.AddTrack_deprecated(instanceName, trackName, self.props.Analytics)
 		end
 	end
 
 	self.createAnimationWrapper = function(name)
-		if self.props.Analytics then
+		if GetFFlagFacialAnimationSupport() or self.props.Analytics then
 			self.props.CreateAnimation(name, self.props.Analytics)
 		end
 	end
 
 	self.attachEditorWrapper = function()
-		if self.props.Analytics then
+		if GetFFlagFacialAnimationSupport() or self.props.Analytics then
 			self.props.AttachEditor(self.props.Analytics)
 		end
 	end
@@ -289,6 +290,7 @@ function EditorController:render()
 	local trackListWidth = state.TrackListWidth
 	local tracks = props.Tracks
 	local unusedTracks = props.UnusedTracks
+	local unusedFacs = props.UnusedFacs
 	local scroll = props.Scroll
 	local zoom = props.Zoom
 	local animationData = props.AnimationData
@@ -393,6 +395,7 @@ function EditorController:render()
 					Tracks = tracks,
 					SelectedTracks = selectedTracks,
 					UnusedTracks = unusedTracks,
+					UnusedFacs = unusedFacs,
 					AnimationData = animationData,
 					Playhead = playhead,
 					RootName = rootName,
@@ -402,6 +405,8 @@ function EditorController:render()
 					ToggleTrackExpanded = props.SetTracksExpanded,
 					OnTrackAdded = self.addTrackWrapper,
 					OnValueChanged = props.ValueChanged,
+					-- Remove when GetFFlagFacialAnimationSupport() is retired
+					OnValueChangedDeprecated = props.ValueChanged_deprecated,
 					OnChangeBegan = props.AddWaypoint,
 					OnTrackSelected = self.onTrackSelected,
 				}),
@@ -448,7 +453,7 @@ function EditorController:render()
 			EndFrame = endFrame,
 			LastFrame = lastFrame,
 			Playhead = playhead,
-			FrameRate = UseCustomFPS() and animationData and animationData.Metadata and animationData.Metadata.FrameRate,
+			FrameRate = animationData and animationData.Metadata and animationData.Metadata.FrameRate,
 			ShowAsSeconds = showAsSeconds,
 			ShowEvents = showEvents,
 			Scroll = scroll,
@@ -462,7 +467,7 @@ function EditorController:render()
 			LayoutOrder = 3,
 		}, {
 			SettingsButton = Roact.createElement(SettingsButton, {
-				OnChangeFPS = UseCustomFPS() and self.showChangeFPSPrompt,
+				OnChangeFPS = self.showChangeFPSPrompt,
 			}),
 
 			TrackScrollbar = Roact.createElement(TrackScrollbar, {
@@ -501,11 +506,19 @@ function EditorController:render()
 			OnSelectPart = self.onPartSelected,
 			OnDragStart = not (GetFFlagNoValueChangeDuringPlayback() and isPlaying) and props.AddWaypoint or nil,
 			OnManipulateJoint = not (GetFFlagNoValueChangeDuringPlayback() and isPlaying) and function(instanceName, trackName, value)
-				props.ValueChanged(instanceName, trackName, playhead, value, props.Analytics)
+				if GetFFlagFacialAnimationSupport() then
+					props.ValueChanged(instanceName, trackName, Constants.TRACK_TYPES.CFrame, playhead, value, props.Analytics)
+				else
+					props.ValueChanged_deprecated(instanceName, trackName, playhead, value, props.Analytics)
+				end
 			end or nil,
 			OnManipulateJoints = not (GetFFlagNoValueChangeDuringPlayback() and isPlaying) and function(instanceName, values)
 				for trackName, value in pairs(values) do
-					props.ValueChanged(instanceName, trackName, playhead, value, props.Analytics)
+					if GetFFlagFacialAnimationSupport() then
+						props.ValueChanged(instanceName, trackName, Constants.TRACK_TYPES.CFrame, playhead, value, props.Analytics)
+					else
+						props.ValueChanged_deprecated(instanceName, trackName, playhead, value, props.Analytics)
+					end
 				end
 			end or nil,
 		}),
@@ -532,7 +545,7 @@ function EditorController:render()
 			OnFocused = self.attachEditorWrapper,
 		}),
 
-		ChangeFPSPrompt = UseCustomFPS() and showChangeFPSPrompt and Roact.createElement(ChangeFPSPrompt, {
+		ChangeFPSPrompt = showChangeFPSPrompt and Roact.createElement(ChangeFPSPrompt, {
 			FrameRate = animationData and animationData.Metadata and animationData.Metadata.FrameRate,
 			SetFrameRate = props.SetFrameRate,
 			OnClose = self.hideChangeFPSPrompt,
@@ -569,6 +582,7 @@ local function mapStateToProps(state, props)
 		Zoom = status.Zoom,
 		Tracks = status.Tracks,
 		UnusedTracks = status.UnusedTracks,
+		UnusedFacs = status.UnusedFacs,
 		RootInstance = status.RootInstance,
 		ShowEvents = status.ShowEvents,
 		IKEnabled = status.IKEnabled,
@@ -608,7 +622,13 @@ local function mapDispatchToProps(dispatch)
 			dispatch(SetTracksExpanded(tracks, false))
 		end,
 
-		AddTrack = function(instance, track, analytics)
+		AddTrack = function(instance, track, trackType, analytics)
+			dispatch(AddWaypoint())
+			dispatch(AddTrack(instance, track, trackType, analytics))
+		end,
+
+		-- Remove when GetFFlagFacialAnimationSupport() is retired
+		AddTrack_deprecated = function(instance, track, analytics)
 			dispatch(AddWaypoint())
 			dispatch(AddTrack(instance, track, analytics))
 		end,
@@ -617,7 +637,12 @@ local function mapDispatchToProps(dispatch)
 			dispatch(SetRightClickContextInfo(info))
 		end,
 
-		ValueChanged = function(instanceName, trackName, frame, value, analytics)
+		ValueChanged = function(instanceName, trackName, trackType, frame, value, analytics)
+			dispatch(ValueChanged(instanceName, trackName, trackType, frame, value, analytics))
+		end,
+
+		-- Remove when GetFFlagFacialAnimationSupport() is retired
+		ValueChanged_deprecated = function(instanceName, trackName, frame, value, analytics)
 			dispatch(ValueChanged(instanceName, trackName, frame, value, analytics))
 		end,
 
@@ -647,16 +672,14 @@ local function mapDispatchToProps(dispatch)
 			dispatch(SetIsDirty(false))
 		end,
 
+		SetFrameRate = function(frameRate)
+			dispatch(SetFrameRate(frameRate))
+		end,
+
 		SetIsPlaying = function(isPlaying)
 			dispatch(SetIsPlaying(isPlaying))
 		end,
 	}
-
-	if UseCustomFPS() then
-		dispatchToProps["SetFrameRate"] = function(frameRate)
-			dispatch(SetFrameRate(frameRate))
-		end
-	end
 
 	return dispatchToProps
 end

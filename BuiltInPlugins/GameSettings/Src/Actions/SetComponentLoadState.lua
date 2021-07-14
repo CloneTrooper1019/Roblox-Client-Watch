@@ -1,5 +1,3 @@
-local FFlagStudioEnableBadgesInMonetizationPage = game:GetFastFlag("StudioEnableBadgesInMonetizationPage")
-
 local Plugin = script.Parent.Parent.Parent
 local Action = require(Plugin.Framework.Util).Action
 
@@ -12,9 +10,7 @@ for _,v in pairs(LoadState) do
     loadStateMax = math.max(loadStateMax, v)
 end
 
-return Action(script.Name, function(componentName, loadState)
-    assert(FFlagStudioEnableBadgesInMonetizationPage)
-    
+return Action(script.Name, function(componentName, loadState)    
     assert(typeof(componentName) == "string",
         string.format(script.Name.." requires componentName to be a string, not %s", typeof(componentName)))
     assert(typeof(loadState) == "number" and loadState >= loadStateMin and loadState <= loadStateMax,

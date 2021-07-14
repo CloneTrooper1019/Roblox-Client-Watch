@@ -5,9 +5,9 @@ local Roact = require(Libs.Roact)
 local Framework = require(Libs.Framework)
 local ContextServices = Framework.ContextServices
 
-local Constants = require(Plugin.Core.Util.Constants)
+local Button = Framework.UI.Button
 
-local MAX_WIDTH = 300
+local Constants = require(Plugin.Core.Util.Constants)
 local TEXT_PADDING = 10
 
 local DetailedDropdownItem = Roact.PureComponent:extend("DetailedDropdownItem")
@@ -27,21 +27,12 @@ function DetailedDropdownItem:render()
 	local isHovered = props.IsHovered
 	local displayTextColor = isHovered and dropdownTheme.hovered.displayText or dropdownTheme.displayText
 
-	local itemColor = dropdownTheme.backgroundColor
-	if selected then
-		itemColor = dropdownTheme.selected.backgroundColor
-	elseif isHovered then
-		itemColor = dropdownTheme.hovered.backgroundColor
-	end
-
-	return Roact.createElement("ImageButton", {
+	return Roact.createElement(Button, {
 		AutomaticSize = Enum.AutomaticSize.Y,
-		Size = UDim2.new(0, MAX_WIDTH, 0, 10),
-		BackgroundColor3 = itemColor,
-		BorderSizePixel = 0,
 		LayoutOrder = layoutOrder,
-		AutoButtonColor = false,
-		[Roact.Event.Activated] = onActivated,
+		OnClick = onActivated,
+		Size = UDim2.new(1, 0, 0, 0),
+		Style = selected and "SelectedDetailedDropdownItem" or nil,
 	}, {
 		UIListLayout = Roact.createElement("UIListLayout", {
 			SortOrder = Enum.SortOrder.LayoutOrder,

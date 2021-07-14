@@ -8,8 +8,6 @@
 	debug flag boolean in the workspace.
 ]]
 
-game:DefineFastFlag("AddStatCounters", false)
-
 local TARGET = "studio"
 local CONTEXT = "animationEditor"
 
@@ -66,9 +64,7 @@ function Analytics:onEditorOpened(timelineUnit, keyframeSnap)
 		timelineUnit = timelineUnit,
 		keyframeSnap = keyframeSnap,
 	})
-	if game:GetFastFlag("AddStatCounters") then
-		self.Senders:reportCounter(makeStatName("EditorOpened"))
-	end
+	self.Senders:reportCounter(makeStatName("EditorOpened"))
 end
 
 function Analytics:onEditorClosed()
@@ -90,9 +86,7 @@ end
 function Analytics:onImportFbxAnimation()
 	self:update()
 	self.Senders:sendEventDeferred("importFbxAnimation", {})
-	if game:GetFastFlag("AddStatCounters") then
-		self.Senders:reportCounter(makeStatName("FBXAnimationImported"))
-	end
+	self.Senders:reportCounter(makeStatName("FBXAnimationImported"))
 end
 
 function Analytics:onExportAnimation()
@@ -118,11 +112,9 @@ function Analytics:onSaveAnimation(name, numKeyframes, numPoses, numEvents)
 		numPoses = numPoses,
 		numEvents = numEvents,
 	})
-	if game:GetFastFlag("AddStatCounters") then
-		self.Senders:reportStats(makeStatName("ExportedKeyframes"), numKeyframes)
-		self.Senders:reportStats(makeStatName("ExportedPoses"), numPoses)
-		self.Senders:reportStats(makeStatName("ExportedEvents"), numEvents)
-	end
+	self.Senders:reportStats(makeStatName("ExportedKeyframes"), numKeyframes)
+	self.Senders:reportStats(makeStatName("ExportedPoses"), numPoses)
+	self.Senders:reportStats(makeStatName("ExportedEvents"), numEvents)
 end
 
 function Analytics:onCreateNewAnimation(name)
@@ -164,9 +156,7 @@ function Analytics:onIkEnabled()
 	self:update()
 	self.ikOpenedTimestamp = os.time()
 	self.Senders:sendEventDeferred("ikEnabled", {})
-	if game:GetFastFlag("AddStatCounters") then
-		self.Senders:reportCounter(makeStatName("IKEnabled"))
-	end
+	self.Senders:reportCounter(makeStatName("IKEnabled"))
 end
 
 function Analytics:onIkDisabled()
@@ -220,9 +210,7 @@ function Analytics:onAddEvent(name, parameter)
 		name = name,
 		parameter = parameter,
 	})
-	if game:GetFastFlag("AddStatCounters") then
-		self.Senders:reportCounter(makeStatName("EventAdded"))
-	end
+	self.Senders:reportCounter(makeStatName("EventAdded"))
 end
 
 function Analytics:onAddKeyframe(trackName, frame)
@@ -231,9 +219,7 @@ function Analytics:onAddKeyframe(trackName, frame)
 		trackName = trackName,
 		frame = frame,
 	})
-	if game:GetFastFlag("AddStatCounters") then
-		self.Senders:reportCounter(makeStatName("KeyframeAdded"))
-	end
+	self.Senders:reportCounter(makeStatName("KeyframeAdded"))
 end
 
 function Analytics:onDeleteKeyframe(trackName, frame)

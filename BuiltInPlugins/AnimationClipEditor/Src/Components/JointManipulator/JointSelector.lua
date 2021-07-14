@@ -45,23 +45,13 @@ local Constants = require(Plugin.Src.Util.Constants)
 local JointManipulator = require(Plugin.Src.Components.JointManipulator.JointManipulator)
 
 local ToggleWorldSpace = require(Plugin.Src.Actions.ToggleWorldSpace)
-local FindNestedParts = require(Plugin.LuaFlags.GetFFlagFindNestedParts)
-local FixDuplicateChildNames = require(Plugin.LuaFlags.GetFFlagFixDuplicateChildNames)
-local AllowDuplicateNamesOnNonAnimatedParts = require(Plugin.LuaFlags.GetFFlagAllowDuplicateNamesOnNonAnimatedParts)
 
 local JointSelector = Roact.PureComponent:extend("JointSelector")
 
 function JointSelector:init()
-	if AllowDuplicateNamesOnNonAnimatedParts() then
-		self.state = {
-			HoverPart = nil,
-		}
-	else
-		self.state = {
-			CurrentParts = nil,
-			HoverPart = nil,
-		}
-	end
+	self.state = {
+		HoverPart = nil,
+	}
 
 	local rootInstance = self.props.RootInstance
 	self.CurrentRoot = rootInstance
@@ -132,43 +122,6 @@ function JointSelector:willUpdate()
 	end
 end
 
-if not AllowDuplicateNamesOnNonAnimatedParts() then
-	function JointSelector.getDerivedStateFromProps(nextProps, lastState)
-		local selectedTracks = nextProps.SelectedTracks
-		local rootInstance = nextProps.RootInstance
-
-		local currentParts = {}
-		if selectedTracks and rootInstance then
-			for _, track in ipairs(selectedTracks) do
-				if FixDuplicateChildNames() then
-					local descendants = {}
-					RigUtils.getDescendants(descendants, rootInstance)
-					for _, child in ipairs(descendants) do
-						if child.Name == track and child:IsA("BasePart") then
-							table.insert(currentParts, child)
-							break
-						end
-					end
-				elseif FindNestedParts() then
-					local part = RigUtils.getPartByName(rootInstance, track)
-					if part then
-						table.insert(currentParts, part)
-					end
-				else
-					local part = rootInstance:FindFirstChild(track, true)
-					if part and part:IsA("BasePart") then
-						table.insert(currentParts, part)
-					end
-				end
-			end
-		end
-
-		return {
-			CurrentParts = #currentParts > 0 and currentParts or Roact.None,
-		}
-	end
-end
-
 function JointSelector:getJoints()
 	local joints = {}
 	local selectedTracks = self.props.SelectedTracks
@@ -218,14 +171,9 @@ function JointSelector:render()
 	local state = self.state
 	local props = self.props
 
-	local currentParts = nil
-	if AllowDuplicateNamesOnNonAnimatedParts() then
-		local selectedTracks = props.SelectedTracks
-		local rootInstance = props.RootInstance
-		currentParts = self:findCurrentParts(selectedTracks, rootInstance)
-	else
-		currentParts = state.CurrentParts
-	end
+	local selectedTracks = props.SelectedTracks
+	local rootInstance = props.RootInstance
+	local currentParts = self:findCurrentParts(selectedTracks, rootInstance)
 
 	local hoverPart = state.HoverPart
 	local container = props.Container or CoreGui

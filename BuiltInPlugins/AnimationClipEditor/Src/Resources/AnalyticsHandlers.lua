@@ -1,6 +1,4 @@
 local StudioService = game:GetService("StudioService")
-game:DefineFastFlag("AddStatCounters", false)
-
 local Plugin = script.Parent.Parent.Parent
 local Cryo = require(Plugin.Packages.Cryo)
 local TARGET = "studio"
@@ -23,11 +21,11 @@ return function(analyticsService)
 	local function reportCounter(counterName, count)
         analyticsService:ReportCounter(counterName, count or 1)
     end
-    
+
     local function reportStats(statName, count)
         analyticsService:ReportStats(statName, count or 1)
     end
-    
+
     local function makeStatName(name)
         return TARGET .."." ..CONTEXT .."." ..name
     end
@@ -39,10 +37,8 @@ return function(analyticsService)
                 timelineUnit = timelineUnit,
                 keyframeSnap = keyframeSnap,
             })
-            if game:GetFastFlag("AddStatCounters") then
-                reportCounter(makeStatName("EditorOpened"))
-                sendEvent("EditorOpened")
-            end
+            reportCounter(makeStatName("EditorOpened"))
+            sendEvent("EditorOpened")
         end,
 
         onEditorClosed = function(timeOpen)
@@ -60,10 +56,8 @@ return function(analyticsService)
 
         onImportFbxAnimation = function()
             sendEvent("importFbxAnimation", {})
-            if game:GetFastFlag("AddStatCounters") then
-                reportCounter(makeStatName("FBXAnimationImported"))
-                sendEvent("FBXAnimationImported")
-            end
+            reportCounter(makeStatName("FBXAnimationImported"))
+            sendEvent("FBXAnimationImported")
         end,
 
         onExportAnimation = function()
@@ -86,11 +80,9 @@ return function(analyticsService)
                 numPoses = numPoses,
                 numEvents = numEvents,
             })
-            if game:GetFastFlag("AddStatCounters") then
-                reportStats(makeStatName("ExportedKeyframes"), numKeyframes)
-                reportStats(makeStatName("ExportedPoses"), numPoses)
-                reportStats(makeStatName("ExportedEvents"), numEvents)
-            end
+            reportStats(makeStatName("ExportedKeyframes"), numKeyframes)
+            reportStats(makeStatName("ExportedPoses"), numPoses)
+            reportStats(makeStatName("ExportedEvents"), numEvents)
         end,
 
         onCreateNewAnimation = function(name)
@@ -125,10 +117,8 @@ return function(analyticsService)
 
         onIkEnabled = function()
             sendEvent("ikEnabled", {})
-            if game:GetFastFlag("AddStatCounters") then
-                reportCounter(makeStatName("IKEnabled"))
-                sendEvent("IKEnabled")
-            end
+            reportCounter(makeStatName("IKEnabled"))
+            sendEvent("IKEnabled")
         end,
 
         onIkDisabled = function(timeOpen)
@@ -174,10 +164,8 @@ return function(analyticsService)
                 name = name,
                 parameter = parameter,
             })
-            if game:GetFastFlag("AddStatCounters") then
-                reportCounter(makeStatName("EventAdded"))
-                sendEvent("EventAdded")
-            end
+            reportCounter(makeStatName("EventAdded"))
+            sendEvent("EventAdded")
         end,
 
         onAddKeyframe = function(trackName, frame)
@@ -185,10 +173,8 @@ return function(analyticsService)
                 trackName = trackName,
                 frame = frame,
             })
-            if game:GetFastFlag("AddStatCounters") then
-                reportCounter(makeStatName("KeyframeAdded"))
-                sendEvent("KeyframeAdded")
-            end
+            reportCounter(makeStatName("KeyframeAdded"))
+            sendEvent("KeyframeAdded")
         end,
 
         onDeleteKeyframe = function(trackName, frame)
@@ -198,4 +184,4 @@ return function(analyticsService)
             })
         end,
     }
-end 
+end

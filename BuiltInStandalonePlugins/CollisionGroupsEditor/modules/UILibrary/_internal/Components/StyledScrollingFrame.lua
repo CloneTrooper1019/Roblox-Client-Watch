@@ -18,7 +18,6 @@
 	Optional Props:
 		Color3 BackgroundColor: If provided, we set BackgroundTransparency to 0 and show the provided color as background and border
 ]]
-local FFlagStudioEnableBadgesInMonetizationPage = game:GetFastFlag("StudioEnableBadgesInMonetizationPage")
 local FFlagLuobuDevPublishLua = game:GetFastFlag("LuobuDevPublishLua")
 local FFlagLuobuDevPublishLuaTempOptIn = game:GetFastFlag("LuobuDevPublishLuaTempOptIn")
 
@@ -57,7 +56,7 @@ function StyledScrollingFrame:render()
 		local scrollBarThickness = props.ScrollBarThickness or DEFAULT_SCROLLBAR_THICKNESS
 
 		local backgroundThickness = scrollBarThickness + (padding * 2)
-		local backgroundColor = FFlagStudioEnableBadgesInMonetizationPage and props.BackgroundColor or nil
+		local backgroundColor = props.BackgroundColor
 
 		local ref = props[Roact.Ref]
 		local children = props[Roact.Children]

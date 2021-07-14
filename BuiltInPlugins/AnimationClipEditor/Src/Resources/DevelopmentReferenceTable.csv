@@ -53,15 +53,20 @@ Studio.AnimationClipEditor.IKMenu.IKMode, ,IK Mode
 Studio.AnimationClipEditor.IKMenu.Prompt, ,Enable IK to start animating with IK constraints
 Studio.AnimationClipEditor.IKMenu.ShowTreeview, ,Show Treeview
 Studio.AnimationClipEditor.Menu.Action, ,Action
+Studio.AnimationClipEditor.Menu.AddAllFacs, ,Add All Facial Animation Controls
 Studio.AnimationClipEditor.Menu.AddAllTracks, ,Add All
+Studio.AnimationClipEditor.Menu.Brows, ,Brows
 Studio.AnimationClipEditor.Menu.Core, ,Core
 Studio.AnimationClipEditor.Menu.CreateNew, ,Create New
 Studio.AnimationClipEditor.Menu.Export, ,Export
+Studio.AnimationClipEditor.Menu.Eyes, ,Eyes
 Studio.AnimationClipEditor.Menu.FromFBX, ,From FBX Animation
 Studio.AnimationClipEditor.Menu.FromRoblox, ,From Roblox
 Studio.AnimationClipEditor.Menu.Idle, ,Idle
 Studio.AnimationClipEditor.Menu.Import, ,Import
+Studio.AnimationClipEditor.Menu.Jaw, ,Jaw
 Studio.AnimationClipEditor.Menu.Load, ,Load
+Studio.AnimationClipEditor.Menu.Mouth, ,Mouth
 Studio.AnimationClipEditor.Menu.Movement, ,Movement
 Studio.AnimationClipEditor.Menu.New, ,New...
 Studio.AnimationClipEditor.Menu.Overwrite_Migrated, ,Do you want to overwrite existing animation {overwriteName}?
@@ -70,6 +75,7 @@ Studio.AnimationClipEditor.Menu.RenamePrompt, ,New Animation Name:
 Studio.AnimationClipEditor.Menu.Save, ,Save
 Studio.AnimationClipEditor.Menu.SaveAs, ,Save As
 Studio.AnimationClipEditor.Menu.SetPriority, ,Set Animation Priority
+Studio.AnimationClipEditor.Menu.Tongue, ,Tongue
 Studio.AnimationClipEditor.Plugin.Button, ,Animation Editor
 Studio.AnimationClipEditor.Plugin.Description, ,"Create, preview, and publish Animation clips"
 Studio.AnimationClipEditor.Plugin.Name, ,Animation Editor

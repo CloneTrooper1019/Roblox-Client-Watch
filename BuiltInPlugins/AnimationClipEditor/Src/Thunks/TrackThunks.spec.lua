@@ -16,6 +16,9 @@ return function()
 	local AddTrack = require(Plugin.Src.Thunks.AddTrack)
 	local DeleteTrack = require(Plugin.Src.Thunks.DeleteTrack)
 	local SortAndSetTracks = require(Plugin.Src.Thunks.SortAndSetTracks)
+	local Constants = require(Plugin.Src.Util.Constants)
+
+	local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
 
 	local mockSkeleton = {
 		ClassName = "MockSkeleton",
@@ -27,6 +30,7 @@ return function()
 	testAnimationData.Metadata.EndFrame = 10
 	testAnimationData.Instances.Root.Tracks = {
 		Hips = {
+			Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 			Keyframes = {0},
 		},
 	}
@@ -215,7 +219,11 @@ return function()
 		it("should add a track if the track does not exist", function()
 			local store = createTestStore()
 			local analytics = Analytics.mock()
-			store:dispatch(AddKeyframe("Root", "Head", 0, nil, analytics))
+			if GetFFlagFacialAnimationSupport() then
+				store:dispatch(AddKeyframe("Root", "Head", Constants.TRACK_TYPES.CFrame, 0, nil, analytics))
+			else
+				store:dispatch(AddKeyframe("Root", "Head", 0, nil, analytics))
+			end
 
 			local found = false
 			local status = store:getState().Status

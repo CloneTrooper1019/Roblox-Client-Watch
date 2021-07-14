@@ -1,3 +1,5 @@
+local FFlagDevFrameworkCheckbox = game:GetFastFlag("DevFrameworkCheckbox")
+
 local Framework = script.Parent.Parent.Parent
 
 local StyleKey = require(Framework.Style.StyleKey)
@@ -31,7 +33,7 @@ if THEME_REFACTOR then
 			},
 		},
 
-		["&Checkbox"] = {
+		["&Checkbox"] = not FFlagDevFrameworkCheckbox and {
 			Background = Decoration.Image,
 			BackgroundStyle = {
 				Image = StyleKey.CheckboxDefaultImage,
@@ -46,7 +48,7 @@ if THEME_REFACTOR then
 					Image = StyleKey.CheckboxDisabledImage,
 				},
 			},
-		},
+		} or nil,
 	}
 else
 	return function(theme, getColor)
@@ -85,41 +87,47 @@ else
 			},
 		})
 
-		local checkboxDefaultImage = StyleValue.new("checkboxDefaultImage", {
-			Light = "rbxasset://textures/DeveloperFramework/checkbox_unchecked_light.png",
-			Dark = "rbxasset://textures/DeveloperFramework/checkbox_unchecked_dark.png",
-		})
+		if FFlagDevFrameworkCheckbox then
+			return {
+				Default = Default,
+			}
+		else
+			local checkboxDefaultImage = StyleValue.new("checkboxDefaultImage", {
+				Light = "rbxasset://textures/DeveloperFramework/checkbox_unchecked_light.png",
+				Dark = "rbxasset://textures/DeveloperFramework/checkbox_unchecked_dark.png",
+			})
 
-		local checkboxSelectedImage = StyleValue.new("checkboxSelectedImage", {
-			Light = "rbxasset://textures/DeveloperFramework/checkbox_checked_light.png",
-			Dark = "rbxasset://textures/DeveloperFramework/checkbox_checked_dark.png",
-		})
+			local checkboxSelectedImage = StyleValue.new("checkboxSelectedImage", {
+				Light = "rbxasset://textures/DeveloperFramework/checkbox_checked_light.png",
+				Dark = "rbxasset://textures/DeveloperFramework/checkbox_checked_dark.png",
+			})
 
-		local checkboxDisabledImage = StyleValue.new("checkboxDisabledImage", {
-			Light = "rbxasset://textures/DeveloperFramework/checkbox_unchecked_disabled_light.png",
-			Dark = "rbxasset://textures/DeveloperFramework/checkbox_unchecked_disabled_dark.png",
-		})
+			local checkboxDisabledImage = StyleValue.new("checkboxDisabledImage", {
+				Light = "rbxasset://textures/DeveloperFramework/checkbox_unchecked_disabled_light.png",
+				Dark = "rbxasset://textures/DeveloperFramework/checkbox_unchecked_disabled_dark.png",
+			})
 
-		local Checkbox = Style.new({
-			Background = Decoration.Image,
-			BackgroundStyle = {
-				Image = checkboxDefaultImage:get(themeName),
-			},
-			[StyleModifier.Selected] = {
+			local Checkbox = Style.new({
+				Background = Decoration.Image,
 				BackgroundStyle = {
-					Image = checkboxSelectedImage:get(themeName),
+					Image = checkboxDefaultImage:get(themeName),
 				},
-			},
-			[StyleModifier.Disabled] = {
-				BackgroundStyle = {
-					Image = checkboxDisabledImage:get(themeName),
+				[StyleModifier.Selected] = {
+					BackgroundStyle = {
+						Image = checkboxSelectedImage:get(themeName),
+					},
 				},
-			},
-		})
+				[StyleModifier.Disabled] = {
+					BackgroundStyle = {
+						Image = checkboxDisabledImage:get(themeName),
+					},
+				},
+			})
 
-		return {
-			Default = Default,
-			Checkbox = Checkbox,
-		}
+			return {
+				Default = Default,
+				Checkbox = Checkbox,
+			}
+		end
 	end
 end

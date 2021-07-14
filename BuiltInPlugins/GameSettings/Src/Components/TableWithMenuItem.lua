@@ -15,9 +15,6 @@
 	Optional Props:
 		thumbnail Icon = Icon to display in first column of row entry
 ]]
-
-local FFlagStudioEnableBadgesInMonetizationPage = game:GetFastFlag("StudioEnableBadgesInMonetizationPage")
-
 local Plugin = script.Parent.Parent.Parent
 local Roact = require(Plugin.Roact)
 local Cryo = require(Plugin.Cryo)
@@ -41,8 +38,6 @@ local TextService = game:GetService("TextService")
 local TableWithMenuItem = Roact.PureComponent:extend("TableWithMenuItem")
 
 local function createRowLabelsWithIcon(theme, rowData, icon)
-	assert(FFlagStudioEnableBadgesInMonetizationPage)
-
 	local rowLabels = {}
 	local width = 1 / (#rowData + 1) -- +1 because the icon takes a column and is not included in #rowData
 	for col = (0), #rowData do -- iteration 0 adds column with icon
@@ -234,7 +229,7 @@ function TableWithMenuItem:render()
 	local rowData = props.RowData
 	local layoutOrder = props.LayoutOrder
 
-	local icon = FFlagStudioEnableBadgesInMonetizationPage and props.Icon or nil
+	local icon = props.Icon
 	local row = icon and createRowLabelsWithIcon(theme, rowData, icon) or createRowLabels(theme, rowData)
 
 	local showMenu = state.showMenu

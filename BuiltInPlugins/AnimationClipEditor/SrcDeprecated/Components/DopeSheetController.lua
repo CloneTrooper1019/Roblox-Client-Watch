@@ -9,7 +9,6 @@
 		int TopTrackIndex = index of the track that should be displayed at the top of the Dope Sheet
 		bool ShowEvents = Whether to show the AnimationEvents track.
 ]]
-local FFlagAnimEditorRenameKeyOptionFix = game:DefineFastFlag("AnimEditorRenameKeyOptionFix", false)
 
 local Plugin = script.Parent.Parent.Parent
 local Roact = require(Plugin.Roact)
@@ -56,8 +55,6 @@ local SetSelectedEvents = require(Plugin.SrcDeprecated.Actions.SetSelectedEvents
 local SetNotification = require(Plugin.SrcDeprecated.Actions.SetNotification)
 local SetIsPlaying = require(Plugin.SrcDeprecated.Actions.SetIsPlaying)
 
-local GetFFlagEnforceMaxAnimLength = require(Plugin.LuaFlags.GetFFlagEnforceMaxAnimLength)
-local UseCustomFPS = require(Plugin.LuaFlags.GetFFlagAnimEditorUseCustomFPS)
 local GetFFlagAddImportFailureToast = require(Plugin.LuaFlags.GetFFlagAddImportFailureToast)
 local GetFFlagHideLoadToastIfAnimationClipped = require(Plugin.LuaFlags.GetFFlagHideLoadToastIfAnimationClipped)
 
@@ -292,7 +289,7 @@ function DopeSheetController:init()
 
 	self.setSelectedKeyframeDuration = function(textInput)
 		self.setChangingDuration()
-		local newLength = StringUtils.parseTime(textInput, UseCustomFPS() and self.props.AnimationData.Metadata.FrameRate or Constants.DEFAULT_FRAMERATE)
+		local newLength = StringUtils.parseTime(textInput, self.props.AnimationData.Metadata.FrameRate)
 		if newLength ~= nil then
 			local earliest, latest = self:getSelectedKeyframesExtents()
 			local currentLength = latest - earliest
@@ -361,14 +358,11 @@ function DopeSheetController:handleKeyframeRightClick(instance, track, frame, se
 		if instance == nil then
 			-- User selected a summary keyframe
 			self.props.SelectKeyframesAtFrame(frame)
-			if not FFlagAnimEditorRenameKeyOptionFix then
-				rightClickInfo.SummaryKeyframe = frame
-			end
 		else
 			self.props.SelectKeyframe(instance, track, frame, false)
 		end
 	end
-	if FFlagAnimEditorRenameKeyOptionFix and instance == nil then
+	if instance == nil then
 		rightClickInfo.SummaryKeyframe = frame
 	end
 	self.props.SetRightClickContextInfo(rightClickInfo)
@@ -477,20 +471,18 @@ function DopeSheetController:render()
 			and animationData.Events.NamedKeyframes or {}
 
 		local quantizeWarningText = localization:getText("Toast", "QuantizeWarning")
-		if UseCustomFPS() then
-			local frameRate = animationData and animationData.Metadata and animationData.Metadata.FrameRate
-			if frameRate and frameRate > Constants.MAX_FRAMERATE then
-				quantizeWarningText = localization:getText("Toast", "MaxFramerateWarning")
-			end
+		local frameRate = animationData and animationData.Metadata and animationData.Metadata.FrameRate
+		if frameRate and frameRate > Constants.MAX_FRAMERATE then
+			quantizeWarningText = localization:getText("Toast", "MaxFramerateWarning")
 		end
 
 		local showQuantizeWarning = props.QuantizeWarning
 			and not AnimationData.isQuantized(animationData)
 		local loadedAnimName = props.Loaded
 		local savedAnimName = props.Saved
-		local showClippedWarning = GetFFlagEnforceMaxAnimLength() and props.ClippedWarning
+		local showClippedWarning = props.ClippedWarning
 		local showInvalidIdWarning = GetFFlagAddImportFailureToast() and props.InvalidIdWarning
-		local showLoadToast = not GetFFlagHideLoadToastIfAnimationClipped() or (GetFFlagHideLoadToastIfAnimationClipped() and not (GetFFlagEnforceMaxAnimLength() and showClippedWarning))
+		local showLoadToast = not GetFFlagHideLoadToastIfAnimationClipped() or (GetFFlagHideLoadToastIfAnimationClipped() and not showClippedWarning)
 
 		local size = props.Size
 		local position = props.Position
@@ -684,7 +676,7 @@ function DopeSheetController:render()
 						end,
 					}),
 
-					ClippedToast = GetFFlagEnforceMaxAnimLength() and showClippedWarning and Roact.createElement(NoticeToast, {
+					ClippedToast = showClippedWarning and Roact.createElement(NoticeToast, {
 						Text = localization:getText("Toast", "ClippedWarning"),
 						OnClose = props.CloseClippedToast,
 					}),
@@ -728,11 +720,8 @@ local function mapStateToProps(state, props)
 		Saved = state.Notifications.Saved,
 		Loaded = state.Notifications.Loaded,
 		Analytics = state.Analytics,
+		ClippedWarning = state.Notifications.ClippedWarning,
 	}
-
-	if GetFFlagEnforceMaxAnimLength() then
-		stateToProps["ClippedWarning"] = state.Notifications.ClippedWarning
-	end
 
 	if GetFFlagAddImportFailureToast() then
 		stateToProps["InvalidIdWarning"] = state.Notifications.InvalidAnimation
@@ -816,13 +805,11 @@ local function mapDispatchToProps(dispatch)
 		SetIsPlaying = function(isPlaying)
 			dispatch(SetIsPlaying(isPlaying))
 		end,
-	}
 
-	if GetFFlagEnforceMaxAnimLength() then
-		dispatchToProps["CloseClippedToast"] = function()
+		CloseClippedToast = function()
 			dispatch(SetNotification("ClippedWarning", false))
-		end
-	end
+		end,
+	}
 
 	if GetFFlagAddImportFailureToast() then
 		dispatchToProps["CloseInvalidAnimationToast"] = function()

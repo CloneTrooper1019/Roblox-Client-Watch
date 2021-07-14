@@ -12,6 +12,8 @@ Colors.WeldJoint = Color3.new(1, 1, 1)
 Colors.RotatingJoint = Color3.new(0, 0, 1)
 Colors.InvalidJoint = Color3.new(1, 0, 0)
 
+Colors.SizeLimitReached = Color3.new(1, 1, 0)
+
 function Colors.makeDimmed(color)
 	return color:Lerp(Colors.BLACK, 0.3)
 end

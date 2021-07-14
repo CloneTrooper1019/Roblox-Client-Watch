@@ -60,6 +60,7 @@ function PurchaseDialog:renderContent(theme, localization, localizedContent)
 		local styledDialogProps
 		if FFlagToolboxUseDevFrameworkDialogs then
 			styledDialogProps = {
+				AutomaticSize = FFlagToolboxUseDevFrameworkDialogs and Enum.AutomaticSize.Y or nil,
 				Title = localizedContent.PurchaseFlow.BuyTitle,
 				MinContentSize = Vector2.new(Dialog.PROMPT_SIZE.X.Offset, Dialog.DETAILS_SIZE.Y.Offset),
 				Buttons = {
@@ -90,9 +91,16 @@ function PurchaseDialog:renderContent(theme, localization, localizedContent)
 		end
 
 		return Roact.createElement(StyledDialog, styledDialogProps, {
+			UIListLayout = FFlagToolboxUseDevFrameworkDialogs and Roact.createElement("UIListLayout", {
+				FillDirection = Enum.FillDirection.Vertical,
+				SortOrder = Enum.SortOrder.LayoutOrder
+			}),
+
 			Header = Roact.createElement("TextLabel", {
+				AutomaticSize = FFlagToolboxUseDevFrameworkDialogs and Enum.AutomaticSize.Y or nil,
 				Size = Dialog.HEADER_SIZE,
 				BackgroundTransparency = 1,
+				LayoutOrder = FFlagToolboxUseDevFrameworkDialogs and 1 or nil,
 
 				Text = localizedContent.PurchaseFlow.FailedHeader,
 				TextSize = Constants.FONT_SIZE_TITLE,
@@ -103,10 +111,12 @@ function PurchaseDialog:renderContent(theme, localization, localizedContent)
 			}),
 
 			Details = Roact.createElement("TextLabel", {
+				AutomaticSize = FFlagToolboxUseDevFrameworkDialogs and Enum.AutomaticSize.Y or nil,
 				Size = Dialog.DETAILS_SIZE,
 				Position = Dialog.DETAILS_POSITION,
 				AnchorPoint = Vector2.new(0, 0.5),
 				BackgroundTransparency = 1,
+				LayoutOrder = FFlagToolboxUseDevFrameworkDialogs and 2 or nil,
 
 				Text = localization:getPurchaseFailedDetails(name),
 				TextSize = Constants.FONT_SIZE_LARGE,

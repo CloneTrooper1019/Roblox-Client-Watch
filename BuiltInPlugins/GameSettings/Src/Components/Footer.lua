@@ -171,13 +171,18 @@ function Footer:render()
 					local submitButtonPressed = buttonKey == "Submit"
 					if submitButtonPressed then
 						if email1 == email2 then
-							postContactEmail(email1)
-							self:saveAllSettings(self.state.userPressedSave)
-							self:setState({
-								showEmailDialog = false,
-								userPressedSave = false,
-								bottomText = "",
-							})
+							local responseCode = postContactEmail(email1)
+							if not responseCode then
+								self:saveAllSettings(self.state.userPressedSave)
+								self:setState({
+									showEmailDialog = false,
+									userPressedSave = false,
+									bottomText = "",
+								})
+							else
+								local message = localization:getText(optInLocationsKey, "EmailSubmitFailure") .. responseCode
+								warn(message)
+							end
 						else
 							self:setState({
 								bottomText = localization:getText(optInLocationsKey, "ErrorEmailNotEqual")

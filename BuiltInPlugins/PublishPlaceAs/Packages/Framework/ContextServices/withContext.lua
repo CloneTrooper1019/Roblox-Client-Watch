@@ -9,7 +9,7 @@ local mapToProps = require(Framework.ContextServices.mapToProps)
 
 local function withContext(contextItems)
 	return function(component)
-		mapToProps(component, contextItems)
+		mapToProps(component, contextItems, true)
 		return component
 	end
 	

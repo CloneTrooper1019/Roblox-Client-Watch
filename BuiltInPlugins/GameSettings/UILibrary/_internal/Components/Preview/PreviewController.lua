@@ -20,7 +20,6 @@
 	LayoutOrder = number,
 ]]
 local FFlagHideOneChildTreeviewButton = game:GetFastFlag("HideOneChildTreeviewButton")
-local FFlagStudioAssetPreviewTreeFix2 = game:DefineFastFlag("StudioAssetPreviewTreeFix2", false)
 
 local Library = script.Parent.Parent.Parent
 
@@ -84,12 +83,7 @@ function PreviewController:createTreeView(previewModel, size)
 		local onTreeviewEntered = self.onTreeviewEntered
 		local onTreeviewLeft = self.onTreeviewLeft
 
-		local dataTree
-		if FFlagStudioAssetPreviewTreeFix2 then
-			dataTree = previewModel
-		else
-			dataTree = self.props.CurrentPreview
-		end
+		local dataTree = previewModel
 
 		return Roact.createElement("ImageButton", {
 			Size = size,
@@ -222,12 +216,7 @@ function PreviewController:render()
 
 	local showTreeViewButton = (not AssetType:isPlugin(assetPreviewType))
 	if FFlagHideOneChildTreeviewButton then
-		local dataTree
-		if FFlagStudioAssetPreviewTreeFix2 then
-			dataTree = previewModel
-		else
-			dataTree = self.props.CurrentPreview
-		end
+		local dataTree = previewModel
 		local hasMultiplechildren = dataTree and (#dataTree:GetChildren() > 0) or false
 		showTreeViewButton = showTreeViewButton and hasMultiplechildren
 	end

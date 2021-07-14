@@ -5,8 +5,6 @@
 	Also creates the external services which are provided to context.
 ]]
 
-game:DefineFastFlag("StopAnimationEditorWhileGameRunning", false)
-
 local Selection = game:GetService("Selection")
 local RunService = game:GetService("RunService")
 
@@ -76,7 +74,7 @@ function AnimationClipEditorPlugin:init(initialProps)
 	self.mainButton:SetActive(self.state.enabled)
 
 	self.mainButton.Click:connect(function()
-		if game:GetFastFlag("StopAnimationEditorWhileGameRunning") and RunService:IsRunning() then
+		if RunService:IsRunning() then
 			showBlockingDialog(initialProps.plugin, Roact.createElement(ErrorDialogContents, {
 				ErrorType = Constants.EDITOR_ERRORS.OpenedWhileRunning,
 				ErrorKey = Constants.EDITOR_ERRORS_KEY,

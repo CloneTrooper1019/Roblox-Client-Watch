@@ -12,13 +12,6 @@
 		table{RoactComponents} Children, a table of Roact components that will be shown with this radio button.
 			e.g. think of more things under the radio button like description.
 ]]
-local FFlagStudioRestrictGameMonetizationToPublicGameOnly = game:GetFastFlag("StudioRestrictGameMonetizationToPublicGameOnly")
-
-local BACKGROUND_IMAGE = "rbxasset://textures/GameSettings/RadioButton.png"
-local SELECTED_IMAGE = "rbxasset://textures/ui/LuaApp/icons/ic-blue-dot.png"
-local TITLE_TEXT_SIZE = 22
-local DESCRIPTION_TEXT_SIZE = 16
-
 local TextService = game:GetService("TextService")
 
 local Plugin = script.Parent.Parent.Parent
@@ -27,8 +20,6 @@ local Cryo = require(Plugin.Cryo)
 local Framework = Plugin.Framework
 local FitFrameOnAxis = require(Framework.Util).FitFrame.FitFrameOnAxis
 local ContextServices = require(Framework.ContextServices)
-
-local DEPRECATED_Constants = require(Plugin.Src.Util.DEPRECATED_Constants)
 
 local RadioButton = Roact.PureComponent:extend("RadioButton")
 
@@ -74,7 +65,7 @@ function RadioButton:render()
 	local children = props.Children and props.Children or {}
 
 	local minimumContentSize = math.max(titleTextSize.X, descriptionTextSize and descriptionTextSize.X or 0)
-	local minimumButtonSize = minimumContentSize + DEPRECATED_Constants.RADIO_BUTTON_SIZE
+	local minimumButtonSize = minimumContentSize + theme.radioButton.size
 
 	return Roact.createElement(FitFrameOnAxis, {
 		axis = FitFrameOnAxis.Axis.Vertical,
@@ -85,10 +76,10 @@ function RadioButton:render()
 		LayoutOrder = props.LayoutOrder or 1,
 	}, {
 		Button = Roact.createElement("ImageButton", {
-			Size = UDim2.new(0, DEPRECATED_Constants.RADIO_BUTTON_SIZE, 0, DEPRECATED_Constants.RADIO_BUTTON_SIZE),
+			Size = UDim2.new(0, theme.radioButton.size, 0, theme.radioButton.size),
 			BackgroundTransparency = 1,
 			ImageTransparency = self.props.Enabled and 0 or 0.4,
-			Image = FFlagStudioRestrictGameMonetizationToPublicGameOnly and theme.radioButton.image.background or BACKGROUND_IMAGE,
+			Image = theme.radioButton.image.background,
 			ImageColor3 = theme.radioButton.background,
 			LayoutOrder = 1,
 
@@ -107,8 +98,8 @@ function RadioButton:render()
 				Size = theme.isDarkerTheme and UDim2.new(0.4, 0, 0.4, 0) or UDim2.new(0.5, 0, 0.5, 0),
 				Position = UDim2.new(0.5, 0, 0.5, 0),
 				AnchorPoint = Vector2.new(0.5, 0.5),
-				Visible = FFlagStudioRestrictGameMonetizationToPublicGameOnly and self.props.Selected or (self.props.Enabled and self.props.Selected),
-				Image = FFlagStudioRestrictGameMonetizationToPublicGameOnly and (self.props.Enabled and theme.radioButton.image.selected or theme.radioButton.image.selectedDisabled) or SELECTED_IMAGE,
+				Visible = self.props.Selected,
+				Image = (self.props.Enabled and theme.radioButton.image.selected or theme.radioButton.image.selectedDisabled),
 			}),
 		}),
 

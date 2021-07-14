@@ -7,6 +7,7 @@ local FFlagFixAudioAssetsForLuoBu = game:DefineFastFlag("FixAudioAssetsForLuoBu"
 local FFlagStudioCreatePluginPolicyService = game:GetFastFlag("StudioCreatePluginPolicyService")
 local FFlagToolboxRemoveGroupInventory = game:GetFastFlag("ToolboxRemoveGroupInventory")
 local FFlagToolboxFixCategoryUrlsCircularDependency = game:GetFastFlag("ToolboxFixCategoryUrlsCircularDependency")
+local FFlagUGCGroupUploads = game:GetFastFlag("UGCGroupUploads")
 
 local Plugin = script.Parent.Parent.Parent
 local CreatorInfoHelper = require(Plugin.Core.Util.CreatorInfoHelper)
@@ -181,6 +182,24 @@ Category.CREATIONS_BACK_ACCESSORIES = {name = "CreationsBackAccessories", catego
 	ownershipType = Category.OwnershipType.MY,}
 Category.CREATIONS_WAIST_ACCESSORIES = {name = "CreationsWaistAccessories", category = "CreationsWaistAccessories", assetType = Category.AssetType.WAIST_ACCESSORY,
 	ownershipType = Category.OwnershipType.MY,}
+if FFlagUGCGroupUploads then
+	Category.CREATIONS_GROUP_HATS = {name = "CreationsGroupHats", category = "CreationsGroupHats", assetType = Category.AssetType.HAT,
+		ownershipType = Category.OwnershipType.GROUP,}
+	Category.CREATIONS_GROUP_HAIR = {name = "CreationsGroupHair", category = "CreationsGroupHair", assetType = Category.AssetType.HAIR_ACCESSORY,
+		ownershipType = Category.OwnershipType.GROUP,}
+	Category.CREATIONS_GROUP_FACE_ACCESSORIES = {name = "CreationsGroupFaceAccessories", category = "CreationsGroupFaceAccessories", assetType = Category.AssetType.FACE_ACCESSORY,
+		ownershipType = Category.OwnershipType.GROUP,}
+	Category.CREATIONS_GROUP_NECK_ACCESSORIES = {name = "CreationsGroupNeckAccessories", category = "CreationsGroupNeckAccessories", assetType = Category.AssetType.NECK_ACCESSORY,
+		ownershipType = Category.OwnershipType.GROUP,}
+	Category.CREATIONS_GROUP_SHOULDER_ACCESSORIES = {name = "CreationsGroupShoulderAccessories", category = "CreationsGroupShoulderAccessories", assetType = Category.AssetType.SHOULDER_ACCESSORY,
+		ownershipType = Category.OwnershipType.GROUP,}
+	Category.CREATIONS_GROUP_FRONT_ACCESSORIES = {name = "CreationsGroupFrontAccessories", category = "CreationsGroupFrontAccessories", assetType = Category.AssetType.FRONT_ACCESSORY,
+		ownershipType = Category.OwnershipType.GROUP,}
+	Category.CREATIONS_GROUP_BACK_ACCESSORIES = {name = "CreationsGroupBackAccessories", category = "CreationsGroupBackAccessories", assetType = Category.AssetType.BACK_ACCESSORY,
+		ownershipType = Category.OwnershipType.GROUP,}
+	Category.CREATIONS_GROUP_WAIST_ACCESSORIES = {name = "CreationsGroupWaistAccessories", category = "CreationsGroupWaistAccessories", assetType = Category.AssetType.WAIST_ACCESSORY,
+		ownershipType = Category.OwnershipType.GROUP,}
+end
 
 -- Category sets used for splitting inventory/shop
 Category.MARKETPLACE = {
@@ -499,6 +518,17 @@ local ASSET_ENUM_CATEGORY_MAP = {
 	[Enum.AssetType.WaistAccessory] = Category.CREATIONS_WAIST_ACCESSORIES,
 }
 
+local ASSET_ENUM_GROUP_CATEGORY_MAP = {
+	[Enum.AssetType.Hat] = Category.CREATIONS_GROUP_HATS,
+	[Enum.AssetType.HairAccessory] = Category.CREATIONS_GROUP_HAIR,
+	[Enum.AssetType.FaceAccessory] = Category.CREATIONS_GROUP_FACE_ACCESSORIES,
+	[Enum.AssetType.NeckAccessory] = Category.CREATIONS_GROUP_NECK_ACCESSORIES,
+	[Enum.AssetType.ShoulderAccessory] = Category.CREATIONS_GROUP_SHOULDER_ACCESSORIES,
+	[Enum.AssetType.FrontAccessory] = Category.CREATIONS_GROUP_FRONT_ACCESSORIES,
+	[Enum.AssetType.BackAccessory] = Category.CREATIONS_GROUP_BACK_ACCESSORIES,
+	[Enum.AssetType.WaistAccessory] = Category.CREATIONS_GROUP_WAIST_ACCESSORIES,
+}
+
 function Category.getCategories(tabName, roles)
 	if Category.CREATIONS_KEY == tabName then
 		local categories = getCreationCategories()
@@ -513,6 +543,11 @@ function Category.getCategories(tabName, roles)
 				table.insert(categories, Category.CREATIONS_CATALOG_SECTION_DIVIDER)
 				for _, assetTypeEnum in pairs(allowedAssetTypeEnums) do
 					table.insert(categories, ASSET_ENUM_CATEGORY_MAP[assetTypeEnum])
+				end
+				if FFlagUGCGroupUploads then
+					for _, assetTypeEnum in pairs(allowedAssetTypeEnums) do
+						table.insert(categories, ASSET_ENUM_GROUP_CATEGORY_MAP[assetTypeEnum])
+					end
 				end
 			end
 		end

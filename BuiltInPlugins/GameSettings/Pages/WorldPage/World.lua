@@ -14,8 +14,6 @@
 		float WalkSpeed
 		float MaxSlopeAngle - maximum incline angle (in degrees) that the avatar can walk up
 ]]
-local FFlagGameSettingsMigrateToDevFrameworkSeparator = game:GetFastFlag("GameSettingsMigrateToDevFrameworkSeparator")
-
 local Page = script.Parent
 local Plugin = script.Parent.Parent.Parent
 local Roact = require(Plugin.Roact)
@@ -33,7 +31,7 @@ local NumberInputRow = require(Page.Components.NumberInputRow)
 
 local RoactStudioWidgets = Plugin.RoactStudioWidgets
 local StudioWidgetTitledFrame = require(RoactStudioWidgets.TitledFrame)
-local Separator = FFlagGameSettingsMigrateToDevFrameworkSeparator and require(Plugin.Framework).UI.Separator or require(RoactStudioWidgets.Separator)
+local Separator = require(Plugin.Framework).UI.Separator
 local StudioWidgetText = require(RoactStudioWidgets.Text)
 
 local INPUT_BOX_OFFSET = 160

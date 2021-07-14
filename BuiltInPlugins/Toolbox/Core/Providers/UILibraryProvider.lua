@@ -8,7 +8,7 @@ local ContextHelper = require(Plugin.Core.Util.ContextHelper)
 local UILibraryProvider = Roact.PureComponent:extend("UILibraryProvider")
 
 if FFlagRemoveUILibraryFromToolbox then
-	return
+	return nil
 end
 function UILibraryProvider:render()
 	-- since the plugin is handling all the changed signals from Studio, ensure that values are updated

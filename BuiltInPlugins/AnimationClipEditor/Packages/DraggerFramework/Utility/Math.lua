@@ -123,4 +123,26 @@ function Math.regionFromParts(parts)
 	return Region3.new(Vector3.new(minX, minY, minZ), Vector3.new(maxX, maxY, maxZ))
 end
 
+
+-- Convert a subset of {X: bool, Y: bool, Z: bool} to a vector with corresponding axes set to 1
+function Math.setToVector3(set)
+	return set and Vector3.new(not set.X and 0 or 1, not set.Y and 0 or 1, not set.Z and 0 or 1)
+				or Vector3.new(0, 0, 0)
+end
+
+-- Convert vector into array so that its components could be indexed
+function Math.vectorToArray(vec)
+	return {vec.X, vec.Y, vec.Z}
+end
+
+-- Largest component of a vector
+function Math.maxComponent(vec)
+	return math.max(vec.X, vec.Y, vec.Z)
+end
+
+-- Smallest component of a vector
+function Math.minComponent(vec)
+	return math.min(vec.X, vec.Y, vec.Z)
+end
+
 return Math

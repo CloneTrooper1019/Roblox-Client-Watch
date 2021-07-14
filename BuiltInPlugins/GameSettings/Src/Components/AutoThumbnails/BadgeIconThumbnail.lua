@@ -17,8 +17,6 @@
 		LayoutOrder
 		ZIndex
 ]]
-local FFlagStudioEnableBadgesInMonetizationPage = game:GetFastFlag("StudioEnableBadgesInMonetizationPage")
-
 local Plugin = script.Parent.Parent.Parent.Parent
 local Roact = require(Plugin.Roact)
 local ContextServices = require(Plugin.Framework.ContextServices)
@@ -41,8 +39,6 @@ function BadgeIconThumbnail:getThumbnail(contentId, status)
 end
 
 function BadgeIconThumbnail:render()
-    assert(FFlagStudioEnableBadgesInMonetizationPage)
-
     local props = self.props
     local id = props.Id
 

@@ -3,7 +3,7 @@ local Plugin = script.Parent.Parent.Parent.Parent
 local SetAssetConfigManageableGroups = require(Plugin.Core.Actions.SetAssetConfigManageableGroups)
 local NetworkError = require(Plugin.Core.Actions.NetworkError)
 
-return function(networkInterface, DEPRECATED_userId)
+return function(networkInterface)
 	return function(store)
 		return networkInterface:getManageableGroups():andThen(function(result)
 			local groups = result.responseBody.data

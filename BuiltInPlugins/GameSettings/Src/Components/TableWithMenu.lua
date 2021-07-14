@@ -23,7 +23,6 @@
 ]]
 
 local FFlagFixRadioButtonSeAndTableHeadertForTesting = game:getFastFlag("FixRadioButtonSeAndTableHeadertForTesting")
-local FFlagStudioEnableBadgesInMonetizationPage = game:GetFastFlag("StudioEnableBadgesInMonetizationPage")
 
 local Plugin = script.Parent.Parent.Parent
 local Roact = require(Plugin.Roact)
@@ -74,7 +73,7 @@ function TableWithMenu:createHeaderLabels(theme, headers, headerButton)
         end
     end
     
-    if FFlagStudioEnableBadgesInMonetizationPage and headerButton then
+    if headerButton then
         local frame = Roact.createElement("Frame", {
             BackgroundTransparency = 1,
             LayoutOrder = #headers + 1,
@@ -117,20 +116,14 @@ function TableWithMenu:createDataLabels(data, menuItems, onItemClicked, menuItem
                 onItemClicked(key, id)
             end,
             LayoutOrder = rowData.index,
-            Icon = FFlagStudioEnableBadgesInMonetizationPage and rowData.icon or nil
+            Icon = rowData.icon or nil
         })
         dataRows[id] = rowComponent
-        
-        if FFlagStudioEnableBadgesInMonetizationPage then
-            dataCount = dataCount + 1
-        end
+
+        dataCount = dataCount + 1
     end
 
-    if FFlagStudioEnableBadgesInMonetizationPage then
-        return dataRows, dataCount
-    else
-        return dataRows
-    end
+    return dataRows, dataCount
 end
 
 function TableWithMenu:init()
@@ -147,17 +140,17 @@ function TableWithMenu:render()
     local onItemClicked = props.OnItemClicked
     local layoutOrder = props.LayoutOrder
     local nextPageFunc = props.NextPageFunc
-    local MenuItemsFilterFunc = props.MenuItemsFilterFunc or nil
+    local MenuItemsFilterFunc = props.MenuItemsFilterFunc
 
-    local nextPageRequestDistance = FFlagStudioEnableBadgesInMonetizationPage and props.ScrollingFrameNextPageRequestDistance or nil
-    local headerButton = FFlagStudioEnableBadgesInMonetizationPage and props.HeaderButton or nil
-    local tableHeight = FFlagStudioEnableBadgesInMonetizationPage and props.TableHeight or theme.table.height
-    local showTableBackground = FFlagStudioEnableBadgesInMonetizationPage and props.ShowTableBackground or nil
+    local nextPageRequestDistance = props.ScrollingFrameNextPageRequestDistance
+    local headerButton = props.HeaderButton
+    local tableHeight = props.TableHeight or theme.table.height
+    local showTableBackground = props.ShowTableBackground
 
     local headerContent = self:createHeaderLabels(theme, headers, headerButton)
     local dataContent, dataCount = self:createDataLabels(data, menuItems, onItemClicked, MenuItemsFilterFunc)
     
-    local emptyText = (FFlagStudioEnableBadgesInMonetizationPage and dataCount == 0 and props.EmptyText) or nil
+    local emptyText = (dataCount == 0 and props.EmptyText) or nil
     local backgroundColor = showTableBackground and theme.table.item.background or nil
 
     -- EmptyTextBox and ScrollingContainer below both use this size
@@ -187,7 +180,7 @@ function TableWithMenu:render()
 
         ScrollingContainer = not emptyText and Roact.createElement(InfiniteScrollingFrame, {
             Size = size,
-            BackgroundTransparency = FFlagStudioEnableBadgesInMonetizationPage and 0 or 1,
+            BackgroundTransparency = 0,
             BackgroundColor = backgroundColor,
 
             LayoutRef = self.layoutRef,

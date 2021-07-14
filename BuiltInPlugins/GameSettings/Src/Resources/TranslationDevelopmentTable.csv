@@ -85,6 +85,7 @@ Studio.GameSettings.General.TitlePlayability,Playability, ,Playability
 Studio.GameSettings.General.TitleThumbnails,Screenshots & Videos, ,Screenshots & Videos
 Studio.GameSettings.General.CategoryLocalization,Localization, ,Localization
 Studio.GameSettings.General.TitleGenre,Genre, ,Genre
+Studio.GameSettings.OptInLocations.EmailSubmitFailure,Error submitting email for review feedback. Error code: , ,Error submitting email for review feedback. Error code: 
 Studio.GameSettings.General.TitleHttp,Allow HTTP Requests, ,Allow HTTP Requests
 Studio.GameSettings.General.ClothingPants,Pants ID, ,Pants ID
 Studio.GameSettings.General.TitleOptInLocations,Opt-In Locations, ,Opt-In Locations
@@ -247,6 +248,7 @@ Studio.GameSettings.General.DevSubsDuration,Pre-paid, ,Pre-paid
 Studio.GameSettings.General.DevSubsPendingEarning,Pending Earning, ,Pending Earning
 Studio.GameSettings.General.CategoryMonetization,Monetization, ,Monetization
 Studio.GameSettings.General.DevSubsId,Id, ,Id
+Studio.GameSettings.General.VoiceChatNonLinkText,Enables in-game voice chat. Voice chat will only work if your game meets the eligibility criteria outlined [link]., ,Enables in-game voice chat. Voice chat will only work if your game meets the eligibility criteria outlined [link].
 Studio.GameSettings.Places.VersionHistory,Version History, ,Version History
 Studio.GameSettings.General.DevSubsActive,Active, ,Active
 Studio.GameSettings.General.DevSubsDiscontinueAction,Discontinue, ,Discontinue
@@ -372,3 +374,6 @@ Studio.GameSettings.General.TermsDialogBody,"In order to publish on the LuoBuLeS
 Studio.GameSettings.OptInLocations.ChinaRequirements, to publish to China, , to publish to China
 Studio.GameSettings.OptInLocations.RequirementsLinkText,Requirements, ,Requirements
 Studio.GameSettings.OptInLocations.Status,Status: , ,Status: 
+Studio.GameSettings.General.VoiceChatTitle,In-Game Voice Chat, ,In-Game Voice Chat
+Studio.GameSettings.General.VoiceChatText,Enables in-game voice chat. Voice chat will only work if players meet age eligibility criteria., ,Enables in-game voice chat. Voice chat will only work if players meet age eligibility criteria.
+Studio.GameSettings.General.VoiceChatLinkText,here, ,here

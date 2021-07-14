@@ -2,7 +2,7 @@ local Framework = script.Parent.Parent.Parent
 local Colors = require(Framework.Style.Colors)
 local StyleKey = require(Framework.Style.StyleKey)
 
-local FFlagToolboxReplaceUILibraryComponentsPt2 = game:GetFastFlag("ToolboxReplaceUILibraryComponentsPt2")
+local FFlagDevFrameworkRefactorScrollbarColor = game:GetFastFlag("DevFrameworkRefactorScrollbarColor")
 local FFlagDevFrameworkFixButtonStyles = game:GetFastFlag("DevFrameworkFixButtonStyles")
 
 return {
@@ -56,7 +56,7 @@ return {
 	[StyleKey.RibbonTab] = Color3.fromRGB(37, 37, 37),
 
 	[StyleKey.ScrollBarBackground] = Color3.fromRGB(41, 41, 41),
-	[StyleKey.ScrollBar] = FFlagToolboxReplaceUILibraryComponentsPt2 and Color3.fromRGB(56, 56, 56) or Colors.lighter(Colors.Black, 0.22),
+	[StyleKey.ScrollBar] = FFlagDevFrameworkRefactorScrollbarColor and Color3.fromRGB(56, 56, 56) or Colors.lighter(Colors.Black, 0.22),
 	[StyleKey.SliderKnobColor] = Color3.fromRGB(85, 85, 85),
 	[StyleKey.SliderKnobImage] = "rbxasset://textures/DeveloperFramework/slider_knob.png",
 	[StyleKey.SliderBackground] = Color3.fromRGB(37, 37, 37),
@@ -67,8 +67,13 @@ return {
 	[StyleKey.ToggleOffImage] = "rbxasset://textures/RoactStudioWidgets/toggle_off_dark.png",
 	[StyleKey.ToggleDisabledImage] = "rbxasset://textures/RoactStudioWidgets/toggle_disable_dark.png",
 
+	-- Remove with FFlagDevFrameworkCheckbox
 	[StyleKey.CheckboxDefaultImage] = "rbxasset://textures/DeveloperFramework/checkbox_unchecked_dark.png",
 	[StyleKey.CheckboxSelectedImage] = "rbxasset://textures/DeveloperFramework/checkbox_checked_dark.png",
+
+	[StyleKey.CheckboxUncheckedImage] = "rbxasset://textures/DeveloperFramework/checkbox_unchecked_dark.png",
+	[StyleKey.CheckboxCheckedImage] = "rbxasset://textures/DeveloperFramework/checkbox_checked_dark.png",
+	[StyleKey.CheckboxIndeterminateImage] = "rbxasset://textures/DeveloperFramework/checkbox_indeterminate_dark.png",
 	[StyleKey.CheckboxDisabledImage] = "rbxasset://textures/DeveloperFramework/checkbox_unchecked_disabled_dark.png",
 
 	[StyleKey.WarningText] = Color3.fromRGB(255, 141, 60),

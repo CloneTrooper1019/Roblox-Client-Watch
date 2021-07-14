@@ -12,14 +12,13 @@ local SetPast = require(Plugin.Src.Actions.SetPast)
 local SetFuture = require(Plugin.Src.Actions.SetFuture)
 local StepAnimation = require(Plugin.Src.Thunks.Playback.StepAnimation)
 local SetSelectedKeyframes = require(Plugin.Src.Actions.SetSelectedKeyframes)
-local SetClipboard = require(Plugin.Src.Actions.SetClipboard)
 local UpdateAnimationData = require(Plugin.Src.Thunks.UpdateAnimationData)
 local SetIsDirty = require(Plugin.Src.Actions.SetIsDirty)
 local SetNotification = require(Plugin.Src.Actions.SetNotification)
 local UpdateEditingLength = require(Plugin.Src.Thunks.UpdateEditingLength)
 local SetShowEvents = require(Plugin.Src.Actions.SetShowEvents)
 
-local allowPasteKeysBetweenAnimations = require(Plugin.LuaFlags.GetFFlagAllowPasteKeysBetweenAnimations)
+local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
 
 return function(animationData, analytics)
 	return function(store)
@@ -29,14 +28,15 @@ return function(animationData, analytics)
 
 		-- Reset all hanging data
 		store:dispatch(SetSelectedKeyframes({}))
-		if not allowPasteKeysBetweenAnimations() then
-			store:dispatch(SetClipboard({}))
-		end
 		store:dispatch(SortAndSetTracks({}))
 
 		for instanceName, instance in pairs(animationData.Instances) do
-			for trackName, _ in pairs(instance.Tracks) do
-				store:dispatch(AddTrack(instanceName, trackName, analytics))
+			for trackName, track in pairs(instance.Tracks) do
+				if GetFFlagFacialAnimationSupport() then
+					store:dispatch(AddTrack(instanceName, trackName, track.Type, analytics))
+				else
+					store:dispatch(AddTrack(instanceName, trackName, analytics))
+				end
 			end
 		end
 

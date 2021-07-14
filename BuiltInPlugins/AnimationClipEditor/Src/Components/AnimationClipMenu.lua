@@ -29,7 +29,6 @@ local RigUtils = require(Plugin.Src.Util.RigUtils)
 local Constants = require(Plugin.Src.Util.Constants)
 
 local ContextServices = Framework.ContextServices
-local Localization = ContextServices.Localization
 
 local GetFFlagUseAnimationClipEditorConstantsSeparator = require(Plugin.LuaFlags.GetFFlagUseAnimationClipEditorConstantsSeparator)
 

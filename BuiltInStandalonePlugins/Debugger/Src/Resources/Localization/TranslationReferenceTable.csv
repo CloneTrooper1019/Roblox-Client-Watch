@@ -1,0 +1,14 @@
+Key,Source,en-us
+Studio.Debugger.Callstack.FrameColumn,Frame,Frame
+Studio.Debugger.Plugin.Name,Debugger,Debugger
+Studio.Debugger.Plugin.Toolbar,Debugger,Debugger
+Studio.Debugger.Callstack.WindowName,Call Stack,Call Stack
+Studio.Debugger.Plugin.Description,Toggles the Debugger plugin window.,Toggles the Debugger plugin window.
+Studio.Debugger.Plugin.Button,Toggle,Toggle
+Studio.Debugger.Callstack.SelectInputPlaceholderText,Select Script,Select Script
+Studio.Debugger.Callstack.FunctionNameColumn,Function Name,Function Name
+Studio.Debugger.EditBreakpoint.DialogName,Edit Breakpoint,Edit Breakpoint
+Studio.Debugger.Callstack.WhatColumn,What,What
+Studio.Debugger.Callstack.LineNumberColumn,Line No.,Line No.
+Studio.Debugger.Callstack.SourceColumn,Source,Source
+Studio.Debugger.Callstack.CurrentScriptTitle,Current Script: ,Current Script: 

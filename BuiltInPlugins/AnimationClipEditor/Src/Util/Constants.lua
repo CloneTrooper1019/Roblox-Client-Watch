@@ -53,6 +53,9 @@ local Constants = {
 	TRACKLIST_RIGHT_PADDING = 8,
 
 	NUMBERBOX_WIDTH = 70,
+	NUMBERBOX_PADDING = 4,
+	NUMBERBOX_DRAG_MULTIPLIER = 0.05,
+
 	NUMBERTRACK_PADDING = 5,
 
 	KEYFRAME_WIDTH = 6,
@@ -94,8 +97,11 @@ local Constants = {
 	DEFAULT_AUTOSAVE_NAME = "Automatic Save",
 	DEFAULT_KEYFRAME_NAME = "Keyframe",
 
+	FACE_CONTROLS_FOLDER = "FaceControls",
+
 	TRACK_TYPES = {
 		CFrame = "CFrame",
+		Facs = "Facs",
 		Other = "Other",
 	},
 
@@ -295,7 +301,16 @@ local Constants = {
 			TwistLowerAngle = -70,
 			TwistUpperAngle = 70,
 		}
-	}
+	},
+
+	FACS_REGIONS = {
+		Mouth = "Mouth",
+		Jaw = "Jaw",
+		Brows = "Brows",
+		Eyes = "Eyes",
+		Tongue = "Tongue",
+		Other = "Other",
+	},
 }
 
 Constants.PartToConstraintConfigMap = {
@@ -331,6 +346,63 @@ Constants.R15links = {
 	[Constants.R15_PARTS.LeftFoot] = Constants.R15_PARTS.LeftLowerLeg,
 	[Constants.R15_PARTS.RightLowerLeg] = Constants.R15_PARTS.RightUpperLeg,
 	[Constants.R15_PARTS.RightFoot] = Constants.R15_PARTS.RightLowerLeg,
+}
+
+Constants.FacsControlToRegionMap = {
+	ChinRaiserUpperLip = Constants.FACS_REGIONS.Mouth,
+	ChinRaiser = Constants.FACS_REGIONS.Mouth,
+	FlatPucker = Constants.FACS_REGIONS.Mouth,
+	Funneler = Constants.FACS_REGIONS.Mouth,
+	LowerLipSuck = Constants.FACS_REGIONS.Mouth,
+	LipPresser = Constants.FACS_REGIONS.Mouth,
+	LipsTogether = Constants.FACS_REGIONS.Mouth,
+	MouthLeft = Constants.FACS_REGIONS.Mouth,
+	MouthRight = Constants.FACS_REGIONS.Mouth,
+	Pucker = Constants.FACS_REGIONS.Mouth,
+	UpperLipSuck = Constants.FACS_REGIONS.Mouth,
+	LeftCheekPuff = Constants.FACS_REGIONS.Mouth,
+	LeftDimpler = Constants.FACS_REGIONS.Mouth,
+	LeftLipCornerDown = Constants.FACS_REGIONS.Mouth,
+	LeftLowerLipDepressor = Constants.FACS_REGIONS.Mouth,
+	LeftLipCornerPuller = Constants.FACS_REGIONS.Mouth,
+	LeftLipStretcher = Constants.FACS_REGIONS.Mouth,
+	LeftUpperLipRaiser = Constants.FACS_REGIONS.Mouth,
+	RightCheekPuff = Constants.FACS_REGIONS.Mouth,
+	RightDimpler = Constants.FACS_REGIONS.Mouth,
+	RightLipCornerDown = Constants.FACS_REGIONS.Mouth,
+	RightLowerLipDepressor = Constants.FACS_REGIONS.Mouth,
+	RightLipCornerPuller = Constants.FACS_REGIONS.Mouth,
+	RightLipStretcher = Constants.FACS_REGIONS.Mouth,
+	RightUpperLipRaiser = Constants.FACS_REGIONS.Mouth,
+
+	JawDrop = Constants.FACS_REGIONS.Jaw,
+	JawLeft = Constants.FACS_REGIONS.Jaw,
+	JawRight = Constants.FACS_REGIONS.Jaw,
+
+	Corrugator = Constants.FACS_REGIONS.Brows,
+	LeftBrowLowerer = Constants.FACS_REGIONS.Brows,
+	LeftOuterBrowRaiser = Constants.FACS_REGIONS.Brows,
+	LeftNoseWrinkler = Constants.FACS_REGIONS.Brows,
+	LeftInnerBrowRaiser = Constants.FACS_REGIONS.Brows,
+	RightBrowLowerer = Constants.FACS_REGIONS.Brows,
+	RightOuterBrowRaiser = Constants.FACS_REGIONS.Brows,
+	RightInnerBrowRaiser = Constants.FACS_REGIONS.Brows,
+	RightNoseWrinkler = Constants.FACS_REGIONS.Brows,
+
+	EyesLookDown = Constants.FACS_REGIONS.Eyes,
+	EyesLookLeft = Constants.FACS_REGIONS.Eyes,
+	EyesLookUp = Constants.FACS_REGIONS.Eyes,
+	EyesLookRight = Constants.FACS_REGIONS.Eyes,
+	LeftCheekRaiser = Constants.FACS_REGIONS.Eyes,
+	LeftEyeUpperLidRaiser = Constants.FACS_REGIONS.Eyes,
+	LeftEyeClosed = Constants.FACS_REGIONS.Eyes,
+	RightCheekRaiser = Constants.FACS_REGIONS.Eyes,
+	RightEyeUpperLidRaiser = Constants.FACS_REGIONS.Eyes,
+	RightEyeClosed = Constants.FACS_REGIONS.Eyes,
+
+	TongueDown = Constants.FACS_REGIONS.Tongue,
+	TongueOut = Constants.FACS_REGIONS.Tongue,
+	TongueUp = Constants.FACS_REGIONS.Tongue,
 }
 
 return Constants

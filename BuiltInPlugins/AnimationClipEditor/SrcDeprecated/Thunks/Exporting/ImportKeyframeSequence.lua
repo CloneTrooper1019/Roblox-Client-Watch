@@ -3,7 +3,6 @@
 	imports the KeyframeSequence from the Roblox asset id.
 ]]
 
-game:DefineFastFlag("UseGetKeyframeSequenceIgnoreCache", false)
 local KeyframeSequenceProvider = game:GetService("KeyframeSequenceProvider")
 
 local Plugin = script.Parent.Parent.Parent.Parent
@@ -14,7 +13,6 @@ local SetIsDirty = require(Plugin.SrcDeprecated.Actions.SetIsDirty)
 
 local SetNotification = require(Plugin.SrcDeprecated.Actions.SetNotification)
 
-local UseCustomFPS = require(Plugin.LuaFlags.GetFFlagAnimEditorUseCustomFPS)
 local GetFFlagAddImportFailureToast = require(Plugin.LuaFlags.GetFFlagAddImportFailureToast)
 
 return function(plugin)
@@ -41,20 +39,11 @@ return function(plugin)
 					return
 				end
 			else
-				if game:GetFastFlag("UseGetKeyframeSequenceIgnoreCache") then
-					anim = KeyframeSequenceProvider:GetKeyframeSequenceById(id, false)
-				else
-					anim = KeyframeSequenceProvider:GetKeyframeSequenceAsync("rbxassetid://" .. id)
-				end
+				anim = KeyframeSequenceProvider:GetKeyframeSequenceById(id, false)
 			end
 
-			local newData
-			if UseCustomFPS() then
-				local frameRate = RigUtils.calculateFrameRate(anim)
-				newData = RigUtils.fromRigAnimation(anim, frameRate)
-			else
-				newData = RigUtils.fromRigAnimation(anim, Constants.DEFAULT_FRAMERATE)
-			end
+			local frameRate = RigUtils.calculateFrameRate(anim)
+			local newData = RigUtils.fromRigAnimation(anim, frameRate)
 			newData.Metadata.Name = Constants.DEFAULT_IMPORTED_NAME
 			store:dispatch(LoadAnimationData(newData))
 			store:dispatch(SetIsDirty(false))

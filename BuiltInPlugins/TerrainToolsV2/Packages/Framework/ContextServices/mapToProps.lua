@@ -37,10 +37,26 @@ local Framework = script.Parent.Parent
 local Roact = require(Framework.Parent.Roact)
 local Consumer = require(Framework.ContextServices.Consumer)
 
-local function mapToProps(component, contextMap)
-	assert(component.render ~= Roact.Component.render,
-		string.format(missingRenderMessage, tostring(component)))
+local FFlagDevFrameworkWarnMapToPropsUsed = game:GetFastFlag("DevFrameworkWarnMapToPropsUsed")
+local StudioService = game:GetService("StudioService")
+local hasInternalPermission = StudioService:HasInternalPermission()
+local isWarnEnabled = FFlagDevFrameworkWarnMapToPropsUsed and hasInternalPermission
+
+local function mapToProps(component, contextMap, ignoreUsage)
+	assert(component.render ~= Roact.Component.render, string.format(missingRenderMessage, tostring(component)))
 	assert(contextMap, "mapToProps expects a contextMap table.")
+
+	if isWarnEnabled and not ignoreUsage then
+		warn([[*** WARNING: ACTION REQUIRED BEFORE YOU MERGE YOUR BRANCH ***
+
+-> Please run `python Client/RobloxStudio/LuaProjects/PythonScripts/migrateWithContext.py` in the game-engine repo
+
+ContextServices.mapToProps is deprecated and will soon be removed.
+This will automatically migrate your use of ContextServices.mapToProps to the new ContextServices.withContext API
+See https://confluence.rbx.com/pages/viewpage.action?spaceKey=RDE&title=Developer+Framework+migrating+ContextServices.mapToProps+-%3E+withContext
+Please message @hcollins if you have any questions.
+]])
+	end
 
 	local __initWithContext = component.init
 	component.__renderWithContext = component.render

@@ -1,0 +1,3 @@
+Key,es,es-es
+Studio.Framework.Spec.greeting_formal,Hola,Hola
+Studio.Framework.Spec.greeting_informal,{friend}{days},¿Qué pasa {friend}? No te he visto en {days:int} días

@@ -1,5 +1,3 @@
-local FFlagStudioEnableBadgesInMonetizationPage = game:GetFastFlag("StudioEnableBadgesInMonetizationPage")
-
 local MonetizationController = {}
 
 local Plugin = script.Parent.Parent.Parent.Parent
@@ -74,9 +72,7 @@ function MonetizationController:developerProductsUpdateV1POST(gameId, product)
     })
 end
 
-function MonetizationController:badgesV1GET(gameId, cursor)
-    assert(FFlagStudioEnableBadgesInMonetizationPage)
-    
+function MonetizationController:badgesV1GET(gameId, cursor)    
     local networking = self.__networking
     return networking:get("badges", "/v1/universes/"..gameId.."/badges", {
         Params = {
@@ -179,8 +175,6 @@ function MonetizationController:updateDevProduct(gameId, product)
 end
 
 function MonetizationController:getBadges(gameId, cursor)
-    assert(FFlagStudioEnableBadgesInMonetizationPage)
-
     local response = self:badgesV1GET(gameId, cursor):await()
 
     cursor = response.responseBody.nextPageCursor

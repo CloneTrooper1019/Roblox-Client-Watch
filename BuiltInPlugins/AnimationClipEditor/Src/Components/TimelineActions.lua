@@ -65,6 +65,7 @@ local TogglePlay = require(Plugin.Src.Thunks.Playback.TogglePlay)
 local FFlagAnimEditorFixBackspaceOnMac = require(Plugin.LuaFlags.GetFFlagAnimEditorFixBackspaceOnMac)
 local FFlagAddKeyframeAtScrubber = game:DefineFastFlag("AddKeyframeAtScrubber", false)
 local GetFFlagRefactorMenus = require(Plugin.LuaFlags.GetFFlagRefactorMenus)
+local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
 
 local TimelineActions = Roact.PureComponent:extend("TimelineActions")
 
@@ -172,13 +173,28 @@ function TimelineActions:didMount()
 		local tracks = props.Tracks
 
 		local function addKeyframe(instanceName, trackName, track)
+			-- The track type is nil when the user is adding a Pose to an empty track.
+			-- In that case, use the right click info.
+			local trackType = track and track.Type or props.TrackType
 			local newValue
+
 			if track and track.Keyframes then
 				newValue = KeyframeUtils:getValue(track, frame)
 			else
-				newValue = TrackUtils.getDefaultValue(track)
+				if GetFFlagFacialAnimationSupport() then
+					-- If the type could not be determined by an existing track or by
+					-- the right click context, then find it in the open tracks
+					trackType = trackType or TrackUtils.getTrackTypeFromName(trackName, tracks)
+					newValue = TrackUtils.getDefaultValueByType(trackType)
+				else
+					newValue = TrackUtils.getDefaultValue(track)
+				end
 			end
-			props.AddKeyframe(instanceName, trackName, frame, newValue, props.Analytics)
+			if GetFFlagFacialAnimationSupport() then
+				props.AddKeyframe(instanceName, trackName, trackType, frame, newValue, props.Analytics)
+			else
+				props.AddKeyframe_deprecated(instanceName, trackName, frame, newValue, props.Analytics)
+			end
 		end
 
 		if instanceName and trackName then
@@ -201,6 +217,7 @@ function TimelineActions:didMount()
 	if FFlagAddKeyframeAtScrubber then
 		self:addAction(actions:get("AddKeyframeAtScrubber"), function()
 			local props = self.props
+			local tracks = props.Tracks
 			local playhead = props.Playhead
 			local selectedTracks = props.SelectedTracks
 
@@ -209,12 +226,23 @@ function TimelineActions:didMount()
 					for _, selectedTrack in pairs(selectedTracks) do
 						local track = instance.Tracks[selectedTrack]
 						local newValue
+						local trackType = track and track.Type
+
 						if track and track.Keyframes then
 							newValue = KeyframeUtils:getValue(track, playhead)
 						else
-							newValue = TrackUtils.getDefaultValue(track)
+							if GetFFlagFacialAnimationSupport() then
+								trackType = trackType or TrackUtils.getTrackTypeFromName(selectedTrack, tracks)
+								newValue = TrackUtils.getDefaultValueByType(trackType)
+							else
+								newValue = TrackUtils.getDefaultValue(track)
+							end
 						end
-						props.AddKeyframe(instanceName, selectedTrack, playhead, newValue, props.Analytics)
+						if GetFFlagFacialAnimationSupport() then
+							props.AddKeyframe(instanceName, selectedTrack, trackType, playhead, newValue, props.Analytics)
+						else
+							props.AddKeyframe_deprecated(instanceName, selectedTrack, playhead, newValue, props.Analytics)
+						end
 					end
 				end
 			end
@@ -231,8 +259,16 @@ function TimelineActions:didMount()
 		if instanceName and trackName then
 			local instance = props.AnimationData.Instances[instanceName]
 			local track = instance.Tracks[trackName]
-			local newValue = TrackUtils.getDefaultValue(track)
-			props.AddKeyframe(instanceName, trackName, frame, newValue, props.Analytics)
+			local newValue
+			local trackType = track and track.Type or props.TrackType
+
+			if GetFFlagFacialAnimationSupport() then
+				newValue = TrackUtils.getDefaultValueByType(trackType)
+				props.AddKeyframe(instanceName, trackName, trackType, frame, newValue, props.Analytics)
+			else
+				newValue = TrackUtils.getDefaultValue(track)
+				props.AddKeyframe_deprecated(instanceName, trackName, frame, newValue, props.Analytics)
+			end
 		else
 			-- If the user clicked the summary track, add a reset keyframe for
 			-- every currently opened track.
@@ -240,8 +276,17 @@ function TimelineActions:didMount()
 				for _, openTrack in pairs(tracks) do
 					local trackName = openTrack.Name
 					local track = instance.Tracks[trackName]
-					local newValue = TrackUtils.getDefaultValue(track)
-					props.AddKeyframe(instanceName, trackName, frame, newValue, props.Analytics)
+					local newValue
+					local trackType
+
+					if GetFFlagFacialAnimationSupport() then
+						trackType = track and track.Type or TrackUtils.getTrackTypeFromName(trackName, tracks)
+						newValue = TrackUtils.getDefaultValueByType(trackType)
+						props.AddKeyframe(instanceName, trackName, trackType, frame, newValue, props.Analytics)
+					else
+						newValue = TrackUtils.getDefaultValue(track)
+						props.AddKeyframe_deprecated(instanceName, trackName, frame, newValue, props.Analytics)
+					end
 				end
 			end
 		end
@@ -413,6 +458,7 @@ local function mapStateToProps(state, props)
 		AnimationData = state.AnimationData,
 		Tracks = status.Tracks,
 		TrackName = status.RightClickContextInfo.TrackName,
+		TrackType = status.RightClickContextInfo.TrackType,
 		InstanceName = status.RightClickContextInfo.InstanceName,
 		Frame = status.RightClickContextInfo.Frame,
 		SummaryKeyframe = status.RightClickContextInfo.SummaryKeyframe,
@@ -462,9 +508,16 @@ local function mapDispatchToProps(dispatch)
 			dispatch(SetRightClickContextInfo({}))
 		end,
 
-		AddKeyframe = function(instance, track, frame, value, analytics)
+		AddKeyframe = function(instance, trackName, trackType, frame, value, analytics)
 			dispatch(AddWaypoint())
-			dispatch(AddKeyframe(instance, track, frame, value, analytics))
+			dispatch(AddKeyframe(instance, trackName, trackType, frame, value, analytics))
+			dispatch(SetRightClickContextInfo({}))
+		end,
+
+		-- Remove when GetFFlagFacialAnimationSupport() is retired
+		AddKeyframe_deprecated = function(instance, trackName, frame, value, analytics)
+			dispatch(AddWaypoint())
+			dispatch(AddKeyframe(instance, trackName, frame, value, analytics))
 			dispatch(SetRightClickContextInfo({}))
 		end,
 

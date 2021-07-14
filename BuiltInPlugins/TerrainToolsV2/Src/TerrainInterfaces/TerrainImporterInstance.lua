@@ -49,7 +49,7 @@ function TerrainImporter.new(options)
 		_localization = options.localization,
 		_analytics = options.analytics,
 		_assetHandler = FFlagTerrainToolsImportUploadAssets
-			and ImportAssetHandler.new(options.imageUploader)
+			and ImportAssetHandler.new(options.imageUploader, nil, options.userId)
 			or nil,
 		_heightmapImporterService = options.heightmapImporterService or HeightmapImporterService,
 

@@ -32,6 +32,8 @@ local ImageUploader = require(Plugin.Src.Util.ImageUploader)
 
 local MockProvider = Roact.PureComponent:extend(script.Name)
 
+local EMPTY_USERID = 0
+
 function MockProvider.createMocks()
 	local plugin = MockPlugin.new()
 
@@ -67,6 +69,7 @@ function MockProvider.createMockContextItems(mocks)
 			localization = mocks.localization,
 			analytics = analytics,
 			imageUploader = imageUploader,
+			userId = EMPTY_USERID,
 		}),
 		terrainGeneration = TerrainGeneration.new({
 			terrain = mocks.terrain,

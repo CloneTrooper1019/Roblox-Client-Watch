@@ -8,7 +8,6 @@ local SetAnimationData = require(Plugin.SrcDeprecated.Actions.SetAnimationData)
 local StepAnimation = require(Plugin.SrcDeprecated.Thunks.Playback.StepAnimation)
 local SetNotification = require(Plugin.SrcDeprecated.Actions.SetNotification)
 local UpdateEditingLength = require(Plugin.SrcDeprecated.Thunks.UpdateEditingLength)
-local GetFFlagEnforceMaxAnimLength = require(Plugin.LuaFlags.GetFFlagEnforceMaxAnimLength)
 
 return function(animationData)
 	return function(store)
@@ -31,11 +30,9 @@ return function(animationData)
 		local startFrame = animationData.Metadata.StartFrame
 		local range = TrackUtils.getZoomRange(animationData, scroll, zoom, editingLength)
 
-		if GetFFlagEnforceMaxAnimLength() then
-			local removed = AnimationData.removeExtraKeyframes(animationData)
-			if removed then
-				store:dispatch(SetNotification("ClippedWarning", true))
-			end
+		local removed = AnimationData.removeExtraKeyframes(animationData)
+		if removed then
+			store:dispatch(SetNotification("ClippedWarning", true))
 		end
 
 		AnimationData.setEndFrame(animationData)

@@ -14,8 +14,6 @@ local AnimationData = require(Plugin.SrcDeprecated.Util.AnimationData)
 local UpdateAnimationData = require(Plugin.SrcDeprecated.Thunks.UpdateAnimationData)
 local AddTrack = require(Plugin.SrcDeprecated.Thunks.AddTrack)
 
-local allowPasteKeysBetweenAnimations = require(Plugin.LuaFlags.GetFFlagAllowPasteKeysBetweenAnimations)
-
 return function(frame)
 	return function(store)
 		local state = store:getState()
@@ -43,10 +41,7 @@ return function(frame)
 				if dataTrack == nil then
 					AnimationData.addTrack(dataInstance.Tracks, trackName)
 					dataTrack = dataInstance.Tracks[trackName]
-
-					if allowPasteKeysBetweenAnimations() then
-						store:dispatch(AddTrack(instanceName, trackName))
-					end
+					store:dispatch(AddTrack(instanceName, trackName))
 				end
 
 				for keyframe, data in pairs(track) do

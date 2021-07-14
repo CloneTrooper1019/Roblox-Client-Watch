@@ -9,7 +9,6 @@ local RigUtils = require(Plugin.SrcDeprecated.Util.RigUtils)
 local LoadAnimationData = require(Plugin.SrcDeprecated.Thunks.LoadAnimationData)
 local SetIsDirty = require(Plugin.SrcDeprecated.Actions.SetIsDirty)
 
-local UseCustomFPS = require(Plugin.LuaFlags.GetFFlagAnimEditorUseCustomFPS)
 local SetR15 = require(Plugin.LuaFlags.GetFFlagSetR15WhenImportingAnimation)
 
 return function(plugin)
@@ -21,22 +20,17 @@ return function(plugin)
 		end
 
 		local success, result = pcall(function()
-			if SetR15() then 
+			if SetR15() then
 				local _, isR15 = RigUtils.canUseIK(rootInstance)
 				return plugin:ImportFbxAnimation(rootInstance, isR15)
-			else 
+			else
 				return plugin:ImportFbxAnimation(rootInstance)
 			end
 		end)
 
 		if success then
-			local newData
-			if UseCustomFPS() then
-				local frameRate = RigUtils.calculateFrameRate(result)
-				newData = RigUtils.fromRigAnimation(result, frameRate)
-			else
-				newData = RigUtils.fromRigAnimation(result, Constants.DEFAULT_FRAMERATE)
-			end
+			local frameRate = RigUtils.calculateFrameRate(result)
+			local newData = RigUtils.fromRigAnimation(result, frameRate)
 			newData.Metadata.Name = Constants.DEFAULT_IMPORTED_NAME
 			store:dispatch(LoadAnimationData(newData))
 			store:dispatch(SetIsDirty(false))

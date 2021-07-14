@@ -119,7 +119,7 @@ function CollaboratorSearchBar:init()
 		isFocused = false,
 		isContainerHovered = false,
 		isClearButtonHovered = false,
-		isKeyHovered = false,
+		isKeyHovered = false, -- TODO: Remove along with FFlagToolboxReplaceUILibraryComponentsPt3
 
 		showDropdown = false,
 		dropdownItem = nil,
@@ -250,28 +250,30 @@ function CollaboratorSearchBar:init()
 	end
 
 	self.hideDropdown = function()
-		if not self.state.isFocused then 
+		if not self.state.isFocused then
 			self:setState({
 				showDropdown = false,
 				dropdownItem = Roact.None, -- MouseLeave does not fire when the element goes away. We need to manually clear this
-				isKeyHovered = false,
+				isKeyHovered = false,  -- TODO: Remove along with FFlagToolboxReplaceUILibraryComponentsPt3
 			})
 		end
 	end
 
-	self.onKeyMouseEnter = function(item)
-		self:setState({
-			dropdownItem = item,
-			isKeyHovered = true,
-		})
-	end
-
-	self.onKeyMouseLeave = function(item)
-		if self.state.dropdownItem == item then
+	if (not FFlagToolboxReplaceUILibraryComponentsPt3) then
+		self.onKeyMouseEnter = function(item)
 			self:setState({
-				dropdownItem = Roact.None,
-				isKeyHovered = false,
+				dropdownItem = item,
+				isKeyHovered = true,
 			})
+		end
+
+		self.onKeyMouseLeave = function(item)
+			if self.state.dropdownItem == item then
+				self:setState({
+					dropdownItem = Roact.None,
+					isKeyHovered = false,
+				})
+			end
 		end
 	end
 
@@ -319,15 +321,13 @@ function CollaboratorSearchBar:onRenderItem(item, index, activated, theme, searc
 
 	local searchBarTheme = theme.assetConfig.packagePermissions.searchBar
 
-	local dropdownItem = self.state.dropdownItem
-
 	if typeof(item) == "string" and (item ~= "LoadingIndicator" and item ~= "NoResults") then
 		return Roact.createElement("TextLabel", {
 			BackgroundColor3 = searchBarTheme.dropDown.backgroundColor,
 			BorderSizePixel = 0,
 			LayoutOrder = index,
 			Font = Constants.FONT,
-			Size = UDim2.new(0, searchBarExtents.Width, 0, headerHeight),
+			Size = UDim2.new(1, 0, 0, headerHeight),
 			Text = item,
 			TextXAlignment = Enum.TextXAlignment.Left,
 			TextWrapped = true,
@@ -349,7 +349,7 @@ function CollaboratorSearchBar:onRenderItem(item, index, activated, theme, searc
 			TextColor3 = theme.assetConfig.textColor,
 			TextWrapped = true,
 			TextXAlignment = Enum.TextXAlignment.Left,
-			Size = UDim2.new(0, searchBarExtents.Width, 0, itemHeight),
+			Size = UDim2.new(1, 0, 0, itemHeight),
 		}, {
 			Padding = Roact.createElement("UIPadding", {
 				PaddingLeft = UDim.new(0, textPadding),
@@ -360,7 +360,7 @@ function CollaboratorSearchBar:onRenderItem(item, index, activated, theme, searc
 			BackgroundColor3 = searchBarTheme.dropDown.backgroundColor,
 			BorderSizePixel = 0,
 			LayoutOrder = index,
-			Size = UDim2.new(0, searchBarExtents.Width, 0, itemHeight),
+			Size = UDim2.new(1, 0, 0, itemHeight),
 		}, {
 			LoadingIndicator = Roact.createElement(LoadingIndicator, {
 				AnchorPoint = Vector2.new(0.5, 0.5),
@@ -370,21 +370,12 @@ function CollaboratorSearchBar:onRenderItem(item, index, activated, theme, searc
 		})
 	-- user/group items
 	else
-		local key = item.Key
-
 		return Roact.createElement(CollaboratorSearchItem, {
 			Icon = item.Icon,
-			IsHovered = (dropdownItem == key),
 			LayoutOrder = index,
 			Name = item.Name,
 			OnActivated = activated,
-			OnMouseEnter = function()
-				self.onKeyMouseEnter(key)
-			end,
-			OnMouseLeave = function()
-				self.onKeyMouseLeave(key)
-			end,
-			Size = UDim2.new(0, searchBarExtents.Width, 0, itemHeight),
+			Size = UDim2.new(1, 0, 0, itemHeight),
 			TextPadding = textPadding,
 		})
 	end
@@ -524,14 +515,15 @@ function CollaboratorSearchBar:render()
 						PaddingLeft = UDim.new(0, textPadding),
 					}),
 
-					Dropdown = (FFlagToolboxReplaceUILibraryComponentsPt3) and Roact.createElement(DropdownMenu, {
+					Dropdown = FFlagToolboxReplaceUILibraryComponentsPt3 and Roact.createElement(DropdownMenu, {
 						Hide = not (showDropdown and searchBarRef),
+						Items = self.state.mergedItems,
 						OnFocusLost = self.hideDropdown,
 						OnItemActivated = self.onItemClicked,
-						Items = self.state.mergedItems,
 						OnRenderItem = function(item, index, activated)
 							return self:onRenderItem(item, index, activated, theme, searchBarExtents)
 						end,
+						Width = searchBarExtents and searchBarExtents.Width or nil,
 					}),
 				}),
 

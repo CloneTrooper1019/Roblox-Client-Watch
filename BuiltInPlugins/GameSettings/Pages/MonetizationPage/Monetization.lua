@@ -9,10 +9,8 @@ local FFlagSupportFreePrivateServers = game:GetFastFlag("SupportFreePrivateServe
 local FFlagEnableDevProductsInGameSettings = game:GetFastFlag("EnableDevProductsInGameSettings")
 local FFlagDeveloperSubscriptionsEnabled = game:GetFastFlag("DeveloperSubscriptionsEnabled")
 local FFlagStudioFixGameManagementIndexNil = game:getFastFlag("StudioFixGameManagementIndexNil")
-local FFlagStudioEnableBadgesInMonetizationPage = game:GetFastFlag("StudioEnableBadgesInMonetizationPage")
 local FFlagStudioFixMissingMonetizationHeader = game:DefineFastFlag("StudioFixMissingMonetizationHeader", false)
 local FVariableMaxRobuxPrice = game:DefineFastInt("DeveloperSubscriptionsMaxRobuxPrice", 2000)
-local FFlagStudioRestrictGameMonetizationToPublicGameOnly = game:GetFastFlag("StudioRestrictGameMonetizationToPublicGameOnly")
 
 local Page = script.Parent
 local Plugin = script.Parent.Parent.Parent
@@ -29,7 +27,7 @@ local DevProducts = require(Page.Components.DevProducts)
 local SettingsPage = require(Plugin.Src.Components.SettingsPages.SettingsPage)
 local DevSubList = require(Page.Components.DevSubList)
 local DevSubDetails = require(Page.Components.DevSubDetails)
-local Badges =  FFlagStudioEnableBadgesInMonetizationPage and require(Page.Components.Badges) or nil
+local Badges = require(Page.Components.Badges)
 
 local FrameworkUI = require(Framework.UI)
 local HoverArea = FrameworkUI.HoverArea
@@ -45,7 +43,7 @@ local RoundTextBox = UILibrary.Component.RoundTextBox
 local RoundFrame = UILibrary.Component.RoundFrame
 local TextEntry = UILibrary.Component.TextEntry
 local GetTextSize = UILibrary.Util.GetTextSize
-local BadgeIconThumbnail = FFlagStudioEnableBadgesInMonetizationPage and require(Plugin.Src.Components.AutoThumbnails.BadgeIconThumbnail) or nil
+local BadgeIconThumbnail = require(Plugin.Src.Components.AutoThumbnails.BadgeIconThumbnail)
 local Separator = require(Plugin.Src.Components.Separator)
 
 local AddChange = require(Plugin.Src.Actions.AddChange)
@@ -55,7 +53,7 @@ local SetEditDevProductId = require(Plugin.Src.Actions.SetEditDevProductId)
 local SetComponentLoadState = require(Plugin.Src.Actions.SetComponentLoadState)
 
 local LoadDeveloperProducts = require(Page.Thunks.LoadDeveloperProducts)
-local LoadBadges = FFlagStudioEnableBadgesInMonetizationPage and require(Page.Thunks.LoadBadges) or nil
+local LoadBadges = require(Page.Thunks.LoadBadges)
 
 local AddDevSubKeyChange = require(Page.Thunks.AddDevSubKeyChange)
 local AddDevSubKeyError = require(Page.Thunks.AddDevSubKeyError)
@@ -120,7 +118,7 @@ local function loadSettings(store, contextItems)
 
         function(loadedSettings)
             local isForSale = monetizationController:getPaidAccessEnabled(gameId)
-            loadedSettings[FFlagStudioRestrictGameMonetizationToPublicGameOnly and GetIsForSaleKeyName() or "isForSale"] = isForSale
+            loadedSettings[GetIsForSaleKeyName()] = isForSale
         end,
 
         function(loadedSettings)
@@ -130,7 +128,7 @@ local function loadSettings(store, contextItems)
 
         function(loadedSettings)
             local vipServersIsEnabled = monetizationController:getVIPServersEnabled(gameId)
-            loadedSettings[FFlagStudioRestrictGameMonetizationToPublicGameOnly and GetVipServersIsEnabledKeyName() or "vipServersIsEnabled"] = vipServersIsEnabled
+            loadedSettings[GetVipServersIsEnabledKeyName()] = vipServersIsEnabled
         end,
 
         function(loadedSettings)
@@ -166,10 +164,6 @@ local function loadSettings(store, contextItems)
         end,
 
         function(loadedSettings)
-            if not FFlagStudioRestrictGameMonetizationToPublicGameOnly then
-                return
-            end
-
             if state.Settings.Current[GetIsActiveKeyName()] == nil then 
                 local isActive = gamePermissionsController:isActive(gameId)
                 loadedSettings[GetIsActiveKeyName()] = isActive
@@ -177,10 +171,6 @@ local function loadSettings(store, contextItems)
         end,
 
         function(loadedSettings)
-            if not FFlagStudioRestrictGameMonetizationToPublicGameOnly then
-                return
-            end
-
             if state.Settings.Current[GetIsFriendsOnlyKeyName()] == nil then 
                 local isFriendsOnly = gamePermissionsController:isFriendsOnly(gameId)
                 loadedSettings[GetIsFriendsOnlyKeyName()] = isFriendsOnly
@@ -188,19 +178,16 @@ local function loadSettings(store, contextItems)
         end,
     }
     
-    if FFlagStudioEnableBadgesInMonetizationPage then
-        table.insert(settingsLoadJobs, function(loadedSettings)
-            assert(FFlagStudioEnableBadgesInMonetizationPage)
+	table.insert(settingsLoadJobs, function(loadedSettings)
 
-            if ShouldAllowBadges() then
-                local badges, cursor = monetizationController:getBadges(gameId)
+		if ShouldAllowBadges() then
+			local badges, cursor = monetizationController:getBadges(gameId)
 
-                loadedSettings["badges"] = badges
-                loadedSettings["badgesCursor"] = cursor
-            end
-        end)
-    end
-    
+			loadedSettings["badges"] = badges
+			loadedSettings["badgesCursor"] = cursor
+		end
+	end)
+     
     return settingsLoadJobs
 end
 
@@ -306,12 +293,12 @@ local function loadValuesToProps(getValue, state)
         MinimumFee = getValue("minimumFee"),
 
         PaidAccess = {
-            enabled = getValue(FFlagStudioRestrictGameMonetizationToPublicGameOnly and GetIsForSaleKeyName() or "isForSale"),
+            enabled = getValue(GetIsForSaleKeyName()),
             price = getValue("price"),
             initialPrice = state.Settings.Current.price and state.Settings.Current.price or 0,
         },
         VIPServers = {
-            isEnabled = getValue(FFlagStudioRestrictGameMonetizationToPublicGameOnly and GetVipServersIsEnabledKeyName() or "vipServersIsEnabled"),
+            isEnabled = getValue(GetVipServersIsEnabledKeyName()),
             price = getValue("vipServersPrice"),
             initialPrice = state.Settings.Current.vipServersPrice and state.Settings.Current.vipServersPrice or 0,
             activeServersCount = getValue("vipServersActiveServersCount"),
@@ -333,15 +320,14 @@ local function loadValuesToProps(getValue, state)
         isEditingSubscription = getValue("isEditingSubscription"),
         editedSubscriptionKey = getValue("editedSubscriptionKey"),
 
-        Badges = FFlagStudioEnableBadgesInMonetizationPage and state.Settings.Current.badges or nil,
+        Badges = state.Settings.Current.badges,
 
-        BadgeLoadState = FFlagStudioEnableBadgesInMonetizationPage and state.ComponentLoadState.Badges or nil,
+        BadgeLoadState = state.ComponentLoadState.Badges,
         
-        isPublic = FFlagStudioRestrictGameMonetizationToPublicGameOnly and getValue(GetIsActiveKeyName()) and not getValue(GetIsFriendsOnlyKeyName()),
+        isPublic = getValue(GetIsActiveKeyName()) and not getValue(GetIsFriendsOnlyKeyName()),
 
         -- To allow players with games already saved in this error state (notPublic and isMonetized) have the ability to change the setting. Once allowed states are saved the error state will not be selectable.
-        isInitiallyEnabled = FFlagStudioRestrictGameMonetizationToPublicGameOnly 
-                            and (not state.Settings.Current[GetIsActiveKeyName()] or state.Settings.Current[GetIsFriendsOnlyKeyName()]) 
+        isInitiallyEnabled = (not state.Settings.Current[GetIsActiveKeyName()] or state.Settings.Current[GetIsFriendsOnlyKeyName()]) 
                             and (state.Settings.Current[GetIsForSaleKeyName()] or state.Settings.Current[GetVipServersIsEnabledKeyName()])
     }
 
@@ -378,7 +364,7 @@ local function dispatchChanges(setValue, dispatch)
             -- on toggle on for the first time, this will set the price to 25 (lowest valid price) as default.
             dispatch(AddChange("price", initialPrice))
             dispatch(DiscardError("monetizationPrice"))
-            dispatch(AddChange(FFlagStudioRestrictGameMonetizationToPublicGameOnly and GetIsForSaleKeyName() or "isForSale", value))
+            dispatch(AddChange(GetIsForSaleKeyName(), value))
         end,
 
         PaidAccessPriceChanged = function(text)
@@ -402,7 +388,7 @@ local function dispatchChanges(setValue, dispatch)
             -- on toggle on for the first time, this will set the price to 10 (lowest valid price) as default.
             dispatch(AddChange("vipServersPrice", initialPrice))
             dispatch(DiscardError("monetizationPrice"))
-            dispatch(AddChange(FFlagStudioRestrictGameMonetizationToPublicGameOnly and GetVipServersIsEnabledKeyName() or "vipServersIsEnabled", value))
+            dispatch(AddChange(GetVipServersIsEnabledKeyName(), value))
         end,
 
         VIPServersPriceChanged = function(text)
@@ -465,15 +451,11 @@ local function dispatchChanges(setValue, dispatch)
             dispatch(LoadDeveloperProducts())
         end,
 
-        LoadMoreBadges = FFlagStudioEnableBadgesInMonetizationPage and function()
-            assert(FFlagStudioEnableBadgesInMonetizationPage)
-            
+        LoadMoreBadges = function()            
             dispatch(LoadBadges())
         end,
         
-        RefreshBadges = FFlagStudioEnableBadgesInMonetizationPage and function()
-            assert(FFlagStudioEnableBadgesInMonetizationPage)
-            
+        RefreshBadges = function()            
             dispatch(SetComponentLoadState(BADGES, LoadState.Loading))
             dispatch(LoadBadges(true))
             dispatch(SetComponentLoadState(BADGES, LoadState.Loaded))
@@ -520,9 +502,7 @@ local function dispatchChanges(setValue, dispatch)
     return dispatchFuncs
 end
 
-local function convertBadgesForTable(badges)
-    assert(FFlagStudioEnableBadgesInMonetizationPage)
-    
+local function convertBadgesForTable(badges)    
     local result = {}
     local count = 0
     
@@ -690,11 +670,11 @@ local function displayMonetizationPage(props)
     local setEditDevProductId = props.SetEditDevProductId
     local loadMoreDevProducts = props.LoadMoreDevProducts
 
-    local isPublic = not FFlagStudioRestrictGameMonetizationToPublicGameOnly or props.isPublic
-    local isInitiallyEnabled = not FFlagStudioRestrictGameMonetizationToPublicGameOnly or props.isInitiallyEnabled
+    local isPublic = props.isPublic
+    local isInitiallyEnabled = props.isInitiallyEnabled
 
     local badgesForTable, numberOfBadges, loadMoreBadges, refreshBadges, badgeLoadState
-    local showBadges = FFlagStudioEnableBadgesInMonetizationPage and ShouldAllowBadges()
+    local showBadges = ShouldAllowBadges()
 
     if showBadges then
         badgesForTable, numberOfBadges = convertBadgesForTable(props.Badges)

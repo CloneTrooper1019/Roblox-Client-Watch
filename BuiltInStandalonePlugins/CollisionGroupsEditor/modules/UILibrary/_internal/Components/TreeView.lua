@@ -34,7 +34,6 @@
 		toggleSelected : (function<void>(bool)) a function that tells the treeview to select this row
 ]]
 local FFlagStudioFixTreeViewForSquish = settings():GetFFlag("StudioFixTreeViewForSquish")
-local FFlagFixTreeViewFlatListDefault = game:DefineFastFlag("FixTreeViewFlatListDefault", false)
 
 local Library = script.Parent.Parent
 
@@ -290,12 +289,8 @@ function TreeView:init()
 		local childComponents = {}
 
 		local createFlatList
-		if FFlagFixTreeViewFlatListDefault then
-			if self.props.createFlatList == nil then
-				createFlatList = true
-			else
-				createFlatList = self.props.createFlatList
-			end
+		if self.props.createFlatList == nil then
+			createFlatList = true
 		else
 			createFlatList = self.props.createFlatList
 		end
@@ -331,12 +326,8 @@ function TreeView:init()
 		local getChildren = self.props.getChildren
 		local sortChildren = self.props.sortChildren
 		local createFlatList
-		if FFlagFixTreeViewFlatListDefault then
-			if self.props.createFlatList == nil then
-				createFlatList = true
-			else
-				createFlatList = self.props.createFlatList
-			end
+		if self.props.createFlatList == nil then
+			createFlatList = true
 		else
 			createFlatList = self.props.createFlatList
 		end
@@ -365,9 +356,7 @@ function TreeView:init()
 								numNodes = numNodes + 1
 							end
 
-							if FFlagFixTreeViewFlatListDefault then
-								table.insert(self.nodesArray, child)
-							end
+							table.insert(self.nodesArray, child)
 						else
 							numNodes = numNodes + 1
 							return node

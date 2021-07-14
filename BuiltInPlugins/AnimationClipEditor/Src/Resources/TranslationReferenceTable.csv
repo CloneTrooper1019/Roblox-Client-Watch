@@ -56,6 +56,7 @@ Studio.AnimationClipEditor.IKMenu.EnableIK,Enable IK,Enable IK,IK 활성화,Вк
 Studio.AnimationClipEditor.IKMenu.IKMode,IK Mode,IK Mode,IK 모드,Режим обратной кинематики,IK 模式
 Studio.AnimationClipEditor.IKMenu.BodyPart,Body Part,Body Part,신체 부위,Часть тела,身体部件
 Studio.AnimationClipEditor.Title.IK,IK,IK,IK,Обратная кинематика,IK
+Studio.AnimationClipEditor.Menu.Tongue,Tongue,Tongue, , , 
 Studio.AnimationClipEditor.Title.CreateNew,Create New Animation,Create New Animation,새 애니메이션 만들기,Создать новую анимацию,创建新动画
 Studio.AnimationClipEditor.IKMenu.ShowTreeview,Show Treeview,Show Treeview,트리뷰 표시,Показать Дерево выбора,显示树状图
 Studio.AnimationClipEditor.IKMenu.Prompt,Enable IK to start animating with IK constraints,Enable IK to start animating with IK constraints,IK를 활성화하여 IK 제약으로 애니메이션화 시작,"Включить обратную кинематику, чтобы начать анимацию с ограничениями ОК",启用 IK 以开始创建使用 IK 约束的动画
@@ -142,3 +143,8 @@ Studio.AnimationClipEditor.Toast.Saved_Migrated,Saved animation {savedAnimName},
 Studio.AnimationClipEditor.Toast.Loaded_Migrated,Loaded animation {loadedAnimName},Loaded animation {loadedAnimName},불러온 애니메이션 {loadedAnimName}, ,已加载动画 {loadedAnimName}
 Studio.AnimationClipEditor.RigErrors.MissingPart0_Migrated,The following Motor6Ds do not have a Part0 set: {entries},The following Motor6Ds do not have a Part0 set: {entries},다음 Motor6D에 Part0 세트가 없습니다: {entries}, ,以下 Motor6D 没有设置 Part0 ：{entries}
 Studio.AnimationClipEditor.RigErrors.MissingPart1_Migrated,The following Motor6Ds do not have a Part1 set: {entries},The following Motor6Ds do not have a Part1 set: {entries},다음 Motor6D에 Part1 세트가 없습니다: {entries}, ,以下 Motor6D 没有设置 Part1 ：{entries}
+Studio.AnimationClipEditor.Menu.Mouth,Mouth,Mouth, , , 
+Studio.AnimationClipEditor.Menu.Jaw,Jaw,Jaw, , , 
+Studio.AnimationClipEditor.Menu.Brows,Brows,Brows, , , 
+Studio.AnimationClipEditor.Menu.Eyes,Eyes,Eyes, , , 
+Studio.AnimationClipEditor.Menu.AddAllFacs,Add All Facial Animation Controls,Add All Facial Animation Controls, , , 

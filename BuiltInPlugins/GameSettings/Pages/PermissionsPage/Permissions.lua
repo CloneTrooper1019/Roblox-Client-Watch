@@ -1,5 +1,3 @@
-local FFlagStudioRestrictGameMonetizationToPublicGameOnly = game:GetFastFlag("StudioRestrictGameMonetizationToPublicGameOnly")
-local FFlagGameSettingsMigrateToDevFrameworkSeparator = game:GetFastFlag("GameSettingsMigrateToDevFrameworkSeparator")
 local FFlagUXImprovementsShowUserPermsWhenCollaborator2 = game:GetFastFlag("UXImprovementsShowUserPermsWhenCollaborator2")
 local FFlagUXImprovementsNonTCPlacesAllowedPlay = game:GetFastFlag("UXImprovementsNonTCPlacesAllowedPlay")
 
@@ -13,7 +11,7 @@ local RoactRodux = require(Plugin.RoactRodux)
 local Cryo = require(Plugin.Cryo)
 local ContextServices = require(Plugin.Framework.ContextServices)
 
-local Separator = FFlagGameSettingsMigrateToDevFrameworkSeparator and require(Plugin.Framework).UI.Separator or require(Plugin.Src.Components.Separator)
+local Separator = require(Plugin.Framework).UI.Separator
 local RadioButtonSet = require(Plugin.Src.Components.RadioButtonSet)
 local GameOwnerWidget = require(Page.Components.GameOwnerWidget)
 local CollaboratorsWidget = require(Page.Components.CollaboratorsWidget)
@@ -52,12 +50,12 @@ local function loadSettings(store, contextItems)
 		function(loadedSettings)
 			local isActive = gamePermissionsController:isActive(gameId)
 
-			loadedSettings[FFlagStudioRestrictGameMonetizationToPublicGameOnly and GetIsActiveKeyName() or "isActive"] = isActive
+			loadedSettings[GetIsActiveKeyName()] = isActive
 		end,
 		function(loadedSettings)
 			local isFriendsOnly = gamePermissionsController:isFriendsOnly(gameId)
 
-			loadedSettings[FFlagStudioRestrictGameMonetizationToPublicGameOnly and GetIsFriendsOnlyKeyName() or "isFriendsOnly"] = isFriendsOnly
+			loadedSettings[GetIsFriendsOnlyKeyName()] = isFriendsOnly
 		end,
 		function(loadedSettings)
 			local ownerName = gameMetadataController:getCreatorName(gameId)
@@ -99,10 +97,6 @@ local function loadSettings(store, contextItems)
 		end,
 
 		function(loadedSettings)
-			if not FFlagStudioRestrictGameMonetizationToPublicGameOnly then
-				return
-			end
-
 			if state.Settings.Current[GetIsForSaleKeyName()] == nil then 
 				local isForSale = monetizationController:getPaidAccessEnabled(gameId)
 				loadedSettings[GetIsForSaleKeyName()] = isForSale
@@ -110,10 +104,6 @@ local function loadSettings(store, contextItems)
 		end,
 
 		function(loadedSettings)
-			if not FFlagStudioRestrictGameMonetizationToPublicGameOnly then
-				return
-			end
-
 			if state.Settings.Current[GetVipServersIsEnabledKeyName()] == nil then
 				local vipServersIsEnabled = monetizationController:getVIPServersEnabled(gameId)
 				loadedSettings[GetVipServersIsEnabledKeyName()] = vipServersIsEnabled
@@ -158,16 +148,15 @@ end
 local function loadValuesToProps(getValue, state)
 	local loadedProps = {
 		-- Playability widget
-		IsActive = getValue(FFlagStudioRestrictGameMonetizationToPublicGameOnly and GetIsActiveKeyName() or "isActive"),
-		IsFriendsOnly = getValue(FFlagStudioRestrictGameMonetizationToPublicGameOnly and GetIsFriendsOnlyKeyName() or "isFriendsOnly"),
+		IsActive = getValue(GetIsActiveKeyName()),
+		IsFriendsOnly = getValue(GetIsFriendsOnlyKeyName()),
 		IsCurrentlyActive = state.Settings.Current.isActive,
 
 		-- Monetization setting
-		IsMonetized = FFlagStudioRestrictGameMonetizationToPublicGameOnly and getValue(GetIsForSaleKeyName()) or getValue(GetVipServersIsEnabledKeyName()),
+		IsMonetized = getValue(GetIsForSaleKeyName()) or getValue(GetVipServersIsEnabledKeyName()),
 
 		-- To allow players with games already saved in this error state (notPublic and isMonetized) have the ability to change the setting. Once allowed states are saved the error state will not be selectable.
-		IsInitiallyEnabled = FFlagStudioRestrictGameMonetizationToPublicGameOnly 
-							and (not state.Settings.Current[GetIsActiveKeyName()] or state.Settings.Current[GetIsFriendsOnlyKeyName()]) 
+		IsInitiallyEnabled = (not state.Settings.Current[GetIsActiveKeyName()] or state.Settings.Current[GetIsFriendsOnlyKeyName()]) 
 							and (state.Settings.Current[GetIsForSaleKeyName()] or state.Settings.Current[GetVipServersIsEnabledKeyName()]),
 
 		-- Metadata
@@ -183,14 +172,14 @@ end
 local function dispatchChanges(setValue, dispatch)
 	local dispatchFuncs = {
 		-- Playability widget
-		IsFriendsOnlyChanged = setValue(FFlagStudioRestrictGameMonetizationToPublicGameOnly and GetIsFriendsOnlyKeyName() or "isFriendsOnly"),
+		IsFriendsOnlyChanged = setValue(GetIsFriendsOnlyKeyName()),
 		IsActiveChanged = function(isActive, willShutdown)
 			if willShutdown then
-				dispatch(AddWarning(FFlagStudioRestrictGameMonetizationToPublicGameOnly and GetIsActiveKeyName() or "isActive"))
+				dispatch(AddWarning(GetIsActiveKeyName()))
 			else
-				dispatch(DiscardWarning(FFlagStudioRestrictGameMonetizationToPublicGameOnly and GetIsActiveKeyName() or "isActive"))
+				dispatch(DiscardWarning(GetIsActiveKeyName()))
 			end
-			dispatch(AddChange(FFlagStudioRestrictGameMonetizationToPublicGameOnly and GetIsActiveKeyName() or "isActive", isActive))
+			dispatch(AddChange(GetIsActiveKeyName(), isActive))
 		end,
 	}
 
@@ -240,8 +229,8 @@ function Permissions:render()
 		local isFriendsOnlyChanged = props.IsFriendsOnlyChanged
 		local isPublic = isActive and not isFriendsOnly
 
-		local isMonetized = FFlagStudioRestrictGameMonetizationToPublicGameOnly and props.IsMonetized
-		local isInitiallyEnabled = FFlagStudioRestrictGameMonetizationToPublicGameOnly and props.IsInitiallyEnabled
+		local isMonetized = props.IsMonetized
+		local isInitiallyEnabled = props.IsInitiallyEnabled
 		
 		local localization = props.Localization
 		local theme = props.Theme:get("Plugin")
@@ -292,7 +281,7 @@ function Permissions:render()
 
 		-- once user change to public and have the monetize enabled the plability button will be disabled
 		local playabilityEnabled = (self:isLoggedInUserGameOwner() or self:isGroupGame()) and (not isPublic and isInitiallyEnabled or not isMonetized)
-		local playabilityWarningVisible = FFlagStudioRestrictGameMonetizationToPublicGameOnly and not playabilityEnabled or false
+		local playabilityWarningVisible = not playabilityEnabled
 
 		return {
 			Playability = Roact.createElement(RadioButtonSet, {

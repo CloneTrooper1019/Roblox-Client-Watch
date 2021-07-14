@@ -19,6 +19,8 @@ local SetActive = require(Plugin.Src.Actions.SetActive)
 local RigUtils = require(Plugin.Src.Util.RigUtils)
 local DisableRigAutofocus = require(Plugin.LuaFlags.GetFFlagDisableRigAutofocus)
 
+local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
+
 return function(analytics)
 	return function(store)
 		local state = store:getState()
@@ -43,17 +45,20 @@ return function(analytics)
 			return
 		end
 
-		if not DisableRigAutofocus() then 
+		if not DisableRigAutofocus() then
 			RigUtils.focusCamera(rootInstance)
 		end
 
 		-- Make sure the tracks are synchronized in case the user renamed a part.
-		local animationData = state.AnimationData
 		if animationData then
 			store:dispatch(SortAndSetTracks({}))
 			for instanceName, instance in pairs(animationData.Instances) do
-				for trackName, _ in pairs(instance.Tracks) do
-					store:dispatch(AddTrack(instanceName, trackName, analytics))
+				for trackName, track in pairs(instance.Tracks) do
+					if GetFFlagFacialAnimationSupport() then
+						store:dispatch(AddTrack(instanceName, trackName, track.Type, analytics))
+					else
+						store:dispatch(AddTrack(instanceName, trackName, analytics))
+					end
 				end
 			end
 		end

@@ -1,7 +1,12 @@
 return function()
-	local KeyframeUtils = require(script.Parent.KeyframeUtils)
+	local Plugin = script.Parent.Parent.Parent
+	local Constants = require(Plugin.Src.Util.Constants)
+	local KeyframeUtils = require(Plugin.Src.Util.KeyframeUtils)
+
+	local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
 
 	local testTrackData = {
+		Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 		Keyframes = {2, 4, 5},
 		Data = {
 			[2] = {
@@ -23,6 +28,7 @@ return function()
 	}
 
 	local testEmptyTrackData = {
+		Type = GetFFlagFacialAnimationSupport() and Constants.TRACK_TYPES.CFrame or nil,
 		Keyframes = {},
 		Data = {},
 	}

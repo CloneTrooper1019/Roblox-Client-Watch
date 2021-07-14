@@ -782,4 +782,13 @@ function NetworkInterface:avatarAssetsUpload(assetType, formBodyData, boundary)
 		:catch(function(err) return Promise.reject(err) end)
 end
 
+function NetworkInterface:getAvatarAssetsValidGroups(assetType)
+	local targetUrl = Urls.constructAvatarAssetsValidGroupsUrl(assetType)
+
+	return sendRequestAndRetry(function()
+		printUrl("getAvatarAssetsValidGroups", "GET", targetUrl)
+		return self._networkImp:httpGetJson(targetUrl)
+	end)
+end
+
 return NetworkInterface

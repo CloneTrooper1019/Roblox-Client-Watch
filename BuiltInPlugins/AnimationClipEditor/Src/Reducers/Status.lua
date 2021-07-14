@@ -33,6 +33,7 @@ return Rodux.createReducer({
 	RootInstance = nil,
 	Tracks = {},
 	UnusedTracks = {},
+	UnusedFacs = {},
 	IsDirty = false,
 	PinnedParts = {},
 
@@ -99,6 +100,7 @@ return Rodux.createReducer({
 		return Cryo.Dictionary.join(state, {
 			Tracks = action.tracks,
 			UnusedTracks = action.unusedTracks,
+			UnusedFacs = action.unusedFacs,
 		})
 	end,
 

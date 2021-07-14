@@ -81,7 +81,7 @@ function AnimationData.fromCFrameArray(bones, poses, name, frameRate)
 
 	for boneIndex, boneName in ipairs(bones) do
 		if #poses[boneIndex] > 0 then
-			rootTracks[boneName] = Templates.track()
+			rootTracks[boneName] = Templates.track(Constants.TRACK_TYPES.CFrame)
 			animationData.Metadata.EndFrame = math.max(animationData.Metadata.EndFrame, #poses[boneIndex])
 			for frame = 1, #poses[boneIndex] do
 				table.insert(rootTracks[boneName].Keyframes, frame)
@@ -167,8 +167,8 @@ function AnimationData.removeEvent(events, frame, name)
 end
 
 -- Adds a new track at trackName to the given track.
-function AnimationData.addTrack(tracks, trackName)
-	tracks[trackName] = Templates.track()
+function AnimationData.addTrack(tracks, trackName, trackType)
+	tracks[trackName] = Templates.track(trackType)
 end
 
 -- Adds a new keyframe at the given frame with the given value.
@@ -180,6 +180,11 @@ function AnimationData.addKeyframe(track, frame, value)
 		track.Data[frame] = Templates.keyframe()
 		track.Data[frame].Value = value
 	end
+end
+
+function AnimationData.addDefaultKeyframe(track, frame, trackType)
+	local value = TrackUtils.getDefaultValueByType(trackType)
+	AnimationData.addKeyframe(track, frame, value)
 end
 
 -- Finds a named keyframe at oldFrame and moves it to newFrame if it exists

@@ -1,0 +1,14 @@
+Key,Source,en-us,ko,zh-cn
+Studio.Framework.AssetPreview.Resolution,Resolution,Resolution,해상도,分辨率
+Studio.Framework.AssetPreview.Creator,Creator,Creator,크리에이터,创建者
+Studio.Framework.Favorites.FlooredCountInThousands,{count:int}k+,{count:int}k+,{count:int}000+,{count:int}k+
+Studio.Framework.AssetPreview.Created,Created,Created,만든 날짜,已创建
+Studio.Framework.AssetPreview.LastUpdated,Last Updated,Last Updated,마지막 업데이트 날짜,上次更新
+Studio.Framework.VoteBar.VoteCount,{count:int} VOTES,{count:int} VOTES,{count:int} 표,{count:int} 票
+Studio.Framework.AssetPreview.AllGenre,All,All,전체,全部
+Studio.Framework.PageNavigation.FirstPage,First page,First page,첫 페이지,首页
+Studio.Framework.AssetPreview.Genre,Genre,Genre,장르,类型
+Studio.Framework.PageNavigation.LastPage,Last page,Last page,마지막 페이지,尾页
+Studio.Framework.PageNavigation.NextPage,Next page,Next page,다음 페이지,下一页
+Studio.Framework.PageNavigation.PreviousPage,Previous page,Previous page,이전 페이지,上一页
+Studio.Framework.PageNavigation.PageCount,of {count:int},of {count:int},{count:int} 중,共 {count:int} 页

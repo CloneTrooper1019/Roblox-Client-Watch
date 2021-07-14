@@ -27,6 +27,8 @@ local AddKeyframe = require(Plugin.Src.Thunks.AddKeyframe)
 local DeleteTrack = require(Plugin.Src.Thunks.DeleteTrack)
 local SetRightClickContextInfo = require(Plugin.Src.Actions.SetRightClickContextInfo)
 
+local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
+
 local TrackActions = Roact.PureComponent:extend("TrackActions")
 
 function TrackActions:makeMenuActions()
@@ -63,6 +65,7 @@ function TrackActions:didMount()
 		local props = self.props
 		local playhead = props.Playhead
 		local trackName = props.TrackName
+		local trackType = props.TrackType
 		local instanceName = props.InstanceName
 
 		if instanceName and trackName then
@@ -72,9 +75,17 @@ function TrackActions:didMount()
 			if track and track.Keyframes then
 				newValue = KeyframeUtils:getValue(track, playhead)
 			else
-				newValue = TrackUtils.getDefaultValue(track)
+				if GetFFlagFacialAnimationSupport() then
+					newValue = TrackUtils.getDefaultValueFromType(trackType)
+				else
+					newValue = TrackUtils.getDefaultValue(track)
+				end
 			end
-			props.AddKeyframe(instanceName, trackName, playhead, newValue, props.Analytics)
+			if GetFFlagFacialAnimationSupport() then
+				props.AddKeyframe(instanceName, trackName, trackType, playhead, newValue, props.Analytics)
+			else
+				props.AddKeyframe_deprecated(instanceName, trackName, playhead, newValue, props.Analytics)
+			end
 		end
 	end)
 end
@@ -137,6 +148,7 @@ local function mapStateToProps(state, props)
 	return {
 		AnimationData = state.AnimationData,
 		TrackName = status.RightClickContextInfo.TrackName,
+		TrackType = status.RightClickContextInfo.TrackType,
 		InstanceName = status.RightClickContextInfo.InstanceName,
 		Playhead = status.Playhead,
 	}
@@ -150,9 +162,16 @@ local function mapDispatchToProps(dispatch)
 			dispatch(SetRightClickContextInfo({}))
 		end,
 
-		AddKeyframe = function(instance, track, frame, value, analytics)
+		AddKeyframe = function(instance, trackName, trackType, frame, value, analytics)
 			dispatch(AddWaypoint())
-			dispatch(AddKeyframe(instance, track, frame, value, analytics))
+			dispatch(AddKeyframe(instance, trackName, trackType, frame, value, analytics))
+			dispatch(SetRightClickContextInfo({}))
+		end,
+
+		-- Remove when GetFFlagFacialAnimationSupport() is retired
+		AddKeyframe_deprecated = function(instance, trackName, frame, value, analytics)
+			dispatch(AddWaypoint())
+			dispatch(AddKeyframe(instance, trackName, frame, value, analytics))
 			dispatch(SetRightClickContextInfo({}))
 		end,
 	}

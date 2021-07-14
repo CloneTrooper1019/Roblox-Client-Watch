@@ -9,10 +9,7 @@ game:DefineFastFlag("EnableDevProductsInGameSettings", false)
 game:DefineFastFlag("StudioFixGameManagementIndexNil", false)
 game:DefineFastFlag("UXImprovementsShowUserPermsWhenCollaborator2", false)
 game:DefineFastFlag("UXImprovementsNonTCPlacesAllowedPlay", false)
-game:DefineFastFlag("StudioRestrictGameMonetizationToPublicGameOnly", false)
 game:DefineFastFlag("GameSettingsUseKeyProvider", false)
-game:DefineFastFlag("GameSettingsMigrateToDevFrameworkSeparator", false)
--- todo(rtanna): with removal of this flag, remove the "AccessPermissions" entries from TranslationDevelopmentTable
 game:DefineFastFlag("GameSettingsDisplayCollaborativeEditingWarning", false)
 
 return nil

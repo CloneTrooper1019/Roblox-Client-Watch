@@ -52,6 +52,7 @@ local SimpleTab = require(Src.SimpleTab)
 local Slider = require(Src.Slider)
 local InfiniteScrollingFrame = require(Src.InfiniteScrollingFrame)
 local MultiLineTextInput = require(Src.MultiLineTextInput)
+local Checkbox = require(Src.Checkbox)
 
 -- NOTE: Please keep components in alphabetical order
 local UI = strict({
@@ -62,6 +63,7 @@ local UI = strict({
 	BulletList = BulletList,
 	Button = Button,
 	CaptureFocus = CaptureFocus,
+	Checkbox = Checkbox,
 	Container = Container,
 	DragListener = DragListener,
 	DropdownMenu = DropdownMenu,

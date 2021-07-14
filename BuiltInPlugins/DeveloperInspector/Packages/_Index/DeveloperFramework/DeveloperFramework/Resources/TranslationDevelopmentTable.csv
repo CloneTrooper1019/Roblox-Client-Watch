@@ -1,0 +1,14 @@
+Key,Source,en-us
+Studio.Framework.AssetPreview.Resolution,Resolution,Resolution
+Studio.Framework.AssetPreview.Creator,Creator,Creator
+Studio.Framework.Favorites.FlooredCountInThousands,{count:int}k+,{count:int}k+
+Studio.Framework.AssetPreview.Created,Created,Created
+Studio.Framework.AssetPreview.LastUpdated,Last Updated,Last Updated
+Studio.Framework.AssetPreview.AllGenre,All,All
+Studio.Framework.PageNavigation.LastPage,Last page,Last page
+Studio.Framework.PageNavigation.FirstPage,First page,First page
+Studio.Framework.AssetPreview.Genre,Genre,Genre
+Studio.Framework.PageNavigation.NextPage,Next page,Next page
+Studio.Framework.PageNavigation.PreviousPage,Previous page,Previous page
+Studio.Framework.PageNavigation.PageCount,of {count:int},of {count:int}
+Studio.Framework.VoteBar.VoteCount,{count:int} VOTES,{count:int} VOTES

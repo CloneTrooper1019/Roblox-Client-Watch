@@ -100,8 +100,9 @@ function Permissions:renderContent(theme, localization, localized)
     if FFlagToolboxReplaceUILibraryComponentsPt3 then
         scrollingFrameProps = {
             AutomaticCanvasSize = Enum.AutomaticSize.Y,
-            Size = self.props.Size,
+            EnableScrollBarBackground = true,
             LayoutOrder = self.props.LayoutOrder,
+            Size = self.props.Size,
         }
     else
         scrollingFrameProps = {

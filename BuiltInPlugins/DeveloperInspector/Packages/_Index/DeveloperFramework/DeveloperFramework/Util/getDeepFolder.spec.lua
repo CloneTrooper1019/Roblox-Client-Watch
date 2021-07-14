@@ -1,0 +1,12 @@
+return function()
+	it("should create a deep folder structure below the root if it doesn't already exist, returning the instance", function()
+		local getDeepFolder = require(script.Parent.getDeepFolder)
+		local ReplicatedStorage = game:GetService("ReplicatedStorage")
+		local folder = getDeepFolder({"One", "Two", "Three"}, ReplicatedStorage)
+		local folder2 = getDeepFolder({"One", "Two", "Three"}, ReplicatedStorage)
+		expect(folder.Name).to.equal("Three")
+		expect(folder.Parent.Parent.Parent).to.equal(ReplicatedStorage)
+		expect(folder).to.equal(folder2)
+		ReplicatedStorage.One:Destroy()
+	end)
+end

@@ -55,7 +55,6 @@ local GetAssetConfigManageableGroupsRequest = require(Requests.GetAssetConfigMan
 
 local UpdateAssetConfigStore = require(Plugin.Core.Actions.UpdateAssetConfigStore)
 
-local FFlagAssetConifgOverrideAssetScrollingFrame = game:GetFastFlag("AssetConifgOverrideAssetScrollingFrame")
 local FFlagImproveAssetCreationsPageFetching2 = game:GetFastFlag("ImproveAssetCreationsPageFetching2")
 
 local OverrideAsset = Roact.PureComponent:extend("OverrideAsset")
@@ -149,7 +148,7 @@ function OverrideAsset:render()
 			self.dropdownContent = AssetConfigUtil.getOwnerDropDownContent(props.manageableGroups, localizedContent)
 
 			local useNewAnimFlow = assetTypeEnum == Enum.AssetType.Animation
-			local isDownloadFlow = FFlagAssetConifgOverrideAssetScrollingFrame and useNewAnimFlow and AssetConfigConstants.FLOW_TYPE.DOWNLOAD_FLOW == props.screenFlowType
+			local isDownloadFlow = useNewAnimFlow and AssetConfigConstants.FLOW_TYPE.DOWNLOAD_FLOW == props.screenFlowType
 
 			local textboxText = state.filterID
 			local textOverMaxCount = false
@@ -291,9 +290,7 @@ local function mapStateToProps(state, props)
 		assetTypeEnum = state.assetTypeEnum,
 	}
 
-	if FFlagAssetConifgOverrideAssetScrollingFrame then
-		stateToProps["screenFlowType"] = state.screenFlowType
-	end
+	stateToProps["screenFlowType"] = state.screenFlowType
 
 	if FFlagImproveAssetCreationsPageFetching2 then
 		stateToProps.filteredResultsArray = nil
@@ -308,8 +305,8 @@ local function mapDispatchToProps(dispatch)
 			dispatch(GetOverrideAssetRequest(networkInterface, assetTypeEnum, creatorType, creatorId, targetPage))
 		end,
 
-		getManageableGroups = function(networkInterface, DEPRECATED_userId)
-			dispatch(GetAssetConfigManageableGroupsRequest(networkInterface, DEPRECATED_userId))
+		getManageableGroups = function(networkInterface)
+			dispatch(GetAssetConfigManageableGroupsRequest(networkInterface))
 		end,
 
 		updateStore = function(storeData)

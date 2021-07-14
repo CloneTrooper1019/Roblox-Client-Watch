@@ -17,11 +17,6 @@ local Adorn = require(Plugin.SrcDeprecated.Util.Adorn)
 local Workspace = game:GetService("Workspace")
 
 local Constants = require(Plugin.SrcDeprecated.Util.Constants)
-local FindNestedParts = require(Plugin.LuaFlags.GetFFlagFindNestedParts)
-local FixDuplicateChildNames = require(Plugin.LuaFlags.GetFFlagFixDuplicateChildNames)
-local AllowDuplicateNamesOnNonAnimatedParts = require(Plugin.LuaFlags.GetFFlagAllowDuplicateNamesOnNonAnimatedParts)
-
-local FFlagFixDuplicateNamedRoot = game:DefineFastFlag("FixDuplicateNamedRoot", false)
 
 local RigUtils = {}
 
@@ -413,9 +408,7 @@ local function findMotorErrors(errorData)
 	end
 end
 
-local rigHasErrors: (any) -> (boolean, any) = nil
-if FFlagFixDuplicateNamedRoot then
-function rigHasErrors(rig)
+function RigUtils.rigHasErrors(rig)
 	local errorData = {
 		errorList = {},
 		motorsMap = {},
@@ -437,127 +430,6 @@ function rigHasErrors(rig)
 
 	return #errorData.errorList > 0, errorData.errorList
 end
-
-else
-
-function rigHasErrors(rig)
-	local errorList = {}
-	local motorsMap = {}
-	local partsWithMultipleParents = {}
-	local motorsWithMissingPart0 = {}
-	local motorsWithMissingPart1 = {}
-	local unanchoredPartExists = false
-
-	local motors = RigUtils.getMotors(rig)
-	local parts = RigUtils.getRigInfo(rig)
-	local bones = RigUtils.getBones(rig)
-
-	for _, motor in pairs(motors) do
-		local part0 = motor.Part0
-		local part1 = motor.Part1
-		if not part0 or (part0 and part0.Parent == nil) then
-			table.insert(motorsWithMissingPart0, motor)
-		end
-		if not part1 or (part1 and part1.Parent == nil) then
-			table.insert(motorsWithMissingPart1, motor)
-		end
-		if part0 and part1 and (not part0.Anchored or not part1.Anchored) then
-			unanchoredPartExists = true
-		end
-		if part0 and part1 and rig:FindFirstChild(part0.Name, true) and rig:FindFirstChild(part1.Name, true) then
-			if motorsMap[part1] then
-				table.insert(partsWithMultipleParents, part1)
-			else
-				motorsMap[part1] = motor
-			end
-		end
-	end
-
-	if FixDuplicateChildNames() and not AllowDuplicateNamesOnNonAnimatedParts() then
-		local descendants = {}
-		getDescendants(descendants, rig)
-		local names = {}
-		for _, child in ipairs(descendants) do
-			if child:IsA("BasePart") then
-				if not names[child.Name] then
-					names[child.Name] = true
-				else
-					table.insert(errorList, {
-						ID = Constants.RIG_ERRORS.NameCollision,
-					})
-					break
-				end
-			end
-		end
-	else
-		local nameCollision = false
-		for _, part1 in ipairs(parts) do
-			for _, part2 in ipairs(parts) do
-				if part1 ~= part2 and part1.Name == part2.Name then
-					table.insert(errorList, {
-						ID = Constants.RIG_ERRORS.NameCollision,
-					})
-					nameCollision = true
-					break
-				end
-				if nameCollision then
-					break
-				end
-			end
-		end
-	end
-
-	local hasBones = bones ~= nil and #bones > 0
-	if #motors == 0 and not hasBones then
-		table.insert(errorList, {
-			ID = Constants.RIG_ERRORS.NoMotors,
-		})
-	end
-
-	if not unanchoredPartExists and not hasBones then
-		table.insert(errorList, {
-			ID = Constants.RIG_ERRORS.PartsAnchored,
-		})
-	end
-
-	if #partsWithMultipleParents > 0 then
-		table.insert(errorList, {
-			ID = Constants.RIG_ERRORS.MultipleParents,
-			Data = partsWithMultipleParents,
-		})
-	end
-
-	if #motorsWithMissingPart0 > 0 then
-		table.insert(errorList, {
-			ID = Constants.RIG_ERRORS.MissingPart0,
-			Data = motorsWithMissingPart0,
-		})
-	end
-
-	if #motorsWithMissingPart1 > 0 then
-		table.insert(errorList, {
-			ID = Constants.RIG_ERRORS.MissingPart1,
-			Data = motorsWithMissingPart1,
-		})
-	end
-
-	if checkForCircularRig(motorsMap) then
-		table.insert(errorList, {
-			ID = Constants.RIG_ERRORS.CircularRig,
-		})
-	end
-
-	if getAnimator(rig) == nil then
-		table.insert(errorList, {
-			ID = Constants.RIG_ERRORS.NoAnimationController,
-		})
-	end
-
-	return #errorList > 0, errorList
-end
-
-end
-RigUtils.rigHasErrors = rigHasErrors
 
 function RigUtils.buildR15Constraints(rig)
 	local _, motorMap = RigUtils.getRigInfo(rig)
@@ -1055,7 +927,7 @@ local function makePoseChain(keyframe, trackName, rig, trackData, partsToMotors,
 		poseChain.Parent = parentPose
 		poseChain = parentPose
 	end
-	
+
 	poseChain.Parent = keyframe
 end
 

@@ -26,7 +26,7 @@ local Key = {}
 Key.__index = Key
 
 -- This is Key.new, but we don't want to expose that publicly.
-local function newkey(pool, index)
+local function newkey(pool: KeyPool, index)
 	local key = {
 		pool = pool,
 		index = index,
@@ -38,12 +38,13 @@ end
 
 -- KeyPool functions
 
-function KeyPool.new(class)
+function KeyPool.new(class: string)
 	assert(t.string(class))
 
+	local available: {Key} = {}
 	local pool = {
 		class = class,
-		available = {},
+		available = available,
 		limit = 0,
 		count = 0,
 	}
@@ -52,8 +53,11 @@ function KeyPool.new(class)
 	return pool
 end
 
+export type KeyPool = typeof(KeyPool.new(""))
+export type Key = typeof(newkey(KeyPool.new(""), 1))
+
 -- Get a currently unused key, or create a new one if everything is in use.
-function KeyPool:get()
+function KeyPool.get(self: KeyPool): Key
 	if self.count == 0 then
 		self.limit = self.limit + 1
 		return newkey(self, self.limit)
@@ -66,13 +70,13 @@ end
 
 -- Key functions
 
-function Key:__tostring()
-	return self.pool.class .. "_" .. tostring(self.index)
+function Key.__tostring(self: Key)
+	return self.pool.class .. "_" .. string.format("%02d", self.index)
 end
 
 -- Return this key to the pool it came from. Whatever previously held this key should not keep the reference after
 -- calling this.
-function Key:release()
+function Key.release(self: Key)
 	self.pool.count = self.pool.count + 1
 	self.pool.available[self.pool.count] = self
 end

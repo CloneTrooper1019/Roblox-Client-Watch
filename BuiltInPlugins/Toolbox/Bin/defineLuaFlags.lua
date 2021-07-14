@@ -59,4 +59,6 @@ game:DefineFastFlag("ToolboxTrackRunMode", false)
 
 game:DefineFastFlag("ToolboxTrackAllAssetTypeInsertions", false)
 
+game:DefineFastFlag("UGCGroupUploads", false)
+
 return nil

@@ -1,0 +1,3 @@
+Key,es,es-es
+Studio.UILibrary.Spec.greeting_formal,Hola,Hola
+Studio.UILibrary.Spec.greeting_informal,¿Qué pasa {1:translate}? No te he visto en {2:int} días,¿Qué pasa {1:translate}? No te he visto en {2:int} días

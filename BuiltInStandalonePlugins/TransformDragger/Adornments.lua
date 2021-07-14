@@ -13,6 +13,9 @@ local RecyclingBin = require(script.Parent.RecyclingBin)
 -------------FAST FLAGS------------
 -----------------------------------
 
+local getFFlagFixTransformScalingSpheresAndCylinders =
+	require(script.Parent.Flags.getFFlagFixTransformScalingSpheresAndCylinders)
+
 -----------------------------------
 --------------VARIABLES------------
 -----------------------------------
@@ -1079,6 +1082,15 @@ local function updateAdornmentPositions()
 		setTranslateAdornVisibility(true)
 		if #selection == 1 and selection[1]:IsA("BasePart") then
 			setScaleAdornVisibility(true)
+			if (getFFlagFixTransformScalingSpheresAndCylinders()) then
+				if selection[1]:IsA("Part") and selection[1].Shape == Enum.PartType.Ball then
+					-- no need to rotate the sphere
+					setRotateAdornVisibility(false)
+					-- only enable one scale handle
+					setScaleAdornVisibility(false)
+					setAdornVisibility(S_Y_POS, true)
+				end
+			end
 		end
 	end
 

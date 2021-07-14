@@ -11,6 +11,8 @@ local Cryo = require(Plugin.Packages.Cryo)
 
 local SetClipboard = require(Plugin.Src.Actions.SetClipboard)
 
+local GetFFlagFacialAnimationSupport = require(Plugin.LuaFlags.GetFFlagFacialAnimationSupport)
+
 return function(instanceName, trackName, frame, multiAdd)
 	return function(store)
 		local state = store:getState()
@@ -44,24 +46,41 @@ return function(instanceName, trackName, frame, multiAdd)
 		if trackData and trackData[frame] then
 			local data = track.Data[frame]
 			local copiedData = Cryo.Dictionary.join(data)
+			local trackType = track.Type
 
 			if not multiAdd then
 				store:dispatch(SetClipboard({
 					[instanceName] = {
-						[trackName] = {
+						[trackName] = GetFFlagFacialAnimationSupport() and {
+							Type = trackType,
+							Data = {
+								[frame] = copiedData,
+							},
+						} or {
 							[frame] = copiedData,
 						},
 					},
 				}))
 			else
 				local newInstance = clipboard[instanceName] ~= nil and clipboard[instanceName] or {}
-				local newTrack = newInstance[trackName] ~= nil and newInstance[trackName] or {}
+				local newTrack = newInstance[trackName] ~= nil and newInstance[trackName] or {
+					Type = GetFFlagFacialAnimationSupport() and trackType or nil
+				}
+				local newData
+				if GetFFlagFacialAnimationSupport() then
+					newData = newTrack.Data ~= nil and newTrack.Data or {}
+				end
 
 				store:dispatch(SetClipboard(Cryo.Dictionary.join(clipboard, {
 					[instanceName] = Cryo.Dictionary.join(newInstance, {
-						[trackName] = Cryo.Dictionary.join(newTrack, {
-							[frame] = copiedData,
-						}),
+						[trackName] = GetFFlagFacialAnimationSupport() and
+							Cryo.Dictionary.join(newTrack, {
+								Data = Cryo.Dictionary.join(newData, {
+									[frame] = copiedData,
+								}),
+							}) or Cryo.Dictionary.join(newTrack, {
+								[frame] = copiedData,
+							}),
 					}),
 				})))
 			end

@@ -26,54 +26,24 @@ local function requireAllModuleScripts()
 	end
 end
 
-if DebugFlags.shouldRunTests() then
-	local _isCli, _processService = pcall(function()
-		return game:GetService("ProcessService")
-	end)
-
-	local _ok, _err = pcall(function()
-		requireAllModuleScripts()
-
-		local TestEZ = require(Plugin.Packages.Dev.TestEZ)
-		local TestBootstrap = TestEZ.TestBootstrap
-		local TeamCityReporter = TestEZ.Reporters.TeamCityReporter
-		local reporter = TestEZ.Reporters.TextReporter
-		if DebugFlags.logTestsQuiet() then
-			reporter = TestEZ.Reporters.TextReporterQuiet
-		end
-
-		reporter = _G["TEAMCITY"] and TeamCityReporter or reporter
-
-		print("----- All " ..Plugin.Name.. " Tests ------")
-		TestBootstrap:run({TestsFolderPlugin}, reporter)
-		print("----------------------------------")
-	end)
+if not DebugFlags.shouldRunTests() and not DebugFlags.shouldRunRhodiumTests() then
+	-- Prevent TestEZ from being required unless at least one of the DebugFlags is enabled
+	-- because requiring TestEZ initialises TestService
+	return
 end
 
-if DebugFlags.shouldRunRhodiumTests() then
-	local isCli, processService = pcall(function()
-		return game:GetService("ProcessService")
-	end)
+local isCli, processService = pcall(function()
+	return game:GetService("ProcessService")
+end)
 
-	local ok, err = pcall(function()
-		local TestEZ = require(Plugin.Packages.Dev.TestEZ)
-		local TestBootstrap = TestEZ.TestBootstrap
-		local TeamCityReporter = TestEZ.Reporters.TeamCityReporter
-		local reporter = TestEZ.Reporters.TextReporter
-		if DebugFlags.logTestsQuiet() then
-			reporter = TestEZ.Reporters.TextReporterQuiet
-		end
-
-		reporter = _G["TEAMCITY"] and TeamCityReporter or reporter
-
-		print("----- All " ..Plugin.Name.. " Rhodium Tests ------")
-		TestBootstrap:run({Plugin.RhodiumTests}, reporter)
-		print("----------------------------------")
-	end)
+-- Run the function and handle exit status correctly if in CLI
+local function runAndCheck(func)
+	local ok, err = pcall(func)
 
 	if isCli then
 		if not ok then
 			warn(err)
+			warn(debug.traceback())
 		end
 		processService:ExitAsync(ok and 0 or 1)
 	elseif not ok then
@@ -81,3 +51,27 @@ if DebugFlags.shouldRunRhodiumTests() then
 	end
 end
 
+runAndCheck(function()
+	local TestEZ = require(Plugin.Packages.Dev.TestEZ)
+	local TestBootstrap = TestEZ.TestBootstrap
+	local TeamCityReporter = TestEZ.Reporters.TeamCityReporter
+	local reporter = TestEZ.Reporters.TextReporter
+	if DebugFlags.logTestsQuiet() then
+		reporter = TestEZ.Reporters.TextReporterQuiet
+	end
+	reporter = _G["TEAMCITY"] and TeamCityReporter or reporter
+
+	if DebugFlags.shouldRunTests() then
+		requireAllModuleScripts()
+
+		print("----- All " ..Plugin.Name.. " Tests ------")
+		TestBootstrap:run({TestsFolderPlugin}, reporter)
+		print("----------------------------------")
+	end
+
+	if DebugFlags.shouldRunRhodiumTests() then
+		print("----- All " ..Plugin.Name.. " Rhodium Tests ------")
+		TestBootstrap:run({Plugin.RhodiumTests}, reporter)
+		print("----------------------------------")
+	end
+end)

@@ -6,6 +6,7 @@
 		callback OnClick: A callback for when the user clicks this button.
 
 	Optional Props:
+		Enum.AutomaticSize AutomaticSize: The AutomaticSize of the component.
 		string Text: The text to display in this button.
 		Style Style: The style with which to render this component.
 		StyleModifier StyleModifier: The StyleModifier index into Style.
@@ -30,6 +31,7 @@
 		Color3 TextColor: The color of the text in this button.
 ]]
 local FFlagStudioFixTreeViewForSquish = settings():GetFFlag("StudioFixTreeViewForSquish")
+local FFlagToolboxReplaceUILibraryComponentsPt2 = game:GetFastFlag("ToolboxReplaceUILibraryComponentsPt2")
 
 local Framework = script.Parent.Parent
 local Roact = require(Framework.Parent.Roact)
@@ -81,6 +83,7 @@ function Button:render()
 	local foregroundStyle = style.ForegroundStyle
 	local padding = style.Padding
 
+	local automaticSize = props.AutomaticSize
 	local text = props.Text or ""
 	local onClick = props.OnClick
 	local size = prioritize(style.Size, props.Size)
@@ -92,7 +95,13 @@ function Button:render()
 
 	assert(typeof(onClick) == "function", string.format("Button requires OnClick to be of type function, not %s", typeof(onClick)))
 
+	local buttonSize = UDim2.new(1, 0, 1, 0)
+	if FFlagToolboxReplaceUILibraryComponentsPt2 and automaticSize then
+		buttonSize = size
+	end
+
 	return Roact.createElement(Container, {
+		AutomaticSize = FFlagToolboxReplaceUILibraryComponentsPt2 and automaticSize or nil,
 		Background = background,
 		BackgroundStyle = backgroundStyle,
 		BackgroundStyleModifier = styleModifier,
@@ -112,7 +121,8 @@ function Button:render()
 		}),
 
 		TextButton = Roact.createElement("TextButton", {
-			Size = UDim2.new(1, 0, 1, 0),
+			AutomaticSize = FFlagToolboxReplaceUILibraryComponentsPt2 and automaticSize or nil,
+			Size = buttonSize,
 			BackgroundTransparency = 1,
 			Font = style.Font,
 			TextSize = style.TextSize,

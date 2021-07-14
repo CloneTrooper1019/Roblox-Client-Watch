@@ -22,7 +22,7 @@ local function studioModerationContactPOST(networking, universeId, contactEmail)
 end
 
 function PolicyInfoController:getPlayerAcceptances()
-    local networking = self.__networking 
+    local networking = self.__networking
     local response = appAgreementsResolutionV1GET(networking):await()
 
     return next(response.responseBody) == nil
@@ -35,7 +35,15 @@ function PolicyInfoController:postContactEmail(universeId, contactEmail)
         string.format("contactemail must be a string, received %s", type(contactEmail)))
 
     local networking = self.__networking
-    studioModerationContactPOST(networking, universeId, contactEmail):await()
+
+    local responseCode
+    studioModerationContactPOST(networking, universeId, contactEmail):catch(
+        function(response)
+            responseCode = response.responseCode
+        end
+    ):await()
+
+    return responseCode
 end
 
 return PolicyInfoController

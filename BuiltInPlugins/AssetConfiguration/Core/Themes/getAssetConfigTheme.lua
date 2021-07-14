@@ -25,6 +25,7 @@ return function()
 	end
 
 	local roundBox = getRawComponentStyle("RoundBox")
+	local button = getRawComponentStyle("Button")
 
 	return {
 		assetConfig = {
@@ -59,14 +60,8 @@ return function()
 			borderColor = StyleKey.DialogButtonBorder,
 
 			hovered = {
-				backgroundColor = StyleKey.ItemHovered,
 				displayText = StyleKey.MainTextHover,
 			},
-
-			selected = {
-				backgroundColor = StyleKey.ItemSelected,
-				displayText = StyleKey.MainTextSelected,
-			}
 		},
 
 		footer = {
@@ -79,6 +74,19 @@ return function()
 			toolTip = StyleKey.DimmedText,
 			error = StyleKey.ErrorText,
 		},
+
+		tags = {
+			textColor = StyleKey.MainText,
+		},
+
+		[ui.Button] = Cryo.Dictionary.join(button, {
+			["&SelectedDetailedDropdownItem"] = {
+				BackgroundStyle = Cryo.Dictionary.join(roundBox, {
+					Color = StyleKey.ItemSelected,
+					TextColor = StyleKey.MainTextSelected,
+				}),
+			},
+		}),
 
 		[ui.RoundBox] = Cryo.Dictionary.join(roundBox, {
 			["&CatalogTag"] = {
@@ -100,9 +108,5 @@ return function()
 				BorderColor = StyleKey.ErrorText,
 			},
 		}),
-
-		tags = {
-			textColor = StyleKey.MainText,
-		}
 	}
 end
