@@ -1,5 +1,5 @@
-game:DefineFastFlag("ProductPurchaseUpsellABTestXbox", false)
+game:DefineFastFlag("ProductPurchaseUpsellABTestXboxV2", false)
 
 return function()
-	return game:GetFastFlag("ProductPurchaseUpsellABTestXbox")
+	return game:GetFastFlag("ProductPurchaseUpsellABTestXboxV2")
 end

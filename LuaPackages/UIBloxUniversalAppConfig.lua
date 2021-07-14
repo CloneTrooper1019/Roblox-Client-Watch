@@ -14,6 +14,7 @@ local FFlagUIBloxGridViewIsMountedCleanup = require(CorePackages.UIBloxFlags.FFl
 local FFlagNoSpawnInGridViewHandler = require(CorePackages.UIBloxFlags.FFlagNoSpawnInGridViewHandler)
 local GetFFlagUIBloxFixDropdownMenuListPositionAndSize = require(CorePackages.UIBloxFlags.GetFFlagUIBloxFixDropdownMenuListPositionAndSize)
 local GetFFlagUIBloxVerticalScrollViewAutomaticCanvasSize = require(CorePackages.UIBloxFlags.GetFFlagUIBloxVerticalScrollViewAutomaticCanvasSize)
+local GetFFlagUIBloxStyleRefactor = require(CorePackages.UIBloxFlags.GetFFlagUIBloxStyleRefactor)
 
 return {
 	tempFixEmptyGridView = FFlagTempFixEmptyGridView,
@@ -33,4 +34,5 @@ return {
 	useUpdatedCheckbox = FFlagUseUpdatedUIBloxCheckbox,
 	fixDropdownMenuListPositionAndSize = GetFFlagUIBloxFixDropdownMenuListPositionAndSize(),
 	enabledAutomaticCanvasSizePropForVerticalScrollView = GetFFlagUIBloxVerticalScrollViewAutomaticCanvasSize(),
+	styleRefactorConfig = GetFFlagUIBloxStyleRefactor(),
 }

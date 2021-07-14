@@ -1,5 +1,5 @@
-game:DefineFastFlag("ProductPurchaseABTest", false)
+game:DefineFastFlag("ProductPurchaseABTestV2", false)
 
 return function()
-	return game:GetFastFlag("ProductPurchaseABTest")
+	return game:GetFastFlag("ProductPurchaseABTestV2")
 end

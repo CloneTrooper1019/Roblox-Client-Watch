@@ -1,5 +1,6 @@
 local Root = script.Parent.Parent.Parent
 local GuiService = game:GetService("GuiService")
+local ContextActionService = game:GetService("ContextActionService")
 
 local CorePackages = game:GetService("CorePackages")
 local PurchasePromptDeps = require(CorePackages.PurchasePromptDeps)
@@ -33,6 +34,9 @@ local Animator = require(script.Parent.Animator)
 
 local ProductPurchaseContainer = Roact.Component:extend(script.Name)
 
+local CONFIRM_BUTTON_BIND = "ProductPurchaseConfirmButtonBind"
+local CANCEL_BUTTON_BIND = "ProductPurchaseCancelButtonBind"
+
 local PURCHASE_MESSAGE_KEY = "CoreScripts.PurchasePrompt.PurchaseMessage.%s"
 
 local BUY_ITEM_LOCALE_KEY = "CoreScripts.PurchasePrompt.Title.BuyItem"
@@ -48,6 +52,8 @@ local function isRelevantRequestType(requestType)
 end
 
 function ProductPurchaseContainer:init()
+	self.isAnimating = false
+
 	self.state = {
 		screenSize = Vector2.new(0, 0),
 	}
@@ -58,6 +64,88 @@ function ProductPurchaseContainer:init()
 				screenSize = rbx.AbsoluteSize,
 			})
 		end
+	end
+
+	self.getConfirmButtonAction = function(promptState, requestType)
+		if promptState == PromptState.None or not isRelevantRequestType(requestType) then
+			return nil
+		elseif promptState == PromptState.PromptPurchase
+				or promptState == PromptState.PurchaseInProgress then
+			return self.props.onBuy
+		elseif promptState == PromptState.RobuxUpsell
+				or promptState == PromptState.UpsellInProgress then
+			return self.props.onRobuxUpsell
+		else
+			if promptState == PromptState.U13PaymentModal
+					or promptState == PromptState.U13MonthlyThreshold1Modal
+					or promptState == PromptState.U13MonthlyThreshold2Modal then
+				return self.props.onScaryModalConfirm
+			else
+				return self.props.hideWindow
+			end
+		end
+	end
+
+	self.getCancelButtonAction = function(promptState, requestType)
+		if promptState == PromptState.None or not isRelevantRequestType(requestType) then
+			return nil
+		elseif promptState == PromptState.PromptPurchase
+				or promptState == PromptState.PurchaseInProgress
+				or promptState == PromptState.RobuxUpsell
+				or promptState == PromptState.UpsellInProgress then
+			return self.props.hideWindow
+		end
+	end
+
+	self.confirmButtonPressed = function()
+		local confirmButtonAction = self.getConfirmButtonAction(self.props.promptState, self.props.requestType)
+		if confirmButtonAction ~= nil and not self.isAnimating then
+			confirmButtonAction()
+		end
+	end
+
+	self.cancelButtonPressed = function()
+		local cancelButtonAction = self.getCancelButtonAction(self.props.promptState, self.props.requestType)
+		if cancelButtonAction ~= nil and not self.isAnimating then
+			cancelButtonAction()
+		end
+	end
+
+	-- Setup on prop change + init, handles both cases where this modal can persist forever or not
+	self.configContextActionService = function(windowState)
+		if windowState == WindowState.Shown then
+			ContextActionService:BindCoreAction(
+				CONFIRM_BUTTON_BIND,
+				function(actionName, inputState, inputObj)
+					if inputState == Enum.UserInputState.Begin then
+						self.confirmButtonPressed()
+					end
+				end, false, Enum.KeyCode.ButtonA)
+			ContextActionService:BindCoreAction(
+				CANCEL_BUTTON_BIND,
+				function(actionName, inputState, inputObj)
+					if inputState == Enum.UserInputState.Begin then
+						self.cancelButtonPressed()
+					end
+				end, false, Enum.KeyCode.ButtonB)
+		else
+			ContextActionService:UnbindCoreAction(CONFIRM_BUTTON_BIND)
+			ContextActionService:UnbindCoreAction(CANCEL_BUTTON_BIND)
+		end
+	end
+end
+
+function ProductPurchaseContainer:didMount()
+	if self.props.windowState == WindowState.Shown then
+		self.isAnimating = true
+		self.configContextActionService(self.props.windowState)
+	end
+end
+
+function ProductPurchaseContainer:didUpdate(prevProps, prevState)
+	if prevProps.windowState ~= self.props.windowState then
+		self.isAnimating = true
+		self.configContextActionService(self.props.windowState)
 	end
 end
 
@@ -142,8 +230,8 @@ function ProductPurchaseContainer:render()
 			itemRobuxCost = getPlayerPrice(productInfo, accountInfo.membershipType == 4),
 			currentBalance = accountInfo.balance,
 		
-			buyItemActivated = self.props.onBuy,
-			cancelPurchaseActivated = self.props.hideWindow,
+			buyItemActivated = self.getConfirmButtonAction(promptState, requestType),
+			cancelPurchaseActivated = self.getCancelButtonAction(promptState, requestType),
 		})
 	elseif promptState == PromptState.RobuxUpsell
 			or promptState == PromptState.UpsellInProgress then
@@ -157,18 +245,10 @@ function ProductPurchaseContainer:render()
 			robuxPurchaseAmount = nativeUpsell.robuxPurchaseAmount,
 			balanceAmount = accountInfo.balance,
 		
-			buyItemActivated = self.props.onRobuxUpsell,
-			cancelPurchaseActivated = self.props.hideWindow,
+			buyItemActivated = self.getConfirmButtonAction(promptState, requestType),
+			cancelPurchaseActivated = self.getCancelButtonAction(promptState, requestType),
 		})
 	else
-		local onActivated = self.props.hideWindow
-
-		if promptState == PromptState.U13PaymentModal
-				or promptState == PromptState.U13MonthlyThreshold1Modal
-				or promptState == PromptState.U13MonthlyThreshold2Modal then
-			onActivated = self.props.onScaryModalConfirm
-		end
-
 		prompt = Roact.createElement(MultiTextLocalizer, {
 			keys = self:getMessageKeysFromPromptState(),
 			render = function(localeMap)
@@ -179,7 +259,7 @@ function ProductPurchaseContainer:render()
 							{
 								buttonType = ButtonType.PrimarySystem,
 								props = {
-									onActivated = onActivated,
+									onActivated = self.getConfirmButtonAction(promptState, requestType),
 									text = localeMap.okText,
 								},
 							},
@@ -199,11 +279,16 @@ function ProductPurchaseContainer:render()
 	}, {
 		Animator = Roact.createElement(Animator, {
 			shouldShow = self.props.windowState ~= WindowState.Hidden,
+			onShown = function()
+				self.isAnimating = false
+			end,
 			onHidden = function()
+				self.isAnimating = false
 				if self.props.windowState == WindowState.Hidden and isRelevantRequestType(self.props.requestType) then
 					self.props.completeRequest()
 				end
 			end,
+			[Roact.Ref] = self.animatorRef,
 		}, {
 			Prompt = prompt,
 		}),

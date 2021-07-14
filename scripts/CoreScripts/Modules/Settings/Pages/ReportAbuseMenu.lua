@@ -51,7 +51,6 @@ local success, result = pcall(function() return settings():GetFFlag('UseNotifica
 local FFlagUseNotificationsLocalization = success and result
 
 local FFlagCollectAnalyticsForSystemMenu = settings():GetFFlag("CollectAnalyticsForSystemMenu")
-local UsePlayerDisplayName = require(RobloxGui.Modules.Settings.UsePlayerDisplayName)
 
 local Constants
 if FFlagCollectAnalyticsForSystemMenu then
@@ -70,11 +69,7 @@ local function Initialize()
 	local nextPlayerToReport = nil
 
 	function this:GetPlayerNameText(player)
-		if UsePlayerDisplayName() then
-			return player.DisplayName .. " [@" .. player.Name .. "]"
-		else
-			return player.Name
-		end
+		return player.DisplayName .. " [@" .. player.Name .. "]"
 	end
 
 	function this:GetPlayerFromIndex(index)

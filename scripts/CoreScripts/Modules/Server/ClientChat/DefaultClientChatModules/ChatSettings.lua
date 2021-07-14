@@ -3,17 +3,9 @@
 --	// Description: Settings module for configuring different aspects of the chat window.
 
 local PlayersService = game:GetService("Players")
-local ChatService = game:GetService("Chat")
 
 local clientChatModules = script.Parent
 local ChatConstants = require(clientChatModules:WaitForChild("ChatConstants"))
-
-local ChatDisplayNamesEnabledByDefault do
-	local success, value = pcall(function()
-		return UserSettings():IsUserFeatureEnabled("UserChatDisplayNamesEnabledByDefault")
-	end)
-	ChatDisplayNamesEnabledByDefault = success and value
-end
 
 local module = {}
 
@@ -61,7 +53,7 @@ module.ErrorMessageTextColor = Color3.fromRGB(245, 50, 50)
 
 ---[[ Window Settings ]]
 module.MinimumWindowSize = UDim2.new(0.3, 0, 0.25, 0)
-module.MaximumWindowSize = UDim2.new(1, 0, 1, 0) -- if you change this to be greater than full screen size, weird things start to happen with size/position bounds checking.
+module.MaximumWindowSize = UDim2.new(1, 0, 1, 0) -- Should always be less than the full screen size.
 module.DefaultWindowPosition = UDim2.new(0, 0, 0, 0)
 local extraOffset = (7 * 2) + (5 * 2) -- Extra chatbar vertical offset
 module.DefaultWindowSizePhone = UDim2.new(0.5, 0, 0.5, extraOffset)
@@ -70,15 +62,16 @@ module.DefaultWindowSizeDesktop = UDim2.new(0.3, 0, 0.25, extraOffset)
 
 ---[[ Fade Out and In Settings ]]
 module.ChatWindowBackgroundFadeOutTime = 3.5 --Chat background will fade out after this many seconds.
-module.ChatWindowTextFadeOutTime = 30				--Chat text will fade out after this many seconds.
+module.ChatWindowTextFadeOutTime = 30 --Chat text will fade out after this many seconds.
 module.ChatDefaultFadeDuration = 0.8
 module.ChatShouldFadeInFromNewInformation = false
 module.ChatAnimationFPS = 20.0
 
 ---[[ Channel Settings ]]
 module.GeneralChannelName = "All" -- You can set to nil to turn off echoing to a general channel.
-module.EchoMessagesInGeneralChannel = true -- Should messages to channels other than general be echoed into the general channel.
--- 																						Setting this to false should be used with ShowChannelsBar
+-- Should messages to channels other than general be echoed into the general channel.
+-- Setting this to false should be used with ShowChannelsBar
+module.EchoMessagesInGeneralChannel = true
 module.ChannelsBarFullTabSize = 4 -- number of tabs in bar before it starts to scroll
 module.MaxChannelNameLength = 12
 -- To make sure whispering behavior remains consistent, this is currently set at 50 characters
@@ -102,9 +95,9 @@ module.WhisperCommandAutoCompletePlayerNames = true
 
 --[[ Display Names ]]
 --Uses DisplayNames instead of UserNames in chat messages
-module.PlayerDisplayNamesEnabled = ChatDisplayNamesEnabledByDefault
+module.PlayerDisplayNamesEnabled = true
 --Allows users to do /w displayName along with /w userName, only works if PlayerDisplayNamesEnabled is 'true'
-module.WhisperByDisplayName = ChatDisplayNamesEnabledByDefault
+module.WhisperByDisplayName = true
 
 local ChangedEvent = Instance.new("BindableEvent")
 

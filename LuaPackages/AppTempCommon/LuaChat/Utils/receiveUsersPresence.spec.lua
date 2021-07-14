@@ -3,8 +3,6 @@ return function()
 	local Rodux = require(CorePackages.Rodux)
 	local User = require(CorePackages.AppTempCommon.LuaApp.Models.User)
 	local receiveUsersPresence = require(script.Parent.receiveUsersPresence)
-	local GetFFlagLuaAppAddPresenceCounts =
-		require(CorePackages.AppTempCommon.LuaChat.Flags.GetFFlagLuaAppAddPresenceCounts)
 
 	local function createUser(id, name, isFriend)
 		return User.fromDataTable({
@@ -15,10 +13,6 @@ return function()
 	end
 
 	it("should update users with presence", function()
-		if not GetFFlagLuaAppAddPresenceCounts() then
-			return
-		end
-
 		local UserPresenceReducer = Rodux.combineReducers({
 			Users = require(CorePackages.AppTempCommon.LuaApp.Reducers.Users),
 			FriendPresenceCounts = require(CorePackages.AppTempCommon.LuaChat.Reducers.FriendPresenceCounts),

@@ -1,5 +1,4 @@
 local CorePackages = game:GetService("CorePackages")
-local RobloxGui = game:GetService("CoreGui").RobloxGui
 
 local ShareGame = game:GetService("CoreGui").RobloxGui.Modules.Settings.Pages.ShareGame
 local Requests = CorePackages.AppTempCommon.LuaApp.Http.Requests
@@ -14,8 +13,6 @@ local FetchUserFriendsFailed = require(CorePackages.AppTempCommon.LuaApp.Actions
 local FetchUserFriendsCompleted = require(CorePackages.AppTempCommon.LuaApp.Actions.FetchUserFriendsCompleted)
 local UserModel = require(CorePackages.AppTempCommon.LuaApp.Models.User)
 local UpdateUsers = require(CorePackages.AppTempCommon.LuaApp.Thunks.UpdateUsers)
-
-local UsePlayerDisplayName = require(RobloxGui.Modules.Settings.UsePlayerDisplayName)
 
 return function(requestImpl, userId, thumbnailRequest, checkPoints)
 	return function(store)
@@ -32,13 +29,8 @@ return function(requestImpl, userId, thumbnailRequest, checkPoints)
 			local newUsers = {}
 			for _, userData in pairs(responseBody.data) do
 				local id = tostring(userData.id)
-				local newUser
-				if UsePlayerDisplayName() then
-					userData.isFriend = true
-					newUser = UserModel.fromDataTable(userData)
-				else
-					newUser = UserModel.fromData(id, userData.name, true)
-				end
+				userData.isFriend = true
+				local newUser = UserModel.fromDataTable(userData)
 
 				table.insert(userIds, id)
 				newUsers[newUser.id] = newUser

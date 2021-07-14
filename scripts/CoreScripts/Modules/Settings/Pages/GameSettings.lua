@@ -118,6 +118,7 @@ local UseMicroProfiler = (isMobileClient or isDesktopClient) and canUseMicroProf
 
 local GetFFlagEnableVoiceChatOptions = require(RobloxGui.Modules.Flags.GetFFlagEnableVoiceChatOptions)
 local GetFFlagEnableVoiceChatOptionsDualServiceOutputs = require(RobloxGui.Modules.Flags.getFFlagEnableVoiceChatOptionsDualServiceOutputs)
+local GetFFlagEnableVoiceChatOptionsJoinByGroupIdToken = require(RobloxGui.Modules.Flags.GetFFlagEnableVoiceChatOptionsJoinByGroupIdToken)
 
 local GetDeviceChangedHookEnabled = require(RobloxGui.Modules.Flags.GetFFlagEnableVoiceChatOptionsDeviceChangedHook)
 
@@ -1625,7 +1626,11 @@ local function Initialize()
 			if groupId and groupId ~= "" then
 				local muted = VoiceChatService:IsPublishPaused()
 				VoiceChatService:Leave()
-				VoiceChatService:JoinByGroupId(groupId, muted)
+				if GetFFlagEnableVoiceChatOptionsJoinByGroupIdToken() then
+					VoiceChatService:JoinByGroupIdToken(groupId, muted)
+				else
+					VoiceChatService:JoinByGroupId(groupId, muted)
+				end
 			end
 		end)
 	end

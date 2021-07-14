@@ -124,7 +124,7 @@ local function Install()
 	ChatServiceRunner.Archivable = chatServiceRunnerArchivable
 
 	if FFlagEnableForkedChatAnalytics then
-		SendChatAnalytics("LoadClientDefaultChatForkedModules", eventTable)
+		SendChatAnalytics("LoadServerDefaultChatForkedModules", eventTable)
 	end
 end
 

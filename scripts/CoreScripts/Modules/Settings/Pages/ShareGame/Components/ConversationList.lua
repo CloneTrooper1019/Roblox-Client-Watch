@@ -28,7 +28,6 @@ local memoize = require(AppTempCommon.Common.memoize)
 local RetrievalStatus = require(CorePackages.AppTempCommon.LuaApp.Enum.RetrievalStatus)
 
 local FFlagLuaInviteModalEnabled = settings():GetFFlag("LuaInviteModalEnabledV384")
-local UsePlayerDisplayName = require(RobloxGui.Modules.Settings.UsePlayerDisplayName)
 
 local getTranslator = require(ShareGame.getTranslator)
 local RobloxTranslator = getTranslator()
@@ -54,13 +53,6 @@ if FFlagLuaInviteModalEnabled then
 		entryHeight = ENTRY_HEIGHT,
 		entryPadding = ENTRY_PADDING
 	}
-end
-
-local function searchFilterPredicate(query, other)
-	if query == "" then
-		return true
-	end
-	return string.find(string.lower(other), query:lower(), 1, true) ~= nil
 end
 
 function ConversationList:init()
@@ -105,12 +97,7 @@ function ConversationList:render()
 	local numEntries = 0
 	-- Populate list of conversations with friends
 	for i, user in ipairs(friends) do
-		local isEntryShown
-		if UsePlayerDisplayName() then
-			isEntryShown = PlayerSearchPredicate(searchText, user.name, user.displayName)
-		else
-			isEntryShown = searchFilterPredicate(searchText, user.name)
-		end
+		local isEntryShown = PlayerSearchPredicate(searchText, user.name, user.displayName)
 
 		children["User-" .. tostring(i)] = Roact.createElement(ConversationEntry, {
 			analytics = analytics,
@@ -118,8 +105,8 @@ function ConversationList:render()
 			size = UDim2.new(1, 0, 0, entryHeight),
 			layoutOrder = i,
 			zIndex = zIndex,
-			title = UsePlayerDisplayName() and user.displayName or user.name,
-			subtitle = UsePlayerDisplayName() and "@" .. user.name or nil,
+			title = user.displayName,
+			subtitle = "@" .. user.name,
 			presence = user.presence,
 			users = {user},
 			inviteUser = inviteUser,

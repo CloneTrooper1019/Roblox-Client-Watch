@@ -32,6 +32,8 @@ local CoreGuiService = game:GetService("CoreGui")
 local StarterGui = game:GetService("StarterGui")
 local GuiService = game:GetService("GuiService")
 local AnalyticsService = game:GetService("RbxAnalyticsService")
+local RunService = game:GetService("RunService")
+local ChatService = game:GetService("Chat")
 
 local hasTrackedAvatarContextMenu = false
 function enableAvatarContextMenu(enabled)
@@ -64,6 +66,9 @@ local Backpack = require(CoreGuiModules.BackpackScript)
 local EmotesMenuMaster = require(CoreGuiModules.EmotesMenu.EmotesMenuMaster)
 
 local BlockingUtility = require(CoreGuiModules.BlockingUtility)
+
+--- FLAGS
+local FFlagAvatarContextMenuItemsChatButtonRefactor = require(CoreGuiModules.Flags.FFlagAvatarContextMenuItemsChatButtonRefactor)
 
 --- VARIABLES
 
@@ -98,7 +103,17 @@ function SetSelectedPlayer(player, dontTween)
 	if SelectedPlayer == player then return end
 	SelectedPlayer = player
 	SelectedCharacterIndicator:ChangeSelectedPlayer(SelectedPlayer, ThemeHandler:GetTheme())
-	ContextMenuItems:BuildContextMenuItems(SelectedPlayer)
+	
+	if FFlagAvatarContextMenuItemsChatButtonRefactor then
+		local props = {}
+		local success, canLocalUserChat = pcall(function() return ChatService:CanUserChatAsync(LocalPlayer.UserId) end)
+		props.localPlayerChatEnabled = success and (RunService:IsStudio() or canLocalUserChat)
+		props.localPlayerCanChatWithSelectedPlayer = ContextMenuUtil:GetCanChatWith(SelectedPlayer)
+		ContextMenuItems:BuildContextMenuItems(SelectedPlayer, props)
+	else
+		ContextMenuItems:BuildContextMenuItems(SelectedPlayer)
+	end
+	
 	ContextMenuGui:SwitchToPlayerEntry(SelectedPlayer, dontTween)
 end
 

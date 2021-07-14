@@ -32,7 +32,6 @@ local isTenFootInterface = require(RobloxGui.Modules.TenFootInterface):IsEnabled
 local RobloxTranslator = require(RobloxGui.Modules.RobloxTranslator)
 local InviteToGameAnalytics = require(ShareGameDirectory.Analytics.InviteToGameAnalytics)
 local PolicyService = require(RobloxGui.Modules.Common.PolicyService)
-local UsePlayerDisplayName = require(RobloxGui.Modules.Settings.UsePlayerDisplayName)
 
 ------------ Constants -------------------
 local FRAME_DEFAULT_TRANSPARENCY = .85
@@ -543,15 +542,10 @@ local function Initialize()
 	end
 
 	createPlayerRow = function()
-		local showDisplayName = UsePlayerDisplayName()
-
+		local showDisplayName = true
 		local frame = createRow("ImageLabel", showDisplayName)
-		if showDisplayName then
-			frame.TextLabel.Name = "DisplayNameLabel"
-			frame.SecondRow.Name = "NameLabel"
-		else
-			frame.TextLabel.Name = "NameLabel"
-		end
+		frame.TextLabel.Name = "DisplayNameLabel"
+		frame.SecondRow.Name = "NameLabel"
 
 		local rightSideButtons = Instance.new("Frame")
 		rightSideButtons.Name = "RightSideButtons"
@@ -618,23 +612,17 @@ local function Initialize()
 		local function reportFlagChanged(reportFlag, prop)
 			if prop == "AbsolutePosition" and wasIsPortrait then
 				local maxPlayerNameSize = reportFlag.AbsolutePosition.X - 20 - frame.NameLabel.AbsolutePosition.X
-				if UsePlayerDisplayName() then
-					frame.NameLabel.Text = "@" .. player.Name
-					frame.DisplayNameLabel.Text = player.DisplayName
-				else
-					frame.NameLabel.Text = player.Name
+				frame.NameLabel.Text = "@" .. player.Name
+				frame.DisplayNameLabel.Text = player.DisplayName
+
+				local newDisplayNameLength = utf8.len(player.DisplayName)
+				while frame.NameLabel.TextBounds.X > maxPlayerNameSize and newDisplayNameLength > 0 do
+					local offset = utf8.offset(player.DisplayName, newDisplayNameLength)
+					frame.NameLabel.Text = string.sub(player.DisplayName, 1, offset) .. "..."
+					newDisplayNameLength = newDisplayNameLength - 1
 				end
 
-				if UsePlayerDisplayName() then
-					local newDisplayNameLength = utf8.len(player.DisplayName)
-					while frame.NameLabel.TextBounds.X > maxPlayerNameSize and newDisplayNameLength > 0 do
-						local offset = utf8.offset(player.DisplayName, newDisplayNameLength)
-						frame.NameLabel.Text = string.sub(player.DisplayName, 1, offset) .. "..."
-						newDisplayNameLength = newDisplayNameLength - 1
-					end
-				end
-
-				local playerNameText = UsePlayerDisplayName() and "@" .. player.Name or player.Name
+				local playerNameText = "@" .. player.Name
 				local newNameLength = string.len(playerNameText)
 				while frame.NameLabel.TextBounds.X > maxPlayerNameSize and newNameLength > 0 do
 					frame.NameLabel.Text = string.sub(playerNameText, 1, newNameLength) .. "..."
@@ -664,12 +652,8 @@ local function Initialize()
 						reportFlagChanged(reportFlag, "AbsolutePosition")
 					end
 				else
-					if UsePlayerDisplayName() then
-						frame.NameLabel.Text = "@" .. player.Name
-						frame.DisplayNameLabel.Text = player.DisplayName
-					else
-						frame.NameLabel.Text = player.Name
-					end
+					frame.NameLabel.Text = "@" .. player.Name
+					frame.DisplayNameLabel.Text = player.DisplayName
 				end
 			end)
 		end
@@ -705,15 +689,10 @@ local function Initialize()
 				nameLabelSize = UDim2.new(1, - PLAYER_NAME_RIGHT_PADDING, 0, 0)
 			end
 
-			if UsePlayerDisplayName() then
-				frame.NameLabel.Size = nameLabelSize
-				frame.DisplayNameLabel.Size = nameLabelSize
-				frame.NameLabel.Text = "@" .. player.Name
-				frame.DisplayNameLabel.Text = player.DisplayName
-			else
-				frame.NameLabel.Size = nameLabelSize
-				frame.NameLabel.Text = player.Name
-			end
+			frame.NameLabel.Size = nameLabelSize
+			frame.DisplayNameLabel.Size = nameLabelSize
+			frame.NameLabel.Text = "@" .. player.Name
+			frame.DisplayNameLabel.Text = player.DisplayName
 		end
 
 		if isEngineTruncationEnabledForIngameSettings() then
@@ -819,22 +798,16 @@ local function Initialize()
 					end)
 				end
 
-				if UsePlayerDisplayName() then
-					frame.DisplayNameLabel.Text = player.DisplayName
-					frame.NameLabel.Text = "@" .. player.Name
-				else
-					frame.NameLabel.Text = player.Name
-				end
+				frame.DisplayNameLabel.Text = player.DisplayName
+				frame.NameLabel.Text = "@" .. player.Name
+
 				frame.ImageTransparency = FRAME_DEFAULT_TRANSPARENCY
 				-- extra index room for shareGameButton
 				frame.LayoutOrder = index + 1
 
 				if isEngineTruncationEnabledForIngameSettings() then
 					frame.NameLabel.TextTruncate = Enum.TextTruncate.AtEnd
-
-					if UsePlayerDisplayName() then
-						frame.DisplayNameLabel.TextTruncate = Enum.TextTruncate.AtEnd
-					end
+					frame.DisplayNameLabel.TextTruncate = Enum.TextTruncate.AtEnd
 				end
 
 				managePlayerNameCutoff(frame, player)

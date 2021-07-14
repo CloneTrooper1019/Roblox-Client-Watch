@@ -8,5 +8,5 @@ return function(eventName, eventTable)
 	eventTable["gameId"] = tostring(game.GameId)
 	eventTable["placeId"] = tostring(game.PlaceId)
 
-	AnalyticsService:SetRBXEventStream("rcc", "lua_chat_system", eventName, eventTable)
+	AnalyticsService:SendEventDeferred("rcc", "lua_chat_system", eventName, eventTable)
 end
