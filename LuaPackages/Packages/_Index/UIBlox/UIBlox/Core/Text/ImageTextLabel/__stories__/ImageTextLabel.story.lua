@@ -1,3 +1,6 @@
+-- DEPRECATED: This story is provided for backwards compatibility with horsecat and will be removed.
+-- Please only make changes to `src\Stories\Private\Core\Text\ImageTextLabel.story.lua`
+
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local StoryView = require(ReplicatedStorage.Packages.StoryComponents.StoryView)

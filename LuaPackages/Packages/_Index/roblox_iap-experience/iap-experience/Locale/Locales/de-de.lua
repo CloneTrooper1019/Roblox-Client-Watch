@@ -14,6 +14,7 @@
     ["IAPExperience.RobuxUpsell.Text.DisclosureTerms"] = [[Es gelten die Nutzungsbedingungen von Roblox.]],
     ["IAPExperience.RobuxUpsell.Text.RemainingBalance"] = [[Die verbleibenden {robux} werden deinem Guthaben gutgeschrieben.]],
     ["IAPExperience.RobuxUpsell.Action.Cancel"] = [[Abbrechen]],
+    ["IAPExperience.RobuxUpsell.Action.BuyRobux"] = [[R$ kaufen]],
     ["IAPExperience.PurchasePrompt.Title.BuyItem"] = [[Item kaufen]],
     ["IAPExperience.PurchasePrompt.Text.BuyItemQuestion"] = [[Möchtest du „{name}“ kaufen?]],
     ["IAPExperience.PurchasePrompt.Text.RemainingBalance"] = [[Nach dieser Transaktion beträgt dein Guthaben]],

@@ -10,6 +10,6 @@ dependencies = [
     "Roact roblox/roact 1.3.1 url+https://github.com/roblox/roact",
     "RoactRodux roblox/roact-rodux 0.2.2 url+https://github.com/roblox/roact-rodux",
     "Rodux <patched> roblox/rodux-flagged-upgrade 12586c7e git+https://github.com/roblox/rodux-flagged-upgrade#1.1-to-3.0",
-    "UIBlox UIBlox 41a44820 git+https://github.com/roblox/uiblox#master",
+    "UIBlox UIBlox 3aee2125 git+https://github.com/roblox/uiblox#master",
     "t roblox/t 1.2.5 url+https://github.com/roblox/t",
 ]

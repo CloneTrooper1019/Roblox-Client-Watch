@@ -10,7 +10,20 @@ local t = require(Packages.t)
 
 local StyleProvider = require(UIBlox.Core.Style.StyleProvider)
 
-local AppStylePalette = require(script.Parent.AppStylePalette)
+local getThemeFromName = require(Style.Themes.getThemeFromName)
+local getFontFromName = require(Style.Fonts.getFontFromName)
+local Constants = require(Style.Constants)
+
+local DEFAULT_FONT = Constants.FontName.Gotham
+local FONT_MAP = {
+	[Constants.FontName.Gotham] = require(script.Parent.Fonts.Gotham),
+}
+
+local DEFAULT_THEME = Constants.ThemeName.Light
+local THEME_MAP = {
+	[Constants.ThemeName.Dark] = require(script.Parent.Themes.DarkTheme),
+	[Constants.ThemeName.Light] = require(script.Parent.Themes.LightTheme),
+}
 
 local AppStyleProvider = Roact.Component:extend("AppStyleProvider")
 
@@ -26,14 +39,11 @@ local validateProps = t.strictInterface({
 function AppStyleProvider:render()
 	assert(validateProps(self.props))
 	local style = self.props.style
-	local themeName = style.themeName
-	local fontName = style.fontName
-	local stylePalette = AppStylePalette.new()
-	stylePalette:updateTheme(themeName)
-	stylePalette:updateFont(fontName)
-	local appStyle = stylePalette:currentStyle()
-
-	return Roact.createElement(StyleProvider,{
+	local appStyle = {
+		Font = getFontFromName(style.fontName, DEFAULT_FONT, FONT_MAP),
+		Theme = getThemeFromName(style.themeName, DEFAULT_THEME, THEME_MAP),
+	}
+	return Roact.createElement(StyleProvider, {
 		style = appStyle,
 	}, self.props[Roact.Children])
 end

@@ -5,8 +5,6 @@ return {
 	config = function(config)
 		if config.UIBloxConfig then
 			UIBlox.init(config.UIBloxConfig)
-		else
-			UIBlox.init()
 		end
 
 		return {

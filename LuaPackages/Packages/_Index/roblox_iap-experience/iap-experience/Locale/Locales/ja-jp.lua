@@ -14,6 +14,7 @@
     ["IAPExperience.RobuxUpsell.Text.DisclosureTerms"] = [[Roblox利用規約が適用されます。]],
     ["IAPExperience.RobuxUpsell.Text.RemainingBalance"] = [[残りの {robux} があなたの残高に加算されます。]],
     ["IAPExperience.RobuxUpsell.Action.Cancel"] = [[キャンセル]],
+    ["IAPExperience.RobuxUpsell.Action.BuyRobux"] = [[R$ を買う]],
     ["IAPExperience.PurchasePrompt.Title.BuyItem"] = [[アイテムを買う]],
     ["IAPExperience.PurchasePrompt.Text.BuyItemQuestion"] = [[「{name}」を買いますか？]],
     ["IAPExperience.PurchasePrompt.Text.RemainingBalance"] = [[取引後の残高：]],

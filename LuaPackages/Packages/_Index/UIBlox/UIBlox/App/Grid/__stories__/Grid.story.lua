@@ -1,3 +1,6 @@
+-- DEPRECATED: This story is provided for backwards compatibility with horsecat and will be removed.
+-- Please only make changes to `src\Stories\Private\App\Grid.story.lua`
+
 local GridRoot = script.Parent.Parent
 local AppRoot = GridRoot.Parent
 local UIBloxRoot = AppRoot.Parent

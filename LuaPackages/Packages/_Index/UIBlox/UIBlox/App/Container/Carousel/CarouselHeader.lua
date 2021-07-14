@@ -6,7 +6,7 @@ local Packages = UIBlox.Parent
 
 local Roact = require(Packages.Roact)
 local t = require(Packages.t)
-local withStyle = require(UIBlox.Style.withStyle)
+local withStyle = require(UIBlox.Core.Style.withStyle)
 
 local GetTextSize = require(UIBlox.Core.Text.GetTextSize)
 

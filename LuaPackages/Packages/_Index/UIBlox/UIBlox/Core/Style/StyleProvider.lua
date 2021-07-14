@@ -15,32 +15,20 @@ local Packages = UIBlox.Parent
 local Roact = require(Packages.Roact)
 local t = require(Packages.t)
 
-local StylePalette = require(Style.StylePalette)
-local Palette = require(Style.Symbol.Palette)
+local StyleContext = require(Style.StyleContext)
 
 local StyleProvider = Roact.Component:extend("StyleProvider")
 
-local validateProps = t.strictInterface({
+StyleProvider.validateProps = t.strictInterface({
 	-- The current style of the app.
 	style = t.table,
 	[Roact.Children] = t.table,
 })
 
-function StyleProvider:init()
-	local style = self.props.style
-	self.stylePalette = StylePalette.new(style)
-	self._context[Palette] = self.stylePalette
-end
-
 function StyleProvider:render()
-	assert(validateProps(self.props))
-	return Roact.oneChild(self.props[Roact.Children])
-end
-
-function StyleProvider:didUpdate(previousProps)
-	if self.props.style ~= previousProps.style then
-		self.style:update(self.props.style)
-	end
+	return Roact.createElement(StyleContext.Provider, {
+		value = self.props.style,
+	}, Roact.oneChild(self.props[Roact.Children]))
 end
 
 return StyleProvider

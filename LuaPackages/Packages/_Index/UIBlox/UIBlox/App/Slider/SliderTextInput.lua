@@ -9,7 +9,7 @@ local t = require(Packages.t)
 
 local ImageSetComponent = require(Packages.UIBlox.Core.ImageSet.ImageSetComponent)
 local Images = require(Packages.UIBlox.App.ImageSet.Images)
-local withStyle = require(Packages.UIBlox.Style.withStyle)
+local withStyle = require(Packages.UIBlox.Core.Style.withStyle)
 
 local divideTransparency = require(Packages.UIBlox.Utility.divideTransparency)
 

@@ -44,13 +44,19 @@ function AnimatedComponent:init()
 end
 
 function AnimatedComponent:willUpdate(nextProps)
-	local values = self.props.values
-	local options = self.props.options
-	local goals = {}
-	for key, targetValue in pairs(values) do
-		goals[key] = Otter.spring(targetValue, options)
+	local values = nextProps.values
+	local options = nextProps.options
+
+	local valuesChanged = values ~= self.props.values
+	local optionsChanged = options ~= self.props.options
+
+	if valuesChanged or optionsChanged then
+		local goals = {}
+		for key, targetValue in pairs(values) do
+			goals[key] = Otter.spring(targetValue, options)
+		end
+		self.motor:setGoal(goals)
 	end
-	self.motor:setGoal(goals)
 end
 
 function AnimatedComponent:render()

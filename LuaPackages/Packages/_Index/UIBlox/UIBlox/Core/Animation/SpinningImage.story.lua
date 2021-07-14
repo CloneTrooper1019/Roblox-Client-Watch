@@ -1,3 +1,6 @@
+-- DEPRECATED: This story is provided for backwards compatibility with horsecat and will be removed.
+-- Please only make changes to `src\Stories\Private\Core\Animation\SpinningImage.story.lua`
+
 local CoreRoot = script.Parent.Parent
 local UIBlox = CoreRoot.Parent
 local Packages = UIBlox.Parent

@@ -1,3 +1,6 @@
+-- DEPRECATED: This story is provided for backwards compatibility with horsecat and will be removed.
+-- Please only make changes to `src\Stories\Private\Core\GenericSlider.story.lua`
+
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local Roact = require(ReplicatedStorage.Packages.Roact)

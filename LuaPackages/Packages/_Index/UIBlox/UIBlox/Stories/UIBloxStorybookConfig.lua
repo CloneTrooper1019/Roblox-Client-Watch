@@ -33,4 +33,8 @@ return {
 	-- useUpdatedCheckbox: Enables FitFrame for InputButton and gives Checkbox a gamepad
 	-- selection cursor.
 	useUpdatedCheckbox = true,
+
+	-- fixDropdownMenuListPositionAndSize: Uses the bottom inset for positioning the dropdown menu list for
+	-- mobile view, allows sizing relative to parent container size, and limits dropdown width for wide view.
+	fixDropdownMenuListPositionAndSize = true,
 }

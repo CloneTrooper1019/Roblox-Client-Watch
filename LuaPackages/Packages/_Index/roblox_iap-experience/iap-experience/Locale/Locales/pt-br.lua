@@ -6,12 +6,15 @@
 	</auto-generated>
 --------------------------------------------------------------------------------------------------------]]
     return{
+    ["IAPExperience.Text.Test"] = [[Test Text]],
+    ["IAPExperience.Text.Test2"] = [[Test Text 2]],
     ["IAPExperience.RobuxUpsell.Title.InsufficientFunds"] = [[Saldo insuficiente]],
     ["IAPExperience.RobuxUpsell.Text.BuyRobuxQuestion"] = [[Gostaria de comprar]],
     ["IAPExperience.RobuxUpsell.Text.DisclosurePayment"] = [[Seu método de pagamento será mudado.]],
     ["IAPExperience.RobuxUpsell.Text.DisclosureTerms"] = [[Os Termos de Uso da Roblox se aplicam.]],
     ["IAPExperience.RobuxUpsell.Text.RemainingBalance"] = [[Os {robux} restantes serão somados ao seu saldo.]],
     ["IAPExperience.RobuxUpsell.Action.Cancel"] = [[Cancelar]],
+    ["IAPExperience.RobuxUpsell.Action.BuyRobux"] = [[Comprar R$]],
     ["IAPExperience.PurchasePrompt.Title.BuyItem"] = [[Comprar item]],
     ["IAPExperience.PurchasePrompt.Text.BuyItemQuestion"] = [[Gostaria de comprar "{name}"?]],
     ["IAPExperience.PurchasePrompt.Text.RemainingBalance"] = [[Seu saldo depois desta transação será de]],

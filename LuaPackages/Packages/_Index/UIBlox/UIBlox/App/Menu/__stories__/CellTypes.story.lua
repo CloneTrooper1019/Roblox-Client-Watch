@@ -1,3 +1,6 @@
+-- DEPRECATED: This story is provided for backwards compatibility with horsecat and will be removed.
+-- Please only make changes to `src\Stories\Private\App\CellTypes.story.lua`
+
 local Menu = script.Parent.Parent
 local App = Menu.Parent
 local UIBlox = App.Parent

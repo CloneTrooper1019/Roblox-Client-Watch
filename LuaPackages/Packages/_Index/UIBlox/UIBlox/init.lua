@@ -39,7 +39,6 @@ local function initializeLibrary(configs)
 				validateFontInfo = require(script.Core.Style.Validator.validateFontInfo),
 				validateColorInfo = require(script.Core.Style.Validator.validateColorInfo),
 			}),
-			Palette = require(script.Core.Style.Symbol.Palette),
 			Provider = require(script.Core.Style.StyleProvider),
 			withStyle = require(script.Core.Style.withStyle),
 		}),
@@ -254,8 +253,12 @@ local function initializeLibrary(configs)
 
 	-- DEPRECATED: Use Core.Style instead
 	UIBlox.Style = {
-		Provider = require(script.Style.StyleProvider),
-		withStyle = require(script.Style.withStyle),
+		-- These redirect to Core, which ultimately redirect back to original.
+		-- If we do it this, switching to `UIBlox.Core.Style` is a separate step
+		-- from deprecating `UIBlox.Style`, and the latter is just an API naming
+		-- change with no other consequences
+		Provider = UIBlox.Core.Style.Provider,
+		withStyle = UIBlox.Core.Style.withStyle,
 		Validator = {
 			validateStyle = require(script.Style.Validator.validateStyle),
 			validateFont = require(script.Style.Validator.validateFont),

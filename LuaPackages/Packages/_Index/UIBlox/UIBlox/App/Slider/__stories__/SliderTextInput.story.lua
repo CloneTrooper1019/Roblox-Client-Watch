@@ -1,3 +1,5 @@
+-- DEPRECATED: This story is provided for backwards compatibility with horsecat and will be removed.
+-- Please only make changes to `src\Stories\Private\App\SliderTextInput.story.lua`
 local SliderRoot = script.Parent.Parent
 local App = SliderRoot.Parent
 local UIBlox = App.Parent

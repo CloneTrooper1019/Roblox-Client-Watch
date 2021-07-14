@@ -92,6 +92,9 @@ function ProductPurchaseRobuxUpsell:render()
 			RemainingBalance = {
 				key = LOC_KEY:format("Text.RemainingBalance"),
 			},
+			BuyRobuxButton = {
+				key = LOC_KEY:format("Action.BuyRobux"),
+			},
 			ButtonCancel = {
 				key = LOC_KEY:format("Action.Cancel"),
 			},
@@ -230,8 +233,7 @@ function ProductPurchaseRobuxUpsell:renderAlert(locMap)
 						props = {
 							isDisabled = self.props.isDisabled,
 							onActivated = self.props.buyItemActivated,
-							icon = ROBUX_ICON,
-							text = tostring(remainingRobux),
+							text = locMap.BuyRobuxButton,
 						},
 					},
 				},

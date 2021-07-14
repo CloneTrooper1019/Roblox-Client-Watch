@@ -1,6 +1,6 @@
 local Packages = script:FindFirstAncestor("Packages")
 local SocialLibraries = script:FindFirstAncestor("social-libraries")
-require(SocialLibraries).config({})
+require(SocialLibraries).config({ UIBloxConfig = {} })
 
 return function()
 	beforeAll(function(context)

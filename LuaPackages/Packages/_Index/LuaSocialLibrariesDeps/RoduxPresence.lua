@@ -3,7 +3,7 @@
 ]]
 local PackageIndex = script.Parent.Parent
 
-local package = PackageIndex["roblox_rodux-presence"]["rodux-presence"]
+local package = PackageIndex["roblox_rodux-presence-5fd815e4-a1b1ccc8"]["rodux-presence"]
 
 if package.ClassName == "ModuleScript" then
 	return require(package)

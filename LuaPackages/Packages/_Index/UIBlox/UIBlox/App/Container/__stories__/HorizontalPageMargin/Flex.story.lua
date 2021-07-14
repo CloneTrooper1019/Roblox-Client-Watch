@@ -1,3 +1,6 @@
+-- DEPRECATED: This story is provided for backwards compatibility with horsecat and will be removed.
+-- Please only make changes to `src\Stories\Private\App\Container\HorizontalPageMargin\Flex.story.lua`
+
 local Container = script:FindFirstAncestor("Container")
 local HorizontalPageMargin = require(Container.HorizontalPageMargin)
 

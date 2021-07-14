@@ -8,7 +8,7 @@ local Roact = require(Packages.Roact)
 local t = require(Packages.t)
 local Otter = require(Packages.Otter)
 
-local withStyle = require(UIBlox.Style.withStyle)
+local withStyle = require(UIBlox.Core.Style.withStyle)
 local Images = require(AppRoot.ImageSet.Images)
 local ImageSetLabel = require(UIBlox.Core.ImageSet.ImageSetComponent).Label
 local GenericTextLabel = require(UIBlox.Core.Text.GenericTextLabel.GenericTextLabel)

@@ -5,6 +5,7 @@ return function()
 	local Roact = require(UIBlox.Parent.Roact)
 	local mockStyleComponent = require(UIBlox.Utility.mockStyleComponent)
 	local Images = require(UIBlox.App.ImageSet.Images)
+	local UIBloxConfig = require(UIBlox.UIBloxConfig)
 
 	local DropdownMenu = require(script.Parent.DropdownMenu)
 
@@ -14,7 +15,10 @@ return function()
 				DropdownMenu = Roact.createElement(DropdownMenu, {
 					placeholder = "Placeholder Text",
 					onChange = print,
-					size = UDim2.new(0,250,0,48),
+					size = (not UIBloxConfig.fixDropdownMenuListPositionAndSize)
+						and UDim2.new(0,250,0,48) or nil,
+					height = UIBloxConfig.fixDropdownMenuListPositionAndSize
+						and UDim.new(0,48) or nil,
 					screenSize = Vector2.new(500,500),
 					cellDatas = {
 						{
@@ -41,7 +45,10 @@ return function()
 					errorState = false,
 					isDisabled = true,
 					onChange = print,
-					size = UDim2.new(0,250,0,48),
+					size = (not UIBloxConfig.fixDropdownMenuListPositionAndSize)
+						and UDim2.new(0,250,0,48) or nil,
+					height = UIBloxConfig.fixDropdownMenuListPositionAndSize
+						and UDim.new(0,48) or nil,
 					screenSize = Vector2.new(500,500),
 					cellDatas = {
 						{
