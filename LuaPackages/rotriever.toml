@@ -42,7 +42,7 @@ RoactGamepad = "github.com/roblox/roact-gamepad@0.4.6"
 TestEZ = "github.com/roblox/testez@0.4.0"
 Rhodium = "github.com/roblox/rhodium@0.2.5"
 DeveloperToolsOld = { git = "https://github.com/Roblox/developer-tools", rev = "90266d9" }
-DeveloperTools = "github.com/Roblox/developer-tools@=0.1.7"
+DeveloperTools = "github.com/Roblox/developer-tools@0.1.8"
 
 # Patch all dependencies upon rodux to the flagged indireciton package, which
 # will ensure that we always use only one rodux version

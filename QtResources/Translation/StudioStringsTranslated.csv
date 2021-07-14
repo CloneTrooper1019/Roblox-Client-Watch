@@ -1503,10 +1503,10 @@ Studio.App.LocalizationPlugin.ErrorWritingToFile1,,,Error writing to file %1,Err
 Studio.App.LocalizationPlugin.NoFileSelected,,,No file selected,No file selected,선택된 파일 없음,Файл не выбран,未选择文件
 Studio.App.Property.EnableCoreScriptDebugger,,,Enable CoreScript Debugger,Enable CoreScript Debugger,CoreScript 디버거 활성화,Включить отладчик CoreScript,启用 CoreScript 调试器
 Studio.App.Property.ShowRobloxPluginGUIServiceInExplorer,,,Show Roblox Plugin GUI Service in Explorer,Show Roblox Plugin GUI Service in Explorer,탐색기에서 Roblox 플러그인 GUI 서비스 표시,Показать службу плагина графического интерфейса Roblox в проводнике,在项目管理器中显示插件 GUI 服务
-Studio.App.RBXMainWindow.Sandbox,,,Sandbox,Sandbox,샌드박스,Песочница,沙盒
+Studio.App.RBXMainWindow.Sandbox,,,Drafts,Drafts,샌드박스,Песочница,沙盒
 Studio.App.RBXMainWindow.SaveActiveDocumentToRobloxAs,,,Save active document to Roblox as,Save active document to Roblox as,활성 문서를 다음 이름으로 Roblox에 저장,Сохранить активный документ в Roblox как,将活跃文档保存至 Roblox 并重命名
 Studio.App.RBXMainWindow.SaveToRobloxAsElps,,,Save to Roblox As...,Save to Roblox As...,다음으로 Roblox에 저장...,Сохранить в Roblox как....,保存至 Roblox 为...
-Studio.App.RBXMainWindow.ViewSandbox,,,View Sandbox,View Sandbox,샌드박스 보기,Просмотр песочницы,查看沙盒
+Studio.App.RBXMainWindow.ViewSandbox,,,View Drafts,View Drafts,샌드박스 보기,Просмотр песочницы,查看沙盒
 Studio.App.RBXMainWindow.ViewSelectorTooltip,,,Show view selector,Show view selector,보기 선택기 표시,Показывать выбор представления,显示视图选择器
 Studio.App.RobloxRibbonMainWindow.AngularVelocityTooltip,,,Create angular velocity constraint,Create angular velocity constraint,각속도 제약 생성,Создать ограничение угловой скорости,创建角速度约束
 Studio.App.UpdateUIManager.SaveTcDocToDiffSlot,,,Save Team Create Document to a different slot,Save Team Create Document to a different slot,팀 제작 문서를 다른 슬롯에 저장,Сохранить документ совместной разработки в другой ячейке,将组队创作文档发布至另一栏位
@@ -1886,7 +1886,7 @@ Studio.App.BetaFeatures.SetInstanceDefaultsWindowDescription,,,Set a Part or Scr
 Studio.App.BetaFeatures.SetInstanceDefaultsWindowTitle,,,Set Instance as Default,Set Instance as Default,인스턴스를 기본값으로 설정,Установить как экземпляр по умолчанию,将实例设置为默认
 Studio.App.BetaFeatures.SurfaceJoinChangesDescription,,,"Remove the 'Surface' Join Mode, all surfaces create ManualWelds.","Remove the 'Surface' Join Mode, all surfaces create ManualWelds.","'표면' 결합 모드를 제거하고, 모든 표면이 ManualWeld를 만듭니다.","Удалить режим соединения Surface, для всех поверхностей создадутся ManualWeld.",删除“表层”连接模式，所有表面都将创建 ManualWelds。
 Studio.App.BetaFeatures.SurfaceJoinChangesTitle,,,Surface Join Behavior Change,Surface Join Behavior Change,표면 결합 동작 변경,Изменение поведения соединений поверхностей,表层连接行为更改
-Studio.App.BetaFeatures.TryCoolFeaturesWithWarning,,,Try out cool new features before they are released to everyone! Please be aware that Beta features could be unstable. Your feedback is invaluable to us as we move towards building the imagination platform.,Try out cool new features before they are released to everyone! Please be aware that Beta features could be unstable. Your feedback is invaluable to us as we move towards building the imagination platform.,"공식적으로 출시되기 전에 새로운 Studio 기능을 사용해보세요! 단, 베타 기능은 불안정할 수 있습니다. 여러분이 보내주시는 피드백은 상상 플랫폼을 구현하는 데 상당히 큰 도움이 됩니다.","Станьте первыми, кто опробует новые возможности Studio! Пожалуйста, имейте в виду, что бета-функционал может работать нестабильно. Ваши отзывы крайне важны для нас - они позволяют нам совершенствовать эту творческую платформу.",抢先体验即将推出的 Studio 新功能！请注意，Beta 测试版功能可能存在稳定性问题，您的宝贵反馈将帮助我们打造一个更加完善的想象力平台。
+Studio.App.BetaFeatures.TryCoolFeaturesWithWarning,,,Try out cool new features before they are released to everyone! Please be aware that Beta features could be unstable. Your feedback is invaluable to us as we move towards building the imagination platform.,Try out cool new features before they are released to everyone! Please be aware that Beta features could be unstable. Your feedback is invaluable to us as we move towards building the imagination platform.,"공식적으로 출시되기 전에 새로운 기능을 사용해 보세요! 단, 베타 기능은 불안정할 수 있습니다. 여러분이 보내주시는 피드백은 상상 플랫폼을 구현하는 데 상당히 큰 도움이 됩니다.","Станьте первыми, кто опробует новые возможности Studio! Пожалуйста, имейте в виду, что бета-функционал может работать нестабильно. Ваши отзывы крайне важны для нас - они позволяют нам совершенствовать эту творческую платформу.",抢先体验即将推出的 Studio 新功能！请注意，Beta 测试版功能可能存在稳定性问题，您的宝贵反馈将帮助我们打造一个更加完善的想象力平台。
 Studio.App.DeclarationView.BackEnd,,,<b>Back-end: </b>This item can only be used from game servers and solo games.,<b>Back-end: </b>This item can only be used from game servers and solo games.,<b>백엔드: </b>이 항목은 게임 서버와 싱글 게임에서만 사용할 수 있습니다.,<b>Серверная часть: </b>Этот элемент может использоваться только с игровых серверов или в одиночных играх.,<b>后端:</b> 该项目只能在游戏服务器和单人游戏中使用。
 Studio.App.DeclarationView.Deprecated,,,<b>Deprecated: </b>This item is deprecated. Do not use it for new work.,<b>Deprecated: </b>This item is deprecated. Do not use it for new work.,<b>더 이상 사용되지 않음: </b>이 항목은 더 이상 사용되지 않습니다. 새 작업에 사용하지 마세요.,"<b>Устарело: </b>Этот элемент устарел, не используйте его в новых работах.",<b>已弃用:</b> 已弃用该项目。不要将其用于新工作。
 Studio.App.DeclarationView.MemberOf1,,,"Member of <label style=""font-weight: bold"">%1</label>","Member of <label style=""font-weight: bold"">%1</label>","<label style=""font-weight: bold"">%1</label> 회원","Входит в <label style=""font-weight: bold"">%1</label>","<label style=""font-weight: bold"">%1</label> 的成员"
@@ -3413,8 +3413,8 @@ Studio.App.BetaFeatures.LayeredClothingBetaDescription,,,The WrapTarget and Wrap
 Studio.App.BetaFeatures.LayeredClothingBetaTitle,,,Cage Mesh Deformer,Cage Mesh Deformer,케이지 메시 디포머,,笼形网格变形器
 Studio.App.BetaFeatures.ScriptEditorHoverDescription,,,"(! Works better with ""Scripts Are Non-Strict By Default"" Beta Feature ON !) Displays Luau type information when hovering over code in the script editor.","(! Works better with ""Scripts Are Non-Strict By Default"" Beta Feature ON !) Displays Luau type information when hovering over code in the script editor.",(! '스크립트에 기본적으로 비엄격 모드 적용' 베타 기능이 켜져 있을 때 더 잘 작동합니다 !) 스크립트 편집기에서 코드 위로 마우스를 가져가면 Luau 형식 정보가 표시됩니다.,,(！使用“脚本默认为非严格模式” Beta 测试版功能效果更佳！）在脚本编辑器中将鼠标悬停在代码上时会显示 Luau 类型信息。
 Studio.App.BetaFeatures.ScriptEditorHoverTitle,,,Luau-Powered Type Hover,Luau-Powered Type Hover,Luau 기반 형식 커서 올리기,,Luau 驱动悬停类型显示
-Studio.App.BetaFeatures.ScriptEditorLintDescription,,,Script Analysis Widget and linting logic get an upgrade! No major changes but many bug fixes and more intuitive behavior.,Script Analysis Widget and linting logic get an upgrade! No major changes but many bug fixes and more intuitive behavior.,스크립트 분석 위젯 및 린팅 로직이 업그레이드되었습니다! 큰 변화는 없지만 많은 버그가 수정되었고 더욱 직관적으로 작동합니다.,,脚本分析控件和 Lint 逻辑得到升级！此次升级并没有大规模变化，我们修复了许多错误，并使得一些操作更为直观。
-Studio.App.BetaFeatures.ScriptEditorLintTitle,,,Script Editor Linting,Script Editor Linting,스크립트 편집기 린팅,,脚本编辑器 Lint 检查
+Studio.App.BetaFeatures.ScriptEditorLintDescription,,,Script Analysis Widget and linting logic get an upgrade! No major changes but many bug fixes and more intuitive behavior.,Script Analysis Widget and linting logic get an upgrade! No major changes but many bug fixes and more intuitive behavior.,스크립트 분석 위젯 및 Lint 수행 로직이 업그레이드되었습니다! 큰 변화는 없지만 많은 버그가 수정되었고 더욱 직관적으로 작동합니다.,,脚本分析控件和 Lint 逻辑得到升级！此次升级并没有大规模变化，我们修复了许多错误，并使得一些操作更为直观。
+Studio.App.BetaFeatures.ScriptEditorLintTitle,,,Script Editor Linting,Script Editor Linting,스크립트 편집기 Lint 수행,,脚本编辑器 Lint 检查
 Studio.App.PackageContextMenu.MassUpdatePackage,,,Update All,Update All,모두 업데이트,,全部更新
 Studio.App.PackageContextMenu.PackageDetails,,,Package Details,Package Details,패키지 세부 정보,,包详情
 Studio.App.Property.ShowDeploymentWarnings,,,Show Deployment Warnings,Show Deployment Warnings,배포 경고 표시,,显示部署警告
@@ -3459,7 +3459,7 @@ Studio.App.BetaFeatures.NewGamesInCloudDescription,,,Allows saving games to the 
 Studio.App.BetaFeatures.NewGamesInCloudTitle,,,New Games in the Cloud,New Games in the Cloud,클라우드의 새로운 게임,,云端上的新游戏
 Studio.App.ImportCostVerificationDialog.LuobuVerificationDescription,,,Click 'Show Details' to view the files to be imported.,Click 'Show Details' to view the files to be imported.,가져올 파일을 보려면 '세부 정보 표시'를 클릭하세요.,,按下“显示详情”以查看要导入的文件。
 Studio.App.Updates.UpdateAvailableButton,,,Update Available,Update Available,업데이트 가능,,有可用更新
-Studio.App.BetaFeatures.FasterRaycastsDescription,,,Enables optimizations for faster raycasts.,Enables optimizations for faster raycasts.,레이 캐스팅 속도 최적화를 활성화합니다.,,启用光线投射速度优化。
+Studio.App.BetaFeatures.FasterRaycastsDescription,,,Enables optimizations for faster raycasts.,Enables optimizations for faster raycasts.,레이캐스팅 속도 최적화를 활성화합니다.,,启用光线投射速度优化。
 Studio.App.BetaFeatures.FasterRaycastsTitle,,,Optimized Raycasts,Optimized Raycasts,레이캐스팅 최적화,,光线投射优化
 Studio.App.BetaFeatures.ImprovedInnerBoxDescription,,,Enable a different algorithm for avatar Inner Box collision box sizing and positioning using margins around RigAttachment extents.,Enable a different algorithm for avatar Inner Box collision box sizing and positioning using margins around RigAttachment extents.,RigAttachment 범위 주변의 여백을 사용하여 아바타 안쪽 상자 충돌 상자의 크기 및 위치 지정에 대해 서로 다른 알고리즘을 활성화합니다.,,使用 RigAttachment 范围的边距启用不同的算法来调整虚拟形象内范围碰撞范围的大小和位置。
 Studio.App.BetaFeatures.ImprovedInnerBoxTitle,,,Improved Inner Box Avatar Collisions,Improved Inner Box Avatar Collisions,안쪽 상자 아바타 충돌 개선,,提升内范围虚拟形象碰撞
@@ -3494,15 +3494,75 @@ Studio.App.ScriptAnalysisWidget.ErrorDisplayToggle,,,Toggle lint error display,T
 Studio.App.ScriptAnalysisWidget.WarningDisplayToggle,,,Toggle lint warning display,Toggle lint warning display,Lint 경고 표시 토글,,切换 lint 警告显示
 Studio.App.BetaFeatures.LSPLuauAutocompleteDescription,,,"(! Works better with ""Scripts Are Non-Strict By Default"" Beta Feature ON !) Luau type inference now powers Autocomplete in Script Editor, allowing Autocomplete to offer suggestions based on the type of a variable, while enhancing performance and reliability.","(! Works better with ""Scripts Are Non-Strict By Default"" Beta Feature ON !) Luau type inference now powers Autocomplete in Script Editor, allowing Autocomplete to offer suggestions based on the type of a variable, while enhancing performance and reliability.","(! '스크립트에 기본적으로 비엄격 모드 적용' 베타 기능이 켜져 있을 때 더 잘 작동합니다 !) 이제 Luau 형식 유추는 스크립트 편집기의 자동 완성을 지원하여, 변수 형식에 따른 제안을 제공하는 동시에 성능과 안정성도 개선합니다.",,(！使用“脚本默认为非严格模式” Beta 测试版功能效果更佳！）脚本编辑器中的自动完成将由 Luau 类型推断驱动，允许自动完成根据变量的类型提供建议，提高了性能和可靠性。
 Studio.App.BetaFeatures.LSPLuauAutocompleteTitle,,,Luau-Powered Autocomplete,Luau-Powered Autocomplete,Luau 기반 자동 완성,,Luau 驱动自动完成
-Studio.App.BetaFeatures.CanQueryDescription,,,Enables property for excluding BaseParts from spatial queries such as raycasts. Only accesible when CanCollide is disabled.,Enables property for excluding BaseParts from spatial queries such as raycasts. Only accesible when CanCollide is disabled.,,,
-Studio.App.BetaFeatures.CanQueryTitle,,,Part property: CanQuery,Part property: CanQuery,,,
-Studio.App.BetaFeatures.ForumPostTitleEnding,,,%1 is now enabled,%1 is now enabled,,,
-Studio.App.PropertyTooltip.EnableLinting,,,Enable Script Editor error and warning detection,Enable Script Editor error and warning detection,,,
-Studio.App.PropertyTooltip.EnableSignatureHelp,,,Enable showing the types/names of function arguments when relevant,Enable showing the types/names of function arguments when relevant,,,
-Studio.App.PropertyTooltip.EnableTypeHover,,,Enable showing object type on cursor hover.,Enable showing object type on cursor hover.,,,
-Studio.App.Property.EnableLinting,,,Enable Linting,Enable Linting,,,
-Studio.App.Property.EnableSignatureHelp,,,Enable Signature Help,Enable Signature Help,,,
-Studio.App.Property.EnableTypeHover,,,Enable Type Hover,Enable Type Hover,,,
+Studio.App.BetaFeatures.CanQueryDescription,,,Enables property for excluding BaseParts from spatial queries such as raycasts. Only accesible when CanCollide is disabled.,Enables property for excluding BaseParts from spatial queries such as raycasts. Only accesible when CanCollide is disabled.,레이캐스팅와 같은 공간 쿼리에서 BasePart를 제외하기 위한 속성을 활성화합니다. CanCollide가 비활성화된 경우에만 액세스할 수 있습니다.,,
+Studio.App.BetaFeatures.CanQueryTitle,,,Part property: CanQuery,Part property: CanQuery,파트 속성: CanQuery,,
+Studio.App.BetaFeatures.ForumPostTitleEnding,,,%1 is now enabled,%1 is now enabled,%1이(가) 활성화되었습니다,,
+Studio.App.PropertyTooltip.EnableLinting,,,Enable Script Editor error and warning detection,Enable Script Editor error and warning detection,스크립트 편집기 오류 및 경고 감지를 활성화합니다,,
+Studio.App.PropertyTooltip.EnableSignatureHelp,,,Enable showing the types/names of function arguments when relevant,Enable showing the types/names of function arguments when relevant,관련이 있는 경우 함수 인수의 유형/이름 표시를 활성화합니다,,
+Studio.App.PropertyTooltip.EnableTypeHover,,,Enable showing object type on cursor hover.,Enable showing object type on cursor hover.,커서 올리기(가리키기) 시 개체 유형 표시를 활성화합니다.,,
+Studio.App.Property.EnableLinting,,,Enable Linting,Enable Linting,Lint 수행 활성화,,
+Studio.App.Property.EnableSignatureHelp,,,Enable Signature Help,Enable Signature Help,서명 도움말 활성화,,
+Studio.App.Property.EnableTypeHover,,,Enable Type Hover,Enable Type Hover,유형 가리키기 활성화,,
+Studio.App.AudioImportConfirmationDialog.ConfirmAudioImport,,,Confirm Audio Import,Confirm Audio Import,,,
+Studio.App.Authenticator.TwoStepFailedParse,,,"An error occurred while reading the response from the server. Please try again later, or contact support if the problem persists.","An error occurred while reading the response from the server. Please try again later, or contact support if the problem persists.",,,
+Studio.App.BetaFeatures.AssetManagerTitle,,,Asset Manager,Asset Manager,,,
+Studio.App.BetaFeatures.MinPartSizeDescription,,,"Reduces the minimum limit on part sizes from 0.05 to 0.001. Parts can be visually smaller, but will still limit to 0.05 for collision geometry for now.","Reduces the minimum limit on part sizes from 0.05 to 0.001. Parts can be visually smaller, but will still limit to 0.05 for collision geometry for now.",,,
+Studio.App.BetaFeatures.MinPartSizeTitle,,,Lower minimum part size,Lower minimum part size,,,
+Studio.App.Breakpoints.Breakpoints,,,Breakpoints,Breakpoints,,,
+Studio.App.BrowserServiceController.Hidden,,,(Hidden),(Hidden),,,
+Studio.App.BrowserServiceController.OSNotUpToDate,,,"Your OS is not up to date, some functions may not be fully supported","Your OS is not up to date, some functions may not be fully supported",,,
+Studio.App.BulkImportController.EmptyListToSplit,,,Got an empty list of assets to split. Please try again or contact support if the problem persists.,Got an empty list of assets to split. Please try again or contact support if the problem persists.,,,
+Studio.App.BulkImporterImpl.RetryLimitHitTryAgainIfNotExceedingDailyLimit,,,Upload retry limit for this asset has been reached. If daily limit hasn't been exceeded try again later.,Upload retry limit for this asset has been reached. If daily limit hasn't been exceeded try again later.,,,
+Studio.App.BulkImporterImpl.RetryLimitHitTryAgainLater,,,Retry limit hit. Try again later,Retry limit hit. Try again later,,,
+Studio.App.CoreScriptBuilder.ParseFailInvalidArg,,,Parsing port string failed with std::invalid_argument,Parsing port string failed with std::invalid_argument,,,
+Studio.App.CoreScriptBuilder.ParseFailOutOfRange,,,Parsing port string failed with std::out_of_range,Parsing port string failed with std::out_of_range,,,
+Studio.App.CoreScriptBuilder.WaitForReadyReadFailed1,,,QProcess::waitForReadyRead failed(%1),QProcess::waitForReadyRead failed(%1),,,
+Studio.App.CoreScriptBuilder.WaitForStartedFailed1,,,QProcess::waitForStarted failed(%1),QProcess::waitForStarted failed(%1),,,
+Studio.App.CoreScriptBuilder.WaitForStartedFailedHelp,,,This error usually means that robloxdev-cli could not be found. Have you made sure that robloxdev-cli is in your PATH or you have set FFlagDebugStudioCoreScriptBuilderExecutable to point to the right location?,This error usually means that robloxdev-cli could not be found. Have you made sure that robloxdev-cli is in your PATH or you have set FFlagDebugStudioCoreScriptBuilderExecutable to point to the right location?,,,
+Studio.App.Deployment.CSBFailure,,,Failed to initialize CoreScriptBuilder with: %1,Failed to initialize CoreScriptBuilder with: %1,,,
+Studio.App.EmbeddedFindReplaceWidget.KofNMatch2,,,%1 of %2 matches,%1 of %2 matches,,,
+Studio.App.LocalPlacePublishRequestMediator.SentMessageToServerToPublish,,,Sent message to server to publish.,Sent message to server to publish.,,,
+Studio.App.LoginRequest.GenericError,,,Login error. Please try again.,Login error. Please try again.,,,
+Studio.App.LoginRequest.UserIdError,,,Could not get user id from server.,Could not get user id from server.,,,
+Studio.App.Login.UserModerated,,,"User is moderated, please check website for more details.","User is moderated, please check website for more details.",,,
+Studio.App.MainWindow.VersionLatest1,,,Latest version available %1,Latest version available %1,,,
+Studio.App.MeshPartLOD.FidelityWarning1,,,Failed to change renderFidelity for asset id %1,Failed to change renderFidelity for asset id %1,,,
+Studio.App.PackageManagementVerbs.ThisModifiesPackage,,,"This object has 3D content but is not a Model, so moving or rotating it will count as modifying the Package. Are you sure you want to continue?","This object has 3D content but is not a Model, so moving or rotating it will count as modifying the Package. Are you sure you want to continue?",,,
+Studio.App.PlaceVersionHistoryDialog.Title1,,,%1 - Version History,%1 - Version History,,,
+Studio.App.Property.SecondaryColor,,,Menu Secondary Text Color,Menu Secondary Text Color,,,
+Studio.App.RBXMainWindow.CleansUpAllClientsAndServer,,,Clean up all clients and servers,Clean up all clients and servers,,,
+Studio.App.RBXMainWindow.SelectConnection0,,,Select Connection 0,Select Connection 0,,,
+Studio.App.RBXMainWindow.SelectConnection1,,,Select Connection 1,Select Connection 1,,,
+Studio.App.RBXMainWindow.SetAsInstanceDefaultStatusTip,,,Set the selection as the default for future created instances,Set the selection as the default for future created instances,,,
+Studio.App.RemoteDebugger.ErrorAssetMissing,,,Asset not found or not accessible to ContentProvider,Asset not found or not accessible to ContentProvider,,,
+Studio.App.RemoteDebugger.ErrorDuplicateId,,,Duplicate Asset ID,Duplicate Asset ID,,,
+Studio.App.RenderScheduler.DeprecatedDirect3D9,,,"On August 16th, the Roblox application will require DirectX 10 or higher feature level support.
+
+To keep using the Roblox application, please use a device that is compatible with Roblox’s system requirements.","On August 16th, the Roblox application will require DirectX 10 or higher feature level support.
+
+To keep using the Roblox application, please use a device that is compatible with Roblox’s system requirements.",,,
+Studio.App.RenderScheduler.NoRenderBackend,,,"Your computer's graphics card is not compatible with Roblox's minimum system requirements.
+
+Visit https://www.roblox.com/drivers for more information.","Your computer's graphics card is not compatible with Roblox's minimum system requirements.
+
+Visit https://www.roblox.com/drivers for more information.",,,
+Studio.App.RobloxMainWindow.DocHistoryBackwards,,,Step backwards through tab history,Step backwards through tab history,,,
+Studio.App.RobloxMainWindow.DocHistoryForwards,,,Step forwards through tab history,Step forwards through tab history,,,
+Studio.App.RobloxMainWindow.InternalFeaturesMessageBoxContent,,,"Your account is associated with an @roblox.com email address or has Soothsayer permissions. You also have internal-only features turned on.
+Do you want to disable Internal Features? This will make your Studio experience identical to developers.
+You can go to Settings > Studio > Advanced to re-enable Internal Features.","Your account is associated with an @roblox.com email address or has Soothsayer permissions. You also have internal-only features turned on.
+Do you want to disable Internal Features? This will make your Studio experience identical to developers.
+You can go to Settings > Studio > Advanced to re-enable Internal Features.",,,
+Studio.App.RobloxMainWindow.InternalFeaturesRestart,,,Restart Roblox Studio,Restart Roblox Studio,,,
+Studio.App.RobloxMainWindow.InternalFeaturesRestartDetails,,,Roblox Studio need to restart to disable Internal Features,Roblox Studio need to restart to disable Internal Features,,,
+Studio.App.RobloxOutputRibbonDropdown.SelectMessagesOnly,,,Select Messages Only,Select Messages Only,,,
+Studio.App.RobloxRibbonMainWindow.NoCollisionConstraint,,,No Collision,No Collision,,,
+Studio.App.RobloxRibbonMainWindow.NoCollisionConstraintTooltip,,,Create a no collision constraint,Create a no collision constraint,,,
+Studio.App.RobloxRibbonMainWindow.WhatsNew,,,What's New,What's New,,,
+Studio.App.StudioDataModelLoadUtil.ErrorCannotOpenTCPlaceDueToVersionConflictGlobal,,,Global Studio does not support joining a TeamCreate session with a Luobu Studio developer. Please download Luobu Studio to use TeamCreate together: www.robloxdev.cn,Global Studio does not support joining a TeamCreate session with a Luobu Studio developer. Please download Luobu Studio to use TeamCreate together: www.robloxdev.cn,,,
+Studio.App.StudioDataModelLoadUtil.ErrorCannotOpenTCPlaceDueToVersionConflictLuobu,,,Luobu Studio does not support joining a TeamCreate session with a global Studio developer. Please ask your teammates to download Loubu Studio to use TeamCreate together: www.robloxdev.cn,Luobu Studio does not support joining a TeamCreate session with a global Studio developer. Please ask your teammates to download Loubu Studio to use TeamCreate together: www.robloxdev.cn,,,
+Studio.App.UploadImageRequest.CouldNotOpenFile,,,Could not open file %1,Could not open file %1,,,
+Studio.App.Watch.Watch,,,Watch,Watch,,,
 Studio.Common.Action.Apply,,,Apply,Apply,적용,Применить,应用
 Studio.Common.Action.Back,,,Back,Back,뒤로,Назад,返回
 Studio.Common.Action.Cancel,,,Cancel,Cancel,취소,Отмена,取消

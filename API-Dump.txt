@@ -57,6 +57,7 @@ Class Accoutrement : Instance
 	Property Vector3 Accoutrement.AttachmentRight [<📁> LoadOnly] [NotReplicated]
 	Property Vector3 Accoutrement.AttachmentUp [<📁> LoadOnly] [NotReplicated]
 Class Accessory : Accoutrement
+	Property Enum.AccessoryType Accessory.AccessoryType {✏️NotAccessibleSecurity}
 Class Hat : Accoutrement [Deprecated]
 Class AdService : Instance [NotCreatable] [Service] [Deprecated]
 	Function void AdService:ShowVideoAd() [Deprecated]
@@ -73,8 +74,8 @@ Class Animation : Instance
 	Property Content Animation.AnimationId
 Class AnimationController : Instance [Deprecated]
 	Function Array AnimationController:GetPlayingAnimationTracks() [Deprecated]
-	Function Instance AnimationController:LoadAnimation(Instance animation) [Deprecated]
-	Event AnimationController.AnimationPlayed(Instance animationTrack) [Deprecated]
+	Function AnimationTrack AnimationController:LoadAnimation(Animation animation) [Deprecated]
+	Event AnimationController.AnimationPlayed(AnimationTrack animationTrack) [Deprecated]
 Class AnimationTrack : Instance [NotCreatable]
 	Property Animation AnimationTrack.Animation [ReadOnly]
 	Property bool AnimationTrack.IsPlaying [ReadOnly]
@@ -97,9 +98,9 @@ Class AnimationTrack : Instance [NotCreatable]
 Class Animator : Instance
 	Function void Animator:ApplyJointVelocities(Variant motors)
 	Function Array Animator:GetPlayingAnimationTracks()
-	Function Instance Animator:LoadAnimation(Instance animation)
+	Function AnimationTrack Animator:LoadAnimation(Animation animation)
 	Function void Animator:StepAnimations(float deltaTime) {PluginSecurity}
-	Event Animator.AnimationPlayed(Instance animationTrack)
+	Event Animator.AnimationPlayed(AnimationTrack animationTrack)
 Class AppUpdateService : Instance [NotCreatable] [Service] [NotReplicated]
 	Function void AppUpdateService:CheckForUpdate(Function handler = nil) {RobloxScriptSecurity}
 	Function void AppUpdateService:DisableDUAR() {RobloxScriptSecurity}
@@ -447,14 +448,14 @@ Class Camera : Instance [NotReplicated]
 	Function float Camera:GetTiltSpeed()
 	Function void Camera:Interpolate(CFrame endPos, CFrame endFocus, float duration) [Deprecated]
 	Function void Camera:PanUnits(int units) [Deprecated]
-	Function Ray Camera:ScreenPointToRay(float x, float y, float depth = 0)
+	Function Ray Camera:ScreenPointToRay(float x, float y, float depth = 0) {🧬Safe}
 	Function void Camera:SetCameraPanMode(Enum.CameraPanMode mode = "Classic")
 	Function void Camera:SetImageServerView(CFrame modelCoord) {RobloxScriptSecurity}
 	Function void Camera:SetRoll(float rollAngle)
 	Function bool Camera:TiltUnits(int units) [Deprecated]
-	Function Ray Camera:ViewportPointToRay(float x, float y, float depth = 0)
-	Function Tuple Camera:WorldToScreenPoint(Vector3 worldPoint)
-	Function Tuple Camera:WorldToViewportPoint(Vector3 worldPoint)
+	Function Ray Camera:ViewportPointToRay(float x, float y, float depth = 0) {🧬Safe}
+	Function Tuple Camera:WorldToScreenPoint(Vector3 worldPoint) {🧬Safe}
+	Function Tuple Camera:WorldToViewportPoint(Vector3 worldPoint) {🧬Safe}
 	Function bool Camera:Zoom(float distance) {RobloxScriptSecurity}
 	Event Camera.FirstPersonTransition(bool entering) {LocalUserSecurity}
 	Event Camera.InterpolationFinished()
@@ -624,6 +625,11 @@ Class RopeConstraint : Constraint
 	Property float RopeConstraint.CurrentDistance [ReadOnly]
 	Property float RopeConstraint.Length
 	Property float RopeConstraint.Restitution
+	Property bool RopeConstraint.WinchEnabled
+	Property float RopeConstraint.WinchForce
+	Property float RopeConstraint.WinchResponsiveness
+	Property float RopeConstraint.WinchSpeed
+	Property float RopeConstraint.WinchTarget
 Class SlidingBallConstraint : Constraint [NotCreatable]
 	Property float SlidingBallConstraint.Size
 	Property float SlidingBallConstraint.CurrentPosition [ReadOnly]
@@ -679,7 +685,8 @@ Class TorsionSpringConstraint : Constraint
 	Property float TorsionSpringConstraint.MaxAngle
 	Property float TorsionSpringConstraint.Restitution
 	Property float TorsionSpringConstraint.Damping
-	Property bool TorsionSpringConstraint.LimitEnabled
+	Property bool TorsionSpringConstraint.LimitEnabled [Hidden] [Deprecated]
+	Property bool TorsionSpringConstraint.LimitsEnabled
 	Property float TorsionSpringConstraint.MaxTorque
 	Property float TorsionSpringConstraint.Stiffness
 Class UniversalConstraint : Constraint
@@ -1550,15 +1557,15 @@ Class Humanoid : Instance
 	Function void Humanoid:AddAccessory(Instance accessory)
 	Function bool Humanoid:AddCustomStatus(string status) [Deprecated]
 	Function bool Humanoid:AddStatus(Enum.Status status = "Poison") [Deprecated]
-	Function void Humanoid:ApplyDescription(Instance humanoidDescription, Enum.AssetTypeVerification assetTypeVerification = "Default") [Yields]
-	Function void Humanoid:ApplyDescriptionBlocking(Instance humanoidDescription) {RobloxScriptSecurity}
-	Function void Humanoid:ApplyDescriptionClientServer(Instance humanoidDescription) {RobloxScriptSecurity} [Yields]
+	Function void Humanoid:ApplyDescription(HumanoidDescription humanoidDescription, Enum.AssetTypeVerification assetTypeVerification = "Default") [Yields]
+	Function void Humanoid:ApplyDescriptionBlocking(HumanoidDescription humanoidDescription) {RobloxScriptSecurity}
+	Function void Humanoid:ApplyDescriptionClientServer(HumanoidDescription humanoidDescription) {RobloxScriptSecurity} [Yields]
 	Function void Humanoid:BuildRigFromAttachments()
 	Function void Humanoid:CacheDefaults() {RobloxScriptSecurity}
 	Function void Humanoid:ChangeState(Enum.HumanoidStateType state = "None")
 	Function void Humanoid:EquipTool(Instance tool)
 	Function Array Humanoid:GetAccessories()
-	Function Instance Humanoid:GetAppliedDescription()
+	Function HumanoidDescription Humanoid:GetAppliedDescription()
 	Function Enum.BodyPartR15 Humanoid:GetBodyPartR15(Instance part)
 	Function Enum.Limb Humanoid:GetLimb(Instance part)
 	Function Array Humanoid:GetPlayingAnimationTracks() [Deprecated]
@@ -1567,7 +1574,7 @@ Class Humanoid : Instance
 	Function Array Humanoid:GetStatuses() [Deprecated]
 	Function bool Humanoid:HasCustomStatus(string status) [Deprecated]
 	Function bool Humanoid:HasStatus(Enum.Status status = "Poison") [Deprecated]
-	Function Instance Humanoid:LoadAnimation(Instance animation) [Deprecated]
+	Function AnimationTrack Humanoid:LoadAnimation(Animation animation) [Deprecated]
 	Function void Humanoid:Move(Vector3 moveDirection, bool relativeToCamera = false)
 	Function void Humanoid:MoveTo(Vector3 location, Instance part = nil)
 	Function bool Humanoid:PlayEmote(string emoteName) [Yields]
@@ -1575,12 +1582,12 @@ Class Humanoid : Instance
 	Function void Humanoid:RemoveAccessories()
 	Function bool Humanoid:RemoveCustomStatus(string status) [Deprecated]
 	Function bool Humanoid:RemoveStatus(Enum.Status status = "Poison") [Deprecated]
-	Function bool Humanoid:ReplaceBodyPartR15(Enum.BodyPartR15 bodyPart, Instance part)
+	Function bool Humanoid:ReplaceBodyPartR15(Enum.BodyPartR15 bodyPart, BasePart part)
 	Function void Humanoid:SetClickToWalkEnabled(bool enabled) {RobloxScriptSecurity}
 	Function void Humanoid:SetStateEnabled(Enum.HumanoidStateType state, bool enabled)
 	Function void Humanoid:TakeDamage(float amount)
 	Function void Humanoid:UnequipTools()
-	Event Humanoid.AnimationPlayed(Instance animationTrack) [Deprecated]
+	Event Humanoid.AnimationPlayed(AnimationTrack animationTrack) [Deprecated]
 	Event Humanoid.Climbing(float speed)
 	Event Humanoid.ClusterCompositionFinished() {RobloxScriptSecurity}
 	Event Humanoid.CustomStatusAdded(string status) [Deprecated]
@@ -1595,14 +1602,14 @@ Class Humanoid : Instance
 	Event Humanoid.PlatformStanding(bool active)
 	Event Humanoid.Ragdoll(bool active)
 	Event Humanoid.Running(float speed)
-	Event Humanoid.Seated(bool active, Instance currentSeatPart)
+	Event Humanoid.Seated(bool active, BasePart currentSeatPart)
 	Event Humanoid.StateChanged(Enum.HumanoidStateType old, Enum.HumanoidStateType new)
 	Event Humanoid.StateEnabledChanged(Enum.HumanoidStateType state, bool isEnabled)
 	Event Humanoid.StatusAdded(Enum.Status status) [Deprecated]
 	Event Humanoid.StatusRemoved(Enum.Status status) [Deprecated]
 	Event Humanoid.Strafing(bool active)
 	Event Humanoid.Swimming(float speed)
-	Event Humanoid.Touched(Instance touchingPart, Instance humanoidPart)
+	Event Humanoid.Touched(BasePart touchingPart, BasePart humanoidPart)
 Class HumanoidDescription : Instance
 	Property string HumanoidDescription.AccessoryBlob [NotScriptable]
 	Property string HumanoidDescription.BackAccessory
@@ -2815,7 +2822,6 @@ Class ReflectionMetadataItem : Instance [NotCreatable]
 	Property double ReflectionMetadataItem.UIMaximum
 	Property double ReflectionMetadataItem.UIMinimum
 	Property double ReflectionMetadataItem.UINumTicks
-	Property string ReflectionMetadataItem.summary
 Class ReflectionMetadataClass : ReflectionMetadataItem
 	Property int ReflectionMetadataClass.ExplorerImageIndex
 	Property int ReflectionMetadataClass.ExplorerOrder
@@ -2950,8 +2956,8 @@ Class ServerScriptService : Instance [NotCreatable] [Service] [NotReplicated]
 	Property bool ServerScriptService.LoadStringEnabled [NotReplicated] [NotScriptable]
 Class ServerStorage : Instance [NotCreatable] [Service] [NotReplicated]
 Class ServiceProvider : Instance [NotCreatable] [NotBrowsable]
-	Function Instance ServiceProvider:FindService(string className)
-	Function Instance ServiceProvider:GetService(string className)
+	Function Instance ServiceProvider:FindService(string className) {🧬Safe}
+	Function Instance ServiceProvider:GetService(string className) {🧬Safe}
 	Function Instance ServiceProvider:service(string className) [Deprecated]
 	Event ServiceProvider.Close()
 	Event ServiceProvider.CloseLate() {LocalUserSecurity}
@@ -3513,6 +3519,7 @@ Class TestService : Instance [Service]
 	Function void TestService:Message(string text, Instance source = nil, int line = 0)
 	Function void TestService:Require(bool condition, string description, Instance source = nil, int line = 0)
 	Function void TestService:Run() {PluginSecurity} [Yields]
+	Function Dictionary TestService:ScopeTime()
 	Function void TestService:Warn(bool condition, string description, Instance source = nil, int line = 0)
 	Function bool TestService:isFeatureEnabled(string name)
 	Event TestService.ServerCollectConditionalResult(bool condition, string text, Instance script, int line)
@@ -3586,6 +3593,7 @@ Class UGCValidationService : Instance [NotCreatable] [Service] [NotReplicated]
 	Function Objects UGCValidationService:FetchAssetWithFormat(Content url, string assetFormat) {RobloxScriptSecurity} [Yields]
 	Function int UGCValidationService:GetMeshTriCount(string meshId) {RobloxScriptSecurity} [Yields]
 	Function int UGCValidationService:GetMeshTriCountSync(string meshId) {RobloxScriptSecurity}
+	Function Array UGCValidationService:GetMeshVertColors(string meshId) {RobloxScriptSecurity} [Yields]
 	Function Array UGCValidationService:GetMeshVerts(string meshId) {RobloxScriptSecurity} [Yields]
 	Function Array UGCValidationService:GetMeshVertsSync(string meshId) {RobloxScriptSecurity}
 	Function Vector2 UGCValidationService:GetTextureSize(string textureId) {RobloxScriptSecurity} [Yields]
@@ -3918,23 +3926,24 @@ Enum ABTestLoadingStatus
 	EnumItem ABTestLoadingStatus.TimedOut : 4
 	EnumItem ABTestLoadingStatus.ShutOff : 5
 Enum AccessoryType
-	EnumItem AccessoryType.Hat : 0
-	EnumItem AccessoryType.Hair : 1
-	EnumItem AccessoryType.Face : 2
-	EnumItem AccessoryType.Neck : 3
-	EnumItem AccessoryType.Shoulder : 4
-	EnumItem AccessoryType.Front : 5
-	EnumItem AccessoryType.Back : 6
-	EnumItem AccessoryType.Waist : 7
-	EnumItem AccessoryType.TShirt : 8
-	EnumItem AccessoryType.Shirt : 9
-	EnumItem AccessoryType.Pants : 10
-	EnumItem AccessoryType.Jacket : 11
-	EnumItem AccessoryType.Sweater : 12
-	EnumItem AccessoryType.Shorts : 13
-	EnumItem AccessoryType.LeftShoe : 14
-	EnumItem AccessoryType.RightShoe : 15
-	EnumItem AccessoryType.DressSkirt : 16
+	EnumItem AccessoryType.Unknown : 0
+	EnumItem AccessoryType.Hat : 1
+	EnumItem AccessoryType.Hair : 2
+	EnumItem AccessoryType.Face : 3
+	EnumItem AccessoryType.Neck : 4
+	EnumItem AccessoryType.Shoulder : 5
+	EnumItem AccessoryType.Front : 6
+	EnumItem AccessoryType.Back : 7
+	EnumItem AccessoryType.Waist : 8
+	EnumItem AccessoryType.TShirt : 9
+	EnumItem AccessoryType.Shirt : 10
+	EnumItem AccessoryType.Pants : 11
+	EnumItem AccessoryType.Jacket : 12
+	EnumItem AccessoryType.Sweater : 13
+	EnumItem AccessoryType.Shorts : 14
+	EnumItem AccessoryType.LeftShoe : 15
+	EnumItem AccessoryType.RightShoe : 16
+	EnumItem AccessoryType.DressSkirt : 17
 Enum ActionType
 	EnumItem ActionType.Nothing : 0
 	EnumItem ActionType.Pause : 1

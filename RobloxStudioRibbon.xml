@@ -36,7 +36,6 @@
         <addaction name="exportPlaceAction"/>
         <addaction name="shortcutHelpAction"/>
         <addaction name="managePluginsAction"/>
-        <addaction fflag ="StudioAddResetDefaultInstanceProperties" name="resetDefaultInstancePropertiesAction"/>
         <addaction name="flagEditorAction"/>
       </submenu>
       <addseparator />
@@ -258,7 +257,7 @@
           <addaction name="createSpringConstraintAction" style="textundericon" iscommonslot="true" text="Studio.App.RobloxRibbonMainWindow.Spring" tooltip="Studio.App.RobloxRibbonMainWindow.CreateSpringConstraint" icon=":/RibbonBar/images/RibbonIcons/Physics/spring-32x32.png" width="32" height="32" />
           <addaction fflag="SimSolverTorsionSpringEnabled" name="createTorsionSpringConstraintAction" style="textundericon" iscommonslot="true" text="Studio.App.RobloxRibbonMainWindow.TorsionSpring" tooltip="Studio.App.RobloxRibbonMainWindow.CreateTorsionSpringConstraint" icon=":/RibbonBar/images/RibbonIcons/Physics/torsion-spring-32x32.png" width="32" height="32" />
           <addaction name="createWeldConstraintAction" style="textundericon" iscommonslot="true" text="Studio.App.RobloxRibbonMainWindow.Weld" tooltip="Studio.App.RobloxRibbonMainWindow.CreateWeldConstraint" icon=":/RibbonBar/images/RibbonIcons/Physics/weld-32x32.png" width="32" height="32" />
-          <addaction name="createNoCollisionConstraintAction" style="textundericon" iscommonslot="true" text="Studio.App.RobloxRibbonMainWindow.NoCollision" tooltip="Studio.App.RobloxRibbonMainWindow.NoCollisionTooltip" icon=":/RibbonBar/images/RibbonIcons/Physics/no-collision-32x32.png" width="32" height="32" />
+          <addaction name="createNoCollisionConstraintAction" style="textundericon" iscommonslot="true" text="Studio.App.RobloxRibbonMainWindow.NoCollisionConstraint" tooltip="Studio.App.RobloxRibbonMainWindow.NoCollisionConstraintTooltip" icon=":/RibbonBar/images/RibbonIcons/Physics/no-collision-32x32.png" width="32" height="32" />
           <addseparator visible="true"/>
           <addaction name="createAlignOrientationAction" style="textundericon" iscommonslot="true" text="Studio.App.RobloxRibbonMainWindow.AlignOrientation" tooltip="Studio.App.RobloxRibbonMainWindow.CreateAlignOrientation" icon=":/RibbonBar/images/RibbonIcons/Physics/align-orientation-32x32.png" width="32" height="32" />
           <addaction name="createAlignPositionAction" style="textundericon" iscommonslot="true" text="Studio.App.RobloxRibbonMainWindow.AlignPosition" tooltip="Studio.App.RobloxRibbonMainWindow.CreateAlignPosition" icon=":/RibbonBar/images/RibbonIcons/Physics/align-position-32x32.png" width="32" height="32" />
@@ -373,9 +372,9 @@
         <addaction name="toggleOutputWindowDockAction" style="textbesideicon" icon=":/RibbonBar/images/RibbonIcons/View/Output.png" tooltip="Studio.App.RobloxRibbonMainWindow.OutputFeedOfScripts" text="Studio.App.RBXMainWindow.Output" height="32" width="32"/>
         <addaction name="toggleScriptAnalysisDockAction" style="textbesideicon" icon=":/RibbonBar/images/RibbonIcons/View/Output.png" tooltip="Studio.App.RobloxRibbonMainWindow.ViewScriptAnalysis" height="32" width="32"/>
         <addaction name="viewCommandBarAction" style="textbesideicon" icon=":/RibbonBar/images/RibbonIcons/View/Output.png" tooltip="Studio.App.RBXMainWindow.ViewCommandBar" text="Studio.App.RBXMainWindow.CommandBar" height="32" width="32"/>
-        <addaction debugOnly="true" name="breakpointsDockWidgetAction" style="textbesideicon" icon=":/RibbonBar/images/RibbonIcons/View/Breakpoint.png" tooltip="Studio.App.RobloxRibbonMainWindow.ViewExistingBreakpoints" height="32" width="32"/>
-        <addaction debugOnly="true" name="callStackDockWidgetAction" style="textbesideicon" icon=":/RibbonBar/images/RibbonIcons/View/Call-Stack.png" tooltip="Studio.App.RobloxRibbonMainWindow.ViewCurrentCallStack" height="32" width="32"/>
-        <addaction debugOnly="true" name="watchDockWidgetAction" style="textbesideicon" icon=":/RibbonBar/images/RibbonIcons/Test/Watch-Window.png" tooltip="Studio.App.RobloxRibbonMainWindow.ViewCurrentlyWatchedVariables" height="32" width="32"/>
+        <addaction fflag="!DebuggerPlugin" debugOnly="true" name="breakpointsDockWidgetAction" style="textbesideicon" icon=":/RibbonBar/images/RibbonIcons/View/Breakpoint.png" tooltip="Studio.App.RobloxRibbonMainWindow.ViewExistingBreakpoints" height="32" width="32"/>
+        <addaction fflag="!DebuggerPlugin" debugOnly="true" name="callStackDockWidgetAction" style="textbesideicon" icon=":/RibbonBar/images/RibbonIcons/View/Call-Stack.png" tooltip="Studio.App.RobloxRibbonMainWindow.ViewCurrentCallStack" height="32" width="32"/>
+        <addaction fflag="!DebuggerPlugin" debugOnly="true" name="watchDockWidgetAction" style="textbesideicon" icon=":/RibbonBar/images/RibbonIcons/Test/Watch-Window.png" tooltip="Studio.App.RobloxRibbonMainWindow.ViewCurrentlyWatchedVariables" height="32" width="32"/>
         <addaction name="toggleDiagnosticsDockAction" style="textbesideicon" icon=":/RibbonBar/images/RibbonIcons/View/Diagnostics.png"  tooltip="Studio.App.RobloxRibbonMainWindow.ViewDiagnosticInfo" height="32" width="32"/>
         <addaction name="toggleTaskSchedulerDockAction" style="textbesideicon" icon=":/RibbonBar/images/RibbonIcons/View/Task-Scheduler.png" tooltip="Studio.App.RobloxRibbonMainWindow.ViewTaskExecutionInformation" height="32" width="32"/>
         <addaction name="toggleScriptPerformanceDockAction" style="textbesideicon" icon=":/RibbonBar/images/RibbonIcons/View/Script-Performance.png" tooltip="Studio.App.RobloxRibbonMainWindow.ViewScriptPerformanceInformat" height="32" width="32"/>
@@ -393,8 +392,11 @@
             icon=":/images/RibbonIcons/Terrain/icon_terrain_big.png"
             height="32"
             width="32"/>
-        <addaction name="toggleDraftsDockAction" style="textbesideicon" text="Studio.App.RBXMainWindow.Drafts" tooltip="Studio.App.RBXMainWindow.ViewDrafts" icon=":/RibbonBar/images/RibbonIcons/View/Drafts.png" width="32" height="32" ischeckable="true" fflag="StudioShipCollaborativeEditingV0"/>
-        <addaction fflag="DebugStudioAssetProxy" name="remoteDebugDockWidgetAction" style="textbesideicon" text="Studio.App.RemoteDebugger.Title" tooltip="Studio.App.RemoteDebugger.Title" height="32" width="32" />
+        <addaction name="toggleDraftsDockAction" style="textbesideicon" text="Studio.App.RBXMainWindow.Sandbox" tooltip="Studio.App.RBXMainWindow.ViewSandbox" icon=":/RibbonBar/images/RibbonIcons/View/Drafts.png" width="32" height="32" ischeckable="true" fflag="StudioShipCollaborativeEditingV0"/>
+		<addaction fflag="DebuggerPlugin" name="callStackDockWidgetActionV2" type="plugin" style="textbesideicon" icon=":/RibbonBar/images/RibbonIcons/View/Breakpoint.png" text="Studio.App.CallStack.CallStack" tooltip="Studio.App.RobloxRibbonMainWindow.ViewCurrentCallStack" height="32" width="32"/>
+		<addaction fflag="DebuggerPlugin" name="breakpointsDockWidgetActionV2" type="plugin" style="textbesideicon" icon=":/RibbonBar/images/RibbonIcons/View/Call-Stack.png" text="Studio.App.Breakpoints.Breakpoints" tooltip="Studio.App.RobloxRibbonMainWindow.ViewExistingBreakpoints" height="32" width="32"/>
+		<addaction fflag="DebuggerPlugin" name="watchDockWidgetActionV2" type="plugin" style="textbesideicon" icon=":/RibbonBar/images/RibbonIcons/Test/Watch-Window.png" text="Studio.App.Watch.Watch" tooltip="Studio.App.RobloxRibbonMainWindow.ViewCurrentlyWatchedVariables" height="32" width="32"/>
+		<addaction fflag="DebugStudioAssetProxy" name="remoteDebugDockWidgetAction" style="textbesideicon" text="Studio.App.RemoteDebugger.Title" tooltip="Studio.App.RemoteDebugger.Title" height="32" width="32" />
       </Group>
       <Group name="Actions" text="Studio.App.RobloxRibbonMainWindow.Actions">
         <addaction name="viewSelectorAction" style="textundericon" text="Studio.App.RBXMainWindow.ViewSelector" tooltip="Studio.App.RBXMainWindow.ViewSelectorTooltip" type="plugin" icon=":/RibbonBar/images/RibbonIcons/View/View-Selector.png" width="32" height="32"/>

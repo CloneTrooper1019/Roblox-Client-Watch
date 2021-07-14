@@ -48,6 +48,7 @@ CloudsDistFS,Fragment
 CloudsFS,Fragment
 CloudsOldFS,Fragment
 CloudsReprojectFilterFS,Fragment
+CloudsUpsampleNoHistoryFS,Fragment
 CloudsVS,Vertex
 CopyGuiVS,Vertex
 DefaultDepthFS,Fragment

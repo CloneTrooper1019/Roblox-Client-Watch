@@ -1124,6 +1124,26 @@
         Resumes the passed thread or function instantly using the engine's scheduler
       </description>
     </Function>
+
+    <Function name="delay" static="true">
+      <returns>
+      </returns>
+      <parameters>
+      </parameters>
+      <description>
+        Delays the passed thread or function until the given duration has elapsed. Resumes on engine Heartbeat
+      </description>
+    </Function>
+
+    <Function name="wait" static="true">
+      <returns>
+      </returns>
+      <parameters>
+      </parameters>
+      <description>
+        Delay the current thread until the given duration has elapsed. Resumes on engine Heartbeat
+      </description>
+    </Function>
   </LuaLibrary>
 
   <ItemStruct name="Instance">

@@ -56,11 +56,12 @@ Studio.App.AttributeRenameDialog.AttributeNameCantBeEmpty,Displayed when trying 
 Studio.App.AttributeRenameDialog.AttributeNameCantStartWithRBX,Displayed when editing and trying to add RBX at the beginning.,Attribute name can't start with 'RBX'.,Attribute name can't start with 'RBX'.
 Studio.App.AttributeRenameDialog.AttributeNameExceeds1,Displayed when exceeding maximum charecters while editing.,Attribute name exceeds %1 characters.,Attribute name exceeds %1 characters.
 Studio.App.AttributeRenameDialog.AttributeTryDifferentName,Displayed when editing an attribute and entering a name that exists.,Try to use a different name.,Try to use a different name.
+Studio.App.AudioImportConfirmationDialog.ConfirmAudioImport,,Confirm Audio Import,Confirm Audio Import
 Studio.App.AudioImportConfirmationDialog.NoFilesAvailable,,No files available,No files available
-Studio.App.AudioImportOptionsDialog.ConfirmAudioImport,,Confirm Audio Import,Confirm Audio Import
 Studio.App.AudioResourceController.AudioReferencedByName,,"Audio files are referenced by name, so any references to this asset will fail to load. Are you sure you want to remove it?","Audio files are referenced by name, so any references to this asset will fail to load. Are you sure you want to remove it?"
 Studio.App.AuthenticationHelper.AuthFailedTimeout,,Could not authenticate user. Request timed out.,Could not authenticate user. Request timed out.
 Studio.App.AuthenticationHelper.AuthFailedTryAgain,,Authentication failed. Please try again or contact support if the problem persists.,Authentication failed. Please try again or contact support if the problem persists.
+Studio.App.Authenticator.TwoStepFailedParse,,"An error occurred while reading the response from the server. Please try again later, or contact support if the problem persists.","An error occurred while reading the response from the server. Please try again later, or contact support if the problem persists."
 Studio.App.AutoSave.AutoSaveRecovery,,Auto-Save Recovery,Auto-Save Recovery
 Studio.App.AutoSaveDialog.ConfirmAutoSaveDelete,,Confirm Auto-Save Delete,Confirm Auto-Save Delete
 Studio.App.AutoSaveDialog.ConfirmMessage1,,Do you want to delete all auto-recovery files?  There are %1 files.,Do you want to delete all auto-recovery files?  There are %1 files.
@@ -87,7 +88,7 @@ Studio.App.BetaFeatures.AdaptiveTimesteppingTitle,,Adaptive timestepping,Adaptiv
 Studio.App.BetaFeatures.AnimationEditorDescription,,Enables the new Beta version of the Animation Editor.,Enables the new Beta version of the Animation Editor.
 Studio.App.BetaFeatures.AnimationEditorTitle,,Animation Editor Beta,Animation Editor Beta
 Studio.App.BetaFeatures.AssetManagerDescription,,"Manage your assets in a brand new widget, with new features. This replaces the Game Explorer.","Manage your assets in a brand new widget, with new features. This replaces the Game Explorer."
-Studio.App.BetaFeatures.AssetManageritle,,Asset Manager,Asset Manager
+Studio.App.BetaFeatures.AssetManagerTitle,,Asset Manager,Asset Manager
 Studio.App.BetaFeatures.AsyncPublishDescription,,Keep working in Studio as we publish in the background,Keep working in Studio as we publish in the background
 Studio.App.BetaFeatures.AsyncPublishTitle,,Async Publish Beta,Async Publish Beta
 Studio.App.BetaFeatures.AttributesUIDescription,,Customize instances with your own data,Customize instances with your own data
@@ -139,6 +140,8 @@ Studio.App.BetaFeatures.LuauNativeVector3Description,,Enable Luau VM built-in su
 Studio.App.BetaFeatures.LuauNativeVector3Title,,Native Vector3 Type,Native Vector3 Type
 Studio.App.BetaFeatures.LuauNonStrictByDefaultDescription,,"Script analysis uses non-strict mode for all scripts by default. Use --!strict, --!nonstrict or --!nocheck to override mode on a per script basis.","Script analysis uses non-strict mode for all scripts by default. Use --!strict, --!nonstrict or --!nocheck to override mode on a per script basis."
 Studio.App.BetaFeatures.LuauNonStrictByDefaultTitle,,Scripts Are Non-Strict By Default,Scripts Are Non-Strict By Default
+Studio.App.BetaFeatures.MinPartSizeDescription,,"Reduces the minimum limit on part sizes from 0.05 to 0.001. Parts can be visually smaller, but will still limit to 0.05 for collision geometry for now.","Reduces the minimum limit on part sizes from 0.05 to 0.001. Parts can be visually smaller, but will still limit to 0.05 for collision geometry for now."
+Studio.App.BetaFeatures.MinPartSizeTitle,,Lower minimum part size,Lower minimum part size
 Studio.App.BetaFeatures.NewFeaturesForChannelUserWarning1,,"New beta features have been automatically enabled above as you are enrolled in Beta Channel. You must restart Studio for them to be activated. <a href=""%1"">Restart Now</a>","New beta features have been automatically enabled above as you are enrolled in Beta Channel. You must restart Studio for them to be activated. <a href=""%1"">Restart Now</a>"
 Studio.App.BetaFeatures.NewGamesInCloudDescription,,Allows saving games to the cloud without publishing.,Allows saving games to the cloud without publishing.
 Studio.App.BetaFeatures.NewGamesInCloudTitle,,New Games in the Cloud,New Games in the Cloud
@@ -191,6 +194,7 @@ Studio.App.BetaFeatures.WhatsNewWindowDescription,,Open up a scrolling window th
 Studio.App.BetaFeatures.WhatsNewWindowTitle,,New Updates Window,New Updates Window
 Studio.App.BreakpointConditionEditDialog.BreakpointCondition,,Breakpoint Condition,Breakpoint Condition
 Studio.App.BreakpointConditionEditDialog.Condition,,Condition:,Condition:
+Studio.App.Breakpoints.Breakpoints,,Breakpoints,Breakpoints
 Studio.App.Breakpoints.DeleteAllBreakpoints,Debugger widgets,Delete All Breakpoints,Delete All Breakpoints
 Studio.App.Breakpoints.DeleteSelectedBreakpoint,Debugger widgets,Delete Selected Breakpoint,Delete Selected Breakpoint
 Studio.App.Breakpoints.GoToSourceCode,Debugger widgets,Go To Source Code,Go To Source Code
@@ -202,6 +206,8 @@ Studio.App.BreakpointsTreeWidget.HeaderLabelSourceLine,In breakpoints,Source Lin
 Studio.App.BreakpointsWidget.DisableAllBreakpoints,,Disable All Breakpoints,Disable All Breakpoints
 Studio.App.BreakpointsWidget.DoYouWantToDeleteAllBreakpoints,,Do you want to delete all breakpoints?,Do you want to delete all breakpoints?
 Studio.App.BreakpointsWidget.EnableAllBreakpoints,,Enable All Breakpoints,Enable All Breakpoints
+Studio.App.BrowserServiceController.Hidden,,(Hidden),(Hidden)
+Studio.App.BrowserServiceController.OSNotUpToDate,,"Your OS is not up to date, some functions may not be fully supported","Your OS is not up to date, some functions may not be fully supported"
 Studio.App.BulkAudioImportErrors.AudioCostUnverifiedFormat1,"NOTE TO LOCALIZERS: Do not translate the numbers inside the single quotes. For whatever is inside the single quotes, please use ASCII instead.",Verifing the audio cost did not return correctly formatted data. Status Code: '%1',Verifing the audio cost did not return correctly formatted data. Status Code: '%1'
 Studio.App.BulkAudioImportErrors.AudioUploadErrorCode1,"NOTE TO LOCALIZERS: Do not translate the numbers inside the single quotes. For whatever is inside the single quotes, please use ASCII instead.",Uploading the audio file failed. Status Code: '%1',Uploading the audio file failed. Status Code: '%1'
 Studio.App.BulkAudioImportErrors.DurationEstimationError,,The duration estimation error was greater than the acceptable margin of error.,The duration estimation error was greater than the acceptable margin of error.
@@ -230,7 +236,7 @@ Studio.App.BulkImportController.BusyCancelingPleaseTryAgainLater,,Busy canceling
 Studio.App.BulkImportController.BusySplitting,,Already busy mesh splitting. Please try again later.,Already busy mesh splitting. Please try again later.
 Studio.App.BulkImportController.CancelledBeforeProcessing,,Some files were not uploaded.,Some files were not uploaded.
 Studio.App.BulkImportController.CouldNotStart,,Could not start mesh splitting. Please restart Studio or contact support if the problem persists.,Could not start mesh splitting. Please restart Studio or contact support if the problem persists.
-Studio.App.BulkImportController.EmptyListToSpliut,,Got an empty list of assets to split. Please try again or contact support if the problem persists.,Got an empty list of assets to split. Please try again or contact support if the problem persists.
+Studio.App.BulkImportController.EmptyListToSplit,,Got an empty list of assets to split. Please try again or contact support if the problem persists.,Got an empty list of assets to split. Please try again or contact support if the problem persists.
 Studio.App.BulkImportController.GotEmptyList,,Got an empty list of files to import. Please try again or contact support if the problem persists.,Got an empty list of files to import. Please try again or contact support if the problem persists.
 Studio.App.BulkImportController.ImagesSupportedTypes1,"NOTE TO LOCALIZERS: Do not translate the parentheses (), whatever is inside the parentheses, or any other special characters, use ASCII instead.",Images (%1),Images (%1)
 Studio.App.BulkImportController.MeshesSupportedTypes1,"NOTE TO LOCALIZERS: Do not translate the parentheses (), whatever is inside the parentheses, or any other special characters, use ASCII instead.",Meshes (%1),Meshes (%1)
@@ -249,7 +255,8 @@ Studio.App.BulkImporter.RetryingUploadIn1SecondS,,Retrying upload in %1 second(s
 Studio.App.BulkImporter.SplitFrom1,,Split from %1,Split from %1
 Studio.App.BulkImporterImpl.AssetHasBeenRenamedTo1,,Asset has been renamed to '%1',Asset has been renamed to '%1'
 Studio.App.BulkImporterImpl.AssetNameModerated,,Asset name on website has been moderated,Asset name on website has been moderated
-Studio.App.BulkImporterImpl.RetryLimtHitTryAgainLater,,Retry limit hit. Try again later,Retry limit hit. Try again later
+Studio.App.BulkImporterImpl.RetryLimitHitTryAgainIfNotExceedingDailyLimit,,Upload retry limit for this asset has been reached. If daily limit hasn't been exceeded try again later.,Upload retry limit for this asset has been reached. If daily limit hasn't been exceeded try again later.
+Studio.App.BulkImporterImpl.RetryLimitHitTryAgainLater,,Retry limit hit. Try again later,Retry limit hit. Try again later
 Studio.App.BulkImporterImpl.RetryingUpload,,Retrying upload,Retrying upload
 Studio.App.CalibrateDeviceScalingDialog.AdjustTheSlider,,Adjust the slider so that the image below is about the size of a student ID or library card (8.56 cm or 3.37 inches wide).,Adjust the slider so that the image below is about the size of a student ID or library card (8.56 cm or 3.37 inches wide).
 Studio.App.CalibrateDeviceScalingDialog.CalibrateDeviceScaling,,Calibrate Device Scaling,Calibrate Device Scaling
@@ -341,6 +348,11 @@ Studio.App.ContextMenuDropdown.MakePublic,,Make public,Make public
 Studio.App.ContextMenuDropdown.OpenPlacePage,,Open place page,Open place page
 Studio.App.ContextMenuDropdown.RemoveFromList,,Remove from list,Remove from list
 Studio.App.ContextMenuDropdown.Restore,,Restore,Restore
+Studio.App.CoreScriptBuilder.ParseFailInvalidArg,Internal feature. Text in output window.,Parsing port string failed with std::invalid_argument,Parsing port string failed with std::invalid_argument
+Studio.App.CoreScriptBuilder.ParseFailOutOfRange,Internal feature. Text in output window.,Parsing port string failed with std::out_of_range,Parsing port string failed with std::out_of_range
+Studio.App.CoreScriptBuilder.WaitForReadyReadFailed1,Internal feature. Text in output window.,QProcess::waitForReadyRead failed(%1),QProcess::waitForReadyRead failed(%1)
+Studio.App.CoreScriptBuilder.WaitForStartedFailed1,Internal feature. Text in output window.,QProcess::waitForStarted failed(%1),QProcess::waitForStarted failed(%1)
+Studio.App.CoreScriptBuilder.WaitForStartedFailedHelp,Internal feature. Text in output window.,This error usually means that robloxdev-cli could not be found. Have you made sure that robloxdev-cli is in your PATH or you have set FFlagDebugStudioCoreScriptBuilderExecutable to point to the right location?,This error usually means that robloxdev-cli could not be found. Have you made sure that robloxdev-cli is in your PATH or you have set FFlagDebugStudioCoreScriptBuilderExecutable to point to the right location?
 Studio.App.CorruptedInstallationDialog.DefaultMessage,,Some Studio files are missing or corrupted. Please reinstall Studio by following the instructions at <a href='https://en.help.roblox.com/hc/en-us/articles/203312910?fromStudio=true'>https://en.help.roblox.com/hc/en-us/articles/203312910?fromStudio=true</a>,Some Studio files are missing or corrupted. Please reinstall Studio by following the instructions at <a href='https://en.help.roblox.com/hc/en-us/articles/203312910?fromStudio=true'>https://en.help.roblox.com/hc/en-us/articles/203312910?fromStudio=true</a>
 Studio.App.CreateNewGameWidget.CreateNewGame,,Create New Game,Create New Game
 Studio.App.CreateNewGameWidget.GroupHasNoArchivedGames,,This group doesn't have any archived games,This group doesn't have any archived games
@@ -374,7 +386,7 @@ Studio.App.DeclarationView.BackEnd,,<b>Back-end: </b>This item can only be used 
 Studio.App.DeclarationView.Deprecated,,<b>Deprecated: </b>This item is deprecated. Do not use it for new work.,<b>Deprecated: </b>This item is deprecated. Do not use it for new work.
 Studio.App.DeclarationView.MemberOf1,,"Member of <label style=""font-weight: bold"">%1</label>","Member of <label style=""font-weight: bold"">%1</label>"
 Studio.App.DeclarationView.Summary,,Summary:,Summary:
-Studio.App.Deployment.CSBFailure1,Internal feature. Text in output window.,Failed to initialize CoreScriptBuilder with: %1,Failed to initialize CoreScriptBuilder with: %1
+Studio.App.Deployment.CSBFailure,Internal feature. Text in output window.,Failed to initialize CoreScriptBuilder with: %1,Failed to initialize CoreScriptBuilder with: %1
 Studio.App.Deployment.PatchBuilderFailure1,Internal feature. Text in output window.,Failed to initialize patch builder with: %1,Failed to initialize patch builder with: %1
 Studio.App.DirtyPublishWarningDialog.CommitAllButton,,Commit All,Commit All
 Studio.App.DirtyPublishWarningDialog.CommittedStatus,,Committed,Committed
@@ -424,7 +436,7 @@ Studio.App.DraftsServiceHost.UncommittedDraftsWarning1,,Script changes are local
 Studio.App.DraftsServiceHost.UpdateCacheMissing1,,Unable to update draft '%1' because local cache missing data,Unable to update draft '%1' because local cache missing data
 Studio.App.DraftsServiceHost.UpdateRemoved1,,Unable to update draft '%1' because script has been removed from Workspace,Unable to update draft '%1' because script has been removed from Workspace
 Studio.App.EmbeddedFindReplaceWidget.Close,,Close,Close
-Studio.App.EmbeddedFindReplaceWidget.KofNMatch,,%1 of %2 matches,%1 of %2 matches
+Studio.App.EmbeddedFindReplaceWidget.KofNMatch2,,%1 of %2 matches,%1 of %2 matches
 Studio.App.EmbeddedFindReplaceWidget.KofOneMatch1,,%1 of 1 match,%1 of 1 match
 Studio.App.EmbeddedFindReplaceWidget.MatchCase,,Match Case,Match Case
 Studio.App.EmbeddedFindReplaceWidget.MatchWholeWord,,Match Whole Word,Match Whole Word
@@ -583,7 +595,6 @@ Studio.App.GameExplorer.InsertAsLocalScript,,Insert as LocalScript,Insert as Loc
 Studio.App.GameExplorer.InsertAsModuleScript,,Insert as ModuleScript,Insert as ModuleScript
 Studio.App.GameExplorer.InsertAsScript,,InsertAsScript,InsertAsScript
 Studio.App.GameExplorer.InsertWithLocation,,Insert with location,Insert with location
-Studio.App.GameExplorer.MassUpdatePackage,,Update All,Update All
 Studio.App.GameExplorer.ProductSettings,,Product Settings...,Product Settings...
 Studio.App.GameExplorer.PublishLinkedSource,,Publish this LinkedSource,Publish this LinkedSource
 Studio.App.GameExplorer.RefreshScript,,Refresh Script,Refresh Script
@@ -811,6 +822,7 @@ Error Message: '%2'"
 Studio.App.LocalPlacePublishRequestMediator.FetchActivePlayersInTCFailureTitle,Title of the pop up dialog,Overwrite Place,Overwrite Place
 Studio.App.LocalPlacePublishRequestMediator.PublishInProgress,,A Place Publish / Save is already in progress,A Place Publish / Save is already in progress
 Studio.App.LocalPlacePublishRequestMediator.Saving,,saving,saving
+Studio.App.LocalPlacePublishRequestMediator.SentMessageToServerToPublish,,Sent message to server to publish.,Sent message to server to publish.
 Studio.App.LocalPlacePublishRequestMediator.UnexpectedDataFormat,Display this message when fetched result has unexpected format,Unexpected data format.,Unexpected data format.
 Studio.App.LocalSaveHelper.DataModelError,,Failed to save the DataModel.,Failed to save the DataModel.
 Studio.App.LocalSaveHelper.FailedToLock1,,"Failed to obtain a file lock on '%1'.
@@ -875,6 +887,7 @@ Studio.App.Login.StudioVersion1,,Roblox Studio Version %1,Roblox Studio Version 
 Studio.App.Login.TooManyLogins,,Too many logins were attempted from this network. You must log in through a web browser.,Too many logins were attempted from this network. You must log in through a web browser.
 Studio.App.Login.UnableToLogin,,Unable to log in,Unable to log in
 Studio.App.Login.UnableToLogout,,Unable to log out. Please save modified places in other Studio instances and then proceed with log out.,Unable to log out. Please save modified places in other Studio instances and then proceed with log out.
+Studio.App.Login.UserModerated,,"User is moderated, please check website for more details.","User is moderated, please check website for more details."
 Studio.App.LoginManager.CaptchaClosed,,Login requires Captcha. Please try again.,Login requires Captcha. Please try again.
 Studio.App.LoginManager.CaptchaError,,Error displaying captcha,Error displaying captcha
 Studio.App.LoginManager.CaptchaInvalid,,Captcha response not recognized. Please try again.,Captcha response not recognized. Please try again.
@@ -894,6 +907,7 @@ Studio.App.LoginManager.UserAgreementsAcceptanceCancel,,Are you sure you want to
 Studio.App.LoginManager.UserAgreementsAcceptanceFailure,,Failed to accept user agreements. Please try to login again or contact support if problem persists.,Failed to accept user agreements. Please try to login again or contact support if problem persists.
 Studio.App.LoginRequest.CaptchaError,Start page login,Please complete the Captcha in order to log in.,Please complete the Captcha in order to log in.
 Studio.App.LoginRequest.ErrorResponseParseError,Start page login,Could not parse error response from server.,Could not parse error response from server.
+Studio.App.LoginRequest.GenericError,Start page login,Login error. Please try again.,Login error. Please try again.
 Studio.App.LoginRequest.InternalServerError,Start page login,Our servers are having problems right now. Please try again later.,Our servers are having problems right now. Please try again later.
 Studio.App.LoginRequest.NetworkConnection,Start page login,Could not connect to the server. Please check your internet connection and try again later.,Could not connect to the server. Please check your internet connection and try again later.
 Studio.App.LoginRequest.NullPasswordError,Start page login,Unable to log in via username / password. Please use your WeChat / QQ account to log in.,Unable to log in via username / password. Please use your WeChat / QQ account to log in.
@@ -902,6 +916,7 @@ Studio.App.LoginRequest.PasswordResetRequiredError,Start page login,Account has 
 Studio.App.LoginRequest.TwoStepVerificationFailureError,Start page login,Account issue encountered. Please contact <a href='https://www.roblox.com/support'>support</a>,Account issue encountered. Please contact <a href='https://www.roblox.com/support'>support</a>
 Studio.App.LoginRequest.TwoStepVerificationFloodedError,Start page login,Too many attempts. Please try again later.,Too many attempts. Please try again later.
 Studio.App.LoginRequest.UnknownError,Start page login,"Something went wrong. Please try again later, or contact <a href='https://www.roblox.com/support'>support</a>","Something went wrong. Please try again later, or contact <a href='https://www.roblox.com/support'>support</a>"
+Studio.App.LoginRequest.UserIdError,Start page login,Could not get user id from server.,Could not get user id from server.
 Studio.App.LoginRequest.UsernameError,Start page login,Could not get username from server.,Could not get username from server.
 Studio.App.MainWindow.32BitParens,Main Window, (32bit), (32bit)
 Studio.App.MainWindow.64BitParens,Main Window, (64bit), (64bit)
@@ -993,7 +1008,7 @@ Studio.App.MainWindow.UploadingPlaceQuitSaveAuto,Main Window,Saving in progress.
 Studio.App.MainWindow.UploadingPlaceQuitSaveFailed,Main Window,Failed To Save. Please try again later.,Failed To Save. Please try again later.
 Studio.App.MainWindow.UploadingVideoQuitAnyway,Main Window,Roblox is uploading a video. Quit anyway?,Roblox is uploading a video. Quit anyway?
 Studio.App.MainWindow.Version1,Main Window,Version %1,Version %1
-Studio.App.MainWindow.VersionLatest,About Dialog,Latest version available %1,Latest version available %1
+Studio.App.MainWindow.VersionLatest1,About Dialog,Latest version available %1,Latest version available %1
 Studio.App.MainWindow.WaitingForShutdown,Main Window,Waiting for Shutdown,Waiting for Shutdown
 Studio.App.ManageEmulationDeviceDialog.CloneDevice,,Clone Device,Clone Device
 Studio.App.ManageEmulationDeviceDialog.EmulationDeviceManager,,Emulation Device Manager,Emulation Device Manager
@@ -1055,9 +1070,9 @@ Studio.App.MeshImportOptionsDialog.MeshImportOptions,,Mesh Import Options,Mesh I
 Studio.App.MeshImportOptionsDialog.NoFilesAvailable,,No files available,No files available
 Studio.App.MeshImportOptionsDialog.RescaleIfTooLarge,,Rescale if too large,Rescale if too large
 Studio.App.MeshImportOptionsDialog.ReverseInwardPointingMeshNormals,,Reverse inward-pointing mesh normals,Reverse inward-pointing mesh normals
+Studio.App.MeshPartLOD.FidelityWarning1,MeshPart renderFidelity property selector,Failed to change renderFidelity for asset id %1,Failed to change renderFidelity for asset id %1
 Studio.App.MeshPartLOD.Info1,MeshPart renderFidelity property selector,Finished simplifying %1 mesh parts,Finished simplifying %1 mesh parts
 Studio.App.MeshPartLOD.NotEnoughFacesInfo1,MeshPart renderFidelity property selector,Asset id %1 has too few triangles for renderFidelity to be set to Automatic or Performance,Asset id %1 has too few triangles for renderFidelity to be set to Automatic or Performance
-Studio.App.MeshPartLOD.RenderFidelityWarning1,MeshPart renderFidelity property selector,Failed to change renderFidelity for asset id %1,Failed to change renderFidelity for asset id %1
 Studio.App.MeshPartLOD.Warning1,MeshPart renderFidelity property selector,Mesh Publish failure for asset id %1,Mesh Publish failure for asset id %1
 Studio.App.MeshPartLODNotification.Dismiss,MeshPart renderFidelity property selector,Do not show again,Do not show again
 Studio.App.MeshPartLODNotification.Message,MeshPart renderFidelity property selector,RenderFidelity was set to Automatic or Performance. This may require the asset to go through moderation and create a new assetId.,RenderFidelity was set to Automatic or Performance. This may require the asset to go through moderation and create a new assetId.
@@ -1104,7 +1119,7 @@ Studio.App.PackageManagementVerbs.ErrorUnpublishedPackages,,Error: Cannot conver
 Studio.App.PackageManagementVerbs.GetLatest,,Get Latest,Get Latest
 Studio.App.PackageManagementVerbs.PackagePublishError1,,Package publish error: %1,Package publish error: %1
 Studio.App.PackageManagementVerbs.PackageScriptDiffError1,,Package Script Diff error: %1,Package Script Diff error: %1
-Studio.App.PackageManagementVerbs.ThisModifiesPackae,,"This object has 3D content but is not a Model, so moving or rotating it will count as modifying the Package. Are you sure you want to continue?","This object has 3D content but is not a Model, so moving or rotating it will count as modifying the Package. Are you sure you want to continue?"
+Studio.App.PackageManagementVerbs.ThisModifiesPackage,,"This object has 3D content but is not a Model, so moving or rotating it will count as modifying the Package. Are you sure you want to continue?","This object has 3D content but is not a Model, so moving or rotating it will count as modifying the Package. Are you sure you want to continue?"
 Studio.App.PackageMassUpdate.All,Text for checkbox option that can check all the children checkboxs,All,All
 Studio.App.PackageMassUpdate.CancelConfirmation,,Update hasn't been completed. Once we finish cancelling we will close this window. Are you sure that you want to cancel?,Update hasn't been completed. Once we finish cancelling we will close this window. Are you sure that you want to cancel?
 Studio.App.PackageMassUpdate.CancelConfirmationWindowTitle,Window title for cancel confirmation,Cancel Update,Cancel Update
@@ -1128,8 +1143,6 @@ Studio.App.PackageMassUpdate.Version,Version of a package,Version,Version
 Studio.App.PackageMassUpdate.VersionContent1,latest mean the last version of the package,%1 (latest),%1 (latest)
 Studio.App.PackageMassUpdate.Waiting,One of the update status,Waiting,Waiting
 Studio.App.PackageMassUpdate.WarningMessage,,Note: We recommend closing other Studio instances before mass updating.,Note: We recommend closing other Studio instances before mass updating.
-Studio.App.PackageResourceController.PackageDetails,,Package Details,Package Details
-Studio.App.PackageResourceController.PackageInsertError1,,Game Explorer Package insert error: %1,Game Explorer Package insert error: %1
 Studio.App.PackageUtilities.GoToRevisionError1,,Package go to revision error: %1,Package go to revision error: %1
 Studio.App.PackageUtilities.ModifiedPackagesInDMError,,Error: Cannot publish place to Roblox while there are packages with unpublished changes.,Error: Cannot publish place to Roblox while there are packages with unpublished changes.
 Studio.App.PackageUtilities.PendingPackagesInDMError,,Unable to publish this place as there may be modified packages. Please try again later.,Unable to publish this place as there may be modified packages. Please try again later.
@@ -1173,6 +1186,7 @@ Studio.App.PlaceVersionHistoryDialog.Empty,,No Place Versions found,No Place Ver
 Studio.App.PlaceVersionHistoryDialog.HelpLink,,More information,More information
 Studio.App.PlaceVersionHistoryDialog.PublishedColumnTitle,,Published,Published
 Studio.App.PlaceVersionHistoryDialog.Tip,,Select a place version to download and open it,Select a place version to download and open it
+Studio.App.PlaceVersionHistoryDialog.Title1,Title of dialog to view history for a place. Example: MyPlaceName - Version History,%1 - Version History,%1 - Version History
 Studio.App.PlaceVersionHistoryDialog.ViewHistory,,View History,View History
 Studio.App.PlayModifiedScriptController.AlwaysSave,,Always Save,Always Save
 Studio.App.PlayModifiedScriptController.KeepTheseChanges,,You've made script changes while playing.  Would you like to keep these changes?,You've made script changes while playing.  Would you like to keep these changes?
@@ -1285,8 +1299,6 @@ Studio.App.Property.HighlightOccurances,Should we highlight other occurances of 
 Studio.App.Property.HoverAnimateSpeed,,Hover Animate Speed,Hover Animate Speed
 Studio.App.Property.HoverBoxThickness,,Hover Box Thickness,Hover Box Thickness
 Studio.App.Property.HoverOverColor,,Hover Over Color,Hover Over Color
-Studio.App.Property.HttpProxyEnabled,,Proxy Enabled,Proxy Enabled
-Studio.App.Property.HttpProxyURL,,Proxy URL,Proxy URL
 Studio.App.Property.IncomingReplicationLag,,Incoming Replication Lag,Incoming Replication Lag
 Studio.App.Property.IndentUsingSpaces,,Indent Using Spaces,Indent Using Spaces
 Studio.App.Property.InstanceCount,,Instance Count,Instance Count
@@ -1349,6 +1361,8 @@ Studio.App.Property.PrintProperties,,Print Properties,Print Properties
 Studio.App.Property.PrintSplitMessage,,Print Split Message,Print Split Message
 Studio.App.Property.PrintStreamInstanceQuota,,Print Stream Instance Quota,Print Stream Instance Quota
 Studio.App.Property.PropertyColor,,Local Property Color,Local Property Color
+Studio.App.Property.ProxyEnabled,,Proxy Enabled,Proxy Enabled
+Studio.App.Property.ProxyURL,,Proxy URL,Proxy URL
 Studio.App.Property.QualityLevel,,Quality Level,Quality Level
 Studio.App.Property.RandomizeJoinInstanceOrder,,Randomize Test Join Order,Randomize Test Join Order
 Studio.App.Property.ReceiveRate,,Receive Rate,Receive Rate
@@ -1373,7 +1387,7 @@ Studio.App.Property.ScriptEditorShouldShowPluginMethods,Autocomplete should show
 Studio.App.Property.ScriptTimeoutLength,,Script Timeout Length,Script Timeout Length
 Studio.App.Property.ScrollPastLastLine,,Scroll Past Last Line,Scroll Past Last Line
 Studio.App.Property.SearchContentForCoreScripts,,Search Content For Core Scripts,Search Content For Core Scripts
-Studio.App.Property.SecondaryTextColor,,Menu Secondary Text Color,Menu Secondary Text Color
+Studio.App.Property.SecondaryColor,,Menu Secondary Text Color,Menu Secondary Text Color
 Studio.App.Property.SelectColor,,Select Color,Select Color
 Studio.App.Property.SelectHoverColor,,Select/Hover Color,Select/Hover Color
 Studio.App.Property.SelectedMenuItemBackgroundColor,,Selected Menu Item Background,Selected Menu Item Background
@@ -1433,16 +1447,13 @@ Studio.App.PropertyEnum.Disabled,,Disabled,Disabled
 Studio.App.PropertyEnum.DistanceBased,,DistanceBased,DistanceBased
 Studio.App.PropertyEnum.DontReport,,Don't Report,Don't Report
 Studio.App.PropertyEnum.Enabled,,Enabled,Enabled
-Studio.App.PropertyEnum.English,DO NOT TRANSLATE THIS.  No matter the system language we want to offer language choice in that language.,English,English
 Studio.App.PropertyEnum.Extra1,An additional Script Editor Syntax Highlighting Text Color Preset,Extra 1,Extra 1
 Studio.App.PropertyEnum.Extra2,A second additional Script Editor Syntax Highlighting Text Color Preset,Extra 2,Extra 2
 Studio.App.PropertyEnum.Fast,,Fast,Fast
-Studio.App.PropertyEnum.French,DO NOT TRANSLATE THIS.  No matter the system language we want to offer language choice in that language.,français,français
 Studio.App.PropertyEnum.Game,,Game,Game
 Studio.App.PropertyEnum.HighResolution,,High Resolution,High Resolution
 Studio.App.PropertyEnum.Horizontal,,Horizontal,Horizontal
 Studio.App.PropertyEnum.Hybrid,,Hybrid,Hybrid
-Studio.App.PropertyEnum.Korean,DO NOT TRANSLATE THIS.  No matter the system language we want to offer language choice in that language.,한국어,한국어
 Studio.App.PropertyEnum.Level01,,Level 01,Level 01
 Studio.App.PropertyEnum.Level02,,Level 02,Level 02
 Studio.App.PropertyEnum.Level03,,Level 03,Level 03
@@ -1486,9 +1497,7 @@ Studio.App.PropertyEnum.Roblox,,Roblox,Roblox
 Studio.App.PropertyEnum.RobloxDefault,The default Script Editor Syntax Highlighting Text Color Preset,Default,Default
 Studio.App.PropertyEnum.RobloxGame,,Roblox Game,Roblox Game
 Studio.App.PropertyEnum.RobloxScript,,Roblox Script,Roblox Script
-Studio.App.PropertyEnum.Russian,DO NOT TRANSLATE THIS.  No matter the system language we want to offer language choice in that language.,русский,русский
 Studio.App.PropertyEnum.Server,,Server,Server
-Studio.App.PropertyEnum.SimplifiedChinese,DO NOT TRANSLATE THIS.  No matter the system language we want to offer language choice in that language.,简体中文,简体中文
 Studio.App.PropertyEnum.Skip16,,Skip 16,Skip 16
 Studio.App.PropertyEnum.Skip2,,Skip 2,Skip 2
 Studio.App.PropertyEnum.Skip4,,Skip 4,Skip 4
@@ -1594,9 +1603,9 @@ Studio.App.RBXMainWindow.3DGrid,,3D Grid,3D Grid
 Studio.App.RBXMainWindow.AboutRobloxStudio,,About Roblox Studio,About Roblox Studio
 Studio.App.RBXMainWindow.ActiveInstancesInOutputWindow,,Display active Studio instances in Output Window,Display active Studio instances in Output Window
 Studio.App.RBXMainWindow.AddNewlineAbove,,Insert Newline Above,Insert Newline Above
-Studio.App.RBXMainWindow.AddNewlineAboveToolTip,,Insert a newline above the current line,Insert a newline above the current line
+Studio.App.RBXMainWindow.AddNewlineAboveTooltip,,Insert a newline above the current line,Insert a newline above the current line
 Studio.App.RBXMainWindow.AddNewlineBelow,,Insert Newline Below,Insert Newline Below
-Studio.App.RBXMainWindow.AddNewlineBelowToolTip,,Insert a newline below the current line,Insert a newline below the current line
+Studio.App.RBXMainWindow.AddNewlineBelowTooltip,,Insert a newline below the current line,Insert a newline below the current line
 Studio.App.RBXMainWindow.AddRemoveAndModifyTerrain,,"Add, remove, and modify terrain","Add, remove, and modify terrain"
 Studio.App.RBXMainWindow.AddUIElements,,Add UI elements,Add UI elements
 Studio.App.RBXMainWindow.AddWatch,,Add Watch,Add Watch
@@ -1620,7 +1629,7 @@ Studio.App.RBXMainWindow.CheckNetworkAndUserAuthentication,,"Feature not availab
 Please check internet connection and restart Roblox.","Feature not available in offline mode.
 Please check internet connection and restart Roblox."
 Studio.App.RBXMainWindow.ChooseReferenceObject,,Choose Reference Object,Choose Reference Object
-Studio.App.RBXMainWindow.CleansUpClientsAndServers,,Clean up all clients and servers,Clean up all clients and servers
+Studio.App.RBXMainWindow.CleansUpAllClientsAndServer,,Clean up all clients and servers,Clean up all clients and servers
 Studio.App.RBXMainWindow.ClearOutputWindow,,Clear Output Window,Clear Output Window
 Studio.App.RBXMainWindow.ClearSelection,,Clear selection,Clear selection
 Studio.App.RBXMainWindow.ClearStats,,Clear Stats,Clear Stats
@@ -1649,7 +1658,7 @@ Studio.App.RBXMainWindow.Debugger,,Debugger,Debugger
 Studio.App.RBXMainWindow.DeleteBreakpoint,,Delete Breakpoint,Delete Breakpoint
 Studio.App.RBXMainWindow.DeleteContextDependentBreakpoint,,Delete Contextual Breakpoint,Delete Contextual Breakpoint
 Studio.App.RBXMainWindow.DeleteToStartOfLine,,Delete to start of line,Delete to start of line
-Studio.App.RBXMainWindow.DeleteToStartOfLineToolTip,,Delete to the start of the current line,Delete to the start of the current line
+Studio.App.RBXMainWindow.DeleteToStartOfLineTooltip,,Delete to the start of the current line,Delete to the start of the current line
 Studio.App.RBXMainWindow.DiffNext,,Diff Next,Diff Next
 Studio.App.RBXMainWindow.DiffPrevious,,Diff Previous,Diff Previous
 Studio.App.RBXMainWindow.DisableBreakpoint,,Disable Breakpoint,Disable Breakpoint
@@ -1657,7 +1666,6 @@ Studio.App.RBXMainWindow.DisablesRotateSnapping,,Disables the rotate grid snappi
 Studio.App.RBXMainWindow.DisablesTheDragGridSnapping,,Disable drag grid snapping,Disable drag grid snapping
 Studio.App.RBXMainWindow.DownloadACopyElps,,Download a Copy...,Download a Copy...
 Studio.App.RBXMainWindow.DownloadActiveDocument,,Download a copy of the active document,Download a copy of the active document
-Studio.App.RBXMainWindow.Drafts,,Drafts,Drafts
 Studio.App.RBXMainWindow.Drag,,Drag,Drag
 Studio.App.RBXMainWindow.DraggerModeGeometric,,Geometric,Geometric
 Studio.App.RBXMainWindow.DraggerModeLabel,,Mode:,Mode:
@@ -1853,6 +1861,7 @@ Studio.App.RBXMainWindow.RotateParts,,Rotate Parts,Rotate Parts
 Studio.App.RBXMainWindow.RotateToggle,,Rotate - Toggle,Rotate - Toggle
 Studio.App.RBXMainWindow.RotateTool,,Rotate Tool,Rotate Tool
 Studio.App.RBXMainWindow.Run,,Run,Run
+Studio.App.RBXMainWindow.Sandbox,,Drafts,Drafts
 Studio.App.RBXMainWindow.SaveActiveDocumentToRoblox,,Save active document to Roblox,Save active document to Roblox
 Studio.App.RBXMainWindow.SaveActiveDocumentToRobloxAs,,Save active document to Roblox as,Save active document to Roblox as
 Studio.App.RBXMainWindow.SaveAndReloadAllPlugins,,Save and Reload All Plugins in Debugger,Save and Reload All Plugins in Debugger
@@ -1884,18 +1893,18 @@ Studio.App.RBXMainWindow.SelectAll,,Select All,Select All
 Studio.App.RBXMainWindow.SelectAllModifiedPackages,,Select All Modified Packages,Select All Modified Packages
 Studio.App.RBXMainWindow.SelectAttachmentConstraintConnections,,Select connections of the attachment or constraint,Select connections of the attachment or constraint
 Studio.App.RBXMainWindow.SelectChildren,,Select Children,Select Children
-Studio.App.RBXMainWindow.SelectConnectionOne,,Select Connection 1,Select Connection 1
-Studio.App.RBXMainWindow.SelectConnectionZero,,Select Connection 0,Select Connection 0
+Studio.App.RBXMainWindow.SelectConnection0,,Select Connection 0,Select Connection 0
+Studio.App.RBXMainWindow.SelectConnection1,,Select Connection 1,Select Connection 1
 Studio.App.RBXMainWindow.SelectConnections,,Select Connections,Select Connections
 Studio.App.RBXMainWindow.SelectTheEntireDocument,,Select the entire document,Select the entire document
 Studio.App.RBXMainWindow.Separate,,Separate,Separate
 Studio.App.RBXMainWindow.SeparateFusedSelection,,Separate parts from a fused selection,Separate parts from a fused selection
 Studio.App.RBXMainWindow.ServiceElps,,Service...,Service...
 Studio.App.RBXMainWindow.SetAsInstanceDefault,,Set as Instance Default,Set as Instance Default
+Studio.App.RBXMainWindow.SetAsInstanceDefaultStatusTip,,Set the selection as the default for future created instances,Set the selection as the default for future created instances
 Studio.App.RBXMainWindow.SetGridSizeTo16Studs,,Set Grid Size to 16 Studs,Set Grid Size to 16 Studs
 Studio.App.RBXMainWindow.SetGridSizeTo2Studs,,Set Grid Size to 2 Studs,Set Grid Size to 2 Studs
 Studio.App.RBXMainWindow.SetGridSizeTo4Studs,,Set Grid Size to 4 Studs,Set Grid Size to 4 Studs
-Studio.App.RBXMainWindow.SetSelectionAsInstanceDefault,,Set the selection as the default for future created instances,Set the selection as the default for future created instances
 Studio.App.RBXMainWindow.SettingsElps,,Settings...,Settings...
 Studio.App.RBXMainWindow.ShowHelpForSelectedObject,,Show help for selected object,Show help for selected object
 Studio.App.RBXMainWindow.ShowListOfShortcutCommands,,Show list of shortcut commands,Show list of shortcut commands
@@ -1966,7 +1975,6 @@ Studio.App.RBXMainWindow.UnlockAll,,Unlock All,Unlock All
 Studio.App.RBXMainWindow.UploadLogFiles,,Upload Log Files,Upload Log Files
 Studio.App.RBXMainWindow.VideoRecord,,Video Record,Video Record
 Studio.App.RBXMainWindow.ViewCommandBar,,View Command Bar,View Command Bar
-Studio.App.RBXMainWindow.ViewDrafts,,View Drafts,View Drafts
 Studio.App.RBXMainWindow.ViewFindReplaceWindow,,View Find/Replace Window,View Find/Replace Window
 Studio.App.RBXMainWindow.ViewFindResults,,View Find results,View Find results
 Studio.App.RBXMainWindow.ViewGameExplorerElps,,View Game Explorer...,View Game Explorer...
@@ -1975,6 +1983,7 @@ Studio.App.RBXMainWindow.ViewOutputWindowElps,,View Output Window...,View Output
 Studio.App.RBXMainWindow.ViewPerformanceDiagnosticsElps,,View Performance Diagnostics...,View Performance Diagnostics...
 Studio.App.RBXMainWindow.ViewPropertiesElps,,View Properties...,View Properties...
 Studio.App.RBXMainWindow.ViewRecoveredScriptsElps,,View Recovered Scripts...,View Recovered Scripts...
+Studio.App.RBXMainWindow.ViewSandbox,,View Drafts,View Drafts
 Studio.App.RBXMainWindow.ViewScriptAnalysisElps,,View Script Analysis...,View Script Analysis...
 Studio.App.RBXMainWindow.ViewScriptChangesElps,,View Script Changes...,View Script Changes...
 Studio.App.RBXMainWindow.ViewScriptPerformanceElps,,View Script Performance...,View Script Performance...
@@ -2004,6 +2013,8 @@ Studio.App.RemoteDebugger.AssetProxyRunning2,,Asset Proxy running at %1:%2,Asset
 Studio.App.RemoteDebugger.AssetProxyStopped,,Asset Proxy stopped,Asset Proxy stopped
 Studio.App.RemoteDebugger.ColumnAssetId,,Asset Id,Asset Id
 Studio.App.RemoteDebugger.ColumnPath,,Path,Path
+Studio.App.RemoteDebugger.ErrorAssetMissing,,Asset not found or not accessible to ContentProvider,Asset not found or not accessible to ContentProvider
+Studio.App.RemoteDebugger.ErrorDuplicateId,,Duplicate Asset ID,Duplicate Asset ID
 Studio.App.RemoteDebugger.InvalidIp,,Invalid IP Address. ,Invalid IP Address. 
 Studio.App.RemoteDebugger.InvalidPort,,Invalid Port. ,Invalid Port. 
 Studio.App.RemoteDebugger.IpAddress,,IP Address:,IP Address:
@@ -2015,8 +2026,18 @@ Studio.App.RemoteDebugger.Stop,,Stop,Stop
 Studio.App.RemoteDebugger.TabAssetOverrides,,Asset Overrides,Asset Overrides
 Studio.App.RemoteDebugger.TabServerStatus,,Server Status,Server Status
 Studio.App.RemoteDebugger.Title,,Remote Debugging,Remote Debugging
+Studio.App.RenderScheduler.DeprecatedDirect3D9,,"On August 16th, the Roblox application will require DirectX 10 or higher feature level support.
+
+To keep using the Roblox application, please use a device that is compatible with Roblox’s system requirements.","On August 16th, the Roblox application will require DirectX 10 or higher feature level support.
+
+To keep using the Roblox application, please use a device that is compatible with Roblox’s system requirements."
 Studio.App.RenderScheduler.FailedCreateGameWindow,,Failed to Create Game Window.  A key file may have gotten Corrupted.  Please try to reInstall Roblox Studio.  If the issue persists make sure your drivers are up to date http://www.roblox.com/drivers or Contact Customer support,Failed to Create Game Window.  A key file may have gotten Corrupted.  Please try to reInstall Roblox Studio.  If the issue persists make sure your drivers are up to date http://www.roblox.com/drivers or Contact Customer support
 Studio.App.RenderScheduler.FailedToBindToWorkspace,,Failed to Bind to Workspace. Please restart Studio in order to resolve the issue.,Failed to Bind to Workspace. Please restart Studio in order to resolve the issue.
+Studio.App.RenderScheduler.NoRenderBackend,,"Your computer's graphics card is not compatible with Roblox's minimum system requirements.
+
+Visit https://www.roblox.com/drivers for more information.","Your computer's graphics card is not compatible with Roblox's minimum system requirements.
+
+Visit https://www.roblox.com/drivers for more information."
 Studio.App.Restart.RestartLater,restart studio later,Restart Later,Restart Later
 Studio.App.Restart.RestartNow,restart studio right now,Restart,Restart
 Studio.App.RobloxChatWidget.ChatOptions,,Chat Options,Chat Options
@@ -2027,134 +2048,134 @@ Studio.App.RobloxChatWidget.DisabledChatMessage,,%1 Turn on chat in your %2 Priv
 Studio.App.RobloxChatWidget.FailedSendAMessage,,Failed to send message: ,Failed to send message: 
 Studio.App.RobloxChatWidget.NotFriendErrorMessage,,Individual chat is available only for friends. Please friend '%1' or use group chat to talk.,Individual chat is available only for friends. Please friend '%1' or use group chat to talk.
 Studio.App.RobloxChatWidget.SendAMessage,,Send a message,Send a message
-Studio.App.RobloxCustomWidgets.BrickColor1,Please check BrickColor Number - '1' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,White,White
-Studio.App.RobloxCustomWidgets.BrickColor1001,Please check BrickColor Number - '1001' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Institutional white,Institutional white
-Studio.App.RobloxCustomWidgets.BrickColor1002,Please check BrickColor Number - '1002' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Mid gray,Mid gray
-Studio.App.RobloxCustomWidgets.BrickColor1003,Please check BrickColor Number - '1003' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Really black,Really black
-Studio.App.RobloxCustomWidgets.BrickColor1004,Please check BrickColor Number - '1004' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Really red,Really red
-Studio.App.RobloxCustomWidgets.BrickColor1005,Please check BrickColor Number - '1005' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Deep orange,Deep orange
-Studio.App.RobloxCustomWidgets.BrickColor1006,Please check BrickColor Number - '1006' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Alder,Alder
-Studio.App.RobloxCustomWidgets.BrickColor1007,Please check BrickColor Number - '1007' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Dusty Rose,Dusty Rose
-Studio.App.RobloxCustomWidgets.BrickColor1008,Please check BrickColor Number - '1008' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Olive,Olive
-Studio.App.RobloxCustomWidgets.BrickColor1009,Please check BrickColor Number - '1009' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,New Yeller,New Yeller
-Studio.App.RobloxCustomWidgets.BrickColor101,Please check BrickColor Number - '101' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Medium red,Medium red
-Studio.App.RobloxCustomWidgets.BrickColor1010,Please check BrickColor Number - '1010' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Really blue,Really blue
-Studio.App.RobloxCustomWidgets.BrickColor1011,Please check BrickColor Number - '1011' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Navy blue,Navy blue
-Studio.App.RobloxCustomWidgets.BrickColor1012,Please check BrickColor Number - '1012' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Deep blue,Deep blue
-Studio.App.RobloxCustomWidgets.BrickColor1013,Please check BrickColor Number - '1013' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Cyan,Cyan
-Studio.App.RobloxCustomWidgets.BrickColor1014,Please check BrickColor Number - '1014' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,CGA brown,CGA brown
-Studio.App.RobloxCustomWidgets.BrickColor1015,Please check BrickColor Number - '1015' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Magenta,Magenta
-Studio.App.RobloxCustomWidgets.BrickColor1016,Please check BrickColor Number - '1016' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pink,Pink
-Studio.App.RobloxCustomWidgets.BrickColor1018,Please check BrickColor Number - '1018' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Teal,Teal
-Studio.App.RobloxCustomWidgets.BrickColor1019,Please check BrickColor Number - '1019' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Toothpaste,Toothpaste
-Studio.App.RobloxCustomWidgets.BrickColor102,Please check BrickColor Number - '102' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Medium blue,Medium blue
-Studio.App.RobloxCustomWidgets.BrickColor1020,Please check BrickColor Number - '1020' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Lime green,Lime green
-Studio.App.RobloxCustomWidgets.BrickColor1021,Please check BrickColor Number - '1021' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Camo,Camo
-Studio.App.RobloxCustomWidgets.BrickColor1022,Please check BrickColor Number - '1022' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Grime,Grime
-Studio.App.RobloxCustomWidgets.BrickColor1023,Please check BrickColor Number - '1023' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Lavender,Lavender
-Studio.App.RobloxCustomWidgets.BrickColor1024,Please check BrickColor Number - '1024' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pastel light blue,Pastel light blue
-Studio.App.RobloxCustomWidgets.BrickColor1025,Please check BrickColor Number - '1025' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pastel orange,Pastel orange
-Studio.App.RobloxCustomWidgets.BrickColor1026,Please check BrickColor Number - '1026' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pastel violet,Pastel violet
-Studio.App.RobloxCustomWidgets.BrickColor1027,Please check BrickColor Number - '1027' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pastel blue-green,Pastel blue-green
-Studio.App.RobloxCustomWidgets.BrickColor1028,Please check BrickColor Number - '1028' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pastel green,Pastel green
-Studio.App.RobloxCustomWidgets.BrickColor1029,Please check BrickColor Number - '1029' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pastel yellow,Pastel yellow
-Studio.App.RobloxCustomWidgets.BrickColor1030,Please check BrickColor Number - '1030' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pastel brown,Pastel brown
-Studio.App.RobloxCustomWidgets.BrickColor1031,Please check BrickColor Number - '1031' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Royal purple,Royal purple
-Studio.App.RobloxCustomWidgets.BrickColor1032,Please check BrickColor Number - '1032' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Hot pink,Hot pink
-Studio.App.RobloxCustomWidgets.BrickColor104,Please check BrickColor Number - '104' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Bright violet,Bright violet
-Studio.App.RobloxCustomWidgets.BrickColor105,Please check BrickColor Number - '105' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Br. yellowish orange,Br. yellowish orange
-Studio.App.RobloxCustomWidgets.BrickColor106,Please check BrickColor Number - '106' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Bright orange,Bright orange
-Studio.App.RobloxCustomWidgets.BrickColor107,Please check BrickColor Number - '107' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Bright bluish green,Bright bluish green
-Studio.App.RobloxCustomWidgets.BrickColor11,Please check BrickColor Number - '11' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pastel Blue,Pastel Blue
-Studio.App.RobloxCustomWidgets.BrickColor119,Please check BrickColor Number - '119' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Br. yellowish green,Br. yellowish green
-Studio.App.RobloxCustomWidgets.BrickColor125,Please check BrickColor Number - '125' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Light orange,Light orange
-Studio.App.RobloxCustomWidgets.BrickColor133,Please check BrickColor Number - '133' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Neon orange,Neon orange
-Studio.App.RobloxCustomWidgets.BrickColor135,Please check BrickColor Number - '135' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Sand blue,Sand blue
-Studio.App.RobloxCustomWidgets.BrickColor141,Please check BrickColor Number - '141' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Earth green,Earth green
-Studio.App.RobloxCustomWidgets.BrickColor151,Please check BrickColor Number - '151' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Sand green,Sand green
-Studio.App.RobloxCustomWidgets.BrickColor153,Please check BrickColor Number - '153' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Sand red,Sand red
-Studio.App.RobloxCustomWidgets.BrickColor18,Please check BrickColor Number - '18' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Nougat,Nougat
-Studio.App.RobloxCustomWidgets.BrickColor192,Please check BrickColor Number - '192' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Reddish brown,Reddish brown
-Studio.App.RobloxCustomWidgets.BrickColor194,Please check BrickColor Number - '194' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Medium stone grey,Medium stone grey
-Studio.App.RobloxCustomWidgets.BrickColor199,Please check BrickColor Number - '199' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Dark stone grey,Dark stone grey
-Studio.App.RobloxCustomWidgets.BrickColor208,Please check BrickColor Number - '208' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Light stone grey,Light stone grey
-Studio.App.RobloxCustomWidgets.BrickColor21,Please check BrickColor Number - '21' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Bright red,Bright red
-Studio.App.RobloxCustomWidgets.BrickColor217,Please check BrickColor Number - '217' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Brown,Brown
-Studio.App.RobloxCustomWidgets.BrickColor226,Please check BrickColor Number - '226' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Cool yellow,Cool yellow
-Studio.App.RobloxCustomWidgets.BrickColor23,Please check BrickColor Number - '23' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Bright blue,Bright blue
-Studio.App.RobloxCustomWidgets.BrickColor24,Please check BrickColor Number - '24' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Bright yellow,Bright yellow
-Studio.App.RobloxCustomWidgets.BrickColor26,Please check BrickColor Number - '26' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Black,Black
-Studio.App.RobloxCustomWidgets.BrickColor28,Please check BrickColor Number - '28' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Dark green,Dark green
-Studio.App.RobloxCustomWidgets.BrickColor29,Please check BrickColor Number - '29' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Medium green,Medium green
-Studio.App.RobloxCustomWidgets.BrickColor301,Please check BrickColor Number - '301' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Slime green,Slime green
-Studio.App.RobloxCustomWidgets.BrickColor302,Please check BrickColor Number - '302' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Smoky grey,Smoky grey
-Studio.App.RobloxCustomWidgets.BrickColor303,Please check BrickColor Number - '303' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Dark blue,Dark blue
-Studio.App.RobloxCustomWidgets.BrickColor304,Please check BrickColor Number - '304' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Parsley green,Parsley green
-Studio.App.RobloxCustomWidgets.BrickColor305,Please check BrickColor Number - '305' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Steel blue,Steel blue
-Studio.App.RobloxCustomWidgets.BrickColor306,Please check BrickColor Number - '306' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Storm blue,Storm blue
-Studio.App.RobloxCustomWidgets.BrickColor307,Please check BrickColor Number - '307' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Lapis,Lapis
-Studio.App.RobloxCustomWidgets.BrickColor308,Please check BrickColor Number - '308' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Dark indigo,Dark indigo
-Studio.App.RobloxCustomWidgets.BrickColor309,Please check BrickColor Number - '309' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Sea green,Sea green
-Studio.App.RobloxCustomWidgets.BrickColor310,Please check BrickColor Number - '310' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Shamrock,Shamrock
-Studio.App.RobloxCustomWidgets.BrickColor311,Please check BrickColor Number - '311' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Fossil,Fossil
-Studio.App.RobloxCustomWidgets.BrickColor312,Please check BrickColor Number - '312' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Mulberry,Mulberry
-Studio.App.RobloxCustomWidgets.BrickColor313,Please check BrickColor Number - '313' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Forest green,Forest green
-Studio.App.RobloxCustomWidgets.BrickColor314,Please check BrickColor Number - '314' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Cadet blue,Cadet blue
-Studio.App.RobloxCustomWidgets.BrickColor315,Please check BrickColor Number - '315' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Electric blue,Electric blue
-Studio.App.RobloxCustomWidgets.BrickColor316,Please check BrickColor Number - '316' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Eggplant,Eggplant
-Studio.App.RobloxCustomWidgets.BrickColor317,Please check BrickColor Number - '317' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Moss,Moss
-Studio.App.RobloxCustomWidgets.BrickColor318,Please check BrickColor Number - '318' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Artichoke,Artichoke
-Studio.App.RobloxCustomWidgets.BrickColor319,Please check BrickColor Number - '319' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Sage green,Sage green
-Studio.App.RobloxCustomWidgets.BrickColor320,Please check BrickColor Number - '320' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Ghost grey,Ghost grey
-Studio.App.RobloxCustomWidgets.BrickColor321,Please check BrickColor Number - '321' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Lilac,Lilac
-Studio.App.RobloxCustomWidgets.BrickColor322,Please check BrickColor Number - '322' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Plum,Plum
-Studio.App.RobloxCustomWidgets.BrickColor323,Please check BrickColor Number - '323' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Olivine,Olivine
-Studio.App.RobloxCustomWidgets.BrickColor324,Please check BrickColor Number - '324' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Laurel green,Laurel green
-Studio.App.RobloxCustomWidgets.BrickColor325,Please check BrickColor Number - '325' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Quill grey,Quill grey
-Studio.App.RobloxCustomWidgets.BrickColor327,Please check BrickColor Number - '327' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Crimson,Crimson
-Studio.App.RobloxCustomWidgets.BrickColor328,Please check BrickColor Number - '328' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Mint,Mint
-Studio.App.RobloxCustomWidgets.BrickColor329,Please check BrickColor Number - '329' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Baby blue,Baby blue
-Studio.App.RobloxCustomWidgets.BrickColor330,Please check BrickColor Number - '330' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Carnation pink,Carnation pink
-Studio.App.RobloxCustomWidgets.BrickColor331,Please check BrickColor Number - '331' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Persimmon,Persimmon
-Studio.App.RobloxCustomWidgets.BrickColor332,Please check BrickColor Number - '332' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Maroon,Maroon
-Studio.App.RobloxCustomWidgets.BrickColor333,Please check BrickColor Number - '333' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Gold,Gold
-Studio.App.RobloxCustomWidgets.BrickColor334,Please check BrickColor Number - '334' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Daisy orange,Daisy orange
-Studio.App.RobloxCustomWidgets.BrickColor335,Please check BrickColor Number - '335' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pearl,Pearl
-Studio.App.RobloxCustomWidgets.BrickColor336,Please check BrickColor Number - '336' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Fog,Fog
-Studio.App.RobloxCustomWidgets.BrickColor337,Please check BrickColor Number - '337' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Salmon,Salmon
-Studio.App.RobloxCustomWidgets.BrickColor338,Please check BrickColor Number - '338' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Terra Cotta,Terra Cotta
-Studio.App.RobloxCustomWidgets.BrickColor339,Please check BrickColor Number - '339' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Cocoa,Cocoa
-Studio.App.RobloxCustomWidgets.BrickColor340,Please check BrickColor Number - '340' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Wheat,Wheat
-Studio.App.RobloxCustomWidgets.BrickColor341,Please check BrickColor Number - '341' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Buttermilk,Buttermilk
-Studio.App.RobloxCustomWidgets.BrickColor342,Please check BrickColor Number - '342' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Mauve,Mauve
-Studio.App.RobloxCustomWidgets.BrickColor343,Please check BrickColor Number - '343' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Sunrise,Sunrise
-Studio.App.RobloxCustomWidgets.BrickColor344,Please check BrickColor Number - '344' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Tawny,Tawny
-Studio.App.RobloxCustomWidgets.BrickColor345,Please check BrickColor Number - '345' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Rust,Rust
-Studio.App.RobloxCustomWidgets.BrickColor346,Please check BrickColor Number - '346' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Cashmere,Cashmere
-Studio.App.RobloxCustomWidgets.BrickColor347,Please check BrickColor Number - '347' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Khaki,Khaki
-Studio.App.RobloxCustomWidgets.BrickColor348,Please check BrickColor Number - '348' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Lily white,Lily white
-Studio.App.RobloxCustomWidgets.BrickColor349,Please check BrickColor Number - '349' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Seashell,Seashell
-Studio.App.RobloxCustomWidgets.BrickColor350,Please check BrickColor Number - '350' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Burgundy,Burgundy
-Studio.App.RobloxCustomWidgets.BrickColor351,Please check BrickColor Number - '351' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Cork,Cork
-Studio.App.RobloxCustomWidgets.BrickColor352,Please check BrickColor Number - '352' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Burlap,Burlap
-Studio.App.RobloxCustomWidgets.BrickColor353,Please check BrickColor Number - '353' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Beige,Beige
-Studio.App.RobloxCustomWidgets.BrickColor354,Please check BrickColor Number - '354' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Oyster,Oyster
-Studio.App.RobloxCustomWidgets.BrickColor355,Please check BrickColor Number - '355' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pine Cone,Pine Cone
-Studio.App.RobloxCustomWidgets.BrickColor356,Please check BrickColor Number - '356' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Fawn brown,Fawn brown
-Studio.App.RobloxCustomWidgets.BrickColor357,Please check BrickColor Number - '357' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Hurricane grey,Hurricane grey
-Studio.App.RobloxCustomWidgets.BrickColor358,Please check BrickColor Number - '358' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Cloudy grey,Cloudy grey
-Studio.App.RobloxCustomWidgets.BrickColor359,Please check BrickColor Number - '359' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Linen,Linen
-Studio.App.RobloxCustomWidgets.BrickColor360,Please check BrickColor Number - '360' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Copper,Copper
-Studio.App.RobloxCustomWidgets.BrickColor361,Please check BrickColor Number - '361' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Dirt brown,Dirt brown
-Studio.App.RobloxCustomWidgets.BrickColor362,Please check BrickColor Number - '362' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Bronze,Bronze
-Studio.App.RobloxCustomWidgets.BrickColor363,Please check BrickColor Number - '363' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Flint,Flint
-Studio.App.RobloxCustomWidgets.BrickColor364,Please check BrickColor Number - '364' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Dark taupe,Dark taupe
-Studio.App.RobloxCustomWidgets.BrickColor365,Please check BrickColor Number - '365' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Burnt Sienna,Burnt Sienna
-Studio.App.RobloxCustomWidgets.BrickColor37,Please check BrickColor Number - '37' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Bright green,Bright green
-Studio.App.RobloxCustomWidgets.BrickColor38,Please check BrickColor Number - '38' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Dark orange,Dark orange
-Studio.App.RobloxCustomWidgets.BrickColor45,Please check BrickColor Number - '45' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Light blue,Light blue
-Studio.App.RobloxCustomWidgets.BrickColor5,Please check BrickColor Number - '5' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Brick yellow,Brick yellow
-Studio.App.RobloxCustomWidgets.BrickColor9,Please check BrickColor Number - '9' at https://developer.roblox.com/en-us/articles/BrickColor-Codes,Light reddish violet,Light reddish violet
+Studio.App.RobloxCustomWidgets.BrickColor1,https://developer.roblox.com/en-us/articles/BrickColor-Codes,White,White
+Studio.App.RobloxCustomWidgets.BrickColor1001,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Institutional white,Institutional white
+Studio.App.RobloxCustomWidgets.BrickColor1002,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Mid gray,Mid gray
+Studio.App.RobloxCustomWidgets.BrickColor1003,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Really black,Really black
+Studio.App.RobloxCustomWidgets.BrickColor1004,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Really red,Really red
+Studio.App.RobloxCustomWidgets.BrickColor1005,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Deep orange,Deep orange
+Studio.App.RobloxCustomWidgets.BrickColor1006,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Alder,Alder
+Studio.App.RobloxCustomWidgets.BrickColor1007,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Dusty Rose,Dusty Rose
+Studio.App.RobloxCustomWidgets.BrickColor1008,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Olive,Olive
+Studio.App.RobloxCustomWidgets.BrickColor1009,https://developer.roblox.com/en-us/articles/BrickColor-Codes,New Yeller,New Yeller
+Studio.App.RobloxCustomWidgets.BrickColor101,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Medium red,Medium red
+Studio.App.RobloxCustomWidgets.BrickColor1010,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Really blue,Really blue
+Studio.App.RobloxCustomWidgets.BrickColor1011,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Navy blue,Navy blue
+Studio.App.RobloxCustomWidgets.BrickColor1012,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Deep blue,Deep blue
+Studio.App.RobloxCustomWidgets.BrickColor1013,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Cyan,Cyan
+Studio.App.RobloxCustomWidgets.BrickColor1014,https://developer.roblox.com/en-us/articles/BrickColor-Codes,CGA brown,CGA brown
+Studio.App.RobloxCustomWidgets.BrickColor1015,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Magenta,Magenta
+Studio.App.RobloxCustomWidgets.BrickColor1016,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pink,Pink
+Studio.App.RobloxCustomWidgets.BrickColor1018,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Teal,Teal
+Studio.App.RobloxCustomWidgets.BrickColor1019,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Toothpaste,Toothpaste
+Studio.App.RobloxCustomWidgets.BrickColor102,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Medium blue,Medium blue
+Studio.App.RobloxCustomWidgets.BrickColor1020,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Lime green,Lime green
+Studio.App.RobloxCustomWidgets.BrickColor1021,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Camo,Camo
+Studio.App.RobloxCustomWidgets.BrickColor1022,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Grime,Grime
+Studio.App.RobloxCustomWidgets.BrickColor1023,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Lavender,Lavender
+Studio.App.RobloxCustomWidgets.BrickColor1024,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pastel light blue,Pastel light blue
+Studio.App.RobloxCustomWidgets.BrickColor1025,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pastel orange,Pastel orange
+Studio.App.RobloxCustomWidgets.BrickColor1026,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pastel violet,Pastel violet
+Studio.App.RobloxCustomWidgets.BrickColor1027,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pastel blue-green,Pastel blue-green
+Studio.App.RobloxCustomWidgets.BrickColor1028,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pastel green,Pastel green
+Studio.App.RobloxCustomWidgets.BrickColor1029,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pastel yellow,Pastel yellow
+Studio.App.RobloxCustomWidgets.BrickColor1030,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pastel brown,Pastel brown
+Studio.App.RobloxCustomWidgets.BrickColor1031,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Royal purple,Royal purple
+Studio.App.RobloxCustomWidgets.BrickColor1032,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Hot pink,Hot pink
+Studio.App.RobloxCustomWidgets.BrickColor104,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Bright violet,Bright violet
+Studio.App.RobloxCustomWidgets.BrickColor105,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Br. yellowish orange,Br. yellowish orange
+Studio.App.RobloxCustomWidgets.BrickColor106,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Bright orange,Bright orange
+Studio.App.RobloxCustomWidgets.BrickColor107,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Bright bluish green,Bright bluish green
+Studio.App.RobloxCustomWidgets.BrickColor11,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pastel Blue,Pastel Blue
+Studio.App.RobloxCustomWidgets.BrickColor119,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Br. yellowish green,Br. yellowish green
+Studio.App.RobloxCustomWidgets.BrickColor125,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Light orange,Light orange
+Studio.App.RobloxCustomWidgets.BrickColor133,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Neon orange,Neon orange
+Studio.App.RobloxCustomWidgets.BrickColor135,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Sand blue,Sand blue
+Studio.App.RobloxCustomWidgets.BrickColor141,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Earth green,Earth green
+Studio.App.RobloxCustomWidgets.BrickColor151,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Sand green,Sand green
+Studio.App.RobloxCustomWidgets.BrickColor153,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Sand red,Sand red
+Studio.App.RobloxCustomWidgets.BrickColor18,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Nougat,Nougat
+Studio.App.RobloxCustomWidgets.BrickColor192,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Reddish brown,Reddish brown
+Studio.App.RobloxCustomWidgets.BrickColor194,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Medium stone grey,Medium stone grey
+Studio.App.RobloxCustomWidgets.BrickColor199,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Dark stone grey,Dark stone grey
+Studio.App.RobloxCustomWidgets.BrickColor208,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Light stone grey,Light stone grey
+Studio.App.RobloxCustomWidgets.BrickColor21,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Bright red,Bright red
+Studio.App.RobloxCustomWidgets.BrickColor217,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Brown,Brown
+Studio.App.RobloxCustomWidgets.BrickColor226,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Cool yellow,Cool yellow
+Studio.App.RobloxCustomWidgets.BrickColor23,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Bright blue,Bright blue
+Studio.App.RobloxCustomWidgets.BrickColor24,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Bright yellow,Bright yellow
+Studio.App.RobloxCustomWidgets.BrickColor26,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Black,Black
+Studio.App.RobloxCustomWidgets.BrickColor28,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Dark green,Dark green
+Studio.App.RobloxCustomWidgets.BrickColor29,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Medium green,Medium green
+Studio.App.RobloxCustomWidgets.BrickColor301,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Slime green,Slime green
+Studio.App.RobloxCustomWidgets.BrickColor302,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Smoky grey,Smoky grey
+Studio.App.RobloxCustomWidgets.BrickColor303,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Dark blue,Dark blue
+Studio.App.RobloxCustomWidgets.BrickColor304,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Parsley green,Parsley green
+Studio.App.RobloxCustomWidgets.BrickColor305,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Steel blue,Steel blue
+Studio.App.RobloxCustomWidgets.BrickColor306,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Storm blue,Storm blue
+Studio.App.RobloxCustomWidgets.BrickColor307,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Lapis,Lapis
+Studio.App.RobloxCustomWidgets.BrickColor308,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Dark indigo,Dark indigo
+Studio.App.RobloxCustomWidgets.BrickColor309,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Sea green,Sea green
+Studio.App.RobloxCustomWidgets.BrickColor310,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Shamrock,Shamrock
+Studio.App.RobloxCustomWidgets.BrickColor311,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Fossil,Fossil
+Studio.App.RobloxCustomWidgets.BrickColor312,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Mulberry,Mulberry
+Studio.App.RobloxCustomWidgets.BrickColor313,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Forest green,Forest green
+Studio.App.RobloxCustomWidgets.BrickColor314,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Cadet blue,Cadet blue
+Studio.App.RobloxCustomWidgets.BrickColor315,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Electric blue,Electric blue
+Studio.App.RobloxCustomWidgets.BrickColor316,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Eggplant,Eggplant
+Studio.App.RobloxCustomWidgets.BrickColor317,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Moss,Moss
+Studio.App.RobloxCustomWidgets.BrickColor318,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Artichoke,Artichoke
+Studio.App.RobloxCustomWidgets.BrickColor319,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Sage green,Sage green
+Studio.App.RobloxCustomWidgets.BrickColor320,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Ghost grey,Ghost grey
+Studio.App.RobloxCustomWidgets.BrickColor321,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Lilac,Lilac
+Studio.App.RobloxCustomWidgets.BrickColor322,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Plum,Plum
+Studio.App.RobloxCustomWidgets.BrickColor323,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Olivine,Olivine
+Studio.App.RobloxCustomWidgets.BrickColor324,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Laurel green,Laurel green
+Studio.App.RobloxCustomWidgets.BrickColor325,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Quill grey,Quill grey
+Studio.App.RobloxCustomWidgets.BrickColor327,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Crimson,Crimson
+Studio.App.RobloxCustomWidgets.BrickColor328,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Mint,Mint
+Studio.App.RobloxCustomWidgets.BrickColor329,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Baby blue,Baby blue
+Studio.App.RobloxCustomWidgets.BrickColor330,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Carnation pink,Carnation pink
+Studio.App.RobloxCustomWidgets.BrickColor331,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Persimmon,Persimmon
+Studio.App.RobloxCustomWidgets.BrickColor332,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Maroon,Maroon
+Studio.App.RobloxCustomWidgets.BrickColor333,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Gold,Gold
+Studio.App.RobloxCustomWidgets.BrickColor334,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Daisy orange,Daisy orange
+Studio.App.RobloxCustomWidgets.BrickColor335,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pearl,Pearl
+Studio.App.RobloxCustomWidgets.BrickColor336,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Fog,Fog
+Studio.App.RobloxCustomWidgets.BrickColor337,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Salmon,Salmon
+Studio.App.RobloxCustomWidgets.BrickColor338,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Terra Cotta,Terra Cotta
+Studio.App.RobloxCustomWidgets.BrickColor339,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Cocoa,Cocoa
+Studio.App.RobloxCustomWidgets.BrickColor340,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Wheat,Wheat
+Studio.App.RobloxCustomWidgets.BrickColor341,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Buttermilk,Buttermilk
+Studio.App.RobloxCustomWidgets.BrickColor342,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Mauve,Mauve
+Studio.App.RobloxCustomWidgets.BrickColor343,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Sunrise,Sunrise
+Studio.App.RobloxCustomWidgets.BrickColor344,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Tawny,Tawny
+Studio.App.RobloxCustomWidgets.BrickColor345,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Rust,Rust
+Studio.App.RobloxCustomWidgets.BrickColor346,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Cashmere,Cashmere
+Studio.App.RobloxCustomWidgets.BrickColor347,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Khaki,Khaki
+Studio.App.RobloxCustomWidgets.BrickColor348,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Lily white,Lily white
+Studio.App.RobloxCustomWidgets.BrickColor349,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Seashell,Seashell
+Studio.App.RobloxCustomWidgets.BrickColor350,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Burgundy,Burgundy
+Studio.App.RobloxCustomWidgets.BrickColor351,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Cork,Cork
+Studio.App.RobloxCustomWidgets.BrickColor352,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Burlap,Burlap
+Studio.App.RobloxCustomWidgets.BrickColor353,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Beige,Beige
+Studio.App.RobloxCustomWidgets.BrickColor354,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Oyster,Oyster
+Studio.App.RobloxCustomWidgets.BrickColor355,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Pine Cone,Pine Cone
+Studio.App.RobloxCustomWidgets.BrickColor356,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Fawn brown,Fawn brown
+Studio.App.RobloxCustomWidgets.BrickColor357,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Hurricane grey,Hurricane grey
+Studio.App.RobloxCustomWidgets.BrickColor358,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Cloudy grey,Cloudy grey
+Studio.App.RobloxCustomWidgets.BrickColor359,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Linen,Linen
+Studio.App.RobloxCustomWidgets.BrickColor360,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Copper,Copper
+Studio.App.RobloxCustomWidgets.BrickColor361,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Dirt brown,Dirt brown
+Studio.App.RobloxCustomWidgets.BrickColor362,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Bronze,Bronze
+Studio.App.RobloxCustomWidgets.BrickColor363,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Flint,Flint
+Studio.App.RobloxCustomWidgets.BrickColor364,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Dark taupe,Dark taupe
+Studio.App.RobloxCustomWidgets.BrickColor365,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Burnt Sienna,Burnt Sienna
+Studio.App.RobloxCustomWidgets.BrickColor37,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Bright green,Bright green
+Studio.App.RobloxCustomWidgets.BrickColor38,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Dark orange,Dark orange
+Studio.App.RobloxCustomWidgets.BrickColor45,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Light blue,Light blue
+Studio.App.RobloxCustomWidgets.BrickColor5,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Brick yellow,Brick yellow
+Studio.App.RobloxCustomWidgets.BrickColor9,https://developer.roblox.com/en-us/articles/BrickColor-Codes,Light reddish violet,Light reddish violet
 Studio.App.RobloxCustomWidgets.Loading,,(Loading...),(Loading...)
 Studio.App.RobloxCustomWidgets.MoreColors,,More Colors,More Colors
 Studio.App.RobloxCustomWidgets.Url,,URL:,URL:
@@ -2200,6 +2221,15 @@ Studio.App.RobloxMainWindow.ChooseAPlaceInGameExplorer1,,"Choose an instance as 
 ","Choose an instance as parent in game explorer to save %1 
 "
 Studio.App.RobloxMainWindow.Configure,,Configure,Configure
+Studio.App.RobloxMainWindow.DocHistoryBackwards,,Step backwards through tab history,Step backwards through tab history
+Studio.App.RobloxMainWindow.DocHistoryForwards,,Step forwards through tab history,Step forwards through tab history
+Studio.App.RobloxMainWindow.InternalFeaturesMessageBoxContent,,"Your account is associated with an @roblox.com email address or has Soothsayer permissions. You also have internal-only features turned on.
+Do you want to disable Internal Features? This will make your Studio experience identical to developers.
+You can go to Settings > Studio > Advanced to re-enable Internal Features.","Your account is associated with an @roblox.com email address or has Soothsayer permissions. You also have internal-only features turned on.
+Do you want to disable Internal Features? This will make your Studio experience identical to developers.
+You can go to Settings > Studio > Advanced to re-enable Internal Features."
+Studio.App.RobloxMainWindow.InternalFeaturesRestart,,Restart Roblox Studio,Restart Roblox Studio
+Studio.App.RobloxMainWindow.InternalFeaturesRestartDetails,,Roblox Studio need to restart to disable Internal Features,Roblox Studio need to restart to disable Internal Features
 Studio.App.RobloxMainWindow.NewScriptTab,,New Script Tab,New Script Tab
 Studio.App.RobloxMainWindow.OnlySaveToEditDM,,Can only save in Edit Mode,Can only save in Edit Mode
 Studio.App.RobloxMainWindow.OpenAllFilesPattern,"NOTE TO LOCALIZERS: Do not translate the parentheses (), whatever is inside the parentheses, or any other special characters, use ASCII instead.",All Files (*.*),All Files (*.*)
@@ -2237,7 +2267,7 @@ Studio.App.RobloxOutputRibbonDropdown.NumberContexts1,,%1 Contexts,%1 Contexts
 Studio.App.RobloxOutputRibbonDropdown.NumberTypes1,,%1 Types,%1 Types
 Studio.App.RobloxOutputRibbonDropdown.PlaySolo,,NonNetworked,NonNetworked
 Studio.App.RobloxOutputRibbonDropdown.RobloxPlugin,,Roblox Plugin,Roblox Plugin
-Studio.App.RobloxOutputRibbonDropdown.SelectMessageOnly,,Select Messages Only,Select Messages Only
+Studio.App.RobloxOutputRibbonDropdown.SelectMessagesOnly,,Select Messages Only,Select Messages Only
 Studio.App.RobloxOutputRibbonDropdown.Server,,Server,Server
 Studio.App.RobloxOutputRibbonDropdown.ShowContext,,Show Context,Show Context
 Studio.App.RobloxOutputRibbonDropdown.ShowMemoryAddressForExpandableTables,,Show memory address for expandable tables,Show memory address for expandable tables
@@ -2356,8 +2386,6 @@ Studio.App.RobloxRibbonMainWindow.DiamondPlate,,Diamond Plate,Diamond Plate
 Studio.App.RobloxRibbonMainWindow.DiffMenu,,Diff Menu,Diff Menu
 Studio.App.RobloxRibbonMainWindow.DisplayAxis,,Display Axis,Display Axis
 Studio.App.RobloxRibbonMainWindow.DisplayGridMaterialOnParts,,Display grid material on Parts,Display grid material on Parts
-Studio.App.RobloxRibbonMainWindow.DocHistoryBackwards,,Step backwards through tab history,Step backwards through tab history
-Studio.App.RobloxRibbonMainWindow.DocHistoryForwards,,Step forwards through tab history,Step forwards through tab history
 Studio.App.RobloxRibbonMainWindow.DrawConstraintsAttWeldsTop,,"Draw constraints, attachments and welds on top","Draw constraints, attachments and welds on top"
 Studio.App.RobloxRibbonMainWindow.DrawOnTop,,Draw On Top,Draw On Top
 Studio.App.RobloxRibbonMainWindow.EditCollisionGroups,,Edit collision groups,Edit collision groups
@@ -2407,13 +2435,6 @@ Studio.App.RobloxRibbonMainWindow.InsertWedgePart,,Insert wedge part,Insert wedg
 Studio.App.RobloxRibbonMainWindow.InternalBetaFeatures,,Roblox Internal - Beta,Roblox Internal - Beta
 Studio.App.RobloxRibbonMainWindow.InternalFeatures,,Roblox Internal,Roblox Internal
 Studio.App.RobloxRibbonMainWindow.InternalFeaturesAreEnabled,,Internal Features are enabled,Internal Features are enabled
-Studio.App.RobloxRibbonMainWindow.InternalFeaturesMessageBoxContent,,"Your account is associated with an @roblox.com email address or has Soothsayer permissions. You also have internal-only features turned on.
-Do you want to disable Internal Features? This will make your Studio experience identical to developers.
-You can go to Settings > Studio > Advanced to re-enable Internal Features.","Your account is associated with an @roblox.com email address or has Soothsayer permissions. You also have internal-only features turned on.
-Do you want to disable Internal Features? This will make your Studio experience identical to developers.
-You can go to Settings > Studio > Advanced to re-enable Internal Features."
-Studio.App.RobloxRibbonMainWindow.InternalFeaturesRestart,,Restart Roblox Studio,Restart Roblox Studio
-Studio.App.RobloxRibbonMainWindow.InternalFeaturesRestartDetails,,Roblox Studio need to restart to disable Internal Features,Roblox Studio need to restart to disable Internal Features
 Studio.App.RobloxRibbonMainWindow.Join,Join,Join,Join
 Studio.App.RobloxRibbonMainWindow.JoinSurfaces,,Join Surfaces,Join Surfaces
 Studio.App.RobloxRibbonMainWindow.JoinSurfacesTooltip,,Make parts join together at touching surfaces,Make parts join together at touching surfaces
@@ -2434,9 +2455,8 @@ Studio.App.RobloxRibbonMainWindow.Mute,,Mute,Mute
 Studio.App.RobloxRibbonMainWindow.Navigate,,Navigate,Navigate
 Studio.App.RobloxRibbonMainWindow.NegatePartsForMakingHoles,,Negate parts for making holes,Negate parts for making holes
 Studio.App.RobloxRibbonMainWindow.Network,,Network,Network
-Studio.App.RobloxRibbonMainWindow.NewUpdates,,What's New,What's New
-Studio.App.RobloxRibbonMainWindow.NoCollision,,No Collision,No Collision
-Studio.App.RobloxRibbonMainWindow.NoCollisionTooltip,,Create a no collision constraint,Create a no collision constraint
+Studio.App.RobloxRibbonMainWindow.NoCollisionConstraint,,No Collision,No Collision
+Studio.App.RobloxRibbonMainWindow.NoCollisionConstraintTooltip,,Create a no collision constraint,Create a no collision constraint
 Studio.App.RobloxRibbonMainWindow.None,,None,None
 Studio.App.RobloxRibbonMainWindow.OpenSaveManageDoc,,"Click here to open, save or publish, and to see everything else you can do with the document","Click here to open, save or publish, and to see everything else you can do with the document"
 Studio.App.RobloxRibbonMainWindow.OpenTheLocalPluginsFolder,,Open the local plugins folder,Open the local plugins folder
@@ -2549,6 +2569,7 @@ Studio.App.RobloxRibbonMainWindow.ViewTutorials,,View Tutorials,View Tutorials
 Studio.App.RobloxRibbonMainWindow.WatchTheHighlightedVariables,,Watch the highlighted variable's value,Watch the highlighted variable's value
 Studio.App.RobloxRibbonMainWindow.Wedge,,Wedge,Wedge
 Studio.App.RobloxRibbonMainWindow.Weld,,Weld,Weld
+Studio.App.RobloxRibbonMainWindow.WhatsNew,,What's New,What's New
 Studio.App.RobloxRibbonMainWindow.WoodPlanks,,Wood Planks,Wood Planks
 Studio.App.RobloxScriptDiffDoc.DiffResult,,Diff Result,Diff Result
 Studio.App.RobloxScriptDoc.BreakpointsDisabledLinkedSource,,Breakpoints are currently disabled for LinkedSource.,Breakpoints are currently disabled for LinkedSource.
@@ -2812,7 +2833,6 @@ Studio.App.StartPage.ShareOnFacebook,,Share on Facebook,Share on Facebook
 Studio.App.StartPage.ShareOnTwitter,,Share on Twitter,Share on Twitter
 Studio.App.StartPage.ShareYourGame,,Share your game,Share your game
 Studio.App.StartPageLogin.ForgotPassword,,Forgot Password?,Forgot Password?
-Studio.App.StartPageLogin.GenericError,Start page login,Login error. Please try again.,Login error. Please try again.
 Studio.App.StartPageLogin.LogIn,,Log In,Log In
 Studio.App.StartPageLogin.LoggingInElps,,Logging in...,Logging in...
 Studio.App.StartPageLogin.LoggingOutElps,,Logging out...,Logging out...
@@ -2828,9 +2848,9 @@ Studio.App.StartPageLogin.TwoStepVerificationTitle,,2-Step Verification,2-Step V
 Studio.App.StartPageLogin.Username,,Username,Username
 Studio.App.StartPageLogin.WeChatQQLogin,,WeChat / QQ Login,WeChat / QQ Login
 Studio.App.StudioDataModelLoadUtil.ErrorCannotOpenTCPlaceDueToCancellation,,Failed to open the team create place due to cancellation,Failed to open the team create place due to cancellation
-Studio.App.StudioDataModelLoadUtil.ErrorCannotOpenTCPlaceDueToConflictGlobal,,Global Studio does not support joining a TeamCreate session with a Luobu Studio developer. Please download Luobu Studio to use TeamCreate together: www.robloxdev.cn,Global Studio does not support joining a TeamCreate session with a Luobu Studio developer. Please download Luobu Studio to use TeamCreate together: www.robloxdev.cn
-Studio.App.StudioDataModelLoadUtil.ErrorCannotOpenTCPlaceDueToConflictLuobu,,Luobu Studio does not support joining a TeamCreate session with a global Studio developer. Please ask your teammates to download Loubu Studio to use TeamCreate together: www.robloxdev.cn,Luobu Studio does not support joining a TeamCreate session with a global Studio developer. Please ask your teammates to download Loubu Studio to use TeamCreate together: www.robloxdev.cn
 Studio.App.StudioDataModelLoadUtil.ErrorCannotOpenTCPlaceDueToTimeout,,Failed to open the team create place due to timeout,Failed to open the team create place due to timeout
+Studio.App.StudioDataModelLoadUtil.ErrorCannotOpenTCPlaceDueToVersionConflictGlobal,,Global Studio does not support joining a TeamCreate session with a Luobu Studio developer. Please download Luobu Studio to use TeamCreate together: www.robloxdev.cn,Global Studio does not support joining a TeamCreate session with a Luobu Studio developer. Please download Luobu Studio to use TeamCreate together: www.robloxdev.cn
+Studio.App.StudioDataModelLoadUtil.ErrorCannotOpenTCPlaceDueToVersionConflictLuobu,,Luobu Studio does not support joining a TeamCreate session with a global Studio developer. Please ask your teammates to download Loubu Studio to use TeamCreate together: www.robloxdev.cn,Luobu Studio does not support joining a TeamCreate session with a global Studio developer. Please ask your teammates to download Loubu Studio to use TeamCreate together: www.robloxdev.cn
 Studio.App.StudioDataModelLoadUtil.ErrorCannotOpenTCPlaceGeneral,,"Failed to open the team create place, please try again","Failed to open the team create place, please try again"
 Studio.App.StudioDataModelLoadUtil.ErrorCannotOpenTCPlaceWithErrorCode1,"NOTE TO LOCALIZERS: Do not translate the parentheses (), whatever is inside the parentheses, or any other special characters, use ASCII instead.","Failed to open the team create place, please try again. (Error Code: %1)","Failed to open the team create place, please try again. (Error Code: %1)"
 Studio.App.StudioDeviceEmulatorService.CannotChangeEmulationDevice,,Can't set emulation device in current game state.,Can't set emulation device in current game state.
@@ -2971,7 +2991,7 @@ Studio.App.Updates.UpdateAvailableMessage,,Do you want to restart Studio and upd
 Studio.App.Updates.UpdateAvailableTitle,,Update Available,Update Available
 Studio.App.Updates.UpdateAvailableToast,,A new version of Studio is available,A new version of Studio is available
 Studio.App.Updates.UpdateNowButton,,Update Now,Update Now
-Studio.App.UploadImageRequest.CouldNotOpenFile1,,Could not open file %1,Could not open file %1
+Studio.App.UploadImageRequest.CouldNotOpenFile,,Could not open file %1,Could not open file %1
 Studio.App.UploadImageRequest.UploadingQuickly1,,Uploading too quickly. Try again in %1 minute(s),Uploading too quickly. Try again in %1 minute(s)
 Studio.App.UploadImageRequest.UploadingQuicklyHour1,,Uploading too quickly. Try again in %1 hour(s),Uploading too quickly. Try again in %1 hour(s)
 Studio.App.UploadImageRequest.UploadingTooQuickly,,Uploading too quickly,Uploading too quickly
@@ -3034,6 +3054,7 @@ Studio.App.VersionHistoryDialog.VersionHistoryHashMismatch,,Current Source does 
 Studio.App.VersionHistoryDialog.ViewButtonText,,View,View
 Studio.App.VideoControl.RecordingStarted,,Video recording started,Video recording started
 Studio.App.VideoControl.RecordingStopped,,Video recording stopped,Video recording stopped
+Studio.App.Watch.Watch,,Watch,Watch
 Studio.App.WatchWidget.CopyEntry,Copy Entry in the WatchWidget copies via context menu only the variable info from the column selected and row currently highlighted,Copy Entry,Copy Entry
 Studio.App.WatchWidget.CopyRow,Copy Row in the WatchWidget copies all the variable info via context menu,Copy Row,Copy Row
 Studio.App.WatchWidget.Expression,,Expression,Expression
