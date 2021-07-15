@@ -37,7 +37,6 @@ local FFlagUseNotificationsLocalization = success and result
 local FFlagNewAwardBadgeEndpoint = settings():GetFFlag('NewAwardBadgeEndpoint2')
 local FFlagFixNotificationScriptError = game:DefineFastFlag("FixNotificationScriptError", false)
 
-local GetFFlagRemoveInGameFollowingEvents = require(RobloxGui.Modules.Flags.GetFFlagRemoveInGameFollowingEvents)
 local GetFixGraphicsQuality = require(RobloxGui.Modules.Flags.GetFixGraphicsQuality)
 local isNewGamepadMenuEnabled = require(RobloxGui.Modules.Flags.isNewGamepadMenuEnabled)
 
@@ -549,31 +548,6 @@ local function createDeveloperNotification(notificationTable)
 end
 
 StarterGui:RegisterSetCore("SendNotification", createDeveloperNotification)
-
--- New follower notification
-spawn(function()
-	if isTenFootInterface or GetFFlagRemoveInGameFollowingEvents() then
-		--If on console, New follower notification should be blocked
-		return
-	end
-
-	local RobloxReplicatedStorage = game:GetService('RobloxReplicatedStorage')
-	local RemoteEvent_NewFollower = RobloxReplicatedStorage:WaitForChild('NewFollower', 86400) or RobloxReplicatedStorage:WaitForChild('NewFollower')
-
-	RemoteEvent_NewFollower.OnClientEvent:connect(function(followerRbxPlayer)
-		local message = RobloxTranslator:FormatByKey("NotificationScript2.NewFollower", {RBX_NAME = followerRbxPlayer.Name})
-
-		local image = getFriendImage(followerRbxPlayer.UserId)
-		sendNotificationInfo {
-			GroupName = "Friends",
-			Title = "New Follower",
-			Text = message,
-			DetailText = message,
-			Image = image,
-			Duration = 5
-		}
-	end)
-end)
 
 local checkFriendRequestIsThrottled; do
 	local friendRequestThrottlingMap = {}

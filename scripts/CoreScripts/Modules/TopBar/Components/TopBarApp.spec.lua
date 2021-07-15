@@ -31,27 +31,6 @@ return function()
 	NewPlayerCanManageDetails.Name = "NewPlayerCanManageDetails"
 	NewPlayerCanManageDetails.Parent = RobloxReplicatedStorage
 
-	local FollowRelationshipChanged
-	local GetFollowRelationships
-	local NewFollower
-
-	local Flags = script.Parent.Parent.Parent.Flags
-	local GetFFlagRemoveInGameFollowingEvents = require(Flags.GetFFlagRemoveInGameFollowingEvents)
-
-	if not GetFFlagRemoveInGameFollowingEvents() then
-		FollowRelationshipChanged = Instance.new("RemoteEvent")
-		FollowRelationshipChanged.Name = "FollowRelationshipChanged"
-		FollowRelationshipChanged.Parent = RobloxReplicatedStorage
-
-		GetFollowRelationships = Instance.new("RemoteFunction")
-		GetFollowRelationships.Name = "GetFollowRelationships"
-		GetFollowRelationships.Parent = RobloxReplicatedStorage
-
-		NewFollower = Instance.new("RemoteEvent")
-		NewFollower.Name = "NewFollower"
-		NewFollower.Parent = RobloxReplicatedStorage
-	end
-
 	local RobloxGui = CoreGui:WaitForChild("RobloxGui")
 	local SendNotificationInfo = Instance.new("BindableEvent")
 	SendNotificationInfo.Name = "SendNotificationInfo"

@@ -25,12 +25,14 @@ GameIcon.validateProps = t.strictInterface({
 	gameId = t.number,
 	iconSize = t.numberMin(0),
 	layoutOrder = t.optional(t.number),
+	cornerRadius = t.optional(t.UDim),
 })
 
 function GameIcon:render()
 	local iconSize = self.props.iconSize
 	local requestIconSize = getGameIconRequestSize(iconSize)
 	local gameId = self.props.gameId
+	local cornerRadius = self.props.cornerRadius
 
 	local iconUrl = ("rbxthumb://type=GameIcon&id=%d&w=%d&h=%d"):format(
 		gameId,
@@ -62,6 +64,10 @@ function GameIcon:render()
 					ImageColor3 = style.Theme.UIDefault.Color,
 					ImageTransparency = style.Theme.UIDefault.Transparency,
 					AnchorPoint = Vector2.new(0.5, 0.5),
+				}, {
+					UICorner = cornerRadius and cornerRadius ~= UDim.new(0, 0) and Roact.createElement("UICorner", {
+						CornerRadius = cornerRadius,
+					}) or nil,
 				}),
 			})
 		end)
@@ -71,6 +77,10 @@ function GameIcon:render()
 			Size = UDim2.fromOffset(iconSize, iconSize),
 			BackgroundTransparency = 1,
 			LayoutOrder = self.props.layoutOrder,
+		}, {
+			UICorner = cornerRadius and cornerRadius ~= UDim.new(0, 0) and Roact.createElement("UICorner", {
+				CornerRadius = cornerRadius,
+			}) or nil,
 		})
 	end
 end

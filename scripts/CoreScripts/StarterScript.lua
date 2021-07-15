@@ -42,6 +42,7 @@ local GetFFlagScreenTime = require(CorePackages.Regulations.ScreenTime.GetFFlagS
 
 local GetFFlagEnableCaptureMode = require(RobloxGui.Modules.Flags.GetFFlagEnableCaptureMode)
 
+local GetFFlagBubbleVoiceIndicator = require(RobloxGui.Modules.Flags.GetFFlagBubbleVoiceIndicator)
 local GetFFlagEnableVoiceDefaultChannel = require(RobloxGui.Modules.Flags.GetFFlagEnableVoiceDefaultChannel)
 
 -- The Rotriever index, as well as the in-game menu code itself, relies on
@@ -145,7 +146,11 @@ local UserRoactBubbleChatBeta do
 end
 
 if game:GetEngineFeature("EnableBubbleChatFromChatService") or UserRoactBubbleChatBeta then
-	ScriptContext:AddCoreScriptLocal("CoreScripts/InGameChat", RobloxGui)
+	if GetFFlagBubbleVoiceIndicator() then
+		ScriptContext:AddCoreScriptLocal("CoreScripts/PlayerBillboards", RobloxGui)
+	else
+		ScriptContext:AddCoreScriptLocal("CoreScripts/InGameChat", RobloxGui)
+	end
 end
 
 -- Purchase Prompt Script

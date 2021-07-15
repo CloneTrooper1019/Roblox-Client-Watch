@@ -73,6 +73,7 @@ local FFlagInspectMenuSubjectToPolicy = require(RobloxGui.Modules.Flags.FFlagIns
 local isEngineTruncationEnabledForIngameSettings = require(RobloxGui.Modules.Flags.isEngineTruncationEnabledForIngameSettings)
 
 local GetFFlagUseThumbnailUrl = require(RobloxGui.Modules.Common.Flags.GetFFlagUseThumbnailUrl)
+local GetFFlagEnableVoiceChatPlayersListOptimization = require(RobloxGui.Modules.Flags.GetFFlagEnableVoiceChatPlayersListOptimization)
 
 ----------- CLASS DECLARATION --------------
 local function Initialize()
@@ -272,7 +273,7 @@ local function Initialize()
 		end
 	end)
 
-	local function muteButtonUpdate(playerLabel, playerStatus)
+	local function muteButtonUpdateOld(playerLabel, playerStatus)
 		local buttonParent = nil
 		if playerLabel then
 			buttonParent = playerLabel:FindFirstChild("RightSideButtons")
@@ -304,6 +305,54 @@ local function Initialize()
 				image,
 				UDim2.new(0, 46, 0, 46),
 				UDim2.new(0, 20, 0, 26),
+				function ()
+					VoiceChatServiceManager:ToggleMutePlayer(
+						playerStatus.userId
+					)
+				end
+			)
+			muteLabelText.ZIndex = 3
+			muteLabelText.Position = muteLabelText.Position + UDim2.new(0,0,0,1)
+			muteLabel.Parent = buttonParent
+		end
+	end
+
+	local function muteButtonUpdate(playerLabel, playerStatus)
+		local buttonParent = nil
+		if playerLabel then
+			buttonParent = playerLabel:FindFirstChild("RightSideButtons")
+		end
+
+		if not buttonParent then
+			return
+		end
+		local oldButton = buttonParent:FindFirstChild("MuteStatusButton")
+
+		if playerStatus == nil then
+			if oldButton then
+				oldButton:Destroy()
+			end
+			return
+		end
+
+		local image = playerStatus.isMuted
+			and MuteStatusIcons.MicOff
+			or MuteStatusIcons.MicOn
+		if playerStatus.isMutedLocally then
+			image = MuteStatusIcons.MicDisabled
+		elseif not playerStatus.subscriptionCompleted then
+			image = MuteStatusIcons.Loading
+		end
+
+		if oldButton then
+			local muteStatusLabel = buttonParent:FindFirstChild("MuteStatusImageLabel", true)
+			muteStatusLabel.Image = image
+		else
+			local muteLabel, muteLabelText = utility:MakeStyledImageButton(
+				"MuteStatus",
+				image,
+				UDim2.fromOffset(46, 46),
+				UDim2.fromOffset(20, 26),
 				function ()
 					VoiceChatServiceManager:ToggleMutePlayer(
 						playerStatus.userId
@@ -713,6 +762,19 @@ local function Initialize()
 	local existingPlayerLabels = {}
 	local livePlayers = {}
 
+	local function updateAllMuteButtons()
+		local players = PlayersService:GetPlayers()
+
+		for _, player in ipairs(players) do
+			local frame = existingPlayerLabels[player.Name]
+
+			if player and frame then
+				local status = VoiceChatServiceManager.participants[tostring(player.UserId)]
+				muteButtonUpdate(frame, status)
+			end
+		end
+	end
+
 	local voiceChatServiceConnected = false
 	if getFFlagEnableVoiceChatPlayersList()
 		and game:GetEngineFeature("VoiceChatSupported")
@@ -779,7 +841,7 @@ local function Initialize()
 
 				if voiceChatServiceConnected then
 					local status = VoiceChatServiceManager.participants[tostring(player.UserId)]
-					muteButtonUpdate(frame, status)
+					muteButtonUpdateOld(frame, status)
 				end
 
 				if GetFFlagUseThumbnailUrl() then
@@ -863,10 +925,18 @@ local function Initialize()
 	if voiceChatServiceConnected then
 		-- Rerender when the participants state changes
 		VoiceChatServiceManager.participantsUpdate.Event:Connect(function()
-			rebuildPlayerList()
+			if GetFFlagEnableVoiceChatPlayersListOptimization() then
+				updateAllMuteButtons()
+			else
+				rebuildPlayerList()
+			end
 		end)
-		VoiceChatServiceManager.participantJoined.Event:Connect(function()
-			rebuildPlayerList()
+		VoiceChatServiceManager.participantLeft.Event:Connect(function()
+			if GetFFlagEnableVoiceChatPlayersListOptimization() then
+				updateAllMuteButtons()
+			else
+				rebuildPlayerList()
+			end
 		end)
 	end
 

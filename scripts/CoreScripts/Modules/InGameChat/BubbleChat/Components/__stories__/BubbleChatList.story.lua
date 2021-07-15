@@ -4,7 +4,9 @@ local Roact = require(CorePackages.Packages.Roact)
 local Rodux = require(CorePackages.Packages.Rodux)
 local RoactRodux = require(CorePackages.Packages.RoactRodux)
 
+local StoryStore = require(script.Parent.Parent.Parent.Helpers.StoryStore)
 local AddMessage = require(script.Parent.Parent.Parent.Actions.AddMessage)
+local RemoveMessage = require(script.Parent.Parent.Parent.Actions.RemoveMessage)
 local chatReducer = require(script.Parent.Parent.Parent.Reducers.chatReducer)
 local createMockMessage = require(script.Parent.Parent.Parent.Helpers.createMockMessage)
 local BubbleChatList = require(script.Parent.Parent.BubbleChatList)
@@ -20,11 +22,14 @@ local MESSAGES = {
 	createMockMessage({ userId = "3", text = "This user sent three messages" }),
 }
 
-return function(target)
-	local store = Rodux.Store.new(chatReducer)
+return function(props)
+	local state = StoryStore:getState()
+	for _, message in pairs(state.messages) do
+		StoryStore:dispatch(RemoveMessage(message))
+	end
 
 	for _, message in ipairs(MESSAGES) do
-		store:dispatch(AddMessage(message))
+		StoryStore:dispatch(AddMessage(message))
 	end
 
 	local children = {}
@@ -33,7 +38,7 @@ return function(target)
 		FillDirection = Enum.FillDirection.Horizontal,
 	})
 
-	local state = store:getState()
+	state = StoryStore:getState()
 
 	for userId, messageIds in pairs(state.userMessages) do
 		children[userId] = Roact.createElement("Frame", {
@@ -42,20 +47,14 @@ return function(target)
 		}, {
 			BubbleChatList = Roact.createElement(BubbleChatList, {
 				userId = userId,
+				chatSettings = props.chatSettings,
 			})
 		})
 	end
 
-	local root = Roact.createElement(RoactRodux.StoreProvider, {
-		store = store
-	}, {
-		Roact.createFragment(children)
-	})
-
-	local handle = Roact.mount(root, target, BubbleChatList.Name)
-
-	return function()
-		Roact.unmount(handle)
-	end
+	return Roact.createElement("Frame", {
+		Size = UDim2.fromScale(1, 1),
+		BackgroundTransparency = 1,
+	}, children)
 end
 

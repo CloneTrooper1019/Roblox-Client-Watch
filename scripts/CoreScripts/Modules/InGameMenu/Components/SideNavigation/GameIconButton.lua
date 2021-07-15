@@ -7,6 +7,10 @@ local Roact = InGameMenuDependencies.Roact
 local InGameMenu = script.Parent.Parent.Parent
 local GameIcon = require(InGameMenu.Components.GameIcon)
 
+local FFlagInGameMenuGameIconUseRoundedCorner = game:DefineFastFlag("InGameMenuGameIconUseRoundedCorner", false)
+
+local CORNER_RADIUS = UDim.new(0, 8)
+
 local GameIconButton = Roact.PureComponent:extend("GameIconButton")
 
 GameIconButton.validateProps = t.strictInterface({
@@ -29,6 +33,7 @@ function GameIconButton:render()
 		GameIconButton = Roact.createElement(GameIcon, {
 			gameId = game.GameId,
 			iconSize = 32,
+			cornerRadius = FFlagInGameMenuGameIconUseRoundedCorner and CORNER_RADIUS or nil,
 		})
 	})
 end

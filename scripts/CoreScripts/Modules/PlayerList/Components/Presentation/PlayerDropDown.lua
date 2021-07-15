@@ -19,7 +19,6 @@ local DropDownPlayerHeader = require(script.Parent.DropDownPlayerHeader)
 local FriendDropDownButton = require(script.Parent.FriendDropDownButton)
 
 local LocalPlayer = Players.LocalPlayer
-local FFlagDisableFollowInGameMenu = game:DefineFastFlag("DisableFollowInGameMenu", false)
 
 local RobloxGui = CoreGui:WaitForChild("RobloxGui")
 local RobloxTranslator = require(RobloxGui.Modules.RobloxTranslator)
@@ -36,8 +35,6 @@ local PlayerList = Components.Parent
 
 local ClosePlayerDropDown = require(PlayerList.Actions.ClosePlayerDropDown)
 
-local FollowPlayer = require(PlayerList.Thunks.FollowPlayer)
-local UnfollowPlayer = require(PlayerList.Thunks.UnfollowPlayer)
 local BlockPlayer = require(PlayerList.Thunks.BlockPlayer)
 local UnblockPlayer = require(PlayerList.Thunks.UnblockPlayer)
 local RequestFriendship = require(PlayerList.Thunks.RequestFriendship)
@@ -65,8 +62,6 @@ PlayerDropDown.validateProps = t.strictInterface({
 	closeDropDown = t.callback,
 	blockPlayer = t.callback,
 	unblockPlayer = t.callback,
-	unfollowPlayer = t.callback,
-	followPlayer = t.callback,
 	requestFriendship = t.callback,
 })
 
@@ -105,28 +100,6 @@ function PlayerDropDown:createFriendButton(playerRelationship)
 		dropDownOpen = self.props.isVisible,
 		requestFriendship = self.props.requestFriendship,
 		contentVisible = true,
-	})
-end
-
-function PlayerDropDown:createFollowButton(playerRelationship)
-	local selectedPlayer = self.props.selectedPlayer
-	local unfollowText = RobloxTranslator:FormatByKey("PlayerDropDown.UnFollow")
-	local followText = RobloxTranslator:FormatByKey("PlayerDropDown.Follow")
-	local followerIcon = playerRelationship.isFollowing and Images["icons/common/notificationOn"]
-		or Images["icons/common/notificationOff"]
-	return Roact.createElement(DropDownButton, {
-		layoutOrder = 2,
-		text = playerRelationship.isFollowing and unfollowText or followText,
-		icon = followerIcon,
-		lastButton = false,
-		forceShowOptions = false,
-		onActivated = function()
-			if playerRelationship.isFollowing then
-				self.props.unfollowPlayer(selectedPlayer)
-			else
-				self.props.followPlayer(selectedPlayer)
-			end
-		end,
 	})
 end
 
@@ -221,11 +194,6 @@ function PlayerDropDown:render()
 			if not playerRelationship.isBlocked then
 				dropDownButtons["FriendButton"] = self:createFriendButton(playerRelationship)
 				dropDownHeight = dropDownHeight + layoutValues.DropDownButtonPadding + layoutValues.DropDownButtonSizeY
-
-				if not FFlagDisableFollowInGameMenu then
-					dropDownButtons["FollowerButton"] = self:createFollowButton(playerRelationship)
-					dropDownHeight = dropDownHeight + layoutValues.DropDownButtonPadding + layoutValues.DropDownButtonSizeY
-				end
 			end
 
 			local showPlayerBlocking = not self.props.subjectToChinaPolicies or FFlagShowInGameBlockingLuobu
@@ -336,15 +304,7 @@ local function mapDispatchToProps(dispatch)
 		unblockPlayer = function(player)
 			return dispatch(UnblockPlayer(player))
 		end,
-
-		unfollowPlayer = function(player)
-			return dispatch(UnfollowPlayer(player))
-		end,
-
-		followPlayer = function(player)
-			return dispatch(FollowPlayer(player))
-		end,
-
+		
 		requestFriendship = function(player, isAccept)
 			return dispatch(RequestFriendship(player))
 		end,

@@ -22,7 +22,10 @@ local MESSAGES = {
 local Story = Roact.Component:extend("Story")
 
 function Story:render()
-	return Roact.createFragment({
+	return Roact.createElement("Frame", {
+		Size = UDim2.fromScale(1, 1),
+		BackgroundTransparency = 1,
+	}, {
 		Layout = Roact.createElement("UIListLayout", {
 			SortOrder = Enum.SortOrder.LayoutOrder,
 			FillDirection = Enum.FillDirection.Horizontal,
@@ -42,7 +45,8 @@ function Story:render()
 			Size = UDim2.new(0, 300, 1, 0),
 		}, {
 			BubbleChatList = Roact.createElement(BubbleChatList, {
-				userId = USER_ID
+				userId = USER_ID,
+				chatSettings = self.props.chatSettings,
 			}),
 		}),
 	})
@@ -64,16 +68,12 @@ end
 
 Story = RoactRodux.connect(nil, mapDispatchToProps)(Story)
 
-return function(target)
-	local root = Roact.createElement(RoactRodux.StoreProvider, {
+return function(props)
+	return Roact.createElement(RoactRodux.StoreProvider, {
 		store = Rodux.Store.new(chatReducer)
 	}, {
-		Roact.createElement(Story)
+		Roact.createElement(Story, {
+			chatSettings = props.chatSettings,
+		})
 	})
-	local handle = Roact.mount(root, target, BubbleChatList.Name)
-
-	return function()
-		Roact.unmount(handle)
-	end
 end
-
