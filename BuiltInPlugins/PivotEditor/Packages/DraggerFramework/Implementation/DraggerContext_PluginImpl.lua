@@ -259,7 +259,7 @@ function DraggerContext:getText(scope, key, args)
 	if locale == FALLBACK_LOCALE then
 		local fallbackTranslator = self._fallbackTranslators[locale]
 		if not fallbackTranslator then
-			fallbackTranslator = FallbackLocalizationTable:GetTranslator(locale)
+			fallbackTranslator = FallbackLocalizationTable:GetTranslator(FALLBACK_LOCALE)
 			self._fallbackTranslators[locale] = fallbackTranslator
 		end
 		return fallbackTranslator:FormatByKey(key, args)
@@ -277,7 +277,7 @@ function DraggerContext:getText(scope, key, args)
 		else
 			local fallbackTranslator = self._fallbackTranslators[locale]
 			if not fallbackTranslator then
-				fallbackTranslator = FallbackLocalizationTable:GetTranslator(locale)
+				fallbackTranslator = FallbackLocalizationTable:GetTranslator(FALLBACK_LOCALE)
 				self._fallbackTranslators[locale] = fallbackTranslator
 			end
 			return fallbackTranslator:FormatByKey(key, args)

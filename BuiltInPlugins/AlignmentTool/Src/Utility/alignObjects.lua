@@ -12,8 +12,6 @@ local AlignmentSpace = require(Plugin.Src.Utility.AlignmentSpace)
 local getAlignableObjects = require(Plugin.Src.Utility.getAlignableObjects)
 local getDefaultBasisForObjects = require(Plugin.Src.Utility.getDefaultBasisForObjects)
 
-local getEngineFeatureModelPivotApi = require(DraggerFramework.Flags.getEngineFeatureModelPivotApi)
-
 local function getAxesMask(axes)
 	return Vector3.new(
 		axes.X and 1 or 0,
@@ -93,16 +91,8 @@ return function(objects, space, axes, mode, target)
 		end
 
 		local alignmentOffset = basisCFrame:VectorToWorldSpace(localOffset * getAxesMask(axes))
-		if getEngineFeatureModelPivotApi() then
-			if object:IsA("PVInstance") then
-				object:PivotTo(object:GetPivot() + alignmentOffset)
-			end
-		else
-			if object:IsA("BasePart") then
-				object.CFrame = object.CFrame + alignmentOffset
-			elseif object:IsA("Model") then
-				object:TranslateBy(alignmentOffset)
-			end
+		if object:IsA("PVInstance") then
+			object:PivotTo(object:GetPivot() + alignmentOffset)
 		end
 
 		if areJointsEnabled() then

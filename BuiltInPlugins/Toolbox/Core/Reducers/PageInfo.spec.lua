@@ -1,5 +1,5 @@
 return function()
-	local FFlagToolboxRemoveGroupInventory = game:GetFastFlag("ToolboxRemoveGroupInventory")
+	local FFlagToolboxRemoveGroupInventory2 = game:GetFastFlag("ToolboxRemoveGroupInventory2")
 
 	local Plugin = script.Parent.Parent.Parent
 
@@ -83,7 +83,7 @@ return function()
 			end
 		end)
 
-		if not FFlagToolboxRemoveGroupInventory then
+		if not FFlagToolboxRemoveGroupInventory2 then
 			-- TODO: Fix me and make me a smaller unit test.
 			-- DEVTOOLS-2937
 			itSKIP("should update the categories and group index+id if necessary", function()

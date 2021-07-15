@@ -22,12 +22,10 @@ local CallstackComponent = Roact.PureComponent:extend("CallstackComponent")
 local SelectInputField = Roact.PureComponent:extend("SelectInputField")
 
 -- Constants
-local ICON_SIZE = UDim2.new(0, 14, 0, 14)
-local ICON_PATH = "rbxasset://textures/Debugger/debugger_arrow.png"
 local HEADER_HEIGHT = 40
 local TEST_ROW_NO_IMAGE = {
 	arrowColumn = "",
-	frameColumn = "a",
+	frameColumn = "aaaaaaaaaaaa",
 	whatColumn = "b",
 	functionNameColumn = "c",
 	lineNumberColumn = "d",
@@ -37,8 +35,8 @@ local TEST_ROW_IMAGE = {
 	arrowColumn = {
 		Value = "",
 		LeftIcon = {
-			Image = ICON_PATH,
-			Size = ICON_SIZE
+			Image = CallstackRow.ICON_PATH,
+			Size = CallstackRow.ICON_SIZE,
 		},
 	},
 	frameColumn = "a",
@@ -133,7 +131,7 @@ function CallstackComponent:render()
 	}
 	local tableRows = generateSampleTable(20)
 	local textSize = calculateTextSize(localization:getText("Callstack", "CurrentScriptTitle"), style.TextSize, style.Font)
-		
+	
 	return Roact.createElement(Pane, {
 		Size = UDim2.fromScale(1, 1),
 		Style = "Box",

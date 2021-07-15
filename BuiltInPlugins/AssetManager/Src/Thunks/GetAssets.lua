@@ -8,9 +8,11 @@ local SetHasLinkedScripts = require(Plugin.Src.Actions.SetHasLinkedScripts)
 
 local enableAudioImport = require(Plugin.Src.Util.AssetManagerUtilities).enableAudioImport
 
+local sendResultToKibana = require(Plugin.Packages.Framework.Util.sendResultToKibana)
 local FIntStudioAssetManagerAssetFetchNumber = game:GetFastInt("StudioAssetManagerAssetFetchNumber")
 
 local FFlagStudioAssetManagerLoadLinkedScriptsOnInit = game:GetFastFlag("StudioAssetManagerLoadLinkedScriptsOnInit")
+local FFlagNewPackageAnalyticsWithRefactor2 = game:GetFastFlag("NewPackageAnalyticsWithRefactor2")
 
 local numberOfAssetsToFetch = FIntStudioAssetManagerAssetFetchNumber
 
@@ -49,8 +51,14 @@ return function(apiImpl, assetType, pageCursor, pageNumber, showLoadingIndicator
         elseif assetType == Enum.AssetType.Package then
             requestPromise = apiImpl.Develop.V1.Universes.packages(game.GameId, pageCursor, numberOfAssetsToFetch):makeRequest()
             :andThen(function(response)
+                if FFlagNewPackageAnalyticsWithRefactor2 then
+                    sendResultToKibana(response)
+                end
                 return response
-            end, function()
+            end, function(response)
+                if FFlagNewPackageAnalyticsWithRefactor2 then
+                    sendResultToKibana(response)
+                end
                 store:dispatch(SetIsFetchingAssets(false))
                 error("Failed to load packages")
             end)
@@ -121,6 +129,9 @@ return function(apiImpl, assetType, pageCursor, pageNumber, showLoadingIndicator
         end
         if assetType == Enum.AssetType.Place or assetType == Enum.AssetType.Package then
             requestPromise:andThen(function(response)
+                if FFlagNewPackageAnalyticsWithRefactor2 then
+                    sendResultToKibana(response)
+                end
                 local body = response.responseBody
                 if not body then
                     return

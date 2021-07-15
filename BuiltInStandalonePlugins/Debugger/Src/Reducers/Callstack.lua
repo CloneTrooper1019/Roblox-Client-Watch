@@ -4,48 +4,67 @@ local Cryo = require(Plugin.Packages.Cryo)
 
 local Actions = Plugin.Src.Actions
 local Models = Plugin.Src.Models
-local SetCurrentFrameNumberAction = require(Actions.Callstack.SetCurrentFrameNumber)
 local AddCallstackAction = require(Actions.Callstack.AddCallstack)
 local AddThreadIdAction = require(Actions.Callstack.AddThreadId)
 local ResumedAction = require(Actions.Common.Resumed)
+local BreakpointHit = require(Actions.Common.BreakpointHit)
 local ThreadInfo = require(Models.ThreadInfo)
+local DebuggerStateToken = require(Models.DebuggerStateToken)
+local CallstackRow = require(Models.CallstackRow)
+
+type ThreadId = number
+
+type CallstackVars = {
+	threadList : {ThreadInfo.ThreadInfo},
+	threadIdToFrameList : {[ThreadId] : {CallstackRow.CallstackRow}}
+}
+
+type CallstackStore = {
+	stateTokenToCallstackVars : {[DebuggerStateToken.DebuggerStateToken] : CallstackVars}
+}
 
 return Rodux.createReducer({
-	threadList = {},
-	threadIdToFrameList = {},
-	currentFrame = 0,
+	stateTokenToCallstackVars = {}
 }, {
-
-	[SetCurrentFrameNumberAction.name] = function(state, action)
-		assert(typeof(action.currentFrame) == "number", ("Expected currentFrame to be a number, received %s"):format(type(action.currentFrame)))
+	[AddThreadIdAction.name] = function(state : CallstackStore, action : AddThreadIdAction.Props)
 		return Cryo.Dictionary.join(state, {
-			currentFrame = action.currentFrame,
-		})		
-	end,
-
-	[AddThreadIdAction.name] = function(state, action)
-		assert(typeof(action.threadId) == "number", ("Expected threadId to be a number, received %s"):format(type(action.threadId)))
-		assert(typeof(action.displayString) == "string", ("Expected displayString to be a string, received %s"):format(type(action.displayString)))
-		return Cryo.Dictionary.join(state, {
-			threadList = Cryo.List.join(state.threadList, {ThreadInfo.fromData(action)})
-		})
-	end,
-
-	[AddCallstackAction.name] = function(state, action)
-		assert(typeof(action.threadId) == "number", ("Expected threadId to be a number, received %s"):format(type(action.threadId)))
-		assert(typeof(action.frameList) == "table", ("Expected frameList to be a table, received %s"):format(type(action.frameList)))
-		return Cryo.Dictionary.join(state, {
-			threadIdToFrameList = Cryo.Dictionary.join(state.threadIdToFrameList, {
-				[action.threadId] = action.frameList,
+			stateTokenToCallstackVars = Cryo.Dictionary.join(state.stateTokenToCallstackVars, {
+				[action.debuggerStateToken] = {
+					threadList = Cryo.List.join(state.stateTokenToCallstackVars[action.debuggerStateToken].threadList, {ThreadInfo.fromData(action)}),
+					threadIdToFrameList = state.stateTokenToCallstackVars[action.debuggerStateToken].threadIdToFrameList,
+				}
 			})
 		})
 	end,
 
-	[ResumedAction.name] = function(state, action)
+	[AddCallstackAction.name] = function(state : CallstackStore, action : AddCallstackAction.Props)
 		return Cryo.Dictionary.join(state, {
-			threadList = {},
-			threadIdToFrameList = {},
-			currentFrame = 0,
-		})	
+			stateTokenToCallstackVars = Cryo.Dictionary.join(state.stateTokenToCallstackVars, {
+				[action.debuggerStateToken] = {
+					threadIdToFrameList = Cryo.Dictionary.join(state.stateTokenToCallstackVars[action.debuggerStateToken].threadIdToFrameList, {
+						[action.threadId] = action.frameList,
+					}),
+					threadList = state.stateTokenToCallstackVars[action.debuggerStateToken].threadList,
+				}
+			})
+		})
+	end,
+
+	[BreakpointHit.name] = function(state : CallstackStore, action : BreakpointHit.Props)
+		assert(state.stateTokenToCallstackVars[action.debuggerStateToken] == nil)
+		return Cryo.Dictionary.join(state, {
+			stateTokenToCallstackVars = Cryo.Dictionary.join(state.stateTokenToCallstackVars, {
+				[action.debuggerStateToken] = {
+					threadList = {},
+					threadIdToFrameList = {},
+				}
+			})
+		})
+	end,
+
+	[ResumedAction.name] = function(state : CallstackStore, action)
+		return Cryo.Dictionary.join(state, {
+			stateTokenToCallstackVars = {},
+		})
 	end,
 })

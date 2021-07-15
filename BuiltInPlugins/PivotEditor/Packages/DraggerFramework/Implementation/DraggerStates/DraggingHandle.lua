@@ -4,7 +4,6 @@ local StandardCursor = require(DraggerFramework.Utility.StandardCursor)
 
 local getEngineFeatureModelPivotVisual = require(DraggerFramework.Flags.getEngineFeatureModelPivotVisual)
 local getFFlagSummonPivot = require(DraggerFramework.Flags.getFFlagSummonPivot)
-local getFFlagFixDuplicateDuringDrag = require(DraggerFramework.Flags.getFFlagFixDuplicateDuringDrag)
 
 local DraggingHandle = {}
 DraggingHandle.__index = DraggingHandle
@@ -112,7 +111,7 @@ function DraggingHandle:_endHandleDrag(invokedBySelectionChange: boolean)
 	
 	local newSelectionInfoHint = self._draggingHandles:mouseUp(
 		self._draggerToolModel._draggerContext:getMouseRay())
-	if getFFlagFixDuplicateDuringDrag() and invokedBySelectionChange then
+	if invokedBySelectionChange then
 		-- If the drag was ended by a selection change, then our computed
 		-- selection info hint will be stale, because it applies to the last
 		-- selection, rather than the new selection. So we don't use it.

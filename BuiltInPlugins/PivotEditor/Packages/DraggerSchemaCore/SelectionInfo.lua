@@ -6,7 +6,6 @@ local DraggerFramework = Packages.DraggerFramework
 
 local shouldDragAsFace = require(DraggerFramework.Utility.shouldDragAsFace)
 
-local getEngineFeatureModelPivotApi = require(DraggerFramework.Flags.getEngineFeatureModelPivotApi)
 local getFFlagMultiSelectionPivot = require(DraggerFramework.Flags.getFFlagMultiSelectionPivot)
 local FFlagMultiSelectionPivot = getFFlagMultiSelectionPivot()
 
@@ -206,36 +205,21 @@ local function computeInfo(draggerContext, selectedObjects)
 	local allBones = {}
 	local allModels = {}
 	local allInstancesWithConfigurableFace = {}
-	local basisCFrame = nil
 	local basisObject = nil
 	local terrain = Workspace.Terrain
 	local selectedPVInstanceCount = 0
 
-	local EngineFeatureModelPivotApi = getEngineFeatureModelPivotApi()
-
 	for _, instance in ipairs(selectedObjects) do
 		if instance:IsA("Model") then
 			selectedPVInstanceCount += 1
-			if EngineFeatureModelPivotApi then
-				table.insert(allModels, instance)
-				basisObject = instance
-			else
-				local boundingBoxCFrame, boundingBoxSize =
-					instance:GetBoundingBox()
-				if boundingBoxSize ~= Vector3.new() then
-					basisCFrame = boundingBoxCFrame
-				end
-			end
+			table.insert(allModels, instance)
+			basisObject = instance
 		elseif instance:IsA("BasePart") then
 			selectedPVInstanceCount += 1
 			if not allPartSet[instance] and instance ~= terrain then
 				table.insert(allParts, instance)
 				allPartSet[instance] = true
-				if EngineFeatureModelPivotApi then
-					basisObject = instance
-				else
-					basisCFrame = instance.CFrame
-				end
+				basisObject = instance
 			end
 		elseif shouldDragAsFace(instance) then
 			table.insert(allInstancesWithConfigurableFace, instance)
@@ -254,12 +238,8 @@ local function computeInfo(draggerContext, selectedObjects)
 				-- Note: This is a helpful feature to still allow people to drag
 				-- non-Model objects that still typically have parts inside of
 				-- them like Folders and Tools.
-				if EngineFeatureModelPivotApi then
-					basisObject = basisObject or descendant
-				else
-					basisCFrame = basisCFrame or descendant.CFrame
-				end
-			elseif EngineFeatureModelPivotApi and descendant:IsA("Model") then
+				basisObject = basisObject or descendant
+			elseif descendant:IsA("Model") then
 				if FFlagMultiSelectionPivot then
 					basisObject = basisObject or descendant
 				end
@@ -293,59 +273,50 @@ local function computeInfo(draggerContext, selectedObjects)
 	-- * As a fallback when no PVInstances are selected, try to use the 
 	--   WorldCFrame of an Attachment in the selection.
 	local isMultiSelection
-	if EngineFeatureModelPivotApi then
-		if basisObject then
-			local specialIgnore =
-				draggerContext.ScaleToolSpecialCaseIgnorePivotWithSinglePartSelected and
-				#selectedObjects == 1 and
-				selectedObjects[1]:IsA("BasePart")
-			if specialIgnore then
-				basisCFrame = basisObject.CFrame
-			else
-				basisCFrame = basisObject:GetPivot()
-			end
-			if FFlagMultiSelectionPivot then
-				-- If the selected instance count is:
-				-- * Greater than 1, then we naturally have a multiselection
-				-- * Equal to zero, then we should still treat it like a multi
-				--   selection for the purposes of moving any descendant objects.
-				isMultiSelection = selectedPVInstanceCount ~= 1
-			end
-		elseif FFlagMultiSelectionPivot and #interestingAttachments > 0 then
-			basisCFrame = interestingAttachments[1].WorldCFrame
-
-			-- We use interestingAttachments here because if you box selected
-			-- to select multiple bones here, if there's only one effective
-			-- root bone to be moved, you still want to use that bone as the
-			-- pivot, but if multiple root bones were selected then we have to
-			-- fall back to pivoting around the center of the bounding box.
-			-- (Setting isMultiSelection = true causes the pivot to be the
-			-- center of the bounding box)
-			if #interestingAttachments > 1 then
-				isMultiSelection = true
-			end
-		elseif FFlagMultiSelectionPivot then
-			basisCFrame = CFrame.new()
-			isMultiSelection = false
+	local basisCFrame = nil
+	if basisObject then
+		local specialIgnore =
+			draggerContext.ScaleToolSpecialCaseIgnorePivotWithSinglePartSelected and
+			#selectedObjects == 1 and
+			selectedObjects[1]:IsA("BasePart")
+		if specialIgnore then
+			basisCFrame = basisObject.CFrame
+		else
+			basisCFrame = basisObject:GetPivot()
 		end
+		if FFlagMultiSelectionPivot then
+			-- If the selected instance count is:
+			-- * Greater than 1, then we naturally have a multiselection
+			-- * Equal to zero, then we should still treat it like a multi
+			--   selection for the purposes of moving any descendant objects.
+			isMultiSelection = selectedPVInstanceCount ~= 1
+		end
+	elseif FFlagMultiSelectionPivot and #interestingAttachments > 0 then
+		basisCFrame = interestingAttachments[1].WorldCFrame
+
+		-- We use interestingAttachments here because if you box selected
+		-- to select multiple bones here, if there's only one effective
+		-- root bone to be moved, you still want to use that bone as the
+		-- pivot, but if multiple root bones were selected then we have to
+		-- fall back to pivoting around the center of the bounding box.
+		-- (Setting isMultiSelection = true causes the pivot to be the
+		-- center of the bounding box)
+		if #interestingAttachments > 1 then
+			isMultiSelection = true
+		end
+	elseif FFlagMultiSelectionPivot then
+		basisCFrame = CFrame.new()
+		isMultiSelection = false
 	end
 
 	-- Use attachment CFrame as a backup if there weren't any parts in the
 	-- selection to set the basisCFrame with. Attachment CFrames should ONLY
 	-- be used as a basis if there aren't any parts to go off of.
-	if not (EngineFeatureModelPivotApi and FFlagMultiSelectionPivot) and not basisCFrame then
+	if not FFlagMultiSelectionPivot and not basisCFrame then
 		if #allAttachments > 0 then
-			if EngineFeatureModelPivotApi then
-				basisCFrame = allAttachments[#allAttachments].WorldCFrame
-			else
-				basisCFrame = allAttachments[1].WorldCFrame
-			end
+			basisCFrame = allAttachments[#allAttachments].WorldCFrame
 		elseif #allBones > 0 then
-			if EngineFeatureModelPivotApi then
-				basisCFrame = allBones[#allBones].WorldCFrame
-			else
-				basisCFrame = allBones[1].WorldCFrame
-			end
+			basisCFrame = allBones[#allBones].WorldCFrame
 		else
 			basisCFrame = CFrame.new()
 		end
@@ -422,7 +393,7 @@ local function computeInfo(draggerContext, selectedObjects)
 
 	-- If we have a multi-selection, the pivot should be moved to the center
 	-- of the bounding box.
-	if EngineFeatureModelPivotApi and FFlagMultiSelectionPivot and isMultiSelection then
+	if FFlagMultiSelectionPivot and isMultiSelection then
 		localBasisCFrame *= CFrame.new(localBoundingBoxOffset)
 		localBoundingBoxOffset = Vector3.new()
 		chosenBasisCFrame *= CFrame.new(chosenBoundingBoxOffset)

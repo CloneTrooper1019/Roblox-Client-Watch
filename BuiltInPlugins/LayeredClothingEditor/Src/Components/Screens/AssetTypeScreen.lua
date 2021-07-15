@@ -189,14 +189,6 @@ function AssetTypeScreen:getContentToRender()
 	end
 end
 
-function AssetTypeScreen:didMount()
-	-- skip since we don't need to pick asset type for avatars, only accessories/clothing
-	local editingItem = self.props.EditingItemContext:getItem()
-	if ItemCharacteristics.isAvatar(editingItem) then
-		self.props.GoToNext()
-	end
-end
-
 function AssetTypeScreen:render()
 	local props = self.props
 

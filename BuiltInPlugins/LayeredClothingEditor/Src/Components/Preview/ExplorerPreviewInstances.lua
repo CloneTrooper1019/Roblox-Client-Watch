@@ -99,6 +99,11 @@ local function getSelectedUniqueIds(self, tabKey)
 	return selectedAssets[tabKey] or {}
 end
 
+local function isPreviewClothingSelected(self)
+	local selectedClothingItems = getSelectedUniqueIds(self, PreviewConstants.TABS_KEYS.Clothing)
+	return next(selectedClothingItems) ~= nil
+end
+
 local function removePreviewAvatars(self)
 	self.props.PreviewContext:destroyAvatars()
 
@@ -109,15 +114,28 @@ local function removePreviewAvatars(self)
 	self.editingItemClones = {}
 end
 
+local function cloneEditingItem(editingItem)
+	-- temporarily make editingItem archivable so that we can clone it
+	editingItem.Archivable = true
+	local clone = editingItem:Clone()
+	editingItem.Archivable = false
+	clone.Archivable = false
+	return clone
+end
+
+local function addPreviewAvatar(self, previewAvatar)
+	ModelUtil:positionAvatar(previewAvatar, self.props.EditingItemContext:getItem())
+	previewAvatar.Parent = self.folderRef.current
+	previewAvatar.Name = PreviewConstants.PreviewAvatarName
+	self.props.PreviewContext:addAvatar(previewAvatar)
+end
+
 local function fetchPreviewAvatar(self)
 	local requiredPreviewAvatarUniqueIds = getSelectedUniqueIds(self, PreviewConstants.TABS_KEYS.Avatars)
 	for uniqueId in pairs(requiredPreviewAvatarUniqueIds) do
 		local previewAvatar = getModel(self, uniqueId, PreviewConstants.TABS_KEYS.Avatars)
 		if previewAvatar then
-			ModelUtil:positionAvatar(previewAvatar, self.props.EditingItemContext:getItem())
-			previewAvatar.Parent = self.folderRef.current
-			previewAvatar.Name = PreviewConstants.PreviewAvatarName
-			self.props.PreviewContext:addAvatar(previewAvatar)
+			addPreviewAvatar(self, previewAvatar)
 		end
 	end
 end
@@ -141,15 +159,14 @@ end
 local function fetchPreviewClothes(self)
 	local editingItem = self.props.EditingItemContext:getItem()
 	if ItemCharacteristics.isAvatar(editingItem) then
-		applyAllSelectedClothing(self, editingItem)
+		if isPreviewClothingSelected(self) then
+			local avatarClone = cloneEditingItem(editingItem)
+			addPreviewAvatar(self, avatarClone)
+			applyAllSelectedClothing(self, avatarClone)
+		end
 	elseif ItemCharacteristics.isClothes(editingItem) then
 		for _, avatar in ipairs(self.props.PreviewContext:getAvatars()) do
-			-- temporarily make editingItem archivable so that we can clone it
-			editingItem.Archivable = true
-			local clothingClone = editingItem:Clone()
-			editingItem.Archivable = false
-
-			clothingClone.Archivable = false
+			local clothingClone = cloneEditingItem(editingItem)
 			ModelUtil:attachClothingItem(avatar, clothingClone)
 			applyAllSelectedClothing(self, avatar)
 			table.insert(self.editingItemClones, clothingClone)
@@ -179,6 +196,9 @@ end
 local function updatePreviewDeformations(self)
 	for _, item in ipairs(self.editingItemClones) do
 		ModelUtil:deformClothing(item, self.props.PointData, self.props.EditingCage)
+	end
+	for _, avatar in ipairs(self.props.PreviewContext:getAvatars()) do
+		ModelUtil:deformAvatar(avatar, self.props.PointData, self.props.EditingCage)
 	end
 end
 

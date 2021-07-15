@@ -28,13 +28,12 @@ local ShutdownAllServers = require(Page.Thunks.ShutdownAllServers)
 
 local LayoutOrderIterator = FFlagGameSettingsDisplayCollaborativeEditingWarning and require(Plugin.Framework.Util).LayoutOrderIterator or nil
 
-local FFlagGameSettingsUseKeyProvider = game:GetFastFlag("GameSettingsUseKeyProvider")
-local KeyProvider = FFlagGameSettingsUseKeyProvider and require(Plugin.Src.Util.KeyProvider) or nil
+local KeyProvider = require(Plugin.Src.Util.KeyProvider)
 
 local FFlagGameSettingsEnableVoiceChat = game:GetFastFlag("GameSettingsEnableVoiceChat")
 
-local GetVoiceChatEnabledKeyName = FFlagGameSettingsUseKeyProvider and FFlagGameSettingsEnableVoiceChat and KeyProvider.getVoiceChatEnabledKeyName or nil
-local voiceChatEnabledKey = FFlagGameSettingsUseKeyProvider and FFlagGameSettingsEnableVoiceChat and GetVoiceChatEnabledKeyName and GetVoiceChatEnabledKeyName() or "VoiceChatEnabled"
+local GetVoiceChatEnabledKeyName = KeyProvider.getVoiceChatEnabledKeyName
+local voiceChatEnabledKey = FFlagGameSettingsEnableVoiceChat and GetVoiceChatEnabledKeyName() or nil
 
 local LOCALIZATION_ID = script.Name
 

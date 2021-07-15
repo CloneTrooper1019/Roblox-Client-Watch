@@ -8,8 +8,6 @@ local PartMover = require(DraggerFramework.Utility.PartMover)
 local AttachmentMover = require(DraggerFramework.Utility.AttachmentMover)
 local getGeometry = require(DraggerFramework.Utility.getGeometry)
 
-local getFFlagDraggerPerf = require(DraggerFramework.Flags.getFFlagDraggerPerf)
-local getFFlagFixDraggerHang = require(DraggerFramework.Flags.getFFlagFixDraggerHang)
 local getFFlagSummonPivot = require(DraggerFramework.Flags.getFFlagSummonPivot)
 
 local TransformHandlesImplementation = {}
@@ -106,9 +104,7 @@ function TransformHandlesImplementation:endDrag()
 	-- did not return anything).
 	-- The additional info we have lets us compute the new one more efficiently
 	-- by deriving it from the old one based on the operation we did.
-	if getFFlagDraggerPerf() then
-		return self._initialSelectionInfo:getTransformedCopy(self._lastAppliedTransform)
-	end
+	return self._initialSelectionInfo:getTransformedCopy(self._lastAppliedTransform)
 end
 
 --[[
@@ -214,7 +210,6 @@ function TransformHandlesImplementation:_safelyTransformParts(fromTransform, goa
 	local goal = self:_toLocalTransform(goalTransform)
 	local isIntersecting = true
 	local iterations = 0
-	local fixDraggerHang = getFFlagFixDraggerHang()
 
 	while not cframesAreWithinThreshold(start, goal, TRANSFORM_COLLISION_THRESHOLD) do
 		local mid = start:Lerp(goal, 0.5)
@@ -226,16 +221,14 @@ function TransformHandlesImplementation:_safelyTransformParts(fromTransform, goa
 			start = mid
 		end
 
-		if fixDraggerHang then
-			iterations += 1
-			-- We should never need more than 32 iterations
-			-- if we do it probably means there was a floating point error
-			-- The safest thing to do in this case is to reset to the
-			-- original position
-			if iterations > 32 then
-				start = self:_toLocalTransform(fromTransform)
-				break
-			end
+		iterations += 1
+		-- We should never need more than 32 iterations
+		-- if we do it probably means there was a floating point error
+		-- The safest thing to do in this case is to reset to the
+		-- original position
+		if iterations > 32 then
+			start = self:_toLocalTransform(fromTransform)
+			break
 		end
 	end
 

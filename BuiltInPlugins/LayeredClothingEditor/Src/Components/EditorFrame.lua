@@ -92,7 +92,6 @@ function EditorFrame:render()
 			HasEditingCage = isEditing,
 			ToolMode = toolMode,
 			SetToolMode = self.onToolChange,
-			FinishEditing = self.props.FinishEditing,
 		}),
 		MeshPartModeText = meshPartMode and Roact.createElement("TextLabel", {
 			BackgroundTransparency = 1,

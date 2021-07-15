@@ -1,6 +1,7 @@
 --[[
 	Basic styles shared among multiple StudioFrameworkStyles tables.
 ]]
+local FFlagDevFrameworkRefactorScrollbarColor = game:GetFastFlag("DevFrameworkRefactorScrollbarColor")
 
 local Framework = script.Parent.Parent.Parent
 
@@ -53,7 +54,7 @@ else
 			ScrollingEnabled = true,
 			ScrollingDirection = Enum.ScrollingDirection.Y,
 			ScrollBarThickness = 8,
-			ScrollBarImageTransparency = 0.5,
+			ScrollBarImageTransparency = FFlagDevFrameworkRefactorScrollbarColor and 0 or 0.5,
 			ScrollBarImageColor3 = StyleValue.new("ScrollbarColor", {
 				Light = Color3.fromRGB(25, 25, 25),
 				Dark = Color3.fromRGB(204, 204, 204),

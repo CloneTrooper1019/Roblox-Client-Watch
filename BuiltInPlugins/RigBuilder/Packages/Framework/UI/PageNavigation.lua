@@ -5,7 +5,7 @@
 		number PageIndex: The index of the current page
 		number PageCount: The total number of pages
 		callback OnPageChange: Called when the user changes the page number
-	
+
 	Optional Props:
 		Stylizer Stylizer: A Stylizer ContextItem, which is provided via mapToProps.
 		ContextItem Localization: A Localization ContextItem, which is provided via mapToProps.
@@ -67,6 +67,9 @@ function PageNavigation:render()
 
 	local localization = self.props.Localization
 
+	local prevStyleModifier = pageIndex == 1 and StyleModifier.Disabled or nil
+	local nextStyleModifier = pageIndex >= props.PageCount and StyleModifier.Disabled or nil
+
 	return Roact.createElement(Pane, {
 		Padding = style.Padding,
 		AutomaticSize = Enum.AutomaticSize.XY,
@@ -74,7 +77,7 @@ function PageNavigation:render()
 		Spacing = style.Spacing,
 	}, {
 		First = Roact.createElement(Button, {
-			StyleModifier = pageIndex == 1 and StyleModifier.Disabled or nil,
+			StyleModifier = prevStyleModifier,
 			Style = "RoundSubtle",
 			Size = UDim2.fromOffset(style.ButtonSize, style.ButtonSize),
 			LayoutOrder = 1,
@@ -92,7 +95,7 @@ function PageNavigation:render()
 			}),
 		}),
 		Prev = Roact.createElement(Button, {
-			StyleModifier = pageIndex == 1 and StyleModifier.Disabled or nil,
+			StyleModifier = prevStyleModifier,
 			Style = "RoundSubtle",
 			Size = UDim2.fromOffset(style.ButtonSize, style.ButtonSize),
 			LayoutOrder = 2,
@@ -129,7 +132,7 @@ function PageNavigation:render()
 			AutomaticSize = Enum.AutomaticSize.XY,
 		}),
 		Next = Roact.createElement(Button, {
-			StyleModifier = pageIndex < props.PageCount and StyleModifier.Disabled or nil,
+			StyleModifier = nextStyleModifier,
 			Style = "RoundSubtle",
 			Size = UDim2.fromOffset(style.ButtonSize, style.ButtonSize),
 			LayoutOrder = 6,
@@ -147,7 +150,7 @@ function PageNavigation:render()
 			}),
 		}),
 		Last = Roact.createElement(Button, {
-			StyleModifier = pageIndex < props.PageCount and StyleModifier.Disabled or nil,
+			StyleModifier = nextStyleModifier,
 			Style = "RoundSubtle",
 			Size = UDim2.fromOffset(style.ButtonSize, style.ButtonSize),
 			LayoutOrder = 7,

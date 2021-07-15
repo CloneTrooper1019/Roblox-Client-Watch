@@ -12,6 +12,7 @@
 		string Title: The title text displayed at the top of the widget.
 
 	Optional Props:
+		Enum.AutomaticSize AutomaticSize: The AutomaticSize of the component.
 		boolean Enabled: Whether the widget is currently visible.
 		Vector2 MinSize: The minimum size of the widget, in pixels.
 			If the widget is not resizable, this property is not required.
@@ -27,6 +28,7 @@
 		Color3 BackgroundColor3: Background color of the dialog.
 ]]
 local FFlagAddButtonHorizontalAlignmentAsPropToStyledDialog = game:GetFastFlag("AddButtonHorizontalAlignmentAsPropToStyledDialog")
+local FFlagToolboxReplaceUILibraryComponentsPt2 = game:GetFastFlag("ToolboxReplaceUILibraryComponentsPt2")
 
 local Framework = script.Parent.Parent
 local ContextServices = require(Framework.ContextServices)
@@ -118,6 +120,7 @@ function StyledDialog:render()
 		style = theme:getStyle("Framework", self)
 	end
 
+	local automaticSize = self.props.AutomaticSize
 	local backgroundColor = prioritize(self.props.BackgroundColor3, style.Background)
 	local isEnabled = self.props.Enabled
 	local isModal = prioritize(self.props.Modal, style.Modal)
@@ -145,6 +148,7 @@ function StyledDialog:render()
 			Size = UDim2.new(1, 0, 1, 0),
 		}, {
 			Contents = Roact.createElement(Container, {
+				AutomaticSize = FFlagToolboxReplaceUILibraryComponentsPt2 and automaticSize or nil,
 				Position = UDim2.new(0, CONTENT_PADDING, 0, CONTENT_PADDING),
 				Size = UDim2.new(1, -(CONTENT_PADDING * 2), 1, -((CONTENT_PADDING * 3) + BUTTON_HEIGHT))
 			}, self.props[Roact.Children]),

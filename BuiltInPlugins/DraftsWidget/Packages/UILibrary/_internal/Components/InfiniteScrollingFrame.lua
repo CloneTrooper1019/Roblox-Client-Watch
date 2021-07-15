@@ -19,8 +19,6 @@
 		Roact ref LayoutRef - used to calculate the height of the canvas.
 		Color3 BackgroundColor - If provided, we show this color as the background of the frame with BackgroundTransparency = 0
 ]]
-local FFlagStudioEnableBadgesInMonetizationPage = game:GetFastFlag("StudioEnableBadgesInMonetizationPage")
-
 local Library = script.Parent.Parent
 local Roact = require(Library.Parent.Parent.Roact)
 
@@ -106,7 +104,7 @@ function InfiniteScrollingFrame:render()
 		canvasHeight = props.CanvasHeight
 	end
 	
-	local backgroundColor = FFlagStudioEnableBadgesInMonetizationPage and props.BackgroundColor or nil
+	local backgroundColor = props.BackgroundColor
 
     return Roact.createElement(StyledScrollingFrame, {
         Position = position,

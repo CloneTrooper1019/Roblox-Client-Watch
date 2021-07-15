@@ -1,7 +1,5 @@
 local Plugin = script.Parent.Parent.Parent
 
-local getFFlagAlignToolDisabledFix = require(Plugin.Src.Flags.getFFlagAlignToolDisabledFix)
-
 local Roact = require(Plugin.Packages.Roact)
 local RoactRodux = require(Plugin.Packages.RoactRodux)
 
@@ -86,9 +84,7 @@ local function mapDispatchToProps(dispatch)
 		end,
 		setAlignmentSpace = function(alignmentSpace)
 			dispatch(SetAlignmentSpace(alignmentSpace))
-			if getFFlagAlignToolDisabledFix() then
-				dispatch(UpdateAlignEnabled())
-			end
+			dispatch(UpdateAlignEnabled())
 		end,
 		setEnabledAxes = function(axes)
 			dispatch(SetEnabledAxes(axes))

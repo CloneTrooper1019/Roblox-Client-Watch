@@ -35,14 +35,14 @@ function ExampleTextInputDialog:render()
 			},
 			Body = "Body of Dialog. You could use this to inform a user about what the dialog is doing.",
 			Description = "Description for the TextInput on what the user should input or whatever you want!",
-			PlaceholderText = "Placeholder Text",
+			TextInput = {{PlaceholderText = "Placeholder Text",}},
 			OnClose = function(text)
 				print("TextInputDialog - OnClose - TextInput: ", text)
 				self:setState({
 					enabled = false
 				})
 			end,
-			OnButtonPressed = function(text, buttonKey)
+			OnButtonPressed = function(buttonKey, text)
 				print("TextInputDialog - OnButtonPressed: ", buttonKey, " - TextInput: ", text)
 				self:setState({
 					enabled = false

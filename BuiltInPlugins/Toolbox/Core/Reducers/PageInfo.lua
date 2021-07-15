@@ -19,17 +19,16 @@ local SetToolboxManageableGroups = require(Actions.SetToolboxManageableGroups)
 local UpdatePageInfo = require(Actions.UpdatePageInfo)
 local SetCurrentPage = require(Actions.SetCurrentPage)
 
-local FFlagToolboxDefaultBackgroundMatches = game:GetFastFlag("ToolboxDefaultBackgroundMatches")
 local FFlagToolboxDisableMarketplaceAndRecentsForLuobu = game:GetFastFlag("ToolboxDisableMarketplaceAndRecentsForLuobu")
 local FFlagToolboxFixCommonWarnings2 = game:GetFastFlag("ToolboxFixCommonWarnings2")
-local FFlagToolboxRemoveGroupInventory = game:GetFastFlag("ToolboxRemoveGroupInventory")
+local FFlagToolboxRemoveGroupInventory2 = game:GetFastFlag("ToolboxRemoveGroupInventory2")
 
 local disableMarketplaceAndRecents = require(Plugin.Core.Util.ToolboxUtilities).disableMarketplaceAndRecents
 
 local defaultSorts = Sort.SORT_OPTIONS
 local defaultCategories
 if FFlagToolboxDisableMarketplaceAndRecentsForLuobu and disableMarketplaceAndRecents() then
-	defaultCategories = FFlagToolboxRemoveGroupInventory and Category.INVENTORY or Category.INVENTORY_WITH_GROUPS
+	defaultCategories = FFlagToolboxRemoveGroupInventory2 and Category.INVENTORY or Category.INVENTORY_WITH_GROUPS
 else
 	defaultCategories = Category.MARKETPLACE
 end
@@ -163,12 +162,6 @@ return Rodux.createReducer({
 			[key] = index,
 		})
 
-		if not FFlagToolboxDefaultBackgroundMatches then
-			if action.settings and action.selected then
-				action.settings:setSelectedBackgroundIndex(index)
-			end
-		end
-
 		return newState
 	end,
 
@@ -204,13 +197,13 @@ return Rodux.createReducer({
 
 			newState.groupIndex = newIndex
 
-			if not FFlagToolboxRemoveGroupInventory and newState.categories == Category.INVENTORY then
+			if not FFlagToolboxRemoveGroupInventory2 and newState.categories == Category.INVENTORY then
 				newState.categories = Category.INVENTORY_WITH_GROUPS
 			end
 		else
 			newState.groupIndex = 0
 
-			if not FFlagToolboxRemoveGroupInventory and newState.categories == Category.INVENTORY_WITH_GROUPS then
+			if not FFlagToolboxRemoveGroupInventory2 and newState.categories == Category.INVENTORY_WITH_GROUPS then
 				newState.categories = Category.INVENTORY
 			end
 

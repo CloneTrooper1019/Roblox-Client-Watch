@@ -11,8 +11,6 @@ local SelectionWrapper = require(DraggerFramework.Utility.SelectionWrapper)
 local SelectionHelper = require(DraggerFramework.Utility.SelectionHelper)
 local classifyPivot = require(DraggerFramework.Utility.classifyPivot)
 
-local getFFlagDraggerPerf = require(DraggerFramework.Flags.getFFlagDraggerPerf)
-local getFFlagPivotAnalytics = require(DraggerFramework.Flags.getFFlagPivotAnalytics)
 local getFFlagSummonPivot = require(DraggerFramework.Flags.getFFlagSummonPivot)
 
 local DraggerToolModel = {}
@@ -210,11 +208,6 @@ function DraggerToolModel:selectNextSelectables(dragInfo, isDoubleClick)
 			SelectionHelper.updateSelectionWithMultipleSelectables(
 				nextSelectables, oldSelection, shouldXorSelection, shouldExtendSelection)
 		self._selectionWrapper:set(newSelection)
-		if getFFlagDraggerPerf() then
-			self:_updateSelectionInfo()
-		end
-	end
-	if not getFFlagDraggerPerf() then
 		self:_updateSelectionInfo()
 	end
 end
@@ -360,7 +353,7 @@ function DraggerToolModel:_processViewChanged()
 end
 
 function DraggerToolModel:_updateSelectionInfo(newSelectionInfoHint)
-	if getFFlagDraggerPerf() and newSelectionInfoHint then
+	if newSelectionInfoHint then
 		self._selectionInfo = newSelectionInfoHint
 	else
 		self._selectionInfo = self._draggerSchema.SelectionInfo.new(
@@ -497,8 +490,8 @@ function DraggerToolModel:_analyticsSendHandleDragged(handleId)
 		joinSurfaces = self._draggerContext:shouldJoinSurfaces(),
 		useConstraints = self._draggerContext:areConstraintsEnabled(),
 		haveCollisions = self._draggerContext:areCollisionsEnabled(),
-		pivotType = getFFlagPivotAnalytics() and self:classifySelectionPivot() or nil,
-		handleId = getFFlagPivotAnalytics() and handleId or nil,
+		pivotType = self:classifySelectionPivot(),
+		handleId = handleId,
 	})
 end
 

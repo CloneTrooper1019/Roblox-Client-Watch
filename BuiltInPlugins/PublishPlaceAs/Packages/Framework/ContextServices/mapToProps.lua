@@ -37,10 +37,10 @@ local Framework = script.Parent.Parent
 local Roact = require(Framework.Parent.Roact)
 local Consumer = require(Framework.ContextServices.Consumer)
 
-local FFlagDevFrameworkWarnMapToPropsUsed = game:GetFastFlag("DevFrameworkWarnMapToPropsUsed")
+local FFlagDebugDevFrameworkWarnMapToPropsUsed = game:GetFastFlag("DebugDevFrameworkWarnMapToPropsUsed")
 local StudioService = game:GetService("StudioService")
 local hasInternalPermission = StudioService:HasInternalPermission()
-local isWarnEnabled = FFlagDevFrameworkWarnMapToPropsUsed and hasInternalPermission
+local isWarnEnabled = FFlagDebugDevFrameworkWarnMapToPropsUsed and hasInternalPermission
 
 local function mapToProps(component, contextMap, ignoreUsage)
 	assert(component.render ~= Roact.Component.render, string.format(missingRenderMessage, tostring(component)))

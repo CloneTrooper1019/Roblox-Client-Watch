@@ -55,8 +55,6 @@ local GetAssetConfigManageableGroupsRequest = require(Requests.GetAssetConfigMan
 
 local UpdateAssetConfigStore = require(Plugin.Core.Actions.UpdateAssetConfigStore)
 
-local FFlagImproveAssetCreationsPageFetching2 = game:GetFastFlag("ImproveAssetCreationsPageFetching2")
-
 local OverrideAsset = Roact.PureComponent:extend("OverrideAsset")
 
 local TITLE_HEIGHT = 30
@@ -136,12 +134,7 @@ function OverrideAsset:render()
 			local instances = props.instances
 			local onOverrideAssetSelected = props.onOverrideAssetSelected
 
-			local resultsArray
-			if FFlagImproveAssetCreationsPageFetching2 then
-				resultsArray = props.resultsArray
-			else
-				resultsArray = props.filteredResultsArray
-			end
+			local resultsArray = props.resultsArray
 
 			local selectIndex = state.selectIndex
 
@@ -285,16 +278,11 @@ local function mapStateToProps(state, props)
 	local stateToProps = {
 		totalResults = state.totalResults,
 		resultsArray = state.resultsArray,
-		filteredResultsArray = state.filteredResultsArray,
 		manageableGroups = state.manageableGroups or {},
 		assetTypeEnum = state.assetTypeEnum,
 	}
 
 	stateToProps["screenFlowType"] = state.screenFlowType
-
-	if FFlagImproveAssetCreationsPageFetching2 then
-		stateToProps.filteredResultsArray = nil
-	end
 
 	return stateToProps
 end

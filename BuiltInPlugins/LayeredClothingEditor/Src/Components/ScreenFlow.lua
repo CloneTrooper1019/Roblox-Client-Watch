@@ -4,6 +4,8 @@
 
 	Required Props:
 		table Screens: list of Roact components that are rendered in the flow (order in list is order in flow)
+		callback GetNextIndex: calculates index for the next screen, takes in current index and must return a number
+		callback GetPreviousIndex: calculates index for the previous screen, takes in current index and must return a number
 
 	Optional Props:
 		callback OnScreenChanged: fired whenever a the flow has changed screens.
@@ -26,21 +28,11 @@ function ScreenFlow:init(initialProps)
 	}
 
 	self.GoToNext = function()
-		local props = self.props
-		local state = self.state
-
-		local screens = props.Screens
-
-		-- cycling behavior
-		local newIndex = (state.currentScreenIndex + 1) % #screens
-		newIndex = newIndex == 0 and #screens or newIndex
-		self.GoTo(newIndex)
+		self.GoTo(self.props.GetNextIndex(self.state.currentScreenIndex))
 	end
 
 	self.GoToPrevious = function()
-		local state = self.state
-		local newIndex = state.currentScreenIndex - 1
-		self.GoTo(newIndex)
+		self.GoTo(self.props.GetPreviousIndex(self.state.currentScreenIndex))
 	end
 
 	self.GoTo = function(index)

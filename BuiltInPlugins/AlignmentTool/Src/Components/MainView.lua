@@ -7,10 +7,7 @@
 
 local Plugin = script.Parent.Parent.Parent
 
-local getFFlagAlignToolDisabledFix = require(Plugin.Src.Flags.getFFlagAlignToolDisabledFix)
 local getFFlagAlignToolTeachingCallout = require(Plugin.Src.Flags.getFFlagAlignToolTeachingCallout)
-
-local DraggerFramework = Plugin.Packages.DraggerFramework
 
 local DraggerSchemaCore = Plugin.Packages.DraggerSchemaCore
 local BoundsChangedTracker = require(DraggerSchemaCore.BoundsChangedTracker)
@@ -28,7 +25,6 @@ local Button = UI.Button
 local Container = UI.Container
 local Decoration = UI.Decoration
 local ScrollingFrame = UI.ScrollingFrame
-local ToggleButton = UI.ToggleButton
 
 local Util = Framework.Util
 local LayoutOrderIterator = Util.LayoutOrderIterator
@@ -85,12 +81,7 @@ function MainView:render()
 	-- Render the preview when it's a candidate for visibility thanks to the
 	-- cursor being over the UI (previewVisible) and an alignment operation is
 	-- currently possible (alignEnabled).
-	local shouldRenderPreview
-	if getFFlagAlignToolDisabledFix() then
-		shouldRenderPreview = props.previewVisible and props.alignEnabled
-	else
-		shouldRenderPreview = props.previewVisible
-	end
+	local shouldRenderPreview = props.previewVisible and props.alignEnabled
 
 	local padding = UDim.new(0, theme.MainView.Padding)
 

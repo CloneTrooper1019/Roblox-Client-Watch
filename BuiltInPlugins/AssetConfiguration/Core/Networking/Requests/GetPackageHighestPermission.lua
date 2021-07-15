@@ -30,6 +30,10 @@ local NetworkError = require(Plugin.Core.Actions.NetworkError)
 local PermissionsConstants = require(Plugin.Core.Components.AssetConfiguration.Permissions.PermissionsConstants)
 local KeyConverter = require(Plugin.Core.Util.Permissions.KeyConverter)
 
+local Analytics = require(Plugin.Core.Util.Analytics.Analytics)
+
+local FFlagNewPackageAnalyticsWithRefactor2 = game:GetFastFlag("NewPackageAnalyticsWithRefactor2")
+
 local function deserializeResults(results)
 	local idToPermissionsTable = {}
 	for _, data in pairs(results) do
@@ -52,6 +56,9 @@ return function(networkInterface, assetIds)
 
 		return networkInterface:getPackageHighestPermission(assetIds):andThen(
 			function(result)
+				if FFlagNewPackageAnalyticsWithRefactor2 then
+				    Analytics.sendResultToKibana(result)
+				end
 				local resultData = result.responseBody
 				local decodedResult = HttpService:JSONDecode(resultData).permissions
 				local deserializeResultData = deserializeResults(decodedResult)
@@ -59,6 +66,9 @@ return function(networkInterface, assetIds)
 				store:dispatch(SetPackagePermission(deserializeResultData))
 			end, 
 			function(err)
+				if FFlagNewPackageAnalyticsWithRefactor2 then
+				    Analytics.sendResultToKibana(err)
+				end
 				store:dispatch(NetworkError(err))
 			end)
 	end

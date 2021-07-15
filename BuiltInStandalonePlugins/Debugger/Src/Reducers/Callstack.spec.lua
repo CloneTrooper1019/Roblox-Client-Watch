@@ -7,35 +7,20 @@ local testImmutability = TestHelpers.testImmutability
 
 local CallstackReducer = require(script.Parent.Callstack)
 local Actions = Plugin.Src.Actions
-local SetCurrentFrameNumberAction = require(Actions.Callstack.SetCurrentFrameNumber)
+local Models = Plugin.Src.Models
 local AddCallstackAction = require(Actions.Callstack.AddCallstack)
 local AddThreadIdAction = require(Actions.Callstack.AddThreadId)
 local ResumedAction = require(Actions.Common.Resumed)
+local BreakpointHitAction = require(Actions.Common.BreakpointHit)
+local DebuggerStateToken = require(Models.DebuggerStateToken)
 
-local defaultNewNum = 1
+local defaultDebuggerToken = DebuggerStateToken.fromData({session = 1, stepNumber = 1})
 
 return function()
 	it("should return its expected default state", function()
 		local callstackReducer = Rodux.Store.new(CallstackReducer)
 		expect(callstackReducer:getState()).to.be.ok()
-		expect(#callstackReducer:getState().threadList).to.equal(0)
-		expect(#callstackReducer:getState().threadIdToFrameList).to.equal(0)
-		expect(callstackReducer:getState().currentFrame).to.equal(0)
-	end)
-
-	describe(SetCurrentFrameNumberAction.name, function()
-		it("should set the CurrentFrame", function()
-			local state = CallstackReducer(nil, SetCurrentFrameNumberAction(defaultNewNum))
-
-			expect(state).to.be.ok()
-			expect(state.currentFrame).to.be.ok()
-			expect(state.currentFrame).to.equal(defaultNewNum)
-		end)
-
-		it("should preserve immutability", function()
-			local immutabilityPreserved = testImmutability(CallstackReducer, SetCurrentFrameNumberAction(2))
-			expect(immutabilityPreserved).to.equal(true)
-		end)
+		expect(callstackReducer:getState().stateTokenToCallstackVars).to.be.ok()
 	end)
 
 	describe(AddCallstackAction.name, function()
@@ -51,16 +36,16 @@ return function()
 				lineNumberColumn = "d",
 				sourceColumn = "e",
 			}
-
-			local state = CallstackReducer(nil, AddCallstackAction(123, testInfo))
-
+			local prepState = CallstackReducer(nil, BreakpointHitAction(defaultDebuggerToken))
+			local state = CallstackReducer(prepState, AddCallstackAction(123, testInfo, defaultDebuggerToken))
 			expect(state).to.be.ok()
-			expect(state.threadIdToFrameList).to.be.ok()
-			expect(state.threadIdToFrameList[123].frameColumn).to.equal("a")
-			expect(state.threadIdToFrameList[123].whatColumn).to.equal("b")
-			expect(state.threadIdToFrameList[123].functionNameColumn).to.equal("c")
-			expect(state.threadIdToFrameList[123].lineNumberColumn).to.equal("d")
-			expect(state.threadIdToFrameList[123].sourceColumn).to.equal("e")
+			expect(state.stateTokenToCallstackVars).to.be.ok()
+			expect(state.stateTokenToCallstackVars[defaultDebuggerToken].threadList).to.be.ok()
+			expect(state.stateTokenToCallstackVars[defaultDebuggerToken].threadIdToFrameList[123].frameColumn).to.equal("a")
+			expect(state.stateTokenToCallstackVars[defaultDebuggerToken].threadIdToFrameList[123].whatColumn).to.equal("b")
+			expect(state.stateTokenToCallstackVars[defaultDebuggerToken].threadIdToFrameList[123].functionNameColumn).to.equal("c")
+			expect(state.stateTokenToCallstackVars[defaultDebuggerToken].threadIdToFrameList[123].lineNumberColumn).to.equal("d")
+			expect(state.stateTokenToCallstackVars[defaultDebuggerToken].threadIdToFrameList[123].sourceColumn).to.equal("e")
 		end)
 
 		it("should preserve immutability", function()
@@ -75,25 +60,38 @@ return function()
 				lineNumberColumn = "d",
 				sourceColumn = "e",
 			}
-
-			local immutabilityPreserved = testImmutability(CallstackReducer, AddCallstackAction(1234, testInfo2))
+			local previousState = {stateTokenToCallstackVars = {
+				[defaultDebuggerToken] = {
+					threadList = {},
+					threadIdToFrameList = {},
+				}
+			}}
+			local immutabilityPreserved = testImmutability(CallstackReducer, AddCallstackAction(1234, testInfo2, defaultDebuggerToken), previousState)
 			expect(immutabilityPreserved).to.equal(true)
 		end)
 	end)
 
 	describe(AddThreadIdAction.name, function()
 		it("should Add the ThreadId", function()
-			local state = CallstackReducer(nil, AddThreadIdAction(123, "TestScript.Lua"))
+			local prepState = CallstackReducer(nil, BreakpointHitAction(defaultDebuggerToken))
+			local state = CallstackReducer(prepState, AddThreadIdAction(123, "TestScript.Lua", defaultDebuggerToken))
 
 			expect(state).to.be.ok()
-			expect(state.threadList).to.be.ok()
-			expect(#state.threadList).to.equal(1)
-			expect(state.threadList[1].threadId).to.equal(123)
-			expect(state.threadList[1].displayString).to.equal("TestScript.Lua")
+			expect(state.stateTokenToCallstackVars[defaultDebuggerToken].threadIdToFrameList).to.be.ok()
+			expect(state.stateTokenToCallstackVars[defaultDebuggerToken].threadList).to.be.ok()
+			expect(#state.stateTokenToCallstackVars[defaultDebuggerToken].threadList).to.equal(1)
+			expect(state.stateTokenToCallstackVars[defaultDebuggerToken].threadList[1].threadId).to.equal(123)
+			expect(state.stateTokenToCallstackVars[defaultDebuggerToken].threadList[1].displayString).to.equal("TestScript.Lua")
 		end)
 
+		local previousState = {stateTokenToCallstackVars = {
+			[defaultDebuggerToken] = {
+				threadList = {},
+				threadIdToFrameList = {},
+			}
+		}}
 		it("should preserve immutability", function()
-			local immutabilityPreserved = testImmutability(CallstackReducer, AddThreadIdAction(1234, "TestScript2.Lua"))
+			local immutabilityPreserved = testImmutability(CallstackReducer, AddThreadIdAction(1234, "TestScript2.Lua", defaultDebuggerToken), previousState)
 			expect(immutabilityPreserved).to.equal(true)
 		end)
 	end)
@@ -103,14 +101,29 @@ return function()
 			local state = CallstackReducer(nil, ResumedAction())
 
 			expect(state).to.be.ok()
-			expect(state.threadList).to.be.ok()
-			expect(state.threadIdToFrameList).to.be.ok()
-			expect(state.currentFrame).to.be.ok()
-			expect(state.currentFrame).to.equal(0)
+			expect(state.stateTokenToCallstackVars).to.be.ok()
+			expect(#state.stateTokenToCallstackVars).to.equal(0)
 		end)
 
 		it("should preserve immutability", function()
 			local immutabilityPreserved = testImmutability(CallstackReducer, ResumedAction)
+			expect(immutabilityPreserved).to.equal(true)
+		end)
+	end)
+
+	describe(BreakpointHitAction.name, function()
+		it("should should add empty data to state map", function()
+			local state = CallstackReducer(nil, BreakpointHitAction(defaultDebuggerToken))
+			expect(state).to.be.ok()
+			expect(state.stateTokenToCallstackVars).to.be.ok()
+			expect(state.stateTokenToCallstackVars[defaultDebuggerToken].threadList).to.be.ok()
+			expect(#state.stateTokenToCallstackVars[defaultDebuggerToken].threadList).to.equal(0)
+			expect(state.stateTokenToCallstackVars[defaultDebuggerToken].threadIdToFrameList).to.be.ok()
+			expect(#state.stateTokenToCallstackVars[defaultDebuggerToken].threadIdToFrameList).to.equal(0)
+		end)
+
+		it("should preserve immutability", function()
+			local immutabilityPreserved = testImmutability(CallstackReducer, BreakpointHitAction)
 			expect(immutabilityPreserved).to.equal(true)
 		end)
 	end)

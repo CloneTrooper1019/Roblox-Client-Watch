@@ -1,4 +1,4 @@
-local FFlagImproveAssetCreationsPageFetching2 = game:GetFastFlag("ImproveAssetCreationsPageFetching2")
+local FFlagToolboxLegacyFetchGroupModelsAndPackages = game:GetFastFlag("ToolboxLegacyFetchGroupModelsAndPackages")
 
 local Plugin = script.Parent.Parent.Parent.Parent
 
@@ -69,14 +69,8 @@ local function dispatchGetAssets(store, pageInfo, creationDetailsTable, creatorN
 end
 
 local function dispatchGetAssetsWarning(store, errorText, nextCursor)
-	if DebugFlags.shouldDebugWarnings() then
-		if FFlagImproveAssetCreationsPageFetching2 then
-			if errorText then
-				warn(errorText)
-			end
-		else
-			warn(errorText)
-		end
+	if DebugFlags.shouldDebugWarnings() and errorText then
+		warn(errorText)
 	end
 	store:dispatch(GetAssets({}, nil, nextCursor))
 	store:dispatch(SetLoading(false))
@@ -87,7 +81,16 @@ return function(networkInterface, pageInfoOnStart)
 		store:dispatch(SetLoading(true))
 		local isCreatorSearchEmpty = pageInfoOnStart.creator and pageInfoOnStart.creator.Id == -1
 		local isCreationSearch = Category.getTabForCategoryName(pageInfoOnStart.categoryName) == Category.CREATIONS
-		
+		if FFlagToolboxLegacyFetchGroupModelsAndPackages then
+			-- special case : temporarily pull Group Creations Models and Packages from the develop API
+			local categoryName = pageInfoOnStart.categoryName
+			
+			if categoryName == Category.CREATIONS_GROUP_MODELS.name or
+				categoryName == Category.CREATIONS_GROUP_PACKAGES.name then
+				isCreationSearch = false
+			end
+		end
+
 		local errorFunc = function(result)
 			if PageInfoHelper.isPageInfoStale(pageInfoOnStart, store) then
 				return
@@ -167,11 +170,7 @@ return function(networkInterface, pageInfoOnStart)
 						-- it filters out packages from the list AFTER applying pagination. So this should not be a warning
 						-- See MKTPL-1416 for more information. This is planned to be fixed on the backend, so just nil out
 						-- the warning for now.
-						if FFlagImproveAssetCreationsPageFetching2 then
-							dispatchGetAssetsWarning(store, nil, nextCursor)
-						else
-							dispatchGetAssetsWarning(store, "getAssetCreations() did not return any assets for cursor", nextCursor)
-						end
+						dispatchGetAssetsWarning(store, nil, nextCursor)
 					end
 				end, errorFunc)
 			end
@@ -181,14 +180,26 @@ return function(networkInterface, pageInfoOnStart)
 
 			local isAudio = Category.categoryIsAudio(pageInfoOnStart.categoryName)
 			local isVideo = Category.categoryIsVideo(pageInfoOnStart.categoryName)
-			
+			local isSpecialCase = false
+
+			if FFlagToolboxLegacyFetchGroupModelsAndPackages then
+				-- special case : temporarily pull Group Creations Models and Packages from the develop API
+				local categoryName = pageInfoOnStart.categoryName
+				if categoryName == Category.CREATIONS_GROUP_MODELS.name or
+					categoryName == Category.CREATIONS_GROUP_PACKAGES.name then
+					isSpecialCase = true
+				end
+			end
+
 			if PageInfoHelper.isDeveloperCategory(pageInfoOnStart)
 				or PageInfoHelper.isPackagesCategory(pageInfoOnStart)
 				or isAudio
 				or isVideo
+				or isSpecialCase
 			then
 				useDevelopAssetAPI = true
 			end
+
 			if useDevelopAssetAPI then
 				return networkInterface:getDevelopAsset(pageInfoOnStart):andThen(generalGetAssetHandleFunc, errorFunc)
 			else

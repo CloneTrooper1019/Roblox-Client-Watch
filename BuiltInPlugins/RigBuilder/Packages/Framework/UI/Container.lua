@@ -3,6 +3,7 @@
 	Does not have a Style and does not rely on Theme.
 
 	Optional Props:
+		Enum.AutomaticSize AutomaticSize: The AutomaticSize of the component.
 		boolean ClipsDescendants: Whether the container ClipsDescendants
 		Component Background: The Decoration to use as this component's background.
 		Style BackgroundStyle: The Style to style the Background decoration with.
@@ -44,6 +45,7 @@ function Container:render()
 	local backgroundStyleModifier = props.BackgroundStyleModifier
 
 	local active = props.Active
+	local automaticSize = props.AutomaticSize
 	local padding = props.Padding
 	local margin = props.Margin
 	local size = props.Size or UDim2.new(1, 0, 1, 0)
@@ -96,8 +98,14 @@ function Container:render()
 		end
 	end
 
+	local contentSize = UDim2.new(1, 0, 1, 0)
+	if FlagsList:get("FFlagToolboxReplaceUILibraryComponentsPt2") and automaticSize then
+		contentSize = size
+	end
+
 	return Roact.createElement(elementOverride or "Frame", {
 		Active = active,
+		AutomaticSize = FlagsList:get("FFlagToolboxReplaceUILibraryComponentsPt2") and automaticSize or nil,
 		BackgroundTransparency = 1,
 		Size = size,
 		SizeConstraint = props.SizeConstraint,
@@ -120,7 +128,7 @@ function Container:render()
 		Contents = Roact.createElement("Frame", {
 			ClipsDescendants = clipsDescendants,
 			BackgroundTransparency = 1,
-			Size = UDim2.new(1, 0, 1, 0),
+			Size = contentSize,
 			ZIndex = 2,
 		}, children),
 	})

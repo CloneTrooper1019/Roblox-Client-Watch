@@ -195,7 +195,7 @@ end
 
 -- these operations only work because the normals are axis aligned
 function LargeVoxelRegionPreview:updateBorder(normID1, normID2)
-	assert(self._adorns[normID1] and self._adorns[normID1], "accessing invalid terrain")
+	assert(self._adorns[normID1] and self._adorns[normID2], "accessing invalid terrain")
 	local key = string.format("%d_%d", normID1.Value, normID2.Value)
 	local pos1 = self._adorns[normID1]:getPosition() - self._position
 	local pos2 = self._adorns[normID2]:getPosition() - self._position

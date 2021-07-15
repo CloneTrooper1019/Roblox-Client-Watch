@@ -9,7 +9,6 @@ game:DefineFastFlag("EnableDevProductsInGameSettings", false)
 game:DefineFastFlag("StudioFixGameManagementIndexNil", false)
 game:DefineFastFlag("UXImprovementsShowUserPermsWhenCollaborator2", false)
 game:DefineFastFlag("UXImprovementsNonTCPlacesAllowedPlay", false)
-game:DefineFastFlag("GameSettingsUseKeyProvider", false)
 game:DefineFastFlag("GameSettingsDisplayCollaborativeEditingWarning", false)
 
 return nil

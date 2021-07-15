@@ -8,10 +8,7 @@ local getBoundingBoxScale = require(DraggerFramework.Utility.getBoundingBoxScale
 local TemporaryTransparency = require(DraggerFramework.Utility.TemporaryTransparency)
 local Math = require(DraggerFramework.Utility.Math)
 
-local getEngineFeatureModelPivotApi = require(DraggerFramework.Flags.getEngineFeatureModelPivotApi)
 local getEngineFeatureModelPivotVisual = require(DraggerFramework.Flags.getEngineFeatureModelPivotVisual)
-
-local getFFlagFixRotatedBoneScaling = require(DraggerFramework.Flags.getFFlagFixRotatedBoneScaling)
 
 local getFFlagSimPartVisualSize = require(DraggerFramework.Flags.getFFlagSimPartVisualSize)
 
@@ -236,14 +233,10 @@ function ExtrudeHandlesImplementation:getMinMaxSizes(selectionInfo, axesToScale,
 end
 
 function ExtrudeHandlesImplementation:beginScale(selection, initialSelectionInfo, normalId)
-	local boundsCFrame, boundsOffset
-	if getEngineFeatureModelPivotApi() then
-		boundsCFrame, boundsOffset, self._originalBoundingBoxSize =
-			self:getBoundingBox(selection, initialSelectionInfo)
-	else
-		boundsCFrame, boundsOffset, self._originalBoundingBoxSize =
-			initialSelectionInfo:getBoundingBox()
-	end
+	local boundsCFrame, boundsOffset, boundsSize =
+		self:getBoundingBox(selection, initialSelectionInfo)
+		
+	self._originalBoundingBoxSize = boundsSize
 	self._originalBoundingBoxCFrame = boundsCFrame * CFrame.new(boundsOffset)
 
 	self._originalCFrameMap = initialSelectionInfo:getOriginalCFrameMap()
@@ -470,22 +463,18 @@ function ExtrudeHandlesImplementation:_recordItemsToFixup(parts, models)
 	self._fixupNontrivialAttachments = {}
 	self._fixupOffsets = {}
 	self._fixupScales = {}
-	local EngineFeatureModelPivotApi = getEngineFeatureModelPivotApi()
-	if EngineFeatureModelPivotApi then
-		self._fixupPartPivot = {}
-		self._fixupModelPivot = {}
-		local pivotBasis = self._originalBoundingBoxCFrame:Inverse()
-		for _, model in ipairs(models) do
-			self._fixupModelPivot[model] = pivotBasis * model:GetPivot()
-		end
+	self._fixupPartPivot = {}
+	self._fixupModelPivot = {}
+	local pivotBasis = self._originalBoundingBoxCFrame:Inverse()
+	for _, model in ipairs(models) do
+		self._fixupModelPivot[model] = pivotBasis * model:GetPivot()
 	end
+
 	for _, part in ipairs(parts) do
 		local inverseCFrame = part.CFrame:Inverse()
-		if EngineFeatureModelPivotApi then
-			local pivot = part.PivotOffset
-			if pivot ~= EMPTY_CFRAME then
-				self._fixupPartPivot[part] = pivot
-			end
+		local pivot = part.PivotOffset
+		if pivot ~= EMPTY_CFRAME then
+			self._fixupPartPivot[part] = pivot
 		end
 		for _, descendant in ipairs(part:GetDescendants()) do
 			if descendant:IsA("Attachment") then
@@ -524,15 +513,9 @@ function ExtrudeHandlesImplementation:_applyFixup(scaledBy, translatedBy)
 	-- their CFrames updated first for things to work out as intended, as
 	-- we're assigning WorldCFrame, which has a dependency on the CFrames
 	-- of the ancestor attachments.
-	local FFlagFixRotatedBoneScaling = getFFlagFixRotatedBoneScaling()
 	for _, data in ipairs(self._fixupNontrivialAttachments) do
-		if FFlagFixRotatedBoneScaling then
-			data.Attachment.WorldCFrame =
-				data.RelativeTo.CFrame * CFrame.new(data.LocalPosition * scaledBy) * data.LocalRotation
-		else
-			data.Attachment.WorldCFrame = 
-				(data.RelativeTo.CFrame * data.LocalRotation) + data.LocalPosition * scaledBy
-		end
+		data.Attachment.WorldCFrame =
+			data.RelativeTo.CFrame * CFrame.new(data.LocalPosition * scaledBy) * data.LocalRotation
 	end
 	
 	for offsetItem, offset in pairs(self._fixupOffsets) do
@@ -541,17 +524,15 @@ function ExtrudeHandlesImplementation:_applyFixup(scaledBy, translatedBy)
 	for scaleItem, scale in pairs(self._fixupScales) do
 		scaleItem.Scale = scale * scaledBy
 	end
-	if getEngineFeatureModelPivotApi() then
-		for part, localPivot in pairs(self._fixupPartPivot) do
-			local position = localPivot.Position
-			local rotation = localPivot - position
-			part.PivotOffset = rotation + position * scaledBy
-		end
-		for model, localPivot in pairs(self._fixupModelPivot) do
-			local position = localPivot.Position
-			local rotation = localPivot - position
-			model.WorldPivot = self._originalBoundingBoxCFrame * CFrame.new(translatedBy + position * scaledBy) * rotation
-		end
+	for part, localPivot in pairs(self._fixupPartPivot) do
+		local position = localPivot.Position
+		local rotation = localPivot - position
+		part.PivotOffset = rotation + position * scaledBy
+	end
+	for model, localPivot in pairs(self._fixupModelPivot) do
+		local position = localPivot.Position
+		local rotation = localPivot - position
+		model.WorldPivot = self._originalBoundingBoxCFrame * CFrame.new(translatedBy + position * scaledBy) * rotation
 	end
 end
 

@@ -43,6 +43,7 @@ local TextInput = require(Src.TextInput)
 local TextInputDialog = require(Src.TextInputDialog)
 local TreeTable = require(Src.TreeTable)
 local TreeView = require(Src.TreeView)
+local TreeViewRow = require(Src.TreeViewRow)
 local InstanceTreeView = require(Src.InstanceTreeView)
 local BulletList = require(Src.BulletList)
 local ScrollingFrame = require(Src.ScrollingFrame)
@@ -101,6 +102,7 @@ local UI = strict({
 	Tooltip = Tooltip,
 	TreeTable = TreeTable,
 	TreeView = TreeView,
+	TreeViewRow = TreeViewRow,
 
 	Decoration = {
 		Box = Box,

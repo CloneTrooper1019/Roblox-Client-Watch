@@ -13,13 +13,24 @@
 			})
 		end)
 ]]
+local FFlagDevFrameworkCheckbox = game:GetFastFlag("DevFrameworkCheckbox")
 
 local Framework = script.Parent.Parent
 
 local enumerate = require(Framework.Util.enumerate)
-return enumerate("StyleModifier", {
-	"Hover",
-	"Pressed",
-	"Selected",
-	"Disabled"
-})
+if FFlagDevFrameworkCheckbox then
+	return enumerate("StyleModifier", {
+		"Hover",
+		"Pressed",
+		"Selected",
+		"Disabled",
+		"Indeterminate"
+	})
+else
+	return enumerate("StyleModifier", {
+		"Hover",
+		"Pressed",
+		"Selected",
+		"Disabled"
+	})
+end

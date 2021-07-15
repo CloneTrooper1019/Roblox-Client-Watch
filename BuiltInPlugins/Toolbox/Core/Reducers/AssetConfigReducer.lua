@@ -57,7 +57,6 @@ local SetAssetConfigAvatarAssetsValidGroups = require(Actions.SetAssetConfigAvat
 
 local ConfigTypes = require(Plugin.Core.Types.ConfigTypes)
 
-local FFlagImproveAssetCreationsPageFetching2 = game:GetFastFlag("ImproveAssetCreationsPageFetching2")
 local FFlagShowAssetConfigReasons2 = game:GetFastFlag("ShowAssetConfigReasons2")
 
 return Rodux.createReducer({
@@ -90,9 +89,7 @@ return Rodux.createReducer({
 
 	currentTab = nil,
 
-	totalResults = 0, -- Remove with FFlagImproveAssetCreationsPageFetching2
 	resultsArray = {},
-	filteredResultsArray = {}, -- Remove with FFlagImproveAssetCreationsPageFetching2
 
 	manageableGroups = {},
 	avatarAssetsValidGroups = {},
@@ -252,34 +249,17 @@ return Rodux.createReducer({
 	end,
 
 	[SetOverrideAssets.name] = function(state, action)
-		if FFlagImproveAssetCreationsPageFetching2 then
-			return Cryo.Dictionary.join(state, {
-				resultsArray = action.resultsArray,
-				fetchedAll = Cryo.None,
-			})
-		else
-			return Cryo.Dictionary.join(state, {
-				totalResults = action.totalResults,
-				resultsArray = action.resultsArray,
-				filteredResultsArray = action.filteredResultsArray
-			})
-		end
+		return Cryo.Dictionary.join(state, {
+			resultsArray = action.resultsArray,
+			fetchedAll = Cryo.None,
+		})
 	end,
 
 	[UpdateOverrideAssetData.name] = function(state, action)
-		if FFlagImproveAssetCreationsPageFetching2 then
-			return Cryo.Dictionary.join(state, {
-				resultsArray = Cryo.List.join(state.resultsArray, action.resultsArray),
-				fetchedAll = action.fetchedAll,
-			})
-		else
-			return Cryo.Dictionary.join(state, {
-				totalResults = action.totalResults,
-				resultsArray = Cryo.List.join(state.resultsArray, action.resultsArray),
-				filteredResultsArray = Cryo.List.join(state.filteredResultsArray, action.filteredResultsArray),
-				fetchedAll = action.fetchedAll,
-			})
-		end
+		return Cryo.Dictionary.join(state, {
+			resultsArray = Cryo.List.join(state.resultsArray, action.resultsArray),
+			fetchedAll = action.fetchedAll,
+		})
 	end,
 
 	[SetAssetConfigManageableGroups.name] = function(state, action)

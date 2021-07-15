@@ -1,8 +1,12 @@
 local Plugin = script.Parent.Parent.Parent.Parent
 
 local AnalyticsLogs = require(Plugin.Core.Util.Analytics.Logs)
+local sendResultToKibana = require(Plugin.Libs.Framework.Util.sendResultToKibana)
 
 local RbxAnalyticsService = game:GetService("RbxAnalyticsService")
+
+local FFlagNewPackageAnalyticsWithRefactor2 = game:GetFastFlag("NewPackageAnalyticsWithRefactor2")
+local FFlagInfluxReportingPackageAnalyticsHundrethsPercent = game:GetFastInt("InfluxReportingPackageAnalyticsHundrethsPercent")
 
 local function makeSettingName(counter)
 	return "ToolboxAnalytics_" .. counter
@@ -41,12 +45,16 @@ end
 function Senders.incrementCounter(counter, amount)
 	amount = amount or 1
 	AnalyticsLogs.logCounterEvent("incrementCounter", counter, amount)
-
 	if counters[counter] then
 		counters[counter] = counters[counter] + amount
 	else
 		counters[counter] = amount
 	end
+end
+
+function Senders.sendResultToKibana(result)
+	assert(FFlagNewPackageAnalyticsWithRefactor2)
+	sendResultToKibana(result)
 end
 
 function Senders.sendReports(plugin)

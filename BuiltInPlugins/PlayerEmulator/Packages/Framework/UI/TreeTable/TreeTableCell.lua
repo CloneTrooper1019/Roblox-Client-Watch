@@ -31,10 +31,10 @@ function TreeTableCell:render()
 	local cellProps = props.CellProps
 	local value = row.item[key]
 
-	local text, leftIcon
+	local text, icon
 	if typeof(value) == "table" then
 		text = tostring(value.Value)
-		leftIcon = value.LeftIcon
+		icon = value.LeftIcon
 	else
 		text = tostring(value)
 	end
@@ -87,9 +87,9 @@ function TreeTableCell:render()
 				ImageRectOffset = isExpanded and style.Arrow.ExpandedOffset or style.Arrow.CollapsedOffset,
 				[Roact.Event.Activated] = self.onToggle
 			}) or nil,
-			LeftIcon = leftIcon and Roact.createElement(Image, join({
+			LeftIcon = icon and Roact.createElement(Image, join({
 				LayoutOrder = 2,
-			}, leftIcon)) or nil,
+			}, icon)) or nil,
 			Text = text and Roact.createElement(TextLabel, {
 				LayoutOrder = 3,
 				Text = text,

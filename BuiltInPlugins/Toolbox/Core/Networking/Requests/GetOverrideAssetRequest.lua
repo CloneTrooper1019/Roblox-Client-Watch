@@ -1,5 +1,3 @@
-local FFlagImproveAssetCreationsPageFetching2 = game:GetFastFlag("ImproveAssetCreationsPageFetching2")
-
 local Plugin = script.Parent.Parent.Parent.Parent
 
 local Util = Plugin.Core.Util
@@ -50,18 +48,12 @@ local function getNextCursor(store)
 	return targetCursor
 end
 
-local function getOverrideModels(store, networkInterface, category, targetPage, groupId)
-	assert(not FFlagImproveAssetCreationsPageFetching2, "getOverrideModels function should be removed with FFlagImproveAssetCreationsPageFetching2" )
-	local nextCursor = getNextCursor(store)
-	return networkInterface:getAssetCreations(nil, nextCursor, category, groupId)
-end
-
--- creatoryType can be "User" or "Group"
+-- creatorType can be "User" or "Group"
 -- If creatorType is Group, creatorId is groupId
 return function(networkInterface, assetTypeEnum, creatorType, creatorId, targetPage)
 	return function(store)
 		local loadingPage = store:getState().loadingPage or 0
-		if FFlagImproveAssetCreationsPageFetching2 and DebugFlags.shouldDebugOverrideAssetLoading() then
+		if DebugFlags.shouldDebugOverrideAssetLoading() then
 			print(string.format("GetOverrideAssetRequest: curr=%s, loading=%s, target=%s", 
 				tostring(store:getState().currentPage), 
 				tostring(store:getState().loadingPage), 
@@ -71,7 +63,7 @@ return function(networkInterface, assetTypeEnum, creatorType, creatorId, targetP
 		if targetPage > 1 then
 			-- If targetPage bigger than 1, then fetchedAll will decide if we should reqeust more.
 			if store:getState().fetchedAll then
-				if FFlagImproveAssetCreationsPageFetching2 and DebugFlags.shouldDebugOverrideAssetLoading() then
+				if DebugFlags.shouldDebugOverrideAssetLoading() then
 					print("GetOverrideAssetRequest: fetchedAll, stopping")
 				end
 				return
@@ -79,14 +71,14 @@ return function(networkInterface, assetTypeEnum, creatorType, creatorId, targetP
 
 			-- Make sure we only load target page once.
 			if loadingPage >= targetPage then
-				if FFlagImproveAssetCreationsPageFetching2 and DebugFlags.shouldDebugOverrideAssetLoading() then
+				if DebugFlags.shouldDebugOverrideAssetLoading() then
 					print("GetOverrideAssetRequest: loadingPage >= targetPage, stopping")
 				end
 				return
 			end
 		end
 
-		if FFlagImproveAssetCreationsPageFetching2 and DebugFlags.shouldDebugOverrideAssetLoading() then
+		if DebugFlags.shouldDebugOverrideAssetLoading() then
 			print("GetOverrideAssetRequest: continuing to run request")
 		end
 
@@ -94,41 +86,25 @@ return function(networkInterface, assetTypeEnum, creatorType, creatorId, targetP
 
 		local handleOverrideFailed = function(result)
 			store:dispatch(NetworkError(result))
-			if FFlagImproveAssetCreationsPageFetching2 then
-				store:dispatch(SetLoadingPage(0))
-			else
-				SetLoadingPage(0)
-			end
+			store:dispatch(SetLoadingPage(0))
 		end
 
 		local handleGetCreationOverrideSuccess = function(response)
-			if FFlagImproveAssetCreationsPageFetching2 and DebugFlags.shouldDebugOverrideAssetLoading() then
+			if DebugFlags.shouldDebugOverrideAssetLoading() then
 				print(string.format("handleGetCreationOverrideSuccess: curr=%s, loading=%s, target=%s", 
 					tostring(store:getState().currentPage), 
 					tostring(store:getState().loadingPage), 
 					tostring(targetPage)))
 			end
 			local result = response.responseBody
-			-- Mark it so we know we are not using it.
-			local totalResult = -1
 
-			-- In this case, resultsArray and filteredResultsArray are the same.
 			local resultsArray = convertCreationsDetailsToResultsFormat(result.data)
-			local filteredResultsArray = resultsArray
 			if targetPage == 1 then
-				if FFlagImproveAssetCreationsPageFetching2 then
-					store:dispatch(SetOverrideAssets(resultsArray))
-					store:dispatch(SetOverrideCursor({
-						nextPageCursor = result.nextPageCursor,
-					}))
-					store:dispatch(SetCurrentPage(1))
-				else
-					store:dispatch(SetOverrideAssets(totalResult, resultsArray, filteredResultsArray))
-					-- If we switch to page 1, we will be using a new cursor
-					local defaultCursor = {}
-					store:dispatch(SetOverrideCursor(defaultCursor))
-					store:dispatch(SetCurrentPage(1))
-				end
+				store:dispatch(SetOverrideAssets(resultsArray))
+				store:dispatch(SetOverrideCursor({
+					nextPageCursor = result.nextPageCursor,
+				}))
+				store:dispatch(SetCurrentPage(1))
 			else
 				local currentCursor = store:getState().overrideCursor
 				local isNextPageAvailable = result.nextPageCursor ~= nil
@@ -139,22 +115,14 @@ return function(networkInterface, assetTypeEnum, creatorType, creatorId, targetP
 					}
 				end
 
-				if FFlagImproveAssetCreationsPageFetching2 then
-					store:dispatch(UpdateOverrideAssetData(resultsArray, fetchedAll))
-				else
-					store:dispatch(UpdateOverrideAssetData(totalResult, resultsArray, filteredResultsArray, fetchedAll))
-				end
+				store:dispatch(UpdateOverrideAssetData(resultsArray, fetchedAll))
 
 				store:dispatch(SetOverrideCursor(currentCursor))
 
 				store:dispatch(SetCurrentPage(targetPage))
 			end
 
-			if FFlagImproveAssetCreationsPageFetching2 then
-				store:dispatch(SetLoadingPage(0))
-			else
-				SetLoadingPage(0)
-			end
+			store:dispatch(SetLoadingPage(0))
 		end
 
 		local category = "Model"
@@ -173,30 +141,17 @@ return function(networkInterface, assetTypeEnum, creatorType, creatorId, targetP
 
 		if creatorType == "Group" then
 			if category == "Animation" then
-				local targetCursor
-				if FFlagImproveAssetCreationsPageFetching2 then
-					targetCursor = getNextCursor(store)
-				else
-					local currentCursor = store:getState().overrideCursor
-					targetCursor = currentCursor.nextPageCursor or ""
-				end
+				local targetCursor = getNextCursor(store)
 				return networkInterface:getGroupAnimations(targetCursor, groupId):andThen(
 					handleGetCreationOverrideSuccess,
 					handleOverrideFailed
 				)
 			else
-				if FFlagImproveAssetCreationsPageFetching2 then
-					local nextCursor = getNextCursor(store)
-					networkInterface:getAssetCreations(nil, nextCursor, category, groupId):andThen(
-						handleGetCreationOverrideSuccess,
-						handleOverrideFailed
-					)
-				else
-					getOverrideModels(store, networkInterface, category, targetPage, groupId):andThen(
-						handleGetCreationOverrideSuccess,
-						handleOverrideFailed
-					)
-				end
+				local nextCursor = getNextCursor(store)
+				networkInterface:getAssetCreations(nil, nextCursor, category, groupId):andThen(
+					handleGetCreationOverrideSuccess,
+					handleOverrideFailed
+				)
 			end
 		else
 			local nextCursor = getNextCursor(store)

@@ -11,6 +11,8 @@ return function()
 	it("should create and destroy without errors", function()
 		runComponentTest(Roact.createElement(ScreenFlow, {
 			Screens = {GenerateScreen},
+			GetNextIndex = function() end,
+			GetPreviousIndex = function() end,
 			OnScreenChanged = function() end
 		}))
 	end)
@@ -19,6 +21,9 @@ return function()
 		runComponentTest(
 			Roact.createElement(ScreenFlow, {
 				Screens = {GenerateScreen},
+				GetNextIndex = function() end,
+				GetPreviousIndex = function() end,
+				OnScreenChanged = function() end
 			}),
 			function(container)
 				local frame = container:FindFirstChildOfClass("Frame")

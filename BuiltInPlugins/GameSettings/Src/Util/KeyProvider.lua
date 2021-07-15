@@ -1,6 +1,4 @@
 -- Centralized Place for Keys used throughout the widget
-
-local FFlagGameSettingsUseKeyProvider = game:GetFastFlag("GameSettingsUseKeyProvider")
 local FFlagLuobuDevPublishLua = game:GetFastFlag("LuobuDevPublishLua")
 local FFlagLuobuDevPublishLuaTempOptIn = game:GetFastFlag("LuobuDevPublishLuaTempOptIn")
 local FFlagGameSettingsEnableVoiceChat = game:GetFastFlag("GameSettingsEnableVoiceChat")
@@ -8,8 +6,6 @@ local FFlagGameSettingsEnableVoiceChat = game:GetFastFlag("GameSettingsEnableVoi
 local KeyProvider = {}
 
 function KeyProvider.getCopyIdKeyName()
-    assert(FFlagGameSettingsUseKeyProvider)
-
     return "CopyIDToClipboard"
 end
 
@@ -34,14 +30,10 @@ function KeyProvider.getVipServersIsEnabledKeyName()
 end
 
 function KeyProvider.getEditKeyName()
-    assert(FFlagGameSettingsUseKeyProvider)
-
     return "Edit"
 end
 
 function KeyProvider.getVersionHistoryKeyName()
-    assert(FFlagGameSettingsUseKeyProvider)
-
     return "VersionHistory"
 end
 
@@ -67,6 +59,12 @@ function KeyProvider.getVoiceChatEnabledKeyName()
     assert(FFlagGameSettingsEnableVoiceChat)
 
     return "VoiceChatEnabled"
+end
+
+function KeyProvider.getPlayerAcceptanceKeyName()
+    assert(FFlagLuobuDevPublishLua)
+    
+    return "PlayerAcceptance"
 end
 
 return KeyProvider

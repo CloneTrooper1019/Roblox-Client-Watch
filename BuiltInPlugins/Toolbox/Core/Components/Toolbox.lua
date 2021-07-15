@@ -68,11 +68,10 @@ local FFlagDebugToolboxGetRolesRequest = game:GetFastFlag("DebugToolboxGetRolesR
 local FFlagToolboxDisableMarketplaceAndRecentsForLuobu = game:GetFastFlag("ToolboxDisableMarketplaceAndRecentsForLuobu")
 local FFlagToolboxShowRobloxCreatedAssetsForLuobu = game:GetFastFlag("ToolboxShowRobloxCreatedAssetsForLuobu")
 local FFlagPluginManagementDirectlyOpenToolbox = game:GetFastFlag("PluginManagementDirectlyOpenToolbox")
-local FFlagToolboxDefaultBackgroundMatches = game:GetFastFlag("ToolboxDefaultBackgroundMatches")
 local FFlagToolboxFixCommonWarnings2 = game:GetFastFlag("ToolboxFixCommonWarnings2")
-local FFlagToolboxRemoveGroupInventory = game:GetFastFlag("ToolboxRemoveGroupInventory")
+local FFlagToolboxRemoveGroupInventory2 = game:GetFastFlag("ToolboxRemoveGroupInventory2")
 
-local Background = FFlagToolboxDefaultBackgroundMatches and require(Plugin.Core.Types.Background) or nil
+local Background = require(Plugin.Core.Types.Background)
 
 local Toolbox = Roact.PureComponent:extend("Toolbox")
 
@@ -86,16 +85,10 @@ function Toolbox:handleInitialSettings()
 
 	local initialSelectedSortIndex
 	local initialSearchTerm
-	local initialSelectedBackgroundIndex
+	local initialSelectedBackgroundIndex = Background.getBackgroundForStudioTheme()
 	-- We should reset the categoryName and sortIndex since release of tabs.
 	initialSelectedSortIndex = 1
 	initialSearchTerm = ""
-
-	if FFlagToolboxDefaultBackgroundMatches then
-		initialSelectedBackgroundIndex = Background.getBackgroundForStudioTheme()
-	else
-		initialSelectedBackgroundIndex = initialSettings.backgroundIndex or 1
-	end
 
 	local pageInfoCategories = Category.getTabForCategoryName(initialSettings.categoryName)
 
@@ -114,7 +107,7 @@ function Toolbox:handleInitialSettings()
 
 	if FFlagToolboxDisableMarketplaceAndRecentsForLuobu then
 		local shouldGetGroups
-		if FFlagToolboxRemoveGroupInventory then
+		if FFlagToolboxRemoveGroupInventory2 then
 			shouldGetGroups = pageInfoCategories == Category.INVENTORY or pageInfoCategories == Category.CREATIONS
 		else
 			shouldGetGroups = pageInfoCategories == Category.INVENTORY_WITH_GROUPS or pageInfoCategories == Category.INVENTORY or pageInfoCategories == Category.CREATIONS

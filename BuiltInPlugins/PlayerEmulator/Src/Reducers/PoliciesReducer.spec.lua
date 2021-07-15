@@ -1,5 +1,5 @@
 local PlayerEmulatorService = game:GetService("PlayerEmulatorService")
-local deepEqual = require(game:GetService("CorePackages").tutils).deepEqual
+local deepEqual = require(game:GetService("CorePackages").tutils :: any).deepEqual
 
 local Plugin = script.Parent.Parent.Parent
 local Rodux = require(Plugin.Packages.Rodux)

@@ -4,11 +4,13 @@ local Util = Framework.Util
 local Action = Util.Action
 
 export type Props = {
+	threadId : number,
 	currentFrame : number,
 }
 
-return Action(script.Name, function(currentFrame : number) : Props
+return Action(script.Name, function(threadId : number, currentFrame : number) : Props
 	return {
-		currentFrame = currentFrame
+		currentFrame = currentFrame,
+		threadId = threadId
 	}
 end)

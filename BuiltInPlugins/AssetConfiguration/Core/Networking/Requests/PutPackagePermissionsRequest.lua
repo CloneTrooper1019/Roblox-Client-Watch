@@ -14,6 +14,10 @@ local webKeys = require(Plugin.Core.Util.Permissions.Constants).webKeys
 local ClearChange = require(Plugin.Core.Actions.ClearChange)
 local NetworkError = require(Plugin.Core.Actions.NetworkError)
 
+local Analytics = require(Plugin.Core.Util.Analytics.Analytics)
+
+local FFlagNewPackageAnalyticsWithRefactor2 = game:GetFastFlag("NewPackageAnalyticsWithRefactor2")
+
 local function serializeForRequest(changedPermissions, groupMetadata, assetVersionNumber)
     local changes = {}
 
@@ -62,10 +66,16 @@ return function(networkInterface, assetId, assetVersionNumber)
             if next(permissions) ~= nil then
                 return networkInterface:putPackagePermissions(assetId, permissions):andThen(
                     function(result)
+                        if FFlagNewPackageAnalyticsWithRefactor2 then
+                            Analytics.sendResultToKibana(result)
+                        end
                         store:dispatch(ClearChange("permissions"))
                         store:dispatch(ClearChange("groupMetadata"))
                     end,
                     function(err)
+                        if FFlagNewPackageAnalyticsWithRefactor2 then
+                            Analytics.sendResultToKibana(err)
+                        end
                         store:dispatch(NetworkError(err))
                     end
                 )

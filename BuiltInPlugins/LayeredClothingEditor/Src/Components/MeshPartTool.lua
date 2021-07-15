@@ -31,29 +31,27 @@ function MeshPartTool:didMount()
 	end
 
 	local attachment = editingItem:FindFirstChildWhichIsA("Attachment")
-	if attachment then
-		self.baseCFrame = attachment.WorldCFrame
-	else
-		self.baseCFrame = CFrame.new()
+	if not attachment then
+		return
 	end
 
-	if editingItem then
-		self.props.SetAttachmentPoint({
-			ItemCFrame = self.baseCFrame:inverse() * editingItem.CFrame,
-			AttachmentCFrame = attachment.CFrame,
-		})
+	self.baseCFrame = attachment.WorldCFrame
 
-		self.CFrameChanged = editingItem:GetPropertyChangedSignal("CFrame"):Connect(function()
-			local attachment = editingItem:FindFirstChildWhichIsA("Attachment")
-			if attachment then
-				attachment.CFrame = (self.baseCFrame:inverse() * editingItem.CFrame):inverse()
-				self.props.SetAttachmentPoint({
-					ItemCFrame = self.baseCFrame:inverse() * editingItem.CFrame,
-					AttachmentCFrame = attachment.CFrame,
-				})
-			end
-		end)
-	end
+	self.props.SetAttachmentPoint({
+		ItemCFrame = self.baseCFrame:inverse() * editingItem.CFrame,
+		AttachmentCFrame = attachment.CFrame,
+	})
+
+	self.CFrameChanged = editingItem:GetPropertyChangedSignal("CFrame"):Connect(function()
+		local attachment = editingItem:FindFirstChildWhichIsA("Attachment")
+		if attachment then
+			attachment.CFrame = (self.baseCFrame:inverse() * editingItem.CFrame):inverse()
+			self.props.SetAttachmentPoint({
+				ItemCFrame = self.baseCFrame:inverse() * editingItem.CFrame,
+				AttachmentCFrame = attachment.CFrame,
+			})
+		end
+	end)
 end
 
 function MeshPartTool:render()

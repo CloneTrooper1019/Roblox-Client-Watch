@@ -819,8 +819,8 @@ function TerrainRegionEditor.Init (toolName, theMouse)
 end
 
 function TerrainRegionEditor.ChangeProperties(vals)
-	kFillMaterial = vals.material and vals.material
-	kMergeEmpty = vals.mergeEmpty and vals.mergeEmpty
+	kFillMaterial = vals.material
+	kMergeEmpty = vals.mergeEmpty
 
 	if (tool == ToolId.Move or tool == ToolId.Resize)
 		and mode == "Edit" and selectionStart ~= nil then

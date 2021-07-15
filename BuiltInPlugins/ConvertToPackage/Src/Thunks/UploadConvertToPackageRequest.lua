@@ -11,7 +11,12 @@ local SetCurrentScreen = require(Actions.SetCurrentScreen)
 local UploadResult = require(Actions.UploadResult)
 
 local Urls = require(Plugin.Src.Util.Urls)
+
+local sendResultToKibana = require(Plugin.Packages.Framework.Util.sendResultToKibana)
+
 local StudioService = game:GetService("StudioService")
+
+local FFlagNewPackageAnalyticsWithRefactor2 = game:GetFastFlag("NewPackageAnalyticsWithRefactor2")
 
 -- assetId, number, default to 0 for new asset.
 -- name, string, need to be url encoded.
@@ -28,6 +33,14 @@ return function(assetid, name, description, genreTypeID, ispublic, allowComments
 		local conn; conn = StudioService.OnConvertToPackageResult:Connect(function(result, errorMessage)
 			conn:Disconnect()
 			store:dispatch(UploadResult(result))
+			if FFlagNewPackageAnalyticsWithRefactor2 then
+				local convertedResponse = {
+					["url"] = urlToUse,
+					["responseCode"] = result and 200 or -1,
+					["responseBody"] = errorMessage
+				}
+				sendResultToKibana(convertedResponse)
+			end
 			if errorMessage then
 				store:dispatch(NetworkError(errorMessage, "uploadRequest"))
 			end

@@ -43,6 +43,7 @@ local TextInput = require(Src.TextInput)
 local TextInputDialog = require(Src.TextInputDialog)
 local TreeTable = require(Src.TreeTable)
 local TreeView = require(Src.TreeView)
+local TreeViewRow = require(Src.TreeViewRow)
 local InstanceTreeView = require(Src.InstanceTreeView)
 local BulletList = require(Src.BulletList)
 local ScrollingFrame = require(Src.ScrollingFrame)
@@ -52,6 +53,7 @@ local SimpleTab = require(Src.SimpleTab)
 local Slider = require(Src.Slider)
 local InfiniteScrollingFrame = require(Src.InfiniteScrollingFrame)
 local MultiLineTextInput = require(Src.MultiLineTextInput)
+local Checkbox = require(Src.Checkbox)
 
 -- NOTE: Please keep components in alphabetical order
 local UI = strict({
@@ -62,6 +64,7 @@ local UI = strict({
 	BulletList = BulletList,
 	Button = Button,
 	CaptureFocus = CaptureFocus,
+	Checkbox = Checkbox,
 	Container = Container,
 	DragListener = DragListener,
 	DropdownMenu = DropdownMenu,
@@ -99,6 +102,7 @@ local UI = strict({
 	Tooltip = Tooltip,
 	TreeTable = TreeTable,
 	TreeView = TreeView,
+	TreeViewRow = TreeViewRow,
 
 	Decoration = {
 		Box = Box,

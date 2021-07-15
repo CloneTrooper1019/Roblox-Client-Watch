@@ -8,7 +8,6 @@
 ]]
 local FFlagLuobuDevPublishLua = game:GetFastFlag("LuobuDevPublishLua")
 local FFlagTextInputDialogDevFramework = game:GetFastFlag("TextInputDialogDevFramework")
-local FFlagGameSettingsUseKeyProvider = game:GetFastFlag("GameSettingsUseKeyProvider")
 
 local FOOTER_GRADIENT_SIZE = 3
 local FOOTER_GRADIENT_TRANSPARENCY = 0.9
@@ -34,12 +33,12 @@ local CurrentStatus = require(Plugin.Src.Util.CurrentStatus)
 local TextInputDialog = FFlagLuobuDevPublishLua and Framework.UI.TextInputDialog or nil
 local shouldShowDevPublishLocations = require(Plugin.Src.Util.GameSettingsUtilities).shouldShowDevPublishLocations
 
-local KeyProvider = FFlagGameSettingsUseKeyProvider and require(Plugin.Src.Util.KeyProvider) or nil
-local GetOptInLocationsKeyName = FFlagGameSettingsUseKeyProvider and KeyProvider.getOptInLocationsKeyName or nil
+local KeyProvider = require(Plugin.Src.Util.KeyProvider)
+local GetOptInLocationsKeyName = KeyProvider.getOptInLocationsKeyName
 local optInLocationsKey = FFlagLuobuDevPublishLua and GetOptInLocationsKeyName and GetOptInLocationsKeyName() or "OptInLocations"
-local GetChinaKeyName = FFlagGameSettingsUseKeyProvider and KeyProvider.getChinaKeyName or nil
+local GetChinaKeyName = KeyProvider.getChinaKeyName
 local chinaKey = FFlagLuobuDevPublishLua and GetChinaKeyName and GetChinaKeyName() or "China"
-local GetSelectedKeyName = FFlagGameSettingsUseKeyProvider and KeyProvider.getSelectedKeyName or nil
+local GetSelectedKeyName = KeyProvider.getSelectedKeyName
 local selectedKey = FFlagLuobuDevPublishLua and GetSelectedKeyName and GetSelectedKeyName() or "selected"
 
 local Footer = Roact.PureComponent:extend("Footer")

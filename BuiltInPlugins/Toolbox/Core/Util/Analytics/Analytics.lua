@@ -14,6 +14,7 @@ local FFlagToolboxTrackAllAssetTypeInsertions = game:GetFastFlag("ToolboxTrackAl
 local FFlagToolboxTrackRunMode = game:GetFastFlag("ToolboxTrackRunMode")
 
 local FFlagPluginManagementDirectlyOpenToolbox = game:GetFastFlag("PluginManagementDirectlyOpenToolbox")
+local FFlagNewPackageAnalyticsWithRefactor2 = game:GetFastFlag("NewPackageAnalyticsWithRefactor2")
 
 -- TODO CLIDEVSRVS-1689: StudioSession + StudioID
 local function getStudioSessionId()
@@ -224,6 +225,11 @@ end
 
 function Analytics.onSoundPausedCounter()
 	AnalyticsSenders.reportCounter("Studio.ToolboxAudio.Paused")
+end
+
+function Analytics.sendResultToKibana(result)
+	assert(FFlagNewPackageAnalyticsWithRefactor2)
+	AnalyticsSenders.sendResultToKibana(result)
 end
 
 -- AssetPreview

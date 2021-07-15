@@ -6,7 +6,13 @@ return function()
 	local provide = ContextServices.provide
 	local FrameworkStyles = require(Framework.UI.FrameworkStyles)
 	local TreeView = require(script.Parent)
-	local TextLabel = require(Framework.UI.TextLabel)
+
+	local FFlagDevFrameworkTreeViewRow = game:GetFastFlag("DevFrameworkTreeViewRow")
+	-- TODO: Remove when FFlagDevFrameworkTreeViewRow is retired
+	local UI = require(Framework.UI)
+	local Button = UI.Button
+	local Pane = UI.Pane
+	local TextLabel = UI.Decoration.TextLabel
 
 	local StudioTheme = require(Framework.Style.Themes.StudioTheme)
 
@@ -58,6 +64,29 @@ return function()
 		}
 	}
 
+	-- TODO: Remove when FFlagDevFrameworkTreeViewRow is retired
+	local function DEPRECATED_renderRow(row)
+		local hasChildren = row.item.children and #row.item.children > 0
+		local indent = row.depth * 24
+		return Roact.createElement(Pane, {
+			Size = UDim2.new(1, -indent, 0, 32),
+			LayoutOrder = row.index
+		}, {
+			Toggle = hasChildren and Roact.createElement(Button, {
+				Text = "+",
+				Position = UDim2.new(0, 5 + indent, 0, 4),
+				Size = UDim2.new(0, 24, 0, 24),
+				OnClick = function() end
+			}) or nil,
+			Label = Roact.createElement(TextLabel, {
+				Text = row.item.name,
+				Size = UDim2.new(1, -40, 1, 0),
+				Position = UDim2.new(0, 40 + indent, 0, 0),
+				TextXAlignment = Enum.TextXAlignment.Left,
+			})
+		})
+	end
+
 	local function createTreeView()
 		local theme
 		if THEME_REFACTOR then
@@ -69,17 +98,23 @@ return function()
 				}
 			end)
 		end
+
+		-- TODO: Remove when FFlagDevFrameworkTreeViewRow is retired
+		local renderRow = nil
+		if not FFlagDevFrameworkTreeViewRow then
+			renderRow = DEPRECATED_renderRow
+		end
+
 		return provide({theme}, {
 			TreeView = Roact.createElement(TreeView, {
 				RootItems = items,
 				Size = UDim2.new(0, 240, 0, 240),
 				Expansion = {},
-				RenderRow = function(row)
-					return Roact.createElement(TextLabel, {Text = row.item.name})
-				end,
 				GetChildren = function(item)
 					return item.children
-				end
+				end,
+				-- TODO: Remove when FFlagDevFrameworkTreeViewRow is retired
+				RenderRow = renderRow
 			}),
 		})
 	end

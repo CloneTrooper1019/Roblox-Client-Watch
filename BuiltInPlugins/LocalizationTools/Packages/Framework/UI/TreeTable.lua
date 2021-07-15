@@ -9,8 +9,8 @@
 		callback GetChildren: This should return a list of children for a given row - GetChildren(row: Item) => Item[]
 		table Expansion: The keys of rows that should be expanded - Set<Item>
 		callback OnExpansionChange: Called when an item is expanded or collapsed - (changedExpansion: Set<Item>) => void
-
-	Optional Props:
+		
+		Optional Props:
 		boolean Scroll: Whether the table should scroll vertically if there are more rows than can be displayed.
 		UDim2 Size: The size of the table
 		number SelectedRow: The index of the currently selected row.
@@ -23,7 +23,7 @@
 		callback SortChildren: A comparator function to sort two rows in the tree - SortChildren(left: Item, right: Item) => boolean
 		callback OnHoverRow: An optional callback called when a row is hovered over. (dataIndex: number) -> ()
 		callback OnMouseLeave: An optional callback called when the mouse leaves the table bounds. () -> ()
-		callback OnSelectRow: An optional callback called when a row is selected. (dataIndex: number) -> ()
+		callback OnSelectionChange: Called when an item is selected - (newSelection: Set<Item>) => void
 		callback OnSizeChange: An optional callback called when the component size changes with number of rows that can be displayed.
 		callback OnPageSizeChange: An optional callback called when the size of a page changes.
 		callback OnPageChange: An optional callback called when the user changes the current page of the table. (pageindex: number) -> ()
@@ -57,8 +57,9 @@ Typecheck.wrap(TreeTable, script)
 function TreeTable:init()
 	assert(THEME_REFACTOR, "TreeTable not supported in Theme1, please upgrade your plugin to Theme2")
 	self.onToggle = function(row)
+
 		local newExpansion = {
-			[row.item] = not self.props.Expansion[row.item] or nil,
+			[row.item] = not self.props.Expansion[row.item] or false,
 		}
 		self.props.OnExpansionChange(newExpansion)
 	end

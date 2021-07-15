@@ -10,7 +10,10 @@ local SetAssetOwnerName = require(Plugin.Src.Actions.SetAssetOwnerName)
 
 local enableAudioImport = require(Plugin.Src.Util.AssetManagerUtilities).enableAudioImport
 
+local sendResultToKibana = require(Plugin.Packages.Framework.Util.sendResultToKibana)
+
 local FFlagStopTryingToFormatTimeInLuaForAssetManager = game:DefineFastFlag("StopTryingToFormatTimeInLuaForAssetManager", false)
+local FFlagNewPackageAnalyticsWithRefactor2 = game:GetFastFlag("NewPackageAnalyticsWithRefactor2")
 
 --[[
     Remove with FFlagStopTryingToFormatTimeInLuaForAssetManager,
@@ -61,6 +64,9 @@ return function(apiImpl, assetIds)
 
         apiImpl.Develop.V1.Assets.assets(assetIds):makeRequest()
         :andThen(function(response)
+            if FFlagNewPackageAnalyticsWithRefactor2 then
+                sendResultToKibana(response)
+            end
             local body = response.responseBody
             if not body or #body.data == 0 then
                 return
@@ -132,7 +138,10 @@ return function(apiImpl, assetIds)
 
             store:dispatch(SetAssetPreviewData(assetPreviewData))
             return response
-        end, function()
+        end, function(response)
+            if FFlagNewPackageAnalyticsWithRefactor2 then
+                sendResultToKibana(response)
+            end
             error("Failed to load data for Asset Preview")
         end)
     end

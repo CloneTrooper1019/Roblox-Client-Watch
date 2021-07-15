@@ -7,6 +7,7 @@ local HttpService = game:GetService("HttpService")
 local Plugin = script.Parent.Parent.Parent.Parent
 
 local Actions = Plugin.Core.Actions
+local Analytics = require(Plugin.Core.Util.Analytics.Analytics)
 local SetCollaborators = require(Actions.SetCollaborators)
 local NetworkError = require(Actions.NetworkError)
 
@@ -16,6 +17,8 @@ local KeyConverter = require(Plugin.Core.Util.Permissions.KeyConverter)
 local webKeys = require(Plugin.Core.Util.Permissions.Constants).webKeys
 
 local PlayersService = game:GetService("Players")
+
+local FFlagNewPackageAnalyticsWithRefactor2 = game:GetFastFlag("NewPackageAnalyticsWithRefactor2")
 
 local function deserializeResult(collaboratorsGETResults)
 	local collaborators = {
@@ -44,12 +47,18 @@ return function(networkInterface, assetId)
 	return function(store)
         return networkInterface:getPackageCollaborators(assetId):andThen(
             function(result)
+                if FFlagNewPackageAnalyticsWithRefactor2 then
+                    Analytics.sendResultToKibana(result)
+                end
                 local resultData = HttpService:JSONDecode(result.responseBody).data
                 local deserializeResultData = deserializeResult(resultData)
 
                 store:dispatch(SetCollaborators(deserializeResultData))
             end,
             function(err)
+                if FFlagNewPackageAnalyticsWithRefactor2 then
+                    Analytics.sendResultToKibana(err)
+                end
                 store:dispatch(NetworkError(err))
             end
         )

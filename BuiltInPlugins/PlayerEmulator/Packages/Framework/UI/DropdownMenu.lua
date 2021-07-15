@@ -46,6 +46,7 @@ local TextLabel = require(UI.TextLabel)
 local THEME_REFACTOR = Util.RefactorFlags.THEME_REFACTOR
 local FlagsList = Util.Flags.new({
 	FFlagRefactorDevFrameworkContextItems = {"RefactorDevFrameworkContextItems"},
+	FFlagToolboxReplaceUILibraryComponentsPt2 = {"ToolboxReplaceUILibraryComponentsPt2"},
 })
 
 local DropdownMenu = Roact.PureComponent:extend("DropdownMenu")
@@ -133,10 +134,10 @@ function DropdownMenu:init()
 			yPos = sourcePosition.Y + sourceSize.Y + offset.Y
 			verticalAlignment = Enum.VerticalAlignment.Top
 		else
-			yPos = sourcePosition.Y - offset.Y - maxHeight
+			local heightToSubtract = FlagsList:get("FFlagToolboxReplaceUILibraryComponentsPt2") and math.min(height, maxHeight) or maxHeight
+			yPos = sourcePosition.Y - offset.Y - heightToSubtract
 			verticalAlignment = Enum.VerticalAlignment.Bottom
 		end
-
 		local needsScrollingFrame = height > maxHeight
 
 		return {
@@ -228,7 +229,6 @@ function DropdownMenu:renderMenu()
 	end
 
 	local backgroundStyle = style.BackgroundStyle
-
 	return Roact.createElement(Container, {
 		Position = UDim2.fromOffset(x, y),
 		Size = UDim2.fromOffset(width, height + BORDER_SIZE * 2),

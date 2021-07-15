@@ -6,6 +6,16 @@ local TestHelper = require(Plugin.Src.Util.TestHelper)
 
 local ModelUtil = {}
 
+local function getDescendants(descendants, model)
+	if not (model:IsA("Model") and model.Name == "AnimSaves") then
+		for _, ch in ipairs(model:GetChildren()) do
+			table.insert(descendants, ch)
+			getDescendants(descendants, ch)
+		end
+	end
+	return descendants
+end
+
 local function getExents(item)
 	if item:IsA("MeshPart") then
 		return item.Size
@@ -249,37 +259,48 @@ function ModelUtil:attachClothingItem(avatar, item)
 	item.Parent = avatar
 end
 
-function ModelUtil:updateWraps(pointData, cageMode)
+local function updateWrapsHelper(deformers, pointData, cageMode)
 	if DebugFlags.UseMockCages() then
 		return
 	end
-	for part, deformer in pairs(self.deformerToPartMap) do
+
+	for _, deformer in pairs(deformers) do
 		local verts = pointData[cageMode][deformer.Name]
 		local newVerts = {}
 		for _, vert in ipairs(verts) do
 			table.insert(newVerts, vert.Position)
 		end
 		deformer:ModifyVertices(cageMode, newVerts)
-	end
+	end	
+end
+
+function ModelUtil:updateWraps(pointData, cageMode)
+	updateWrapsHelper(self.deformerToPartMap, pointData, cageMode)
+end
+
+function ModelUtil:deformAvatar(model, pointData, cageMode)
+	local deformerToPartMap = self:getDeformerToPartMap(model, true)
+	updateWrapsHelper(deformerToPartMap, pointData, cageMode)
 end
 
 function ModelUtil:deformClothing(item, pointData, cageMode)
-	if DebugFlags.UseMockCages() then
-		return
-	end
-	local wrap = item:FindFirstChildWhichIsA("WrapLayer")
-	if not wrap then
-		return
-	end
-	local verts = pointData[cageMode][wrap.Name]
-	local newVerts = {}
-	for _, vert in ipairs(verts) do
-		table.insert(newVerts, vert.Position)
-	end
-	wrap:ModifyVertices(cageMode, newVerts)
+	local wrapLayer = {item:FindFirstChildWhichIsA("WrapLayer")}
+	updateWrapsHelper(wrapLayer, pointData, cageMode)
 end
 
-function ModelUtil:getDeformerToPartMap()
+function ModelUtil:getDeformerToPartMap(model, isBody)
+	if model then
+		local deformerToPartMap = {}
+		local descendants = getDescendants({}, model)
+		for _, desc in ipairs(descendants) do
+			if isBody and desc:IsA("WrapTarget") then
+				deformerToPartMap[desc.Parent] = desc
+			elseif not isBody and desc:IsA("WrapLayer") then
+				deformerToPartMap[desc.Parent] = desc
+			end
+		end	
+		return deformerToPartMap	
+	end
 	return self.deformerToPartMap
 end
 
@@ -334,7 +355,7 @@ function ModelUtil:getRootPart(model)
 	end
 end
 
-function ModelUtil:createDeformerToPartMap(model, isBody)
+function ModelUtil:createModelInfo(model, isBody)
 	if DebugFlags.UseMockCages() then
 		if isBody then
 			self.deformerToPartMap = {
@@ -378,15 +399,10 @@ function ModelUtil:createDeformerToPartMap(model, isBody)
 	else
 		self.deformerToPartMap = {}
 		self.connections = {}
-		for _, desc in ipairs(model:GetDescendants()) do
-			if isBody and desc:IsA("WrapTarget") then
-				self.deformerToPartMap[desc.Parent] = desc
-			elseif not isBody and desc:IsA("WrapLayer") then
-				self.deformerToPartMap[desc.Parent] = desc
-			end
-		end
+		self.deformerToPartMap = self:getDeformerToPartMap(model, isBody)
 
-		for _, desc in ipairs(model:GetDescendants()) do
+		local descendants = getDescendants({}, model)
+		for _, desc in ipairs(descendants) do
 			if desc:IsA("Motor6D") then
 				local part0 = desc.Part0
 				local part1 = desc.Part1

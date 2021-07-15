@@ -36,8 +36,6 @@ game:DefineFastFlag("ToolboxUseDevFrameworkAssetPreview", false)
 
 game:DefineFastFlag("CMSUploadFees", false)
 
-game:DefineFastFlag("ImproveAssetCreationsPageFetching2", false)
-
 game:DefineFastFlag("ToolboxUseGetItemDetails", false)
 
 game:DefineFastFlag("ToolboxStopAudioFromPlayingOnCloseAndCategorySwitch", false)
@@ -45,11 +43,10 @@ game:DefineFastFlag("ToolboxStopAudioFromPlayingOnCloseAndCategorySwitch", false
 game:DefineFastFlag("AssetConfigNonCatalogOptionalDescription", false)
 game:DefineFastFlag("ToolboxFixCreatorSearchResults", false)
 
-game:DefineFastFlag("ToolboxDefaultBackgroundMatches", false)
-
 game:DefineFastFlag("ToolboxFixCommonWarnings2", false)
 
-game:DefineFastFlag("ToolboxRemoveGroupInventory", false)
+game:DefineFastFlag("ToolboxLegacyFetchGroupModelsAndPackages", false)
+game:DefineFastFlag("ToolboxRemoveGroupInventory2", false)
 game:DefineFastFlag("ToolboxReplaceUILibraryComponentsPt3", false)
 game:DefineFastFlag("RemoveUILibraryFromToolbox", false)
 

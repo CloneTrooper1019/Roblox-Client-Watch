@@ -85,17 +85,16 @@ local shouldShowDevPublishLocations = require(Plugin.Src.Util.GameSettingsUtilit
 local getPlayerAppDownloadLink = require(Plugin.Src.Util.GameSettingsUtilities).getPlayerAppDownloadLink
 local getOptInLocationsRequirementsLink = require(Plugin.Src.Util.GameSettingsUtilities).getOptInLocationsRequirementsLink
 
-local FFlagGameSettingsUseKeyProvider = game:GetFastFlag("GameSettingsUseKeyProvider")
-local KeyProvider = FFlagGameSettingsUseKeyProvider and require(Plugin.Src.Util.KeyProvider) or nil
+local KeyProvider = require(Plugin.Src.Util.KeyProvider)
 
-local GetOptInLocationsKeyName = FFlagGameSettingsUseKeyProvider and KeyProvider.getOptInLocationsKeyName or nil
+local GetOptInLocationsKeyName = KeyProvider.getOptInLocationsKeyName
 local optInLocationsKey = (FFlagLuobuDevPublishLua or FFlagLuobuDevPublishLuaTempOptIn) and GetOptInLocationsKeyName and GetOptInLocationsKeyName() or "OptInLocations"
 
-local GetChinaKeyName = FFlagGameSettingsUseKeyProvider and KeyProvider.getChinaKeyName or nil
-local chinaKey = FFlagLuobuDevPublishLua and GetChinaKeyName and GetChinaKeyName() or "China"
+local GetChinaKeyName = KeyProvider.getChinaKeyName
+local chinaKey = FFlagLuobuDevPublishLua and GetChinaKeyName() or nil
 
-local GetPlayerAcceptanceKeyName = FFlagGameSettingsUseKeyProvider and KeyProvider.getPlayerAcceptanceKeyName or nil
-local playerAcceptanceKey = FFlagLuobuDevPublishLua and GetPlayerAcceptanceKeyName and GetPlayerAcceptanceKeyName() or "PlayerAcceptance"
+local GetPlayerAcceptanceKeyName = KeyProvider.getPlayerAcceptanceKeyName
+local playerAcceptanceKey = FFlagLuobuDevPublishLua and GetPlayerAcceptanceKeyName() or nil
 
 local Framework = require(Plugin.Framework)
 local Tooltip = Framework.UI.Tooltip

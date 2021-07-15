@@ -4,7 +4,6 @@
 	Props:
 		Backgrounds backgrounds
 ]]
-local FFlagToolboxDefaultBackgroundMatches = game:GetFastFlag("ToolboxDefaultBackgroundMatches")
 
 local Plugin = script.Parent.Parent.Parent.Parent
 
@@ -15,7 +14,7 @@ local RoactRodux = require(Libs.RoactRodux)
 local Constants = require(Plugin.Core.Util.Constants)
 local ContextHelper = require(Plugin.Core.Util.ContextHelper)
 local isCli = require(Plugin.Core.Util.isCli)
-local Background = FFlagToolboxDefaultBackgroundMatches and require(Plugin.Core.Types.Background) or nil
+local Background = require(Plugin.Core.Types.Background)
 
 local withTheme = ContextHelper.withTheme
 local withLocalization = ContextHelper.withLocalization
@@ -54,7 +53,7 @@ function Footer:init(props)
 		props.onBackgroundSelectorClicked(toolboxSettings, index)
 	end
 
-	if FFlagToolboxDefaultBackgroundMatches and not isCli() then
+	if not isCli() then
 		self.onThemeChange = function()
 			toolboxSettings = self.props.Settings:get("Plugin")
 			props.onBackgroundSelectorClicked(toolboxSettings, Background.getBackgroundForStudioTheme())
@@ -63,12 +62,10 @@ function Footer:init(props)
 	end
 end
 
-if FFlagToolboxDefaultBackgroundMatches then
-	function Footer:willUnmount()
-		if self._themeChangedConnection then
-			self._themeChangedConnection:Disconnect()
-			self._themeChangedConnection = nil
-		end
+function Footer:willUnmount()
+	if self._themeChangedConnection then
+		self._themeChangedConnection:Disconnect()
+		self._themeChangedConnection = nil
 	end
 end
 

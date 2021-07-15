@@ -1,12 +1,5 @@
 return function()
-	local FFlagImproveAssetCreationsPageFetching2 = game:GetFastFlag("ImproveAssetCreationsPageFetching2")
-
-	if not FFlagImproveAssetCreationsPageFetching2 then
-		return
-	end
-
 	local Plugin = script.Parent.Parent.Parent.Parent
-	local Cryo = require(Plugin.Libs.Cryo)
 	local Rodux = require(Plugin.Libs.Rodux)
 	local NetworkInterfaceMock = require(Plugin.Core.Networking.NetworkInterfaceMock)
 	local GetOverrideAssetRequest = require(Plugin.Core.Networking.Requests.GetOverrideAssetRequest)

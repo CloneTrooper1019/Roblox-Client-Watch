@@ -31,9 +31,9 @@
 			self.props.Analytics:report("myEvent", "foo", {"bar"})
 		end
 
-		ContextServices.mapToProps(Button, {
+		return ContextServices.withContext({
 			Analytics = ContextServices.Analytics,
-		})
+		})(Button)
 ]]
 
 local RbxAnalyticsService = game:GetService("RbxAnalyticsService")

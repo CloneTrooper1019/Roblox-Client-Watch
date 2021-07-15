@@ -79,9 +79,9 @@ return function(editingItem)
 			local polyData = {}
 			local isClothes = false
 			if ItemCharacteristics.isAvatar(editingItem) then
-				ModelUtil:createDeformerToPartMap(editingItem, true)
+				ModelUtil:createModelInfo(editingItem, true)
 			elseif ItemCharacteristics.isClothes(editingItem) then
-				ModelUtil:createDeformerToPartMap(editingItem, false)
+				ModelUtil:createModelInfo(editingItem, false)
 				isClothes = true
 			else
 				return

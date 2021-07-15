@@ -18,6 +18,8 @@ local GenerateScreen = require(Plugin.Src.Components.Screens.GenerateScreen)
 
 local SelectedEditingItem = require(Plugin.Src.Components.Preview.SelectedEditingItem)
 
+local ItemCharacteristics = require(Plugin.Src.Util.ItemCharacteristics)
+
 local LayeredClothingEditor = Roact.PureComponent:extend("LayeredClothingEditor")
 
 function LayeredClothingEditor:init()
@@ -28,6 +30,11 @@ function LayeredClothingEditor:init()
 		GenerateScreen,
 	}
 
+	self.screenToIndexMap = {}
+	for index, screen in ipairs(self.screens) do
+		self.screenToIndexMap[screen] = index
+	end
+
 	self.state = {
 		currentScreen = 0,
 	}
@@ -37,6 +44,37 @@ function LayeredClothingEditor:init()
 			currentScreen = index,
 		})
 	end
+
+	self.getNextIndex = function(currentIndex)
+		local newIndex
+		if currentIndex == self.screenToIndexMap[SelectItemScreen] then
+			local sourceItem = self.props.EditingItemContext:getSourceItem()
+			if ItemCharacteristics.isAvatar(sourceItem) then
+				newIndex = self.screenToIndexMap[EditorScreen]
+			else
+				newIndex = self.screenToIndexMap[AssetTypeScreen]
+			end
+		else
+			newIndex = currentIndex + 1
+		end
+		newIndex = newIndex % #self.screens
+		return newIndex == 0 and #self.screens or newIndex
+	end
+
+	self.getPreviousIndex = function(currentIndex)
+		local newIndex
+		if currentIndex == self.screenToIndexMap[EditorScreen] then
+			local sourceItem = self.props.EditingItemContext:getSourceItem()
+			if ItemCharacteristics.isAvatar(sourceItem) then
+				newIndex = self.screenToIndexMap[SelectItemScreen]
+			else
+				newIndex = self.screenToIndexMap[AssetTypeScreen]
+			end
+		else
+			newIndex = currentIndex - 1
+		end
+		return newIndex
+	end
 end
 
 function LayeredClothingEditor:render()
@@ -44,6 +82,8 @@ function LayeredClothingEditor:render()
 		SelectedEditingItem = Roact.createElement(SelectedEditingItem),
 		ScreenFlow = Roact.createElement(ScreenFlow, {
 			Screens = self.screens,
+			GetNextIndex = self.getNextIndex,
+			GetPreviousIndex = self.getPreviousIndex,
 			OnScreenChanged = self.onScreenChanged,
 		}),
 	})

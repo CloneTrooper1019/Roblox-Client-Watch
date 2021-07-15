@@ -1,5 +1,3 @@
-local FFlagToolboxDefaultBackgroundMatches = game:GetFastFlag("ToolboxDefaultBackgroundMatches")
-
 local Plugin = script.Parent.Parent.Parent.Parent
 
 local Libs = Plugin.Libs
@@ -59,15 +57,6 @@ function FooterButton:render()
 			Size = UDim2.new(0, iconSize, 0, iconSize),
 			LayoutOrder = 1,
 		})
-
-		if not FFlagToolboxDefaultBackgroundMatches then
-			icon = icon or Background.DEPRECATED_renderIcon(index, {
-				AnchorPoint = Vector2.new(0, 0.5),
-				Position = UDim2.new(0, 0, 0.5, 0),
-				Size = UDim2.new(0, iconSize, 0, iconSize),
-				LayoutOrder = 1,
-			})
-		end
 
 		return Roact.createElement(RoundButton, {
 			AnchorPoint = Vector2.new(0, 0.5),

@@ -384,7 +384,7 @@ function ExtrudeHandle:render(hoveredHandleId)
 		end
 	end
 
-	if getFFlagSummonPivot() and self._props.Summonable then
+	if getEngineFeatureModelPivotVisual() and getFFlagSummonPivot() and self._props.Summonable then
 		if self._summonBasisOffset then
 			children.SummonedPivot = Roact.createElement(DraggedPivot, {
 				DraggerContext = self._draggerContext,

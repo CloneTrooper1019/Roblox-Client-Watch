@@ -28,11 +28,12 @@ return function(editingItem, sourceItem)
 			tempModel.Name = sourceItem.Name
 			clone.Parent = tempModel
 			clone.Name = "Handle"
+			ModelUtil:deformClothing(clone, pointData, Enum.CageType.Inner)
+			ModelUtil:deformClothing(clone, pointData, Enum.CageType.Outer)
+		else
+			clone.Parent = Workspace
+			ModelUtil:deformAvatar(clone, pointData, Enum.CageType.Outer)
 		end
-
-		ModelUtil:createDeformerToPartMap(clone, not isClothes)
-		ModelUtil:updateWraps(pointData, Enum.CageType.Inner)
-		ModelUtil:updateWraps(pointData, Enum.CageType.Outer)
 
 		if isClothes then
 			local wrap = clone:FindFirstChildWhichIsA("WrapLayer")

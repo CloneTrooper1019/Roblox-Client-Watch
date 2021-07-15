@@ -292,7 +292,7 @@ function RotateHandles:render(hoveredHandleId)
 		})
 	end
 
-	if getFFlagSummonPivot() and self._props.Summonable then
+	if getEngineFeatureModelPivotVisual() and getFFlagSummonPivot() and self._props.Summonable then
 		if self._summonBasisOffset then
 			if self._summonWasSnapped then
 				children.SummonSnap = Roact.createElement("BoxHandleAdornment", {

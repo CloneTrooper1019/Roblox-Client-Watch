@@ -9,9 +9,6 @@ local DragHelper = require(DraggerFramework.Utility.DragHelper)
 local PartMover = require(DraggerFramework.Utility.PartMover)
 local AttachmentMover = require(DraggerFramework.Utility.AttachmentMover)
 
-local getFFlagDraggerPerf = require(DraggerFramework.Flags.getFFlagDraggerPerf)
-local getFFlagPivotAnalytics = require(DraggerFramework.Flags.getFFlagPivotAnalytics)
-
 local FreeformDragger = {}
 FreeformDragger.__index = FreeformDragger
 
@@ -208,9 +205,7 @@ function FreeformDragger:destroy()
 	-- did not return anything).
 	-- The additional info we have lets us compute the new one more efficiently
 	-- by deriving it from the old one based on the operation we did.
-	if getFFlagDraggerPerf() then
-		return self._draggerToolModel._selectionInfo:getTransformedCopy(self._lastAppliedTransform)
-	end
+	return self._draggerToolModel._selectionInfo:getTransformedCopy(self._lastAppliedTransform)
 end
 
 function FreeformDragger:_analyticsRecordFreeformDragBegin(timeToStartDrag)
@@ -250,9 +245,7 @@ function FreeformDragger:_analyticsSendFreeformDragged()
 	self._dragAnalytics.joinSurfaces = self._draggerContext:shouldJoinSurfaces()
 	self._dragAnalytics.useConstraints = self._draggerContext:areConstraintsEnabled()
 	self._dragAnalytics.haveCollisions = self._draggerContext:areCollisionsEnabled()
-	if getFFlagPivotAnalytics() then
-		self._dragAnalytics.pivotType = self._draggerToolModel:classifySelectionPivot()
-	end
+	self._dragAnalytics.pivotType = self._draggerToolModel:classifySelectionPivot()
 	self._draggerToolModel._draggerContext:getAnalytics():sendEvent(
 		"freeformDragged", self._dragAnalytics)
 end

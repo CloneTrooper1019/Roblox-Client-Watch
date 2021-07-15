@@ -4,7 +4,6 @@ local DebugFlags = require(Plugin.Core.Util.DebugFlags)
 
 
 local Category = require(Plugin.Core.Types.Category)
-local Constants = require(Plugin.Core.Util.Constants)
 local Sort = require(Plugin.Core.Types.Sort)
 
 local Settings = {}
@@ -13,14 +12,11 @@ Settings.__index = Settings
 local disableMarketplaceAndRecents = require(Plugin.Core.Util.ToolboxUtilities).disableMarketplaceAndRecents
 local showRobloxCreatedAssets = require(Plugin.Core.Util.ToolboxUtilities).showRobloxCreatedAssets
 
-local FFlagToolboxDefaultBackgroundMatches = game:GetFastFlag("ToolboxDefaultBackgroundMatches")
 local FFlagToolboxDisableMarketplaceAndRecentsForLuobu = game:GetFastFlag("ToolboxDisableMarketplaceAndRecentsForLuobu")
 local FFlagToolboxShowRobloxCreatedAssetsForLuobu = game:GetFastFlag("ToolboxShowRobloxCreatedAssetsForLuobu")
 
 -- Built in plugins share the same namespace for settings, so mark this as from the toolbox
 local SETTING_PREFIX = "Toolbox_"
-local SELECTED_BACKGROUND_INDEX_KEY = SETTING_PREFIX .. "SelectedBackgroundIndex" -- Remove with FFlagToolboxDefaultBackgroundMatches
-local SELECTED_TAB_KEY = SETTING_PREFIX .. "SelectTab"
 local SELECTED_CATEGORY_NAME_KEY = SETTING_PREFIX .. "SelectedCategoryName"
 local SELECTED_SEARCH_TERM_KEY = SETTING_PREFIX .. "SelectedSearchTerm"
 local SELECTED_SORT_INDEX_KEY = SETTING_PREFIX .. "SelectedSortIndex"
@@ -69,16 +65,6 @@ function Settings:_setSetting(setting, value)
 	self._plugin:SetSetting(setting, value)
 end
 
-if not FFlagToolboxDefaultBackgroundMatches then
-	function Settings:getSelectedBackgroundIndex()
-		return self:_getSetting(SELECTED_BACKGROUND_INDEX_KEY, 1)
-	end
-
-	function Settings:setSelectedBackgroundIndex(index)
-		return self:_setSetting(SELECTED_BACKGROUND_INDEX_KEY, index)
-	end
-end
-
 function Settings:getSelectedCategoryName()
 	return self:_getSetting(SELECTED_CATEGORY_NAME_KEY, Category.DEFAULT.name)
 end
@@ -111,9 +97,6 @@ function Settings:updateFromPageInfo(pageInfo)
 	self:setSelectedCategoryName(pageInfo.categoryName)
 	self:setSelectedSearchTerm(pageInfo.searchTerm)
 	self:setSelectedSortIndex(pageInfo.sortIndex)
-	if not FFlagToolboxDefaultBackgroundMatches then
-		self:setSelectedBackgroundIndex(pageInfo.selectedBackgroundIndex)
-	end
 end
 
 function Settings:loadInitialSettings()
@@ -122,9 +105,6 @@ function Settings:loadInitialSettings()
 	end
 
 	local initSettings = {}
-	if not FFlagToolboxDefaultBackgroundMatches then
-		initSettings.backgroundIndex = self:getSelectedBackgroundIndex()
-	end
 	if FFlagToolboxDisableMarketplaceAndRecentsForLuobu and disableMarketplaceAndRecents() then
 		-- We don't allow Marketplace or Recents for Luobu. We can't risk the loaded setting defaulting to Marketplace.
 		initSettings.categoryName = Category.DEFAULT.name

@@ -22,15 +22,11 @@
     Optional Props:
         ShowTable = boolean, determines if the table should be displayed or not.
 ]]
-local FFlagGameSettingsUseKeyProvider = game:GetFastFlag("GameSettingsUseKeyProvider")
 local Plugin = script.Parent.Parent.Parent.Parent
 
-local KeyProvider = FFlagGameSettingsUseKeyProvider and require(Plugin.Src.Util.KeyProvider) or nil
-local GetCopyIdKeyName = FFlagGameSettingsUseKeyProvider and KeyProvider.getCopyIdKeyName or nil
-local GetEditKeyName = FFlagGameSettingsUseKeyProvider and KeyProvider.getEditKeyName or nil
-
-local KEY_EDIT = "Edit"
-local KEY_COPYID = "CopyID"
+local KeyProvider = require(Plugin.Src.Util.KeyProvider)
+local GetCopyIdKeyName = KeyProvider.getCopyIdKeyName
+local GetEditKeyName = KeyProvider.getEditKeyName
 
 local StudioService = game:GetService("StudioService")
 
@@ -95,9 +91,9 @@ function DevProducts:render()
     end
 
     local onItemClicked = function(key, id)
-        if key == (FFlagGameSettingsUseKeyProvider and GetEditKeyName() or KEY_EDIT) then
+        if key == (GetEditKeyName()) then
             dispatchSetEditDevProductId(id)
-        elseif key == (FFlagGameSettingsUseKeyProvider and GetCopyIdKeyName() or KEY_COPYID) then
+        elseif key == (GetCopyIdKeyName()) then
             StudioService:CopyToClipboard(id)
         else
             error("Invalid Key")
@@ -105,8 +101,8 @@ function DevProducts:render()
     end
 
     local menuItems = {
-        {Key = FFlagGameSettingsUseKeyProvider and GetEditKeyName() or KEY_EDIT, Text = localization:getText("General", "ButtonEdit"),},
-        {Key = FFlagGameSettingsUseKeyProvider and GetCopyIdKeyName() or KEY_COPYID, Text = localization:getText("General", "CopyIDToClipboard"),}
+        {Key = GetEditKeyName(), Text = localization:getText("General", "ButtonEdit"),},
+        {Key = GetCopyIdKeyName(), Text = localization:getText("General", "CopyIDToClipboard"),}
     }
 
     return Roact.createElement(FitFrameOnAxis, {
@@ -157,7 +153,7 @@ function DevProducts:render()
                 if not tonumber(id) then
                     local indexToRemove
                     for i,v in pairs(menuItems) do
-                        if v.Key == (FFlagGameSettingsUseKeyProvider and GetCopyIdKeyName() or KEY_COPYID) then
+                        if v.Key == (GetCopyIdKeyName()) then
                             indexToRemove = i
                             break
                         end

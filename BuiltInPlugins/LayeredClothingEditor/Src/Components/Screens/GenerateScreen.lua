@@ -42,6 +42,7 @@ function GenerateScreen:init()
 		self.props.EditingItemContext:clear()
 		self.props.GoToNext()
 		self.props.ReleaseEditor()
+		self.props.EditingItemContext:setSourceItem(nil)
 	end
 end
 

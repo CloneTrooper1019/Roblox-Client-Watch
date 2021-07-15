@@ -8,14 +8,15 @@
 		UDim2 Position: The position of the scrolling frame.
 		UDim2 Size: The size of the scrolling frame.
 		integer LayoutOrder: The order this component will display in a UILayout.
-		boolean AutoSizeCanvas: When true, will automatically resize the canvas size of the scrolling frame.
+		boolean AutoSizeCanvas: When true, will automatically resize the canvas size of the scrolling frame. DEPRECATED: Use AutomaticCanvasSize instead.
 		Enum.ScrollingDirection ScrollingDirection: The direction to scroll in (default = XY)
 		Vector2 CanvasPosition: The canvas position of the scrolling frame
 		Enum.AutomaticSize AutomaticSize: The automatic size of the scrolling frame.
 		Enum.AutomaticSize AutomaticCanvasSize: The automatic size of the scrolling frame canvas.
 		callback OnCanvasResize: Called when content size is updated. Only called when AutoSizeCanvas is true.
 			OnCanvasResize(absSize: Vector2)
-		table AutoSizeLayoutOptions: The options of the UILayout instance if auto-sizing.
+		table AutoSizeLayoutOptions: The options of the UILayout instance if auto-sizing. DEPRECATED: Use Layout instead.
+		Enum.FillDirection Layout: An optional Enum.FillDirection adding a UIListLayout instance.
 		UDim2 CanvasSize: The size of the scrolling frame's canvas.
 		integer ElementPadding: The padding between children when AutoSizeCanvas is true.
 		boolean ScrollingEnabled: Whether scrolling in this frame will change the CanvasPosition.
@@ -34,6 +35,7 @@
 		integer ZIndex: The draw index of the frame.
 ]]
 local FFlagDevFrameworkRefactorScrollbarColor = game:GetFastFlag("DevFrameworkRefactorScrollbarColor")
+local FFlagDevFrameworkTreeViewRow = game:GetFastFlag("DevFrameworkTreeViewRow")
 
 local Framework = script.Parent.Parent
 local Roact = require(Framework.Parent.Roact)
@@ -118,6 +120,7 @@ function ScrollingFrame:init()
 		parentContainerProps = {
 			Position = Cryo.None,
 			Size = Cryo.None,
+			Layout = Cryo.None,
 			LayoutOrder = Cryo.None,
 			AutoSizeCanvas = Cryo.None,
 			AutoSizeLayoutElement = Cryo.None,
@@ -193,6 +196,14 @@ function ScrollingFrame:render()
 				[Roact.Change.AbsoluteContentSize] = self.updateCanvasSize,
 				[Roact.Ref] = self.layoutRef,
 			})),
+			Children = Roact.createFragment(children),
+		}
+	elseif FFlagDevFrameworkTreeViewRow and props.Layout then
+		children = {
+			Layout = Roact.createElement("UIListLayout", {
+				SortOrder = Enum.SortOrder.LayoutOrder,
+				FillDirection = props.Layout,
+			}),
 			Children = Roact.createFragment(children),
 		}
 	end

@@ -5,9 +5,10 @@ local FFlagToolboxDisableMarketplaceAndRecentsForLuobu = game:GetFastFlag("Toolb
 local FFlagToolboxShowRobloxCreatedAssetsForLuobu = game:GetFastFlag("ToolboxShowRobloxCreatedAssetsForLuobu")
 local FFlagFixAudioAssetsForLuoBu = game:DefineFastFlag("FixAudioAssetsForLuoBu", false)
 local FFlagStudioCreatePluginPolicyService = game:GetFastFlag("StudioCreatePluginPolicyService")
-local FFlagToolboxRemoveGroupInventory = game:GetFastFlag("ToolboxRemoveGroupInventory")
+local FFlagToolboxRemoveGroupInventory2 = game:GetFastFlag("ToolboxRemoveGroupInventory2")
 local FFlagToolboxFixCategoryUrlsCircularDependency = game:GetFastFlag("ToolboxFixCategoryUrlsCircularDependency")
 local FFlagUGCGroupUploads = game:GetFastFlag("UGCGroupUploads")
+local FFlagToolboxLegacyFetchGroupModelsAndPackages = game:GetFastFlag("ToolboxLegacyFetchGroupModelsAndPackages")
 
 local Plugin = script.Parent.Parent.Parent
 local CreatorInfoHelper = require(Plugin.Core.Util.CreatorInfoHelper)
@@ -139,8 +140,30 @@ Category.GROUP_PACKAGES = {name = "GroupPackages", category = "GroupPackages",
 	ownershipType = Category.OwnershipType.GROUP, assetType = Category.AssetType.PACKAGE}
 
 Category.CREATIONS_DEVELOPMENT_SECTION_DIVIDER = {name = "CreationsDevelopmentSectionDivider", selectable=false}
+if FFlagToolboxRemoveGroupInventory2 then
+	-- Eventually, the itemsconfiguration endpoint should fetch MyModelsExceptPackages,
+	-- but currently it is fetching both Models and Packages.
+	-- Until then, pull the logic from the develop api.
+	Category.CREATIONS_GROUP_MODELS = {name = "CreationsGroupModels", category = "GroupModelsExceptPackage",
+		ownershipType = Category.OwnershipType.GROUP, assetType = Category.AssetType.MODEL}
+	Category.CREATIONS_GROUP_PACKAGES = {name = "CreationsGroupPackages", category = "GroupPackages",
+		ownershipType = Category.OwnershipType.GROUP, assetType = Category.AssetType.PACKAGE}
+else
+	Category.CREATIONS_GROUP_MODELS = {name = "CreationsGroupModels", category = "CreationsGroupModels", assetType = Category.AssetType.MODEL,
+	ownershipType = Category.OwnershipType.GROUP,}
+
+	if FFlagToolboxLegacyFetchGroupModelsAndPackages then
+		-- change the category to reflect the develop api categories
+		Category.CREATIONS_GROUP_MODELS = {name = "CreationsGroupModels", category = "GroupModels", assetType = Category.AssetType.MODEL,
+			ownershipType = Category.OwnershipType.GROUP,}
+
+		-- stub in GroupPackages
+		Category.CREATIONS_GROUP_PACKAGES = {name = "" }
+	end
+end
+
 Category.CREATIONS_MODELS = {name = "CreationsModels", category = "CreationsModels", assetType = Category.AssetType.MODEL,
-	ownershipType = Category.OwnershipType.MY,}
+		ownershipType = Category.OwnershipType.MY,}
 Category.CREATIONS_DECALS = {name = "CreationsDecals", category = "CreationsDecals", assetType = Category.AssetType.DECAL,
 	ownershipType = Category.OwnershipType.MY,}
 Category.CREATIONS_AUDIO = {name = "CreationsAudio", category = "CreationsAudio", assetType = Category.AssetType.AUDIO,
@@ -149,8 +172,6 @@ Category.CREATIONS_MESHES = {name = "CreationsMeshes", category = "CreationsMesh
 	ownershipType = Category.OwnershipType.MY,}
 Category.CREATIONS_PLUGIN = {name = "CreationsPlugins", category = "CreationsPlugins", assetType = Category.AssetType.PLUGIN,
 	ownershipType = Category.OwnershipType.MY,}
-Category.CREATIONS_GROUP_MODELS = {name = "CreationsGroupModels", category = "CreationsGroupModels", assetType = Category.AssetType.MODEL,
-	ownershipType = Category.OwnershipType.GROUP,}
 Category.CREATIONS_GROUP_DECALS = {name = "CreationsGroupDecals", category = "CreationsGroupDecals", assetType = Category.AssetType.DECAL,
 	ownershipType = Category.OwnershipType.GROUP,}
 Category.CREATIONS_GROUP_AUDIO = {name = "CreationsGroupAudio", category = "CreationsGroupAudio", assetType = Category.AssetType.AUDIO,
@@ -221,7 +242,7 @@ Category.INVENTORY = {
 	Category.MY_PLUGINS,
 }
 
-if not FFlagToolboxRemoveGroupInventory then
+if not FFlagToolboxRemoveGroupInventory2 then
 	Category.INVENTORY_WITH_GROUPS = {
 		Category.MY_MODELS,
 		Category.MY_DECALS,
@@ -286,19 +307,17 @@ local function getCreationCategories()
 		Category.CREATIONS_DECALS,
 		Category.CREATIONS_AUDIO,
 		Category.CREATIONS_MESHES,
+		Category.CREATIONS_PLUGIN,
 		Category.CREATIONS_GROUP_MODELS,
 		Category.CREATIONS_GROUP_DECALS,
 		Category.CREATIONS_GROUP_AUDIO,
 		Category.CREATIONS_GROUP_MESHES,
+		Category.CREATIONS_GROUP_PLUGIN,
 	}
 
-	table.insert(categories, Cryo.List.find(categories, Category.CREATIONS_MESHES) + 1,
-		Category.CREATIONS_PLUGIN)
-	table.insert(
-		categories,
-		Cryo.List.find(categories, Category.CREATIONS_GROUP_MESHES) + 1,
-		Category.CREATIONS_GROUP_PLUGIN
-	)
+	if FFlagToolboxRemoveGroupInventory2 then
+		table.insert(categories, Category.CREATIONS_GROUP_PACKAGES)
+	end
 
 	return categories
 end
@@ -308,7 +327,7 @@ Category.INVENTORY_KEY = "Inventory"
 Category.RECENT_KEY = "Recent"
 Category.CREATIONS_KEY = "Creations"
 
-if not FFlagToolboxRemoveGroupInventory then
+if not FFlagToolboxRemoveGroupInventory2 then
 	if Rollouts:getToolboxEndpointMigration() then
 		local insertIndex = Cryo.List.find(Category.INVENTORY_WITH_GROUPS, Category.MY_VIDEOS) + 1
 		table.insert(Category.INVENTORY_WITH_GROUPS, insertIndex, Category.MY_PLUGINS)
@@ -389,7 +408,7 @@ local tabs
 local tabKeys
 if FFlagToolboxDisableMarketplaceAndRecentsForLuobu and disableMarketplaceAndRecents() then
 	tabs = {
-		FFlagToolboxRemoveGroupInventory and Category.INVENTORY or Category.INVENTORY_WITH_GROUPS,
+		FFlagToolboxRemoveGroupInventory2 and Category.INVENTORY or Category.INVENTORY_WITH_GROUPS,
 		Category.CREATIONS,
 	}
 	tabKeys = {
@@ -399,7 +418,7 @@ if FFlagToolboxDisableMarketplaceAndRecentsForLuobu and disableMarketplaceAndRec
 elseif FFlagToolboxShowRobloxCreatedAssetsForLuobu and showRobloxCreatedAssets() then
 	tabs = {
 		Category.MARKETPLACE,
-		FFlagToolboxRemoveGroupInventory and Category.INVENTORY or Category.INVENTORY_WITH_GROUPS,
+		FFlagToolboxRemoveGroupInventory2 and Category.INVENTORY or Category.INVENTORY_WITH_GROUPS,
 		Category.CREATIONS,
 	}
 	tabKeys = {
@@ -410,7 +429,7 @@ elseif FFlagToolboxShowRobloxCreatedAssetsForLuobu and showRobloxCreatedAssets()
 else
 	tabs = {
 		Category.MARKETPLACE,
-		FFlagToolboxRemoveGroupInventory and Category.INVENTORY or Category.INVENTORY_WITH_GROUPS,
+		FFlagToolboxRemoveGroupInventory2 and Category.INVENTORY or Category.INVENTORY_WITH_GROUPS,
 		Category.RECENT,
 		Category.CREATIONS,
 	}
@@ -555,7 +574,7 @@ function Category.getCategories(tabName, roles)
 	elseif Category.MARKETPLACE_KEY == tabName then
 		return Category.MARKETPLACE
 	elseif Category.INVENTORY_KEY == tabName then
-		return FFlagToolboxRemoveGroupInventory and Category.INVENTORY or Category.INVENTORY_WITH_GROUPS
+		return FFlagToolboxRemoveGroupInventory2 and Category.INVENTORY or Category.INVENTORY_WITH_GROUPS
 	elseif Category.RECENT_KEY == tabName then
 		return Category.RECENT
 	end

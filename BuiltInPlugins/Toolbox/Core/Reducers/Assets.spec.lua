@@ -1,6 +1,4 @@
 return function()
-	local FFlagImproveAssetCreationsPageFetching2 = game:GetFastFlag("ImproveAssetCreationsPageFetching2")
-
 	local Plugin = script.Parent.Parent.Parent
 	local Cryo = require(Plugin.Libs.Cryo)
 	local ClearAssets = require(Plugin.Core.Actions.ClearAssets)
@@ -221,29 +219,27 @@ return function()
 			expect(state.idToAssetMap[3].Context.pagePosition).to.equal(1)
 		end)
 
-		if FFlagImproveAssetCreationsPageFetching2 then
-			it("should continue to fetch further pages if an empty page is returned", function()
-				local state = Assets(nil, {})
-				local total = 6
+		it("should continue to fetch further pages if an empty page is returned", function()
+			local state = Assets(nil, {})
+			local total = 6
 
-				local pages = {
-					{generateFakeAssetsFromIds({1, 2, 3}), total, 'page1Cursor'},
-					{generateFakeAssetsFromIds({}), total, 'page2Cursor'},
-					{generateFakeAssetsFromIds({4, 5, 6}), total, nil}
-				}
+			local pages = {
+				{generateFakeAssetsFromIds({1, 2, 3}), total, 'page1Cursor'},
+				{generateFakeAssetsFromIds({}), total, 'page2Cursor'},
+				{generateFakeAssetsFromIds({4, 5, 6}), total, nil}
+			}
 
-				for i, params in ipairs(pages) do
-					networkInterfaceMock:resolveAssets(table.unpack(params)):andThen(function(results)
-						local responseBody = results.responseBody
-						state = Assets(state, GetAssets(responseBody.Results, responseBody.TotalResults, PagedRequestCursor.createCursor(responseBody)))
-					end):await()
+			for i, params in ipairs(pages) do
+				networkInterfaceMock:resolveAssets(table.unpack(params)):andThen(function(results)
+					local responseBody = results.responseBody
+					state = Assets(state, GetAssets(responseBody.Results, responseBody.TotalResults, PagedRequestCursor.createCursor(responseBody)))
+				end):await()
 
-					expect(state.hasReachedBottom).to.equal(i == #pages)
-				end
+				expect(state.hasReachedBottom).to.equal(i == #pages)
+			end
 
-				expect(#Cryo.Dictionary.values(state.idToAssetMap)).to.equal(total)
-			end)
-		end
+			expect(#Cryo.Dictionary.values(state.idToAssetMap)).to.equal(total)
+		end)
 	end)
 
 	describe("PostVote action", function()

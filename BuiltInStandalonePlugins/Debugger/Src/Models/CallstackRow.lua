@@ -7,6 +7,9 @@ export type CallstackRow = {
 	sourceColumn: string,
 }
 
+local ICON_SIZE = UDim2.new(0, 14, 0, 14) -- TODO: Shift to MakeTheme.lua
+local ICON_PATH = "rbxasset://textures/Debugger/debugger_arrow.png" -- TODO: Shift to MakeTheme.lua
+
 local function new() : CallstackRow
 	return {
 		arrowColumn = {},
@@ -32,4 +35,6 @@ end
 return {
 	new = new,
 	fromData = fromData,
+	ICON_SIZE = ICON_SIZE,
+	ICON_PATH = ICON_PATH, 
 }
