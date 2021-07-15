@@ -1751,6 +1751,8 @@ Studio.App.Property.PivotSnapToGeometryColor,,Pivot Snap To Geometry Color,Pivot
 Studio.App.PropertyTooltip.PivotSnapToGeometryColor,,"When snapping the pivot to geometry in the Pivot Editor, what color should the interesting points be highlighted with?","When snapping the pivot to geometry in the Pivot Editor, what color should the interesting points be highlighted with?"
 Studio.App.Property.HoverBoxThickness,,Hover Box Thickness,Hover Box Thickness
 Studio.App.PropertyTooltip.HoverThickness,,How thick is the box shown around the item your mouse is hovering over?,How thick is the box shown around the item your mouse is hovering over?
+Studio.App.Property.SelectionThickness,,Selection Box Thickness,Selection Box Thickness
+Studio.App.PropertyTooltip.SelectionThickness,,How thick is the box shown around the selected Instances?,How thick is the box shown around the selected Instances?
 Studio.App.SettingsCategory.StudioScriptEditor,,Script Editor,Script Editor
 Studio.App.Property.Font,,Font,Font
 Studio.App.Property.TabWidth,,Tab Width,Tab Width

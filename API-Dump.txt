@@ -3003,6 +3003,7 @@ Class ScriptRef : Instance [NotCreatable] [NotReplicated]
 	Function Objects ScriptRef:FindAll(Instance dataModel) {RobloxScriptSecurity}
 Class ScriptService : Instance [NotCreatable] [Service]
 Class Selection : Instance [NotCreatable] [Service]
+	Property float Selection.SelectionThickness [ReadOnly]
 	Property Instance Selection.ActiveInstance {RobloxScriptSecurity} [Hidden] [ReadOnly]
 	Function void Selection:Add(Objects instancesToAdd) {PluginSecurity}
 	Function Objects Selection:Get() {PluginSecurity}
@@ -3415,6 +3416,7 @@ Class Studio : Instance [NotCreatable] [Service] [NotReplicated]
 	Property bool Studio.Physical Draggers Select Scope By Default {RobloxScriptSecurity}
 	Property Color3 Studio.Pivot Snap To Geometry Color {RobloxSecurity}
 	Property Color3 Studio.Select Color
+	Property float Studio.Selection Highlight Thickness {RobloxSecurity}
 	Property bool Studio.Show Hover Over
 	Property Enum.RuntimeUndoBehavior Studio.RuntimeUndoBehavior
 	Property bool Studio.Show Light Guides {RobloxScriptSecurity}

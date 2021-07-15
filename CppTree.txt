@@ -6901,6 +6901,8 @@ RBX::Reflection::PropDescriptor<class RBX::Seat,bool>
 RBX::Reflection::PropDescriptor<class RBX::Seat,bool>::GetSetImpl<bool const & ptr64 (cdecl RBX::SeatImpl<class RBX::BasicPartInstance>::*)(void)const ptr64,void (cdecl RBX::Seat::*)(bool const & ptr64) ptr64>
 RBX::Reflection::PropDescriptor<class RBX::Seat,class RBX::Humanoid * ptr64>::GetImpl<class RBX::Humanoid * ptr64 (cdecl RBX::SeatImpl<class RBX::BasicPartInstance>::*)(void)const ptr64>
 RBX::Reflection::PropDescriptor<class RBX::Selection,class RBX::Instance * ptr64>::GetImpl<class RBX::Instance * ptr64 (cdecl RBX::Selection::*)(void)const ptr64>
+RBX::Reflection::PropDescriptor<class RBX::Selection,float>
+RBX::Reflection::PropDescriptor<class RBX::Selection,float>::GetImpl<float (cdecl RBX::Selection::*)(void)const ptr64>
 RBX::Reflection::PropDescriptor<class RBX::SelectionBox,class RBX::BrickColor>
 RBX::Reflection::PropDescriptor<class RBX::SelectionBox,class RBX::BrickColor>::GetSetImpl<class RBX::BrickColor (cdecl RBX::SelectionBox::*)(void)const ptr64,void (cdecl RBX::SelectionBox::*)(class RBX::BrickColor) ptr64>
 RBX::Reflection::PropDescriptor<class RBX::SelectionBox,class RBX::Color3>

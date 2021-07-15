@@ -1396,6 +1396,7 @@ Studio.App.Property.SelectedMenuItemBackgroundColor,,Selected Menu Item Backgrou
 Studio.App.Property.SelectedTextColor,,Menu Selected Text Color,Menu Selected Text Color
 Studio.App.Property.SelectionBackgroundColor,,Selection Background Color,Selection Background Color
 Studio.App.Property.SelectionColor,,Selection Color,Selection Color
+Studio.App.Property.SelectionThickness,,Selection Box Thickness,Selection Box Thickness
 Studio.App.Property.SelfColor,,"""self"" Color","""self"" Color"
 Studio.App.Property.ServerAudioBehavior,,Server Audio Behavior,Server Audio Behavior
 Studio.App.Property.ShowActiveAnimationAsset,,Show Active Animation Asset,Show Active Animation Asset
@@ -1571,6 +1572,7 @@ Studio.App.PropertyTooltip.PivotSnapToGeometryColor,,"When snapping the pivot to
 Studio.App.PropertyTooltip.RandomizeJoinInstanceOrder,,"Randomize instance order during join for test clients. This helps uncover bugs by approximating the behavior of real clients & servers, where the order of instances will change over time as more players join. Randomization may slightly increase join time bandwidth usage compared to real client-server joins.","Randomize instance order during join for test clients. This helps uncover bugs by approximating the behavior of real clients & servers, where the order of instances will change over time as more players join. Randomization may slightly increase join time bandwidth usage compared to real client-server joins."
 Studio.App.PropertyTooltip.Rulers,,Vertical lines drawn at the specified column numbers. These can be used as a guide to code length limits.,Vertical lines drawn at the specified column numbers. These can be used as a guide to code length limits.
 Studio.App.PropertyTooltip.ScrollPastLastLine,,Allow script editor to scroll past the last line.,Allow script editor to scroll past the last line.
+Studio.App.PropertyTooltip.SelectionThickness,,How thick is the box shown around the selected Instances?,How thick is the box shown around the selected Instances?
 Studio.App.PropertyTooltip.ShowWhitespace,,Visibly display spaces and tabs.,Visibly display spaces and tabs.
 Studio.App.PropertyTooltip.SkipClosingBracketsAndQuotes,,Skip over a closing bracket/quote instead of inserting another.,Skip over a closing bracket/quote instead of inserting another.
 Studio.App.PropertyTooltip.TabWidth,,"The width of a tab, measured in number of spaces. Value can only be between 1 and 8.","The width of a tab, measured in number of spaces. Value can only be between 1 and 8."

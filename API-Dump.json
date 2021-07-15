@@ -57294,6 +57294,28 @@
                     }
                 },
                 {
+                    "Category": "Appearance",
+                    "MemberType": "Property",
+                    "Name": "SelectionThickness",
+                    "Security": {
+                        "Read": "None",
+                        "Write": "None"
+                    },
+                    "Serialization": {
+                        "CanLoad": false,
+                        "CanSave": false
+                    },
+                    "Tags": [
+                        "ReadOnly",
+                        "NotReplicated"
+                    ],
+                    "ThreadSafety": "ReadSafe",
+                    "ValueType": {
+                        "Category": "Primitive",
+                        "Name": "float"
+                    }
+                },
+                {
                     "MemberType": "Function",
                     "Name": "Add",
                     "Parameters": [
@@ -64526,6 +64548,24 @@
                     "ValueType": {
                         "Category": "DataType",
                         "Name": "Color3"
+                    }
+                },
+                {
+                    "Category": "Tools",
+                    "MemberType": "Property",
+                    "Name": "Selection Highlight Thickness",
+                    "Security": {
+                        "Read": "RobloxSecurity",
+                        "Write": "RobloxSecurity"
+                    },
+                    "Serialization": {
+                        "CanLoad": true,
+                        "CanSave": true
+                    },
+                    "ThreadSafety": "ReadSafe",
+                    "ValueType": {
+                        "Category": "Primitive",
+                        "Name": "float"
                     }
                 },
                 {

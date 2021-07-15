@@ -4883,7 +4883,6 @@ AXW4UiMessageType
 AXW4UserCFrame
 AXW4UserInputType
 AXW4VRTouchpad
-AYax21NyESzIEK8thGbcUd
 BA447F42A91111E2B410EF351327957B
 BA886F11E18561866242201959
 BAA3C620681180838E23F0DC6224
@@ -5375,7 +5374,6 @@ BoxClicked
 BoxHandleAdornment
 BoxMappedMeshLODFix_v2
 BoxSelectCommand
-Bp95qES2ohklzaBiSRm53yXv9mZYL
 BParameterizeHandler
 BPEAUIUnknown
 BPuVfD9B`uOfD9BpuH
@@ -5516,6 +5514,7 @@ BuiltInPlugin
 BuiltInPlugins
 BuiltInStandalonePluginLoadTime
 BuiltInStandalonePlugins
+BUjI8s3vzjw
 BulkAudioImportUse
 BulkAudioLoader
 BulkImport
@@ -5583,7 +5582,6 @@ ButtonsUpdated
 ButtonText
 BuyDeveloperProduct
 BuyDeveloperProduct_AutoAccepted
-BUYQHXxNrCf3c3h0U47KvVHPQxkjHL2a3mYLULOaM
 BvBvBvBvBvBvBvBv
 BVCoordinateFrame
 BvhParallelMidPhase
@@ -5915,7 +5913,6 @@ CBVexception
 CBVRobloxEvent
 CBVvalue_semantic
 CBW4AppConfigurationType
-CBz3zYII8LLFoVSyMqla3oZy
 CC11E498F68EF2339C0665
 CC583B11E29A3DBD856014A660
 CCCCCCCCCCCCCCCCC
@@ -6201,6 +6198,7 @@ ChildrenWaitingForTheirTurn[
 ChildSharedStringLength
 ChinRaiser
 ChinRaiserUpperLip
+CHMc9CCjNtF5
 Choisissez
 ChoosePixelFormat
 ChoosePixelFormatARB
@@ -8209,7 +8207,7 @@ CustomPhysics
 CustomSort
 CustomStatusAdded
 CustomStatusRemoved
-CvazBsJ3dA7
+CvWfvxAc5LffGnUSCoI2wc
 CWindowImpl
 CWindowImplBaseT
 CWindowImplRoot
@@ -9381,6 +9379,7 @@ DGHASH_ASM
 DgNg`ghgpgxg
 DgNgXgbglgvg
 DGridAction
+DGzIqY3tGm8424pHhTLKh6ohrYdgpP8oSGFB8oI72ZuoDUE7EYV0nyVc8
 DH_check_ex
 DH_check_params_ex
 DH_check_pub_key_ex
@@ -9618,6 +9617,7 @@ DKECCAK1600_ASM
 DlcVersion
 DListenerAttributes
 DMinMaxDistance
+DNhAg5BYHxQJILNfNRnE4dQLsGnRna9gBEp5Puz
 DnsResolve
 DNSResponseMS
 DocActivation
@@ -10827,7 +10827,6 @@ EVRConfig_ForceBob
 EVRConfig_ForceHalfInterlace
 EVRConfig_ForceScaling
 EVRConfig_ForceThrottle
-EwI7OnhQRTh075yJQ3m64bbAslI0inUDaqQKP4qPqw7cKqknVtmeDDri
 ExactMatch
 ExceptionAddress
 ExceptionCode
@@ -10974,6 +10973,7 @@ ExtraInstanceOnError
 ExtraLight
 ExtraLightRegular1.033
 ExtraLightSource
+ExtraLoggingForCLI36936
 ExtraSelections
 ExtraSelectionStore
 ExtrudedPartInstance
@@ -11622,6 +11622,7 @@ FMODPlaybackDSP
 FMODReportDeviceInfo
 FmodResetDriverFix
 FMODSoundChannels
+FNNYuDqAwy8BBl3cvbpljjfkS0wJHPasjCEbO68ys
 FocusChange
 FocusChanged
 FocusConnection
@@ -11953,6 +11954,7 @@ FXCompositing
 FXCompositingFS
 FXCompositingLinearFS
 FXComposition
+GA8q1yOp3kaZ0b5fSuAGR5Z9tA0KiFc9s9MhjeQVUUpycLxl
 GainMakeup
 GameAbsenceInWeb.
 GameAction
@@ -13962,7 +13964,6 @@ HwngSmldAskhBcraMegsOgnaTaweNmnoGuhsNoyoSbnaZrgoDgnoGghoRakaMfdeMogoSdgoSmylEdna
 HWYGOTH.ttf
 HybridEvent
 HyIyPyVy]y^yey
-Hzn9N8VwEHItDJJtA1RRDh1T0dnFw1TzCzmy9WL89GFDQsRsheX1PIJAa
 Iacutesmall
 IAEBVInstanceIdentifier
 IAutocompleter
@@ -14014,6 +14015,7 @@ IDispatchImpl
 IdleAnimation
 Idotaccent
 Idotaccent.a
+IdqBQdh4D2zKP
 IDraftsServiceHost
 IdsOrRanges
 IEAA_NPEBXAEBW4EFbxType
@@ -14621,6 +14623,7 @@ InterpolationRadiusMultiplier
 InterpolationSkipRateBasedOnRadius
 InterpolationThrottling
 InterpolationThrottlingMode
+Interpolator
 Interrompe
 Interromper
 Interrumpir
@@ -14945,7 +14948,6 @@ JIRA_RIDE_711_V2
 JJJBBB\\\xx
 JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
 JKLMNOPQRSTU
-Jm3cN00oMd52EzlSywaqns5vup368fay6VMAsDsB
 Jogabilidade
 JoinBlobInvalidateCountThresholdPercent
 JoinBlobInvalidateThresholdPercent
@@ -15117,6 +15119,7 @@ KeywordFilterType
 KfaO3j5BbG6ijHHxFy22YNNJwxKTT
 KfE9k0uDfE9k
 KFKPKXK`KhK
+KhtHPwm9GOGpvcL
 KickByDatacenter_
 KiDszBCYB0gyp03Pc
 KillPtClicked
@@ -15151,6 +15154,7 @@ Kopplungsoberfl
 Korrodiertes
 KPEAVICHull
 KPEIBX_K_KPEIAU_iobuf
+KRH5EOUGyjrbwrff7vsI
 Kugelverbindung
 Kundendienst.
 Kundensupport.
@@ -15166,7 +15170,6 @@ LabelLayout
 LabelledData
 LadderRaycast
 Ladereihenfolge
-Lafiv1971MC882XYomuzROmxMFRKPIfkICGKhZ85NOlWiRx2vLsAgrlbQe76Ur1Z
 LandedBalanceD
 LandedBalanceP
 LandedTolerance
@@ -15355,6 +15358,8 @@ LevelofDetail
 LevelOfDetail
 LevelOfDetailSetting
 LevelQuality
+LfI3C5Ehb8ybzuYUM0eiK
+LH5exxr5Wdf9FVh8y2
 LhF`F`F`F`F`
 Liberation
 LIBOVR_DLL_DIR
@@ -15463,7 +15468,6 @@ ListWidgetScrollingPastBottom
 LiveCoding
 LiveScript
 LivingRoom
-LKevXxAcbBTIuckRZzGoUkkg2gHoCR1ZktDJZf4DlcnNQW1YeGibCIOlnyN6lh2
 LLEo6Soxvx2
 LLLLLLLLLLLLLLLL]]]]]]]]]]]]]]]]]]]]
 LmsClient]
@@ -16794,7 +16798,7 @@ MigrateTriangleMeshData3
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsI9zRp2OSccqdFx2
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAupANB3EbN9hFHHUj0eA
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzjPRQo9jc
-MIICCgKCAgEAxMk5jCLfW9U
+MIICCgKCAgEA5UHRTsTQl6vB3lyCeXD0w8xo6UfprQbXqSk2nW
 Millisecond
 MillisecondsBeforeHandlingReconnect
 MimeDataFromSelection
@@ -17391,6 +17395,7 @@ NetworkPausedEnabledChanged
 NetworkPauseLogging
 NetworkPauseLogging]
 NetworkPeer
+NetworkPhysicsData
 NetworkReadItem
 NetworkReadItem]
 NetworkReceived
@@ -17847,7 +17852,9 @@ OffsetYOriginal
 OffsetYTarget
 OffTeamCreateHttp
 OffTeamCreateMainThread
+OFfVsp5daYxYm6hfSa1iACAvqJtIUjQgwniNx9I0U15UHcAJ1XpiQIxvA
 OfInstances
+OfJ5DQwcMHzro6Tmr5z
 OfNestedPackages
 OfOperation
 OfPacketsSent
@@ -18340,7 +18347,7 @@ PaddingBottom
 PaddingLeft
 PaddingRight
 PaddingTop
-PADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDING
+PADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDINGPADDINGXXPADDING
 PageChanged
 PageClicked
 PageController
@@ -19630,6 +19637,7 @@ PlacePackagesRelation
 PlacePackagesRelationNumRetry
 PlacePackagesRelationRetryTimeInMS
 PlacePackagesRelationUseKibanaForAnalytics
+PlacePackagesRelationUseNative429Retry
 PlacePageUrl
 PlacePercentDynamicAssemblies
 PlacePrimitives
@@ -20376,7 +20384,6 @@ PROXY_POLICY
 ProxyAction
 ProxyOverrideWidget
 Prozentsatz
-PS8bDcd659su5Iwpg
 PSPECIFIED
 PUBKEY_get0
 PUBKEY_set
@@ -20955,7 +20962,7 @@ QNetworkProxyFactory
 QNetworkReplyImplPrivate
 QNetworkRequest
 QNPPPPPPPPPPPPPPPPPPPNOP
-QNrZEpiFHEL9LoPIizHRiY7
+QNv5uvXxDokOG1ZS
 QObjectData
 QObjectShared
 QOgreWidget
@@ -21081,7 +21088,6 @@ QTStudioWinCrashHangRecorded
 QTStudioWinOtherCrashRecorded
 QTStudioWinRegistryErrorCrashRecorded
 QtUtilities
-QTxX1sxndXPxnJk
 QTypedArrayData
 QUAD_WIDTH
 QualityLevel
@@ -21181,6 +21187,7 @@ QWheelEvent
 QWidgetAction
 QWidgetPluginGui
 QWidgetWindow
+QX11h28AVMvrwMl0yu
 RaceConditionInExplorer
 RadialBlurFS
 RagdollBallSocketConstraint
@@ -23519,6 +23526,7 @@ SelectionSaveToFile
 SelectionSphere
 SelectionStart
 SelectionText
+SelectionThickness
 SelectionTilt
 SelectionToRobloxAction
 SelectionToSource
@@ -26569,6 +26577,7 @@ Studio.App.Property.SelectedTextColor
 Studio.App.Property.SelectHoverColor
 Studio.App.Property.SelectionBackgroundColor
 Studio.App.Property.SelectionColor
+Studio.App.Property.SelectionThickness
 Studio.App.Property.SelfColor
 Studio.App.Property.ServerAudioBehavior
 Studio.App.Property.ShowActiveAnimationAsset
@@ -26758,6 +26767,7 @@ Studio.App.PropertyTooltip.PivotSnapToGeometryColor
 Studio.App.PropertyTooltip.RandomizeJoinInstanceOrder
 Studio.App.PropertyTooltip.Rulers
 Studio.App.PropertyTooltip.ScrollPastLastLine
+Studio.App.PropertyTooltip.SelectionThickness
 Studio.App.PropertyTooltip.ShowWhitespace
 Studio.App.PropertyTooltip.SkipClosingBracketsAndQuotes
 Studio.App.PropertyTooltip.TabWidth
@@ -29503,9 +29513,9 @@ TattletaleSwearWordDetected
 TattletaleUseNewWordListFeatures
 TattletaleUseOriginalWordList
 TCConnectionAborted
+TCOebDM6GJlhaPY0rkIJT9KhRIAglDSWCSs
 Tcommaaccent
 TCP_NODELAY
-Te0kKdyPj8AUKxJS
 TeachingCallouts
 TeamChatWindowAction
 TeamChildOrderExposedTelemetry
@@ -30473,6 +30483,7 @@ ToggleRecording
 ToggleSelect
 ToggleThread
 ToggleTimersMeta
+ToggleTreeTableTooltip
 ToggleUITabVerb
 ToggleViewMode
 ToggleWireframeRendering
@@ -33218,7 +33229,6 @@ VSessionManager
 VSessionNode
 VSessionService
 VSessionTracker
-Vsf778O7RqNOSDZq0gyyhuFsYJmGFzZFOOObQQN8hWMzko07RfuS1ZxK
 VSFFlagSetting
 VShaderD3D11
 VShaderD3D9
@@ -33856,7 +33866,6 @@ WorldTrackJointInsertSplit
 Worttreffer
 WP1Lk7UmX3No0NAVVrlNv8vM1TKYodC60fXpXkwOnxGMHelMkfu58xsxIB9tXB4U
 WPACKET_start_sub_packet_len__
-WQl70vEeGUfc
 WrapDeformer
 WrapDeformerContext
 WrapDeformerDispatcher
@@ -33878,6 +33887,7 @@ WritePlayerSecurity
 WritePluginSettingsFile
 WriteVoxels
 WroteToFile
+WrTRsV85A7SS4xHTA
 WS2_32.dll
 WSAAddressToStringW
 WSASocketW
@@ -33984,6 +33994,7 @@ XInputGetCapabilities
 XInputGetState
 XInputSetState
 Xinvalid_argument
+XkayVDRgsXRf7CQrQK
 Xlength_error
 Xout_of_range
 XP6AXAEBUTextFilterResult
@@ -34115,7 +34126,6 @@ XZP8CRenderSettingsItem
 XZP8GuiObject
 XZP8PlayerGui
 XZP8ScrollingFrame
-XZQctOMWLSxsCAwEAAQ
 XZZyexQCL071UIVBQhYMgNB2TrXKT9o9bq8IpYJ
 YA_NAEBVQString
 YA_NHPEBE00
@@ -34172,6 +34182,7 @@ ZgnhKhWhci
 ZhniZzzzZbarAnmrAgneBlryCaveDroeGkerGrjuGuruGgnaHinaHrbeHariHadnKanaKooaLntaLmylMayrOlmaTuleTiahTtbiTopoBiarBsnaCrehCihtErmhKgnoMrmyMmagOrnuRhniScrySaahTiiiYtrsDhtoGlatIdhuBonaHglgTbgaTtrpCbmiLbniLamsOwahSelaTragUiguBtpoCgalGrahKulaToepXolySgnfTilaBxusXookNga
 ZIndexBehavior
 ZLcJhLcGhM
+ZlM8XnWysZTlwacX9vSWt4sfVSSb3kqNmNTvWAUcJ
 ZNjlXiODrHUcaGRYt
 ZntaLkerGlryCnmrArbeHbarAcrySaahTaveDgneBuruGrjuGayrOlmaTuleTadnKmylMhniSiahTooaLtbiTrmyMroeGgnaHihtErehCsnaCmagOrnuRrmhKgnoMariHanaKopoBinaHiiiYlatIhtoGtrsDhniZglgTonaHdhuBbgaTbmiLelaTbniLragUwahSamsOtrpCiarBiguBtpoCulaTgalGgnfTolySoepXrahKilaBxusXxnhPgahPoo
 ZoomActive
