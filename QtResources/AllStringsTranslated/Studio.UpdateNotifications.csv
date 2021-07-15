@@ -1,0 +1,4 @@
+Key,Context,Example,Source,en-us,de-de,es-es,fr-fr,id-id,it-it,ja-jp,ko-kr,pt-br,ru-ru,th-th,tr-tr,vi-vn,zh-cjv,zh-cn,zh-tw
+Studio.UpdateNotifications.Ribbon.WhatsNewButton,,,What's New,What's New,,Lo más nuevo,,,,,새로운 소식,Novidades,,,,,,,最新消息
+Studio.UpdateNotifications.Ribbon.WhatsNewTooltip,,,Click this button to see what's new with Studio and our developer community!,Click this button to see what's new with Studio and our developer community!,,Haz clic en este botón para ver qué hay de nuevo en Studio y en nuestra comunidad de desarrolladores.,,,,,이 버튼을 클릭해 Studio 및 개발자 커뮤니티의 새로운 소식을 확인하세요!,Clique neste botão para ver as novidades do Studio e de nossa comunidade de desenvolvedores!,,,,,,,按下此按鈕，看看 Studio 和開發者社群的最新消息！
+Studio.UpdateNotifications.Ribbon.UpdateAvailableButton,,,Update Available,Update Available,,Actualización disponible,,,,アップデートが利用できます,업데이트 가능,Atualização disponível,,,,,,,有可用更新

@@ -6472,6 +6472,7 @@
         <Item class="ReflectionMetadataMember">
           <Properties>
             <string name="Name">SliceCenter</string>
+            <string name="EditorType">9Slice</string>
           </Properties>
         </Item>
         <Item class="ReflectionMetadataMember">
@@ -6761,6 +6762,7 @@
         <Item class="ReflectionMetadataMember">
           <Properties>
             <string name="Name">SliceCenter</string>
+            <string name="EditorType">9Slice</string>
           </Properties>
         </Item>
         <Item class="ReflectionMetadataMember">

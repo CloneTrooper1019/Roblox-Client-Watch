@@ -1,26 +1,26 @@
-Key,Source,en-us,ko,zh-cn
-Studio.AlignmentTool.MainView.AlignButton,Align,Align,정렬,对齐
-Studio.AlignmentTool.Plugin.Toolbar,Alignment,Alignment,정렬,对齐
-Studio.AlignmentTool.ModeSection.Center,Center,Center,중앙,中央
-Studio.AlignmentTool.Plugin.Button,Align Tool,Align Tool,정렬 도구,对齐工具
-Studio.AlignmentTool.Plugin.WindowTitle,Align Tool,Align Tool,정렬 도구,对齐工具
-Studio.AlignmentTool.AxesSection.WorldX,World X,World X,월드 X축,世界 X 轴
-Studio.AlignmentTool.AxesSettingsFragment.World,World,World,월드,世界
-Studio.AlignmentTool.Plugin.Description,Align selected objects.,Align selected objects.,선택한 개체를 정렬합니다.,对齐选中的对象。
-Studio.AlignmentTool.ModeSection.Min,Min,Min,최소,最小
-Studio.AlignmentTool.ModeSection.Max,Max,Max,최대,最大
-Studio.AlignmentTool.AxesSection.Title,Align In,Align In,축 정렬,对齐轴
-Studio.AlignmentTool.AxesSection.WorldY,World Y,World Y,월드 Y축,世界 Y 轴
-Studio.AlignmentTool.AxesSection.WorldZ,World Z,World Z,월드 Z축,世界 Z 轴
-Studio.AlignmentTool.RelativeToSection.Title,Relative To,Relative To,기준,相对于
-Studio.AlignmentTool.RelativeToSection.Selection,Selection Bounds,Selection Bounds,선택 범위,选择范围
-Studio.AlignmentTool.ModeSection.Title,Mode,Mode,모드,模式
-Studio.AlignmentTool.RelativeToSection.Active,Active Object,Active Object,활성 개체,活跃对象
-Studio.AlignmentTool.ErrorMessages.InvalidActiveObject,Align to {name} is not supported.,Align to {name} is not supported.,{name}에 대한 정렬은 지원되지 않습니다.,不支持与 {name} 对齐。
-Studio.AlignmentTool.AxesSettingsFragment.Local,Local,Local,로컬,本地
-Studio.AlignmentTool.AxesSettingsFragment.X,X,X,X,X
-Studio.AlignmentTool.AxesSettingsFragment.Y,Y,Y,Y,Y
-Studio.AlignmentTool.Callout.Description,"Choose Min, Center or Max mode with Align In and Relative To options, then click Align button to align selected objects. Use View Selector to check World X/Y/Z.","Choose Min, Center or Max mode with Align In and Relative To options, then click Align button to align selected objects. Use View Selector to check World X/Y/Z.","최소, 중앙 또는 최대 모드와 축 정렬 및 기준 옵션을 선택한 다음, 정렬 단추를 클릭해 선택한 개체를 정렬합니다. 보기 선택기를 사용해 X/​​Y/Z 월드를 확인합니다.",选择“最小”、“中心”或“最大”模式，以及“对齐轴”和“相对于”选项，然后点击“对齐”按钮来对齐选择的对象。使用查看选择器来查看世界 X/Y/Z。
-Studio.AlignmentTool.AxesSettingsFragment.Z,Z,Z,Z,Z
-Studio.AlignmentTool.RelativeToSection.ActiveObjectTooltip,Align objects relative to the most recently selected object. Click on a selected object to switch the active object.,Align objects relative to the most recently selected object. Click on a selected object to switch the active object.,가장 최근에 선택한 개체를 기준으로 개체를 정렬합니다. 선택한 개체를 클릭해 활성 개체를 전환합니다.,根据最近选择的对象来对齐对象。点击选中的对象来切换活动对象。
-Studio.AlignmentTool.Callout.Title,Align Objects with Align Tool,Align Objects with Align Tool,정렬 도구를 사용해 개체 정렬,用对齐工具对齐对象
+Key,Source,en-us,es-es,fr-fr,ja-jp,ko-kr,pt-br,zh-cjv,zh-cn,zh-tw
+Studio.AlignmentTool.MainView.AlignButton,Align,Align,Alinear,Aligner,整列,정렬,Alinhar,对齐,对齐,對齊
+Studio.AlignmentTool.Plugin.Toolbar,Alignment,Alignment,Alineación,Alignement,整列,정렬,Alinhamento,对齐,对齐,對齊
+Studio.AlignmentTool.ModeSection.Center,Center,Center,Centro,Centre,中央,중앙,Centralizado,中央,中央,中央
+Studio.AlignmentTool.Plugin.Button,Align Tool,Align Tool,Herramienta de alineación,Outil d'alignement,整列ツール,정렬 도구,Ferramenta Alinhar,对齐工具,对齐工具,對齊工具
+Studio.AlignmentTool.Plugin.WindowTitle,Align Tool,Align Tool,Herramienta de alineación,Outil d'alignement,整列ツール,정렬 도구,Ferramenta Alinhar,对齐工具,对齐工具,對齊工具
+Studio.AlignmentTool.AxesSection.WorldX,World X,World X,X del mundo,World X,X世界,월드 X축,X do Mundo,世界 X 轴,世界 X 轴,世界 X 軸
+Studio.AlignmentTool.AxesSettingsFragment.World,World,World,Mundo,Monde,世界,월드,Mundo,世界,世界,世界
+Studio.AlignmentTool.Plugin.Description,Align selected objects.,Align selected objects.,Alinear objetos seleccionados,Aligner les objets sélectionnés.,選択済みのオブジェクトを整列配置。,선택한 개체를 정렬합니다.,Alinhar objetos selecionados.,对齐选中的对象。,对齐选中的对象。,對齊選取物件。
+Studio.AlignmentTool.ModeSection.Min,Min,Min,Mín.,Min,最小,최소,Mín.,最小,最小,最小
+Studio.AlignmentTool.ModeSection.Max,Max,Max,Máx.,Max,最大,최대,Máx.,最大,最大,最大
+Studio.AlignmentTool.AxesSection.Title,Align In,Align In,Alinear en,Aligner sur,以下に整列配置,축 정렬,Alinhar em,对齐轴,对齐轴,對齊軸
+Studio.AlignmentTool.AxesSection.WorldY,World Y,World Y,Y del mundo,World Y,Y世界,월드 Y축,Y do Mundo,世界 Y 轴,世界 Y 轴,世界 Y 軸
+Studio.AlignmentTool.AxesSection.WorldZ,World Z,World Z,Z del mundo,World Z,Z世界,월드 Z축,Z do Mundo,世界 Z 轴,世界 Z 轴,世界 Z 軸
+Studio.AlignmentTool.RelativeToSection.Title,Relative To,Relative To,Relativo a,En relation avec,以下に相対,기준,Relativo a,相对于,相对于,相對於
+Studio.AlignmentTool.RelativeToSection.Selection,Selection Bounds,Selection Bounds,Límites de la selección,Limites de la sélection,選択範囲,선택 범위,Limites da seleção,选择范围,选择范围,選取內容範圍
+Studio.AlignmentTool.ModeSection.Title,Mode,Mode,Modo,Mode,モード,모드,Modo,模式,模式,模式
+Studio.AlignmentTool.RelativeToSection.Active,Active Object,Active Object,Objeto activo,Objet actif,アクティブオブジェクト,활성 개체,Objeto ativo,活跃对象,活跃对象,活躍物件
+Studio.AlignmentTool.ErrorMessages.InvalidActiveObject,Align to {name} is not supported.,Align to {name} is not supported.,La alineación en {name} no es compatible.,L'alignement sur {name} n'est pas pris en charge.,{name} への整列には対応していません。,{name}에 대한 정렬은 지원되지 않습니다.,Alinhamento a {name} não é suportado.,不支持与 {name} 对齐。,不支持与 {name} 对齐。,不支援對齊到 {name}。
+Studio.AlignmentTool.AxesSettingsFragment.Local,Local,Local,Local,Local,ローカル,로컬,Local,本地,本地,本機
+Studio.AlignmentTool.AxesSettingsFragment.X,X,X,X,X,X,X,X,X,X,X
+Studio.AlignmentTool.AxesSettingsFragment.Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+Studio.AlignmentTool.Callout.Description,"Choose Min, Center or Max mode with Align In and Relative To options, then click Align button to align selected objects. Use View Selector to check World X/Y/Z.","Choose Min, Center or Max mode with Align In and Relative To options, then click Align button to align selected objects. Use View Selector to check World X/Y/Z.","Elige el modo Mín., Centro o Máx. con las opciones Alinear en y Relativo a; luego, haz clic en el botón Alinear para alinear los objetos seleccionados. Usa el Selector de vista para comprobar la X, Y y Z de los mundos.","Choisis le mode Min, Center ou Max avec les options Align In et Relative To, puis clique sur le bouton Align pour aligner les objets sélectionnés. Utilise le View Selector pour cocher le monde X/Y/Z.",「以下に整列配置」と「以下に相対」オプションで最小、中央、または最大モードを選択し、選択済みオブジェクトを整列ボタンをクリックして整列させる。世界X、Y、Z軸をチェックするにはビューセレクタを使用。,"최소, 중앙 또는 최대 모드와 축 정렬 및 기준 옵션을 선택한 다음, 정렬 단추를 클릭해 선택한 개체를 정렬합니다. 보기 선택기를 사용해 X/​​Y/Z 월드를 확인합니다.","Selecione o modo Mín., Centralizado ou Máx. com as opções Alinhar em e Relativo a, e em seguida clique no botão Alinhar para alinhar objetos selecionados. Use a Seleção de visualização para verificar os eixos X, Y e Z do Mundo.",选择“最小”、“中心”或“最大”模式，以及“对齐轴”和“相对于”选项，然后点击“对齐”按钮来对齐选择的对象。使用查看选择器来查看世界 X/Y/Z。,选择“最小”、“中心”或“最大”模式，以及“对齐轴”和“相对于”选项，然后点击“对齐”按钮来对齐选择的对象。使用查看选择器来查看世界 X/Y/Z。,使用對齊軸和相對於選項時選擇最小、中央或最大模式，之後按下對齊按鈕即可對齊選取物件。使用視角選擇器即可查看世界 X、Y 及 Z 軸。
+Studio.AlignmentTool.AxesSettingsFragment.Z,Z,Z,Z,Z,Z,Z,Z,Z,Z,Z
+Studio.AlignmentTool.RelativeToSection.ActiveObjectTooltip,Align objects relative to the most recently selected object. Click on a selected object to switch the active object.,Align objects relative to the most recently selected object. Click on a selected object to switch the active object.,Alinea objetos relativos al objeto seleccionado más recientemente. Haz clic en el objeto seleccionado para cambiar el objeto activo.,Aligner les objets par rapport à l'objet sélectionné le plus récemment. Cliquer sur un objet sélectionné pour passer à l'objet actif.,一番最近、選択済みのオブジェクトに対してオブジェクトを整列させる。アクティブオブジェクトに変えるには、選択済みのオブジェクトの上をクリック。,가장 최근에 선택한 개체를 기준으로 개체를 정렬합니다. 선택한 개체를 클릭해 활성 개체를 전환합니다.,Alinha objetos em relação ao objeto selecionado mais recentemente. Clique em um objeto selecionado para mudar o objeto ativo.,根据最近选择的对象来对齐对象。点击选中的对象来切换活动对象。,根据最近选择的对象来对齐对象。点击选中的对象来切换活动对象。,將物件相對於最後選取的物件對齊。按下選取的物件即可切換活躍物件。
+Studio.AlignmentTool.Callout.Title,Align Objects with Align Tool,Align Objects with Align Tool,Alinear objetos con la Herramienta de alineación,Aligner les objets avec Outil d'Alignement,整列ツールでオブジェクトを整列させる,정렬 도구를 사용해 개체 정렬,Alinhar objetos com a Ferramenta alinhar,用对齐工具对齐对象,用对齐工具对齐对象,使用對齊工具對齊物件

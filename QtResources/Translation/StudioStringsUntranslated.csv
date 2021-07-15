@@ -129,13 +129,15 @@ Studio.App.BetaFeatures.InsertObjectStreamliningDescription,,Enables a new unifi
 Studio.App.BetaFeatures.InsertObjectStreamliningTitle,,Insert Object Streamlining,Insert Object Streamlining
 Studio.App.BetaFeatures.LSPGoToDeclDescription,,"(! Works better with ""Scripts Are Non-Strict By Default"" Beta Feature ON !) Luau type inference now powers the Go To Declaration feature in Script Editor, enhancing performance and reliability.","(! Works better with ""Scripts Are Non-Strict By Default"" Beta Feature ON !) Luau type inference now powers the Go To Declaration feature in Script Editor, enhancing performance and reliability."
 Studio.App.BetaFeatures.LSPGoToDeclTitle,,Luau-Powered Go To Declaration,Luau-Powered Go To Declaration
-Studio.App.BetaFeatures.LSPLuauAutocompleteDescription,,"(! Works better with ""Scripts Are Non-Strict By Default"" Beta Feature ON !) Luau type inference now powers Autocomplete in Script Editor, allowing Autocomplete to offer suggestions based on the type of a variable, while enhancing performance and reliability.","(! Works better with ""Scripts Are Non-Strict By Default"" Beta Feature ON !) Luau type inference now powers Autocomplete in Script Editor, allowing Autocomplete to offer suggestions based on the type of a variable, while enhancing performance and reliability."
-Studio.App.BetaFeatures.LSPLuauAutocompleteTitle,,Luau-Powered Autocomplete,Luau-Powered Autocomplete
+Studio.App.BetaFeatures.LSPLuauScriptEditorDescription,,"Luau type inference now powers Autocomplete, Go To Declaration, Linting and the Script Function Filter in Script Editor, enhancing performance and reliability of all features. Autocomplete can now offer suggestions based on the type of a variable, while the Function Filter can preview these types.","Luau type inference now powers Autocomplete, Go To Declaration, Linting and the Script Function Filter in Script Editor, enhancing performance and reliability of all features. Autocomplete can now offer suggestions based on the type of a variable, while the Function Filter can preview these types."
+Studio.App.BetaFeatures.LSPLuauScriptEditorTitle,,Luau-Powered Autocomplete & Language Features,Luau-Powered Autocomplete & Language Features
 Studio.App.BetaFeatures.LSPNewFunctionFilterDescription,,"(! Works better with ""Scripts Are Non-Strict By Default"" Beta Feature ON !) Luau type inference now powers the Script Function Filter feature in Script Editor, adding type information to the widget while enhancing performance and reliability.","(! Works better with ""Scripts Are Non-Strict By Default"" Beta Feature ON !) Luau type inference now powers the Script Function Filter feature in Script Editor, adding type information to the widget while enhancing performance and reliability."
 Studio.App.BetaFeatures.LSPNewFunctionFilterTitle,,Luau-Powered Script Function Filter,Luau-Powered Script Function Filter
 Studio.App.BetaFeatures.LayeredClothingBetaDescription,,The WrapTarget and WrapLayer instances can be used to deform meshes without changing their topology using another Mesh (aka CageMesh).,The WrapTarget and WrapLayer instances can be used to deform meshes without changing their topology using another Mesh (aka CageMesh).
 Studio.App.BetaFeatures.LayeredClothingBetaTitle,,Cage Mesh Deformer,Cage Mesh Deformer
 Studio.App.BetaFeatures.LearnMoreTooltip,,Learn More,Learn More
+Studio.App.BetaFeatures.LuauDataModelAwarenessDescription,,"When typechecking scripts, incorporate the shape of the game's DataModel","When typechecking scripts, incorporate the shape of the game's DataModel"
+Studio.App.BetaFeatures.LuauDataModelAwarenessTitle,,Luau DataModel awareness,Luau DataModel awareness
 Studio.App.BetaFeatures.LuauNativeVector3Description,,Enable Luau VM built-in support for Vector3 type to improve script performance.,Enable Luau VM built-in support for Vector3 type to improve script performance.
 Studio.App.BetaFeatures.LuauNativeVector3Title,,Native Vector3 Type,Native Vector3 Type
 Studio.App.BetaFeatures.LuauNonStrictByDefaultDescription,,"Script analysis uses non-strict mode for all scripts by default. Use --!strict, --!nonstrict or --!nocheck to override mode on a per script basis.","Script analysis uses non-strict mode for all scripts by default. Use --!strict, --!nonstrict or --!nocheck to override mode on a per script basis."
@@ -1406,6 +1408,7 @@ Studio.App.Property.ShowDiagnosticsBar,,Show Diagnostics Bar,Show Diagnostics Ba
 Studio.App.Property.ShowFileSyncService,,Show FileSyncService,Show FileSyncService
 Studio.App.Property.ShowHiddenObjectsInExplorer,,Show Hidden Objects in Explorer,Show Hidden Objects in Explorer
 Studio.App.Property.ShowHoverOver,,Show Hover Over,Show Hover Over
+Studio.App.Property.ShowLightGuides,,Show Light Guides,Show Light Guides
 Studio.App.Property.ShowNavigationMesh,,Show Navigation Mesh,Show Navigation Mesh
 Studio.App.Property.ShowPluginGUIServiceInExplorer,,Show Plugin GUI Service in Explorer,Show Plugin GUI Service in Explorer
 Studio.App.Property.ShowPlusButtonOnHoverInExplorer,,Show plus button on hover in Explorer,Show plus button on hover in Explorer
@@ -2363,15 +2366,25 @@ Studio.App.RobloxRibbonMainWindow.CorrodedMetal,,Corroded Metal,Corroded Metal
 Studio.App.RobloxRibbonMainWindow.CreateAlignOrientation,,Create align orientation,Create align orientation
 Studio.App.RobloxRibbonMainWindow.CreateAlignPosition,,Create align position,Create align position
 Studio.App.RobloxRibbonMainWindow.CreateBallInSocket,,Create ball in socket,Create ball in socket
+Studio.App.RobloxRibbonMainWindow.CreateBeamToolTip,,Create beam,Create beam
 Studio.App.RobloxRibbonMainWindow.CreateCylindricalConstraint,,Create cylindrical constraint,Create cylindrical constraint
+Studio.App.RobloxRibbonMainWindow.CreateExplosionToolTip,,Create explosion,Create explosion
+Studio.App.RobloxRibbonMainWindow.CreateFireToolTip,,Create fire,Create fire
 Studio.App.RobloxRibbonMainWindow.CreateHinge,,Create hinge,Create hinge
 Studio.App.RobloxRibbonMainWindow.CreateLineForce,,Create line force,Create line force
+Studio.App.RobloxRibbonMainWindow.CreateParticleEmitterToolTip,,Create particle emitter,Create particle emitter
+Studio.App.RobloxRibbonMainWindow.CreatePointLightToolTip,,Create point light,Create point light
 Studio.App.RobloxRibbonMainWindow.CreatePrismaticConstraint,,Create prismatic constraint,Create prismatic constraint
 Studio.App.RobloxRibbonMainWindow.CreateRodConstraint,,Create rod constraint,Create rod constraint
 Studio.App.RobloxRibbonMainWindow.CreateRopeConstraint,,Create rope constraint,Create rope constraint
+Studio.App.RobloxRibbonMainWindow.CreateSmokeToolTip,,Create smoke,Create smoke
+Studio.App.RobloxRibbonMainWindow.CreateSparklesToolTip,,Create sparkles,Create sparkles
+Studio.App.RobloxRibbonMainWindow.CreateSpotLightToolTip,,Create spot light,Create spot light
 Studio.App.RobloxRibbonMainWindow.CreateSpringConstraint,,Create spring constraint,Create spring constraint
+Studio.App.RobloxRibbonMainWindow.CreateSurfaceLightToolTip,,Create surface light,Create surface light
 Studio.App.RobloxRibbonMainWindow.CreateTorque,,Create torque,Create torque
 Studio.App.RobloxRibbonMainWindow.CreateTorsionSpringConstraint,,Create torsion spring constraint,Create torsion spring constraint
+Studio.App.RobloxRibbonMainWindow.CreateTrailToolTip,,Create trail,Create trail
 Studio.App.RobloxRibbonMainWindow.CreateUniversalConstraint,,Create universal constraint,Create universal constraint
 Studio.App.RobloxRibbonMainWindow.CreateVectorForce,,Create vector force,Create vector force
 Studio.App.RobloxRibbonMainWindow.CreateWeldConstraint,,Create weld constraint,Create weld constraint
@@ -2708,6 +2721,8 @@ Studio.App.ScriptingCmd.FINDCURRENTWORDBACKWARDSTooltip,,Find Current Word Backw
 Studio.App.ScriptingCmd.FINDCURRENTWORDTooltip,,Find Current Word,Find Current Word
 Studio.App.ScriptingCmd.FOLDALL,,Collapse All Folds,Collapse All Folds
 Studio.App.ScriptingCmd.FOLDALLTooltip,,Collapse all foldable sections of scripts,Collapse all foldable sections of scripts
+Studio.App.ScriptingCmd.FOLDBLOCK,,Fold code block,Fold code block
+Studio.App.ScriptingCmd.FOLDBLOCKTooltip,,Folds a block of code in the script,Folds a block of code in the script
 Studio.App.ScriptingCmd.FOLDTOGGLE,,Toggle Code Fold,Toggle Code Fold
 Studio.App.ScriptingCmd.FOLDTOGGLETooltip,,Toggle a folded code block,Toggle a folded code block
 Studio.App.ScriptingCmd.FORMATALL,,Format Document,Format Document
@@ -2746,6 +2761,8 @@ Studio.App.ScriptingCmd.TOGGLECOMMENT,,Toggle Comment,Toggle Comment
 Studio.App.ScriptingCmd.TOGGLECOMMENTTooltip,,Toggle selection commenting,Toggle selection commenting
 Studio.App.ScriptingCmd.UNFOLDALL,,Expand All Folds,Expand All Folds
 Studio.App.ScriptingCmd.UNFOLDALLTooltip,,Expand all collapsed folds in the script,Expand all collapsed folds in the script
+Studio.App.ScriptingCmd.UNFOLDBLOCK,,Unfold code block,Unfold code block
+Studio.App.ScriptingCmd.UNFOLDBLOCKTooltip,,Unfolds a block of code in the script,Unfolds a block of code in the script
 Studio.App.ScriptingCmd.UNINDENT,,Unindent,Unindent
 Studio.App.ScriptingCmd.UNINDENTTooltip,,Unindent selected line(s),Unindent selected line(s)
 Studio.App.ScriptsInBatchDialog.FailedToLoadDataErrorMessage,,Failed to load data. Please close this dialog and try again.,Failed to load data. Please close this dialog and try again.
@@ -2847,6 +2864,9 @@ Studio.App.StartPageLogin.TwoStepVerificationSmsInstruction,,Enter the code we j
 Studio.App.StartPageLogin.TwoStepVerificationTitle,,2-Step Verification,2-Step Verification
 Studio.App.StartPageLogin.Username,,Username,Username
 Studio.App.StartPageLogin.WeChatQQLogin,,WeChat / QQ Login,WeChat / QQ Login
+Studio.App.StudioCmdService.PermissionError3,,"The current identity (%1) cannot execute command (%2), lacking permission (%3)
+","The current identity (%1) cannot execute command (%2), lacking permission (%3)
+"
 Studio.App.StudioDataModelLoadUtil.ErrorCannotOpenTCPlaceDueToCancellation,,Failed to open the team create place due to cancellation,Failed to open the team create place due to cancellation
 Studio.App.StudioDataModelLoadUtil.ErrorCannotOpenTCPlaceDueToTimeout,,Failed to open the team create place due to timeout,Failed to open the team create place due to timeout
 Studio.App.StudioDataModelLoadUtil.ErrorCannotOpenTCPlaceDueToVersionConflictGlobal,,Global Studio does not support joining a TeamCreate session with a Luobu Studio developer. Please download Luobu Studio to use TeamCreate together: www.robloxdev.cn,Global Studio does not support joining a TeamCreate session with a Luobu Studio developer. Please download Luobu Studio to use TeamCreate together: www.robloxdev.cn

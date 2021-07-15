@@ -1,7 +1,7 @@
-Key,Source,en-us,ko,zh-cn
-Studio.BootcampPlugin.Plugin.Name,Plugin Bootcamp,Plugin Bootcamp,플러그인 부트캠프,插件训练营
-Studio.BootcampPlugin.Plugin.Toolbar,Plugin Bootcamp,Plugin Bootcamp,플러그인 부트캠프,插件训练营
-Studio.BootcampPlugin.Plugin.Button,Bootcamp,Bootcamp,부트캠프,训练营
-Studio.BootcampPlugin.Plugin.Description,An example plugin to practice plugin development.,An example plugin to practice plugin development.,플러그인 개발을 연습하기 위한 예제 플러그인입니다.,用来练习插件开发的示例插件
-Studio.BootcampPlugin.TutorialComponents.MyJiraTicket,My Button,My Button,내 버튼,我的按钮
-Studio.BootcampPlugin.TutorialComponents.STM643,My Button,My Button,내 버튼, 
+Key,Source,en-us,es-es,fr-fr,ja-jp,ko-kr,pt-br,zh-cjv,zh-cn,zh-tw
+Studio.BootcampPlugin.Plugin.Name,Plugin Bootcamp,Plugin Bootcamp,Entrenamiento para plugins,Formation sur les plugins,プラグインブートキャンプ,플러그인 부트캠프,Campo de treinamento em plugins,插件训练营,插件训练营,外掛程式訓練營
+Studio.BootcampPlugin.Plugin.Toolbar,Plugin Bootcamp,Plugin Bootcamp,Entrenamiento para plugins,Formation sur les plugins,プラグインブートキャンプ,플러그인 부트캠프,Campo de treinamento em plugins,插件训练营,插件训练营,外掛程式訓練營
+Studio.BootcampPlugin.Plugin.Button,Bootcamp,Bootcamp,Entrenamiento,Formation,ブートキャンプ,부트캠프,Campo de treinamento,训练营,训练营,訓練營
+Studio.BootcampPlugin.Plugin.Description,An example plugin to practice plugin development.,An example plugin to practice plugin development.,Un ejemplo de plugin para practicar el desarrollo de plugins.,Un exemple de plugin pour s'entraîner au développement de plugins.,プラグイン開発の練習のためのプラグインの例。,플러그인 개발을 연습하기 위한 예제 플러그인입니다.,Um plugin de exemplo para praticar o desenvolvimento de plugins.,用来练习插件开发的示例插件,用来练习插件开发的示例插件,用來練習外掛程式開發的範例外掛程式，
+Studio.BootcampPlugin.TutorialComponents.MyJiraTicket,My Button,My Button,Mi botón,Mon bouton,マイボタン,내 버튼,Meu botão,我的按钮,我的按钮,我的按鈕
+Studio.BootcampPlugin.TutorialComponents.STM643,My Button,My Button,Mi botón, ,マイボタン,내 버튼,Meu botão, , ,我的按鈕

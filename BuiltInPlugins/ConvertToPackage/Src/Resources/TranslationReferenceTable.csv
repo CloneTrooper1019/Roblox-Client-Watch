@@ -1,22 +1,22 @@
-Key,Source,en-us,ko,ru,zh-cn
-Studio.ConvertToPackage.Meta.PluginName,Convert To Package,Convert To Package,패키지로 전환,Преобразовать в пакет,转换为包
-Studio.ConvertToPackage.General.Error,Error,Error,오류,Ошибка,错误
-Studio.ConvertToPackage.General.Description,Description,Description,설명,Описание,描述
-Studio.ConvertToPackage.General.Title,Title,Title,제목,Название,标题
-Studio.ConvertToPackage.Action.Submit,Submit,Submit,제출,Завершить,提交
-Studio.ConvertToPackage.General.Submit,Submit,Submit,제출,Завершить,提交
-Studio.ConvertToPackage.General.Comments,Allow Comments,Allow Comments,코멘트 허용,Разрешить комментарии,允许评论
-Studio.ConvertToPackage.General.ConvertToPackageFailed,Convert to package failed,Convert to package failed,패키지 전환 실패,Преобразование в пакет не удалось,转换为包失败
-Studio.ConvertToPackage.General.Ownership,Ownership,Ownership,소유권,Владелец,所有权
-Studio.ConvertToPackage.General.Me,Me,Me,나,Я,我
-Studio.ConvertToPackage.General.YouMayFindPackagesInToolbox,You may find your packages in Toolbox.,You may find your packages in Toolbox.,패키지는 도구 상자에서 찾을 수 있습니다.,Пакет находится в разделе «Панель инструментов».,你可以在工具箱中找到所有包。
-Studio.ConvertToPackage.General.InstanceFail,Convert to Package failed due to invalid objects,Convert to Package failed due to invalid objects,개체가 유효하지 않아 패키지로 전환하지 못했습니다,Преобразование в пакет не удалось: неверные объекты,由于对象无效，转换为包失败
-Studio.ConvertToPackage.General.ChooseOne,Choose One,Choose One,하나 선택,Выберите один,选择一个
-Studio.ConvertToPackage.General.OK,OK,OK,확인,ОК,确认
-Studio.ConvertToPackage.General.DiscardMessage,Would you like to discard all changes?,Would you like to discard all changes?,모든 변경 사항을 제거할까요?,Отменить все изменения?,确定放弃所有更改吗?
-Studio.ConvertToPackage.General.GetAssetFailed,There was a problem fetching asset data.,There was a problem fetching asset data.,애셋 데이터를 가져오는 중에 문제가 발생했습니다.,Возникла проблема при получении данных доступа.,获取素材数据时出现问题。
-Studio.ConvertToPackage.Action.Discard,Discard,Discard,제거,Сбросить,丢弃
-Studio.ConvertToPackage.General.SuccessfullyConverted,Successfully Converted!,Successfully Converted!,전환 성공!,Преобразование завершено!,转换成功!
-Studio.ConvertToPackage.Action.Cancel,Cancel,Cancel,취소,Отмена,取消
-Studio.ConvertToPackage.Action.Close,Close,Close,닫기,Закрыть,关闭
-Studio.ConvertToPackage.Action.Converting,Converting,Converting,변환 중, ,转换中
+Key,Source,en-us,es-es,fr-fr,ja-jp,ko-kr,pt-br,ru-ru,zh-cjv,zh-cn,zh-tw
+Studio.ConvertToPackage.Meta.PluginName,Convert To Package,Convert To Package,Convertir en paquete,Convertir en package,パッケージに変換,패키지로 전환,Converter para pacote,Преобразовать в пакет,转换为包,转换为包,轉換成套件
+Studio.ConvertToPackage.General.Error,Error,Error,Error,Erreur,エラー,오류,Erro,Ошибка,错误,错误,錯誤
+Studio.ConvertToPackage.General.Description,Description,Description,Descripción,Description,説明,설명,Descrição,Описание,描述,描述,說明
+Studio.ConvertToPackage.General.Title,Title,Title,Título,Titre,題名,제목,Título,Название,标题,标题,名稱
+Studio.ConvertToPackage.Action.Submit,Submit,Submit,Enviar,Soumettre,送信,제출,Enviar,Завершить,提交,提交,提交
+Studio.ConvertToPackage.General.Submit,Submit,Submit,Enviar,Soumettre,送信,제출,Enviar,Завершить,提交,提交,提交
+Studio.ConvertToPackage.General.Comments,Allow Comments,Allow Comments,Permitir comentarios,Permettre des commentaires,コメントを許可する,코멘트 허용,Permitir comentários,Разрешить комментарии,允许评论,允许评论,允許留言
+Studio.ConvertToPackage.General.ConvertToPackageFailed,Convert to package failed,Convert to package failed,Error en la conversión del paquete,La conversion en package n'a pas réussie,パッケージ変換できませんでした,패키지 전환 실패,Falha ao converter para pacote,Преобразование в пакет не удалось,转换为包失败,转换为包失败,無法轉換成套件
+Studio.ConvertToPackage.General.Ownership,Ownership,Ownership,Propiedad,Propriété,所有権,소유권,Propriedade,Владелец,所有权,所有权,所有權
+Studio.ConvertToPackage.General.Me,Me,Me,Yo,Moi,自分,나,Eu,Я,我,我,我
+Studio.ConvertToPackage.General.YouMayFindPackagesInToolbox,You may find your packages in Toolbox.,You may find your packages in Toolbox.,Puedes encontrar tu paquete en la Caja de herramientas.,Tu peux trouver tes packages dans la boîte à outils.,ツールボックスでお持ちのパッケージが見つかるかもしれません。,패키지는 도구 상자에서 찾을 수 있습니다.,Você pode encontrar seus pacotes na Caixa de ferramentas.,Пакет находится в разделе «Панель инструментов».,你可以在工具箱中找到所有包。,你可以在工具箱中找到所有包。,您可以在工具箱裡找到套件。
+Studio.ConvertToPackage.General.InstanceFail,Convert to Package failed due to invalid objects,Convert to Package failed due to invalid objects,Error en la conversión a paquete debido a objetos no válidos,La conversion en package a échoué en raison d'objets non valides,パッケージに変換が無効なオブジェクトによって実行できませんでした,개체가 유효하지 않아 패키지로 전환하지 못했습니다,Falha ao converter para pacote devido a objetos inválidos,Преобразование в пакет не удалось: неверные объекты,由于对象无效，转换为包失败,由于对象无效，转换为包失败,偵測到無效物件，無法轉換成套件
+Studio.ConvertToPackage.General.ChooseOne,Choose One,Choose One,Elegir uno,En choisir un,一つ選ぶ,하나 선택,Escolher um,Выберите один,选择一个,选择一个,選擇一個
+Studio.ConvertToPackage.General.OK,OK,OK,Aceptar,OK,OK,확인,OK,ОК,确认,确认,確定
+Studio.ConvertToPackage.General.DiscardMessage,Would you like to discard all changes?,Would you like to discard all changes?,¿Quieres descartar todos los cambios?,Souhaites-tu rejeter tous les changements ?,すべての変更を破棄しますか。,모든 변경 사항을 제거할까요?,Deseja descartar todas as alterações?,Отменить все изменения?,确定放弃所有更改吗?,确定放弃所有更改吗?,確定捨棄所有變更？
+Studio.ConvertToPackage.General.GetAssetFailed,There was a problem fetching asset data.,There was a problem fetching asset data.,Ha habido un problema al recuperar los datos del recurso.,Il y a eu un problème pour récupérer les données sur les assets.,アセットデータの取得中に問題が発生しました。,애셋 데이터를 가져오는 중에 문제가 발생했습니다.,Ocorreu um problema ao buscar os dados do recurso.,Возникла проблема при получении данных доступа.,获取素材数据时出现问题。,获取素材数据时出现问题。,擷取素材資料時發生錯誤。
+Studio.ConvertToPackage.Action.Discard,Discard,Discard,Descartar,Rejeter,破棄,제거,Descartar,Сбросить,丢弃,丢弃,捨棄
+Studio.ConvertToPackage.General.SuccessfullyConverted,Successfully Converted!,Successfully Converted!,¡Convertido correctamente!,Conversion réussie !,変換できました！,전환 성공!,Convertido com sucesso!,Преобразование завершено!,转换成功!,转换成功!,轉換成功！
+Studio.ConvertToPackage.Action.Cancel,Cancel,Cancel,Cancelar,Annuler,キャンセル,취소,Cancelar,Отмена,取消,取消,取消
+Studio.ConvertToPackage.Action.Close,Close,Close,Cerrar,Fermer,閉じる,닫기,Fechar,Закрыть,关闭,关闭,關閉
+Studio.ConvertToPackage.Action.Converting,Converting,Converting,Convirtiendo,Convertir,変換中,변환 중,Convertendo, ,转换中,转换中,正在轉換

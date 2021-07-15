@@ -1,11 +1,11 @@
-Key,Source,en-us,ko,zh-cn
-Studio.RigBuilder.RigOption.MeshRig,Mesh Rig,Mesh Rig,메시 리그,网格骨架
-Studio.RigBuilder.Plugin.Title,Rig Builder,Rig Builder,리그 빌더,骨架建造器
-Studio.RigBuilder.Plugin.Toolbar,Rig Builder,Rig Builder,리그 빌더,骨架建造器
-Studio.RigBuilder.R15RigOption.RthroNormal,Rthro Normal,Rthro Normal,일반 Rthro,标准 Rthro
-Studio.RigBuilder.Plugin.Button,Build Rig,Build Rig,리드 빌드,建造骨架
-Studio.RigBuilder.Plugin.Description,Insert rigs to animate,Insert rigs to animate,애니메이션화할 리그 삽입,插入骨架以制作动画
-Studio.RigBuilder.RigOption.BlockRig,Block Rig,Block Rig,블록 리그,方块骨架
-Studio.RigBuilder.R15RigOption.RthroSlender,Rthro Slender,Rthro Slender,슬렌더 Rthro,偏瘦 Rthro
-Studio.RigBuilder.RigOption.ManRig,Man Rig,Man Rig,맨 리그,男性骨架
-Studio.RigBuilder.RigOption.WomanRig,Woman Rig,Woman Rig,우먼 리그,女性骨架
+Key,Source,en-us,es-es,fr-fr,ja-jp,ko-kr,pt-br,zh-cjv,zh-cn,zh-tw
+Studio.RigBuilder.RigOption.MeshRig,Mesh Rig,Mesh Rig,Rig de malla,Maillage,メッシュリグ,메시 리그,Rig de malha,网格骨架,网格骨架,網格骨架
+Studio.RigBuilder.Plugin.Title,Rig Builder,Rig Builder,Constructor de rig,Constructeur de rig,リグビルダー,리그 빌더,Construtor de rig,骨架建造器,骨架建造器,骨架建造器
+Studio.RigBuilder.Plugin.Toolbar,Rig Builder,Rig Builder,Construcción de rig,Constructeur de rig,リグビルダー,리그 빌더,Construtor de rig,骨架建造器,骨架建造器,骨架建造器
+Studio.RigBuilder.R15RigOption.RthroNormal,Rthro Normal,Rthro Normal,Rthro normal,Rthro Normal,標準 Rthro,일반 Rthro,Rthro Normal,标准 Rthro,标准 Rthro,標準 Rthro
+Studio.RigBuilder.Plugin.Button,Build Rig,Build Rig,Construir rig,Construire un rig,リグを作成,리그 빌드,Construir rig,建造骨架,建造骨架,建造骨架
+Studio.RigBuilder.Plugin.Description,Insert rigs to animate,Insert rigs to animate,Inserir rigs para animar,Insérer des rigs pour animer,アニメ化するにはリグを挿入,애니메이션화할 리그 삽입,Inserir rigs para animar,插入骨架以制作动画,插入骨架以制作动画,插入要製成動畫的骨架
+Studio.RigBuilder.RigOption.BlockRig,Block Rig,Block Rig,Rig de bloque,Bloquer rig,ブロックリグ,블록 리그,Rig de bloco,方块骨架,方块骨架,方塊骨架
+Studio.RigBuilder.R15RigOption.RthroSlender,Rthro Slender,Rthro Slender,Rhtro delgado,Rthro Slender,スリムな Rthro,슬렌더 Rthro,Rthro magro,偏瘦 Rthro,偏瘦 Rthro,纖瘦 Rthro
+Studio.RigBuilder.RigOption.ManRig,Man Rig,Man Rig,Rig de hombre,Rig homme,男性リグ,맨 리그,Rig de homem,男性骨架,男性骨架,男性骨架
+Studio.RigBuilder.RigOption.WomanRig,Woman Rig,Woman Rig,Rig de mujer,Rig femme,女性リグ,우먼 리그,Rig de mulher,女性骨架,女性骨架,女性骨架

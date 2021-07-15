@@ -1,0 +1,95 @@
+Key,Source,en-us,es-es,ja-jp,ko-kr,pt-br,zh-tw
+Studio.LayeredClothingEditor.AssetType.RightShoe,RightShoe,RightShoe,Zapato derecho, ,RightShoe,RightShoe,右鞋
+Studio.LayeredClothingEditor.AssetType.Neck,Neck,Neck,Cuello, ,목,Pescoço,頸部
+Studio.LayeredClothingEditor.Editor.Generate,Generate,Generate,Generar,生成する,생성,Gerar,生成
+Studio.LayeredClothingEditor.Flow.Generate,Generate,Generate,Generar,生成する,생성,Gerar,生成
+Studio.LayeredClothingEditor.ToolSettings.Generate,Generate,Generate,Generar,生成する,생성,Gerar,生成
+Studio.LayeredClothingEditor.Dialog.DefaultTitle,Layered Clothing Editor,Layered Clothing Editor,Editor de ropa en capas, ,레이어드 복장 편집기,Editor de roupa em camadas,多層服飾編輯器
+Studio.LayeredClothingEditor.Main.Title,Layered Clothing Editor,Layered Clothing Editor,Editor de ropa en capas, ,레이어드 복장 편집기,Editor de roupa em camadas,多層服飾編輯器
+Studio.LayeredClothingEditor.Main.ToolbarButton,Layered Clothing Editor,Layered Clothing Editor,Editor de ropa en capas, ,레이어드 복장 편집기,Editor de roupa em camadas,多層服飾編輯器
+Studio.LayeredClothingEditor.Meta.PluginName,Layered Clothing Editor,Layered Clothing Editor,Editor de ropa en capas, ,레이어드 복장 편집기,Editor de roupa em camadas,多層服飾編輯器
+Studio.LayeredClothingEditor.Meta.ToolbarName,Layered Clothing Editor,Layered Clothing Editor,Editor de ropa en capas, ,레이어드 복장 편집기,Editor de roupa em camadas,多層服飾編輯器
+Studio.LayeredClothingEditor.Preview.Transparency,Transparency,Transparency,Transparencia, ,투명도,Transparência,透明度
+Studio.LayeredClothingEditor.Transparency.Title,Transparency,Transparency,Transparencia,透明度,투명도,Transparência,透明度
+Studio.LayeredClothingEditor.Select.Prompt,Click the part you want to become the accessory.,Click the part you want to become the accessory.,Haz clic en la pieza que quieres que se transforme en accesorio., ,장신구가 될 파트를 클릭하세요.,Clique na parte que você quer que se torne um acessório.,點選想要成為飾品的零件。
+Studio.LayeredClothingEditor.Editor.Preview,Preview,Preview,Vista previa,プレビュー,미리 보기,Prévia,預覽
+Studio.LayeredClothingEditor.Main.Tooltip,Edit and Preview Cage Mesh for Avatars and Clothing,Edit and Preview Cage Mesh for Avatars and Clothing,Edita y previsualiza la malla de jaula para avatares y ropa, ,아바타 및 복장용 케이지 메시 편집 및 미리보기,Edite e veja a prévia da malha de gaiola para avatares e roupas,編輯並預覽虛擬人偶和服飾的圍籠網格
+Studio.LayeredClothingEditor.AssetType.Hair,Hair,Hair,Pelo, ,헤어,Cabelo,髮型
+Studio.LayeredClothingEditor.AssetType.Accessory,Accessory,Accessory,Accesorio, ,장신구,Acessório,飾品
+Studio.LayeredClothingEditor.AddEditingItemFromExplorer.ControlsPanelBlockerText,Add and avatar or clothing instance from Explorer or workspace.,Add and avatar or clothing instance from Explorer or workspace.,Añadir un avatar o una instancia de ropa del Explorador o del espacio de trabajo, ,탐색기 또는 작업 공간에서 아바타 또는 복장 인스턴스를 추가합니다.,Adicionar uma instância de avatar ou roupas do Explorador ou da área de trabalho.,從總管或工作區新增虛擬人偶或服飾個體。
+Studio.LayeredClothingEditor.Preview.PanelBlockerAddAnimation,Add a KeyframeSequence Instance from the Explorer,Add a KeyframeSequence Instance from the Explorer,Añadir una instancia KeyframeSequence del Explorador, ,탐색기에서 KeyframeSequence 인스턴스 추가,Adicionar uma instância KeyframeSequence do Explorador,從總管新增 KeyframeSequence 個體
+Studio.LayeredClothingEditor.Editor.LatticeTool,Lattice Tool,Lattice Tool,Herramienta de enrejado, ,격자 도구,Ferramenta treliça,格紋工具
+Studio.LayeredClothingEditor.Editor.Edit,Edit,Edit,Editar,編集,편집,Editar,編輯
+Studio.LayeredClothingEditor.Editor.Select,Select,Select,Seleccionar,選択,선택,Selecionar,選擇
+Studio.LayeredClothingEditor.Editor.CageGenerate,Cage Generate,Cage Generate,Generar jaula, ,케이지 생성,Gerar gaiola,圍籠生成
+Studio.LayeredClothingEditor.Editor.EditAndPreview,Edit And Preview,Edit And Preview,Editar y previsualizar, ,편집 및 미리 보기,Editar e ver prévia,編輯並預覽
+Studio.LayeredClothingEditor.ToolSettings.FalloffDistance,Falloff Distance,Falloff Distance,Distancia de desvanecimiento, ,대칭 거리,Distância de queda,淡出距離
+Studio.LayeredClothingEditor.AssetType.Sweater,Sweater,Sweater,Suéter,セーター,스웨터,Moletom,外套
+Studio.LayeredClothingEditor.AssetType.LeftShoulder,Left Shoulder,Left Shoulder,Hombro izquierdo, ,왼쪽 어깨,Ombro esquerdo,左肩
+Studio.LayeredClothingEditor.AssetType.LeftShoe,LeftShoe,LeftShoe,Zapato izquierdo, ,LeftShoe,LeftShoe,左鞋
+Studio.LayeredClothingEditor.Editor.RingTool,Ring Tool,Ring Tool,Herramienta de anillo, ,링 도구,Ferramenta anel,圓環工具
+Studio.LayeredClothingEditor.ToolSettings.LocalAlignment,Local Alignment,Local Alignment,Alineación local, ,로컬 정렬,Alinhamento local,局部對齊
+Studio.LayeredClothingEditor.AssetType.Clothing,Clothing,Clothing,Ropa, ,복장,Roupas,服飾
+Studio.LayeredClothingEditor.Preview.Clothing,Clothing,Clothing,Ropa,服,복장,Roupas,服飾
+Studio.LayeredClothingEditor.Editor.MeshPartMode,"Move, rotate, and scale MeshPart to adjust fitting.","Move, rotate, and scale MeshPart to adjust fitting.","Mueve, gira y escala MeshPart para ajustarse.", ,"MeshPart를 이동, 회전 및 크기 조정하여 피팅을 조정합니다.","Move, rotaciona e redimensiona MeshPart para ajustar ao ajuste.",移動、旋轉及縮放 MeshPart，調整合身度。
+Studio.LayeredClothingEditor.Editor.PointTool,Point Tool,Point Tool,Herramienta de punta, ,지점 도구,Ferramenta de ponto,指定工具
+Studio.LayeredClothingEditor.Editor.Reset,Reset,Reset,Restablecer,再設定,재설정,Redefinir,重置
+Studio.LayeredClothingEditor.Preview.Animations,Animations,Animations,Animaciones,アニメーション,애니메이션,Animações,動畫
+Studio.LayeredClothingEditor.Select.Part,Part:,Part:,Pieza:,パーツ:,파트:,Parte:,零件：
+Studio.LayeredClothingEditor.Select.LoseChanges,You have unpublished changes on the previous item. You will lose those changes if you select this new item. Proceed?,You have unpublished changes on the previous item. You will lose those changes if you select this new item. Proceed?,Tienes cambios sin publicar en el artículo anterior. Perderás esos cambios si seleccionas un nuevo objeto. ¿Quieres proceder?, ,이전 항목에 게시되지 않은 변경 사항이 있습니다. 이 새 항목을 선택하면 변경 사항이 손실됩니다. 진행할까요?,Você tem mudanças não publicadas no item anterior. Você perderá estas mudanças se selecionar este novo item. Continuar?,上一個道具尚有未發布的變更，這些變更會在選擇此道具時遺失。繼續？
+Studio.LayeredClothingEditor.ToolSettings.Target,Target,Target,Objetivo, ,대상,Alvo,對象
+Studio.LayeredClothingEditor.Flow.Next,Next,Next,Siguiente,次へ,다음,Próximo,下一個
+Studio.LayeredClothingEditor.AssetType.Hat,Hat,Hat,Sombrero, ,모자,Chapéu,帽子
+Studio.LayeredClothingEditor.AssetType.Back,Back,Back,Trasero, ,등,Costas,背面
+Studio.LayeredClothingEditor.Flow.Back,Back,Back,Volver,戻る,뒤로,Voltar,上一個
+Studio.LayeredClothingEditor.Preview.Avatars,Avatars,Avatars,Avatares,アバター,아바타,Avatares,虛擬人偶
+Studio.LayeredClothingEditor.AddEditingItemFromExplorer.ConfirmAddText,Adding {itemName} to asset list?,Adding {itemName} to asset list?,¿Añadir {itemName} a la lista del recurso?, ,애셋 목록에 {itemName}을(를) 추가할까요?,Adicionar {itemName} à lista de recursos?,正在新增 {itemName} 到素材清單？
+Studio.LayeredClothingEditor.Preview.AddNew,Add new...,Add new...,Añadir nuevo...,新規を追加...,신규 추가...,Adicionar novo...,新增……
+Studio.LayeredClothingEditor.Preview.Asset,Asset,Asset,Recurso,アセット,애셋,Recurso,素材
+Studio.LayeredClothingEditor.AssetType.LeftCollar,Left Collar,Left Collar,Cuello izquierdo, ,왼쪽 칼라,Colarinho esquerdo,左領
+Studio.LayeredClothingEditor.Preview.PanelBlockerAddAvatar,Add an avatar item from the Explorer,Add an avatar item from the Explorer,Añadir un artículo de avatar del Explorador, ,탐색기에서 아바타 아이템 추가,Adicionar um item de avatar do Explorador,從總管新增虛擬人偶道具
+Studio.LayeredClothingEditor.AssetType.Pants,Pants,Pants,Pantalones,ズボン,바지,Calças,褲子
+Studio.LayeredClothingEditor.AssetType.TeeShirt,Tee Shirt,Tee Shirt,Camiseta,Tシャツ,티셔츠,Camiseta,T 恤
+Studio.LayeredClothingEditor.Reset.OuterCage,Reset Outer Cage,Reset Outer Cage,Restablecer jaula externa, , ,Redefinir gaiola externa,重置外圍籠
+Studio.LayeredClothingEditor.Preview.PanelBlockerAddClothing,Add clothing item from the Explorer,Add clothing item from the Explorer,Añadir una prenda del Explorador, ,탐색기에서 복장 아이템 추가,Adicionar um item de roupa do Explorador,從總管新增服飾道具
+Studio.LayeredClothingEditor.Preview.AvatarInvalidAdd,Only an avatar item can be added,Only an avatar item can be added,Solo se puede añadir un artículo para el avatar, ,하나의 아바타 아이템만 추가할 수 있습니다,Somente um item de avatar pode ser adicionado,只能新增虛擬人偶道具
+Studio.LayeredClothingEditor.Preview.ClothingInvalidAdd,Only a clothing item can be added,Only a clothing item can be added,Solo se puede añadir una prenda, ,하나의 복장 아이템만 추가할 수 있습니다,Somente um item de roupa pode ser adicionado,只能新增服飾道具
+Studio.LayeredClothingEditor.Preview.AnimationInvalidAdd,Only a KeyframeSequence Instance can be added,Only a KeyframeSequence Instance can be added,Solo se puede añadir una instancia KeyframeSequence, ,하나의 KeyframeSequence 인스턴스만 추가할 수 있습니다,Somente uma instância KeyframeSequence pode ser adicionada,只能新增 KeyframeSequence 個體
+Studio.LayeredClothingEditor.Preview.ConfirmAddTile,Add {itemName} tile?,Add {itemName} tile?,¿Añadir el mosaico {itemName}?, ,{itemName} 타일을 추가할까요?,Adicionar ladrilho {itemName}?,新增 {itemName} 磚格？
+Studio.LayeredClothingEditor.Actions.Redo,Redo,Redo,Rehacer,やり直す,다시 실행,Refazer,重做
+Studio.LayeredClothingEditor.AssetType.AssetType,Asset Type,Asset Type,Tipo de recurso, ,애셋 유형,Tipo de recurso,素材類型
+Studio.LayeredClothingEditor.EditAndPreview.Prompt,"Move, rotate, and scale accessory within the bounding box to adjust fitting. Once finished, click next to generate the asset.","Move, rotate, and scale accessory within the bounding box to adjust fitting. Once finished, click next to generate the asset.","Mueve, gira y escala el accesorio dentro de la caja delimitadora para ajustarlo. Una vez terminado, haz clic en siguiente para generar el recurso.", ,"경계 상자 내에서 장신구를 이동, 회전 및 크기 조정하여 피팅을 조정합니다. 완료되면 다음을 클릭해 애셋을 생성하세요.","Move, rotaciona e redimensiona um acessório dentro da caixa delimitadora para o ajuste. Uma vez terminado, clique em próximo para gerar o recurso.",在綁定框內移動、旋轉及縮放飾品，調整合身度。完成後按下「下一個」即可生成素材。
+Studio.LayeredClothingEditor.AssetType.Prompt,Select the asset type:,Select the asset type:,Selecciona el tipo de recurso:, ,애셋 유형 선택:,Selecione o tipo de recurso:,選擇素材類型：
+Studio.LayeredClothingEditor.AssetType.Face,Face,Face,Cara, ,얼굴,Rosto,臉部
+Studio.LayeredClothingEditor.AssetType.Shoulder,Shoulder,Shoulder,Hombro, ,어깨,Ombro,肩膀
+Studio.LayeredClothingEditor.AssetType.Front,Front,Front,Frontal, ,가슴,Frente,正面
+Studio.LayeredClothingEditor.AssetType.Skirt,Skirt,Skirt,Camisa,スカート,치마,Saia,短裙
+Studio.LayeredClothingEditor.AssetType.Shirt,Shirt,Shirt,Camisa,シャツ,셔츠,Camisa,襯衫
+Studio.LayeredClothingEditor.AssetType.Waist,Waist,Waist,Cintura,腰,허리,Cintura,腰部
+Studio.LayeredClothingEditor.AssetType.RightCollar,Right Collar,Right Collar,Cuello derecho, ,오른쪽 칼라,Colarinho direito,右領
+Studio.LayeredClothingEditor.Dialog.Cancel,Cancel,Cancel,Cancelar,キャンセル,취소,Cancelar,取消
+Studio.LayeredClothingEditor.AssetType.Jacket,Jacket,Jacket,Chaqueta,ジャケット,재킷,Jaqueta,夾克
+Studio.LayeredClothingEditor.AssetType.RightShoulder,Right Shoulder,Right Shoulder,Hombro derecho, ,오른쪽 어깨,Ombro direito,右肩
+Studio.LayeredClothingEditor.AssetType.Center,Center,Center,Centro, ,중앙,Centro,中央
+Studio.LayeredClothingEditor.AssetType.Shorts,Shorts,Shorts,Pantalones cortos,短パン,반바지,Shorts,短褲
+Studio.LayeredClothingEditor.AssetType.Dress,Dress,Dress,Vestido, ,원피스,Vestido,裙子
+Studio.LayeredClothingEditor.Generate.Prompt,The asset is ready.,The asset is ready.,El recurso está listo., ,애셋이 준비되었습니다.,O recurso está pronto.,素材已準備完成。
+Studio.LayeredClothingEditor.Dialog.Confirm,Confirm,Confirm,Confirmar, ,확인,Confirmar,確認
+Studio.LayeredClothingEditor.Actions.Undo,Undo,Undo,Deshacer,元に戻す,실행 취소,Desfazer,復原
+Studio.LayeredClothingEditor.Actions.ToggleTransform,Toggle Transform,Toggle Transform,Alternar transformar, ,변형 토글,Alternar transformar,新增轉換
+Studio.LayeredClothingEditor.ToolSettings.Subdivisions,Subdivisions,Subdivisions,Subdivisiones, ,세부 눈금,Subdivisões,細分
+Studio.LayeredClothingEditor.Actions.SelectLattice,Select Lattice,Select Lattice,Seleccionar enrejado, ,격자 선택,Selecionar treliça,選擇格紋
+Studio.LayeredClothingEditor.LatticeTool.GenerateMessageBoxText,The previous lattice on this deformer will be replaced. Any transformations on the lattice will be overwritten. Proceed?,The previous lattice on this deformer will be replaced. Any transformations on the lattice will be overwritten. Proceed?,El enrejado anterior en este deformador será reemplazado. Cualquier transformación en el enrejado se sobrescribirá. ¿Proceder?, ,이 디포머의 이전 격자가 교체됩니다. 격자의 모든 변형을 덮어씁니다. 진행할까요?,A treliça anterior neste deformador será substituída. Quaisquer transformações na treliça serão substituídas. Continuar?,此變形器的前一個紋格將被取代。紋格上所有變形將被覆寫。繼續？
+Studio.LayeredClothingEditor.SelectItem.Delete,Delete,Delete,Eliminar,削除,삭제,Excluir,刪除
+Studio.LayeredClothingEditor.EditingMode.Text,Editing,Editing,Editar, ,편집 중,Editando,編輯
+Studio.LayeredClothingEditor.EditingMode.OuterCage,Outer Cage,Outer Cage,Jaula externa, ,외부 케이지,Gaiola externa,外圍籠
+Studio.LayeredClothingEditor.EditingMode.InnerCage,Inner Cage,Inner Cage,Jaula interna, , ,Gaiola interna,內圍籠
+Studio.LayeredClothingEditor.EditingMode.MeshPart,Mesh Part,Mesh Part,Parte de malla, ,메시 파트,Parte da malha,網格零件
+Studio.LayeredClothingEditor.AddEditingItemFromExplorer.Tooltip,Add assets from Explorer,Add assets from Explorer,Añadir recursos del Explorador, ,탐색기에서 애셋 추가,Adicionar recursos do Explorador,從總管新增素材
+Studio.LayeredClothingEditor.AddEditingItemFromExplorer.AddWithNoCageText,Imported {itemName} does not contain an {cageName}. Please use Cage Generation in Edit to generate one.,Imported {itemName} does not contain an {cageName}. Please use Cage Generation in Edit to generate one.,{itemName} importado no contiene {cageName}. Usa Generación de jaula en Editar para generar uno., ,가져온 {itemName}에 {cageName}이(가) 포함되어 있지 않습니다. '편집'에서 '케이지 생성'을 사용해 생성하세요.,O {itemName} importado(a) não contém um {cageName}. Use a Geração de gaiola em Editar para gerar uma.,匯入的 {itemName} 不包含 {cageName}，請使用編輯內的圍籠生成選項進行生成。
+Studio.LayeredClothingEditor.AddEditingItemFromExplorer.InvalidAddText,Only avatar or clothing item can be added,Only avatar or clothing item can be added,Solo se puede añadir un avatar o una prenda, ,아바타 또는 복장 아이템만 추가할 수 있습니다,Somente itens de avatar ou roupas podem ser adicionados,只能新增虛擬人偶或服飾道具
+Studio.LayeredClothingEditor.Transparency.Mesh,Mesh,Mesh,Malla,メッシュ,메시,Malha,網格
+Studio.LayeredClothingEditor.Transparency.OuterCage,OuterCage,OuterCage,Jaula externa,OuterCage,OuterCage,OuterCage,外圍籠
+Studio.LayeredClothingEditor.Transparency.InnerCage,InnerCage,InnerCage,Jaula interna,InnerCage,InnerCage,InnerCage,內圍籠
+Studio.LayeredClothingEditor.EditorErrors.OpenedWhileRunning,Layered Clothing Editor cannot be used while game is running!,Layered Clothing Editor cannot be used while game is running!,El Editor de ropa en capas no se puede usar mientras se esté ejecutando el juego., ,게임 실행 중에는 레이어드 복장 편집기를 사용할 수 없습니다!,O Editor de roupa em camadas não pode ser usado quando um jogo estiver rodando!,遊戲運行時無法多層服飾編輯器！
+Studio.LayeredClothingEditor.Reset.InnerCage,Reset Inner Cage,Reset Inner Cage,Restablecer jaula interna, , ,Redefinir gaiola interna,重置內圍籠

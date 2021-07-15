@@ -1,14 +1,14 @@
-Key,Source,en-us
-Studio.Debugger.Callstack.FrameColumn,Frame,Frame
-Studio.Debugger.Plugin.Name,Debugger,Debugger
-Studio.Debugger.Plugin.Toolbar,Debugger,Debugger
-Studio.Debugger.Callstack.WindowName,Call Stack,Call Stack
-Studio.Debugger.Plugin.Description,Toggles the Debugger plugin window.,Toggles the Debugger plugin window.
-Studio.Debugger.Plugin.Button,Toggle,Toggle
-Studio.Debugger.Callstack.SelectInputPlaceholderText,Select Script,Select Script
-Studio.Debugger.Callstack.FunctionNameColumn,Function Name,Function Name
-Studio.Debugger.EditBreakpoint.DialogName,Edit Breakpoint,Edit Breakpoint
-Studio.Debugger.Callstack.WhatColumn,What,What
-Studio.Debugger.Callstack.LineNumberColumn,Line No.,Line No.
-Studio.Debugger.Callstack.SourceColumn,Source,Source
-Studio.Debugger.Callstack.CurrentScriptTitle,Current Script: ,Current Script: 
+Key,Source,en-us,es-es,ja-jp,ko-kr,pt-br,zh-tw
+Studio.Debugger.Callstack.FrameColumn,Frame,Frame,Cuadro, ,프레임,Quadro,框架
+Studio.Debugger.Plugin.Name,Debugger,Debugger,Depurador,デバッガー,디버거,Depurador,偵錯工具
+Studio.Debugger.Plugin.Toolbar,Debugger,Debugger,Depurador,デバッガー,디버거,Depurador,偵錯工具
+Studio.Debugger.Callstack.WindowName,Call Stack,Call Stack,Pila de llamadas, ,호출 스택,Pilha de chamadas,呼叫堆疊
+Studio.Debugger.Plugin.Description,Toggles the Debugger plugin window.,Toggles the Debugger plugin window.,Alternar la ventana del plugin Debugger., ,디버거 플러그인 창을 토글합니다.,Alterna a janela do plugin Depurador.,切換偵錯工具外掛程式視窗。
+Studio.Debugger.Plugin.Button,Toggle,Toggle,Alternar, ,토글,Alternar,切換
+Studio.Debugger.Callstack.SelectInputPlaceholderText,Select Script,Select Script,Seleccionar script, ,스크립트 선택,Selecionar script,選擇指令碼
+Studio.Debugger.Callstack.FunctionNameColumn,Function Name,Function Name,Nombre de la función, ,함수 이름,Nome da função,函式名稱
+Studio.Debugger.EditBreakpoint.DialogName,Edit Breakpoint,Edit Breakpoint,Editar punto de interrupción, ,중단점 편집,Editar ponto de interrupção,編輯中斷點
+Studio.Debugger.Callstack.WhatColumn,What,What,Qué, ,대상,Que,名稱
+Studio.Debugger.Callstack.LineNumberColumn,Line No.,Line No.,Número de línea, ,줄 번호,Nº da linha,行號
+Studio.Debugger.Callstack.SourceColumn,Source,Source,Fuente, ,소스,Fonte,來源
+Studio.Debugger.Callstack.CurrentScriptTitle,Current Script: ,Current Script: ,Script actual: , ,현재 스크립트: ,Script atual: ,目前指令碼： 

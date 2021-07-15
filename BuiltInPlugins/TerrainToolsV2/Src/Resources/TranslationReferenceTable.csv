@@ -1,270 +1,271 @@
-Key,Source,en-us,ko,ru,zh-cn
-Studio.TerrainToolsV2.Materials.Sand,Sand,Sand,모래,Песок,沙
-Studio.TerrainToolsV2.Action.Play,Play,Play,플레이,Воспроизвести,开始游戏
-Studio.TerrainToolsV2.Action.File,File,File,파일,Файл,文件
-Studio.TerrainToolsV2.Action.Cut,Cut,Cut,잘라내기,Вырезать,剪切
-Studio.TerrainToolsV2.Tab.Build,Build,Build,건설,Построить,建造
-Studio.TerrainToolsV2.BrushSettings.FixedPlane,Fixed Plane,Fixed Plane,고정된 평면,Фиксация поверхности,固定平面
-Studio.TerrainToolsV2.MainButtons.ErodeTooltip,Click and hold to erode and remove terrain.,Click and hold to erode and remove terrain.,길게 클릭해 지형을 낮추고 제거합니다.,"Удерживайте кнопку мыши, чтобы удалить часть рельефа.",单击并按住以侵蚀和移除地形。
-Studio.TerrainToolsV2.Action.Replace,Replace,Replace,바꾸기,Заменить,替换
-Studio.TerrainToolsV2.Replace.Replace,Replace,Replace,바꾸기, ,替换
-Studio.TerrainToolsV2.ToolName.Replace,Replace,Replace,바꾸기, ,替换
-Studio.TerrainToolsV2.Action.Ignore,Ignore,Ignore,무시,Пропустить,忽略
-Studio.TerrainToolsV2.Action.Close,Close,Close,닫기,Закрыть,关闭
-Studio.TerrainToolsV2.Generate.BiomeHills,Hills,Hills,언덕,Холмы,丘陵
-Studio.TerrainToolsV2.BrushSettings.Advanced,Advanced,Advanced,고급,Расширенные настройки,高级
-Studio.TerrainToolsV2.Action.Apply,Apply,Apply,적용,Применить,应用
-Studio.TerrainToolsV2.Main.Title,Terrain Editor,Terrain Editor,지형 편집기,Редактор рельефа,地形编辑器
-Studio.TerrainToolsV2.Action.Cancel,Cancel,Cancel,취소,Отмена,取消
-Studio.TerrainToolsV2.Generate.MapSize,Map Size,Map Size,맵 크기,Размер карты,地图大小
-Studio.TerrainToolsV2.Action.Clear,Clear,Clear,지우기,Очистить,清除
-Studio.TerrainToolsV2.ToolName.Clear,Clear,Clear,지우기,Очистить,清除
-Studio.TerrainToolsV2.Action.Back,Back,Back,뒤로,Назад,返回
-Studio.TerrainToolsV2.Action.Continue,Continue,Continue,계속,Продолжить,继续
-Studio.TerrainToolsV2.Warning.InvalidPosition,Position has invalid input.,Position has invalid input.,유효하지 않은 위치를 입력했습니다.,Введено неверное положение.,位置输入无效。
-Studio.TerrainToolsV2.Action.Remove,Remove,Remove,제거,Удалить,移除
-Studio.TerrainToolsV2.Generate.GenerationFinished,Generation finished: {1} seconds,Generation finished: {1} seconds,생성 완료: {1}초,Создание завершено: {1} сек.,生成完成：用时 {1} 秒
-Studio.TerrainToolsV2.Action.Create,Create,Create,만들기,Создать,创建
-Studio.TerrainToolsV2.SeaLevel.Create,Create,Create,만들기,Создать,创建
-Studio.TerrainToolsV2.Tab.Create,Create,Create,만들기,Создать,创建
-Studio.TerrainToolsV2.MaterialSettings.ChooseMaterial,Choose a material to apply,Choose a material to apply,적용할 재질을 선택하세요,Выберите материал,选择要应用的材质
-Studio.TerrainToolsV2.Action.New,New,New,새로 만들기,Создать,新增
-Studio.TerrainToolsV2.Action.Edit,Edit,Edit,편집,Изменить,编辑
-Studio.TerrainToolsV2.Tab.Edit,Edit,Edit,편집,Изменить,编辑
-Studio.TerrainToolsV2.Action.Exit,Exit,Exit,나가기,Выход,退出
-Studio.TerrainToolsV2.ToolName.Grow,Grow,Grow,높이기,Нарастить,增长
-Studio.TerrainToolsV2.BrushSettings.PivotPosition,Pivot Position,Pivot Position,피벗 위치,Положение точки поворота,锚点位置
-Studio.TerrainToolsV2.Action.Find,Find,Find,찾기,Найти,查找
-Studio.TerrainToolsV2.BrushSettings.Shape,Shape,Shape,모양,Форма,形状
-Studio.TerrainToolsV2.Action.Goto,Goto,Goto,이동,Перейти,前往
-Studio.TerrainToolsV2.Action.No,No,No,아니요,Нет,否
-Studio.TerrainToolsV2.Confirmation.No,No,No,아니요,Нет,否
-Studio.TerrainToolsV2.Action.Help,Help,Help,도움말,Справка,帮助
-Studio.TerrainToolsV2.BrushSettings.SnapToGrid,Snap to Grid,Snap to Grid,그리드에 맞추기,Привязать к сетке,对齐至栅格
-Studio.TerrainToolsV2.Action.Home,Home,Home,홈,Главная,首页
-Studio.TerrainToolsV2.BrushSettings.PlaneLock,Plane Lock,Plane Lock,평면 고정,Блокировка поверхности,平面锁定
-Studio.TerrainToolsV2.ToolName.Paste,Paste,Paste,붙여넣기,Вставить,粘贴
-Studio.TerrainToolsV2.Action.Insert,Insert,Insert,삽입,Вставить,插入
-Studio.TerrainToolsV2.Action.Next,Next,Next,다음,Далее,下一个
-Studio.TerrainToolsV2.Action.Save,Save,Save,저장,Сохранить,保存
-Studio.TerrainToolsV2.Action.OK,OK,OK,확인,ОК,确认
-Studio.TerrainToolsV2.Action.Redo,Redo,Redo,다시 실행,Вернуть,重做
-Studio.TerrainToolsV2.Action.Open,Open,Open,열기,Открыть,打开
-Studio.TerrainToolsV2.ImportError.RegionExceedsMaxVoxelCount,Target region is too large.,Target region is too large.,대상 영역이 너무 큽니다., ,目标区域过大。
-Studio.TerrainToolsV2.ToolName.Flatten,Flatten,Flatten,평탄화,Сгладить,展平
-Studio.TerrainToolsV2.Action.Okay,Okay,Okay,확인,ОК,好的
-Studio.TerrainToolsV2.Generate.BiomeArctic,Arctic,Arctic,북극,Арктика,极地
-Studio.TerrainToolsV2.MaterialSettings.MaterialSettings,Material Settings,Material Settings,재질 설정,Свойства материала,材质设置
-Studio.TerrainToolsV2.Replace.MaterialSettings,Material Settings,Material Settings,재질 설정, ,材质设置
-Studio.TerrainToolsV2.Action.Pause,Pause,Pause,일시 중지,Пауза,暂停
-Studio.TerrainToolsV2.Action.Previous,Previous,Previous,이전,Предыдущий,上一个
-Studio.TerrainToolsV2.BrushSettings.PlanePosition,Plane Position,Plane Position,평면 위치,Расположение поверхности,平面位置
-Studio.TerrainToolsV2.Action.Reload,Reload,Reload,다시 불러오기,Перезагрузить,重新加载
-Studio.TerrainToolsV2.Warning.RegionTooLarge,Region size is too large.,Region size is too large.,지역이 너무 큽니다.,Слишком большой размер области.,区域尺寸过大。
-Studio.TerrainToolsV2.Action.Rename,Rename,Rename,이름 변경,Переименовать,重命名
-Studio.TerrainToolsV2.BrushSettings.Material,Material,Material,재질,Материал,材质
-Studio.TerrainToolsV2.ConvertMode.Material,Material,Material,재질, ,材质
-Studio.TerrainToolsV2.ImportMaterialMode.DefaultMaterial,Material,Material,재질, ,材质
-Studio.TerrainToolsV2.Action.Reset,Reset,Reset,재설정,Сброс,重置
-Studio.TerrainToolsV2.Action.Retry,Retry,Retry,다시 시도,Повтор,重试
-Studio.TerrainToolsV2.Action.Share,Share,Share,공유,Поделиться,分享
-Studio.TerrainToolsV2.Action.Stop,Stop,Stop,중지,Стоп,停止
-Studio.TerrainToolsV2.Action.Undo,Undo,Undo,실행 취소,Отменить,撤消
-Studio.TerrainToolsV2.Materials.Rock,Rock,Rock,바위,Камень,岩石
-Studio.TerrainToolsV2.Action.Update,Update,Update,업데이트,Обновить,更新
-Studio.TerrainToolsV2.BrushSettings.IgnoreWater,Ignore Water,Ignore Water,물 무시,Игнорировать воду,忽略水域
-Studio.TerrainToolsV2.BrushSettings.FlattenMode,Flatten Mode,Flatten Mode,평탄화 모드,Режим плоскости,展平模式
-Studio.TerrainToolsV2.BrushSettings.BrushSettings,Brush Settings,Brush Settings,브러시 설정,Параметры кисти,笔刷设置
-Studio.TerrainToolsV2.Action.Yes,Yes,Yes,예,Да,是
-Studio.TerrainToolsV2.Confirmation.Yes,Yes,Yes,예,Да,是
-Studio.TerrainToolsV2.Generate.BiomeDunes,Dunes,Dunes,모래 언덕,Дюны,沙丘
-Studio.TerrainToolsV2.Generate.Biomes,Biomes,Biomes,생물군,Биомы,生态
-Studio.TerrainToolsV2.BrushSettings.Strength,Strength,Strength,강도,Интенсивность,强度
-Studio.TerrainToolsV2.AssetIdSelector.PlaceHolderText,Select game asset image,Select game asset image,게임 애셋 이미지 선택,ID ресурса,选择游戏素材图片
-Studio.TerrainToolsV2.Regions.FillSelection,Fill Selection,Fill Selection,채우기 선택,Заполнить выделенные области,填充选中范围
-Studio.TerrainToolsV2.Materials.CrackedLava,Cracked Lava,Cracked Lava,갈라진 용암,Застывшая лава,裂纹熔岩
-Studio.TerrainToolsV2.BrushSettings.Auto,Auto,Auto,자동,Авто,自动
-Studio.TerrainToolsV2.BrushSettings.BaseSize,Base Size,Base Size,베이스 크기,Размер базы,笔刷尺寸
-Studio.TerrainToolsV2.MaterialSettings.ChooseBiome,Choose Biomes to apply,Choose Biomes to apply,생물군을 선택하여 적용,Выберите биом,选择要应用的生态
-Studio.TerrainToolsV2.BrushSettings.BottomPivot,Bot,Bot,바닥,Низ,底部
-Studio.TerrainToolsV2.BrushSettings.CenterPivot,Cen,Cen,중심,Центр,居中
-Studio.TerrainToolsV2.BrushSettings.TopPivot,Top,Top,상단,Верх,顶部
-Studio.TerrainToolsV2.BrushSettings.Size,Size,Size,크기,Размер,尺寸
-Studio.TerrainToolsV2.MapSettings.Size,Size,Size,크기,Размер,尺寸
-Studio.TerrainToolsV2.EditSettings.MergeEmpty,Merge Empty,Merge Empty,빈 공간 병합,Объединить пустые,合并空白
-Studio.TerrainToolsV2.EditSettings.EditSettings,Edit Settings,Edit Settings,편집 설정,Изменить параметры,编辑设置
-Studio.TerrainToolsV2.Example.ErrorAnUnexpectedThing,"An unexpected thing happened, try again","An unexpected thing happened, try again",예기치 못한 문제가 발생했습니다. 다시 시도하세요.,"Возникла непредвиденная ошибка, попробуйте снова.",发生意外，请重试
-Studio.TerrainToolsV2.Generate.BiomeCanyons,Canyons,Canyons,협곡,Каньоны,峡谷
-Studio.TerrainToolsV2.Generate.BiomeLavascape,Lavascape,Lavascape,용암 지대,Потеки лавы,熔岩景观
-Studio.TerrainToolsV2.Generate.BiomeMarsh,Marsh,Marsh,습지,Болото,沼泽
-Studio.TerrainToolsV2.Generate.BiomeMountains,Mountains,Mountains,산,Горы,山脉
-Studio.TerrainToolsV2.Generate.BiomePlains,Plains,Plains,평야,Равнины,平原
-Studio.TerrainToolsV2.Generate.BiomeSize,Biome Size,Biome Size,생물군 크기,Размер биома,生态规模
-Studio.TerrainToolsV2.Generate.BiomesSettings,Biomes Settings,Biomes Settings,생물군 설정,Параметры биома,生态设置
-Studio.TerrainToolsV2.Generate.BiomeWater,Water,Water,물,Вода,水域
-Studio.TerrainToolsV2.Materials.Water,Water,Water,물,Вода,水域
-Studio.TerrainToolsV2.Generate.ButtonGenerate,Generate,Generate,생성,Генерировать,生成
-Studio.TerrainToolsV2.Import.ButtonImport,Generate,Generate,생성, ,生成
-Studio.TerrainToolsV2.ToolName.Generate,Generate,Generate,생성,Генерировать,生成
-Studio.TerrainToolsV2.Generate.Caves,Caves,Caves,동굴,Пещеры,洞穴
-Studio.TerrainToolsV2.Generate.OtherSettings,Other Settings,Other Settings,다른 설정,Другие параметры,其他设置
-Studio.TerrainToolsV2.Generate.Seed,Seed,Seed,시드,Зерно карты,种子
-Studio.TerrainToolsV2.Main.ToolbarButton,Editor,Editor,편집기,Редактор,编辑器
-Studio.TerrainToolsV2.Meta.PluginButtonEditor,Editor,Editor,편집기,Редактор,编辑器
-Studio.TerrainToolsV2.Main.Tooltip,"Add, remove, and modify terrain","Add, remove, and modify terrain","지형 추가, 제거, 수정","Добавляйте, удаляйте и изменяйте рельеф",添加、移除和修改地形
-Studio.TerrainToolsV2.Meta.PluginButtonEditorTooltip,"Add, remove, and modify terrain","Add, remove, and modify terrain","지형 추가, 제거, 수정","Добавляйте, удаляйте и изменяйте рельеф",添加、移除和修改地形
-Studio.TerrainToolsV2.Meta.PluginDescription,"Add, remove, and modify terrain","Add, remove, and modify terrain","지형 추가, 제거, 수정","Добавляйте, удаляйте и изменяйте рельеф",添加、移除和修改地形
-Studio.TerrainToolsV2.Import.Heightmap,Heightmap,Heightmap,Heightmap, ,Heightmap
-Studio.TerrainToolsV2.MainButtons.AddTooltip,Click and hold to add terrain.,Click and hold to add terrain.,길게 클릭해 지형을 추가합니다.,"Удерживайте кнопку мыши, чтобы добавить рельеф.",单击并按住以增加地形。
-Studio.TerrainToolsV2.ConvertPart.ConvertShapesToMaterial,Converting parts,Converting parts,파트 변환 중, ,正在转换部件
-Studio.TerrainToolsV2.MainButtons.ClearTooltip,Clear all Terrain.,Clear all Terrain.,모든 지형을 삭제합니다.,Очистить весь рельеф.,清除所有地形。
-Studio.TerrainToolsV2.MainButtons.GenerateTooltip,Generate landscapes of terrain.,Generate landscapes of terrain.,지형의 풍경을 생성합니다.,Создание рельефа.,生成地形地貌。
-Studio.TerrainToolsV2.Warning.RegionTooSmall,Region size is too small.,Region size is too small.,지역이 너무 작습니다.,Слишком маленький размер области.,区域尺寸过小。
-Studio.TerrainToolsV2.MainButtons.GrowTooltip,Click and hold to grow and expand terrain.,Click and hold to grow and expand terrain.,길게 클릭해 지형을 높이고 확장합니다.,"Удерживайте кнопку мыши, чтобы нарастить и расширить рельеф.",单击并按住以增长和扩大地形。
-Studio.TerrainToolsV2.MainButtons.Import,Import,Import,가져오기,Импорт,导入
-Studio.TerrainToolsV2.ToolName.Import,Import,Import,가져오기,Импорт,导入
-Studio.TerrainToolsV2.ToolName.ImportLocal,Import,Import,가져오기, ,导入
-Studio.TerrainToolsV2.MainButtons.ImportTooltip,Import a HeightMap and ColorMap.,Import a HeightMap and ColorMap.,HeightMap과 ColorMap을 가져옵니다.,Импортировать HeightMap и ColorMap.,导入 HeightMap 和 ColorMap。
-Studio.TerrainToolsV2.MainButtons.PaintTooltip,Paint the material of the terrain.,Paint the material of the terrain.,지형의 재질을 색칠합니다.,Раскрасить рельеф.,绘制地形的材质。
-Studio.TerrainToolsV2.MainButtons.RegionsTooltip,Manipulate regions of smooth terrain.,Manipulate regions of smooth terrain.,부드러운 지형의 범위를 조절하세요.,Манипулировать участками рельефа.,对平滑的地形区域进行操作。
-Studio.TerrainToolsV2.ToolName.Smooth,Smooth,Smooth,다듬기,Сгладить,平滑
-Studio.TerrainToolsV2.MainButtons.SmoothTooltip,Brush to smooth out rough or jagged terrain.,Brush to smooth out rough or jagged terrain.,울퉁불퉁한 지형을 부드럽게 깎아냅니다.,Кисть для сглаживания неровной поверхности.,用笔刷平滑参差不平的地形。
-Studio.TerrainToolsV2.ImportError.FailedToGenerateHeightmapPreviewTitle,Failed to generate preview image.,Failed to generate preview image.,미리보기 이미지를 생성하지 못했습니다., ,生成预览图失败。
-Studio.TerrainToolsV2.ConvertPart.HasOtherInstance,"Only Parts can be converted, other objects will be skipped","Only Parts can be converted, other objects will be skipped",파트만 변환할 수 있으며 다른 개체는 건너뜁니다, ,只有部件可被转换，其他对象将被跳过
-Studio.TerrainToolsV2.MainButtons.SubtractTooltip,Click and hold to remove terrain.,Click and hold to remove terrain.,길게 클릭해 지형을 제거합니다.,"Удерживайте кнопку мыши, чтобы удалить рельеф.",单击并按住以移除地形。
-Studio.TerrainToolsV2.ConvertPart.UpdateInstanceVisuals,Hiding parts,Hiding parts,파트를 숨기는 중, ,正在隐藏部件
-Studio.TerrainToolsV2.MapSettings.HeightMap,Height Map,Height Map,높이 맵,Поле высот,高度图
-Studio.TerrainToolsV2.MapSettings.MapSettings,Map Settings,Map Settings,맵 설정,Параметры карты,地图设置
-Studio.TerrainToolsV2.ConvertPart.ConvertProgressTitle,Convert Parts,Convert Parts,파트 변환, ,转换部件
-Studio.TerrainToolsV2.MapSettings.Position,Position,Position,위치,Положение,位置
-Studio.TerrainToolsV2.Materials.Asphalt,Asphalt,Asphalt,아스팔트,Асфальт,沥青
-Studio.TerrainToolsV2.ToolName.Copy,Copy,Copy,복사,Копировать,复制
-Studio.TerrainToolsV2.Materials.Basalt,Basalt,Basalt,현무암,Базальт,玄武岩
-Studio.TerrainToolsV2.Materials.Brick,Brick,Brick,벽돌,Кирпич,砖块
-Studio.TerrainToolsV2.Materials.Cobblestone,Cobblestone,Cobblestone,자갈,Брусчатка,鹅卵石
-Studio.TerrainToolsV2.Materials.Concrete,Concrete,Concrete,콘크리트,Бетон,水泥
-Studio.TerrainToolsV2.Materials.Glacier,Glacier,Glacier,빙하,Ледник,冰川
-Studio.TerrainToolsV2.Materials.Grass,Grass,Grass,잔디,Трава,草地
-Studio.TerrainToolsV2.Materials.Ground,Ground,Ground,토양,Земля,土地
-Studio.TerrainToolsV2.Materials.Ice,Ice,Ice,얼음,Лед,冰
-Studio.TerrainToolsV2.Materials.LeafyGrass,Leafy Grass,Leafy Grass,무성한 잔디,Лужайка,绿叶草
-Studio.TerrainToolsV2.Materials.Limestone,Limestone,Limestone,석회암,Известняк,石灰石
-Studio.TerrainToolsV2.Materials.Mud,Mud,Mud,진흙,Грязь,泥
-Studio.TerrainToolsV2.Materials.Pavement,Pavement,Pavement,보도,Покрытие,路面
-Studio.TerrainToolsV2.ImportError.InvalidChannelCount,Image has invalid number of channels.,Image has invalid number of channels.,이미지의 채널 수가 유효하지 않습니다., ,图像的通道数量无效。
-Studio.TerrainToolsV2.Materials.Salt,Salt,Salt,소금,Соль,盐
-Studio.TerrainToolsV2.Materials.Sandstone,Sandstone,Sandstone,사암,Песчаник,砂岩
-Studio.TerrainToolsV2.Materials.Slate,Slate,Slate,슬레이트,Сланец,石板
-Studio.TerrainToolsV2.Materials.Snow,Snow,Snow,눈,Снег,雪
-Studio.TerrainToolsV2.Materials.WoodPlanks,Wood Planks,Wood Planks,나무 판자,Доски,木板
-Studio.TerrainToolsV2.MaterialSettings.AutoMaterial,Auto Material,Auto Material,자동 재질,Автоматический выбор материала,自动应用材质
-Studio.TerrainToolsV2.MaterialSettings.UseColorMap,Use ColorMap,Use ColorMap,ColorMap 사용,Использовать ColorMap,使用 ColorMap
-Studio.TerrainToolsV2.Meta.PluginName,TerrainToolsV2,TerrainToolsV2,TerrainToolsV2,TerrainToolsV2,TerrainToolsV2
-Studio.TerrainToolsV2.Meta.ToolbarName,Terrain,Terrain,지형,Рельеф,地形
-Studio.TerrainToolsV2.Regions.EditTools,Edit Tools,Edit Tools,편집 도구,Инструменты редактирования,编辑工具
-Studio.TerrainToolsV2.Regions.Tools,Tools,Tools,도구,Инструменты,工具
-Studio.TerrainToolsV2.Tab.Paint,Paint,Paint,칠하기,Раскрасить,绘制
-Studio.TerrainToolsV2.ToolName.Paint,Paint,Paint,칠하기,Раскрасить,绘制
-Studio.TerrainToolsV2.Tab.Region,Region,Region,지역,Район,区域
-Studio.TerrainToolsV2.Tab.Sculpt,Sculpt,Sculpt,조각,Вылепить,雕刻
-Studio.TerrainToolsV2.ToolName.Add,Add,Add,추가,Добавить,增加
-Studio.TerrainToolsV2.ToolName.Delete,Delete,Delete,삭제,Удалить,删除
-Studio.TerrainToolsV2.ToolName.Erode,Erode,Erode,낮추기,Эрозия,侵蚀
-Studio.TerrainToolsV2.ConvertMode.ConvertMode,Fill,Fill,채우기, ,填充
-Studio.TerrainToolsV2.ToolName.Fill,Fill,Fill,채우기,Заполнить,填充
-Studio.TerrainToolsV2.Replace.ReplaceMaterial,Replace Material,Replace Material,재질 바꾸기, ,替换材质
-Studio.TerrainToolsV2.ToolName.Move,Move,Move,이동,Переместить,移动
-Studio.TerrainToolsV2.ToolName.Regions,Regions,Regions,범위,Области,区域
-Studio.TerrainToolsV2.Replace.TargetMaterial,Target material,Target material,대상 재질, ,目标材质
-Studio.TerrainToolsV2.ToolName.Resize,Resize,Resize,크기 조정,Изменить размер,调整尺寸
-Studio.TerrainToolsV2.Warning.PublishedRequired,Game must be published before importing terrain.,Game must be published before importing terrain.,지형을 가져오려면 게임을 게시해야 합니다.,Перед импортом рельефа игра должна быть опубликована.,必须在导入地形前发布游戏。
-Studio.TerrainToolsV2.Warning.RequirePublishedForImport,Game must be published before importing terrain.,Game must be published before importing terrain.,지형을 가져오려면 게임을 게시해야 합니다.,Перед импортом рельефа игра должна быть опубликована.,必须在导入地形前发布游戏。
-Studio.TerrainToolsV2.ToolName.Rotate,Rotate,Rotate,회전,Вращать,旋转
-Studio.TerrainToolsV2.SeaLevel.SeaLevelProgressTitle,Sea Level,Sea Level,해수면, ,海平面
-Studio.TerrainToolsV2.ToolName.SeaLevel,Sea Level,Sea Level,해수면,Уровень моря,海平面
-Studio.TerrainToolsV2.ImportWarning.ColorMapOutOfRangeIconTooltip,The imported colormap contains RGB values that do not match the Colormap Index.,The imported colormap contains RGB values that do not match the Colormap Index.,가져온 Colormap에 Colormap 인덱스와 일치하지 않는 RGB 값이 포함되어 있습니다., ,导入的 colormap 包含不符合 Colormap 索引的 RGB 值。
-Studio.TerrainToolsV2.ToolName.Select,Select,Select,선택,Выбрать,选择
-Studio.TerrainToolsV2.ToolName.Subtract,Subtract,Subtract,삭제,Вычесть,减少
-Studio.TerrainToolsV2.Warning.AwaitingModeration,Awaiting asset moderation.,Awaiting asset moderation.,애셋 검열을 기다리는 중입니다.,Ожидание модерации ресурса.,正在等候素材审核。
-Studio.TerrainToolsV2.Warning.InvalidHeightMap,Valid HeightMap required to begin importing Terrain.,Valid HeightMap required to begin importing Terrain.,지형을 가져오려면 유효한 HeightMap이 필요합니다.,Для импорта рельефа требуется действительное значение HeightMap.,需要有效的 HeightMap 才能开始导入地形。
-Studio.TerrainToolsV2.Warning.ValidHeightMapImport,Valid HeightMap required to begin importing Terrain.,Valid HeightMap required to begin importing Terrain.,지형을 가져오려면 유효한 HeightMap이 필요합니다.,Для импорта рельефа требуется действительное значение HeightMap.,需要有效的 HeightMap 才能开始导入地形。
-Studio.TerrainToolsV2.Warning.InvalidNumber,Input not a valid Number.,Input not a valid Number.,유효하지 않은 숫자를 입력했습니다.,Вверен неверный номер.,输入不是有效的数字。
-Studio.TerrainToolsV2.Warning.InvalidSize,Size has invalid input.,Size has invalid input.,유효하지 않은 크기를 입력했습니다.,Введен неверный размер.,大小输入无效。
-Studio.TerrainToolsV2.Warning.Moderated,Asset has been moderated.,Asset has been moderated.,애셋 검열이 완료되었습니다.,Ресурс прошел модерацию.,素材已审核。
-Studio.TerrainToolsV2.Warning.RegionSizeUndefined,Size of region must be defined.,Size of region must be defined.,지역의 크기를 정의해야 합니다.,Необходимо установить размер и область.,必须定义区域大小。
-Studio.TerrainToolsV2.ClearTool.ConfirmationMessage,Do you want to clear all terrain?,Do you want to clear all terrain?,모든 지형을 삭제할까요?,Очистить весь рельеф?,要清除所有地形吗?
-Studio.TerrainToolsV2.Warning.MissingTerrain,Terrain instance could not be found.,Terrain instance could not be found.,지형 인스턴스를 찾지 못했습니다.,Экземпляр рельефа не найден.,未能找到地形实例。
-Studio.TerrainToolsV2.Warning.MinimumSize,Size cannot be less than {1:int}.,Size cannot be less than {1:int}.,크기는 {1:int}보다 작을 수 없습니다.,Размер должен быть больше {1:int}.,大小不得小于 {1:int}。
-Studio.TerrainToolsV2.Warning.MaximumSize,Size cannot be greater than {1:int}.,Size cannot be greater than {1:int}.,크기는 {1:int}보다 클 수 없습니다.,Размер не должен превышать {1:int}.,大小不得大于 {1:int}。
-Studio.TerrainToolsV2.BrushSettings.Height,Height,Height,높이,Высота,高度
-Studio.TerrainToolsV2.Generate.StartGeneration,Generating with size ({1}) at position ({2}) using seed {3} and biomes: {4},Generating with size ({1}) at position ({2}) using seed {3} and biomes: {4},시드 {3} 및 생물군계를 사용하여 {2} 위치에서 {1} 크기로 생성: {4},"Создание объекта (размер: {1}, положение: {2}, зерно: {3} и биомы: {4})",使用种子 {3} 和生态：{4} 在位置 ({2}) 上以尺寸 ({1}) 进行生成
-Studio.TerrainToolsV2.Warning.AlreadyGeneratingTerrain,Already Generating Terrain.,Already Generating Terrain.,이미 지형을 생성 중입니다.,Рельеф уже создается.,已经在生成地形。
-Studio.TerrainToolsV2.Warning.ImportError,Error in importing terrain: {1},Error in importing terrain: {1},지형을 가져오는 중에 오류가 발생했습니다. {1},Ошибка импортирования рельефа: {1},导入地形时出错: {1}
-Studio.TerrainToolsV2.SeaLevel.Start,Starting Replace Method,Starting Replace Method,교체 메서드 곧 시작,От уровня моря,正在启动替换方法
-Studio.TerrainToolsV2.SeaLevel.End,Replace Complete: {1:int} seconds.,Replace Complete: {1:int} seconds.,바꾸기 완료: {1:int}초,Уровень моря завершен: {1:int} сек.,替换完成：{1:int} 秒
-Studio.TerrainToolsV2.SeaLevel.Evaporate,Evaporate,Evaporate,증발,Удалить,蒸发
-Studio.TerrainToolsV2.ClearTool.ConfirmationTitle,Clear Terrain,Clear Terrain,지형 지우기,Очистить рельеф,清除地形
-Studio.TerrainToolsV2.ConvertPart.Convert,Convert,Convert,변환, ,转换
-Studio.TerrainToolsV2.ToolName.ConvertPart,Convert,Convert,변환, ,转换
-Studio.TerrainToolsV2.ConvertPart.ConvertFailed,Convert failed for instance {1},Convert failed for instance {1},인스턴스 {1} 변환 실패, ,实例 {1} 转换失败
-Studio.TerrainToolsV2.ConvertPart.ConvertFinished,Convert finished: {1} seconds for {2:int} instance(s),Convert finished: {1} seconds for {2:int} instance(s),변환 완료: {2:int} 인스턴스에 대해 {1}초 소요, ,转换完成：{2:int} 个实例，用时 {1} 秒
-Studio.TerrainToolsV2.ConvertPart.GetTargetShapes,Calculating shapes,Calculating shapes,셰이프 계산 중, ,正在计算形状
-Studio.TerrainToolsV2.ConvertPart.SelectionHelp,Select Parts or Models containing Parts to convert to terrain,Select Parts or Models containing Parts to convert to terrain,지형으로 변환할 파트가 포함된 파트 또는 모델을 선택하세요, ,选择部件或包含部件的模型来转换为地形
-Studio.TerrainToolsV2.ConvertPart.HasProtected,Only Parts or Models containing Parts can be converted,Only Parts or Models containing Parts can be converted,파트가 포함된 파트 또는 모델만 변환할 수 있습니다, ,只有部件或包含部件的模型可被转换
-Studio.TerrainToolsV2.ConvertPart.HasTooSmall,Parts with size dimensions below 4 studs may produce incorrect results,Parts with size dimensions below 4 studs may produce incorrect results,크기가 4 스터드 미만인 파트는 잘못된 결과를 생성할 수 있습니다, ,大小在 4 格以下的部件可能会产生错误的结果
-Studio.TerrainToolsV2.ConvertMode.Biome,Biome,Biome,생물군, ,生态
-Studio.TerrainToolsV2.ConvertPart.ConvertShapesToBiome,Converting parts to Biome,Converting parts to Biome,파트를 생물군으로 변환 중, ,正在将部件转换至生态
-Studio.TerrainToolsV2.Generate.BaseLevel,Base Level,Base Level,기준면, ,基准面
-Studio.TerrainToolsV2.Materials.Air,Air,Air,공기, ,天空
-Studio.TerrainToolsV2.PartToBiome.PartToBiome,Part to Biome,Part to Biome,파트를 생물군으로, ,部件至生态
-Studio.TerrainToolsV2.PartToTerrain.PartToTerrain,Part to Terrain,Part to Terrain,파트를 지형으로, ,部件至地形
-Studio.TerrainToolsV2.Import.ColormapPreview,Colormap Preview,Colormap Preview,Colormap 미리보기, ,Colormap 预览
-Studio.TerrainToolsV2.Warning.UnknownAssetStatusError,Unable to verify asset.,Unable to verify asset.,애셋을 확인할 수 없습니다., ,无法验证素材。
-Studio.TerrainToolsV2.Warning.UnknownShape,Instance shape is unknown,Instance shape is unknown,인스턴스 형태를 알 수 없습니다, ,实例形状未知
-Studio.TerrainToolsV2.Warning.RequireEditModeForImport,Terrain importer only works in edit mode.,Terrain importer only works in edit mode.,지형 가져오기는 편집 모드에서만 실행할 수 있습니다., ,地形导入器只能在编辑模式中运行。
-Studio.TerrainToolsV2.ReplaceMode.Box,Box,Box,상자, ,盒状模式
-Studio.TerrainToolsV2.ReplaceMode.Brush,Brush,Brush,브러시, ,笔刷模式
-Studio.TerrainToolsV2.Replace.SourceMaterial,Source material,Source material,소스 재질, ,源材质
-Studio.TerrainToolsV2.Import.Colormap,Colormap,Colormap,Colormap, ,Colormap
-Studio.TerrainToolsV2.Import.UseColormap,Colormap,Colormap,Colormap, ,Colormap
-Studio.TerrainToolsV2.ImportMaterialMode.Colormap,Colormap,Colormap,Colormap, ,Colormap
-Studio.TerrainToolsV2.Import.HeightmapPreview,Heightmap Preview,Heightmap Preview,Heightmap 미리보기, ,Heightmap 预览
-Studio.TerrainToolsV2.LocalImageSelector.NoImageSelected,No image selected,No image selected,선택한 이미지가 없습니다, ,未选择图像
-Studio.TerrainToolsV2.Action.Resume,Resume,Resume,재개, ,继续
-Studio.TerrainToolsV2.Generate.GenerateProgressTitle,Generate Terrain,Generate Terrain,지형 생성, ,生成地形
-Studio.TerrainToolsV2.Generate.GenerateVoxels,Generating voxels...,Generating voxels...,복셀 생성 중..., ,生成体素...
-Studio.TerrainToolsV2.Import.DefaultMaterial,Default Material,Default Material,기본 재질, ,默认材质
-Studio.TerrainToolsV2.ImportError.FailedToLoadHeightmap,Failed to load heightmap,Failed to load heightmap,Heightmap을 불러오지 못했습니다, ,加载 heightmap 失败
-Studio.TerrainToolsV2.ImportError.FailedToLoadColormap,Failed to load colormap,Failed to load colormap,Colormap을 불러오지 못했습니다, ,加载 colormap 失败
-Studio.TerrainToolsV2.ImportError.DataModelPreprocessNullptr,An internal error has occurred.,An internal error has occurred.,내부 오류가 발생했습니다., ,发生内部错误。
-Studio.TerrainToolsV2.ImportError.DataModelWorkerNullptr,An internal error has occurred.,An internal error has occurred.,내부 오류가 발생했습니다., ,发生内部错误。
-Studio.TerrainToolsV2.ImportError.FailedToGenerateHeightmapPreview,An internal error has occurred.,An internal error has occurred.,내부 오류가 발생했습니다., ,发生内部错误。
-Studio.TerrainToolsV2.ImportError.HeightmapImporterServiceCantFindTerrain,An internal error has occurred.,An internal error has occurred.,내부 오류가 발생했습니다., ,发生内部错误。
-Studio.TerrainToolsV2.ImportError.TerrainPreprocessNullptr,An internal error has occurred.,An internal error has occurred.,내부 오류가 발생했습니다., ,发生内部错误。
-Studio.TerrainToolsV2.ImportError.TerrainWorkerNullptr,An internal error has occurred.,An internal error has occurred.,내부 오류가 발생했습니다., ,发生内部错误。
-Studio.TerrainToolsV2.ImportError.TerrainWriteNullptr,An internal error has occurred.,An internal error has occurred.,내부 오류가 발생했습니다., ,发生内部错误。
-Studio.TerrainToolsV2.ImportError.FailedToFindInContentProvider,Image could not be found.,Image could not be found.,이미지를 찾을 수 없습니다., ,无法找到图像。
-Studio.TerrainToolsV2.ImportError.FailedToReadImage,Image is not a valid file.,Image is not a valid file.,이미지가 유효한 파일이 아닙니다., ,图像不是有效的文件。
-Studio.TerrainToolsV2.ImportError.InvalidBytesPerChannel,Only 8 bit and 16 bit PNGs are supported.,Only 8 bit and 16 bit PNGs are supported.,8비트 및 16비트 PNG만 지원됩니다., ,只支持 8 位和 16 位 PNG 图像。
-Studio.TerrainToolsV2.Replace.Replacing,Replacing voxels...,Replacing voxels...,복셀 교체 중..., ,替换体素...
-Studio.TerrainToolsV2.ImportError.FailedToSelectFile,Failed to open file dialog.,Failed to open file dialog.,파일 대화 상자를 열지 못했습니다., ,打开文件会话失败。
-Studio.TerrainToolsV2.ImportError.ImportFailed,Import failed,Import failed,가져오기 실패, ,导入失败
-Studio.TerrainToolsV2.Replace.ReplaceProgressTitle,Replace Terrain,Replace Terrain,지형 교체, ,替换地形
-Studio.TerrainToolsV2.ImportError.ImportInProgress,An import operation is already in progress.,An import operation is already in progress.,가져오기 작업이 이미 진행 중입니다., ,导入操作正在进行中。
-Studio.TerrainToolsV2.ImportError.RegionIsEmpty,Target region is empty.,Target region is empty.,대상 영역이 비어 있습니다., ,目标区域为空。
-Studio.TerrainToolsV2.ImportInfo.ChannelsWereDiscarded,"When you import a color image, the importer only reads the red channel to create a greyscale heightmap. The other channels have been discarded.","When you import a color image, the importer only reads the red channel to create a greyscale heightmap. The other channels have been discarded.","컬러 이미지를 가져올 때, 가져오기 도구는 빨간색 채널만 읽어와 회색조 Heightmap을 생성합니다. 다른 채널은 무시됩니다.", ,当导入彩色图像时，导入程序只会读取红色通道以创建灰度 heightmap。其他通道将被忽略。
-Studio.TerrainToolsV2.ImportWarning.AspectRatio,"Image aspect ratio ({1}) is not compatible with Size values (X {2:int}, Z {3:int}). For best results, adjust the Size or import a new image.","Image aspect ratio ({1}) is not compatible with Size values (X {2:int}, Z {3:int}). For best results, adjust the Size or import a new image.","이미지의 가로 세로 비율({1})이(가) 크기 값(X {2:int}, Z {3:int})와(과) 호환되지 않습니다. 최상의 결과를 얻으려면 크기를 조정하거나 새 이미지를 가져오세요.", ,图像的高宽比（{1}）与 Size（尺寸）值（X {2:int}，Z {3:int}）不兼容。要获得最佳效果，请调整 Size 或导入新图像.
-Studio.TerrainToolsV2.ImportWarning.ImageTooSmall,"Image resolution ({1:int}x{2:int}) is too low for the target Size values (X {3:int}, Z {4:int}). For best results, decrease the size or import a new Heightmap.","Image resolution ({1:int}x{2:int}) is too low for the target Size values (X {3:int}, Z {4:int}). For best results, decrease the size or import a new Heightmap.","이미지 해상도({1:int}x{2:int})가 대상 크기 값(X {3:int}, Z {4:int})에 비해 너무 낮습니다. 최상의 결과를 얻으려면 크기를 줄이거나 새 Heightmap을 가져오세요.", ,图像的分辨率（{1:int}x{2:int}）与目标 Size（尺寸）值（X {3:int}，Z {4:int}）相比过小。要获得最佳效果，请缩小 Size 或导入新 Heightmap。
-Studio.TerrainToolsV2.Warning.NoColormapProvided,No colormap was provided.,No colormap was provided.,Colormap이 제공되지 않았습니다., ,未提供 colormap 。
-Studio.TerrainToolsV2.Warning.VolumeTooLarge,Terrain volume is too large.,Terrain volume is too large.,지형이 너무 큽니다., ,地形体积过大。
-Studio.TerrainToolsV2.Action.LearnMore,Learn more,Learn more,더 알아보기, ,了解更多
-Studio.TerrainToolsV2.ColormapCallout.Title,Colormaps,Colormaps,Colormaps, ,Colormaps
-Studio.TerrainToolsV2.ColormapCallout.Description,Colormaps convert image colors to terrain materials using Roblox Studio's color key.,Colormaps convert image colors to terrain materials using Roblox Studio's color key.,Colormaps는 Roblox Studio의 색상 키를 사용하여 이미지 색상을 지형 재질로 변환합니다., ,Colormaps 用 Roblox Studio 的色彩键将图像颜色转换为地形材质。
-Studio.TerrainToolsV2.Generate.Starting,Starting...,Starting...,시작 중..., ,正在启动……
-Studio.TerrainToolsV2.Generate.Preprocessing,Preprocessing...,Preprocessing...,사전 처리 중..., ,正在预处理……
-Studio.TerrainToolsV2.Generate.ReadingColormap,Reading Colormap...,Reading Colormap...,Colormap 읽는 중..., ,正在读取 ColorMap……
-Studio.TerrainToolsV2.Generate.AssigningColormap,Assigning Colormap...,Assigning Colormap...,Colormap 할당 중..., ,正在分配 ColorMap……
-Studio.TerrainToolsV2.Generate.Sampling,Sampling...,Sampling...,샘플링 중..., ,正在采样……
-Studio.TerrainToolsV2.ImportWarning.MainTextColormapRGBOutOfRange,Colormap RGB values are out of range.,Colormap RGB values are out of range.,Colormap RGB 값이 범위를 벗어났습니다., ,Colormap RGB 值超出范围。
-Studio.TerrainToolsV2.ImportWarning.SubTextColormapRGBOutOfRange,The imported colormap contains RGB values that do not match the Colormap Index. The generated materials might not be correct. Please ensure you’re using the sRGB colorspace for best results.,The imported colormap contains RGB values that do not match the Colormap Index. The generated materials might not be correct. Please ensure you’re using the sRGB colorspace for best results.,가져온 Colormap에 Colormap 인덱스와 일치하지 않는 RGB 값이 포함되어 있습니다. 생성된 재질이 올바르지 않을 수 있습니다. 최상의 결과를 얻으려면 sRGB 색 공간을 사용하고 있는지 확인하세요., ,导入的 colormap 包含不符合 Colormap 索引的 RGB 值。生成的材质可能不正确。请确保你使用的是 sRGB 色域以获得最佳效果。
-Studio.TerrainToolsV2.BrushSettings.IgnoreParts,Ignore Parts,Ignore Parts,파트 무시, ,忽略部件
+Key,Source,en-us,es-es,fr-fr,ja-jp,ko-kr,pt-br,ru-ru,zh-cjv,zh-cn,zh-tw
+Studio.TerrainToolsV2.Materials.Sand,Sand,Sand,Arena,Sable,砂,모래,Areia,Песок,沙,沙,沙
+Studio.TerrainToolsV2.Action.Play,Play,Play,Jugar,Jouer,プレイ,플레이,Jogar,Воспроизвести,开始游戏,开始游戏,開始
+Studio.TerrainToolsV2.Action.File,File,File,Archivo,Classer,ファイル,파일,Arquivo,Файл,文件,文件,檔案
+Studio.TerrainToolsV2.Action.Cut,Cut,Cut,Cortar,Couper,切り抜き,잘라내기,Cortar,Вырезать,剪切,剪切,剪下
+Studio.TerrainToolsV2.Tab.Build,Build,Build,Construir,Construire,作成,건설,Construir,Построить,建造,建造,建造
+Studio.TerrainToolsV2.BrushSettings.FixedPlane,Fixed Plane,Fixed Plane,Plano fijo,Plan fixe,固定平面,고정된 평면,Plano fixo,Фиксация поверхности,固定平面,固定平面,固定平面
+Studio.TerrainToolsV2.MainButtons.ErodeTooltip,Click and hold to erode and remove terrain.,Click and hold to erode and remove terrain.,Haz clic y mantén presionado para erosionar o eliminar el terreno.,Cliquer et tenir enfoncé pour éroder et retirer du terrain.,クリックして長押して地形を平らにしたり削除する。,길게 클릭해 지형을 낮추고 제거합니다.,Clique e mantenha pressionado para erodir e remover o terreno.,"Удерживайте кнопку мыши, чтобы удалить часть рельефа.",单击并按住以侵蚀和移除地形。,单击并按住以侵蚀和移除地形。,按住即可侵蝕並移除地形。
+Studio.TerrainToolsV2.Action.Replace,Replace,Replace,Reemplazar,Remplacer,置き換え,바꾸기,Substituir,Заменить,替换,替换,取代
+Studio.TerrainToolsV2.Replace.Replace,Replace,Replace,Reemplazar,Remplacer,置き換え,바꾸기,Substituir, ,替换,替换,取代
+Studio.TerrainToolsV2.ToolName.Replace,Replace,Replace,Reemplazar,Remplacer,置き換え,바꾸기,Substituir, ,替换,替换,取代
+Studio.TerrainToolsV2.Action.Ignore,Ignore,Ignore,Ignorar,Ignorer,無視,무시,Ignorar,Пропустить,忽略,忽略,忽略
+Studio.TerrainToolsV2.Action.Close,Close,Close,Cerrar,Fermer,閉じる,닫기,Fechar,Закрыть,关闭,关闭,關閉
+Studio.TerrainToolsV2.Generate.BiomeHills,Hills,Hills,Colinas,Collines,丘,언덕,Colinas,Холмы,丘陵,丘陵,山丘
+Studio.TerrainToolsV2.BrushSettings.Advanced,Advanced,Advanced,Avanzado,Avancé,詳細設定,고급,Avançado,Расширенные настройки,高级,高级,進階
+Studio.TerrainToolsV2.Action.Apply,Apply,Apply,Aplicar,Appliquer,適用,적용,Aplicar,Применить,应用,应用,套用
+Studio.TerrainToolsV2.Main.Title,Terrain Editor,Terrain Editor,Editor de terreno,Éditeur terrain,地形エディタ,지형 편집기,Editor de terreno,Редактор рельефа,地形编辑器,地形编辑器,地形編輯器
+Studio.TerrainToolsV2.Action.Cancel,Cancel,Cancel,Cancelar,Annuler,キャンセル,취소,Cancelar,Отмена,取消,取消,取消
+Studio.TerrainToolsV2.Generate.MapSize,Map Size,Map Size,Tamaño del mapa,Taille de la carte,マップサイズ,맵 크기,Tamanho do mapa,Размер карты,地图大小,地图大小,地圖大小
+Studio.TerrainToolsV2.Action.Clear,Clear,Clear,Borrar,Enlever,消す,지우기,Limpar,Очистить,清除,清除,清除
+Studio.TerrainToolsV2.ToolName.Clear,Clear,Clear,Borrar,Vider,消す,지우기,Limpar,Очистить,清除,清除,清除
+Studio.TerrainToolsV2.Action.Back,Back,Back,Volver,Retour,戻る,뒤로,Voltar,Назад,返回,返回,返回
+Studio.TerrainToolsV2.Action.Continue,Continue,Continue,Continuar,Continuer,続ける,계속,Continuar,Продолжить,继续,继续,繼續
+Studio.TerrainToolsV2.Warning.InvalidPosition,Position has invalid input.,Position has invalid input.,La posición tiene una entrada no válida.,La position a une entrée non valide.,位置の入力内容が無効です。,유효하지 않은 위치를 입력했습니다.,A posição tem uma entrada inválida.,Введено неверное положение.,位置输入无效。,位置输入无效。,位置無效。
+Studio.TerrainToolsV2.Action.Remove,Remove,Remove,Eliminar,Retirer,削除,제거,Remover,Удалить,移除,移除,移除
+Studio.TerrainToolsV2.Generate.GenerationFinished,Generation finished: {1} seconds,Generation finished: {1} seconds,Generación completada: {1} segundos,Génération terminée : {1} secondes,生成終了: {1} 秒,생성 완료: {1}초,Geração terminada: {1} segundos,Создание завершено: {1} сек.,生成完成：用时 {1} 秒,生成完成：用时 {1} 秒,生成完成：{1} 秒
+Studio.TerrainToolsV2.Action.Create,Create,Create,Crear,Créer,作成,만들기,Criar,Создать,创建,创建,建立
+Studio.TerrainToolsV2.SeaLevel.Create,Create,Create,Crear,Créer,作成,만들기,Criar,Создать,创建,创建,建立
+Studio.TerrainToolsV2.Tab.Create,Create,Create,Crear,Créer,作成,만들기,Criar,Создать,创建,创建,建立
+Studio.TerrainToolsV2.MaterialSettings.ChooseMaterial,Choose a material to apply,Choose a material to apply,Escoge un material para usarlo,Choisir un matériel à appliquer,適用する素材を選ぶ,적용할 재질을 선택하세요,Escolha um material para aplicar,Выберите материал,选择要应用的材质,选择要应用的材质,選擇要套用的材質
+Studio.TerrainToolsV2.Action.New,New,New,Nuevo,Nouveau,新着,새로 만들기,Novo,Создать,新增,新增,新增
+Studio.TerrainToolsV2.Action.Edit,Edit,Edit,Editar,Modifier,編集,편집,Editar,Изменить,编辑,编辑,編輯
+Studio.TerrainToolsV2.Tab.Edit,Edit,Edit,Editar,Modifier,編集,편집,Editar,Изменить,编辑,编辑,編輯
+Studio.TerrainToolsV2.Action.Exit,Exit,Exit,Salir,Sortir,退出,나가기,Sair,Выход,退出,退出,退出
+Studio.TerrainToolsV2.ToolName.Grow,Grow,Grow,Aumentar,Pousser,大きく,높이기,Aumentar,Нарастить,增长,增长,生長
+Studio.TerrainToolsV2.BrushSettings.PivotPosition,Pivot Position,Pivot Position,Posición del pivote,Position pivot,ピボット位置,피벗 위치,Posição dinâmica,Положение точки поворота,锚点位置,锚点位置,軸點位置
+Studio.TerrainToolsV2.Action.Find,Find,Find,Buscar,Trouver,探す,찾기,Localizar,Найти,查找,查找,尋找
+Studio.TerrainToolsV2.BrushSettings.Shape,Shape,Shape,Forma,Forme,形状,모양,Forma,Форма,形状,形状,形狀
+Studio.TerrainToolsV2.Action.Goto,Goto,Goto,Ir a,Aller,別ページに移動,이동,Ir para,Перейти,前往,前往,前往
+Studio.TerrainToolsV2.Action.No,No,No,No,Non,いいえ,아니요,Não,Нет,否,否,否
+Studio.TerrainToolsV2.Confirmation.No,No,No,No,Non,いいえ,아니요,Não,Нет,否,否,否
+Studio.TerrainToolsV2.Action.Help,Help,Help,Ayuda,Aide,ヘルプ,도움말,Ajuda,Справка,帮助,帮助,說明
+Studio.TerrainToolsV2.BrushSettings.SnapToGrid,Snap to Grid,Snap to Grid,Ajustar a la cuadrícula,Adhérer à la grille,グリッドに装着,그리드에 맞추기,Prender à grade,Привязать к сетке,对齐至栅格,对齐至栅格,貼齊到網格
+Studio.TerrainToolsV2.Action.Home,Home,Home,Inicio,Accueil,ホーム,홈,Início,Главная,首页,首页,首頁
+Studio.TerrainToolsV2.BrushSettings.PlaneLock,Plane Lock,Plane Lock,Bloquear plano,Plan de verrouillage,平面ロック,평면 고정,Bloquear plano,Блокировка поверхности,平面锁定,平面锁定,鎖定平面
+Studio.TerrainToolsV2.ToolName.Paste,Paste,Paste,Pegar,Coller,貼り付け,붙여넣기,Colar,Вставить,粘贴,粘贴,貼上
+Studio.TerrainToolsV2.Action.Insert,Insert,Insert,Insertar,Insérer,挿入,삽입,Inserir,Вставить,插入,插入,插入
+Studio.TerrainToolsV2.Action.Next,Next,Next,Siguiente,Suivant,次へ,다음,Próximo,Далее,下一个,下一个,下一個
+Studio.TerrainToolsV2.Action.Save,Save,Save,Guardar,Sauvegarder,保存,저장,Salvar,Сохранить,保存,保存,儲存
+Studio.TerrainToolsV2.Action.OK,OK,OK,Aceptar,OK,OK,확인,OK,ОК,确认,确认,確定
+Studio.TerrainToolsV2.Action.Redo,Redo,Redo,Rehacer,Refaire,やり直す,다시 실행,Refazer,Вернуть,重做,重做,重做
+Studio.TerrainToolsV2.Action.Open,Open,Open,Abrir,Ouvrir,開く,열기,Abrir,Открыть,打开,打开,開啟
+Studio.TerrainToolsV2.ImportError.RegionExceedsMaxVoxelCount,Target region is too large.,Target region is too large.,La región meta es demasiado grande.,La région cible est trop vaste.,対象区域が広すぎます。,대상 영역이 너무 큽니다.,A região alvo é grande demais., ,目标区域过大。,目标区域过大。,目標區域過大。
+Studio.TerrainToolsV2.ToolName.Flatten,Flatten,Flatten,Aplanar,Aplanir,平地化,평탄화,Aplainar,Сгладить,展平,展平,平地化
+Studio.TerrainToolsV2.Action.Okay,Okay,Okay,Aceptar,Okay,OK,확인,OK,ОК,好的,好的,好
+Studio.TerrainToolsV2.Generate.BiomeArctic,Arctic,Arctic,Ártico,Arctique,北極,북극,Ártico,Арктика,极地,极地,極地
+Studio.TerrainToolsV2.MaterialSettings.MaterialSettings,Material Settings,Material Settings,Configuración del material,Paramètres matériel,素材の設定,재질 설정,Configurações do material,Свойства материала,材质设置,材质设置,材質設定
+Studio.TerrainToolsV2.Replace.MaterialSettings,Material Settings,Material Settings,Configuración de material,Paramètres matériel,素材の設定,재질 설정,Configurações do material, ,材质设置,材质设置,材質設定
+Studio.TerrainToolsV2.Action.Pause,Pause,Pause,Pausar,Pause,一時停止,일시 중지,Pausar,Пауза,暂停,暂停,暫停
+Studio.TerrainToolsV2.Action.Previous,Previous,Previous,Anterior,Précédent,前へ,이전,Anterior,Предыдущий,上一个,上一个,上一個
+Studio.TerrainToolsV2.BrushSettings.PlanePosition,Plane Position,Plane Position,Posición del plano,Position du plan,平面の位置,평면 위치,Posição plana,Расположение поверхности,平面位置,平面位置,平面位置
+Studio.TerrainToolsV2.Action.Reload,Reload,Reload,Volver a cargar,Recharger,再読み込み,다시 불러오기,Recarregar,Перезагрузить,重新加载,重新加载,重新載入
+Studio.TerrainToolsV2.Warning.RegionTooLarge,Region size is too large.,Region size is too large.,El tamaño de la región es demasiado grande.,La taille de la région est trop large.,地域のサイズが大きすぎます。,지역이 너무 큽니다.,O tamanho da região é grande demais.,Слишком большой размер области.,区域尺寸过大。,区域尺寸过大。,區域大小過大。
+Studio.TerrainToolsV2.Action.Rename,Rename,Rename,Renombrar,Renommer,名前を変更,이름 변경,Renomear,Переименовать,重命名,重命名,重新命名
+Studio.TerrainToolsV2.BrushSettings.Material,Material,Material,Material,Matériel,素材,재질,Material,Материал,材质,材质,材質
+Studio.TerrainToolsV2.ConvertMode.Material,Material,Material,Material,Matériel,素材,재질,Material, ,材质,材质,材質
+Studio.TerrainToolsV2.ImportMaterialMode.DefaultMaterial,Material,Material,Material,Matériau,素材,재질,Material, ,材质,材质,材質
+Studio.TerrainToolsV2.Action.Reset,Reset,Reset,Reiniciar,Réinitialiser,再設定,재설정,Reiniciar,Сброс,重置,重置,重置
+Studio.TerrainToolsV2.Action.Retry,Retry,Retry,Reintentar,Réessayer,再試行,다시 시도,Tentar novamente,Повтор,重试,重试,重試
+Studio.TerrainToolsV2.Action.Share,Share,Share,Compartir,Partager,シェア,공유,Compartilhar,Поделиться,分享,分享,分享
+Studio.TerrainToolsV2.Action.Stop,Stop,Stop,Detener,Arrêter,停止,중지,Parar,Стоп,停止,停止,停止
+Studio.TerrainToolsV2.Action.Undo,Undo,Undo,Deshacer,Défaire,元に戻す,실행 취소,Desfazer,Отменить,撤消,撤消,復原
+Studio.TerrainToolsV2.Materials.Rock,Rock,Rock,Roca,Rocher,岩,바위,Rocha,Камень,岩石,岩石,岩石
+Studio.TerrainToolsV2.Action.Update,Update,Update,Actualizar,Mettre à jour,アップデート,업데이트,Atualizar,Обновить,更新,更新,更新
+Studio.TerrainToolsV2.BrushSettings.IgnoreWater,Ignore Water,Ignore Water,Ignorar agua,Ignorer l'eau,水を無視,물 무시,Ignorar água,Игнорировать воду,忽略水域,忽略水域,忽略水域
+Studio.TerrainToolsV2.BrushSettings.FlattenMode,Flatten Mode,Flatten Mode,Modo Acoplar,Mode d'aplanissement,平地化モード,평탄화 모드,Modo achatar,Режим плоскости,展平模式,展平模式,平地化模式
+Studio.TerrainToolsV2.BrushSettings.BrushSettings,Brush Settings,Brush Settings,Configuración del pincel,Paramètre de brosse,ブラシ設定,브러시 설정,Configurações do pincel,Параметры кисти,笔刷设置,笔刷设置,筆刷設定
+Studio.TerrainToolsV2.Action.Yes,Yes,Yes,Sí,Oui,はい,예,Sim,Да,是,是,是
+Studio.TerrainToolsV2.Confirmation.Yes,Yes,Yes,Sí,Oui,はい,예,Sim,Да,是,是,是
+Studio.TerrainToolsV2.Generate.BiomeDunes,Dunes,Dunes,Dunas,Dunes,砂丘,모래 언덕,Dunas,Дюны,沙丘,沙丘,沙丘
+Studio.TerrainToolsV2.Generate.Biomes,Biomes,Biomes,Biomas,Territoires,バイオーム,생물군,Biomas,Биомы,生态,生态,生物群系
+Studio.TerrainToolsV2.BrushSettings.Strength,Strength,Strength,Fuerza,Force,強度,강도,Força,Интенсивность,强度,强度,強度
+Studio.TerrainToolsV2.AssetIdSelector.PlaceHolderText,Select game asset image,Select game asset image,Seleccionar imagen del recurso del juego,Sélectionner l'image du jeu,ゲームアセット画像を選択,게임 애셋 이미지 선택,Selecionar imagem de recurso do jogo,ID ресурса,选择游戏素材图片,选择游戏素材图片,選擇遊戲素材圖像
+Studio.TerrainToolsV2.Regions.FillSelection,Fill Selection,Fill Selection,Rellenar selección,Remplir la sélection,選択肢を埋める,채우기 선택,Preencher seleção,Заполнить выделенные области,填充选中范围,填充选中范围,填滿選取內容
+Studio.TerrainToolsV2.Materials.CrackedLava,Cracked Lava,Cracked Lava,Lava agrietada,Lave fissurée,ひび割れた溶岩,갈라진 용암,Lava rachada,Застывшая лава,裂纹熔岩,裂纹熔岩,裂紋熔岩
+Studio.TerrainToolsV2.BrushSettings.Auto,Auto,Auto,Automático,Auto,自動,자동,Automático,Авто,自动,自动,自動
+Studio.TerrainToolsV2.BrushSettings.BaseSize,Base Size,Base Size,Tamaño base,Taille de base,ベースのサイズ,베이스 크기,Tamanho base,Размер базы,笔刷尺寸,笔刷尺寸,筆刷大小
+Studio.TerrainToolsV2.MaterialSettings.ChooseBiome,Choose Biomes to apply,Choose Biomes to apply,Escoge el bioma para usarlo,Choisir Biomes à appliquer,適用するバイオームを選ぶ,생물군을 선택하여 적용,Escolha os biomas a aplicar,Выберите биом,选择要应用的生态,选择要应用的生态,選擇要套用的生物群系
+Studio.TerrainToolsV2.BrushSettings.BottomPivot,Bot,Bot,Bot,Bot,底,바닥,Robô,Низ,底部,底部,底部
+Studio.TerrainToolsV2.BrushSettings.CenterPivot,Cen,Cen,Cen,Cen,中心,중심,Cen,Центр,居中,居中,中心
+Studio.TerrainToolsV2.BrushSettings.TopPivot,Top,Top,Superior,Haut,トップ,상단,Superior,Верх,顶部,顶部,頂部
+Studio.TerrainToolsV2.BrushSettings.Size,Size,Size,Tamaño,Taille,サイズ,크기,Tamanho,Размер,尺寸,尺寸,大小
+Studio.TerrainToolsV2.MapSettings.Size,Size,Size,Tamaño,Taille,サイズ,크기,Tamanho,Размер,尺寸,尺寸,大小
+Studio.TerrainToolsV2.EditSettings.MergeEmpty,Merge Empty,Merge Empty,Combinar vacío,Fusionner vide,空白を併合,빈 공간 병합,Mesclar vazios,Объединить пустые,合并空白,合并空白,合併空位
+Studio.TerrainToolsV2.EditSettings.EditSettings,Edit Settings,Edit Settings,Editar configuración,Modifier les paramètres,設定を編集,편집 설정,Editar configurações,Изменить параметры,编辑设置,编辑设置,編輯設定
+Studio.TerrainToolsV2.Example.ErrorAnUnexpectedThing,"An unexpected thing happened, try again","An unexpected thing happened, try again",Ha pasado algo inesperado. Inténtalo de nuevo.,"Une chose inattendue s'est produite, essaie à nouveau",予期しないことが起きました。もう一度お試しください,예기치 못한 문제가 발생했습니다. 다시 시도하세요.,"Ocorreu algo inesperado, tente novamente","Возникла непредвиденная ошибка, попробуйте снова.",发生意外，请重试,发生意外，请重试,發生意外錯誤，請重新嘗試
+Studio.TerrainToolsV2.Generate.BiomeCanyons,Canyons,Canyons,Cañones,Canyons,谷,협곡,Cânions,Каньоны,峡谷,峡谷,峽谷
+Studio.TerrainToolsV2.Generate.BiomeLavascape,Lavascape,Lavascape,Paisaje de lava,Lave,溶岩の景観,용암 지대,Paisagem de lava,Потеки лавы,熔岩景观,熔岩景观,熔岩景觀
+Studio.TerrainToolsV2.Generate.BiomeMarsh,Marsh,Marsh,Pantano,Marécage,沼,습지,Pântano,Болото,沼泽,沼泽,沼澤
+Studio.TerrainToolsV2.Generate.BiomeMountains,Mountains,Mountains,Montañas,Montagnes,山,산,Montanhas,Горы,山脉,山脉,山脈
+Studio.TerrainToolsV2.Generate.BiomePlains,Plains,Plains,Llanuras,Plaines,平野,평야,Planícies,Равнины,平原,平原,平原
+Studio.TerrainToolsV2.Generate.BiomeSize,Biome Size,Biome Size,Tamaño de bioma,Taille du territoire,バイオームのサイズ,생물군 크기,Tamanho do bioma,Размер биома,生态规模,生态规模,生物群系大小
+Studio.TerrainToolsV2.Generate.BiomesSettings,Biomes Settings,Biomes Settings,Configuración de biomas,Paramètres du territoire,バイオームの設定,생물군 설정,Configurações de biomas,Параметры биома,生态设置,生态设置,生物群系設定
+Studio.TerrainToolsV2.Generate.BiomeWater,Water,Water,Agua,Eau,水,물,Água,Вода,水域,水域,水域
+Studio.TerrainToolsV2.Materials.Water,Water,Water,Agua,Eau,水,물,Água,Вода,水域,水域,水域
+Studio.TerrainToolsV2.Generate.ButtonGenerate,Generate,Generate,Generar,Générer,生成する,생성,Gerar,Генерировать,生成,生成,生成
+Studio.TerrainToolsV2.Import.ButtonImport,Generate,Generate,Generar,Générer,生成する,생성,Gerar, ,生成,生成,生成
+Studio.TerrainToolsV2.ToolName.Generate,Generate,Generate,Generar,Générer,生成する,생성,Gerar,Генерировать,生成,生成,生成
+Studio.TerrainToolsV2.Generate.Caves,Caves,Caves,Cuevas,Grottes,洞窟,동굴,Cavernas,Пещеры,洞穴,洞穴,洞穴
+Studio.TerrainToolsV2.Generate.OtherSettings,Other Settings,Other Settings,Restablecer configuraciones,Autres paramètres,その他の設定,다른 설정,Outras configurações,Другие параметры,其他设置,其他设置,其他設定
+Studio.TerrainToolsV2.Generate.Seed,Seed,Seed,Semilla,Graine,蒔く,시드,Semente,Зерно карты,种子,种子,種子
+Studio.TerrainToolsV2.Main.ToolbarButton,Editor,Editor,Editor,Éditeur,エディタ,편집기,Editor,Редактор,编辑器,编辑器,編輯器
+Studio.TerrainToolsV2.Meta.PluginButtonEditor,Editor,Editor,Editor,Editeur,エディタ,편집기,Editor,Редактор,编辑器,编辑器,編輯器
+Studio.TerrainToolsV2.Main.Tooltip,"Add, remove, and modify terrain","Add, remove, and modify terrain","Añade, elimina y modifica el terreno","Ajouter, retirer et modifier du terrain",地形の追加、削除、変更,"지형 추가, 제거, 수정","Adicionar, remover e modificar terreno","Добавляйте, удаляйте и изменяйте рельеф",添加、移除和修改地形,添加、移除和修改地形,新增、移除及修改地形
+Studio.TerrainToolsV2.Meta.PluginButtonEditorTooltip,"Add, remove, and modify terrain","Add, remove, and modify terrain","Añade, elimina y modifica el terreno","Ajouter, enlever et modifier le terrain",地形の追加、削除、変更,"지형 추가, 제거, 수정","Adicionar, remover e modificar terreno","Добавляйте, удаляйте и изменяйте рельеф",添加、移除和修改地形,添加、移除和修改地形,新增、移除及修改地形
+Studio.TerrainToolsV2.Meta.PluginDescription,"Add, remove, and modify terrain","Add, remove, and modify terrain","Añade, elimina y modifica el terreno","Ajouter, retirer et modifier le terrain",地形の削除、追加、変更,"지형 추가, 제거, 수정","Adicionar, remover e modificar terreno","Добавляйте, удаляйте и изменяйте рельеф",添加、移除和修改地形,添加、移除和修改地形,新增、移除及修改地形
+Studio.TerrainToolsV2.Import.Heightmap,Heightmap,Heightmap,Heightmap,Heightmaps,Heightmap,Heightmap,Heightmap, ,Heightmap,Heightmap,Heightmap
+Studio.TerrainToolsV2.MainButtons.AddTooltip,Click and hold to add terrain.,Click and hold to add terrain.,Haz clic y mantén presionado para añadir terreno.,Cliquer et maintenir enfoncé pour ajouter du terrain.,クリックアンドホールドで地形を追加。,길게 클릭해 지형을 추가합니다.,Clique e mantenha pressionado para adicionar terreno.,"Удерживайте кнопку мыши, чтобы добавить рельеф.",单击并按住以增加地形。,单击并按住以增加地形。,按住不放以加入地形。
+Studio.TerrainToolsV2.ConvertPart.ConvertShapesToMaterial,Converting parts,Converting parts,Convertir partes,Transformation de parties,パーツを変換中,파트 변환 중,Convertendo partes, ,正在转换部件,正在转换部件,正在轉換零件
+Studio.TerrainToolsV2.MainButtons.ClearTooltip,Clear all Terrain.,Clear all Terrain.,Eliminar todo el terreno,Déblayer tout le terrain.,すべての地形を消す。,모든 지형을 삭제합니다.,Limpar todos os terrenos.,Очистить весь рельеф.,清除所有地形。,清除所有地形。,清除所有地形。
+Studio.TerrainToolsV2.MainButtons.GenerateTooltip,Generate landscapes of terrain.,Generate landscapes of terrain.,Generar paisajes de terreno,Générer des paysages sur le terrain.,地形の景観を生成する。,지형의 풍경을 생성합니다.,Gerar paisagens de terreno.,Создание рельефа.,生成地形地貌。,生成地形地貌。,生成地形景觀。
+Studio.TerrainToolsV2.Warning.RegionTooSmall,Region size is too small.,Region size is too small.,El tamaño de la región es demasiado pequeño.,La taille de la région est trop petite.,地域のサイズが小さすぎます。,지역이 너무 작습니다.,O tamanho do região é pequeno demais.,Слишком маленький размер области.,区域尺寸过小。,区域尺寸过小。,區域大小過小。
+Studio.TerrainToolsV2.MainButtons.GrowTooltip,Click and hold to grow and expand terrain.,Click and hold to grow and expand terrain.,Haz clic y mantén presionado para aumentar o expandir el terreno.,Cliquer et maintenir enfoncé pour agrandir et élargir le terrain.,クリックして長押して地形を大きくして広げる。,길게 클릭해 지형을 높이고 확장합니다.,Clique e mantenha pressionado para aumentar e expandir o terreno.,"Удерживайте кнопку мыши, чтобы нарастить и расширить рельеф.",单击并按住以增长和扩大地形。,单击并按住以增长和扩大地形。,按住即可生長地形。
+Studio.TerrainToolsV2.MainButtons.Import,Import,Import,Importar,Importer,インポート,가져오기,Importar,Импорт,导入,导入,匯入
+Studio.TerrainToolsV2.ToolName.Import,Import,Import,Importar,Importer,インポート,가져오기,Importar,Импорт,导入,导入,匯入
+Studio.TerrainToolsV2.ToolName.ImportLocal,Import,Import,Importar,Importer,インポート,가져오기,Importar, ,导入,导入,匯入
+Studio.TerrainToolsV2.MainButtons.ImportTooltip,Import a HeightMap and ColorMap.,Import a HeightMap and ColorMap.,Importar HeightMap y ColorMap,Importer HeightMap et ColorMap.,HeightMap と ColorMapをインポート。,HeightMap과 ColorMap을 가져옵니다.,Importar um HeightMap e ColorMap.,Импортировать HeightMap и ColorMap.,导入 HeightMap 和 ColorMap。,导入 HeightMap 和 ColorMap。,匯入 HeightMap 與 ColorMap。
+Studio.TerrainToolsV2.MainButtons.PaintTooltip,Paint the material of the terrain.,Paint the material of the terrain.,Pinta el material del terreno.,Peindre le matériel du terrain.,地形の素材をペイント。,지형의 재질을 색칠합니다.,Pinta o material do terreno.,Раскрасить рельеф.,绘制地形的材质。,绘制地形的材质。,為地形材質上色。
+Studio.TerrainToolsV2.MainButtons.RegionsTooltip,Manipulate regions of smooth terrain.,Manipulate regions of smooth terrain.,Manipula las regiones de terreno liso.,Manipuler les régions de terrain lisse.,平らな地形の地域を操作。,부드러운 지형의 범위를 조절하세요.,Manipula regiões de terreno suavizado.,Манипулировать участками рельефа.,对平滑的地形区域进行操作。,对平滑的地形区域进行操作。,操控平滑地形區域。
+Studio.TerrainToolsV2.ToolName.Smooth,Smooth,Smooth,Alisar,Lisse,平らにする,다듬기,Suavizar,Сгладить,平滑,平滑,磨平
+Studio.TerrainToolsV2.MainButtons.SmoothTooltip,Brush to smooth out rough or jagged terrain.,Brush to smooth out rough or jagged terrain.,Usa el pincel para alisar terrenos ásperos o irregulares.,Brosser pour aplanir un terrain accidenté et irrégulier.,キザギザで荒い地形を平らにするブラシ。,울퉁불퉁한 지형을 부드럽게 깎아냅니다.,Pincela para suavizar terrenos acidentados ou irregulares.,Кисть для сглаживания неровной поверхности.,用笔刷平滑参差不平的地形。,用笔刷平滑参差不平的地形。,刷動即可磨平粗糙不平的地形。
+Studio.TerrainToolsV2.ImportError.FailedToGenerateHeightmapPreviewTitle,Failed to generate preview image.,Failed to generate preview image.,Error al generar vista previa de la imagen,Impossible de générer une image de visualisation.,プレビューページを生成できませんでした。,미리보기 이미지를 생성하지 못했습니다.,Falha ao gerar prévia da imagem., ,生成预览图失败。,生成预览图失败。,無法生成預覽圖像。
+Studio.TerrainToolsV2.ConvertPart.HasOtherInstance,"Only Parts can be converted, other objects will be skipped","Only Parts can be converted, other objects will be skipped",Se convierten solo las Partes. Los demás objetos serán omitidos,"Seules les parties peuvent être converties, les autres objets peuvent être ignorées",パーツのみが変換可能で、他のオブジェクトはスキップされます,파트만 변환할 수 있으며 다른 개체는 건너뜁니다,"Somente partes podem ser convertidas, outros objetos serão ignorados", ,只有部件可被转换，其他对象将被跳过,只有部件可被转换，其他对象将被跳过,只有零件可以轉換，其他物件將被跳過。
+Studio.TerrainToolsV2.MainButtons.SubtractTooltip,Click and hold to remove terrain.,Click and hold to remove terrain.,Haz clic y mantén presionado para eliminar terreno.,Cliquer et maintenir enfoncé pour retirer du terrain.,クリックして長押して地形を削除。,길게 클릭해 지형을 제거합니다.,Clique e mantenha pressionado para remover terreno.,"Удерживайте кнопку мыши, чтобы удалить рельеф.",单击并按住以移除地形。,单击并按住以移除地形。,按住即可移除地形。
+Studio.TerrainToolsV2.ConvertPart.UpdateInstanceVisuals,Hiding parts,Hiding parts,Ocultar partes,Cacher des parties,パーツを非表示にしています,파트를 숨기는 중,Ocultando partes, ,正在隐藏部件,正在隐藏部件,正在隱藏零件
+Studio.TerrainToolsV2.MapSettings.HeightMap,Height Map,Height Map,Altura del mapa,Hauteur de carte,標高マップ,높이 맵,Mapa de altura,Поле высот,高度图,高度图,高度圖
+Studio.TerrainToolsV2.MapSettings.MapSettings,Map Settings,Map Settings,Configuración del mapa,Paramètre de la carte,マップ設定,맵 설정,Configurações do mapa,Параметры карты,地图设置,地图设置,地圖設定
+Studio.TerrainToolsV2.ConvertPart.ConvertProgressTitle,Convert Parts,Convert Parts,Convertir partes,Convertir des pièces,パーツを変換,파트 변환,Converter partes, ,转换部件,转换部件,轉換零件
+Studio.TerrainToolsV2.MapSettings.Position,Position,Position,Posición,Position,位置,위치,Posição,Положение,位置,位置,位置
+Studio.TerrainToolsV2.Materials.Asphalt,Asphalt,Asphalt,Asfalto,Asphalte,アスファルト,아스팔트,Asfalto,Асфальт,沥青,沥青,瀝青
+Studio.TerrainToolsV2.ToolName.Copy,Copy,Copy,Copiar,Copier,コピー,복사,Copiar,Копировать,复制,复制,複製
+Studio.TerrainToolsV2.Materials.Basalt,Basalt,Basalt,Basalto,Basalte,玄武岩,현무암,Basalto,Базальт,玄武岩,玄武岩,玄武岩
+Studio.TerrainToolsV2.Materials.Brick,Brick,Brick,Ladrillo,Brique,レンガ,벽돌,Tijolo,Кирпич,砖块,砖块,磚塊
+Studio.TerrainToolsV2.Materials.Cobblestone,Cobblestone,Cobblestone,Adoquín,Pavé,玉砂利,자갈,Paralelepípedo,Брусчатка,鹅卵石,鹅卵石,鵝卵石
+Studio.TerrainToolsV2.Materials.Concrete,Concrete,Concrete,Concreto,Béton,コンクリート,콘크리트,Concreto,Бетон,水泥,水泥,混凝土
+Studio.TerrainToolsV2.Materials.Glacier,Glacier,Glacier,Glaciar,Glacier,氷河,빙하,Geleira,Ледник,冰川,冰川,冰河
+Studio.TerrainToolsV2.Materials.Grass,Grass,Grass,Hierba,Herbe,草,잔디,Grama,Трава,草地,草地,草
+Studio.TerrainToolsV2.Materials.Ground,Ground,Ground,Tierra,Terre,地面,토양,Solo,Земля,土地,土地,土地
+Studio.TerrainToolsV2.Materials.Ice,Ice,Ice,Hielo,Glace,氷,얼음,Gelo,Лед,冰,冰,冰
+Studio.TerrainToolsV2.Materials.LeafyGrass,Leafy Grass,Leafy Grass,Hierba espesa,Herbe feuillue,草地,무성한 잔디,Grama alta,Лужайка,绿叶草,绿叶草,綠葉草
+Studio.TerrainToolsV2.Materials.Limestone,Limestone,Limestone,Piedra caliza,Calcaire,ライムストーン,석회암,Calcário,Известняк,石灰石,石灰石,石灰岩
+Studio.TerrainToolsV2.Materials.Mud,Mud,Mud,Lodo,Boue,泥,진흙,Lama,Грязь,泥,泥,泥
+Studio.TerrainToolsV2.Materials.Pavement,Pavement,Pavement,Pavimento,Pavés,舗道,보도,Pavimentação,Покрытие,路面,路面,人行道
+Studio.TerrainToolsV2.ImportError.InvalidChannelCount,Image has invalid number of channels.,Image has invalid number of channels.,Image tiene un número no válido de canales.,L'image a un nombre de canaux non valide.,画像に無効なチャンネル数があります。,이미지의 채널 수가 유효하지 않습니다.,A imagem tem um número de canais inválido., ,图像的通道数量无效。,图像的通道数量无效。,圖像的頻道數無效。
+Studio.TerrainToolsV2.Materials.Salt,Salt,Salt,Sal,Sel,塩,소금,Sal,Соль,盐,盐,鹽
+Studio.TerrainToolsV2.Materials.Sandstone,Sandstone,Sandstone,Piedra arenisca,Grès,サンドストーン,사암,Arenito,Песчаник,砂岩,砂岩,砂岩
+Studio.TerrainToolsV2.Materials.Slate,Slate,Slate,Pizarra,Ardoise,スレート,슬레이트,Ardósia,Сланец,石板,石板,板岩
+Studio.TerrainToolsV2.Materials.Snow,Snow,Snow,Nieve,Neige,雪,눈,Neve,Снег,雪,雪,雪
+Studio.TerrainToolsV2.Materials.WoodPlanks,Wood Planks,Wood Planks,Tablones de madera,Planches de bois,木材,나무 판자,Tábuas,Доски,木板,木板,木板
+Studio.TerrainToolsV2.MaterialSettings.AutoMaterial,Auto Material,Auto Material,Material automático,Matériel automobile,素材の自動運用,자동 재질,Material automático,Автоматический выбор материала,自动应用材质,自动应用材质,自動融合地形
+Studio.TerrainToolsV2.MaterialSettings.UseColorMap,Use ColorMap,Use ColorMap,Usar ColorMap,Utiliser ColorMap,ColorMap を使用,ColorMap 사용,Usar ColorMap,Использовать ColorMap,使用 ColorMap,使用 ColorMap,使用 ColorMap
+Studio.TerrainToolsV2.Meta.PluginName,TerrainToolsV2,TerrainToolsV2,TerrainToolsV2,TerrainToolsV2,TerrainToolsV2,TerrainToolsV2,TerrainToolsV2,TerrainToolsV2,TerrainToolsV2,TerrainToolsV2,TerrainToolsV2
+Studio.TerrainToolsV2.Meta.ToolbarName,Terrain,Terrain,Terreno,Terrain,地形,지형,Terreno,Рельеф,地形,地形,地形
+Studio.TerrainToolsV2.Regions.EditTools,Edit Tools,Edit Tools,Herramientas de edición,Outils d'édition,編集ツール,편집 도구,Editar ferramentas,Инструменты редактирования,编辑工具,编辑工具,編輯工具
+Studio.TerrainToolsV2.Regions.Tools,Tools,Tools,Herramientas,Outils,ツール,도구,Ferramentas,Инструменты,工具,工具,工具
+Studio.TerrainToolsV2.Tab.Paint,Paint,Paint,Pintar,Peindre,ペイント,칠하기,Pintar,Раскрасить,绘制,绘制,上色
+Studio.TerrainToolsV2.ToolName.Paint,Paint,Paint,Pintar,Peinture,ペイント,칠하기,Pintar,Раскрасить,绘制,绘制,上色
+Studio.TerrainToolsV2.Tab.Region,Region,Region,Región,Région,地域,지역,Região,Район,区域,区域,區域
+Studio.TerrainToolsV2.Tab.Sculpt,Sculpt,Sculpt,Esculpir,Sculpter,彫刻,조각,Esculpir,Вылепить,雕刻,雕刻,雕塑
+Studio.TerrainToolsV2.ToolName.Add,Add,Add,Añadir,Ajouter,追加,추가,Adicionar,Добавить,增加,增加,增加
+Studio.TerrainToolsV2.ToolName.Delete,Delete,Delete,Eliminar,Supprimer,削除,삭제,Excluir,Удалить,删除,删除,刪除
+Studio.TerrainToolsV2.ToolName.Erode,Erode,Erode,Erosionar,Éroder,削る,낮추기,Erodir,Эрозия,侵蚀,侵蚀,侵蝕
+Studio.TerrainToolsV2.ConvertMode.ConvertMode,Fill,Fill,Llenar,Matériel,埋める,채우기,Preencher, ,填充,填充,填滿
+Studio.TerrainToolsV2.ToolName.Fill,Fill,Fill,Llenar,Remplir,埋める,채우기,Preencher,Заполнить,填充,填充,填滿
+Studio.TerrainToolsV2.Replace.ReplaceMaterial,Replace Material,Replace Material,Reemplazar material,Remplacer matériel,素材を置き換え,재질 바꾸기,Substituir material, ,替换材质,替换材质,取代材質
+Studio.TerrainToolsV2.ToolName.Move,Move,Move,Mover,Bouger,移動,이동,Mover,Переместить,移动,移动,移動
+Studio.TerrainToolsV2.ToolName.Regions,Regions,Regions,Regiones,Régions,地域,범위,Regiões,Области,区域,区域,區域
+Studio.TerrainToolsV2.Replace.TargetMaterial,Target material,Target material,Material meta,Matériel cible,ターゲット素材,대상 재질,Material alvo, ,目标材质,目标材质,目標材質
+Studio.TerrainToolsV2.ToolName.Resize,Resize,Resize,Ajustar,Redimensionner,サイズ変更,크기 조정,Dimensionar,Изменить размер,调整尺寸,调整尺寸,調整大小
+Studio.TerrainToolsV2.Warning.PublishedRequired,Game must be published before importing terrain.,Game must be published before importing terrain.,Se debe publicar el juego antes de importar el terreno.,Le jeu doit être publié avant d'importer terrain.,地形をインポートする前にゲームを公開することが必須です。,지형을 가져오려면 게임을 게시해야 합니다.,O jogo deve ser publicado antes de importar terrenos.,Перед импортом рельефа игра должна быть опубликована.,必须在导入地形前发布游戏。,必须在导入地形前发布游戏。,必須先發布遊戲才可匯入地形。
+Studio.TerrainToolsV2.Warning.RequirePublishedForImport,Game must be published before importing terrain.,Game must be published before importing terrain.,Se debe publicar el juego antes de importar el terreno.,Le jeu doit être publié avant d'importer terrain.,地形をインポートする前にゲームを公開することが必須です。,지형을 가져오려면 게임을 게시해야 합니다.,O jogo deve ser publicado antes de importar terrenos.,Перед импортом рельефа игра должна быть опубликована.,必须在导入地形前发布游戏。,必须在导入地形前发布游戏。,必須先發布遊戲才可匯入地形。
+Studio.TerrainToolsV2.ToolName.Rotate,Rotate,Rotate,Girar,Faire tourner,回転,회전,Girar,Вращать,旋转,旋转,旋轉
+Studio.TerrainToolsV2.SeaLevel.SeaLevelProgressTitle,Sea Level,Sea Level,Nivel del mar,Niveau de la mer,海面,해수면,Nível,do mar, ,海平面,海平面
+海平面,Studio.TerrainToolsV2.ToolName.SeaLevel,Sea Level,Sea Level,Nivel del mar,Niveau de la mer,海面,해수면,Nível,do mar,Уровень моря,海平面
+海平面,海平面,Studio.TerrainToolsV2.ImportWarning.ColorMapOutOfRangeIconTooltip,The imported colormap contains RGB values that do not match the Colormap Index.,The imported colormap contains RGB values that do not match the Colormap Index.,El Colormap importado contiene valores RGB que no coinciden con el índice Colormap.,La carte de couleurs importée contient des valeurs RVB qui ne correspondent pas à l'indice Colormap.,RGB 値を含むインポート済み Colormap が Colormap インデックスと合致しません。,가져온 Colormap에 Colormap 인덱스와 일치하지 않는 RGB 값이 포함되어 있습니다.,O colormap importado contém valores RGB que não correspondem ao índice do colormap., ,导入的 colormap 包含不符合 Colormap 索引的 RGB 值。
+导入的 colormap 包含不符合 Colormap 索引的 RGB 值。,匯入的 Colormap 包含不符合 Colormap 索引的 RGB 值。,Studio.TerrainToolsV2.ToolName.Select,Select,Select,Seleccionar,Sélectionner,選択,선택,Selecionar,Выбрать,选择
+选择,選擇,Studio.TerrainToolsV2.ToolName.Subtract,Subtract,Subtract,Restar,Soustraire,削減,삭제,Subtrair,Вычесть,减少
+减少,刪減,Studio.TerrainToolsV2.Warning.AwaitingModeration,Awaiting asset moderation.,Awaiting asset moderation.,Esperando a que el recurso sea moderado.,En attente de la modération des éléments.,アセットの規制チェック待ちです。,애셋 검열을 기다리는 중입니다.,Aguardando moderação de recursos.,Ожидание модерации ресурса.,正在等候素材审核。
+正在等候素材审核。,素材正在經過審核。,Studio.TerrainToolsV2.Warning.InvalidHeightMap,Valid HeightMap required to begin importing Terrain.,Valid HeightMap required to begin importing Terrain.,Se necesita HeightMap válida para empezar la importación de Terrenos.,HeightMap valide requise pour commencer l'importation de Terrain.,地形のインポートを開始するには有効な HeightMap が必要です。,지형을 가져오려면 유효한 HeightMap이 필요합니다.,Um HeightMap válido é necessário para começar a importar terrenos.,Для импорта рельефа требуется действительное значение HeightMap.,需要有效的 HeightMap 才能开始导入地形。
+需要有效的 HeightMap 才能开始导入地形。,需要有效 HeightMap 才可匯入地形。,Studio.TerrainToolsV2.Warning.ValidHeightMapImport,Valid HeightMap required to begin importing Terrain.,Valid HeightMap required to begin importing Terrain.,Se necesita HeightMap válida para empezar la importación de Terrenos.,Une HeightMap valide exige de commencer à importer Terrain.,地形のインポートを開始するには有効な HeightMap が必要です。,지형을 가져오려면 유효한 HeightMap이 필요합니다.,Um HeightMap válido é necessário para começar a importar terrenos.,Для импорта рельефа требуется действительное значение HeightMap.,需要有效的 HeightMap 才能开始导入地形。
+需要有效的 HeightMap 才能开始导入地形。,需要有效 HeightMap 才可匯入地形。,Studio.TerrainToolsV2.Warning.InvalidNumber,Input not a valid Number.,Input not a valid Number.,La entrada no es un número válido.,La saisie n'est pas un numéro valide.,入力内容は有効な数字ではありません。,유효하지 않은 숫자를 입력했습니다.,O valor inserido não é um número válido.,Вверен неверный номер.,输入不是有效的数字。
+输入不是有效的数字。,數字無效。,Studio.TerrainToolsV2.Warning.InvalidSize,Size has invalid input.,Size has invalid input.,El tamaño tiene una entrada no válida.,La taille a une entrée non valide.,大きさの入力内容が無効です。,유효하지 않은 크기를 입력했습니다.,O tamanho tem uma entrada inválida.,Введен неверный размер.,大小输入无效。
+大小输入无效。,大小無效。,Studio.TerrainToolsV2.Warning.Moderated,Asset has been moderated.,Asset has been moderated.,Se ha moderado el recurso.,L'élément a été modéré.,アセットが規制対象です。,애셋 검열이 완료되었습니다.,O recurso foi moderado.,Ресурс прошел модерацию.,素材已审核。
+素材已审核。,素材遭到過濾。,Studio.TerrainToolsV2.Warning.RegionSizeUndefined,Size of region must be defined.,Size of region must be defined.,Se debe definir el tamaño de la región.,La taille de la région doit être définie.,地域のサイズを定義しなければなりません。,지역의 크기를 정의해야 합니다.,O tamanho da região deve ser definido.,Необходимо установить размер и область.,必须定义区域大小。
+必须定义区域大小。,必須定義區域大小。,Studio.TerrainToolsV2.ClearTool.ConfirmationMessage,Do you want to clear all terrain?,Do you want to clear all terrain?,¿Quieres eliminar todos los terrenos?,Veux-tu vider tout le terrain ?,すべての地形を消しますか？,모든 지형을 삭제할까요?,Deseja apagar todo o terreno?,Очистить весь рельеф?,要清除所有地形吗?
+要清除所有地形吗?,確定清除所有地形？,Studio.TerrainToolsV2.Warning.MissingTerrain,Terrain instance could not be found.,Terrain instance could not be found.,No se ha podido encontrar la instancia del terreno.,L'instance Terrain ne peut pas être trouvée.,地形インスタンスが見つかりませんでした。,지형 인스턴스를 찾지 못했습니다.,A instância do terreno não pôde ser encontrada.,Экземпляр рельефа не найден.,未能找到地形实例。
+未能找到地形实例。,找不到地形個體。,Studio.TerrainToolsV2.Warning.MinimumSize,Size cannot be less than {1:int}.,Size cannot be less than {1:int}.,El tamaño no puede ser inferior a {1:int}.,La taille ne peut pas être inférieure à {1:int}.,{1:int}以下のサイズは無効です。,크기는 {1:int}보다 작을 수 없습니다.,O tamanho não pode ser menor que {1:int}.,Размер должен быть больше {1:int}.,大小不得小于 {1:int}。
+大小不得小于 {1:int}。,大小不可小於 {1:int}。,Studio.TerrainToolsV2.Warning.MaximumSize,Size cannot be greater than {1:int}.,Size cannot be greater than {1:int}.,El tamaño no puede ser superior a {1:int}.,La taille ne peut pas être supérieure à {1:int}.,{1:int}以上のサイズは無効です。,크기는 {1:int}보다 클 수 없습니다.,O tamanho não pode ser maior que {1:int}.,Размер не должен превышать {1:int}.,大小不得大于 {1:int}。
+大小不得大于 {1:int}。,大小不可大於 {1:int}。,Studio.TerrainToolsV2.BrushSettings.Height,Height,Height,Altura,Hauteur,高さ,높이,Altura,Высота,高度
+高度,高度,Studio.TerrainToolsV2.Generate.StartGeneration,Generating with size ({1}) at position ({2}) using seed {3} and biomes: {4},Generating with size ({1}) at position ({2}) using seed {3} and biomes: {4},Generando con tamaño ({1}) en la posición ({2}) usando semilla {3} y biomas: {4},Génération avec la taille ({1}) à la position ({2}) en utilisant les graines {3} et les biomes : {4},サイズ ({1}) 、位置 ({2}) で種 {3} とバイオームを使用して生成中: {4},시드 {3} 및 생물군계를 사용하여 {2} 위치에서 {1} 크기로 생성: {4},Gerando com tamanho ({1}) na posição ({2}) usando semente {3} e biomas: {4},"Создание объекта (размер: {1}, положение: {2}, зерно: {3} и биомы: {4})",使用种子 {3} 和生态：{4} 在位置 ({2}) 上以尺寸 ({1}) 进行生成
+使用种子 {3} 和生态：{4} 在位置 ({2}) 上以尺寸 ({1}) 进行生成,正在使用種子 {3} 和生物群系 {4} 以大小（{1}）在位置（{2}）進行生成,Studio.TerrainToolsV2.Warning.AlreadyGeneratingTerrain,Already Generating Terrain.,Already Generating Terrain.,El terreno ya se está generando.,Déjà en train de générer Terrain.,すでに地形を生成中です。,이미 지형을 생성 중입니다.,Geração de terreno já em execução.,Рельеф уже создается.,已经在生成地形。
+已经在生成地形。,已在生成地形。,Studio.TerrainToolsV2.Warning.ImportError,Error in importing terrain: {1},Error in importing terrain: {1},Error en la importación del terreno: {1},Erreur pendant importation terrain: {1},地形のインポート時のエラー: {1},지형을 가져오는 중에 오류가 발생했습니다. {1},Erro ao importar terreno: {1},Ошибка импортирования рельефа: {1},导入地形时出错: {1}
+导入地形时出错: {1},匯入地形時發生錯誤：{1},Studio.TerrainToolsV2.SeaLevel.Start,Starting Replace Method,Starting Replace Method,Método de reemplazo inicial,Démarrer Remplacer la méthode,置き換え方法を開始中,교체 메서드 곧 시작,Iniciando método de substituição,От уровня моря,正在启动替换方法
+正在启动替换方法,即將進行取代,Studio.TerrainToolsV2.SeaLevel.End,Replace Complete: {1:int} seconds.,Replace Complete: {1:int} seconds.,Reemplazo completado: {1:int} segundos.,Remplacer Complète : {1:int} secondes.,置き換え完了: {1:int} 秒。,바꾸기 완료: {1:int}초,Substituição completa: {1:int} segundos.,Уровень моря завершен: {1:int} сек.,替换完成：{1:int} 秒
+替换完成：{1:int} 秒,取代完成：{1:int} 秒。,Studio.TerrainToolsV2.SeaLevel.Evaporate,Evaporate,Evaporate,Evaporar,Évaporer,蒸発,증발,Evaporar,Удалить,蒸发
+蒸发,蒸發,Studio.TerrainToolsV2.ClearTool.ConfirmationTitle,Clear Terrain,Clear Terrain,Eliminar terreno,Vider Terrain,地形を消す,지형 지우기,Limpar terreno,Очистить рельеф,清除地形
+清除地形,清除地形,Studio.TerrainToolsV2.ConvertPart.Convert,Convert,Convert,Convertir,Convertir,変換,변환,Converter, ,转换
+转换,轉換,Studio.TerrainToolsV2.ToolName.ConvertPart,Convert,Convert,Convertir,Convertir,変換,변환,Converter, ,转换
+转换,轉換,Studio.TerrainToolsV2.ConvertPart.ConvertFailed,Convert failed for instance {1},Convert failed for instance {1},Error en la conversión de la instancia {1},Échec de conversion pour l'instance {1},インスタンス{1}の変換ができませんでした   ,인스턴스 {1} 변환 실패,Falha da conversão para instância {1}, ,实例 {1} 转换失败
+实例 {1} 转换失败,個體 {1} 轉換失敗,Studio.TerrainToolsV2.ConvertPart.ConvertFinished,Convert finished: {1} seconds for {2:int} instance(s),Convert finished: {1} seconds for {2:int} instance(s),Conversión terminada: {1} segundos de {2:int} instancia(s),Transformation terminée : {1} secondes pour {2:int} instance(s),変換終了: {2:int} インスタンスにつき{1} 秒,변환 완료: {2:int} 인스턴스에 대해 {1}초 소요,Conversão terminada: {1} segundos para {2:int} instância(s), ,转换完成：{2:int} 个实例，用时 {1} 秒
+转换完成：{2:int} 个实例，用时 {1} 秒,轉換完成：{2:int} 個實例，花費 {1} 秒,Studio.TerrainToolsV2.ConvertPart.GetTargetShapes,Calculating shapes,Calculating shapes,Calcular formas,Calcul des formes,形状を計算中,셰이프 계산 중,Calculando formas, ,正在计算形状
+正在计算形状,正在計算形狀,Studio.TerrainToolsV2.ConvertPart.SelectionHelp,Select Parts or Models containing Parts to convert to terrain,Select Parts or Models containing Parts to convert to terrain,Seleccionar Partes o Modelos que contienen Partes para convertir en terreno,Sélectionner Parties ou Modèles contenant des parties à convertir dans terrain,パーツを含むパーツかモデルを選択して地形を変換,지형으로 변환할 파트가 포함된 파트 또는 모델을 선택하세요,Selecione partes ou modelos contendo partes para converter para terreno, ,选择部件或包含部件的模型来转换为地形
+选择部件或包含部件的模型来转换为地形,選擇要轉換成地形的零件或包含零件的模型,Studio.TerrainToolsV2.ConvertPart.HasProtected,Only Parts or Models containing Parts can be converted,Only Parts or Models containing Parts can be converted,Se pueden convertir solo Partes o Modelos que contienen Partes,Seules les parties ou les modèles contenant des parties peuvent être transformées,パーツを含むパーツかモデルのみ変換できます,파트가 포함된 파트 또는 모델만 변환할 수 있습니다,Somente partes ou modelos contendo partes podem ser convertidas, ,只有部件或包含部件的模型可被转换
+只有部件或包含部件的模型可被转换,只有零件或包含零件的模型可被轉換,Studio.TerrainToolsV2.ConvertPart.HasTooSmall,Parts with size dimensions below 4 studs may produce incorrect results,Parts with size dimensions below 4 studs may produce incorrect results,Partes con tamaños menores de 4 studs pueden generar resultados incorrectos,Les parties avec des dimensions de taille inférieures à 4 studs peuvent donner des résultats incorrects,4スタッドかそれ以下のサイズ寸法のパーツは間違った結果を出すかもしれません,크기가 4 스터드 미만인 파트는 잘못된 결과를 생성할 수 있습니다,Partes com dimensões menores que 4 qaudrículas podem produzir resultados incorretos, ,大小在 4 格以下的部件可能会产生错误的结果
+大小在 4 格以下的部件可能会产生错误的结果,大小小於 4 磚塊的零件可能會造成錯誤結果。,Studio.TerrainToolsV2.ConvertMode.Biome,Biome,Biome,Bioma,Biome,バイオーム,생물군,Bioma, ,生态
+生态,生物群系,Studio.TerrainToolsV2.ConvertPart.ConvertShapesToBiome,Converting parts to Biome,Converting parts to Biome,Convertir partes en Bioma,Convertir des parties du territoire,パーツをバイオームに変換中,파트를 생물군으로 변환 중,Convertendo partes para bioma, ,正在将部件转换至生态
+正在将部件转换至生态,正在將零件轉換成生物群系,Studio.TerrainToolsV2.Generate.BaseLevel,Base Level,Base Level,Nivel base,Niveau de base,ベースレベル,기준면,Nível base, ,基准面
+基准面,基準面,Studio.TerrainToolsV2.Materials.Air,Air,Air,Aire,Air,空気,공기,Ar, ,天空
+天空,空氣,Studio.TerrainToolsV2.PartToBiome.PartToBiome,Part to Biome,Part to Biome,Parte en Bioma,Partie du territoire,バイオームのパーツ,파트를 생물군으로,Parte para bioma, ,部件至生态
+部件至生态,轉換零件成生物群系,Studio.TerrainToolsV2.PartToTerrain.PartToTerrain,Part to Terrain,Part to Terrain,Parte en Terreno,Partie du terrrain,地形のパーツ,파트를 지형으로,Parte para terreno, ,部件至地形
+部件至地形,零件到地形,Studio.TerrainToolsV2.Import.ColormapPreview,Colormap Preview,Colormap Preview,Vista previa de Colormap,Aperçu de la carte en couleurs,Colormap プレビュー,Colormap 미리보기,Prévia de Colormap, ,Colormap 预览
+Colormap 预览,Colormap 預覽,Studio.TerrainToolsV2.Warning.UnknownAssetStatusError,Unable to verify asset.,Unable to verify asset.,No se puede verificar recurso.,Impossible de vérifier l'élément.,アセットを認証できません。,애셋을 확인할 수 없습니다.,Não foi possível verificar o recurso., ,无法验证素材。
+无法验证素材。,無法驗證素材。,Studio.TerrainToolsV2.Warning.UnknownShape,Instance shape is unknown,Instance shape is unknown,Forma de la instancia desconocida,La forme de l'instance est inconnue,インスタンスの形状が不明です,인스턴스 형태를 알 수 없습니다,A forma da instância é desconhecida, ,实例形状未知
+实例形状未知,個體形狀未知,Studio.TerrainToolsV2.Warning.RequireEditModeForImport,Terrain importer only works in edit mode.,Terrain importer only works in edit mode.,El importador de Terreno funciona solamente en modo de edición.,L'importateur de terrain ne fonctionne qu'en mode édition.,地形インポーターは、編集モードでのみ機能します。,지형 가져오기는 편집 모드에서만 실행할 수 있습니다.,O importador de terreno só funciona em modo de edição., ,地形导入器只能在编辑模式中运行。
+地形导入器只能在编辑模式中运行。,地形匯入器只能在編輯模式中使用。,Studio.TerrainToolsV2.ReplaceMode.Box,Box,Box,Caja,Boîte,ボックス,상자,Caixa, ,盒状模式
+盒状模式,方塊,Studio.TerrainToolsV2.ReplaceMode.Brush,Brush,Brush,Pincel,Brosse,ブラシ,브러시,Pincel, ,笔刷模式
+笔刷模式,筆刷,Studio.TerrainToolsV2.Replace.SourceMaterial,Source material,Source material,Material fuente,Matériel source,原材料,소스 재질,Material de origem, ,源材质
+源材质,來源材質,Studio.TerrainToolsV2.Import.Colormap,Colormap,Colormap,Colormap,Colormap,Colormap,Colormap,Colormap, ,Colormap
+Colormap,Colormap,Studio.TerrainToolsV2.Import.UseColormap,Colormap,Colormap,Colormap,Colormap,Colormap,Colormap,Colormap, ,Colormap
+Colormap,Colormap,Studio.TerrainToolsV2.ImportMaterialMode.Colormap,Colormap,Colormap,Colormap,Colormap,Colormap,Colormap,Colormap, ,Colormap
+Colormap,Colormap,Studio.TerrainToolsV2.Import.HeightmapPreview,Heightmap Preview,Heightmap Preview,Vista previa de Heightmap,Aperçu Heighmap,Heightmap プレビュー,Heightmap 미리보기,Prévia de Heightmap, ,Heightmap 预览
+Heightmap 预览,Heightmap 預覽,Studio.TerrainToolsV2.LocalImageSelector.NoImageSelected,No image selected,No image selected,No hay imagen seleccionada,Pas d'images sélectionnée,選択された画像がありません,선택한 이미지가 없습니다,Nenhuma imagem selecionada, ,未选择图像
+未选择图像,未選擇圖像,Studio.TerrainToolsV2.Action.Resume,Resume,Resume,Reanudar,Reprendre,再開,재개,Retomar, ,继续
+继续,繼續,Studio.TerrainToolsV2.Generate.GenerateProgressTitle,Generate Terrain,Generate Terrain,Generar terreno,Générer du terrain,地形を生成,지형 생성,Gerar terreno, ,生成地形
+生成地形,生成地形,Studio.TerrainToolsV2.Generate.GenerateVoxels,Generating voxels...,Generating voxels...,Generando voxels...,Générer des voxels...,ボクセルを生成中...,복셀 생성 중...,Gerando voxels..., ,生成体素...
+生成体素...,正在生成體素……,Studio.TerrainToolsV2.Import.DefaultMaterial,Default Material,Default Material,Material predeterminado,Matériau par défaut,デフォルト素材,기본 재질,Material padrão, ,默认材质
+默认材质,預設材質,Studio.TerrainToolsV2.ImportError.FailedToLoadHeightmap,Failed to load heightmap,Failed to load heightmap,Error al cargar heightmap,Échec du chargement heightmap,Heightmap を読み込めませんでした,Heightmap을 불러오지 못했습니다,Falha ao carregar heightmap, ,加载 heightmap 失败
+加载 heightmap 失败,無法載入 Heightmap,Studio.TerrainToolsV2.ImportError.FailedToLoadColormap,Failed to load colormap,Failed to load colormap,Error al cargar colormap,Échec du chargement de la colormap,Colormap を読み込めませんでした,Colormap을 불러오지 못했습니다,Falha ao carregar colormap, ,加载 colormap 失败
+加载 colormap 失败,無法載入 Colormap,Studio.TerrainToolsV2.ImportError.DataModelPreprocessNullptr,An internal error has occurred.,An internal error has occurred.,Se ha producido un error interno.,Une erreur interne s'est produite.,内部エラーが発生しました。,내부 오류가 발생했습니다.,Ocorreu um erro interno., ,发生内部错误。
+发生内部错误。,發生內部錯誤。,Studio.TerrainToolsV2.ImportError.DataModelWorkerNullptr,An internal error has occurred.,An internal error has occurred.,Se ha producido un error interno.,Une erreur interne s'est produite.,内部エラーが発生しました。,내부 오류가 발생했습니다.,Ocorreu um erro interno., ,发生内部错误。
+发生内部错误。,發生內部錯誤。,Studio.TerrainToolsV2.ImportError.FailedToGenerateHeightmapPreview,An internal error has occurred.,An internal error has occurred.,Se ha producido un error interno.,Une erreur interne s'est produite.,内部エラーが発生しました。,내부 오류가 발생했습니다.,Ocorreu um erro interno., ,发生内部错误。
+发生内部错误。,發生內部錯誤。,Studio.TerrainToolsV2.ImportError.HeightmapImporterServiceCantFindTerrain,An internal error has occurred.,An internal error has occurred.,Se ha producido un error interno.,Une erreur interne s'est produite.,内部エラーが発生しました。,내부 오류가 발생했습니다.,Ocorreu um erro interno., ,发生内部错误。
+发生内部错误。,發生內部錯誤。,Studio.TerrainToolsV2.ImportError.TerrainPreprocessNullptr,An internal error has occurred.,An internal error has occurred.,Se ha producido un error interno.,Une erreur interne s'est produite.,内部エラーが発生しました。,내부 오류가 발생했습니다.,Ocorreu um erro interno., ,发生内部错误。
+发生内部错误。,發生內部錯誤。,Studio.TerrainToolsV2.ImportError.TerrainWorkerNullptr,An internal error has occurred.,An internal error has occurred.,Se ha producido un error interno.,Une erreur interne s'est produite.,内部エラーが発生しました。,내부 오류가 발생했습니다.,Ocorreu um erro interno., ,发生内部错误。
+发生内部错误。,發生內部錯誤。,Studio.TerrainToolsV2.ImportError.TerrainWriteNullptr,An internal error has occurred.,An internal error has occurred.,Se ha producido un error interno.,Une erreur interne s'est produite.,内部エラーが発生しました。,내부 오류가 발생했습니다.,Ocorreu um erro interno., ,发生内部错误。
+发生内部错误。,發生內部錯誤。,Studio.TerrainToolsV2.ImportError.FailedToFindInContentProvider,Image could not be found.,Image could not be found.,No se ha encontrado la imagen.,L'image ne peut être trouvée.,画像が見つかりませんでした。,이미지를 찾을 수 없습니다.,A imagem não pôde ser encontrada., ,无法找到图像。
+无法找到图像。,找不到圖像。,Studio.TerrainToolsV2.ImportError.FailedToReadImage,Image is not a valid file.,Image is not a valid file.,La imagen no es un archivo válido.,L'image n'est pas un fichier valide.,画像が有効なファイルではありません。,이미지가 유효한 파일이 아닙니다.,A imagem é um arquivo inválido., ,图像不是有效的文件。
+图像不是有效的文件。,圖像非有效檔案。,Studio.TerrainToolsV2.ImportError.InvalidBytesPerChannel,Only 8 bit and 16 bit PNGs are supported.,Only 8 bit and 16 bit PNGs are supported.,Solo los PNG de 8 y 16 bit son compatibles.,Seuls les PNG 8 bits et 16 bits sont pris en charge.,8 ビットまたは 16ビットのPNG画像にのみに対応しています。,8비트 및 16비트 PNG만 지원됩니다.,Somente PNGs de 8 e 16 bit são suportados., ,只支持 8 位和 16 位 PNG 图像。
+只支持 8 位和 16 位 PNG 图像。,只支援 8 位元和 16 位元 PNG 檔案。,Studio.TerrainToolsV2.Replace.Replacing,Replacing voxels...,Replacing voxels...,Reemplazando voxels...,Remplacer les voxels...,ボクセルを置き換え中...,복셀 교체 중...,Substituindo voxels..., ,替换体素...
+替换体素...,正在取代體素……,Studio.TerrainToolsV2.ImportError.FailedToSelectFile,Failed to open file dialog.,Failed to open file dialog.,Error al abrir el diálogo del archivo,Le dialogue du fichier n'a pas été ouvert.,ファイルダイアログが開けませんでした。,파일 대화 상자를 열지 못했습니다.,Falha ao abrir diálogo de arquivo., ,打开文件会话失败。
+打开文件会话失败。,無法開啟檔案對話框。,Studio.TerrainToolsV2.ImportError.ImportFailed,Import failed,Import failed,Error al importar,Échec de l'importation,インポートできませんでした,가져오기 실패,Falha ao importar, ,导入失败
+导入失败,匯入失敗,Studio.TerrainToolsV2.Replace.ReplaceProgressTitle,Replace Terrain,Replace Terrain,Reemplazar terreno,Remplacer terrain,地形を置き換え,지형 교체,Substituir terreno, ,替换地形
+替换地形,取代地形,Studio.TerrainToolsV2.ImportError.ImportInProgress,An import operation is already in progress.,An import operation is already in progress.,La importación está en curso.,Une opération d'importation est déjà en cours.,インポート操作がすでに進行中です。,가져오기 작업이 이미 진행 중입니다.,Uma operação de importação já está em progresso., ,导入操作正在进行中。
+导入操作正在进行中。,匯入作業進行中。,Studio.TerrainToolsV2.ImportError.RegionIsEmpty,Target region is empty.,Target region is empty.,La región meta está vacía.,La région cible est vide.,対象区域が空です。,대상 영역이 비어 있습니다.,A região alvo está vazia., ,目标区域为空。
+目标区域为空。,目標區域空白。,Studio.TerrainToolsV2.ImportInfo.ChannelsWereDiscarded,"When you import a color image, the importer only reads the red channel to create a greyscale heightmap. The other channels have been discarded.","When you import a color image, the importer only reads the red channel to create a greyscale heightmap. The other channels have been discarded.","Cuando importas una imagen de color, el importador solo lee un canal rojo para crear heightmap con escala de grises. Se eliminaron los demás canales.","Lorsque tu importes une image couleur, l'importateur ne lit que le canal rouge pour créer une hauteur de carte en niveaux de gris. Les autres canaux ont été supprimés.",色彩画像をインポートする際、インポーターはグレースケール Heightmap を作成するために赤いチャンネルのみを読み取ります。他のチャンネルは破棄されました。,"컬러 이미지를 가져올 때, 가져오기 도구는 빨간색 채널만 읽어와 회색조 Heightmap을 생성합니다. 다른 채널은 무시됩니다.","Quando você importa uma imagem colorida, o importador lê somente o canal vermelho para criar um heightmap de escala de cinza. Os outros canais foram ignorados.", ,当导入彩色图像时，导入程序只会读取红色通道以创建灰度 heightmap。其他通道将被忽略。
+当导入彩色图像时，导入程序只会读取红色通道以创建灰度 heightmap。其他通道将被忽略。,匯入彩色圖像時，匯入器只會藉由紅色頻道建立灰階 Heightmap，其他頻道將會被捨棄。,Studio.TerrainToolsV2.ImportWarning.AspectRatio,"Image aspect ratio ({1}) is not compatible with Size values (X {2:int}, Z {3:int}). For best results, adjust the Size or import a new image.","Image aspect ratio ({1}) is not compatible with Size values (X {2:int}, Z {3:int}). For best results, adjust the Size or import a new image.","La relación de aspecto de la imagen ({1}) no es compatible con los valores de Tamaño (X {2:int}, Z {3:int}). Para obtener mejores resultados, ajusta el Tamaño o importa una nueva imagen.","Le format d'image ({1}) n'est pas compatible avec les valeurs de taille (X {2:int}, Z {3:int}). Pour de meilleurs résultats, ajustez la Taille ou importez une nouvelle image.","画像アスペクト比 ({1}) がサイズ値 (X {2:int}, Z {3:int})と互換性がありません。最善の結果を出すには、サイズ調整をするか新しい画像をインポートしてください。","이미지의 가로 세로 비율({1})이(가) 크기 값(X {2:int}, Z {3:int})와(과) 호환되지 않습니다. 최상의 결과를 얻으려면 크기를 조정하거나 새 이미지를 가져오세요.","A proporção da imagem ({1}) não é compatível com os valores de tamanho (X {2:int}, Z {3:int}). Para melhores resultados, ajuste o tamanho ou importe uma nova imagem.", ,图像的高宽比（{1}）与 Size（尺寸）值（X {2:int}，Z {3:int}）不兼容。要获得最佳效果，请调整 Size 或导入新图像.
+图像的高宽比（{1}）与 Size（尺寸）值（X {2:int}，Z {3:int}）不兼容。要获得最佳效果，请调整 Size 或导入新图像.,"圖像寬高比（{1}）與 Size 值（X {2:int}, Z {3:int}）不相容。為確保最佳效果，請調整 Size 或匯入新的圖像.",Studio.TerrainToolsV2.ImportWarning.ImageTooSmall,"Image resolution ({1:int}x{2:int}) is too low for the target Size values (X {3:int}, Z {4:int}). For best results, decrease the size or import a new Heightmap.","Image resolution ({1:int}x{2:int}) is too low for the target Size values (X {3:int}, Z {4:int}). For best results, decrease the size or import a new Heightmap.","La resolución de la imagen ({1:int}x{2:int}) es demasiada baja para los valores meta de Tamaño (X {3:int}, Z {4:int}). Para obtener mejores resultados, disminuye el tamaño o importa un nuevo Heightmap.","La résolution de l'image ({1:int}x{2:int}) est trop faible pour les valeurs de la Taille de la cible (X {3:int}, Z {4:int}). Pour de meilleurs résultats, diminue la taille ou importez une nouvelle Heightmap.","画像の解像度 ({1:int}x{2:int}) は、ターゲットサイズ値 (X {3:int}, Z {4:int}) には低すぎます。最善の結果を出すには、サイズを小さくするか、新しい Heightmap をインポートしてください。","이미지 해상도({1:int}x{2:int})가 대상 크기 값(X {3:int}, Z {4:int})에 비해 너무 낮습니다. 최상의 결과를 얻으려면 크기를 줄이거나 새 Heightmap을 가져오세요.","A proporção da imagem ({1:int}x{2:int}) é baixa demais para os valores de tamanho alvo (X {3:int}, Z {4:int}). Para melhores resultados, diminua o tamanho ou importe um novo mapa de altura.", ,图像的分辨率（{1:int}x{2:int}）与目标 Size（尺寸）值（X {3:int}，Z {4:int}）相比过小。要获得最佳效果，请缩小 Size 或导入新 Heightmap。
+图像的分辨率（{1:int}x{2:int}）与目标 Size（尺寸）值（X {3:int}，Z {4:int}）相比过小。要获得最佳效果，请缩小 Size 或导入新 Heightmap。,"圖像解析度（{1:int}x{2:int}）對於目標 Size 值（X {3:int}, Z {4:int}）過低。為確保最佳效果，請縮小或匯入新的 Heightmap。",Studio.TerrainToolsV2.Warning.NoColormapProvided,No colormap was provided.,No colormap was provided.,No se ha proporcionado colormap.,Aucune carte de couleurs n'a été fournie.,Colormap が提供されていません。,Colormap이 제공되지 않았습니다.,Não foi fornecido um colormap., ,未提供 colormap 。
+未提供 colormap 。,未提供 Colormap。,Studio.TerrainToolsV2.Warning.VolumeTooLarge,Terrain volume is too large.,Terrain volume is too large.,El volumen del terreno es demasiado grande.,Le volume du terrain est trop important.,地形の量が多すぎます。,지형이 너무 큽니다.,O volume do terreno é largo demais., ,地形体积过大。
+地形体积过大。,地形體積過大。,Studio.TerrainToolsV2.Action.LearnMore,Learn more,Learn more,Aprende más,En apprendre plus,もっと詳しく,더 알아보기,Saiba mais, ,了解更多
+了解更多,了解更多,Studio.TerrainToolsV2.ColormapCallout.Title,Colormaps,Colormaps,Colormaps,Colormap,Colormap,Colormaps,Colormaps, ,Colormaps
+Colormaps,Colormap,Studio.TerrainToolsV2.ColormapCallout.Description,Colormaps convert image colors to terrain materials using Roblox Studio's color key.,Colormaps convert image colors to terrain materials using Roblox Studio's color key.,Colormaps convierte los colores de una imagen en materiales de terreno a través de la clave de color de Roblox Studio.,Colormaps convertit les couleurs des images en matériaux de terrain en utilisant la clé de couleur de Roblox Studio.,Colormaps は Roblox Studio の色彩キーを使って画像の色を地形素材に変換します。,Colormaps는 Roblox Studio의 색상 키를 사용하여 이미지 색상을 지형 재질로 변환합니다.,Colormaps convertem cores de imagens para materiais de terrenos usando a chave de cores do Roblox Studio., ,Colormaps 用 Roblox Studio 的色彩键将图像颜色转换为地形材质。
+Colormaps 用 Roblox Studio 的色彩键将图像颜色转换为地形材质。,Colormap 會使用 Roblox Studio 的色彩鍵將圖像顏色轉換成地形材質。,Studio.TerrainToolsV2.Generate.Starting,Starting...,Starting...,Iniciando...,En commençant...,開始中...,시작 중...,Iniciando..., ,正在启动……
+正在启动……,正在開始……,Studio.TerrainToolsV2.Generate.Preprocessing,Preprocessing...,Preprocessing...,Preprocesando...,Pré-traitement...,処理中...,사전 처리 중...,Pré-processando..., ,正在预处理……
+正在预处理……,正在預處理……,Studio.TerrainToolsV2.Generate.ReadingColormap,Reading Colormap...,Reading Colormap...,Leyendo Colormap...,Lecture Colormap...,Colormap を読み取り中...,Colormap 읽는 중...,Lendo colormap..., ,正在读取 ColorMap……
+正在读取 ColorMap……,正在讀取 Colormap ……,Studio.TerrainToolsV2.Generate.AssigningColormap,Assigning Colormap...,Assigning Colormap...,Asignando Colormap...,Affectation de Colormap...,Colormap を割り当て中...,Colormap 할당 중...,Aplicando colormap..., ,正在分配 ColorMap……
+正在分配 ColorMap……,正在指派 Colormap ……,Studio.TerrainToolsV2.Generate.Sampling,Sampling...,Sampling...,Muestreo...,Échantillon...,サンプリング中...,샘플링 중...,Fazendo amostragem..., ,正在采样……
+正在采样……,正在抽樣……,Studio.TerrainToolsV2.ImportWarning.MainTextColormapRGBOutOfRange,Colormap RGB values are out of range.,Colormap RGB values are out of range.,Los valores RGB de Colormap están fuera de rango.,Les valeurs RGB de Colormap sont hors de portée.,Colormap RGB 値が範囲外です。,Colormap RGB 값이 범위를 벗어났습니다.,Os valores RGB do colormap estão fora da faixa., ,Colormap RGB 值超出范围。
+Colormap RGB 值超出范围。,Colormap RGB 值在範圍外。,Studio.TerrainToolsV2.ImportWarning.SubTextColormapRGBOutOfRange,The imported colormap contains RGB values that do not match the Colormap Index. The generated materials might not be correct. Please ensure you’re using the sRGB colorspace for best results.,The imported colormap contains RGB values that do not match the Colormap Index. The generated materials might not be correct. Please ensure you’re using the sRGB colorspace for best results.,El Colormap importado contiene valores RGB que no coinciden con el índice de Colormap. Los materiales generados podrían no ser correctos. Asegúrate de que estás utilizando el espacio de color sRGB para obtener los mejores resultados.,La carte de couleurs importée contient des valeurs RVB qui ne correspondent pas à l'index Colormap. Les matériaux générés peuvent ne pas être corrects. Assure-toi que tu utilises l'espace de couleurs sRGB pour obtenir les meilleurs résultats.,RGB 値を含むインポート済み Colormap が Colormap インデックスと合致しません。生成済みの素材が不正かもしれません。最善の結果を出すには、 sRGB カラースペースを使っているか確認してください。　,가져온 Colormap에 Colormap 인덱스와 일치하지 않는 RGB 값이 포함되어 있습니다. 생성된 재질이 올바르지 않을 수 있습니다. 최상의 결과를 얻으려면 sRGB 색 공간을 사용하고 있는지 확인하세요.,O colormap importado contém valores RGB que não correspondem ao índice do colormap. Os materiais gerados podem não estar corretos. Verifique se está usando um espaço de cor sRGB para melhores resultados., ,导入的 colormap 包含不符合 Colormap 索引的 RGB 值。生成的材质可能不正确。请确保你使用的是 sRGB 色域以获得最佳效果。
+导入的 colormap 包含不符合 Colormap 索引的 RGB 值。生成的材质可能不正确。请确保你使用的是 sRGB 色域以获得最佳效果。,匯入的 Colormap 包含不符合 Colormap 索引的 RGB 值。生成的材質可能不正確。為確保最佳效果，請確認您正在使用 sRGB 色彩空間。 ,Studio.TerrainToolsV2.BrushSettings.IgnoreParts,Ignore Parts,Ignore Parts,Ignorar partes,Ignorer les parties,パーツを無視,파트 무시,Ignorar partes, ,忽略部件
+忽略部件,忽略零件

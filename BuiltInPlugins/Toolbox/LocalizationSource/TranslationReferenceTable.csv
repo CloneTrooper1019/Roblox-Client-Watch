@@ -1,231 +1,239 @@
-Key,Source,en-us,ko,ru,zh-cn
-Studio.Toolbox.General.CategoryCreationsMeshes,Meshes,Meshes,메시,Сетки,网格
-Studio.Toolbox.General.CategoryMeshes,Meshes,Meshes,메시,Сетки,网格
-Studio.Toolbox.AssetConfigPackagePermissions.NoResults,No results found,No results found,결과 없음,Результатов не найдено,未找到结果
-Studio.Toolbox.General.InfoBannerText,No results found,No results found,결과 없음,Результатов не найдено,未找到结果
-Studio.Toolbox.General.ToolboxToolbarName,Toolbox,Toolbox,도구 상자,Панель инструментов,工具箱
-Studio.Toolbox.General.StatusOnSale,On Sale,On Sale,판매 시작,В продаже,在售
-Studio.Toolbox.General.AssetCreatorIntroText,by {name:username},by {name:username},제작: {name:username},Имя пользователя: {name:username},作者: {name:username}
-Studio.Toolbox.General.CategoryCreationsModels,Models,Models,모델,Модели,模型
-Studio.Toolbox.General.CategoryModels,Models,Models,모델,Модели,模型
-Studio.Toolbox.General.CategoryCreationsPlugins,Plugins,Plugins,플러그인,Плагины,插件
-Studio.Toolbox.General.CategoryPaidPlugins,Plugins,Plugins,플러그인,Плагины,插件
-Studio.Toolbox.General.CategoryPlugins,Plugins,Plugins,플러그인,Плагины,插件
-Studio.Toolbox.General.CategoryCreationsDevelopmentSectionDivider,Game development assets,Game development assets,게임 개발 애셋,Ресурсы разработки игры,游戏开发素材
-Studio.Toolbox.General.SalesOnsale,Onsale,Onsale,판매 시작,В продаже,在售
-Studio.Toolbox.General.EndorseBadgeTooltipText,Marked as a high-quality item,Marked as a high-quality item,고품질 아이템으로 표시,Обозначен как высококачественный товар,标记为高品质的项目
-Studio.Toolbox.General.CategoryCreationsDecals,Images,Images,이미지,Изображения,图片
-Studio.Toolbox.General.CategoryDecals,Images,Images,이미지,Изображения,图片
-Studio.Toolbox.General.AssetTypeAudio,Audio,Audio,오디오,Звук,音频
-Studio.Toolbox.General.CategoryAudio,Audio,Audio,오디오,Звук,音频
-Studio.Toolbox.General.CategoryCreationsAudio,Audio,Audio,오디오,Звук,音频
-Studio.Toolbox.General.CategoryMyDecals,My Images,My Images,내 이미지,Мои изображения,我的图片
-Studio.Toolbox.General.Ownership,Creator,Creator,크리에이터,Автор,创建者
-Studio.Toolbox.General.SearchOptionCreator,Creator,Creator,크리에이터,Автор,创建者
-Studio.Toolbox.General.CategoryMyModels,My Models,My Models,내 모델,Мои модели,我的模型
-Studio.Toolbox.General.CategoryMyMeshes,My Meshes,My Meshes,내 메시,Мои сетки,我的网格
-Studio.Toolbox.General.CategoryGroupPackages,Group Packages,Group Packages,그룹 패키지,Пакеты группы,群组包
-Studio.Toolbox.General.SearchTagLength,length:,length:,길이:, ,长度：
-Studio.Toolbox.General.CategoryMyAudio,My Audio,My Audio,내 오디오,Мой звук,我的音频
-Studio.Toolbox.General.CategoryMyPackages,My Packages,My Packages,내 패키지,Мои пакеты,我的包
-Studio.Toolbox.General.SideTabSales,Sales,Sales,판매,Распродажи,销售
-Studio.Toolbox.General.CategoryMyPlugins,My Plugins,My Plugins,내 플러그인,Мои плагины,我的插件
-Studio.Toolbox.General.SortByText,Sort by:,Sort by:,정렬 기준:,Сортировка:,排序方式:
-Studio.Toolbox.General.CategoryRecentModels,Recent Models,Recent Models,최근 모델,Недавние модели,最近使用的模型
-Studio.Toolbox.General.CategoryRecentAudio,Recent Audio,Recent Audio,최근 오디오,Недавние звукозаписи,最近使用的音频
-Studio.Toolbox.Common.Update,Update,Update,업데이트, ,更新
-Studio.Toolbox.General.CategoryRecentDecals,Recent Images,Recent Images,최근 이미지,Недавние изображения,最近使用的图片
-Studio.Toolbox.General.CategoryRecentMeshes,Recent Meshes,Recent Meshes,최근 메시,Недавние сетки,最近使用的网格
-Studio.Toolbox.AssetConfigPackagePermissions.SearchByUser,Search by username,Search by username,사용자 이름으로 검색,Поиск по имени пользователя,依用户名搜索
-Studio.Toolbox.General.CategoryGroupModels,Group Models,Group Models,그룹 모델,Модели группы,群组模型
-Studio.Toolbox.General.CategoryCreationsFaceAccessory,Face Accessories,Face Accessories,얼굴 장신구,Лицо: аксесссуары,脸部配件
-Studio.Toolbox.AssetConfigFooter.UploadWithFee,Submit for,{price:int} Robux,Submit for,{price:int} Robux,{price:int} Robux 사용
-제출, ,花费 {price:int} Robux,并提交,Studio.Toolbox.General.CategoryRecentVideos,Recent Videos
-Recent Videos,최근 비디오, ,最近使用的视频,Studio.Toolbox.General.FooterButtonWhiteName,White
-White,흰색,Белый,白色,Studio.Toolbox.General.CategoryGroupDecals,Group Images
-Group Images,그룹 이미지,Изображения группы,群组图片,Studio.Toolbox.General.SuggestionsBuilding,Building
-Building,건물,Постройки,建筑,Studio.Toolbox.General.CategoryGroupMeshes,Group Meshes
-Group Meshes,그룹 메시,Сетки группы,群组网格,Studio.Toolbox.General.TabRecent,Recent
-Recent,최근,Недавние,最近,Studio.Toolbox.General.SearchOptionSort,Sort By
-Sort By,정렬 기준,Сортировка:,排序方式,Studio.Toolbox.General.CategoryGroupAudio,Group Audio
-Group Audio,그룹 오디오,Звукозаписи группы,群组音频,Studio.Toolbox.AssetConfigFooter.ImportTitle,Choose an asset to import.
-Choose an asset to import.,가져올 애셋을 선택하세요., ,请选择要导入的素材。,Studio.Toolbox.General.SortByMostTaken,Most Taken
-Most Taken,사용 횟수,Использование,最多采用,Studio.Toolbox.General.SearchBarDefaultText,Search
-Search,검색,Поиск,搜索,Studio.Toolbox.General.AssetTypePlugin,Plugin
-Plugin,플러그인,Плагин,插件,Studio.Toolbox.General.SortByFavorites,Favorites
-Favorites,즐겨찾기,Избранное,收藏,Studio.Toolbox.General.SearchBarCreatorText,Search for users
-Search for users,사용자 검색,Поиск пользователей,搜索用户,Studio.Toolbox.General.SuggestionsIntroText,Try searching for:
-Try searching for:,다음으로 검색:,Попробуйте найти:,尝试搜索:,Studio.Toolbox.General.SuggestionsNPC,NPC
-NPC,NPC,НИП,NPC,Studio.Toolbox.General.SuggestionsVehicle,Vehicle
-Vehicle,차량,Транспорт,车辆,Studio.Toolbox.General.AssetTypePants,Pants
-Pants,바지,Брюки,裤子,Studio.Toolbox.General.CategoryCreationsPants,Pants
-Pants,바지,Брюки,裤子,Studio.Toolbox.General.SuggestionsWeapon,Weapon
-Weapon,무기,Оружие,武器,Studio.Toolbox.General.CategoryCreationsTeeShirts,T-Shirts
-T-Shirts,티셔츠,Футболки,T 恤,Studio.Toolbox.Common.OK,OK
-OK,확인, ,确认,Studio.Toolbox.Purchase.BuyPrompt,Would you like to buy "{name}" from {creator} for {robux:int} Robux?
-Would you like to buy "{name}" from {creator} for {robux:int} Robux?,{creator}에게 "{name}"을(를) {robux:int} Robux에 구매할까요?,"\"{name}\", автор {creator}: купить для {robux:int} Robux?",你要以 {robux:int} Robux 从 {creator} 处购买 "{name}" 吗?,Studio.Toolbox.General.SuggestionsLight,Light
-Light,조명,Свет,光,Studio.Toolbox.General.SortByRelevance,Relevance
-Relevance,관련성,Актуальность,关联,Studio.Toolbox.General.CategoryCreationsShirts,Shirts
-Shirts,셔츠,Рубашки,上衣,Studio.Toolbox.General.SortByUpdated,Updated
-Updated,업데이트,Обновление выполнено,已更新,Studio.Toolbox.General.AssetTypeHairAccessory,Hair
-Hair,헤어,Волосы,头发,Studio.Toolbox.General.CategoryCreationsHair,Hair
-Hair,헤어,Волосы,头发,Studio.Toolbox.General.CategoryCreationsWaistAccessory,Waist Accessories
-Waist Accessories,허리 장신구,Пояс: аксесссуары,腰部配件,Studio.Toolbox.General.SortByRatings,Ratings
-Ratings,평가,Рейтинги,评级,Studio.Toolbox.Purchase.BuyRobux,Buy Robux
-Buy Robux,Robux 구매,Купить Robux,购买 Robux,Studio.Toolbox.AssetConfigFooter.NewAsset,Save as a new asset...
-Save as a new asset...,새로운 애셋으로 저장...,Сохранить как новый ресурс...,另存为新素材...,Studio.Toolbox.General.SalesServiceFee,Service fee will be collected upon sale
-Service fee will be collected upon sale,판매 시 서비스 수수료가 징수됩니다,При продаже взимается сервисный сбор,将在销售时收取手续费,Studio.Toolbox.General.CategoryCreationsCatalogSectionDivider,Avatar assets
-Avatar assets,아바타 애셋,Ресурсы аватара,虚拟形象素材,Studio.Toolbox.General.VotingVoteText,vote
-vote,표,голос,票,Studio.Toolbox.General.VotingVotesText,votes
-votes,표,голоса,票,Studio.Toolbox.General.FooterBGText,Background:
-Background:,배경:,Фон:,背景:,Studio.Toolbox.General.FooterButtonBlackName,Black
-Black,검은색,Черный,黑色,Studio.Toolbox.General.SearchOptionsCancel,Cancel
-Cancel,취소,Отмена,取消,Studio.Toolbox.Purchase.Cancel,Cancel
-Cancel,취소,Отмена,取消,Studio.Toolbox.Purchase.FailedDetails,Purchase of "{name}" failed.
-Purchase of "{name}" failed.,"{name}" 구매에 실패했습니다.,"{name}": покупка не совершена.,购买 "{name}" 失败。,Studio.Toolbox.General.SearchOptionsApply,Apply
-Apply,적용,Применить,应用,Studio.Toolbox.General.FooterButtonNoneName,None
-None,없음,Нет,无,Studio.Toolbox.General.SearchResults,Search Results
-Search Results,검색 결과,Результаты поиска,搜索结果,Studio.Toolbox.General.CategoryCreationsHats,Hats
-Hats,모자,Головные уборы,帽子,Studio.Toolbox.AssetConfigCopy.AccountSetting,"In order to share content in Marketplace, you must add & verify an email address to your account. This can be done in Account Settings."
-"In order to share content in Marketplace, you must add & verify an email address to your account. This can be done in Account Settings.",마켓플레이스에서 콘텐츠를 공유하려면 계정에 이메일 주소를 추가하고 확인해야 합니다. 이 작업은 계정 설정에서 수행할 수 있습니다., you must add & verify an email address to your account. This can be done in Account Settings.,为了在商店中分享内容，你必须向你的帐户添加电子邮件地址并进行验证。可在“帐户设置”中完成此操作。,Studio.Toolbox.General.CategoryEndorsedPlugins,EndorsedPlugins
-EndorsedPlugins,추천 플러그인,Одобренные плагины,官方认可的插件,Studio.Toolbox.General.SearchResultsKeyword,Search Results for
-Search Results for,다음에 대한 검색 결과,Результаты поиска для:,搜索结果:,Studio.Toolbox.General.SearchResultsClearAll,Clear
-Clear,지우기,Очистить,清除,Studio.Toolbox.General.SearchTagCreator,by:
-by:,제작:,параметр:,作者:,Studio.Toolbox.General.TabMarketplace,Marketplace
-Marketplace,마켓플레이스,Магазин,商店,Studio.Toolbox.General.TabInventory,Inventory
-Inventory,인벤토리,Снаряжение,背包,Studio.Toolbox.General.CategoryCreationsNeckAccessory,Neck Accessories
-Neck Accessories,목 장신구,Шея: аксесссуары,颈部配件,Studio.Toolbox.General.PremiumBenefits,Add Premium benefits
-Add Premium benefits,Premium 혜택 추가, ,添加 Premium 特权,Studio.Toolbox.AssetConfigUpload.IDCopied,ID Copied!
-ID Copied!,ID 복사 완료!, ,ID 已复制！,Studio.Toolbox.General.CategoryCreationsShoulderAccessory,Shoulder Accessories
-Shoulder Accessories,어깨 장신구,Плечи: аксесссуары,肩部配件,Studio.Toolbox.General.CategoryCreationsFrontAccessory,Front Accessories
-Front Accessories,전면 장신구,Перед: аксесссуары,正面配件,Studio.Toolbox.General.CategoryCreationsBackAccessory,Back Accessories
-Back Accessories,후면 장신구,Спина: аксесссуары,背面配件,Studio.Toolbox.General.TabCreations,Creations
-Creations,작품,Создания,作品,Studio.Toolbox.General.RightClickMenuCopyAssetID,Copy Asset ID
-Copy Asset ID,애셋 ID 복사,Копировать ID ресурса,复制素材 ID,Studio.Toolbox.General.RightClickMenuCopyAssetURI,Copy Asset URI
-Copy Asset URI,애셋 URI 복사,Копировать URI ресурса,复制素材 URI,Studio.Toolbox.General.RightClickMenuViewInBrowser,View In Browser
-View In Browser,브라우저에서 보기,Просмотр в обозревателе,在浏览器中查看,Studio.Toolbox.Purchase.FreeSuccessHeader,Installation Complete!
-Installation Complete!,설치 완료!,Установка завершена!,安装完成!,Studio.Toolbox.AssetConfigPreview.Format,Acceptable files: {formatString}
-Max: {maxDimensionsX} x {maxDimensionsY},Acceptable files: {formatString},Max: {maxDimensionsX} x {maxDimensionsY},허용 가능 파일: {formatString},최대: {maxDimensionsX} x {maxDimensionsY},Допустимые файлы: {formatString}
-Макс.: {maxDimensionsX} x {maxDimensionsY},可接受的文件: {formatString},最大: {maxDimensionsX} x {maxDimensionsY},Studio.Toolbox.General.RightClickMenuConfigureAsset,Configure asset,Configure asset
-애셋 구성,Настроить ресурс,配置素材,Studio.Toolbox.General.RightClickMenuEditAsset,Edit Asset,Edit Asset
-애셋 편집,Изменить ресурс,编辑素材,Studio.Toolbox.General.RightClickMenuReport,Report,Report
-신고,Отчет,举报,Studio.Toolbox.General.StatusReviewPending,In Review,In Review
-검토 중,На рассмотрении,审核中,Studio.Toolbox.ThumbnailStatus.InReview,In Review,In Review
-검토 중,На рассмотрении,审核中,Studio.Toolbox.General.StatusModerated,Rejected,Rejected
-거부됨,Отклонено,已拒绝,Studio.Toolbox.General.StatusDelayedRelease,Ready For Sale,Ready For Sale
-판매 준비 완료,Готово для продажи,待售,Studio.Toolbox.General.StatusReviewApproved,Ready For Sale,Ready For Sale
-판매 준비 완료,Готово для продажи,待售,Studio.Toolbox.General.StatusOffSale,Off Sale,Off Sale
-판매 종료,Не в продаже,下架,Studio.Toolbox.General.SalesOffsale,Offsale,Offsale
-판매 종료,Не в продаже,下架,Studio.Toolbox.General.StatusUnknown,Unknown,Unknown
-알 수 없음,Неизвестно,未知,Studio.Toolbox.General.AssetTypeModel,Model,Model
-모델,Модель,模型,Studio.Toolbox.General.AssetTypeDecal,Decal,Decal
-데칼,Деколь,贴花,Studio.Toolbox.ThumbnailStatus.Pending,Pending,Pending
-보류 중,Ожидание,处理中,Studio.Toolbox.General.AssetTypeMesh,Mesh,Mesh
-메시,Сетка,网格,Studio.Toolbox.General.AssetTypeHat,Hat,Hat
-모자,Головной убор,帽子,Studio.Toolbox.General.AssetTypeTeeShirt,T-Shirt,T-Shirt
-티셔츠,Футболка,T 恤,Studio.Toolbox.General.AssetTypeShirt,Shirt,Shirt
-셔츠,Рубашка,上衣,Studio.Toolbox.General.AssetTypeFaceAccessory,Face Accessory,Face Accessory
-얼굴 장신구,Лицо: аксессуары,脸部配件,Studio.Toolbox.General.AssetTypeNeckAccessory,Neck Accessory,Neck Accessory
-목 장신구,Шея: аксессуары,颈部配件,Studio.Toolbox.General.AssetTypeShoulderAccessory,Shoulder Accessory,Shoulder Accessory
-어깨 장신구,Плечи: аксессуары,肩部配件,Studio.Toolbox.General.AssetTypeFrontAccessory,Front Accessory,Front Accessory
-전면 장신구,Перед: аксессуары,正面配件,Studio.Toolbox.General.AssetTypeBackAccessory,Back Accessory,Back Accessory
-후면 장신구,Спина: аксессуары,背面配件,Studio.Toolbox.General.AssetTypeWaistAccessory,Waist Accessory,Waist Accessory
-허리 장신구,Пояс: аксессуары,腰部配件,Studio.Toolbox.General.DiscardMessage,Would you like to discard all changes?,Would you like to discard all changes?
-모든 변경 사항을 제거할까요?,Отменить все изменения?,你要放弃所有更改吗?,Studio.Toolbox.General.Discard,Discard,Discard
-제거,Сбросить,放弃,Studio.Toolbox.General.NoPluginsFound.TextLine1,Can’t find what you’re looking for?,Can’t find what you’re looking for?
-항목을 찾을 수 없나요?, ,未能搜索到相关内容？,Studio.Toolbox.General.Description,Description,Description
-설명,Описание,描述,Studio.Toolbox.General.Title,Title,Title
-제목,Название,标题,Studio.Toolbox.General.Tags,Tags,Tags
-태그,Теги,标签,Studio.Toolbox.General.Genre,Genre,Genre
-장르,Жанр,主题,Studio.Toolbox.General.Copy,Allow Copying,Allow Copying
-복사 허용,Разрешить копирование,允许复制,Studio.Toolbox.General.Comments,Allow Comments,Allow Comments
-코멘트 허용,Разрешить комментарии,允许评论,Studio.Toolbox.General.LearnMore,Learn more,Learn more
-더 알아보기,Подробнее,了解更多,Studio.Toolbox.General.Me,Me,Me
-나,Я,我,Studio.Toolbox.General.AssetType,Asset type,Asset type
-애셋 유형,Тип ресурса,素材类型,Studio.Toolbox.General.SalesSale,Sale,Sale
-판매,Распродажа,销售,Studio.Toolbox.General.SalesOnsaleApplyToSave,Onsale (apply to save changes),Onsale (apply to save changes)
-판매 시작(적용하여 변경 사항 저장),В продаже (применить,在售 (应用以保存更改),Studio.Toolbox.General.SalesOffsaleApplyToSave,Offsale (apply to save changes),Offsale (apply to save changes)
-판매 종료(적용하여 변경 사항 저장),Не в продаже (применить,下架 (应用以保存更改),Studio.Toolbox.General.SalesItemCannotBeSold,This item cannot be sold right now,This item cannot be sold right now
-이 아이템은 지금 팔 수 없습니다,Невозможно продать предмет прямо сейчас,此物品无法立即出售,Studio.Toolbox.General.SalesPrice,Price,Price
-가격,Цена,价格,Studio.Toolbox.General.SalesPriceRange,Price range: {minPrice} - {maxPrice},Price range: {minPrice} - {maxPrice}
-가격 범위: {minPrice} - {maxPrice},Диапазон цен: {minPrice} - {maxPrice},价格范围: {minPrice} - {maxPrice},Studio.Toolbox.General.SalesEarning,You earn: {earning},You earn: {earning}
-획득 금액: {earning},Вы получите: {earning},你赚取: {earning},Studio.Toolbox.AssetConfigFooter.Override,Overwrite an existing asset...,Overwrite an existing asset...
-기존 애셋 덮어쓰기...,Перезаписать существующий ресурс...,覆盖现有素材...,Studio.Toolbox.General.SideTabVersions,Versions,Versions
-버전,Версии,版本,Studio.Toolbox.General.SideTabGeneral,General,General
-일반,Общие,通用,Studio.Toolbox.General.SideTabPermissions,Permissions,Permissions
-권한,Разрешения,权限,Studio.Toolbox.General.PreviewAreaAssetID,Asset ID: {assetId},Asset ID: {assetId}
-애셋 ID: {assetId},ID ресурса: {assetId},素材 ID: {assetId},Studio.Toolbox.General.PreviewAreaStatus,Status: {assetStatus},Status: {assetStatus}
-상태: {assetStatus},Статус: {assetStatus},状态: {assetStatus},Studio.Toolbox.General.InstallSuccess,Success!,Success!
-성공!,Успешно!,成功!,Studio.Toolbox.General.InstallFailure,Failure,Failure
-실패,Ошибка,失败,Studio.Toolbox.AssetConfigFooter.OverrideTitle,Choose an existing model to overwrite.,Choose an existing model to overwrite.
-덮어쓸 기존 모델을 선택하세요.,Выберите существующую модель для перезаписи.,选择要覆盖的现有模型。,Studio.Toolbox.AssetConfigAnimation.AnimationID,Animation ID,Animation ID
-애니메이션 ID, ,动画 ID,Studio.Toolbox.AssetConfigCopy.Terms,"By switching on, you are granting every other user of Roblox the right to use (in various ways) the content you are now sharing. If you do not want to grant this right, please do not check this box. For more information about sharing content, please review the Roblox Terms of Use.","By switching on, you are granting every other user of Roblox the right to use (in various ways) the content you are now sharing. If you do not want to grant this right, please do not check this box. For more information about sharing content, please review the Roblox Terms of Use."
-활성화하면 Roblox의 다른 모든 사용자들에게 현재 공유하고 있는 콘텐츠를 다양한 방식으로 사용할 수 있는 권한을 부여합니다. 이러한 권한을 부여하지 않으려면 이 확인란을 선택하지 마세요. 콘텐츠 공유에 대한 자세한 정보는 Roblox 이용 약관을 참조하시기 바랍니다., you are granting every other user of Roblox the right to use (in various ways) the content you are now sharing. If you do not want to grant this right,切换至开位置，即表示你授予 Roblox 的所有其他用户 (以各种方式) 使用你现在分享的内容的权限。如果你不想授予此权限，请勿勾选此框。有关分享内容的详细信息，请查看 Roblox 使用条款。,Studio.Toolbox.AssetConfigPreview.Preview,Preview,Preview
-미리 보기,Предварительный просмотр,预览,Studio.Toolbox.AssetConfigPreview.Change,Change,Change
-변경,Изменить,更改,Studio.Toolbox.AssetConfigVersions.Current,Current published version,Current published version
-현재 게시된 버전,Текущая опубликованная версия,当前发布的版本,Studio.Toolbox.AssetConfigVersions.Restore,Restore previous version,Restore previous version
-이전 버전 복원,Восстановить предыдущую версию,还原之前版本,Studio.Toolbox.AssetConfig.GetAssetFailed,There was an problem fetching asset data. We will be closing AssetConfig page.,There was an problem fetching asset data. We will be closing AssetConfig page.
-애셋 데이터를 가져오는 중에 문제가 발생했습니다. AssetConfig 페이지를 닫습니다.,Возникла проблема при получении данных ресурса. Страница AssetConfig будет закрыта.,提取素材数据时发生问题。将关闭 AssetConfig 页面。,Studio.Toolbox.AssetConfigPackagePermissions.UserOwnedWarning, Users you share with will always have access to the current and previous versions of this package. Removing collaborators will discontinue their access to newer versions of the package., Users you share with will always have access to the current and previous versions of this package. Removing collaborators will discontinue their access to newer versions of the package.
- 공유 받는 사용자는 항상 이 패키지의 현재 및 이전 버전에 액세스할 수 있습니다. 공동 작업자를 제거하면 최신 버전의 패키지에 대한 액세스가 중단됩니다.,"Пользователи, с которыми вы делитесь, всегда будут иметь доступ к текущей и предыдущей версиям этого пакета. Пользователи, отключенные от совместной работы, потеряют доступ к новым версиям пакета.", 你所进行共享的用户将始终拥有此包最新与先前版本的访问权限。将协作者移除后，也将终止其对此包今后版本的访问权限。,Studio.Toolbox.AssetConfig.Error,Error,Error
-오류,Ошибка,错误,Studio.Toolbox.ThumbnailStatus.Error,Error,Error
-오류,Ошибка,错误,Studio.Toolbox.AssetUploadResult.Success,Successfully submitted!,Successfully submitted!
-제출 성공!, ,提交成功！,Studio.Toolbox.AssetConfigPackagePermissions.PackageOwner,Package Owner,Package Owner
-패키지 소유자,Владелец пакета,包所有者,Studio.Toolbox.AssetConfigPackagePermissions.Owner,Owner,Owner
-소유자,Владелец,所有者,Studio.Toolbox.AssetConfigPackagePermissions.OwnerLabel,Owner,Owner
-소유자,Владелец,所有者,Studio.Toolbox.AssetConfigPackagePermissions.ShareWith,Share with,Share with
-다음 사람과 공유,Поделиться с...,分享对象,Studio.Toolbox.AssetConfigPackagePermissions.NoAccessLabel,No Access,No Access
-접근 불가,Нет доступа,无法访问,Studio.Toolbox.AssetConfigPackagePermissions.UseViewLabel,Use & View,Use & View
-사용 및 보기,Использование и Просмотр,使用和查看,Studio.Toolbox.NoTagFound,Word(s) not found in the tag library,Word(s) not found in the tag library
-태그 라이브러리에서 단어를 찾을 수 없음,В библиотеке тегов нет искомого,未能在标签库中找到相应词语,Studio.Toolbox.AssetConfigPackagePermissions.EditLabel,Edit,Edit
-편집,Изменить,编辑,Studio.Toolbox.AssetConfigPackagePermissions.MultipleLabel,(Multiple),(Multiple)
-(여러 항목),(Несколько),(多项),Studio.Toolbox.AssetConfigPackagePermissions.NoAccessDescription,"Cannot use, view or edit this package","Cannot use, view or edit this package"
-이 패키지를 사용하거나 보거나 편집할 수 없습니다, view or edit this package,无法使用、查看或编辑此包,Studio.Toolbox.AssetConfigPackagePermissions.UseViewDescription,Can use and view this package,Can use and view this package
-이 패키지를 사용하고 볼 수 있습니다,Можно использовать и просматривать пакет,可以使用并查看此包,Studio.Toolbox.AssetConfigPackagePermissions.EditDescription,"Can use, view and edit this package","Can use, view and edit this package"
-이 패키지를 사용하고 보고 편집할 수 있습니다, view and edit this package,可以使用、查看和编辑此包,Studio.Toolbox.AssetConfigPackagePermissions.FriendsCollaboratorType,Friends,Friends
-친구,Друзья,好友,Studio.Toolbox.ThumbnailStatus.Blocked,Blocked,Blocked
-차단됨,Заблокировано,已屏蔽,Studio.Toolbox.AssetConfigPackagePermissions.PackageCreator,Package Creator,Package Creator
-패키지 생성자,Создатель пакета,包创建者,Studio.Toolbox.AssetConfigPackagePermissions.UsersCollaboratorType,Users,Users
-사용자,Пользователи,用户,Studio.Toolbox.AssetConfigPackagePermissions.GroupsCollaboratorType,Groups,Groups
-그룹,Группы,组合,Studio.Toolbox.AssetConfigPackagePermissions.MyFriendsCollaborator,My Friends,My Friends
-내 친구,Мои друзья,我的好友,Studio.Toolbox.AssetConfigPreview.Process,Image will be reviewed by moderators before being made visible to other users,Image will be reviewed by moderators before being made visible to other users
-이미지는 검열팀의 검토가 끝난 후에 다른 사용자들에게 공개됩니다,"Изображение будет рассмотрено модераторами перед тем, как его увидят другие пользователи.",图片将由协调员审查，然后再对其他用户开放显示,Studio.Toolbox.AssetConfigPackagePermissions.TooManyCollaboratorsText,You cannot add more than {maxNumCollaborators:int} collaborators,You cannot add more than {maxNumCollaborators:int} collaborators
-공동 작업자는 최대 {maxNumCollaborators:int}명까지만 추가할 수 있습니다.,Можно добавить не более {maxNumCollaborators:int} участников,无法添加 {maxNumCollaborators:int} 位以上的协作者,Studio.Toolbox.Purchase.RobuxBalance,Your current balance:,Your current balance:
-현재 잔액:,Ваш текущий баланс:,你当前的余额:,Studio.Toolbox.Purchase.InsufficientPrompt,You need {robux:int} more Robux to buy "{name}" from {creator}.,You need {robux:int} more Robux to buy "{name}" from {creator}.
-{creator}에게 "{name}"을(를) 구매하려면 {robux:int} Robux가 더 필요합니다.,"Требуется еще {robux:int} Robux для покупки (\"{name}\", автор {creator}).",你还需要 {robux:int} Robux 才能从 {creator} 处购买到 "{name}"。,Studio.Toolbox.Purchase.Retry,Retry,Retry
-다시 시도,Повтор,重试,Studio.Toolbox.Purchase.Buy,Buy,Buy
-구매,Купить,购买,Studio.Toolbox.Purchase.BuyTitle,Buy & Install Plugin,Buy & Install Plugin
-플러그인 설치 및 구매,Купить и установить плагин,购买和安装插件,Studio.Toolbox.Purchase.InsufficientTitle,Insufficient Robux,Insufficient Robux
-Robux가 부족함,Недостаточно Robux,Robux 不足,Studio.Toolbox.Purchase.FailedHeader,Purchase failed,Purchase failed
-구매 실패,Покупка не совершена,购买失败,Studio.Toolbox.Purchase.Free,FREE,FREE
-무료,БЕСПЛАТНО,免费,Studio.Toolbox.General.Fee,After {percent}% fee:,After {percent}% fee:
-{percent}% 수수료 적용 후 금액:,Со сбором {percent}%:,在支付 {percent}% 的手续费后:,Studio.Toolbox.General.Earn,You earn:,You earn:
-획득 금액:,Вы получите:,你赚取:,Studio.Toolbox.AssetConfigSales.Target,"By enabling it, this asset will be put in {market} and available for any Roblox {user}.","By enabling it, this asset will be put in {market} and available for any Roblox {user}."
-활성화하면 이 애셋이 {market}에 포함되어 모든 Roblox {user}이(가) 사용할 수 있게 됩니다.,"После вашего разрешения этот ресурс появится в магазине ({market}), и любой {user} Roblox сможет им воспользоваться.",启用之后，此项素材就会投放到 {market} 并可供所有 Roblox {user} 使用。,Studio.Toolbox.General.CategoryGroupPlugins,Group Plugins,Group Plugins
-그룹 플러그인,Плагины групп,群组插件,Studio.Toolbox.General.Free,Free,Free
-무료,Бесплатно,免费,Studio.Toolbox.General.Installing,Installing,Installing
-설치,Устанавливается,正在安装,Studio.Toolbox.AssetConfigError.NetworkError,We encountered some problems:,We encountered some problems:
-문제가 발생했습니다.,Обнаружены проблемы:,我们遇到了一些问题：,Studio.Toolbox.AssetConfigPackagePermissions.SearchbarDefault,Search for Friends,Search for Friends
-친구 검색,Поиск друзей,搜索好友,Studio.Toolbox.AssetConfigPackagePermissions.GroupOwnedWarning,No Access takes effect from new versions of this package. Users assigned to rolesets with "Edit" permissions will always have access to current and previous versions of this package.,No Access takes effect from new versions of this package. Users assigned to rolesets with "Edit" permissions will always have access to current and previous versions of this package.
-이 패키지의 새 버전에는 액세스 권한이 적용되지 않습니다. "편집" 권한이 있는 역할 세트에 할당된 사용자는 항상 이 패키지의 현재 및 이전 버전에 액세스할 수 있습니다.,"Команда «Нет доступа» влияет на новые версии этого пакета. Пользователи, которым разрешено «Редактировать», всегда будут иметь доступ к текущей и предыдущим версиям пакета.",无访问权限设定会在此包更新版本后生效。拥有“编辑”权限角色集中的用户将始终有权访问此包的最新与先前版本。,Studio.Toolbox.AssetConfigPackagePermissions.PackageDetails,Package Details,Package Details
-패키지 세부 정보,Информация о пакете,包详情,Studio.Toolbox.Purchase.FreeTitle,Install Plugin,Install Plugin
-플러그인 설치,Установить плагин,安装插件,Studio.Toolbox.Purchase.SuccessHeader,Buy & Installation Complete!,Buy & Installation Complete!
-플러그인 설치 및 구매!,Покупка и установка завершены!,购买及安装完成！,Studio.Toolbox.Purchase.SuccessDetails,Successfully installed "{name}".,Successfully installed "{name}".
-"{name}"을(를) 설치했습니다.,"{name}": установка завершена,成功安装 "{name}"。,Studio.Toolbox.MaxTagsDescription,Add up to {max:int} tags from the tag library,Add up to {max:int} tags from the tag library
-태그 라이브러리에서 최대 {max:int}개의 태그 추가,Добавьте не более {max:int} тегов из библиотеки тегов,从标签库中最多添加 {max:int} 个标签,Studio.Toolbox.General.AbbreviatedSeconds,s,s
-초, ,秒,Studio.Toolbox.General.AbbreviatedMinutes,m,m
-분, ,分,Studio.Toolbox.General.SearchOptionAudioTo,to,to
-(으)로, ,至,Studio.Toolbox.General.SearchOptionAudioLength,Sound Length,Sound Length
-사운드 길이, ,声音长度,Studio.Toolbox.AssetConfigAnimation.FilterID,Filter ID,Filter ID
-필터 ID, ,过滤 ID,Studio.Toolbox.General.CategoryMyVideos,My Videos,My Videos
-내 비디오, ,我的视频,Studio.Toolbox.General.CategoryVideos,Videos,Videos
-비디오, ,视频,Studio.Toolbox.AssetUploadResult.Failure,Submission failed,Submission failed
-제출 실패, ,提交失败,Studio.Toolbox.General.NoPluginsFound.TextLine2,"For more plugins, try searching in the {link} on our website.","For more plugins, try searching in the {link} on our website."
-더 많은 플러그인을 보려면 웹사이트의 {link}에서 검색하세요., ,若想获取更多插件，请在网站{link}中进行搜索。,Studio.Toolbox.General.NoPluginsFound.LinkText,Library,Library
-라이브러리, ,资料库,Studio.Toolbox.AssetConfigAnimation.InvalidAnimationID,Invalid Animation ID,Invalid Animation ID
-유효하지 않은 애니메이션 ID, ,无效的动画 ID,Studio.Toolbox.Common.Submit,Submit,Submit
-제출, ,提交,Studio.Toolbox.Common.Close,Close,Close
-닫기, ,关闭,Studio.Toolbox.Common.Insert,Insert,Insert
-삽입, ,插入,Studio.Toolbox.Common.Install,Install,Install
-설치, ,安装,Studio.Toolbox.Common.Loading,Loading,Loading
-불러오는 중, ,正在加载,Studio.Toolbox.Common.Installed,Installed,Installed
-설치됨, ,已安装
+Key,Source,de-de,en-us,es-es,fr-fr,ja-jp,ko-kr,pt-br,ru-ru,zh-cjv,zh-cn,zh-tw
+Studio.Toolbox.General.CategoryCreationsMeshes,Meshes,Meshes,Meshes,Mallas,Meshes,メッシュ,메시,Malhas,Сетки,网格,网格,網格
+Studio.Toolbox.General.CategoryMeshes,Meshes,Meshes,Meshes,Mallas,Maillages,メッシュ,메시,Malhas,Сетки,网格,网格,網格
+Studio.Toolbox.AssetConfigPackagePermissions.NoResults,No results found, ,No results found,No se encontraron resultados,Pas de résultats trouvés,結果が見つかりませんでした,결과 없음,Nenhum resultado encontrado,Результатов не найдено,未找到结果,未找到结果,找不到結果
+Studio.Toolbox.General.InfoBannerText,No results found,Keine Ergebnisse gefunden,No results found,No se encontraron resultados,Aucun résultat trouvé,結果が見つかりませんでした,결과 없음,Nenhum resultado encontrado,Результатов не найдено,未找到结果,未找到结果,未找到結果
+Studio.Toolbox.General.ToolboxToolbarName,Toolbox,Toolbox,Toolbox,Caja de herramientas,Boîte à outils,ツールボックス,도구 상자,Caixa de ferramentas,Панель инструментов,工具箱,工具箱,工具箱
+Studio.Toolbox.General.StatusOnSale,On Sale, ,On Sale,En venta,À vendre,販売中,판매 시작,À venda,В продаже,在售,在售,上架
+Studio.Toolbox.General.AssetCreatorIntroText,by {name:username},von {name:username},by {name:username},de {name:username},par {name:username},作：{name:username},제작: {name:username},de {name:username},Имя пользователя: {name:username},作者: {name:username},作者: {name:username},創作者：{name:username}
+Studio.Toolbox.General.CategoryCreationsModels,Models, ,Models,Modelos,Modèles,モデル,모델,Modelos,Модели,模型,模型,模型
+Studio.Toolbox.General.CategoryModels,Models,Modelle,Models,Modelos,Modèles,モデル,모델,Modelos,Модели,模型,模型,模型
+Studio.Toolbox.General.CategoryCreationsPlugins,Plugins, ,Plugins,Plugins,Plugins,プラグイン,플러그인,Plugins,Плагины,插件,插件,外掛程式
+Studio.Toolbox.General.CategoryPaidPlugins,Plugins,Plug-ins,Plugins,Plugins,Plugins,プラグイン,플러그인,Plugins,Плагины,插件,插件,外掛程式
+Studio.Toolbox.General.CategoryPlugins,Plugins,Plug-ins,Plugins,Plugins,Plugins,プラグイン,플러그인,Plugins,Плагины,插件,插件,外掛程式
+Studio.Toolbox.General.CategoryCreationsDevelopmentSectionDivider,Game development assets, ,Game development assets,Recursos para el desarrollo del juego,Éléments pour le développement du jeu,ゲーム開発アセット,게임 개발 애셋,Recursos de desenvolvimento do jogo,Ресурсы разработки игры,游戏开发素材,游戏开发素材,遊戲開發素材
+Studio.Toolbox.General.SalesOnsale,Onsale, ,Onsale,En venta,En vente,販売中,판매 시작,À venda,В продаже,在售,在售,上架
+Studio.Toolbox.General.EndorseBadgeTooltipText,Marked as a high-quality item,Als hochwertiges Element gekennzeichnet,Marked as a high-quality item,Marcado como elemento de alta calidad,Marqué comme objet de qualité,ハイクオリティアイテムとして登録済み,고품질 아이템으로 표시,Marcado como item de alta qualidade,Обозначен как высококачественный товар,标记为高品质的项目,标记为高品质的项目,已標記為高品質物品
+Studio.Toolbox.General.CategoryCreationsDecals,Images,Bilder,Images,Imágenes,Images,画像,이미지,Imagens,Изображения,图片,图片,圖像
+Studio.Toolbox.General.CategoryDecals,Images,Bilder,Images,Imágenes,Images,画像,이미지,Imagens,Изображения,图片,图片,圖像
+Studio.Toolbox.General.AssetTypeAudio,Audio, ,Audio,Audio,Audio,オーディオ,오디오,Áudio,Звук,音频,音频,語音
+Studio.Toolbox.General.CategoryAudio,Audio,Audiodateien,Audio,Audio,Sons,オーディオ,오디오,Áudios,Звук,音频,音频,語音
+Studio.Toolbox.General.CategoryCreationsAudio,Audio,Audio,Audio,Audio,Audio,オーディオ,오디오,Áudio,Звук,音频,音频,語音
+Studio.Toolbox.General.CategoryMyDecals,My Images,Meine Bilder,My Images,Mis imágenes,Mes images,マイ画像,내 이미지,Minhas imagens,Мои изображения,我的图片,我的图片,我的圖像
+Studio.Toolbox.General.Ownership,Creator, ,Creator,Creador,Créateur,クリエーター,크리에이터,Criador,Автор,创建者,创建者,創作者
+Studio.Toolbox.General.SearchOptionCreator,Creator,Ersteller,Creator,Creador,Créateur,クリエーター,크리에이터,Criador,Автор,创建者,创建者,創作者
+Studio.Toolbox.General.CategoryMyModels,My Models,Meine Modelle,My Models,Mis modelos,Mes modèles,マイモデル,내 모델,Meus modelos,Мои модели,我的模型,我的模型,我的模型
+Studio.Toolbox.General.CategoryMyMeshes,My Meshes,Meine Meshes,My Meshes,Mis mallas,Mes maillages,マイメッシュ,내 메시,Minhas malhas,Мои сетки,我的网格,我的网格,我的網格
+Studio.Toolbox.General.CategoryGroupPackages,Group Packages,Gruppen-Pakete,Group Packages,Paquetes del grupo,Packages du groupe,グループのパッケージ,그룹 패키지,Agrupar pacotes,Пакеты группы,群组包,群组包,組合套件
+Studio.Toolbox.General.SearchTagLength,length:, ,length:,duración:,longueur :,長さ：,길이:,duração:, ,长度：,长度：,長度：
+Studio.Toolbox.General.CategoryMyAudio,My Audio,Meine Audiodateien,My Audio,Mi audio,Mes sons,マイオーディオ,내 오디오,Meus áudios,Мой звук,我的音频,我的音频,我的語音
+Studio.Toolbox.General.CategoryMyPackages,My Packages,Meine Pakete,My Packages,Mis paquetes,Mes packages,マイパッケージ,내 패키지,Meus pacotes,Мои пакеты,我的包,我的包,我的套件
+Studio.Toolbox.General.SideTabSales,Sales, ,Sales,Ventas,Ventes,セール,판매,Vendas,Распродажи,销售,销售,買賣
+Studio.Toolbox.General.CategoryMyPlugins,My Plugins,Meine Plug-ins,My Plugins,Mis plugins,Mes plugins,マイプラグイン,내 플러그인,Meus plugins,Мои плагины,我的插件,我的插件,我的外掛程式
+Studio.Toolbox.General.SortByText,Sort by:,Sortieren nach:,Sort by:,Ordenar por:,Trier par :,並べ替え順:,정렬 기준:,Ordenar por:,Сортировка:,排序方式:,排序方式:,排序方式：
+Studio.Toolbox.General.CategoryRecentModels,Recent Models,Zuletzt verwendete Modelle,Recent Models,Modelos recientes,Modèles récents,最近のモデル,최근 모델,Modelos recentes,Недавние модели,最近使用的模型,最近使用的模型,近期使用的模型
+Studio.Toolbox.General.CategoryRecentAudio,Recent Audio,Zuletzt verwendete Audiodateien,Recent Audio,Audio reciente,Sons récents,最近の音声,최근 오디오,Áudios recentes,Недавние звукозаписи,最近使用的音频,最近使用的音频,近期使用的語音
+Studio.Toolbox.Common.Update,Update, ,Update,Actualizar,Mise à jour,アップデート,업데이트,Atualizar, ,更新,更新,更新
+Studio.Toolbox.General.CategoryRecentDecals,Recent Images,Zuletzt verwendete Bilder,Recent Images,Imágenes recientes,Images récentes,最近の画像,최근 이미지,Imagens recentes,Недавние изображения,最近使用的图片,最近使用的图片,近期使用的圖像
+Studio.Toolbox.General.CategoryRecentMeshes,Recent Meshes,Zuletzt verwendete Meshes,Recent Meshes,Mallas recientes,Maillages récents,最近のメッシュ,최근 메시,Malhas recentes,Недавние сетки,最近使用的网格,最近使用的网格,近期使用的網格
+Studio.Toolbox.AssetConfigPackagePermissions.SearchByUser,Search by username, ,Search by username,Buscar por nombre de usuario,Recherche par nom d'utilisateur,ユーザーネームで検索,사용자 이름으로 검색,Busca por usuário,Поиск по имени пользователя,依用户名搜索,依用户名搜索,以使用者名稱搜尋
+Studio.Toolbox.General.CategoryGroupModels,Group Models,Gruppen-Modelle,Group Models,Modelos del grupo,Modèles du groupe,グループのモデル,그룹 모델,Agrupar modelos,Модели группы,群组模型,群组模型,組合模型
+Studio.Toolbox.General.CategoryCreationsFaceAccessory,Face Accessories,Gesichts-Accessoire,Face Accessories,Accesorios para la cara,Accessoires visage,顔用アクセサリ,얼굴 장신구,Acessórios de rosto,Лицо: аксесссуары,脸部配件,脸部配件,臉部飾品
+Studio.Toolbox.AssetConfigFooter.UploadWithFee,Submit for,{price:int} Robux, ,Submit for,{price:int} Robux,Enviar por,{price:int} Robux,Soumettre pour,{price:int} Robux,{price:int} Robux,で提出,{price:int} Robux 사용
+제출,Enviar para,{price:int} Robux, ,花费 {price:int} Robux,并提交,花费 {price:int} Robux,并提交,以 {price:int} Robux,提交,Studio.Toolbox.General.CategoryRecentVideos,Recent Videos, 
+Recent Videos,Videos recientes,Vidéos récentes,最近のビデオ,최근 비디오,Vídeos recentes, ,最近使用的视频,最近使用的视频,近期使用的影片,Studio.Toolbox.General.FooterButtonWhiteName,White,Weiß
+White,Blanco,Blanc,白,흰색,Branco,Белый,白色,白色,白,Studio.Toolbox.General.CategoryGroupDecals,Group Images,Gruppen-Bilder
+Group Images,Imágenes del grupo,Images du groupe,グループの画像,그룹 이미지,Agrupar imagens,Изображения группы,群组图片,群组图片,組合圖像,Studio.Toolbox.General.SuggestionsBuilding,Building,Gebäude
+Building,Edificio,Bâtiment,ビル,건물,Construção,Постройки,建筑,建筑,建築,Studio.Toolbox.General.CategoryGroupMeshes,Group Meshes,Gruppen-Meshes
+Group Meshes,Mallas del grupo,Maillages du groupe,グループのメッシュ,그룹 메시,Agrupar malhas,Сетки группы,群组网格,群组网格,組合網格,Studio.Toolbox.General.TabRecent,Recent,Aktuelle
+Recent,Reciente,Récents,最近のもの,최근,Recentes,Недавние,最近,最近,近期使用,Studio.Toolbox.General.SearchOptionSort,Sort By,Sortieren nach
+Sort By,Ordenar por,Trier par,並べ替え順,정렬 기준,Ordenar por,Сортировка:,排序方式,排序方式,排序方式,Studio.Toolbox.General.CategoryGroupAudio,Group Audio,Gruppen-Audiodateien
+Group Audio,Audio del grupo,Sons du groupe,グループのオーディオ,그룹 오디오,Agrupar áudios,Звукозаписи группы,群组音频,群组音频,組合音效,Studio.Toolbox.AssetConfigFooter.ImportTitle,Choose an asset to import., 
+Choose an asset to import.,Elige un recurso para importar.,Choisir un objet à importer.,インポートするアセットを選ぶ。,가져올 애셋을 선택하세요.,Escolha um recurso para importar., ,请选择要导入的素材。,请选择要导入的素材。,選擇要匯入的素材。,Studio.Toolbox.General.SortByMostTaken,Most Taken,Am häufigsten verwendet
+Most Taken,Más populares,Populaires,一番人気,사용 횟수,Mais populares,Использование,最多采用,最多采用,最常採用,Studio.Toolbox.General.SearchBarDefaultText,Search,Suchen
+Search,Buscar,Rechercher,検索,검색,Pesquisar,Поиск,搜索,搜索,搜尋,Studio.Toolbox.General.AssetTypePlugin,Plugin, 
+Plugin,Plugin,Plugin,プラグイン,플러그인,Plugin,Плагин,插件,插件,外掛程式,Studio.Toolbox.General.SortByFavorites,Favorites,Favoriten
+Favorites,Favoritos,Favoris,お気に入り,즐겨찾기,Favoritos,Избранное,收藏,收藏,最愛,Studio.Toolbox.General.SearchBarCreatorText,Search for users,Nach Benutzern suchen
+Search for users,Buscar usuarios,Rechercher des utilisateurs,ユーザーの検索,사용자 검색,Pesquisar usuários,Поиск пользователей,搜索用户,搜索用户,搜尋使用者,Studio.Toolbox.General.SuggestionsIntroText,Try searching for:,Suchen nach:
+Try searching for:,Intenta buscar:,Essayez de rechercher :,以下を検索してみてください:,다음으로 검색:,Tente pesquisar por:,Попробуйте найти:,尝试搜索:,尝试搜索:,正在嘗試搜尋：,Studio.Toolbox.General.CategoryCreationsGroupHair,Group Hair, 
+Group Hair,Pelo del grupo, ,グループの髪,그룹 헤어,Cabelos de grupo, , , ,群組髮型,Studio.Toolbox.General.SuggestionsNPC,NPC,NSC
+NPC,PNJ,PNJ,NPC,NPC,NPC,НИП,NPC,NPC,NPC,Studio.Toolbox.General.SuggestionsVehicle,Vehicle,Fahrzeug
+Vehicle,Vehículo,Véhicule,車,차량,Veículo,Транспорт,车辆,车辆,載具,Studio.Toolbox.General.AssetTypePants,Pants, 
+Pants,Pantalones,Pantalons,パンツ,바지,Calça,Брюки,裤子,裤子,褲子,Studio.Toolbox.General.CategoryCreationsPants,Pants,Hosen
+Pants,Pantalones,Pantalons,パンツ,바지,Calças,Брюки,裤子,裤子,褲子,Studio.Toolbox.General.SuggestionsWeapon,Weapon,Waffe
+Weapon,Arma,Arme,武器,무기,Arma,Оружие,武器,武器,武器,Studio.Toolbox.General.CategoryCreationsTeeShirts,T-Shirts,T-Shirts
+T-Shirts,Camisetas,T-Shirts,Tシャツ,티셔츠,Camisetas,Футболки,T 恤,T 恤,T 恤,Studio.Toolbox.Common.OK,OK, 
+OK,Aceptar,OK,OK,확인,OK, ,确认,确认,確定,Studio.Toolbox.Purchase.BuyPrompt,Would you like to buy "{name}" from {creator} for {robux:int} Robux?, 
+Would you like to buy "{name}" from {creator} for {robux:int} Robux?,¿Quieres comprar "{name}" de {creator} por {robux:int} Robux?,Voudrais-tu acheter {name} de {creator} pour {robux:int} Robux ?,{creator} さんから {robux:int} Robuxで「{name}」を買いますか？,{creator}에게 "{name}"을(를) {robux:int} Robux에 구매할까요?,Gostaria de comprar "{name}" de {creator} por {robux:int} Robux?,"\"{name}\", автор {creator}: купить для {robux:int} Robux?",你要以 {robux:int} Robux 从 {creator} 处购买 "{name}" 吗?,你要以 {robux:int} Robux 从 {creator} 处购买 "{name}" 吗?,您要向 {creator} 以 {robux:int} Robux 購買「{name}」嗎？,Studio.Toolbox.General.SuggestionsLight,Light,Licht
+Light,Luz,Lumière,ライト,조명,Luz,Свет,光,光,燈光,Studio.Toolbox.General.SortByRelevance,Relevance,Relevanz
+Relevance,Relevancia,Pertinence,関連性,관련성,Relevância,Актуальность,关联,关联,相關性,Studio.Toolbox.General.CategoryCreationsShirts,Shirts, 
+Shirts,Camisas,Chemises,シャツ,셔츠,Camisas,Рубашки,上衣,上衣,上衣,Studio.Toolbox.General.SortByUpdated,Updated,Aktualisiert
+Updated,Actualizado,Mis à jour,アップデート済み,업데이트,Atualizado,Обновление выполнено,已更新,已更新,更新時間,Studio.Toolbox.General.AssetTypeHairAccessory,Hair, 
+Hair,Pelo,Cheveux,髪,헤어,Cabelo,Волосы,头发,头发,髮型,Studio.Toolbox.General.CategoryCreationsHair,Hair,Haare
+Hair,Pelo,Cheveux,髪,헤어,Cabelo,Волосы,头发,头发,髮型,Studio.Toolbox.General.CategoryCreationsWaistAccessory,Waist Accessories,Taille-Accessoires
+Waist Accessories,Accesorios para la cintura,Accessoires taille,腰用アクセサリ,허리 장신구,Acessórios de cintura,Пояс: аксесссуары,腰部配件,腰部配件,腰部飾品,Studio.Toolbox.General.SortByRatings,Ratings,Bewertungen
+Ratings,Calificaciones,Notes,評価,평가,Avaliações,Рейтинги,评级,评级,評分,Studio.Toolbox.Purchase.BuyRobux,Buy Robux, 
+Buy Robux,Comprar Robux,Acheter des Robux,Robuxを買う,Robux 구매,Comprar Robux,Купить Robux,购买 Robux,购买 Robux,購買 Robux,Studio.Toolbox.AssetConfigFooter.NewAsset,Save as a new asset..., 
+Save as a new asset...,Guardar como nuevo recurso...,Sauvegarder un nouvel élément...,新規アセットとして保存...,새로운 애셋으로 저장...,Salvar como novo recurso...,Сохранить как новый ресурс...,另存为新素材...,另存为新素材...,以新素材儲存……,Studio.Toolbox.General.SalesServiceFee,Service fee will be collected upon sale, 
+Service fee will be collected upon sale,La cuota de servicio se cobrará al momento de la venta,Des frais de service seront perçus lors de la vente,手数料は販売時に回収されます,판매 시 서비스 수수료가 징수됩니다,A taxa de serviço será deduzida durante a venda,При продаже взимается сервисный сбор,将在销售时收取手续费,将在销售时收取手续费,服務費將會在買賣完成時收取。,Studio.Toolbox.General.CategoryCreationsCatalogSectionDivider,Avatar assets, 
+Avatar assets,Recursos para el avatar,Éléments avatars,アバターアセット,아바타 애셋,Recursos de avatar,Ресурсы аватара,虚拟形象素材,虚拟形象素材,虛擬人偶素材,Studio.Toolbox.General.VotingVoteText,vote,abstimmen
+vote,voto,vote,投票,표,voto,голос,票,票,票,Studio.Toolbox.General.VotingVotesText,votes,Stimmen
+votes,votos,votes,投票,표,votos,голоса,票,票,票,Studio.Toolbox.General.FooterBGText,Background:,Hintergrund:
+Background:,Fondo:,Arrière-plan :,背景:,배경:,Fundo:,Фон:,背景:,背景:,背景：,Studio.Toolbox.General.FooterButtonBlackName,Black,Schwarz
+Black,Negro,Noir,黒,검은색,Preto,Черный,黑色,黑色,黑,Studio.Toolbox.General.SearchOptionsCancel,Cancel,Abbrechen
+Cancel,Cancelar,Annuler,キャンセル,취소,Cancelar,Отмена,取消,取消,取消,Studio.Toolbox.Purchase.Cancel,Cancel, 
+Cancel,Cancelar,Annuler,キャンセル,취소,Cancelar,Отмена,取消,取消,取消,Studio.Toolbox.Purchase.FailedDetails,Purchase of "{name}" failed., 
+Purchase of "{name}" failed.,Error en la compra de "{name}",L'achat de {name} a échoué.,「{name}」を購入できませんでした。,"{name}" 구매에 실패했습니다.,Falha ao comprar "{name}".,"{name}": покупка не совершена.,购买 "{name}" 失败。,购买 "{name}" 失败。,購買「{name}」失敗。,Studio.Toolbox.General.SearchOptionsApply,Apply,Anwenden
+Apply,Aplicar,Appliquer,適用,적용,Aplicar,Применить,应用,应用,套用,Studio.Toolbox.General.FooterButtonNoneName,None,Keiner
+None,Ninguno,Aucun,なし,없음,Nenhum,Нет,无,无,無,Studio.Toolbox.General.SearchResults,Search Results,Suchergebnisse
+Search Results,Resultados de la búsqueda,Résultats de la recherche,検索結果,검색 결과,Pesquisar nos resultados,Результаты поиска,搜索结果,搜索结果,搜尋結果,Studio.Toolbox.General.CategoryCreationsHats,Hats,Hüte
+Hats,Sombreros,Chapeaux,帽子,모자,Chapéus,Головные уборы,帽子,帽子,帽子,Studio.Toolbox.AssetConfigCopy.AccountSetting,"In order to share content in Marketplace, you must add & verify an email address to your account. This can be done in Account Settings.", 
+"In order to share content in Marketplace, you must add & verify an email address to your account. This can be done in Account Settings.","Para compartir contenido en el Mercado, debes añadir tu correo electrónico y verificarlo en tu cuenta. Esto se lleva a cabo en Configuración de la cuenta.","Afin de partager du contenu sur le Marketplace, tu dois ajouter et vérifier une adresse électronique à ton compte. Cela peut être fait dans les paramètres du compte.",マーケットプレース内のコンテンツを共有するには、お持ちのアカウントにメールアドレスの追加と認証が必須です。,これは、アカウント設定でできます。,마켓플레이스에서 콘텐츠를 공유하려면 계정에 이메일 주소를 추가하고 확인해야 합니다. 이 작업은 계정 설정에서 수행할 수 있습니다.,"Para compartilhar mais conteúdo no Mercado, você deve adicionar um endereço de e-mail à sua conta e verificá-lo. Isto pode ser feito nas configurações de conta.", you must add & verify an email address to your account. This can be done in Account Settings.,为了在商店中分享内容，你必须向你的帐户添加电子邮件地址并进行验证。可在“帐户设置”中完成此操作。,为了在商店中分享内容，你必须向你的帐户添加电子邮件地址并进行验证。可在“帐户设置”中完成此操作。,若要在商城分享內容，請先在帳號上新增並驗證電子郵件地址。此動作可在帳號設定裡完成。,Studio.Toolbox.General.CategoryEndorsedPlugins,EndorsedPlugins
+Unterstützte Plug-ins,EndorsedPlugins,EndorsedPlugins,Plugins approuvés,EndorsedPlugins,추천 플러그인,EndorsedPlugins,Одобренные плагины,官方认可的插件,官方认可的插件,官方認可外掛程式,Studio.Toolbox.General.SearchResultsKeyword,Search Results for
+Suchergebnisse für,Search Results for,Buscar resultados para,Résultats de la recherche pour,以下の検索結果,다음에 대한 검색 결과,Pesquisar nos resultados por,Результаты поиска для:,搜索结果:,搜索结果:,以此條件搜尋的結果：,Studio.Toolbox.General.SearchResultsClearAll,Clear
+Löschen,Clear,Eliminar,Effacer,消す,지우기,Limpar,Очистить,清除,清除,清除,Studio.Toolbox.General.SearchTagCreator,by:
+von:,by:,de:,par :,作:,제작:,de:,параметр:,作者:,作者:,來自：,Studio.Toolbox.General.TabMarketplace,Marketplace
+Marktplatz,Marketplace,Mercado,Marché,マーケットプレース,마켓플레이스,Mercado,Магазин,商店,商店,市集,Studio.Toolbox.General.TabInventory,Inventory
+Inventar,Inventory,Inventario,Inventaire,インベントリ,인벤토리,Inventário,Снаряжение,背包,背包,物品庫,Studio.Toolbox.General.CategoryCreationsNeckAccessory,Neck Accessories
+Hals-Accessoires,Neck Accessories,Accesorios para el cuello,Accessoires cou,首用アクセサリ,목 장신구,Acessórios de pescoço,Шея: аксесссуары,颈部配件,颈部配件,頸部飾品,Studio.Toolbox.General.PremiumBenefits,Add Premium benefits
+ ,Add Premium benefits,Añadir beneficios Premium,Ajouter les avantages Premium,Premiumを追加,Premium 혜택 추가,Adicionar benefícios Premium, ,添加 Premium 特权,添加 Premium 特权,增加 Premium 福利,Studio.Toolbox.AssetConfigUpload.IDCopied,ID Copied!
+ ,ID Copied!,¡ID copiado!,Identifiant copié !,IDをコピー済み！,ID 복사 완료!,ID copiada!, ,ID 已复制！,ID 已复制！,ID 已複製！,Studio.Toolbox.General.CategoryCreationsShoulderAccessory,Shoulder Accessories
+Schulter-Accessoires,Shoulder Accessories,Accesorios para el hombro,Accessoires épaule,肩用アクセサリ,어깨 장신구,Acessórios de ombro,Плечи: аксесссуары,肩部配件,肩部配件,肩膀飾品,Studio.Toolbox.General.CategoryCreationsFrontAccessory,Front Accessories
+Vorderseite-Accessoires,Front Accessories,Accesorios frontales,Accessoires devant,正面用アクセサリ,가슴 장신구,Acessórios de frente,Перед: аксесссуары,正面配件,正面配件,正面飾品,Studio.Toolbox.General.CategoryCreationsBackAccessory,Back Accessories
+Rückseite-Accessoires,Back Accessories,Accesorios traseros,Accessoires dos,背面用アクセサリ,등 장신구,Acessórios das costas,Спина: аксесссуары,背面配件,背面配件,背部飾品,Studio.Toolbox.General.TabCreations,Creations
+Kreationen,Creations,Creaciones,Créations,作品,작품,Criações,Создания,作品,作品,創作,Studio.Toolbox.General.RightClickMenuCopyAssetID,Copy Asset ID
+ ,Copy Asset ID,ID de la copia del recurso,Copier Identifiant de l'élément,アセットIDをコピー,애셋 ID 복사,Copiar ID do recurso,Копировать ID ресурса,复制素材 ID,复制素材 ID,複製素材 ID,Studio.Toolbox.General.RightClickMenuCopyAssetURI,Copy Asset URI
+ ,Copy Asset URI,URI de la copia del recurso,Copier élément URI,アセットURIをコピー,애셋 URI 복사,Copiar URI do recurso,Копировать URI ресурса,复制素材 URI,复制素材 URI,複製素材 URI,Studio.Toolbox.General.RightClickMenuViewInBrowser,View In Browser
+Im Browser ansehen,View In Browser,Ver en el navegador,Voir dan le navigateur,ブラウザで表示,브라우저에서 보기,Ver no navegador,Просмотр в обозревателе,在浏览器中查看,在浏览器中查看,在瀏覽器檢視,Studio.Toolbox.Purchase.FreeSuccessHeader,Installation Complete!
+ ,Installation Complete!,¡Instalación completada!,Installation complète !,インストール完了！,설치 완료!,Instalação completada!,Установка завершена!,安装完成!,安装完成!,安裝完成！,Studio.Toolbox.AssetConfigPreview.Format,Acceptable files: {formatString}
+Max: {maxDimensionsX} x {maxDimensionsY}, ,Acceptable files: {formatString},Max: {maxDimensionsX} x {maxDimensionsY},Archivos aceptados: {formatString},Máx: {maxDimensionsX} x {maxDimensionsY},Fichiers acceptables : {formatString},Max : {maxDimensionsX} x {maxDimensionsY},許容できるファイル: {formatString},最大: {maxDimensionsX} x {maxDimensionsY},허용 가능 파일: {formatString},최대: {maxDimensionsX} x {maxDimensionsY},Arquivos permitidos: {formatString}
+Máx.: {maxDimensionsX} x {maxDimensionsY},Допустимые файлы: {formatString},Макс.: {maxDimensionsX} x {maxDimensionsY},可接受的文件: {formatString},最大: {maxDimensionsX} x {maxDimensionsY},可接受的文件: {formatString},最大: {maxDimensionsX} x {maxDimensionsY},可以接受的檔案：{formatString},最大尺寸：{maxDimensionsX} x {maxDimensionsY},Studio.Toolbox.General.RightClickMenuConfigureAsset,Configure asset, ,Configure asset
+Configurar recurso,Configurer élément,アセットの環境設定,애셋 구성,Configurar recurso,Настроить ресурс,配置素材,配置素材,設定素材,Studio.Toolbox.General.RightClickMenuEditAsset,Edit Asset, ,Edit Asset
+Editar recurso,Modifier élément,アセットを編集,애셋 편집,Editar recurso,Изменить ресурс,编辑素材,编辑素材,編輯素材,Studio.Toolbox.General.RightClickMenuReport,Report, ,Report
+Reportar,Reporter,報告,신고,Informar,Отчет,举报,举报,舉報,Studio.Toolbox.General.StatusReviewPending,In Review, ,In Review
+En revisión,En révision,レビュー中,검토 중,Sob revisão,На рассмотрении,审核中,审核中,審查中,Studio.Toolbox.ThumbnailStatus.InReview,In Review, ,In Review
+En revisión,En révision,レビュー中,검토 중,Sob revisão,На рассмотрении,审核中,审核中,審查中,Studio.Toolbox.General.StatusModerated,Rejected, ,Rejected
+Rechazado,Rejeté,却下済み,거부됨,Rejeitado,Отклонено,已拒绝,已拒绝,遭拒,Studio.Toolbox.General.StatusDelayedRelease,Ready For Sale, ,Ready For Sale
+Listo para la venta,Prêt à la vente,販売の準備完了,판매 준비 완료,Pronto para venda,Готово для продажи,待售,待售,可上架,Studio.Toolbox.General.StatusReviewApproved,Ready For Sale, ,Ready For Sale
+Listo para la venta,Prêt à la vente,販売の準備完了,판매 준비 완료,Pronto para venda,Готово для продажи,待售,待售,可上架,Studio.Toolbox.General.StatusOffSale,Off Sale, ,Off Sale
+Fuera de venta,Hors vente,非売品,판매 종료,Não está à venda,Не в продаже,下架,下架,下架,Studio.Toolbox.General.SalesOffsale,Offsale, ,Offsale
+Fuera de venta,Hors vente,非売品,판매 종료,Não está à venda,Не в продаже,下架,下架,下架,Studio.Toolbox.General.StatusUnknown,Unknown, ,Unknown
+Desconocido,Inconnu,不明,알 수 없음,Desconhecido,Неизвестно,未知,未知,未知,Studio.Toolbox.General.AssetTypeModel,Model, ,Model
+Modelo,Modèle,モデル,모델,Modelo,Модель,模型,模型,模型,Studio.Toolbox.General.AssetTypeDecal,Decal, ,Decal
+Adhesivo,Autocollant,デカール,데칼,Adesivo,Деколь,贴花,贴花,貼花,Studio.Toolbox.ThumbnailStatus.Pending,Pending, ,Pending
+Pendiente,En attente,保留中,보류 중,Pendente,Ожидание,处理中,处理中,待處理,Studio.Toolbox.General.AssetTypeMesh,Mesh, ,Mesh
+Malla,Mesh,メッシュ,메시,Malha,Сетка,网格,网格,網格,Studio.Toolbox.General.AssetTypeHat,Hat, ,Hat
+Sombrero,Chapeau,帽子,모자,Chapéu,Головной убор,帽子,帽子,帽子,Studio.Toolbox.General.AssetTypeTeeShirt,T-Shirt, ,T-Shirt
+Camiseta,T-Shirt,Tシャツ,티셔츠,Camiseta,Футболка,T 恤,T 恤,T 恤,Studio.Toolbox.General.AssetTypeShirt,Shirt, ,Shirt
+Camisa,Chemise,シャツ,셔츠,Camisa,Рубашка,上衣,上衣,上衣,Studio.Toolbox.General.AssetTypeFaceAccessory,Face Accessory, ,Face Accessory
+Accesorio para la cara,Accessoire visage,顔用アクセサリ,얼굴 장신구,Acessório de rosto,Лицо: аксессуары,脸部配件,脸部配件,臉部飾品,Studio.Toolbox.General.AssetTypeNeckAccessory,Neck Accessory, ,Neck Accessory
+Accesorio para el cuello,Accessoire cou,首用アクセサリ,목 장신구,Acessório de pescoço,Шея: аксессуары,颈部配件,颈部配件,頸部飾品,Studio.Toolbox.General.AssetTypeShoulderAccessory,Shoulder Accessory, ,Shoulder Accessory
+Accesorio para el hombro,Accessoire épaule,肩用アクセサリ,어깨 장신구,Acessório de ombro,Плечи: аксессуары,肩部配件,肩部配件,肩膀飾品,Studio.Toolbox.General.AssetTypeFrontAccessory,Front Accessory, ,Front Accessory
+Accesorio frontal,Accessoire devant,正面用アクセサリ,가슴 장신구,Acessório de frente,Перед: аксессуары,正面配件,正面配件,正面飾品,Studio.Toolbox.General.AssetTypeBackAccessory,Back Accessory, ,Back Accessory
+Accesorio trasero,Accessoire dos,背面用アクセサリ,등 장신구,Acessório das costas,Спина: аксессуары,背面配件,背面配件,背部飾品,Studio.Toolbox.General.CategoryCreationsGroupNeckAccessory,Group Neck Accessories, ,Group Neck Accessories
+Accesorios para el cuello del grupo, ,グループの首用アクセサリ,그룹 목 장신구,Acessórios de pescoço de grupo, , , ,群組頸部飾品,Studio.Toolbox.General.AssetTypeWaistAccessory,Waist Accessory, ,Waist Accessory
+Accesorio para la cintura,Accessoire taille,腰用アクセサリ,허리 장신구,Acessório de cintura,Пояс: аксессуары,腰部配件,腰部配件,腰部飾品,Studio.Toolbox.General.DiscardMessage,Would you like to discard all changes?, ,Would you like to discard all changes?
+¿Quieres descartar todos los cambios?,Souhaites-tu renoncer à tous les changements ?,すべての変更を破棄しますか。,모든 변경 사항을 제거할까요?,Deseja descartar todas as alterações?,Отменить все изменения?,你要放弃所有更改吗?,你要放弃所有更改吗?,確定捨棄所有變更？,Studio.Toolbox.General.Discard,Discard, ,Discard
+Descartar,Renoncer,破棄,제거,Descartar,Сбросить,放弃,放弃,捨棄,Studio.Toolbox.General.NoPluginsFound.TextLine1,Can’t find what you’re looking for?, ,Can’t find what you’re looking for?
+¿No encuentras lo que buscas?,Tu ne trouves pas ce que tu cherches ?,探しているものが見つからない場合,항목을 찾을 수 없나요?,Não consegue encontrar o que estava procurando?, ,未能搜索到相关内容？,未能搜索到相关内容？,找不到您要的東西嗎？,Studio.Toolbox.General.Description,Description, ,Description
+Descripción,Description,詳細,설명,Descrição,Описание,描述,描述,說明,Studio.Toolbox.General.Title,Title, ,Title
+Título,Titre,題名,제목,Título,Название,标题,标题,名稱,Studio.Toolbox.General.Tags,Tags, ,Tags
+Etiquetas,Tags,タグ,태그,Etiquetas,Теги,标签,标签,標籤,Studio.Toolbox.General.Genre,Genre, ,Genre
+Género,Genre,ジャンル,장르,Gênero,Жанр,主题,主题,類別,Studio.Toolbox.General.Copy,Allow Copying, ,Allow Copying
+Permitir hacer una copia,Autoriser la copie,コピーを許可,복사 허용,Permitir cópia,Разрешить копирование,允许复制,允许复制,允許複製,Studio.Toolbox.General.Comments,Allow Comments, ,Allow Comments
+Permitir comentarios,Permettre les commentaires,コメントを許可,코멘트 허용,Permitir comentário,Разрешить комментарии,允许评论,允许评论,允許留言,Studio.Toolbox.General.LearnMore,Learn more, ,Learn more
+Aprende más,En apprendre plus,もっと詳しく,더 알아보기,Saiba mais,Подробнее,了解更多,了解更多,了解更多,Studio.Toolbox.General.Me,Me, ,Me
+Yo,Moi,自分,나,Eu,Я,我,我,我,Studio.Toolbox.General.AssetType,Asset type, ,Asset type
+Tipo de recurso,Type d'élément,アセットタイプ,애셋 유형,Tipo de recurso,Тип ресурса,素材类型,素材类型,素材類型,Studio.Toolbox.General.SalesSale,Sale, ,Sale
+En venta,Vente,セール,판매,Venda,Распродажа,销售,销售,買賣,Studio.Toolbox.General.SalesOnsaleApplyToSave,Onsale (apply to save changes), ,Onsale (apply to save changes)
+En venta (aplicar para guardar cambios),En vente (demande pour sauvegarder les changements),販売中（適用して変更を保存）,판매 시작(적용하여 변경 사항 저장),À venda (aplicar para salvar mudanças),В продаже (применить,在售 (应用以保存更改),在售 (应用以保存更改),上架（套用以儲存變更）,Studio.Toolbox.General.SalesOffsaleApplyToSave,Offsale (apply to save changes), ,Offsale (apply to save changes)
+Fuera de venta (aplicar para guardar cambios),Hors vente (demande pour sauvegarder les changements),非売品（適用して変更を保存）,판매 종료(적용하여 변경 사항 저장),Não está à venda (aplicar para salvar mudanças),Не в продаже (применить,下架 (应用以保存更改),下架 (应用以保存更改),下架（套用以儲存變更）,Studio.Toolbox.General.SalesItemCannotBeSold,This item cannot be sold right now, ,This item cannot be sold right now
+Este objeto no se puede vender ahora,Cet article ne peut pas être vendu pour le moment,このアイテムは、現在は販売できません,이 아이템은 지금 팔 수 없습니다,Este item não pode ser vendido neste momento,Невозможно продать предмет прямо сейчас,此物品无法立即出售,此物品无法立即出售,目前無法販賣此道具,Studio.Toolbox.General.SalesPrice,Price, ,Price
+Precio,Prix,価格,가격,Preço,Цена,价格,价格,價格,Studio.Toolbox.General.SalesPriceRange,Price range: {minPrice} - {maxPrice}, ,Price range: {minPrice} - {maxPrice}
+Rango de precio: de {minPrice} a {maxPrice},Fourchette de prix : {minPrice} - {maxPrice},価格範囲: {minPrice} - {maxPrice},가격 범위: {minPrice} - {maxPrice},Faixa de preço: {minPrice} - {maxPrice},Диапазон цен: {minPrice} - {maxPrice},价格范围: {minPrice} - {maxPrice},价格范围: {minPrice} - {maxPrice},價格範圍：{minPrice} - {maxPrice},Studio.Toolbox.General.SalesEarning,You earn: {earning}, ,You earn: {earning}
+Recibirás: {earning},Tu gagnes : {earning},獲得額: {earning},획득 금액: {earning},Você receberá: {earning},Вы получите: {earning},你赚取: {earning},你赚取: {earning},您將賺取：{earning},Studio.Toolbox.AssetConfigFooter.Override,Overwrite an existing asset..., ,Overwrite an existing asset...
+Reemplazar un recurso existente...,Remplacer un élément existant...,現在のアセットを上書きする...,기존 애셋 덮어쓰기...,Substituir um recurso existente...,Перезаписать существующий ресурс...,覆盖现有素材...,覆盖现有素材...,覆寫既有素材……,Studio.Toolbox.General.SideTabVersions,Versions, ,Versions
+Versiones,Versions,バージョン,버전,Versões,Версии,版本,版本,版本,Studio.Toolbox.General.SideTabGeneral,General, ,General
+General,Général,全般,일반,Geral,Общие,通用,通用,一般,Studio.Toolbox.General.SideTabPermissions,Permissions, ,Permissions
+Permisos,Permissions,許可,권한,Permissões,Разрешения,权限,权限,權限,Studio.Toolbox.General.PreviewAreaAssetID,Asset ID: {assetId}, ,Asset ID: {assetId}
+ID del recurso: {assetId},Identifiant élément : {assetId},アセットID: {assetId},애셋 ID: {assetId},ID do recurso: {assetId},ID ресурса: {assetId},素材 ID: {assetId},素材 ID: {assetId},素材 ID：{assetId},Studio.Toolbox.General.PreviewAreaStatus,Status: {assetStatus}, ,Status: {assetStatus}
+Estado: {assetStatus},Status : {assetStatus},状況: {assetStatus},상태: {assetStatus},Estado: {assetStatus},Статус: {assetStatus},状态: {assetStatus},状态: {assetStatus},狀態：{assetStatus},Studio.Toolbox.General.InstallSuccess,Success!, ,Success!
+¡Hecho!,Succès !,成功！,성공!,Sucesso!,Успешно!,成功!,成功!,成功！,Studio.Toolbox.General.InstallFailure,Failure, ,Failure
+Error,Échec,失敗,실패,Erro,Ошибка,失败,失败,失敗,Studio.Toolbox.AssetConfigFooter.OverrideTitle,Choose an existing model to overwrite., ,Choose an existing model to overwrite.
+Elegir un modelo existente para reemplazarlo.,Choisir un modèle existant à remplacer.,上書きする現在のモデルを選ぶ。,덮어쓸 기존 모델을 선택하세요.,Escolher um modelo existente para substituir.,Выберите существующую модель для перезаписи.,选择要覆盖的现有模型。,选择要覆盖的现有模型。,選擇要覆寫的既有素材。,Studio.Toolbox.AssetConfigAnimation.AnimationID,Animation ID, ,Animation ID
+ID de la animación,Identifiant ID,アニメーションID,애니메이션 ID,ID de animação, ,动画 ID,动画 ID,動畫 ID,Studio.Toolbox.AssetConfigCopy.Terms,"By switching on, you are granting every other user of Roblox the right to use (in various ways) the content you are now sharing. If you do not want to grant this right, please do not check this box. For more information about sharing content, please review the Roblox Terms of Use.", ,"By switching on, you are granting every other user of Roblox the right to use (in various ways) the content you are now sharing. If you do not want to grant this right, please do not check this box. For more information about sharing content, please review the Roblox Terms of Use."
+"Al activar esta casilla, le otorgarás a todos los usuarios de Roblox el derecho a usar (de varias maneras) el contenido que compartes. Si no quieres otorgarlo, no la actives. Para obtener más información sobre cómo se comparte el contenido, revisa los Términos de uso de Roblox.","En activant Roblox, tu accordes à tous les autres utilisateurs le droit d'utiliser (de diverses manières) le contenu que tu partages actuellement. Si tu ne souhaites pas accorder ce droit, ne coche pas cette case. Pour plus d'informations sur le partage de contenu, consulte les conditions d'utilisation de Roblox.",オンにすることで、現在、共有しようとしているコンテンツの使用権（さまざまな方法で）をRobloxのすべてのユーザーに与えています。もし、この権利を与えたくない場合は、このボックスにチェックマークをつけないでください。コンテンツの共有に関する詳しい情報は、Robloxの利用規約をご覧ください。,활성화하면 Roblox의 다른 모든 사용자들에게 현재 공유하고 있는 콘텐츠를 다양한 방식으로 사용할 수 있는 권한을 부여합니다. 이러한 권한을 부여하지 않으려면 이 확인란을 선택하지 마세요. 콘텐츠 공유에 대한 자세한 정보는 Roblox 이용 약관을 참조하시기 바랍니다.,"Ao ativar esta funcionalidade, você está cedendo a qualquer usuário Roblox o direito de usar (de várias maneiras) o conteúdo que você está compartilhando. Se você não quer ceder este direito, não selecione esta caixa. Para mais informações sobre conteúdo compartilhado, revise os Termos de Uso da Roblox.", you are granting every other user of Roblox the right to use (in various ways) the content you are now sharing. If you do not want to grant this right,切换至开位置，即表示你授予 Roblox 的所有其他用户 (以各种方式) 使用你现在分享的内容的权限。如果你不想授予此权限，请勿勾选此框。有关分享内容的详细信息，请查看 Roblox 使用条款。,切换至开位置，即表示你授予 Roblox 的所有其他用户 (以各种方式) 使用你现在分享的内容的权限。如果你不想授予此权限，请勿勾选此框。有关分享内容的详细信息，请查看 Roblox 使用条款。,您勾選此方塊即授權所有 Roblox 使用者以不同方式使用您分享的內容。若您不想授權，請勿勾選此方塊。若要了解更多關於分享內容的資訊，請前往 Roblox 使用條款。,Studio.Toolbox.AssetConfigPreview.Preview,Preview, ,Preview
+Vista previa,Prévisualiser,プレビュー,미리 보기,Prévia,Предварительный просмотр,预览,预览,預覽,Studio.Toolbox.AssetConfigPreview.Change,Change, ,Change
+Cambio,Changer,変更,변경,Alterar,Изменить,更改,更改,變更,Studio.Toolbox.AssetConfigVersions.Current,Current published version, ,Current published version
+Versión publicada actual,Version publiée actuelle,現在の公開済みバージョン,현재 게시된 버전,Versão publicada atual,Текущая опубликованная версия,当前发布的版本,当前发布的版本,目前發布版本,Studio.Toolbox.AssetConfigVersions.Restore,Restore previous version, ,Restore previous version
+Restaurar la versión anterior,Restaurer la version précédente,以前のバージョンを復元,이전 버전 복원,Restaurar à versão anterior,Восстановить предыдущую версию,还原之前版本,还原之前版本,復原先前版本,Studio.Toolbox.AssetConfig.GetAssetFailed,There was an problem fetching asset data. We will be closing AssetConfig page., ,There was an problem fetching asset data. We will be closing AssetConfig page.
+Ha habido un problema al recuperar los datos del recurso. La página AssetConfig se cerrará.,Il y a eu un problème pour récupérer les données sur les éléments. Nous allons fermer la page AssetConfig.,アセットデータのフェッチ中に問題が発生しました。AssetConfig ページを終了しています。,애셋 데이터를 가져오는 중에 문제가 발생했습니다. AssetConfig 페이지를 닫습니다.,Ocorreu um problema ao adquirir os dados do recurso. A página AssetConfig será fechada.,Возникла проблема при получении данных ресурса. Страница AssetConfig будет закрыта.,提取素材数据时发生问题。将关闭 AssetConfig 页面。,提取素材数据时发生问题。将关闭 AssetConfig 页面。,擷取素材資料時發生問題，AssetConfig 頁面將會關閉。,Studio.Toolbox.AssetConfigPackagePermissions.UserOwnedWarning, Users you share with will always have access to the current and previous versions of this package. Removing collaborators will discontinue their access to newer versions of the package., , Users you share with will always have access to the current and previous versions of this package. Removing collaborators will discontinue their access to newer versions of the package.
+" Los usuarios con quienes lo compartes tendrán siempre acceso a la versión actual y pasada de este paquete. Si eliminas a los colaboradores, se suspenderá el acceso a las versiones más recientes del paquete.", Les utilisateurs avec lesquels tu partages auront toujours accès à la version actuelle et aux versions précédentes de ce package. Les collaborateurs qui se retirent n'auront plus accès aux versions plus récentes du package., あなたが共有するユーザーは、このパッケージの現在と前のバージョンにいつもアクセスできます。共同作業者を削除すると、共同作業者による新しいバージョンへのアクセスが停止されます。, 공유 받는 사용자는 항상 이 패키지의 현재 및 이전 버전에 액세스할 수 있습니다. 공동 작업자를 제거하면 최신 버전의 패키지에 대한 액세스가 중단됩니다., Usuários com quem você compartilha pacotes sempre terão acesso às versões atuais e anteriores do seu pacote. Remover colaboradores descontinuará o acesso deles à novas versões do pacote.,"Пользователи, с которыми вы делитесь, всегда будут иметь доступ к текущей и предыдущей версиям этого пакета. Пользователи, отключенные от совместной работы, потеряют доступ к новым версиям пакета.", 你所进行共享的用户将始终拥有此包最新与先前版本的访问权限。将协作者移除后，也将终止其对此包今后版本的访问权限。, 你所进行共享的用户将始终拥有此包最新与先前版本的访问权限。将协作者移除后，也将终止其对此包今后版本的访问权限。,您分享的對象都將可以存取此套件目前和先前的版本。合夥人被移除時將無法存取更新的套件版本。,Studio.Toolbox.AssetConfig.Error,Error, ,Error
+Error,Erreur,エラー,오류,Erro,Ошибка,错误,错误,錯誤,Studio.Toolbox.ThumbnailStatus.Error,Error, ,Error
+Error,Erreur,エラー,오류,Erro,Ошибка,错误,错误,錯誤,Studio.Toolbox.AssetUploadResult.Success,Successfully submitted!, ,Successfully submitted!
+¡Enviado correctamente!,Soumis avec succès !,送信できました！,제출 성공!,Enviado com sucesso!, ,提交成功！,提交成功！,提交成功！,Studio.Toolbox.AssetConfigPackagePermissions.PackageOwner,Package Owner, ,Package Owner
+Propietario del paquete,Propriétaire package,パッケージ所有者,패키지 소유자,Proprietário do pacote,Владелец пакета,包所有者,包所有者,套件主人,Studio.Toolbox.AssetConfigPackagePermissions.Owner,Owner, ,Owner
+Propietario,Propriétaire,所有者,소유자,Proprietário,Владелец,所有者,所有者,主人,Studio.Toolbox.AssetConfigPackagePermissions.OwnerLabel,Owner, ,Owner
+Propietario,Propriétaire,所有者,소유자,Proprietário,Владелец,所有者,所有者,主人,Studio.Toolbox.AssetConfigPackagePermissions.ShareWith,Share with, ,Share with
+Compartir con,Partager avec,共有相手:,다음 사람과 공유,Compartilhar com,Поделиться с...,分享对象,分享对象,分享對象,Studio.Toolbox.AssetConfigPackagePermissions.NoAccessLabel,No Access, ,No Access
+Sin acceso,Pas d'accès,アクセスできません,접근 불가,Sem acesso,Нет доступа,无法访问,无法访问,無存取權限,Studio.Toolbox.AssetConfigPackagePermissions.UseViewLabel,Use & View, ,Use & View
+Usar y ver,Utiliser et voir,使って表示,사용 및 보기,Usar e visualizar,Использование и Просмотр,使用和查看,使用和查看,使用和檢視,Studio.Toolbox.NoTagFound,Word(s) not found in the tag library, ,Word(s) not found in the tag library
+No se han encontrado las palabras en la biblioteca de etiquetas,Mot(s) non trouvé(s) dans la bibliothèque de tags,語句がタグライブラリで見つかりませんでした,태그 라이브러리에서 단어를 찾을 수 없음,Palavra(s) não encontrada(s) na biblioteca de etiquetas,В библиотеке тегов нет искомого,未能在标签库中找到相应词语,未能在标签库中找到相应词语,標籤庫裡找不到該單字,Studio.Toolbox.AssetConfigPackagePermissions.EditLabel,Edit, ,Edit
+Editar,Modifier,編集,편집,Editar,Изменить,编辑,编辑,編輯,Studio.Toolbox.AssetConfigPackagePermissions.MultipleLabel,(Multiple), ,(Multiple)
+(Múltiple),(Multiple),（複数）,(여러 항목),(Múltiplo),(Несколько),(多项),(多项),（多項）,Studio.Toolbox.AssetConfigPackagePermissions.NoAccessDescription,"Cannot use, view or edit this package", ,"Cannot use, view or edit this package"
+"Este paquete no se puede usar, ver o editar","Ne peut pas utiliser, visualiser ou modifier ce package",このパッケージの使用、表示、編集はできません,이 패키지를 사용하거나 보거나 편집할 수 없습니다,"Não é possível usar, visualizar ou editar este pacote", view or edit this package,无法使用、查看或编辑此包,无法使用、查看或编辑此包,無法使用、檢視或編輯此套件,Studio.Toolbox.AssetConfigPackagePermissions.UseViewDescription,Can use and view this package, ,Can use and view this package
+Este paquete se puede usar y ver,Peut utiliser et voir ce package,このパッケージの使用と表示ができます,이 패키지를 사용하고 볼 수 있습니다,É possível usar e visualizar este pacote,Можно использовать и просматривать пакет,可以使用并查看此包,可以使用并查看此包,可以使用和檢視此套件,Studio.Toolbox.AssetConfigPackagePermissions.EditDescription,"Can use, view and edit this package", ,"Can use, view and edit this package"
+"Este paquete se puede usar, ver y editar","Peut utiliser, voir et modifier ce package",このパッケージの使用、表示、編集ができます,이 패키지를 사용하고 보고 편집할 수 있습니다,"É possível usar, visualizar e editar este pacote", view and edit this package,可以使用、查看和编辑此包,可以使用、查看和编辑此包,可以使用、檢視及編輯此套件,Studio.Toolbox.AssetConfigPackagePermissions.FriendsCollaboratorType,Friends, ,Friends
+Amigos,Amis,友達,친구,Amigos,Друзья,好友,好友,好友,Studio.Toolbox.ThumbnailStatus.Blocked,Blocked, ,Blocked
+Bloqueada,Bloqué,ブロック済み,차단됨,Bloqueado,Заблокировано,已屏蔽,已屏蔽,遭拒,Studio.Toolbox.AssetConfigPackagePermissions.PackageCreator,Package Creator, ,Package Creator
+Creador del paquete,Créateur package,パッケージクリエーター,패키지 생성자,Criador de pacotes,Создатель пакета,包创建者,包创建者,套件創作者,Studio.Toolbox.AssetConfigPackagePermissions.UsersCollaboratorType,Users, ,Users
+Usuarios,Utilisateurs,ユーザー,사용자,Usuários,Пользователи,用户,用户,使用者,Studio.Toolbox.AssetConfigPackagePermissions.GroupsCollaboratorType,Groups, ,Groups
+Grupos,Groupes,グループ,그룹,Grupos,Группы,组合,组合,組合,Studio.Toolbox.AssetConfigPackagePermissions.MyFriendsCollaborator,My Friends, ,My Friends
+Mis amigos,Mes amis,自分の友達,내 친구,Meus amigos,Мои друзья,我的好友,我的好友,我的好友,Studio.Toolbox.AssetConfigPreview.Process,Image will be reviewed by moderators before being made visible to other users, ,Image will be reviewed by moderators before being made visible to other users
+La imagen será revisada por los moderadores antes de hacerse visible para otros usuarios,L'image sera revue par des modérateurs avant d'être visible par les autres utilisateurs,画像は、他のユーザーに表示される前にモデレータによってレビューされます。,이미지는 검열팀의 검토가 끝난 후에 다른 사용자들에게 공개됩니다,A imagem será revisada por moderadores antes de poder ser vista por outros usuários,"Изображение будет рассмотрено модераторами перед тем, как его увидят другие пользователи.",图片将由协调员审查，然后再对其他用户开放显示,图片将由协调员审查，然后再对其他用户开放显示,圖像將交由管理員審查後方得供其他使用者檢視,Studio.Toolbox.AssetConfigPackagePermissions.TooManyCollaboratorsText,You cannot add more than {maxNumCollaborators:int} collaborators, ,You cannot add more than {maxNumCollaborators:int} collaborators
+No puedes añadir más de {maxNumCollaborators:int} colaboradores,Tu ne peux pas ajouter plus de {maxNumCollaborators:int} collaborateurs,共同制作者は {maxNumCollaborators:int} 人以上、追加できません,공동 작업자는 최대 {maxNumCollaborators:int}명까지만 추가할 수 있습니다.,Você não pode adicionar mais do que {maxNumCollaborators:int} colaboradores,Можно добавить не более {maxNumCollaborators:int} участников,无法添加 {maxNumCollaborators:int} 位以上的协作者,无法添加 {maxNumCollaborators:int} 位以上的协作者,無法增加超過 {maxNumCollaborators:int} 名合夥人,Studio.Toolbox.Purchase.RobuxBalance,Your current balance:, ,Your current balance:
+Tu saldo actual:,Votre solde actuel :,現在の残高:,현재 잔액:,Seu saldo atual:,Ваш текущий баланс:,你当前的余额:,你当前的余额:,您目前的餘額：,Studio.Toolbox.Purchase.InsufficientPrompt,You need {robux:int} more Robux to buy "{name}" from {creator}., ,You need {robux:int} more Robux to buy "{name}" from {creator}.
+Necesitas {robux:int} Robux más para comprar "{name}" de {creator}.,Tu as besoin de {robux:int} Robux en plus pour acheter {name} de {creator}.,{creator}さんから「{name}」を買うにはRobuxがあと{robux:int}必要です。,{creator}에게 "{name}"을(를) 구매하려면 {robux:int} Robux가 더 필요합니다.,Você precisa de {robux:int} Robux a mais para comprar "{name}" de {creator}.,"Требуется еще {robux:int} Robux для покупки (\"{name}\", автор {creator}).",你还需要 {robux:int} Robux 才能从 {creator} 处购买到 "{name}"。,你还需要 {robux:int} Robux 才能从 {creator} 处购买到 "{name}"。,您還需要 {robux:int} Robux 才可向 {creator} 購買「{name}」。,Studio.Toolbox.Purchase.Retry,Retry, ,Retry
+Reintentar,Réessayer,再試行,다시 시도,Tentar novamente,Повтор,重试,重试,重試,Studio.Toolbox.Purchase.Buy,Buy, ,Buy
+Comprar,Acheter,買う,구매,Comprar,Купить,购买,购买,購買,Studio.Toolbox.Purchase.BuyTitle,Buy & Install Plugin, ,Buy & Install Plugin
+Comprar e instalar plugin,Acheter et installer plugin,プラグインを買ってインストール,플러그인 설치 및 구매,Comprar e instalar plugin,Купить и установить плагин,购买和安装插件,购买和安装插件,購買並安裝外掛程式,Studio.Toolbox.Purchase.InsufficientTitle,Insufficient Robux, ,Insufficient Robux
+Robux insuficientes,Nombre insuffisant de Robux,Robuxが足りません,Robux가 부족함,Não há Robux suficientes,Недостаточно Robux,Robux 不足,Robux 不足,Robux 不足,Studio.Toolbox.Purchase.FailedHeader,Purchase failed, ,Purchase failed
+Error en la compra,Échec de l'achat,購入できませんでした,구매 실패,Falha na compra,Покупка не совершена,购买失败,购买失败,購買失敗,Studio.Toolbox.Purchase.Free,FREE, ,FREE
+GRATIS,GRATUIT,無料,무료,GRÁTIS,БЕСПЛАТНО,免费,免费,免費,Studio.Toolbox.General.Fee,After {percent}% fee:, ,After {percent}% fee:
+Después de una cuota del {percent}%:,Après {percent}% de frais :,{percent}% 手数料差し引き後:,{percent}% 수수료 적용 후 금액:,Após taxa de {percent}%:,Со сбором {percent}%:,在支付 {percent}% 的手续费后:,在支付 {percent}% 的手续费后:,{percent}% 手續費後：,Studio.Toolbox.General.Earn,You earn:, ,You earn:
+Recibirás:,Tu gagnes :,獲得額:,획득 금액:,Você receberá:,Вы получите:,你赚取:,你赚取:,您將賺取：,Studio.Toolbox.AssetConfigSales.Target,"By enabling it, this asset will be put in {market} and available for any Roblox {user}.", ,"By enabling it, this asset will be put in {market} and available for any Roblox {user}."
+"Al activarlo, este recurso se colocará en {market} y estará disponible para todos los {user} de Roblox.","En l'activant, cet élément sera mis sur le {market} et disponible pour chaque {user} de Roblox.",有効化すると、このアセットは {market} に置かれ、どのRoblox {user}も利用できます。  ,활성화하면 이 애셋이 {market}에 포함되어 모든 Roblox {user}이(가) 사용할 수 있게 됩니다.,"Ao ativar este recurso, ele será colocado no {market} e disponível para qualquer {user} Roblox.","После вашего разрешения этот ресурс появится в магазине ({market}), и любой {user} Roblox сможет им воспользоваться.",启用之后，此项素材就会投放到 {market} 并可供所有 Roblox {user} 使用。,启用之后，此项素材就会投放到 {market} 并可供所有 Roblox {user} 使用。,此素材在啟用後將會放到 {market}，所有 Roblox {user} 都將能使用。,Studio.Toolbox.General.CategoryGroupPlugins,Group Plugins, ,Group Plugins
+Plugins de grupo,Plugins de groupe,グループプラグイン,그룹 플러그인,Plugins de grupo,Плагины групп,群组插件,群组插件,組合外掛程式,Studio.Toolbox.General.Free,Free, ,Free
+Gratis,Gratuit,無料,무료,Grátis,Бесплатно,免费,免费,免費,Studio.Toolbox.General.Installing,Installing, ,Installing
+Instalando,Installation,インストール中,설치,Instalando,Устанавливается,正在安装,正在安装,正在安裝,Studio.Toolbox.AssetConfigError.NetworkError,We encountered some problems:, ,We encountered some problems:
+Ha habido un problema:,Nous rencontrons des difficultés :,何らかの問題が発生しました:,문제가 발생했습니다.,Encontramos alguns problemas:,Обнаружены проблемы:,我们遇到了一些问题：,我们遇到了一些问题：,我們遇到了問題：,Studio.Toolbox.AssetConfigPackagePermissions.SearchbarDefault,Search for Friends, ,Search for Friends
+Buscar amigos,Rechercher des amis,友達の検索,친구 검색,Pesquisar amigos,Поиск друзей,搜索好友,搜索好友,搜尋好友,Studio.Toolbox.AssetConfigPackagePermissions.GroupOwnedWarning,No Access takes effect from new versions of this package. Users assigned to rolesets with "Edit" permissions will always have access to current and previous versions of this package., ,No Access takes effect from new versions of this package. Users assigned to rolesets with "Edit" permissions will always have access to current and previous versions of this package.
+La Restricción de acceso entrará en vigor con las nuevas versiones de este paquete. Los usuarios con el permiso para Editar siempre tendrán acceso a las versiones actuales y pasadas de este paquete.,L'interdiction d'accès prend effet à partir des nouvelles versions de ce package. Les utilisateurs assignés à des jeux de rôles avec des autorisations "Edit" auront toujours accès aux versions actuelles et précédentes de ce package.,このパッケージの新しいバージョンからはアクセスが有効になりません。「編集」の権限が与えられている役割が割り当てられているユーザーはこのパッケージの現在と前のバージョンにいつもアクセスできます。,이 패키지의 새 버전에는 액세스 권한이 적용되지 않습니다. "편집" 권한이 있는 역할 세트에 할당된 사용자는 항상 이 패키지의 현재 및 이전 버전에 액세스할 수 있습니다.,Restrições de acesso entrarão em efeito para novas versões deste pacote. Usuários com permissões de edição sempre terão acesso à versão atual e anteriores deste pacote.,"Команда «Нет доступа» влияет на новые версии этого пакета. Пользователи, которым разрешено «Редактировать», всегда будут иметь доступ к текущей и предыдущим версиям пакета.",无访问权限设定会在此包更新版本后生效。拥有“编辑”权限角色集中的用户将始终有权访问此包的最新与先前版本。,无访问权限设定会在此包更新版本后生效。拥有“编辑”权限角色集中的用户将始终有权访问此包的最新与先前版本。,存取權限會在此套件的新版本移除。在擁有「編輯」權限的階級裡的使用者永遠可以存取此套件目前與先前的版本。,Studio.Toolbox.AssetConfigPackagePermissions.PackageDetails,Package Details, ,Package Details
+Detalles del paquete,Détails du package,パッケージの詳細,패키지 세부 정보,Detalhes do pacote,Информация о пакете,包详情,包详情,套件詳細資料,Studio.Toolbox.Purchase.FreeTitle,Install Plugin, ,Install Plugin
+Instalar plugin,Installer plugin,プラグインをインストール,플러그인 설치,Instalar plugin,Установить плагин,安装插件,安装插件,安裝外掛程式,Studio.Toolbox.Purchase.SuccessHeader,Buy & Installation Complete!, ,Buy & Installation Complete!
+¡Compra e instalación completadas!,Achat et installation complète !,購入とインストール完了！,플러그인 설치 및 구매!,Compra e instalação completadas!,Покупка и установка завершены!,购买及安装完成！,购买及安装完成！,購買與安裝完成！,Studio.Toolbox.Purchase.SuccessDetails,Successfully installed "{name}"., ,Successfully installed "{name}".
+"{name}" se ha instalado correctamente.,Installation réussie "{name}".,「{name}」をインストールできました。,"{name}"을(를) 설치했습니다.,"{name}" instalado com sucesso.,"{name}": установка завершена,成功安装 "{name}"。,成功安装 "{name}"。,已成功安裝「{name}」。,Studio.Toolbox.MaxTagsDescription,Add up to {max:int} tags from the tag library, ,Add up to {max:int} tags from the tag library
+Añade hasta {max:int} etiquetas desde la biblioteca de etiquetas,Ajouter jusqu'à {max:int} tags de la bibliothèque,タグライブラリから最大 {max:int} 個のタグを追加,태그 라이브러리에서 최대 {max:int}개의 태그 추가,Adicionar até {max:int} etiquetas da biblioteca de etiquetas,Добавьте не более {max:int} тегов из библиотеки тегов,从标签库中最多添加 {max:int} 个标签,从标签库中最多添加 {max:int} 个标签,從標籤庫最多增加 {max:int} 個標籤,Studio.Toolbox.General.AbbreviatedSeconds,s, ,s
+s,s,秒,초,s, ,秒,秒,秒,Studio.Toolbox.General.AbbreviatedMinutes,m, ,m
+m,m,分,분,m, ,分,分,分,Studio.Toolbox.General.SearchOptionAudioTo,to, ,to
+en,à,へ,(으)로,em, ,至,至,到,Studio.Toolbox.General.SearchOptionAudioLength,Sound Length, ,Sound Length
+Duración del sonido,Longueur du son,サウンドの長さ,사운드 길이,Duração do som, ,声音长度,声音长度,音效長度,Studio.Toolbox.AssetConfigAnimation.FilterID,Filter ID, ,Filter ID
+Filtro ID,Identifiant filtre,IDをフィルタする,필터 ID,Filtrar ID, ,过滤 ID,过滤 ID,過濾 ID,Studio.Toolbox.General.CategoryMyVideos,My Videos, ,My Videos
+Mis videos,Mes vidéos,マイビデオ,내 비디오,Meus vídeos, ,我的视频,我的视频,我的影片,Studio.Toolbox.General.CategoryVideos,Videos, ,Videos
+Videos,Vidéos,ビデオ,비디오,Vídeos, ,视频,视频,影片,Studio.Toolbox.General.CategoryCreationsGroupHats,Group Hats, ,Group Hats
+Sombreros del grupo, ,グループの帽子,그룹 모자,Chapéus de grupo, , , ,群組帽子,Studio.Toolbox.AssetUploadResult.Failure,Submission failed, ,Submission failed
+Error al enviar,Échec de la soumission,送信できませんでした,제출 실패,Falha no envio, ,提交失败,提交失败,提交失敗,Studio.Toolbox.General.NoPluginsFound.TextLine2,"For more plugins, try searching in the {link} on our website.", ,"For more plugins, try searching in the {link} on our website."
+"Para encontrar más plugins, intenta buscar en {link} en nuestro sitio web.","Pour obtenir plus de plugins, essaie de faire une recherche dans le {link} sur notre site web.",その他のプラグインは、当社のウェブサイト上の {link} で検索してみてください。,더 많은 플러그인을 보려면 웹사이트의 {link}에서 검색하세요.,"Para mais plugins, tente procurar no {link} em nossa página.", ,若想获取更多插件，请在网站{link}中进行搜索。,若想获取更多插件，请在网站{link}中进行搜索。,若要尋找更多外掛程式，請前往我們網站上的{link}搜尋。,Studio.Toolbox.General.NoPluginsFound.LinkText,Library, ,Library
+Biblioteca,Bibliothèque,ライブラリ,라이브러리,Biblioteca, ,资料库,资料库,資料庫,Studio.Toolbox.AssetConfigAnimation.InvalidAnimationID,Invalid Animation ID, ,Invalid Animation ID
+ID de la animación no válido,Identifiant animation invalide,アニメーションIDが無効です,유효하지 않은 애니메이션 ID,ID de animação inválida, ,无效的动画 ID,无效的动画 ID,動畫 ID 無效,Studio.Toolbox.Common.Submit,Submit, ,Submit
+Enviar,Soumettre,送信,제출,Enviar, ,提交,提交,提交,Studio.Toolbox.Common.Close,Close, ,Close
+Cerrar,Fermer,閉じる,닫기,Fechar, ,关闭,关闭,關閉,Studio.Toolbox.Common.Insert,Insert, ,Insert
+Insertar,Insérer,挿入,삽입,Inserir, ,插入,插入,插入,Studio.Toolbox.Common.Install,Install, ,Install
+Instalar,Installer,インストール,설치,Instalar, ,安装,安装,安裝,Studio.Toolbox.Common.Loading,Loading, ,Loading
+Cargando,Chargement,読み込み中,불러오는 중,Carregando, ,正在加载,正在加载,正在載入,Studio.Toolbox.Common.Installed,Installed, ,Installed
+Instalado,Installé,インストール済み,설치됨,Instalado, ,已安装,已安装,已安裝,Studio.Toolbox.General.CategoryCreationsGroupFaceAccessory,Group Face Accessories, ,Group Face Accessories
+Accesorios para la cara del grupo, ,グループの顔用アクセサリ,그룹 얼굴 장신구,Acessórios de rosto de grupo, , , ,群組臉部飾品,Studio.Toolbox.General.CategoryCreationsGroupShoulderAccessory,Group Shoulder Accessories, ,Group Shoulder Accessories
+Accesorios para el hombro del grupo, ,グループの肩用アクセサリ,그룹 어깨 장신구,Acessórios de ombro de grupo, , , ,群組肩膀飾品,Studio.Toolbox.General.CategoryCreationsGroupFrontAccessory,Group Front Accessories, ,Group Front Accessories
+Accesorios frontales del grupo, ,グループの正面用アクセサリ,그룹 가슴 장신구,Acessórios de frente de grupo, , , ,群組正面飾品,Studio.Toolbox.General.CategoryCreationsGroupBackAccessory,Group Back Accessories, ,Group Back Accessories
+Accesorios traseros del grupo, ,グループの背面用アクセサリ,그룹 등 장신구,Acessórios das costas de grupo, , , ,群組背面飾品,Studio.Toolbox.General.CategoryCreationsGroupWaistAccessory,Group Waist Accessories, ,Group Waist Accessories
+Accesorios para la cintura del grupo, ,グループの腰用アクセサリ,그룹 허리 장신구,Acessórios de cintura de grupo, , , ,群組腰部飾品

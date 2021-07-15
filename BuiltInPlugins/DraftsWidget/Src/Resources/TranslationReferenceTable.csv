@@ -1,25 +1,25 @@
-Key,Source,en-us,ko,ru,zh-cn
-Studio.Drafts.Meta.PluginButtonTooltip,View Drafts,View Drafts,초안 보기,Просмотр черновиков,查看草稿
-Studio.Drafts.ContextMenu.OpenScript,Open Draft,Open Draft,초안 열기,Открыть черновик,打开草稿
-Studio.Drafts.Meta.PluginDescription,I'm a hover message,I'm a hover message,커서 올리기 메시지입니다,Это всплывающий текст,我是悬浮信息
-Studio.Drafts.Meta.PluginName,Drafts,Drafts,초안,Черновики,草稿
-Studio.Drafts.Tooltip.DraftCommitted,Draft successfully committed,Draft successfully committed,초안 제출 성공,Черновик успешно сохранен,草稿已成功提交
-Studio.Drafts.Example.ErrorAnUnexpectedThing,"An unexpected thing happened, try again","An unexpected thing happened, try again",예기치 못한 문제가 발생했습니다. 다시 시도하세요.,"Возникла непредвиденная ошибка, попробуйте снова.",发生意外，请重试
-Studio.Drafts.ContextMenu.ShowDiff,Compare with server,Compare with server,서버와 비교,Сравнить с сервером,与服务器比较
-Studio.Drafts.Main.NoDrafts,(Empty),(Empty),(비어 있음),(Пусто),（空）
-Studio.Drafts.ContextMenu.Update,Merge from server,Merge from server,서버에서 병합,Объединить на сервере,从服务器合并
-Studio.Drafts.DiscardDialog.ConfirmQuestion,Are you sure you want to discard your uncommited edits to the following scripts?,Are you sure you want to discard your uncommited edits to the following scripts?,다음 스크립트에 대한 커밋되지 않은 편집 내용을 제거할까요?,Отменить несохраненные правки в следующих скриптах?,确定放弃对以下脚本的未提交编辑?
-Studio.Drafts.ContextMenu.Commit,Commit,Commit,커밋,Зафиксировать,提交
-Studio.Drafts.Toolbar.CommitButton,Commit,Commit,커밋, ,提交
-Studio.Drafts.StatusText.Saved,Saved,Saved,저장됨,Сохранение выполнено,已保存
-Studio.Drafts.ContextMenu.Restore,Restore Script,Restore Script,스크립트 복원,Восстановить скрипт,还原脚本
-Studio.Drafts.ContextMenu.Revert,Discard Draft,Discard Draft,초안 제거,Отменить черновик,放弃草稿
-Studio.Drafts.StatusText.Uncommitted,Uncommitted,Uncommitted,커밋되지 않음, ,未提交
-Studio.Drafts.Dialog.Yes,Yes,Yes,예,Да,是
-Studio.Drafts.Tooltip.DraftOutdated,Newer version on server,Newer version on server,서버의 최신 버전,Более новая версия на сервере,服务器上发现更新版本
-Studio.Drafts.Dialog.No,No,No,아니요,Нет,否
-Studio.Drafts.DiscardDialog.Title,Discard Edits to Scripts,Discard Edits to Scripts,스크립트에 대한 편집 내용 제거,Отменить правки в скриптах,放弃对脚本的编辑
-Studio.Drafts.Tooltip.ScriptDeleted,The original script has been deleted from the server,The original script has been deleted from the server,원본 스크립트가 서버에서 삭제되었습니다.,Оригинал скрипта был удален с сервера,原始脚本已从服务器中删除
-Studio.Drafts.StatusText.Saving,Saving...,Saving...,저장 중...,Идет сохранение...,正在保存…
-Studio.Drafts.DraftItem.CommittedLabel,{1} committed,{1} committed,{1} 커밋됨,{1}: изменение зафиксировано,{1} 已提交
-Studio.Drafts.StatusText.Committing,Committing...,Committing...,커밋 중...,Фиксирование...,正在提交…
+Key,Source,en-us,es-es,fr-fr,ja-jp,ko-kr,pt-br,ru-ru,zh-cjv,zh-cn,zh-tw
+Studio.Drafts.Meta.PluginButtonTooltip,View Drafts,View Drafts,Ver borradores,Visualiser les projets,下書きを表示,초안 보기,Ver rascunhos,Просмотр черновиков,查看草稿,查看草稿,檢視草稿
+Studio.Drafts.ContextMenu.OpenScript,Open Draft,Open Draft,Abrir borrador,Ouvrir projet,下書きを開く,초안 열기,Abrir rascunho,Открыть черновик,打开草稿,打开草稿,開啟草稿
+Studio.Drafts.Meta.PluginDescription,I'm a hover message,I'm a hover message,Soy un mensaje emergente,Je suis un message de survol,ホバリングの吹き出しです,커서 올리기 메시지입니다,Sou uma mensagem flutuante,Это всплывающий текст,我是悬浮信息,我是悬浮信息,我是懸浮訊息
+Studio.Drafts.Meta.PluginName,Drafts,Drafts,Borradores,Projets,下書き,초안,Rascunhos,Черновики,草稿,草稿,草稿
+Studio.Drafts.Tooltip.DraftCommitted,Draft successfully committed,Draft successfully committed,Borrador confirmado correctamente,Projet validé avec succès,下書きをコミットできました,초안 제출 성공,Rascunho validado com sucesso,Черновик успешно сохранен,草稿已成功提交,草稿已成功提交,已成功提交草稿
+Studio.Drafts.Example.ErrorAnUnexpectedThing,"An unexpected thing happened, try again","An unexpected thing happened, try again",Ha pasado algo inesperado. Inténtalo de nuevo,"Quelque chose d'inopiné s'est produit, réessaie",予期しないことが起きました。もう一度お試しください,예기치 못한 문제가 발생했습니다. 다시 시도하세요.,"Ocorreu algo inesperado, continue tentando","Возникла непредвиденная ошибка, попробуйте снова.",发生意外，请重试,发生意外，请重试,發生意外錯誤，請重新嘗試
+Studio.Drafts.ContextMenu.ShowDiff,Compare with server,Compare with server,Comparar con servidor,Comparer avec serveur,サーバーと比較,서버와 비교,Comparar com o servidor,Сравнить с сервером,与服务器比较,与服务器比较,與伺服器比較
+Studio.Drafts.Main.NoDrafts,(Empty),(Empty),(vacío),(Vide),（空）,(비어 있음),(Vazio),(Пусто),（空）,（空）,（空）
+Studio.Drafts.ContextMenu.Update,Merge from server,Merge from server,Fusionar desde el servidor,Fusionner à partir du serveur,サーバーから併合,서버에서 병합,Mesclar a partir do servidor,Объединить на сервере,从服务器合并,从服务器合并,從伺服器合併
+Studio.Drafts.DiscardDialog.ConfirmQuestion,Are you sure you want to discard your uncommited edits to the following scripts?,Are you sure you want to discard your uncommited edits to the following scripts?,¿Estás seguro de que quieres eliminar tus ediciones sin confirmar en los siguientes scripts?,Es-tu sûr de vouloir rejeter tes modifications non validées aux scripts suivants ?,以下のスクリプトでコミットされていない編集内容を破棄してよろしいですか？,다음 스크립트에 대한 커밋되지 않은 편집 내용을 제거할까요?,Tem certeza que deseja descartar suas edições não validadas para os seguintes scripts?,Отменить несохраненные правки в следующих скриптах?,确定放弃对以下脚本的未提交编辑?,确定放弃对以下脚本的未提交编辑?,確定捨棄在以下指令碼李未提交的編輯？
+Studio.Drafts.ContextMenu.Commit,Commit,Commit,Confirmar,Soumettre,コミット,커밋,Validar,Зафиксировать,提交,提交,提交
+Studio.Drafts.Toolbar.CommitButton,Commit,Commit,Confirmar,Valider,コミット,커밋,Validar, ,提交,提交,提交
+Studio.Drafts.StatusText.Saved,Saved,Saved,Guardado,Sauvegardé,保存済み,저장됨,Salvo,Сохранение выполнено,已保存,已保存,已儲存
+Studio.Drafts.ContextMenu.Restore,Restore Script,Restore Script,Restaurar script,Restorer script,スクリプトを復元,스크립트 복원,Restaurar script,Восстановить скрипт,还原脚本,还原脚本,還原指令碼
+Studio.Drafts.ContextMenu.Revert,Discard Draft,Discard Draft,Eliminar borrador,Rejeter projet,下書きを破棄,초안 제거,Descartar rascunho,Отменить черновик,放弃草稿,放弃草稿,捨棄草稿
+Studio.Drafts.StatusText.Uncommitted,Uncommitted,Uncommitted,Sin confirmar,Non validé,コミットされていない,커밋되지 않음,Não validado, ,未提交,未提交,未提交
+Studio.Drafts.Dialog.Yes,Yes,Yes,Sí,Oui,はい,예,Sim,Да,是,是,是
+Studio.Drafts.Tooltip.DraftOutdated,Newer version on server,Newer version on server,Versión más reciente en el servidor,Nouvelle version sur le serveur,サーバー上でさらに新しいバージョン,서버의 최신 버전,Versão atualizada no servidor,Более новая версия на сервере,服务器上发现更新版本,服务器上发现更新版本,伺服器有更新版本
+Studio.Drafts.Dialog.No,No,No,No,Non,いいえ,아니요,Não,Нет,否,否,否
+Studio.Drafts.DiscardDialog.Title,Discard Edits to Scripts,Discard Edits to Scripts,Eliminar ediciones en los scripts,Rejeter les modifications aux scripts,スクリプトの編集を破棄,스크립트에 대한 편집 내용 제거,Descartar edições para scripts,Отменить правки в скриптах,放弃对脚本的编辑,放弃对脚本的编辑,捨棄指令碼編輯
+Studio.Drafts.Tooltip.ScriptDeleted,The original script has been deleted from the server,The original script has been deleted from the server,Se ha eliminado el script original del servidor,Le script d'origine a été effacé du serveur,元のスクリプトがサーバーから削除されました,원본 스크립트가 서버에서 삭제되었습니다.,O script original foi apagado do servidor,Оригинал скрипта был удален с сервера,原始脚本已从服务器中删除,原始脚本已从服务器中删除,原指令碼已從伺服器中刪除
+Studio.Drafts.StatusText.Saving,Saving...,Saving...,Guardando...,Sauvegarde...,保存中...,저장 중...,Salvando...,Идет сохранение...,正在保存…,正在保存…,正在儲存……
+Studio.Drafts.DraftItem.CommittedLabel,{1} committed,{1} committed,{1} confirmados,{1} validé,{1} 件コミット済み,{1} 커밋됨,{1} validado,{1}: изменение зафиксировано,{1} 已提交,{1} 已提交,已提交 {1} 項
+Studio.Drafts.StatusText.Committing,Committing...,Committing...,Confirmando...,Validation...,コミット中...,커밋 중...,Validando...,Фиксирование...,正在提交…,正在提交…,正在提交……

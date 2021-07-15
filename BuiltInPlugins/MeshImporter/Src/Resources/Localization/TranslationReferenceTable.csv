@@ -1,0 +1,7 @@
+Key,Source,en-us,es-es,ja-jp,ko-kr,pt-br,zh-tw
+Studio.MeshImporter.Plugin.ImportConfiguration,Settings for the current import,Settings for the current import,Configuración para la importación actual, ,현재 가져오기에 대한 설정,Configurações para a importação atual,目前匯入設定
+Studio.MeshImporter.Plugin.Toolbar,Mesh Importer,Mesh Importer,Importador de malla, ,메시 가져오기 도구,Importador de malha,網格匯入器
+Studio.MeshImporter.Plugin.Name,MeshImporter,MeshImporter,MeshImporter,MeshImporter,MeshImporter,MeshImporter,MeshImporter
+Studio.MeshImporter.Plugin.Button,Import,Import,Importar, ,가져오기,Importar,匯入
+Studio.MeshImporter.Plugin.Description,Import an FBX file using the Mesh Importer.,Import an FBX file using the Mesh Importer.,Importa un archivo FBX usando el Importador de malla., ,메시 가져오기 도구를 사용해 FBX 파일을 가져옵니다.,Importa um arquivo FBX usando o Importador de malha.,使用網格匯入氣匯入 FBX 檔案。
+Studio.MeshImporter.Plugin.Browse,Browse...,Browse...,Buscar..., ,둘러보기...,Procurar...,瀏覽……

@@ -1,11 +1,11 @@
-Key,Source,en-us,ko,ru,zh-cn
-Studio.CGE.Tooltip.Add,Add the selected parts to this group.,Add the selected parts to this group.,선택한 파트를 이 그룹에 추가합니다.,Добавить выбранные детали к этой группе.,将选定的部件添加到此群组。
-Studio.CGE.Modal.ConfirmDeletion,Are you sure you want to delete the group "{1}"?,Are you sure you want to delete the group "{1}"?,'{1}' 그룹을 정말 삭제할까요?,Удалить группу "{1}"?,确定要删除群组 "{1}"？
-Studio.CGE.Tooltip.Rename,Rename this group.,Rename this group.,이 그룹의 이름을 변경합니다.,Переименовать эту группу.,重命名此群组。
-Studio.CGE.Common.Yes,Yes,Yes,예,Да,是
-Studio.CGE.Common.No,No,No,아니요,Нет,否
-Studio.CGE.Groups.DefaultGroupName,Default,Default,기본값,По умолчанию,默认
-Studio.CGE.Actions.AddGroup,Add Group,Add Group,그룹 추가,Добавить группу,添加群组
-Studio.CGE.Headers.GroupName,Group Name,Group Name,그룹 이름,Имя группы,群组名称
-Studio.CGE.Tooltip.Delete,Delete this group.,Delete this group.,이 그룹을 삭제합니다.,Удалить эту группу.,删除此群组。
-Studio.CGE.Main.Title,Collision Groups Editor,Collision Groups Editor,충돌 그룹 편집기, ,碰撞组编辑器
+Key,Source,en-us,es-es,fr-fr,ja-jp,ko-kr,pt-br,ru-ru,zh-cjv,zh-cn,zh-tw
+Studio.CGE.Tooltip.Add,Add the selected parts to this group.,Add the selected parts to this group.,Añade las partes seleccionadas a este grupo.,Ajouter les parties sélectionnées à ce groupe.,このグループに選択済みのパーツを追加。,선택한 파트를 이 그룹에 추가합니다.,Adicionar as partes selecionadas a este grupo.,Добавить выбранные детали к этой группе.,将选定的部件添加到此群组。,将选定的部件添加到此群组。,將選取零件加入此組合。
+Studio.CGE.Modal.ConfirmDeletion,Are you sure you want to delete the group "{1}"?,Are you sure you want to delete the group "{1}"?,¿Estás seguro de que quieres eliminar el grupo "{1}"?,Es-tu sûr de vouloir supprimer le groupe "{1}" ?,「{1}」のグループを削除してよろしいですか？,'{1}' 그룹을 정말 삭제할까요?,Tem certeza de que deseja apagar o grupo "{1}"?,Удалить группу "{1}"?,确定要删除群组 "{1}"？,确定要删除群组 "{1}"？,確定刪除組合「{1}」？
+Studio.CGE.Tooltip.Rename,Rename this group.,Rename this group.,Renombra este grupo.,Renommer ce groupe.,このグループ名を変更,이 그룹의 이름을 변경합니다.,Renomear este grupo.,Переименовать эту группу.,重命名此群组。,重命名此群组。,重新命名此組合。
+Studio.CGE.Common.Yes,Yes,Yes,Sí,Oui,はい,예,Sim,Да,是,是,是
+Studio.CGE.Common.No,No,No,No,Non,いいえ,아니요,Não,Нет,否,否,否
+Studio.CGE.Groups.DefaultGroupName,Default,Default,Predeterminado,Par défaut,デフォルト,기본값,Padrão,По умолчанию,默认,默认,預設
+Studio.CGE.Actions.AddGroup,Add Group,Add Group,Añadir grupo,Ajouter un groupe,グループを追加,그룹 추가,Adicionar grupo,Добавить группу,添加群组,添加群组,新增組合
+Studio.CGE.Headers.GroupName,Group Name,Group Name,Nombre del grupo,Nom du groupe,グループ名,그룹 이름,Nome do grupo,Имя группы,群组名称,群组名称,組合名稱
+Studio.CGE.Tooltip.Delete,Delete this group.,Delete this group.,Elimina este grupo.,Supprimer ce groupe.,このグループを削除。,이 그룹을 삭제합니다.,Excluir este grupo.,Удалить эту группу.,删除此群组。,删除此群组。,刪除此組合。
+Studio.CGE.Main.Title,Collision Groups Editor,Collision Groups Editor,Editor de grupos de colisión,Rédacteur des groupes de collision,衝突グループエディタ,충돌 그룹 편집기,Editor de grupos de colisão, ,碰撞组编辑器,碰撞组编辑器,碰撞組合編輯器

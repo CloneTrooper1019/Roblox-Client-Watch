@@ -831,8 +831,10 @@ Class DebugSettings : Instance [NotCreatable] [Settings] [NotBrowsable]
 	Property string DebugSettings.RobloxVersion [ReadOnly]
 Class DebuggerBreakpoint : Instance [NotCreatable]
 	Property string DebuggerBreakpoint.Condition
+	Property bool DebuggerBreakpoint.ContinueExecution
 	Property bool DebuggerBreakpoint.IsEnabled
 	Property int DebuggerBreakpoint.Line [ReadOnly]
+	Property string DebuggerBreakpoint.LogExpression
 	Property bool DebuggerBreakpoint.isContextDependentBreakpoint
 Class DebuggerConnection : Instance [NotCreatable] [NotReplicated]
 	Property int DebuggerConnection.Id {RobloxScriptSecurity} [Hidden] [ReadOnly]
@@ -941,6 +943,57 @@ Class Explosion : Instance
 Class Expression : Instance [NotReplicated]
 	Property string Expression.Expression {RobloxScriptSecurity} [Hidden] [NotReplicated]
 	Function int Expression:Evaluate(Instance frame, Function status) {RobloxScriptSecurity}
+Class FaceControls : Instance
+	Property float FaceControls.ChinRaiser [NotReplicated] [NotScriptable]
+	Property float FaceControls.ChinRaiserUpperLip [NotReplicated] [NotScriptable]
+	Property float FaceControls.Corrugator [NotReplicated] [NotScriptable]
+	Property float FaceControls.EyesLookDown [NotReplicated] [NotScriptable]
+	Property float FaceControls.EyesLookLeft [NotReplicated] [NotScriptable]
+	Property float FaceControls.EyesLookRight [NotReplicated] [NotScriptable]
+	Property float FaceControls.EyesLookUp [NotReplicated] [NotScriptable]
+	Property float FaceControls.FlatPucker [NotReplicated] [NotScriptable]
+	Property float FaceControls.Funneler [NotReplicated] [NotScriptable]
+	Property float FaceControls.JawDrop [NotReplicated] [NotScriptable]
+	Property float FaceControls.JawLeft [NotReplicated] [NotScriptable]
+	Property float FaceControls.JawRight [NotReplicated] [NotScriptable]
+	Property float FaceControls.LeftBrowLowerer [NotReplicated] [NotScriptable]
+	Property float FaceControls.LeftCheekPuff [NotReplicated] [NotScriptable]
+	Property float FaceControls.LeftCheekRaiser [NotReplicated] [NotScriptable]
+	Property float FaceControls.LeftDimpler [NotReplicated] [NotScriptable]
+	Property float FaceControls.LeftEyeClosed [NotReplicated] [NotScriptable]
+	Property float FaceControls.LeftEyeUpperLidRaiser [NotReplicated] [NotScriptable]
+	Property float FaceControls.LeftInnerBrowRaiser [NotReplicated] [NotScriptable]
+	Property float FaceControls.LeftLipCornerDown [NotReplicated] [NotScriptable]
+	Property float FaceControls.LeftLipCornerPuller [NotReplicated] [NotScriptable]
+	Property float FaceControls.LeftLipStretcher [NotReplicated] [NotScriptable]
+	Property float FaceControls.LeftLowerLipDepressor [NotReplicated] [NotScriptable]
+	Property float FaceControls.LeftNoseWrinkler [NotReplicated] [NotScriptable]
+	Property float FaceControls.LeftOuterBrowRaiser [NotReplicated] [NotScriptable]
+	Property float FaceControls.LeftUpperLipRaiser [NotReplicated] [NotScriptable]
+	Property float FaceControls.LipPresser [NotReplicated] [NotScriptable]
+	Property float FaceControls.LipsTogether [NotReplicated] [NotScriptable]
+	Property float FaceControls.LowerLipSuck [NotReplicated] [NotScriptable]
+	Property float FaceControls.MouthLeft [NotReplicated] [NotScriptable]
+	Property float FaceControls.MouthRight [NotReplicated] [NotScriptable]
+	Property float FaceControls.Pucker [NotReplicated] [NotScriptable]
+	Property float FaceControls.RightBrowLowerer [NotReplicated] [NotScriptable]
+	Property float FaceControls.RightCheekPuff [NotReplicated] [NotScriptable]
+	Property float FaceControls.RightCheekRaiser [NotReplicated] [NotScriptable]
+	Property float FaceControls.RightDimpler [NotReplicated] [NotScriptable]
+	Property float FaceControls.RightEyeClosed [NotReplicated] [NotScriptable]
+	Property float FaceControls.RightEyeUpperLidRaiser [NotReplicated] [NotScriptable]
+	Property float FaceControls.RightInnerBrowRaiser [NotReplicated] [NotScriptable]
+	Property float FaceControls.RightLipCornerDown [NotReplicated] [NotScriptable]
+	Property float FaceControls.RightLipCornerPuller [NotReplicated] [NotScriptable]
+	Property float FaceControls.RightLipStretcher [NotReplicated] [NotScriptable]
+	Property float FaceControls.RightLowerLipDepressor [NotReplicated] [NotScriptable]
+	Property float FaceControls.RightNoseWrinkler [NotReplicated] [NotScriptable]
+	Property float FaceControls.RightOuterBrowRaiser [NotReplicated] [NotScriptable]
+	Property float FaceControls.RightUpperLipRaiser [NotReplicated] [NotScriptable]
+	Property float FaceControls.TongueDown [NotReplicated] [NotScriptable]
+	Property float FaceControls.TongueOut [NotReplicated] [NotScriptable]
+	Property float FaceControls.TongueUp [NotReplicated] [NotScriptable]
+	Property float FaceControls.UpperLipSuck [NotReplicated] [NotScriptable]
 Class FaceInstance : Instance [NotCreatable] [NotBrowsable]
 	Property Enum.NormalId FaceInstance.Face
 Class Decal : FaceInstance
@@ -1473,6 +1526,7 @@ Class GuiService : Instance [NotCreatable] [Service] [NotReplicated]
 	Event GuiService.MenuOpened()
 	Event GuiService.NativeClose() {RobloxScriptSecurity}
 	Event GuiService.NetworkPausedEnabledChanged(bool enabled) {RobloxScriptSecurity}
+	Event GuiService.Open9SliceEditor(Instance selectedImageObject) {RobloxScriptSecurity}
 	Event GuiService.SafeZoneOffsetsChanged() {RobloxScriptSecurity}
 	Event GuiService.ShowLeaveConfirmation() {RobloxScriptSecurity}
 	Event GuiService.SpecialKeyPressed(Enum.SpecialKey key, string modifiers) {RobloxScriptSecurity}
@@ -1961,7 +2015,7 @@ Class MemStorageService : Instance [NotCreatable] [Service] [NotReplicated]
 	Function bool MemStorageService:RemoveItem(string key) {RobloxScriptSecurity}
 	Function void MemStorageService:SetItem(string key, string value = "") {RobloxScriptSecurity}
 Class MemoryStoreQueue : Instance [NotCreatable] [NotReplicated]
-	Function void MemoryStoreQueue:AddAsync(Variant value, double priority = 0, int64 expiration = -1) [Yields]
+	Function void MemoryStoreQueue:AddAsync(Variant value, int64 expiration, double priority = 0) [Yields]
 	Function Tuple MemoryStoreQueue:ReadAsync(int count, bool allOrNothing = false, double waitTimeout = -1) [Yields]
 	Function void MemoryStoreQueue:RemoveAsync(string id) [Yields]
 Class MemoryStoreService : Instance [Service]
@@ -1971,8 +2025,8 @@ Class MemoryStoreSortedMap : Instance [NotCreatable] [NotReplicated]
 	Function Variant MemoryStoreSortedMap:GetAsync(string key) [Yields]
 	Function Array MemoryStoreSortedMap:GetRangeAsync(Enum.SortDirection direction, int count, string exclusiveLowerBound = "", string exclusiveUpperBound = "") [Yields]
 	Function void MemoryStoreSortedMap:RemoveAsync(string key) [Yields]
-	Function bool MemoryStoreSortedMap:SetAsync(string key, Variant value, int64 expiration = -1) [Yields]
-	Function Variant MemoryStoreSortedMap:UpdateAsync(string key, Function transformFunction, int64 expiration = -1) [Yields]
+	Function bool MemoryStoreSortedMap:SetAsync(string key, Variant value, int64 expiration) [Yields]
+	Function Variant MemoryStoreSortedMap:UpdateAsync(string key, Function transformFunction, int64 expiration) [Yields]
 Class Message : Instance [Deprecated]
 	Property string Message.Text [Deprecated]
 Class Hint : Message [Deprecated]
@@ -2787,9 +2841,11 @@ Class ProximityPromptService : Instance [Service] [NotBrowsable]
 Class PublishService : Instance [NotCreatable] [Service] [NotReplicated]
 	Function Content PublishService:PublishCageMeshAsync(Instance wrap, Enum.CageType cageType) {RobloxScriptSecurity} [Yields]
 Class RbxAnalyticsService : Instance [NotCreatable] [Service]
+	Function void RbxAnalyticsService:AddGlobalPointsField(string key, int value) {RobloxScriptSecurity}
 	Function string RbxAnalyticsService:GetClientId() {RobloxScriptSecurity}
 	Function string RbxAnalyticsService:GetSessionId() {RobloxScriptSecurity}
 	Function void RbxAnalyticsService:ReleaseRBXEventStream(string target) {RobloxScriptSecurity}
+	Function void RbxAnalyticsService:RemoveGlobalPointsField(string key) {RobloxScriptSecurity}
 	Function void RbxAnalyticsService:ReportCounter(string counterName, int amount = 1) {RobloxScriptSecurity}
 	Function void RbxAnalyticsService:ReportInfluxSeries(string seriesName, Dictionary points, int throttlingPercentage) {RobloxScriptSecurity}
 	Function void RbxAnalyticsService:ReportStats(string category, float value) {RobloxScriptSecurity}
@@ -2814,6 +2870,7 @@ Class ReflectionMetadataItem : Instance [NotCreatable]
 	Property string ReflectionMetadataItem.Constraint
 	Property bool ReflectionMetadataItem.Deprecated
 	Property bool ReflectionMetadataItem.EditingDisabled
+	Property string ReflectionMetadataItem.EditorType
 	Property string ReflectionMetadataItem.FFlag
 	Property bool ReflectionMetadataItem.IsBackend
 	Property int ReflectionMetadataItem.PropertyOrder
@@ -3360,6 +3417,7 @@ Class Studio : Instance [NotCreatable] [Service] [NotReplicated]
 	Property Color3 Studio.Select Color
 	Property bool Studio.Show Hover Over
 	Property Enum.RuntimeUndoBehavior Studio.RuntimeUndoBehavior
+	Property bool Studio.Show Light Guides {RobloxScriptSecurity}
 	Property bool Studio.Show Navigation Mesh
 	Function Array Studio:GetAvailableThemes() {PluginSecurity}
 	Event Studio.ThemeChanged() {PluginSecurity}

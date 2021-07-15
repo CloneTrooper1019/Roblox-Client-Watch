@@ -1,0 +1,67 @@
+Key,Context,Example,Source,en-us,de-de,es-es,fr-fr,id-id,it-it,ja-jp,ko-kr,pt-br,ru-ru,th-th,tr-tr,vi-vn,zh-cjv,zh-cn,zh-tw
+Studio.Common.Action.Apply,,,Apply,Apply,Anwenden,Aplicar,Appliquer,,,適用,적용,Aplicar,Применить,,,,应用,应用,套用
+Studio.Common.Action.Back,,,Back,Back,Zurück,Volver,Retour,,,戻る,뒤로,Voltar,Назад,,,,返回,返回,返回
+Studio.Common.Action.Cancel,,,Cancel,Cancel,Abbrechen,Cancelar,Annuler,,,キャンセル,취소,Cancelar,Отмена,,,,取消,取消,取消
+Studio.Common.Action.Clear,,,Clear,Clear,Löschen,Eliminar,Effacer,,,消す,지우기,Limpar,Очистить,,,,清除,清除,清除
+Studio.Common.Action.Close,,,Close,Close,Schließen,Cerrar,Fermer,,,閉じる,닫기,Fechar,Закрыть,,,,关闭,关闭,關閉
+Studio.Common.Action.Copy,,,Copy,Copy,Kopieren,Copiar,Copier,,,コピー,복사,Copiar,Копировать,,,,复制,复制,複製
+Studio.Common.Action.Create,,,Create,Create,Erstellen,Crear,Créer,,,作成,만들기,Criar,Создать,,,,创建,创建,建立
+Studio.Common.Action.Cut,,,Cut,Cut,Ausschneiden,Cortar,Couper,,,切り抜き,잘라내기,Recortar,Вырезать,,,,剪切,剪切,剪下
+Studio.Common.Action.Delete,,,Delete,Delete,Löschen,Eliminar,Supprimer,,,削除,삭제,Excluir,Удалить,,,,删除,删除,刪除
+Studio.Common.Action.Edit,,,Edit,Edit,Bearbeiten,Editar,Modifier,,,編集,편집,Editar,Изменить,,,,编辑,编辑,編輯
+Studio.Common.Action.Exit,,,Exit,Exit,Beenden,Salir,Quitter,,,退出,나가기,Sair,Выход,,,,退出,退出,結束
+Studio.Common.Action.File,,,File,File,Datei,Archivo,Fichier,,,ファイル,파일,Arquivo,Файл,,,,文件,文件,檔案
+Studio.Common.Action.Find,,,Find,Find,Suchen,Buscar,Rechercher,,,探す,찾기,Localizar,Найти,,,,查找,查找,尋找
+Studio.Common.Action.Help,,,Help,Help,Hilfe,Ayuda,Aide,,,ヘルプ,도움말,Ajuda,Справка,,,,帮助,帮助,說明
+Studio.Common.Action.Home,,,Home,Home,Home,Inicio,Accueil,,,ホーム,홈,Início,Главная,,,,首页,首页,首頁
+Studio.Common.Action.Ignore,,,Ignore,Ignore,Ignorieren,Ignorar,Ignorer,,,無視,무시,Ignorar,Пропустить,,,,忽略,忽略,忽略
+Studio.Common.Action.Insert,,,Insert,Insert,Einfügen,Insertar,Insérer,,,挿入,삽입,Inserir,Вставить,,,,插入,插入,插入
+Studio.Common.Action.New,,,New,New,Neu,Nuevo,Nouveau,,,新着,새로 만들기,Novo,Создать,,,,新增,新增,新增
+Studio.Common.Action.Next,,,Next,Next,Weiter,Siguiente,Suivant,,,次へ,다음,Próximo,Далее,,,,下一个,下一个,繼續
+Studio.Common.Action.No,,,No,No,Nein,No,Non,,,いいえ,아니요,Não,Нет,,,,否,否,否
+Studio.Common.Action.OK,,,OK,OK,OK,Aceptar,OK,,,OK,확인,OK,ОК,,,,确认,确认,確定
+Studio.Common.Action.Okay,,,Okay,Okay,Okay,Aceptar,OK,,,OK,확인,OK,ОК,,,,好的,好的,好
+Studio.Common.Action.Open,,,Open,Open,Öffnen,Abrir,Ouvrir,,,開く,열기,Abrir,Открыть,,,,打开,打开,開啟
+Studio.Common.Action.Paste,,,Paste,Paste,Einfügen,Pegar,Coller,,,貼り付け,붙여넣기,Colar,Вставить,,,,粘贴,粘贴,貼上
+Studio.Common.Action.Pause,,,Pause,Pause,Pause,Pausar,Pause,,,一時停止,일시 중지,Pausar,Пауза,,,,暂停,暂停,暫停
+Studio.Common.Action.Play,,,Play,Play,Spielen,Jugar,Jouer,,,プレイ,플레이,Jogar,Воспроизвести,,,,开始游戏,开始游戏,開始
+Studio.Common.Action.Previous,,,Previous,Previous,Zurück,Anterior,Précédent,,,前へ,이전,Anterior,Предыдущий,,,,上一个,上一个,上一步
+Studio.Common.Action.Reload,,,Reload,Reload,Neu laden,Volver a cargar,Recharger,,,再読み込み,다시 불러오기,Recarregar,Перезагрузить,,,,重新加载,重新加载,重新載入
+Studio.Common.Action.Remove,,,Remove,Remove,Entfernen,Eliminar,Supprimer,,,削除,제거,Remover,Удалить,,,,移除,移除,移除
+Studio.Common.Action.Rename,,,Rename,Rename,Umbenennen,Renombrar,Renommer,,,名前を変更,이름 변경,Renomear,Переименовать,,,,重命名,重命名,重新命名
+Studio.Common.Action.Replace,,,Replace,Replace,Ersetzen,Reemplazar,Remplacer,,,置き換え,바꾸기,Substituir,Заменить,,,,替换,替换,取代
+Studio.Common.Action.Resize,,,Resize,Resize,Größe anpassen,Ajustar,Redimensionner,,,サイズ変更,크기 조정,Dimensionar,Изменить размер,,,,缩放,缩放,調整大小
+Studio.Common.Action.Retry,,,Retry,Retry,Erneut versuchen,Reintentar,Réessayer,,,再試行,다시 시도,Tentar novamente,Повтор,,,,重试,重试,重試
+Studio.Common.Action.Save,,,Save,Save,Speichern,Guardar,Enregistrer,,,保存,저장,Salvar,Сохранить,,,,保存,保存,儲存
+Studio.Common.Action.Select,,,Select,Select,Auswählen,Seleccionar,Sélectionner,,,選択,선택,Selecionar,Выбрать,,,,选择,选择,選擇
+Studio.Common.Action.Share,,,Share,Share,Teilen,Compartir,Partager,,,シェア,공유,Compartilhar,Поделиться,,,,分享,分享,分享
+Studio.Common.Action.Stop,,,Stop,Stop,Stoppen,Detener,Arrêter,,,停止,중지,Parar,Остановить,,,,停止,停止,停止
+Studio.Common.Action.Yes,,,Yes,Yes,Ja,Sí,Oui,,,はい,예,Sim,Да,,,,是,是,是
+Studio.Common.Action.Continue,,,Continue,Continue,Fortsetzen,Continuar,Continuer,,,続ける,계속,Continuar,Продолжить,,,,继续,继续,繼續
+Studio.Common.Action.Redo,,,Redo,Redo,Wiederholen,Rehacer,Refaire,,,やり直し,다시 실행,Refazer,Вернуть,,,,恢复,恢复,重做
+Studio.Common.Action.Undo,,,Undo,Undo,Rückgängig,Deshacer,Annuler,,,元に戻す,실행 취소,Desfazer,Отменить,,,,撤消,撤消,復原
+Studio.Common.Action.Update,,,Update,Update,Aktualisieren,Actualizar,Mettre à jour,,,アップデート,업데이트,Atualizar,Обновить,,,,更新,更新,更新
+Studio.Common.Action.Reset,,,Reset,Reset,Zurücksetzen,Restablecer,Réinitialiser,,,再設定,재설정,Reiniciar,Сброс,,,,重置,重置,重置
+Studio.Common.Action.Fill,,,Fill,Fill,Füllen,Llenar,Remplir,,,埋める,채우기,Preencher,Заполнить,,,,填充,填充,填滿
+Studio.Common.Action.Goto,,,Goto,Goto,Gehe zu,Ir a,Aller à,,,別ページに移動,이동,Ir para,Перейти,,,,前往,前往,前往
+Studio.Common.Action.Move,,,Move,Move,Verschieben,Mover,Déplacer,,,移動,이동,Mover,Переместить,,,,移动,移动,移動
+Studio.Common.Action.Rotate,,,Rotate,Rotate,Drehen,Girar,Pivoter,,,回転,회전,Girar,Вращать,,,,旋转,旋转,旋轉
+Studio.Common.Action.Error,,,Error,Error,Fehler,Error,Erreur,,,エラー,오류,Erro,Ошибка,,,,错误,错误,錯誤
+Studio.Common.Action.Height,,,Height,Height,Höhe,Altura,Hauteur,,,高さ,높이,Altura,Высота,,,,高度,高度,高度：
+Studio.Common.Action.LabelWithColon1,,,%1:,%1:,%1:,%1:,%1:,,,%1:,%1:,%1:,%1:,,,,%1,%1,%1：
+Studio.Common.Action.Name,,,Name,Name,Name,Nombre,Nom,,,名前,이름,Nome,Имя,,,,名称,名称,名稱
+Studio.Common.Action.Search,,,Search,Search,Suchen,Buscar,Rechercher,,,検索,검색,Pesquisar,Поиск,,,,搜索,搜索,搜尋
+Studio.Common.Action.Value,,,Value,Value,Wert,Valor,Valeur,,,値,값,Valor,Значение,,,,值,值,值
+Studio.Common.Action.Warning,,,Warning,Warning,Warnung,Advertencia,Avertissement,,,警告,경고,Aviso,Предупреждение,,,,警告,警告,警告
+Studio.Common.Action.Width,,,Width,Width,Breite,Ancho,Largeur,,,幅,넓이,Largura,Ширина,,,,宽度,宽度,寬度
+Studio.Common.Action.Submit,,,Submit,Submit,,Enviar,Soumettre,,,送信,제출,Enviar,Завершить,,,,提交,提交,提交
+Studio.Common.Action.Install,,,Install,Install,,Instalar,Installer,,,インストール,설치,Instalar,Установить,,,,安装,安装,安裝
+Studio.Common.Action.Installed,,,Installed,Installed,,Instalado,Installé,,,インストール済み,설치됨,Instalado,Установлено,,,,已安装,已安装,已安裝
+Studio.Common.Action.Loading,,,Loading...,Loading...,,Cargando...,Chargement...,,,読み込み中...,불러오는 중...,Carregando...,Загрузка...,,,,正在加载...,正在加载...,正在載入……
+Studio.Common.Action.Resume,,,Resume,Resume,,Reanudar,Reprendre,,,再開,재개,Retomar,,,,,继续,继续,繼續
+Studio.Common.Action.Confirm,,,Confirm,Confirm,,Confirmar,Confirmer,,,確定,확인,Confirmar,,,,,确认,确认,確認
+Studio.Common.Action.HideDetails,,,Hide Details,Hide Details,,Ocultar detalles,Cacher les détails,,,詳細を非表示にする,세부 정보 숨기기,Ocultar detalhes,,,,,隐藏详情,隐藏详情,隱藏詳細資料
+Studio.Common.Action.LearnMore,,,Learn More,Learn More,,Aprende más,En savoir plus,,,もっと詳しく,더 알아보기,Saiba mais,,,,,了解更多,了解更多,了解更多
+Studio.Common.Action.SelectAll,,,Select All,Select All,,Seleccionar todo,Tout sélectionner,,,すべて選択,모두 선택,Selecionar tudo,,,,,全选,全选,全選
+Studio.Common.Action.ShowDetails,,,Show Details,Show Details,,Mostrar detalles,Afficher détails,,,詳細を表示,세부 정보 표시,Exibir detalhes,,,,,显示详情,显示详情,顯示詳細資料
+Studio.Common.Action.ReportBug,,,Report Bug,Report Bug,,Reportar error,Signaler un bug,,,バグを報告,버그 신고,Comunicar bug,,,,,回报问题,回报问题,舉報問題

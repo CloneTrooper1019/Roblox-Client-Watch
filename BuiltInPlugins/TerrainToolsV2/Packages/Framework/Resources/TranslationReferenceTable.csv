@@ -1,14 +1,14 @@
-Key,Source,en-us,ko,zh-cn
-Studio.Framework.AssetPreview.Resolution,Resolution,Resolution,해상도,分辨率
-Studio.Framework.AssetPreview.Creator,Creator,Creator,크리에이터,创建者
-Studio.Framework.Favorites.FlooredCountInThousands,{count:int}k+,{count:int}k+,{count:int}000+,{count:int}k+
-Studio.Framework.AssetPreview.Created,Created,Created,만든 날짜,已创建
-Studio.Framework.AssetPreview.LastUpdated,Last Updated,Last Updated,마지막 업데이트 날짜,上次更新
-Studio.Framework.VoteBar.VoteCount,{count:int} VOTES,{count:int} VOTES,{count:int} 표,{count:int} 票
-Studio.Framework.AssetPreview.AllGenre,All,All,전체,全部
-Studio.Framework.PageNavigation.FirstPage,First page,First page,첫 페이지,首页
-Studio.Framework.AssetPreview.Genre,Genre,Genre,장르,类型
-Studio.Framework.PageNavigation.LastPage,Last page,Last page,마지막 페이지,尾页
-Studio.Framework.PageNavigation.NextPage,Next page,Next page,다음 페이지,下一页
-Studio.Framework.PageNavigation.PreviousPage,Previous page,Previous page,이전 페이지,上一页
-Studio.Framework.PageNavigation.PageCount,of {count:int},of {count:int},{count:int} 중,共 {count:int} 页
+Key,Source,en-us,es-es,fr-fr,ja-jp,ko-kr,pt-br,zh-cjv,zh-cn,zh-tw
+Studio.Framework.AssetPreview.Resolution,Resolution,Resolution,Resolución,Résolution,解像度,해상도,Resolução,分辨率,分辨率,解析度
+Studio.Framework.AssetPreview.Creator,Creator,Creator,Creador,Créateur,クリエーター,크리에이터,Criador,创建者,创建者,創作者
+Studio.Framework.Favorites.FlooredCountInThousands,{count:int}k+,{count:int}k+,{count:int}000+,{count:int}000+,{count:int}000+,{count:int}000+,{count:int}000+,{count:int}k+,{count:int}k+,{count:int}k+
+Studio.Framework.AssetPreview.Created,Created,Created,Creado,Créé,作成済み,만든 날짜,Criado,已创建,已创建,創作日期
+Studio.Framework.AssetPreview.LastUpdated,Last Updated,Last Updated,Última actualización,Dernière mise à jour,最終更新,마지막 업데이트 날짜,Última atualização,上次更新,上次更新,最後更新日期
+Studio.Framework.VoteBar.VoteCount,{count:int} VOTES,{count:int} VOTES,{count:int} VOTOS,{count:int} VOTES,{count:int} 票,{count:int} 표,{count:int} VOTOS,{count:int} 票,{count:int} 票,{count:int} 票
+Studio.Framework.AssetPreview.AllGenre,All,All,Todo,Tout,すべて,전체,Tudo,全部,全部,全部
+Studio.Framework.PageNavigation.FirstPage,First page,First page,Primera página,Première page,最初のページ,첫 페이지,Primeira página,首页,首页,首頁
+Studio.Framework.AssetPreview.Genre,Genre,Genre,Género,Genre,ジャンル,장르,Gênero,类型,类型,類別
+Studio.Framework.PageNavigation.LastPage,Last page,Last page,Última página,Dernière page,最後のページ,마지막 페이지,Última página,尾页,尾页,末頁
+Studio.Framework.PageNavigation.NextPage,Next page,Next page,Siguiente página,Prochaine page,次のページ,다음 페이지,Próxima página,下一页,下一页,下一頁
+Studio.Framework.PageNavigation.PreviousPage,Previous page,Previous page,Página anterior,Page précédente,前のページ,이전 페이지,Página anterior,上一页,上一页,上一頁
+Studio.Framework.PageNavigation.PageCount,of {count:int},of {count:int},de {count:int},de {count:int},（全 {count:int} ページ中）,{count:int} 중,de {count:int},共 {count:int} 页,共 {count:int} 页,（共 {count:int} 頁）

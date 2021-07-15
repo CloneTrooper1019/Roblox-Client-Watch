@@ -1,7 +1,7 @@
-Key,Source,en-us,ko,ru,zh-cn
-Studio.PlayerEmulator.LanguageSection.CustomLanguageDisplayText,(Custom),(Custom),(사용자 정의),(Пользовательские),（自定义）
-Studio.PlayerEmulator.LanguageSection.LabelText,Locale,Locale,로캘,Местные настройки,区域设置
-Studio.PlayerEmulator.Meta.PluginTitle,Player Emulator,Player Emulator,플레이어 에뮬레이터,Эмулятор игрока,玩家模拟器
-Studio.PlayerEmulator.MainSwitchSection.LabelText,Enable Test Profile,Enable Test Profile,테스트 프로필 활성화,Включить тестовый профиль,启用测试配置文件
-Studio.PlayerEmulator.LanguageSection.InstructionText,Cloud table will fetch translations for %s (%s),Cloud table will fetch translations for %s (%s),클라우드 테이블이 %s(%s)에 대한 번역을 가져옵니다,%s (%s): в облачной таблице будет найден перевод,云表格将提取 %s （%s） 的翻译文档
-Studio.PlayerEmulator.CountryRegionSection.LabelText,Region,Region,지역,Район,区域
+Key,Source,en-us,es-es,fr-fr,ja-jp,ko-kr,pt-br,ru-ru,zh-cjv,zh-cn,zh-tw
+Studio.PlayerEmulator.LanguageSection.CustomLanguageDisplayText,(Custom),(Custom),(Personalizado),(Personnalisé),（カスタム）,(사용자 정의),(Personalizar),(Пользовательские),（自定义）,（自定义）,（自訂）
+Studio.PlayerEmulator.LanguageSection.LabelText,Locale,Locale,Idioma,Locale,地域,로캘,Idioma,Местные настройки,区域设置,区域设置,地區
+Studio.PlayerEmulator.Meta.PluginTitle,Player Emulator,Player Emulator,Emulador del jugador,Émulateur de jeu,プレイヤー仮想化機能,플레이어 에뮬레이터,Emulador de jogador,Эмулятор игрока,玩家模拟器,玩家模拟器,玩家模擬器
+Studio.PlayerEmulator.MainSwitchSection.LabelText,Enable Test Profile,Enable Test Profile,Activar perfil de prueba,Activer le profil du test,テストプロフィールを有効化,테스트 프로필 활성화,Ativar perfil de teste,Включить тестовый профиль,启用测试配置文件,启用测试配置文件,啟用測試玩家
+Studio.PlayerEmulator.LanguageSection.InstructionText,Cloud table will fetch translations for %s (%s),Cloud table will fetch translations for %s (%s),La tabla en la nube recuperará las traducciones para %s (%s),Le tableau cloud ira récupérer les traductions pour %s (%s),クラウドテーブルは %s (%s) で翻訳を取得します,클라우드 테이블이 %s(%s)에 대한 번역을 가져옵니다,A tabela na nuvem irá obter traduções para %s (%s),%s (%s): в облачной таблице будет найден перевод,云表格将提取 %s （%s） 的翻译文档,云表格将提取 %s （%s） 的翻译文档,雲端表格將會擷取 %s（%s）的翻譯
+Studio.PlayerEmulator.CountryRegionSection.LabelText,Region,Region,Región,Région,地域,지역,Região,Район,区域,区域,區域

@@ -1,5 +1,5 @@
-Key,Source,en-us,ko,zh-cn
-Studio.EventEmulator.Plugin.Name,EventEmulator,EventEmulator,EventEmulator,EventEmulator
-Studio.EventEmulator.Plugin.Toolbar,Event Emulator,Event Emulator,이벤트 에뮬레이터,事件模拟器
-Studio.EventEmulator.Plugin.Button,Toggle,Toggle,토글,切换
-Studio.EventEmulator.Plugin.Description,Toggles the EventEmulator plugin window.,Toggles the EventEmulator plugin window.,EventEmulator 플러그인 창을 토글합니다.,切换 EventEmulator 插件窗口
+Key,Source,en-us,es-es,fr-fr,ja-jp,ko-kr,pt-br,zh-cjv,zh-cn,zh-tw
+Studio.EventEmulator.Plugin.Name,EventEmulator,EventEmulator,EventEmulator,EventEmulator,EventEmulator,EventEmulator,EventEmulator,EventEmulator,EventEmulator,EventEmulator
+Studio.EventEmulator.Plugin.Toolbar,Event Emulator,Event Emulator,Emulador de evento,Émulateur d'événements,イベント仮想化機能,이벤트 에뮬레이터,Emulador de eventos,事件模拟器,事件模拟器,事件模擬器
+Studio.EventEmulator.Plugin.Button,Toggle,Toggle,Alternar,Basculer,切り換え,토글,Alternar,切换,切换,切換
+Studio.EventEmulator.Plugin.Description,Toggles the EventEmulator plugin window.,Toggles the EventEmulator plugin window.,Alternar la ventana del plugin EventEmulator.,Bascule la fenêtre du plugin EventEmulator.,EventEmulator プラグインウィンドウを切り換え。,EventEmulator 플러그인 창을 토글합니다.,Alterna a janela do plugin EventEmulator.,切换 EventEmulator 插件窗口,切换 EventEmulator 插件窗口,切換 EventEmulator 外掛程式視窗。

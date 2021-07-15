@@ -1,57 +1,57 @@
-Key,Source,en-us,ko,zh-cn
-Studio.AssetManager.ContextMenu.ViewPlaceHistory,View History,View History,기록 보기,查看历史记录
-Studio.AssetManager.ContextMenu.ViewOnWebsite,View On Website,View On Website,웹사이트에서 보기,在网站上查看
-Studio.AssetManager.Main.Title,Asset Manager,Asset Manager,애셋 관리자,素材管理器
-Studio.AssetManager.Main.ToolbarButton,Asset Manager,Asset Manager,애셋 관리자,素材管理器
-Studio.AssetManager.Meta.ToolbarName,Asset Manager,Asset Manager,애셋 관리자,素材管理器
-Studio.AssetManager.BulkImport.BulkImportShowLink,Check current status,Check current status,현재 상태 확인,检查当前状态
-Studio.AssetManager.TopBar.GridViewButton,Grid View,Grid View,그리드 뷰,栅格视图
-Studio.AssetManager.TopBar.ExplorerOverlayButton,Explorer Overlay,Explorer Overlay,탐색기 오버레이,页面叠加
-Studio.AssetManager.Main.Tooltip,"Add, remove, and modify assets","Add, remove, and modify assets","애셋 추가, 제거, 수정",添加、移除和修改素材
-Studio.AssetManager.TopBar.ForwardButton,Forward,Forward,앞으로,前进
-Studio.AssetManager.ContextMenu.RevertToLastPublishedVersion,Revert To Last Published Version,Revert To Last Published Version,마지막 게시 버전으로 되돌리기,还原至上次发布版本
-Studio.AssetManager.NavBar.ID,ID: {gameId:int},ID: {gameId:int},ID: {gameId:int},ID：{gameId:int}
-Studio.AssetManager.Meta.PluginName,AssetManager,AssetManager,AssetManager,AssetManager
-Studio.AssetManager.ContextMenu.EditAsset,Edit Asset,Edit Asset,애셋 편집,编辑素材
-Studio.AssetManager.BulkImport.BulkImportRunning,You can import other files after the current import is finished.,You can import other files after the current import is finished.,현재 가져오기가 완료된 후 다른 파일을 가져올 수 있습니다.,请在当前导入完成后开始其它文件的导入。
-Studio.AssetManager.ContextMenu.UpdateAll,Update All,Update All,모두 업데이트,全部更新
-Studio.AssetManager.NavBar.GamePlaceholderName,Game,Game,게임,游戏
-Studio.AssetManager.ContextMenu.InsertWithLocation,Insert With Location,Insert With Location,위치 포함 삽입,带位置插入
-Studio.AssetManager.SearchBar.PlaceholderText,Filter,Filter,필터,筛选
-Studio.AssetManager.Folders.IMAGES,Images,Images,이미지,图片
-Studio.AssetManager.Folders.MESHES,Meshes,Meshes,메시,网格
-Studio.AssetManager.ContextMenu.PublishLinkedSource,Publish this LinkedSource,Publish this LinkedSource,이 LinkedSource 게시,发布此 LinkedSource
-Studio.AssetManager.Folders.PACKAGES,Packages,Packages,패키지,包
-Studio.AssetManager.MainView.PublishText,You need to publish the game to start using Asset Manager.,You need to publish the game to start using Asset Manager.,애셋 관리자를 사용하려면 게임을 게시해야 합니다.,发布游戏后即可使用素材管理器。
-Studio.AssetManager.Folders.PLACES,Places,Places,플레이스,场景
-Studio.AssetManager.ContextMenu.AssetPreview,Asset Preview,Asset Preview,애셋 미리보기,素材预览
-Studio.AssetManager.ContextMenu.InsertAsScript,Insert As Script,Insert As Script,스크립트로 삽입,插入为脚本
-Studio.AssetManager.ContextMenu.RenameAlias,Rename Alias,Rename Alias,닉네임 변경,重命名
-Studio.AssetManager.Folders.SCRIPTS,Scripts,Scripts,스크립트,脚本
-Studio.AssetManager.AssetGrid.NoResults,No {assetType} Found,No {assetType} Found,{assetType}을(를) 찾을 수 없음,未找到 {assetType}
-Studio.AssetManager.ContextMenu.AddImages,Add Images,Add Images,이미지 추가,添加图片
-Studio.AssetManager.ContextMenu.AddMeshes,Add Meshes,Add Meshes,메시 추가,添加网格
-Studio.AssetManager.ContextMenu.AddNewPlace,Add New Place,Add New Place,새 플레이스 추가,添加新场景
-Studio.AssetManager.ContextMenu.NewPlaceAdded,New Place Added,New Place Added,새 플레이스가 추가됨,新场景已添加
-Studio.AssetManager.ContextMenu.CopyTextureIdToClipboard,Copy Texture ID to Clipboard,Copy Texture ID to Clipboard,텍스처 ID를 클립보드에 복사,将纹理 ID 复制到剪贴板
-Studio.AssetManager.ContextMenu.Rename,Rename,Rename,이름 변경,重命名
-Studio.AssetManager.ContextMenu.CopyIdToClipboard,Copy ID to Clipboard,Copy ID to Clipboard,ID를 클립보드에 복사,将 ID 复制到剪贴板
-Studio.AssetManager.MainView.SaveButtonText,Save,Save,저장,保存
-Studio.AssetManager.MainView.ButtonText,Publish,Publish,게시,发布
-Studio.AssetManager.AssetPreview.Insert,Insert,Insert,삽입,插入
-Studio.AssetManager.ContextMenu.Insert,Insert,Insert,삽입,插入
-Studio.AssetManager.TopBar.ListViewButton,List View,List View,목록 뷰,列表视图
-Studio.AssetManager.ContextMenu.InsertAsLocalScript,Insert As Local Script,Insert As Local Script,로컬 스크립트로 삽입,插入为本地脚本
-Studio.AssetManager.ContextMenu.InsertAsModuleScript,Insert As Module Script,Insert As Module Script,모듈 스크립트로 삽입,插入为模块脚本
-Studio.AssetManager.ContextMenu.RemoveFromGame,Remove From Game,Remove From Game,게임에서 제거,从游戏中移除
-Studio.AssetManager.Folders.AUDIO,Audio,Audio,오디오,音频
-Studio.AssetManager.ContextMenu.PackageDetails,Package Details,Package Details,패키지 세부 정보,包详情
-Studio.AssetManager.ContextMenu.RefreshScript,Refresh Script,Refresh Script,스크립트 새로고침,刷新脚本
-Studio.AssetManager.ContextMenu.AddAudio,Add Audio,Add Audio,오디오 추가,添加音频
-Studio.AssetManager.AssetGrid.LoadButton,Load All Pages,Load All Pages,모든 페이지 불러오기,加载所有页面
-Studio.AssetManager.ContextMenu.OpenFolder,Open,Open,열기,打开
-Studio.AssetManager.RecentlyImportedView.Title,Recently Added,Recently Added,최근 추가된 항목,最近添加
-Studio.AssetManager.TopBar.BackButton,Back,Back,뒤로,返回
-Studio.AssetManager.TopBar.BulkImportButton,Bulk import,Bulk import,일괄 가져오기,批量导入
-Studio.AssetManager.Callout.BadgesDevProductsDescription,Badges and Developer Products have moved to Monetization Page in Game Settings,Badges and Developer Products have moved to Monetization Page in Game Settings,배지 및 개발자 제품이 '게임 설정'의 '수익 창출' 페이지로 이동했습니다.,徽章和开发者产品已经转移到游戏设置的盈利页面
-Studio.AssetManager.MainView.SaveText,Save to start using Asset Manager.,Save to start using Asset Manager.,저장 후 애셋 관리자 사용을 시작할 수 있습니다.,保存后即可开始使用素材管理器
+Key,Source,en-us,es-es,fr-fr,ja-jp,ko-kr,pt-br,zh-cjv,zh-cn,zh-tw
+Studio.AssetManager.ContextMenu.ViewPlaceHistory,View History,View History,Ver historial,Voir historique,履歴を表示,기록 보기,Ver histórico,查看历史记录,查看历史记录,檢視歷史紀錄
+Studio.AssetManager.ContextMenu.ViewOnWebsite,View On Website,View On Website,Ver en el sitio web,Visualiser sur le site web,ウェブサイトで表示,웹사이트에서 보기,Ver na página,在网站上查看,在网站上查看,在網站上檢視
+Studio.AssetManager.Main.Title,Asset Manager,Asset Manager,Administrador de recursos,Manager d'assets,アセットマネージャー,애셋 관리자,Gerenciador de recursos,素材管理器,素材管理器,素材管理器
+Studio.AssetManager.Main.ToolbarButton,Asset Manager,Asset Manager,Administrador de recursos,Manager d'assets,アセットマネージャー,애셋 관리자,Gerenciador de recursos,素材管理器,素材管理器,素材管理器
+Studio.AssetManager.Meta.ToolbarName,Asset Manager,Asset Manager,Administrador de recursos,Manager d'assets,アセットマネージャー,애셋 관리자,Gerenciador de recursos,素材管理器,素材管理器,素材管理器
+Studio.AssetManager.BulkImport.BulkImportShowLink,Check current status,Check current status,Comprobar estado actual,Vérifier statut actuel,現在の状況をチェック,현재 상태 확인,Verificar estado atual,检查当前状态,检查当前状态,檢查目前狀態
+Studio.AssetManager.TopBar.GridViewButton,Grid View,Grid View,Vista de la cuadrícula,Vue de la grille,グリッド表示,그리드 뷰,Visualizar grade,栅格视图,栅格视图,網格檢視
+Studio.AssetManager.TopBar.ExplorerOverlayButton,Explorer Overlay,Explorer Overlay,Superponer al explorador,Superposition de l'explorateur,エクスプローラのオーバーレイ,탐색기 오버레이,Sobrepor o explorador,页面叠加,页面叠加,總管面板
+Studio.AssetManager.Main.Tooltip,"Add, remove, and modify assets","Add, remove, and modify assets","Añade, elimina y modifica recursos","Ajouter, retirer ou modifier des assets",アセットの追加、削除、変更,"애셋 추가, 제거, 수정","Adicionar, remover e modificar recursos",添加、移除和修改素材,添加、移除和修改素材,新增、移除及修改素材
+Studio.AssetManager.TopBar.ForwardButton,Forward,Forward,Avanzar,Faire suivre,次へ,앞으로,Avançar,前进,前进,前進
+Studio.AssetManager.ContextMenu.RevertToLastPublishedVersion,Revert To Last Published Version,Revert To Last Published Version,Revertir a la última versión publicada,Retour à la dernière version publiée,最後に公開したバージョンに戻す,마지막 게시 버전으로 되돌리기,Reverter para última versão publicada,还原至上次发布版本,还原至上次发布版本,還原到最後發布的版本
+Studio.AssetManager.NavBar.ID,ID: {gameId:int},ID: {gameId:int},ID: {gameId:int},ID: {gameId:int},ID: {gameId:int},ID: {gameId:int},ID: {gameId:int},ID：{gameId:int},ID：{gameId:int},ID：{gameId:int}
+Studio.AssetManager.Meta.PluginName,AssetManager,AssetManager,AssetManager,AssetManager,AssetManager,AssetManager,AssetManager,AssetManager,AssetManager,AssetManager
+Studio.AssetManager.ContextMenu.EditAsset,Edit Asset,Edit Asset,Editar recurso,Modifier asset,アセットを編集,애셋 편집,Editar recurso,编辑素材,编辑素材,編輯素材
+Studio.AssetManager.BulkImport.BulkImportRunning,You can import other files after the current import is finished.,You can import other files after the current import is finished.,Puedes importar otros archivos una vez que la importación actual termine.,Tu peux importer d'autres fichiers une fois que l'importation en cours est terminée.,現在のインポート終了後に他のファイルをインポートできます。,현재 가져오기가 완료된 후 다른 파일을 가져올 수 있습니다.,Você pode importar outros arquivos depois que a importação atual terminar.,请在当前导入完成后开始其它文件的导入。,请在当前导入完成后开始其它文件的导入。,目前檔案匯入完畢後即可匯入其他檔案。
+Studio.AssetManager.ContextMenu.UpdateAll,Update All,Update All,Actualizar todos,Tout mettre à jour,すべてアップデート,모두 업데이트,Atualizar tudo,全部更新,全部更新,全部更新
+Studio.AssetManager.NavBar.GamePlaceholderName,Game,Game,Juego,Jeu,ゲーム,게임,Jogo,游戏,游戏,遊戲
+Studio.AssetManager.ContextMenu.InsertWithLocation,Insert With Location,Insert With Location,Insertar con ubicación,Insérer avec location,ロケーションをつけて挿入,위치 포함 삽입,Inserir com localidade,带位置插入,带位置插入,與位置一起插入
+Studio.AssetManager.SearchBar.PlaceholderText,Filter,Filter,Filtro,Filtre,フィルタ,필터,Filtro,筛选,筛选,篩選
+Studio.AssetManager.Folders.IMAGES,Images,Images,Imágenes,Images,画像,이미지,Imagens,图片,图片,圖像
+Studio.AssetManager.Folders.MESHES,Meshes,Meshes,Mallas,Meshes,メッシュ,메시,Malhas,网格,网格,網格
+Studio.AssetManager.ContextMenu.PublishLinkedSource,Publish this LinkedSource,Publish this LinkedSource,Publicar esta LinkedSource,Publier cette LinkedSource,この LinkedSource を公開,이 LinkedSource 게시,Publicar esta LinkedSource,发布此 LinkedSource,发布此 LinkedSource,發布此 LinkedSource
+Studio.AssetManager.Folders.PACKAGES,Packages,Packages,Paquetes,Packages,パッケージ,패키지,Pacotes,包,包,套件
+Studio.AssetManager.MainView.PublishText,You need to publish the game to start using Asset Manager.,You need to publish the game to start using Asset Manager.,Tienes que publicar el juego para usar el Administrador de recursos.,Tu dois publier le jeu pour commencer à utiliser le manager d'assets.,アセットマネージャーの使用を開始するにはゲームを公開する必要があります。,애셋 관리자를 사용하려면 게임을 게시해야 합니다.,Você precisa publicar o jogo para começar a usar o Gerenciador de recursos.,发布游戏后即可使用素材管理器。,发布游戏后即可使用素材管理器。,若要使用素材管理器，請先發布遊戲。
+Studio.AssetManager.Folders.PLACES,Places,Places,Lugares,Emplacements,プレース,플레이스,Locais,场景,场景,地點
+Studio.AssetManager.ContextMenu.AssetPreview,Asset Preview,Asset Preview,Vista previa del recurso,Aperçu des ressources,アセットプレビュー,애셋 미리보기,Visualização de recurso,素材预览,素材预览,素材預覽
+Studio.AssetManager.ContextMenu.InsertAsScript,Insert As Script,Insert As Script,Insertar como script,Insérer en tant que script,スクリプトとして挿入,스크립트로 삽입,Inserir como script,插入为脚本,插入为脚本,以指令碼插入
+Studio.AssetManager.ContextMenu.RenameAlias,Rename Alias,Rename Alias,Renombrar alias,Renommer alias,ニックネームを変更,닉네임 변경,Renomear alcunha,重命名,重命名,重新命名別名
+Studio.AssetManager.Folders.SCRIPTS,Scripts,Scripts,Scripts,Scripts,スクリプト,스크립트,Scripts,脚本,脚本,指令碼
+Studio.AssetManager.AssetGrid.NoResults,No {assetType} Found,No {assetType} Found,No hay {assetType},{assetType} non trouvé,{assetType} が見つかりません,{assetType}을(를) 찾을 수 없음,Não há {assetType},未找到 {assetType},未找到 {assetType},找不到{assetType}
+Studio.AssetManager.ContextMenu.AddImages,Add Images,Add Images,Añadir imágenes,Ajouter images,画像を追加,이미지 추가,Adicionar imagens,添加图片,添加图片,加入圖像
+Studio.AssetManager.ContextMenu.AddMeshes,Add Meshes,Add Meshes,Añadir mallas,Ajouter meshes,メッシュを追加,메시 추가,Adicionar malhas,添加网格,添加网格,加入網格
+Studio.AssetManager.ContextMenu.AddNewPlace,Add New Place,Add New Place,Añadir un nuevo lugar,Ajouter nouvel emplacement,新しいプレースを追加,새 플레이스 추가,Adicionar novo local,添加新场景,添加新场景,新增地點
+Studio.AssetManager.ContextMenu.NewPlaceAdded,New Place Added,New Place Added,Nuevo lugar añadido,Nouvel emplacement ajouté,新しいプレースを追加済み,새 플레이스가 추가됨,Novo local adicionado,新场景已添加,新场景已添加,已加入新地點
+Studio.AssetManager.ContextMenu.CopyTextureIdToClipboard,Copy Texture ID to Clipboard,Copy Texture ID to Clipboard,Copiar ID de la textura al portapapeles,Copier l'ID texture dans le clipboard,テクスチャのIDをクリップボードにコピー,텍스처 ID를 클립보드에 복사,Copiar ID da textura para a área de transferência,将纹理 ID 复制到剪贴板,将纹理 ID 复制到剪贴板,將紋理 ID 複製到剪貼簿
+Studio.AssetManager.ContextMenu.Rename,Rename,Rename,Renombrar,Renommer,名前を変更,이름 변경,Renomear,重命名,重命名,重新命名
+Studio.AssetManager.ContextMenu.CopyIdToClipboard,Copy ID to Clipboard,Copy ID to Clipboard,Copiar ID al portapapeles,Copier ID dans le clipboard,IDをクリップボードにコピー,ID를 클립보드에 복사,Copiar ID para a área de transferência,将 ID 复制到剪贴板,将 ID 复制到剪贴板,將 ID 複製到剪貼簿
+Studio.AssetManager.MainView.SaveButtonText,Save,Save,Guardar,Sauvegarder,保存,저장,Salvar,保存,保存,儲存
+Studio.AssetManager.MainView.ButtonText,Publish,Publish,Publicar,Publier,公開,게시,Publicar,发布,发布,發佈
+Studio.AssetManager.AssetPreview.Insert,Insert,Insert,Insertar,Insérer,挿入,삽입,Inserir,插入,插入,插入
+Studio.AssetManager.ContextMenu.Insert,Insert,Insert,Insertar,Insérer,挿入,삽입,Inserir,插入,插入,插入
+Studio.AssetManager.TopBar.ListViewButton,List View,List View,Vista de la lista,Vue de la liste,リスト表示,목록 뷰,Visualizar lista,列表视图,列表视图,清單檢視
+Studio.AssetManager.ContextMenu.InsertAsLocalScript,Insert As Local Script,Insert As Local Script,Insertar un script local,Insérer en tant que script local,ローカルスクリプトとして挿入,로컬 스크립트로 삽입,Inserir como script local,插入为本地脚本,插入为本地脚本,以本機指令碼插入
+Studio.AssetManager.ContextMenu.InsertAsModuleScript,Insert As Module Script,Insert As Module Script,Insertar como ModuleScript,Insérer comme module du script,モジュールスクリプトとして挿入,모듈 스크립트로 삽입,Inserir como script de módulo,插入为模块脚本,插入为模块脚本,以模組指令碼插入
+Studio.AssetManager.ContextMenu.RemoveFromGame,Remove From Game,Remove From Game,Eliminar del juego,Retirer du jeu,ゲームから削除,게임에서 제거,Remover do jogo,从游戏中移除,从游戏中移除,從遊戲中移除
+Studio.AssetManager.Folders.AUDIO,Audio,Audio,Audio,Audio,音声,오디오,Áudio,音频,音频,音訊
+Studio.AssetManager.ContextMenu.PackageDetails,Package Details,Package Details,Detalles del paquete,Détails du package,パッケージの詳細,패키지 세부 정보,Detalhes do pacote,包详情,包详情,套件詳細資料
+Studio.AssetManager.ContextMenu.RefreshScript,Refresh Script,Refresh Script,Actualizar script,Rafraîchir script,スクリプトをリフレッシュ,스크립트 새로고침,Atualizar script,刷新脚本,刷新脚本,重新整理指令碼
+Studio.AssetManager.ContextMenu.AddAudio,Add Audio,Add Audio,Añadir audio,Ajouter audio,音声を追加,오디오 추가,Adicionar áudio,添加音频,添加音频,新增音訊
+Studio.AssetManager.AssetGrid.LoadButton,Load All Pages,Load All Pages,Cargar todas las páginas,Charger toutes les pages,すべてのページを読み込む,모든 페이지 불러오기,Carregar todas as páginas,加载所有页面,加载所有页面,載入所有頁面
+Studio.AssetManager.ContextMenu.OpenFolder,Open,Open,Abrir,Ouvert,開く,열기,Abrir,打开,打开,開啟
+Studio.AssetManager.RecentlyImportedView.Title,Recently Added,Recently Added,Añadido recientemente,Ajouté récemment,最近、追加されたもの,최근 추가된 항목,Adicionado recentemente,最近添加,最近添加,最近新增
+Studio.AssetManager.TopBar.BackButton,Back,Back,Volver,Retour,戻る,뒤로,Voltar,返回,返回,返回
+Studio.AssetManager.TopBar.BulkImportButton,Bulk import,Bulk import,Importación masiva,Importation en nombre,バルクインポート,일괄 가져오기,Importar em massa,批量导入,批量导入,大量匯入
+Studio.AssetManager.Callout.BadgesDevProductsDescription,Badges and Developer Products have moved to Monetization Page in Game Settings,Badges and Developer Products have moved to Monetization Page in Game Settings,Los emblemas y productos de desarrolladores se movieron a la página Monetización bajo Configuración del juego,Les badges et les produits pour développeurs ont été déplacés vers la page de monétisation dans les paramètres du jeu,バッジと開発者製品は、ゲーム設定にある収益化ページに移動しました,배지 및 개발자 제품이 '게임 설정'의 '수익 창출' 페이지로 이동했습니다.,Emblemas e produtos do desenvolvedor foram movidos para a página Monetização nas Configurações do jogo,徽章和开发者产品已经转移到游戏设置的盈利页面,徽章和开发者产品已经转移到游戏设置的盈利页面,徽章和開發者產品已移到遊戲設定的營利頁面
+Studio.AssetManager.MainView.SaveText,Save to start using Asset Manager.,Save to start using Asset Manager.,Guarda para empezar a usar Administrador de recursos.,Sauvegarder pour commencer à utiliser Asset Manager.,アセットマネージャーを使い始めるには保存する。,저장 후 애셋 관리자 사용을 시작할 수 있습니다.,Salve para começar a usar o Gerenciador de recursos.,保存后即可开始使用素材管理器,保存后即可开始使用素材管理器,儲存後即可開始使用素材管理員。

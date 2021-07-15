@@ -1,0 +1,60 @@
+Key,Context,Source,en-us
+Studio.Common.Action.Apply,,Apply,Apply
+Studio.Common.Action.Back,,Back,Back
+Studio.Common.Action.Cancel,,Cancel,Cancel
+Studio.Common.Action.Clear,,Clear,Clear
+Studio.Common.Action.Close,,Close,Close
+Studio.Common.Action.Confirm,,Confirm,Confirm
+Studio.Common.Action.Continue,,Continue,Continue
+Studio.Common.Action.Copy,,Copy,Copy
+Studio.Common.Action.Create,,Create,Create
+Studio.Common.Action.Cut,,Cut,Cut
+Studio.Common.Action.Delete,,Delete,Delete
+Studio.Common.Action.Edit,,Edit,Edit
+Studio.Common.Action.Error,,Error,Error
+Studio.Common.Action.Exit,,Exit,Exit
+Studio.Common.Action.File,,File,File
+Studio.Common.Action.Find,,Find,Find
+Studio.Common.Action.Goto,,Goto,Goto
+Studio.Common.Action.Height,,Height,Height
+Studio.Common.Action.Help,,Help,Help
+Studio.Common.Action.HideDetails,,Hide Details,Hide Details
+Studio.Common.Action.Home,,Home,Home
+Studio.Common.Action.Ignore,,Ignore,Ignore
+Studio.Common.Action.Insert,,Insert,Insert
+Studio.Common.Action.LabelWithColon1,,%1:,%1:
+Studio.Common.Action.LearnMore,,Learn More,Learn More
+Studio.Common.Action.Name,,Name,Name
+Studio.Common.Action.New,,New,New
+Studio.Common.Action.Next,,Next,Next
+Studio.Common.Action.No,,No,No
+Studio.Common.Action.OK,,OK,OK
+Studio.Common.Action.Okay,,Okay,Okay
+Studio.Common.Action.Open,,Open,Open
+Studio.Common.Action.Paste,,Paste,Paste
+Studio.Common.Action.Pause,,Pause,Pause
+Studio.Common.Action.Play,,Play,Play
+Studio.Common.Action.Previous,,Previous,Previous
+Studio.Common.Action.Redo,,Redo,Redo
+Studio.Common.Action.Reload,,Reload,Reload
+Studio.Common.Action.Remove,,Remove,Remove
+Studio.Common.Action.Rename,,Rename,Rename
+Studio.Common.Action.Replace,,Replace,Replace
+Studio.Common.Action.ReportBug,,Report Bug,Report Bug
+Studio.Common.Action.Reset,,Reset,Reset
+Studio.Common.Action.Resize,,Resize,Resize
+Studio.Common.Action.Resume,,Resume,Resume
+Studio.Common.Action.Retry,,Retry,Retry
+Studio.Common.Action.Save,,Save,Save
+Studio.Common.Action.Search,,Search,Search
+Studio.Common.Action.Select,,Select,Select
+Studio.Common.Action.SelectAll,,Select All,Select All
+Studio.Common.Action.Share,,Share,Share
+Studio.Common.Action.ShowDetails,,Show Details,Show Details
+Studio.Common.Action.Stop,,Stop,Stop
+Studio.Common.Action.Undo,,Undo,Undo
+Studio.Common.Action.Update,,Update,Update
+Studio.Common.Action.Value,,Value,Value
+Studio.Common.Action.Warning,,Warning,Warning
+Studio.Common.Action.Width,,Width,Width
+Studio.Common.Action.Yes,,Yes,Yes

@@ -1,5 +1,5 @@
-Key,Source,en-us,ko,zh-cn
-Studio.TestHarness.Plugin.Name,Test Harness,Test Harness,테스트 도구,测试工具
-Studio.TestHarness.Plugin.Toolbar,Test Harness,Test Harness,테스트 도구,测试工具
-Studio.TestHarness.Plugin.Button,Toggle,Toggle,토글,切换
-Studio.TestHarness.Plugin.Description,Toggles the Test Harness plugin window.,Toggles the Test Harness plugin window.,테스트 도구 플러그인 창을 토글합니다.,切换测试工具插件窗口
+Key,Source,en-us,es-es,fr-fr,ja-jp,ko-kr,pt-br,zh-cjv,zh-cn,zh-tw
+Studio.TestHarness.Plugin.Name,Test Harness,Test Harness,Herramienta de ejecución de pruebas,Outil d'exécution des tests,ハーネステスト,테스트 도구,Equipamento de teste,测试工具,测试工具,測試安全鎖
+Studio.TestHarness.Plugin.Toolbar,Test Harness,Test Harness,Herramienta de ejecución de pruebas,Outil d'exécution des tests,ハーネステスト,테스트 도구,Equipamento de teste,测试工具,测试工具,測試安全鎖
+Studio.TestHarness.Plugin.Button,Toggle,Toggle,Activar,Basculer,切り換え,토글,Alternar,切换,切换,切換
+Studio.TestHarness.Plugin.Description,Toggles the Test Harness plugin window.,Toggles the Test Harness plugin window.,Activa la ventana del plugin de la Herramienta de ejecución de pruebas.,Active la fenêtre du plugin de l'outil d'exécution des tests.,ハーネステストのプラグインウィンドウを切り換え。,테스트 도구 플러그인 창을 토글합니다.,Alterna a janela do plugin Equipamento de teste.,切换测试工具插件窗口,切换测试工具插件窗口,切換測試安全鎖外掛程式視窗。

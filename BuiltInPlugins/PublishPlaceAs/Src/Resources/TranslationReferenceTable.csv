@@ -1,95 +1,95 @@
-Key,Source,en-us,ko,ru,zh-cn
-Studio.PublishPlaceAs.Genre.Adventure,Adventure,Adventure,모험,Приключения,冒险
-Studio.PublishPlaceAs.General.PublishPlace,Publish Place,Publish Place,플레이스 게시,Опубликовать место,发布场景
-Studio.PublishPlaceAs.General.UntitledGame,Untitled Game,Untitled Game,제목 없는 게임, ,未命名游戏
-Studio.PublishPlaceAs.Genre.Sports,Sports,Sports,스포츠,Спорт,体育
-Studio.PublishPlaceAs.Button.AddNewPlace,Add New,Add New,신규 추가,Добавить новое,新增
-Studio.PublishPlaceAs.General.PlayabilityPublicDesc,Anyone on Roblox,Anyone on Roblox,Roblox의 누구든 가능, ,Roblox 上的所有玩家
-Studio.PublishPlaceAs.General.ContentDialogItem2,Intense Violence,Intense Violence,심각한 폭력,Насилие,激烈暴力
-Studio.PublishPlaceAs.General.ContentDialogTitle,Content Agreement,Content Agreement,콘텐츠 동의,Соглашение на использование контента,内容协议
-Studio.PublishPlaceAs.Devices.Tablet,Tablet,Tablet,태블릿,Планшет,平板电脑
-Studio.PublishPlaceAs.General.ContentDialogItem3,Strong Language (Swearing),Strong Language (Swearing),심한 말(욕설),Грубые выражения,粗暴语言 (脏话)
-Studio.PublishPlaceAs.Button.Retry,Retry,Retry,다시 시도,Повтор,重试
-Studio.PublishPlaceAs.Button.ReplyDisagree,Disagree,Disagree,비동의,Отклонить,不同意
-Studio.PublishPlaceAs.General.ContentDialogHeader,Do you agree that your game is controller compatible and contains NONE of the following?,Do you agree that your game is controller compatible and contains NONE of the following?,"게임이 컨트롤러와 호환되도록 지원하며, 다음과 같은 콘텐츠가 포함되어 있지 않아야 합니다. 동의하시나요?","Подтверждаете ли вы, что ваша игра совместима с контроллером и не содержит следующих элементов?",确认游戏可以兼容控制器，并不包含以下内容吗?
-Studio.PublishPlaceAs.GroupDropdown.Me,Me,Me,나, ,我
-Studio.PublishPlaceAs.Genre.TownAndCity,Town and City,Town and City,마을/도시,Симулятор города,城市建设
-Studio.PublishPlaceAs.General.ContentDialogItem1,Blood or Gore,Blood or Gore,피 또는 잔인한 장면,Кровь и увечья,血腥
-Studio.PublishPlaceAs.General.ContentDialogItem5,Drug Reference or Use,Drug Reference or Use,마약 관련 또는 사용,Упоминание или употребление наркотиков,提及或使用毒品
-Studio.PublishPlaceAs.Error.DescriptionModerated,The description didn't go through our moderation. Please revise it and try again.,The description didn't go through our moderation. Please revise it and try again.,설명이 검열을 통과하지 못했어요. 수정한 후 다시 시도하세요.,"Описание не прошло модерацию. Пожалуйста, измените его и попробуйте еще раз.",此描述没有通过审核。请修改后再试一次。
-Studio.PublishPlaceAs.Devices.Computer,Computer,Computer,컴퓨터,Компьютер,个人电脑
-Studio.PublishPlaceAs.Devices.Header,Devices,Devices,기기,Устройства,设备
-Studio.PublishPlaceAs.PageTitle.Devices,Devices,Devices,기기,Устройства,设备
-Studio.PublishPlaceAs.PageTitle.Genre,Genre,Genre,장르,Жанр,主题
-Studio.PublishPlaceAs.General.ContentDialogItem4,Robux Gambling,Robux Gambling,Robux 도박,Азартные игры,以 Robux 进行赌博
-Studio.PublishPlaceAs.FooterButton.CreateNewGame,Create new game...,Create new game...,새 게임 만들기...,Создать новую игру...,创建新游戏…
-Studio.PublishPlaceAs.OptInLocations.TempLinkDescription,"China: to submit your game to the LuoBu app, visit ","China: to submit your game to the LuoBu app, visit ",중국: LuoBu 앱에 게임을 제출하려면 다음을 방문하세요 , ,中国：要将游戏提交到罗布乐思 App，请访问 
-Studio.PublishPlaceAs.Button.ReplyAgree,Agree,Agree,동의,Принять,同意
-Studio.PublishPlaceAs.Button.Close,Close,Close,닫기,Закрыть,关闭
-Studio.PublishPlaceAs.Error.NoDevices,You must select at least one playable device.,You must select at least one playable device.,플레이 가능한 기기를 최소 1개 선택해야 합니다.,Выберите устройство для воспроизведения.,你必须选择至少一种可玩设备。
-Studio.PublishPlaceAs.FooterButton.UpdateExistingGame,Update existing game...,Update existing game...,기존 게임 업데이트.,Обновление существующей игры...,更新现有游戏…
-Studio.PublishPlaceAs.Error.NameModerated,The name didn't go through our moderation. Please revise it and try again.,The name didn't go through our moderation. Please revise it and try again.,이름이 검열을 통과하지 못했어요. 수정한 후 다시 시도하세요.,"Имя не прошло модерацию. Пожалуйста, измените его и попробуйте еще раз.",此名称没有通过审核。请修改后再试一次。
-Studio.PublishPlaceAs.FooterButton.Create,Create,Create,만들기,Создать,创建
-Studio.PublishPlaceAs.Genre.Funny,Comedy,Comedy,코미디,Комедия,幽默
-Studio.PublishPlaceAs.FooterButton.Overwrite,Overwrite,Overwrite,덮어쓰기,Записать поверх,覆盖
-Studio.PublishPlaceAs.Button.Cancel,Cancel,Cancel,취소, , 
-Studio.PublishPlaceAs.FooterButton.Cancel,Cancel,Cancel,취소,Отмена,取消
-Studio.PublishPlaceAs.GroupDropdown.MyGames,My Games,My Games,내 게임,Мои игры,我的游戏
-Studio.PublishPlaceAs.MenuItem.BasicInfo,Basic Info,Basic Info,기본 정보,Основные сведения,基本信息
-Studio.PublishPlaceAs.Devices.Phone,Phone,Phone,휴대폰,Телефон,手机
-Studio.PublishPlaceAs.Devices.Console,Console,Console,콘솔,Консоль,游戏主机
-Studio.PublishPlaceAs.PageTitle.Name,Name,Name,이름,Имя,名称
-Studio.PublishPlaceAs.Genre.Fantasy,Medieval,Medieval,중세,Средневековье,中世纪
-Studio.PublishPlaceAs.Genre.Scary,Horror,Horror,공포,Хоррор,恐怖
-Studio.PublishPlaceAs.PageTitle.Description,Description,Description,설명,Описание,描述
-Studio.PublishPlaceAs.ScreenHeader.ChoosePlace,Overwrite or add a new place to {1},Overwrite or add a new place to {1},덮어쓰거나 새 플레이스를 {1}에 추가하세요,Перезаписать или добавить новое место в: {1},覆盖或向 {1} 添加一个新场景
-Studio.PublishPlaceAs.General.TermsDialogBodyLink,You can download the LuoBuLeSi app here.,You can download the LuoBuLeSi app here.,여기에서 LuoBuLeSi 앱을 다운로드할 수 있습니다., , 
-Studio.PublishPlaceAs.Genre.All,All,All,모두,Все,全部
-Studio.PublishPlaceAs.Genre.WildWest,Western,Western,서부극,Вестерн,西部
-Studio.PublishPlaceAs.Genre.Tutorial,Building,Building,건설,Постройки,建筑
-Studio.PublishPlaceAs.Genre.Ninja,Fighting,Fighting,대전,Файтинг,格斗
-Studio.PublishPlaceAs.General.PlayabilityFriendsDesc,Friends on Roblox,Friends on Roblox,내 Roblox 친구만 가능, ,Roblox 上的好友
-Studio.PublishPlaceAs.PageTitle.Creator,Creator,Creator,크리에이터, ,创建者
-Studio.PublishPlaceAs.Genre.FPS,FPS,FPS,FPS,Шутер от первого лица,FPS
-Studio.PublishPlaceAs.Genre.War,Military,Military,군사,Войнушка,军事
-Studio.PublishPlaceAs.General.TitlePlayability,Playability,Playability,플레이 가능 여부, ,游戏受众
-Studio.PublishPlaceAs.Genre.Pirate,Naval,Naval,해군,Морской флот,海军
-Studio.PublishPlaceAs.Genre.RPG,RPG,RPG,RPG,Ролевая игра,RPG
-Studio.PublishPlaceAs.Genre.SciFi,Sci-Fi,Sci-Fi,SF,Фантастика,科幻
-Studio.PublishPlaceAs.Error.NameEmpty,Name cannot be empty.,Name cannot be empty.,이름은 비워둘 수 없습니다.,Имя не может быть пустым.,名称不能为空。
-Studio.PublishPlaceAs.Error.DescriptionTooLong,{1}/{2},{1}/{2},{1}/{2},{1}/{2},{1}/{2}
-Studio.PublishPlaceAs.Error.NameTooLong,{1}/{2},{1}/{2},{1}/{2},{1}/{2},{1}/{2}
-Studio.PublishPlaceAs.ScreenHeader.ChooseGame,Choose an existing game to add this place,Choose an existing game to add this place,이 플레이스를 추가할 기존 게임을 선택하세요,"Выберите, в какую из существующих игр добавить это место",选择现有游戏添加此场景
-Studio.PublishPlaceAs.PublishSuccess.Success,Successfully published!,Successfully published!,게시 성공!,Публикация выполнена!,发布成功！
-Studio.PublishPlaceAs.PublishFail.Fail,Publish failed,Publish failed,게시 실패,Публикация не выполнена.,发布失败
-Studio.PublishPlaceAs.PublishSuccess.FindInGame,You may find this place in {1},You may find this place in {1},이 플레이스는 {1}에서 찾을 수 있습니다,Место находится в: {1},你可以在 {1} 中找到此场景
-Studio.PublishPlaceAs.PublishFail.FailConfiguration,Could not publish configuration settings.,Could not publish configuration settings.,구성 설정을 게시하지 못했습니다.,Не удалось опубликовать настройки конфигурации.,无法发布配置设置。
-Studio.PublishPlaceAs.General.PlayabilityPublic,Public,Public,공개, ,公开
-Studio.PublishPlaceAs.PrivacyType.Public,Public,Public,공개, ,公开
-Studio.PublishPlaceAs.General.PlayabilityPrivate,Private,Private,비공개, ,私人
-Studio.PublishPlaceAs.PrivacyType.Private,Private,Private,비공개, ,私人
-Studio.PublishPlaceAs.General.FetchFailed,Fetch failed,Fetch failed,가져오기 실패, ,获取失败
-Studio.PublishPlaceAs.General.PlayabilityFriends,Friends,Friends,친구, ,好友
-Studio.PublishPlaceAs.General.PlayabilityPrivateDesc,Only developers of this game,Only developers of this game,이 게임의 개발자만 가능, ,仅开放给此游戏的开发人员
-Studio.PublishPlaceAs.General.SavePlace,Save Place,Save Place,플레이스 저장, ,保存场景
-Studio.PublishPlaceAs.FooterButton.SaveToFile,Save to file...,Save to file...,파일에 저장..., ,保存到文件...
-Studio.PublishPlaceAs.PublishSuccess.SaveSuccess,Successfully saved!,Successfully saved!,저장 완료!, ,保存成功！
-Studio.PublishPlaceAs.General.PublishGame,Publish Game,Publish Game,게임 게시, ,发布游戏
-Studio.PublishPlaceAs.General.SaveGame,Save Game,Save Game,게임 저장, ,保存游戏
-Studio.PublishPlaceAs.FooterButton.Save,Save,Save,저장, ,保存
-Studio.PublishPlaceAs.OptInLocations.ChinaRequirements, to publish to China, to publish to China, 중국에 게시, , 在中国发布
-Studio.PublishPlaceAs.PublishFail.SaveFail,Save failed,Save failed,저장 실패, ,保存失败
-Studio.PublishPlaceAs.OptInLocations.China,China,China,중국, ,中国
-Studio.PublishPlaceAs.OptInLocations.TitleOptInLocations,Opt-In Locations,Opt-In Locations,옵트인 위치, ,选择加入的位置
-Studio.PublishPlaceAs.OptInLocations.Tooltip,Your creation will be published globally in addition to all the selected opt-in locations. See each location for specific requirements.,Your creation will be published globally in addition to all the selected opt-in locations. See each location for specific requirements.,선택한 모든 옵트인 위치를 포함해 전 세계에 본인의 작품이 게시됩니다. 각 위치별로 특정 요구 사항 여부를 확인하세요., ,你的作品将会发布到全球及所有选择加入的位置，请查看每个位置了解其需求。
-Studio.PublishPlaceAs.OptInLocations.RequirementsLinkText,Requirements,Requirements,요구 사항, ,要求
-Studio.PublishPlaceAs.Button.Submit,Submit,Submit,제출, , 
-Studio.PublishPlaceAs.General.ReplyOK,OK,OK,확인, , 
-Studio.PublishPlaceAs.General.TermsDialogHeader,Terms of Use and Privacy Policy,Terms of Use and Privacy Policy,이용 약관 및 개인정보 처리방침, , 
-Studio.PublishPlaceAs.General.TermsDialogBody,"In order to publish on the LuoBuLeSi app published and operated by Tencent, you need to register an account with Tencent, and accept Tencent’s Terms of Use and Privacy Policy. [link]","In order to publish on the LuoBuLeSi app published and operated by Tencent, you need to register an account with Tencent, and accept Tencent’s Terms of Use and Privacy Policy. [link]","Tencent에서 게시하고 운영하는 LuoBuLeSi 앱에 게시하려면, Tencent 계정을 생성하고, Tencent의 이용 약관 및 개인정보 처리방침에 동의해야 합니다. [link]", , 
-Studio.PublishPlaceAs.OptInLocations.EmailDialogHeader,Email for Review Feedback,Email for Review Feedback,검토 피드백 수신 이메일, , 
-Studio.PublishPlaceAs.OptInLocations.EmailDialogBody,"Your game will be reviewed by moderators to ensure that your game is compliant with Chinese content regulations. After your game is reviewed, we will send you review feedback. The review will take 3-5 days.","Your game will be reviewed by moderators to ensure that your game is compliant with Chinese content regulations. After your game is reviewed, we will send you review feedback. The review will take 3-5 days.",게임이 중국 콘텐츠 규정을 준수하는지 확인하기 위해 검열팀에서 게임을 검토합니다. 게임 검토가 완료되면 검토 피드백을 보내드립니다. 검토에는 3~5일이 소요됩니다., , 
-Studio.PublishPlaceAs.OptInLocations.EmailDialogDescription,Please enter the email where you would like to receive review feedback:,Please enter the email where you would like to receive review feedback:,검토 피드백을 받을 이메일 주소를 입력하세요:, , 
-Studio.PublishPlaceAs.OptInLocations.ErrorEmailNotEqual,The emails you have entered do not match. Please try again.,The emails you have entered do not match. Please try again.,입력하신 이메일이 일치하지 않습니다. 다시 시도하세요., , 
-Studio.PublishPlaceAs.OptInLocations.EmailAddress,Email address,Email address,이메일 주소, , 
-Studio.PublishPlaceAs.OptInLocations.ConfirmEmailAddress,Confirm email address,Confirm email address,이메일 주소 확인, , 
+Key,Source,en-us,es-es,fr-fr,ja-jp,ko-kr,pt-br,ru-ru,zh-cjv,zh-cn,zh-tw
+Studio.PublishPlaceAs.Genre.Adventure,Adventure,Adventure,Aventura,Aventure,アドベンチャー,모험,Aventura,Приключения,冒险,冒险,探險
+Studio.PublishPlaceAs.General.PublishPlace,Publish Place,Publish Place,Publicar lugar,Publier emplacement,プレースを公開,플레이스 게시,Publicar locais,Опубликовать место,发布场景,发布场景,發布地點
+Studio.PublishPlaceAs.General.UntitledGame,Untitled Game,Untitled Game,Juego sin nombre,Jeu sans titre,タイトルがないゲーム,제목 없는 게임,Jogo sem nome, ,未命名游戏,未命名游戏,未命名遊戲
+Studio.PublishPlaceAs.Genre.Sports,Sports,Sports,Deportes,Sports,スポーツ,스포츠,Esportes,Спорт,体育,体育,體育
+Studio.PublishPlaceAs.Button.AddNewPlace,Add New,Add New,Añadir nuevo,Ajouter nouveau,新規を追加,신규 추가,Adicionar novo,Добавить новое,新增,新增,新增
+Studio.PublishPlaceAs.General.PlayabilityPublicDesc,Anyone on Roblox,Anyone on Roblox,Cualquier persona en Roblox,Tout le monde sur Roblox,Roblox上の誰でも,Roblox의 누구든 가능,Qualquer pessoa na Roblox, ,Roblox 上的所有玩家,Roblox 上的所有玩家,Roblox 上的所有人
+Studio.PublishPlaceAs.General.ContentDialogItem2,Intense Violence,Intense Violence,Violencia intensa,Violence intense,強烈な暴力,심각한 폭력,Violência intensa,Насилие,激烈暴力,激烈暴力,極度暴力
+Studio.PublishPlaceAs.General.ContentDialogTitle,Content Agreement,Content Agreement,Acuerdo de contenido,Accord relatif au contenu,コンテンツ契約,콘텐츠 동의,Acordo de conteúdo,Соглашение на использование контента,内容协议,内容协议,內容協議
+Studio.PublishPlaceAs.Devices.Tablet,Tablet,Tablet,Tablet,Tablette,タブレット,태블릿,Tablet,Планшет,平板电脑,平板电脑,平板電腦
+Studio.PublishPlaceAs.General.ContentDialogItem3,Strong Language (Swearing),Strong Language (Swearing),Lenguaje violento (insultos),Langage ordurier (jurons),過激な表現（暴言）,심한 말(욕설),Linguagem inapropriada (palavrões),Грубые выражения,粗暴语言 (脏话),粗暴语言 (脏话),強烈語言（髒話）
+Studio.PublishPlaceAs.Button.Retry,Retry,Retry,Reintentar,Réessayer,再試行,다시 시도,Tentar novamente,Повтор,重试,重试,重試
+Studio.PublishPlaceAs.Button.ReplyDisagree,Disagree,Disagree,Estoy en desacuerdo,Refuser,同意しない,비동의,Discordar,Отклонить,不同意,不同意,不同意
+Studio.PublishPlaceAs.General.ContentDialogHeader,Do you agree that your game is controller compatible and contains NONE of the following?,Do you agree that your game is controller compatible and contains NONE of the following?,¿Estás de acuerdo con que tu juego sea compatible con el mando y no contenga NINGUNO de los siguientes?,Acceptes-tu que ton jeu soit compatible avec une manette et qu'il ne contienne AUCUN des éléments suivants ?,あなたのゲームがコントローラーと互換性があり、以下のどれも含まれていないことに同意しますか。,"게임이 컨트롤러와 호환되도록 지원하며, 다음과 같은 콘텐츠가 포함되어 있지 않아야 합니다. 동의하시나요?",Você concorda que seu jogo é compatível com controles e não contém NENHUM dos seguintes?,"Подтверждаете ли вы, что ваша игра совместима с контроллером и не содержит следующих элементов?",确认游戏可以兼容控制器，并不包含以下内容吗?,确认游戏可以兼容控制器，并不包含以下内容吗?,您同意讓遊戲之原控制器，並不包含以下內容嗎？
+Studio.PublishPlaceAs.GroupDropdown.Me,Me,Me,Yo,Moi,自分,나,Eu, ,我,我,我
+Studio.PublishPlaceAs.Genre.TownAndCity,Town and City,Town and City,Pueblo y ciudad,Villes,都市開発,마을/도시,Urbano,Симулятор города,城市建设,城市建设,市鎮
+Studio.PublishPlaceAs.General.ContentDialogItem1,Blood or Gore,Blood or Gore,Sangre o derramamientos de sangre,Sang et horreur,流血または残虐,피 또는 잔인한 장면,Sangue ou vísceras,Кровь и увечья,血腥,血腥,血腥
+Studio.PublishPlaceAs.General.ContentDialogItem5,Drug Reference or Use,Drug Reference or Use,Referencias a drogas o a su uso,Référence à la drogue ou utilisation de drogue,薬物に関する表現や使用,마약 관련 또는 사용,Menção ou uso de drogas,Упоминание или употребление наркотиков,提及或使用毒品,提及或使用毒品,提及或使用藥物
+Studio.PublishPlaceAs.Error.DescriptionModerated,The description didn't go through our moderation. Please revise it and try again.,The description didn't go through our moderation. Please revise it and try again.,Se ha moderado la descripción. Modifícala e inténtalo de nuevo.,Cette description n'a pas été approuvée par notre modération. Change-la et réessaie.,この説明は規制対象のため承認されませんでした。修正してから、もう一度お試しください。,설명이 검열을 통과하지 못했어요. 수정한 후 다시 시도하세요.,A descrição foi reprovada pela moderação. Revise-a e tente de novo.,"Описание не прошло модерацию. Пожалуйста, измените его и попробуйте еще раз.",此描述没有通过审核。请修改后再试一次。,此描述没有通过审核。请修改后再试一次。,說明未通過審核，請修改後重新嘗試。
+Studio.PublishPlaceAs.Devices.Computer,Computer,Computer,Computadora,Ordinateur,パソコン,컴퓨터,Computador,Компьютер,个人电脑,个人电脑,電腦
+Studio.PublishPlaceAs.Devices.Header,Devices,Devices,Dispositivos,Appareil,デバイス,기기,Dispositivos,Устройства,设备,设备,裝置
+Studio.PublishPlaceAs.PageTitle.Devices,Devices,Devices,Dispositivos,Appareil,デバイス,기기,Dispositivos,Устройства,设备,设备,裝置
+Studio.PublishPlaceAs.PageTitle.Genre,Genre,Genre,Género,Genre,ジャンル,장르,Gênero,Жанр,主题,主题,類別
+Studio.PublishPlaceAs.General.ContentDialogItem4,Robux Gambling,Robux Gambling,Apuestas con Robux,Jeu d'argent avec Robux,Robuxギャンブル,Robux 도박,Apostas de Robux,Азартные игры,以 Robux 进行赌博,以 Robux 进行赌博,Robux 賭博
+Studio.PublishPlaceAs.FooterButton.CreateNewGame,Create new game...,Create new game...,Crear juego nuevo...,Créer un nouveau jeu...,新しいゲームを制作...,새 게임 만들기...,Criar novo jogo...,Создать новую игру...,创建新游戏…,创建新游戏…,創作新遊戲……
+Studio.PublishPlaceAs.OptInLocations.TempLinkDescription,"China: to submit your game to the LuoBu app, visit ","China: to submit your game to the LuoBu app, visit ","China: Para enviar tu juego en la aplicación de LuoBu, visita: ","Chine : pour soumettre ton jeu à l'application LuoBu, rendez-vous sur le site suivant ",中国: LuoBu アプリにあなたのゲームを投稿するには、以下を訪問 ,중국: LuoBu 앱에 게임을 제출하려면 다음을 방문하세요 ,"China: Para enviar seu jogo para o aplicativo LuoBu, visite ", ,中国：要将游戏提交到罗布乐思 App，请访问 ,中国：要将游戏提交到罗布乐思 App，请访问 ,中國：若要將遊戲發布到羅布樂思 App，請前往 
+Studio.PublishPlaceAs.Button.ReplyAgree,Agree,Agree,Estoy de acuerdo,Accepter,同意する,동의,Concordar,Принять,同意,同意,同意
+Studio.PublishPlaceAs.Button.Close,Close,Close,Cerrar,Fermer,閉じる,닫기,Fechar,Закрыть,关闭,关闭,關閉
+Studio.PublishPlaceAs.Error.NoDevices,You must select at least one playable device.,You must select at least one playable device.,Debes seleccionar por lo menos un dispositivo compatible.,Vous devez sélectionner au moins un appareil utilisable.,プレイ可能なデバイスを少なくとも1種類、選択する必要があります。,플레이 가능한 기기를 최소 1개 선택해야 합니다.,Você deve selecionar ao menos um dispositivo jogável.,Выберите устройство для воспроизведения.,你必须选择至少一种可玩设备。,你必须选择至少一种可玩设备。,必須選擇至少一個相容裝置。
+Studio.PublishPlaceAs.FooterButton.UpdateExistingGame,Update existing game...,Update existing game...,Actualizar juego existente...,Mettre à jour un jeu existant...,既存のゲームをアップデートする...,기존 게임 업데이트.,Atualizar jogo existente...,Обновление существующей игры...,更新现有游戏…,更新现有游戏…,更新既有遊戲……
+Studio.PublishPlaceAs.Error.NameModerated,The name didn't go through our moderation. Please revise it and try again.,The name didn't go through our moderation. Please revise it and try again.,Se ha moderado el nombre. Modifícalo e inténtalo de nuevo.,Ce nom et cette description n'ont pas été approuvés par notre modération. Change-les et réessaie.,この名前は規制対象のため承認されませんでした。修正してから、もう一度お試しください。,이름이 검열을 통과하지 못했어요. 수정한 후 다시 시도하세요.,O nome foi reprovado pela moderação. Revise-o e tente de novo.,"Имя не прошло модерацию. Пожалуйста, измените его и попробуйте еще раз.",此名称没有通过审核。请修改后再试一次。,此名称没有通过审核。请修改后再试一次。,名稱未通過審核，請修改後重新嘗試。
+Studio.PublishPlaceAs.FooterButton.Create,Create,Create,Crear,Créer,作成,만들기,Criar,Создать,创建,创建,創作
+Studio.PublishPlaceAs.Genre.Funny,Comedy,Comedy,Comedia,Humour,コメディ,코미디,Comédia,Комедия,幽默,幽默,幽默
+Studio.PublishPlaceAs.FooterButton.Overwrite,Overwrite,Overwrite,Reemplazar,Écrire par dessus,上書き,덮어쓰기,Substituir,Записать поверх,覆盖,覆盖,覆寫
+Studio.PublishPlaceAs.Button.Cancel,Cancel,Cancel,Cancelar, ,キャンセル,취소,Cancelar, , , ,取消
+Studio.PublishPlaceAs.FooterButton.Cancel,Cancel,Cancel,Cancelar,Annuler,キャンセル,취소,Cancelar,Отмена,取消,取消,取消
+Studio.PublishPlaceAs.GroupDropdown.MyGames,My Games,My Games,Mis juegos,Mes jeux,マイゲーム,내 게임,Meus jogos,Мои игры,我的游戏,我的游戏,我的遊戲
+Studio.PublishPlaceAs.MenuItem.BasicInfo,Basic Info,Basic Info,Información básica,Infos de base,基本情報,기본 정보,Informações básicas,Основные сведения,基本信息,基本信息,基本資訊
+Studio.PublishPlaceAs.Devices.Phone,Phone,Phone,Teléfono,Téléphone,電話,휴대폰,Telefone,Телефон,手机,手机,手機
+Studio.PublishPlaceAs.Devices.Console,Console,Console,Consola,Console,コンソール,콘솔,Console,Консоль,游戏主机,游戏主机,遊戲機
+Studio.PublishPlaceAs.PageTitle.Name,Name,Name,Nombre,Nom,名前,이름,Nome,Имя,名称,名称,名稱
+Studio.PublishPlaceAs.Genre.Fantasy,Medieval,Medieval,Medieval,Médiéval,中世,중세,Medieval,Средневековье,中世纪,中世纪,中古
+Studio.PublishPlaceAs.Genre.Scary,Horror,Horror,Horror,Horreur,ホラー,공포,Horror,Хоррор,恐怖,恐怖,恐怖
+Studio.PublishPlaceAs.PageTitle.Description,Description,Description,Descripción,Description,説明,설명,Descrição,Описание,描述,描述,說明
+Studio.PublishPlaceAs.ScreenHeader.ChoosePlace,Overwrite or add a new place to {1},Overwrite or add a new place to {1},Reemplazar o añadir un lugar nuevo a {1},Réécris quelque chose par dessus ou ajoute un nouvel emplacement sur {1},{1} に新しいプレースを上書きか追加する,덮어쓰거나 새 플레이스를 {1}에 추가하세요,Substituir e adicionar um novo local em {1},Перезаписать или добавить новое место в: {1},覆盖或向 {1} 添加一个新场景,覆盖或向 {1} 添加一个新场景,對 {1} 進行覆寫或新增地點
+Studio.PublishPlaceAs.General.TermsDialogBodyLink,You can download the LuoBuLeSi app here.,You can download the LuoBuLeSi app here.,Puedes descargar la aplicación LuoBuLeSi aquí., , ,여기에서 LuoBuLeSi 앱을 다운로드할 수 있습니다.,Você pode baixar o LuoBuLeSi aqui., , , ,您可以在此下載羅布樂思 App。
+Studio.PublishPlaceAs.Genre.All,All,All,Todos,Tout,すべて,모두,Todos,Все,全部,全部,全部
+Studio.PublishPlaceAs.Genre.WildWest,Western,Western,Western,Western,ウエスタン,서부극,Faroeste,Вестерн,西部,西部,西方
+Studio.PublishPlaceAs.Genre.Tutorial,Building,Building,Construcción,Construction,建築,건설,Construção,Постройки,建筑,建筑,建造
+Studio.PublishPlaceAs.Genre.Ninja,Fighting,Fighting,Lucha,Combat,格闘,대전,Luta,Файтинг,格斗,格斗,格鬥
+Studio.PublishPlaceAs.General.PlayabilityFriendsDesc,Friends on Roblox,Friends on Roblox,Amigos en Roblox,Amis sur Roblox,Roblox上の友達,내 Roblox 친구만 가능,Amigos na Roblox, ,Roblox 上的好友,Roblox 上的好友,Roblox 上的好友
+Studio.PublishPlaceAs.PageTitle.Creator,Creator,Creator,Creador,Créateur,クリエーター,크리에이터,Criador, ,创建者,创建者,創作者
+Studio.PublishPlaceAs.Genre.FPS,FPS,FPS,FPS,Tir subjectif,FPS,FPS,FPS,Шутер от первого лица,FPS,FPS,FPS
+Studio.PublishPlaceAs.Genre.War,Military,Military,Militar,Militaire,ミリタリー,군사,Militar,Войнушка,军事,军事,軍事
+Studio.PublishPlaceAs.General.TitlePlayability,Playability,Playability,Jugabilidad,Jouabilité,プレイヤビリティ,플레이 가능 여부,Jogabilidade, ,游戏受众,游戏受众,權限
+Studio.PublishPlaceAs.Genre.Pirate,Naval,Naval,Naval,Naval,海軍,해군,Naval,Морской флот,海军,海军,海洋
+Studio.PublishPlaceAs.Genre.RPG,RPG,RPG,RPG,Jeu de rôle,RPG,RPG,RPG,Ролевая игра,RPG,RPG,RPG
+Studio.PublishPlaceAs.Genre.SciFi,Sci-Fi,Sci-Fi,Ciencia-ficción,SF,SF,SF,Ficção científica,Фантастика,科幻,科幻,科幻
+Studio.PublishPlaceAs.Error.NameEmpty,Name cannot be empty.,Name cannot be empty.,El nombre no puede estar vacío.,Le nom ne peut pas être vide.,名前を空欄にはできません。,이름은 비워둘 수 없습니다.,O nome não pode ficar vazio.,Имя не может быть пустым.,名称不能为空。,名称不能为空。,名稱不可空白。
+Studio.PublishPlaceAs.Error.DescriptionTooLong,{1}/{2},{1}/{2},{1}/{2},{1}/{2},{1}/{2},{1}/{2},{1}/{2},{1}/{2},{1}/{2},{1}/{2},{1}/{2}
+Studio.PublishPlaceAs.Error.NameTooLong,{1}/{2},{1}/{2},{1}/{2},{1}/{2},{1}/{2},{1}/{2},{1}/{2},{1}/{2},{1}/{2},{1}/{2},{1}/{2}
+Studio.PublishPlaceAs.ScreenHeader.ChooseGame,Choose an existing game to add this place,Choose an existing game to add this place,Elige un juego existente para añadir este lugar,Choisis un jeu existant pour ajouter à cet emplacement,このプレースを追加する既存のゲームを1つ選択,이 플레이스를 추가할 기존 게임을 선택하세요,Escolha um jogo existente para adicionar a este local,"Выберите, в какую из существующих игр добавить это место",选择现有游戏添加此场景,选择现有游戏添加此场景,選擇要加到此地點的既有遊戲
+Studio.PublishPlaceAs.PublishSuccess.Success,Successfully published!,Successfully published!,¡Publicado correctamente!,Publié avec succès !,公開できました！,게시 성공!,Publicado com sucesso!,Публикация выполнена!,发布成功！,发布成功！,發布成功！
+Studio.PublishPlaceAs.PublishFail.Fail,Publish failed,Publish failed,Error en la publicación,Échec de la publication,公開できませんでした,게시 실패,Falha na publicação,Публикация не выполнена.,发布失败,发布失败,發布失敗
+Studio.PublishPlaceAs.PublishSuccess.FindInGame,You may find this place in {1},You may find this place in {1},Puedes encontrar este lugar en {1},Tu trouveras cet emplacement dans {1},このプレースが見つかるまであと{1},이 플레이스는 {1}에서 찾을 수 있습니다,Você pode encontrar este local em {1},Место находится в: {1},你可以在 {1} 中找到此场景,你可以在 {1} 中找到此场景,您可以在 {1} 找到此地點
+Studio.PublishPlaceAs.PublishFail.FailConfiguration,Could not publish configuration settings.,Could not publish configuration settings.,No se han podido publicar los ajustes de la configuración.,Impossible de publier les paramètres de configuration.,環境設定を公開できませんでした。,구성 설정을 게시하지 못했습니다.,Não foi possível publicar os ajustes de configuração.,Не удалось опубликовать настройки конфигурации.,无法发布配置设置。,无法发布配置设置。,無法發布設定。
+Studio.PublishPlaceAs.General.PlayabilityPublic,Public,Public,Público,Public,公開,공개,Público, ,公开,公开,公開
+Studio.PublishPlaceAs.PrivacyType.Public,Public,Public,Público,Publique,公開,공개,Público, ,公开,公开,公開
+Studio.PublishPlaceAs.General.PlayabilityPrivate,Private,Private,Privado,Privé,プライベート,비공개,Privado, ,私人,私人,私人
+Studio.PublishPlaceAs.PrivacyType.Private,Private,Private,Privado,Privé,プライベート,비공개,Privado, ,私人,私人,私人
+Studio.PublishPlaceAs.General.FetchFailed,Fetch failed,Fetch failed,Error al recuperar,Échec de la récupération,取得できませんでした,가져오기 실패,Falha ao buscar, ,获取失败,获取失败,擷取失敗
+Studio.PublishPlaceAs.General.PlayabilityFriends,Friends,Friends,Amigos,Amis,友達,친구,Amigos, ,好友,好友,好友
+Studio.PublishPlaceAs.General.PlayabilityPrivateDesc,Only developers of this game,Only developers of this game,Solo los desarrolladores de este juego,Seulement les développeurs de ce jeu,このゲームの開発者のみ,이 게임의 개발자만 가능,Apenas os desenvolvedores deste jogo, ,仅开放给此游戏的开发人员,仅开放给此游戏的开发人员,只有本遊戲的開發者
+Studio.PublishPlaceAs.General.SavePlace,Save Place,Save Place,Guardar lugar,Sauvegarder l'emplacement,プレースを保存,플레이스 저장,Salvar local, ,保存场景,保存场景,儲存地點
+Studio.PublishPlaceAs.FooterButton.SaveToFile,Save to file...,Save to file...,Guardar en un archivo...,Enregistrer dans un fichier...,ファイルに保存...,파일에 저장...,Salvar em arquivo..., ,保存到文件...,保存到文件...,儲存到檔案……
+Studio.PublishPlaceAs.PublishSuccess.SaveSuccess,Successfully saved!,Successfully saved!,Guardada correctamente.,Sauvé avec succès !,保存できました！,저장 완료!,Salvo com sucesso!, ,保存成功！,保存成功！,儲存成功！
+Studio.PublishPlaceAs.General.PublishGame,Publish Game,Publish Game,Publicar juego,Publier un jeu,ゲームを公開,게임 게시,Publicar jogo, ,发布游戏,发布游戏,發布遊戲
+Studio.PublishPlaceAs.General.SaveGame,Save Game,Save Game,Guardar juego,Sauvegarder un jeu,ゲームを保存,게임 저장,Salvar jogo, ,保存游戏,保存游戏,儲存遊戲
+Studio.PublishPlaceAs.FooterButton.Save,Save,Save,Guardar,Sauvegarder,保存,저장,Salvar, ,保存,保存,儲存
+Studio.PublishPlaceAs.OptInLocations.ChinaRequirements, to publish to China, to publish to China, para publicar en China, à publier en Chine,中国で公開, 중국에 게시, para publicar na China, , 在中国发布, 在中国发布,在中國發布
+Studio.PublishPlaceAs.PublishFail.SaveFail,Save failed,Save failed,Error al guardar,La sauvegarde a échoué,保存ができませんでした,저장 실패,Falha no salvamento, ,保存失败,保存失败, 儲存失敗
+Studio.PublishPlaceAs.OptInLocations.China,China,China,China,Chine,中国,중국,China, ,中国,中国,中國
+Studio.PublishPlaceAs.OptInLocations.TitleOptInLocations,Opt-In Locations,Opt-In Locations,Lugares de participación,Emplacements opt-in,オプトイン場所,옵트인 위치,Optar por localidades, ,选择加入的位置,选择加入的位置,同意位置
+Studio.PublishPlaceAs.OptInLocations.Tooltip,Your creation will be published globally in addition to all the selected opt-in locations. See each location for specific requirements.,Your creation will be published globally in addition to all the selected opt-in locations. See each location for specific requirements.,Tu creación se publicará en todo el mundo además de todos los lugares de participación. Visita cada lugar para obtener los requisitos específicos.,Ta création sera publiée à l'échelle mondiale en plus de tous les emplacements sélectionnés pour l'opt-in. Consulte chaque site pour connaître les exigences spécifiques.,あなたの作品は、すべての選択済みのオプトイン場所に加えて世界的に公開されます。各地域ごとの特定の要件をごらんください。,선택한 모든 옵트인 위치를 포함해 전 세계에 본인의 작품이 게시됩니다. 각 위치별로 특정 요구 사항 여부를 확인하세요.,"Sua criação será publicada globalmente, além dos locais selecionados. Veja os requerimentos específicos para cada local.", ,你的作品将会发布到全球及所有选择加入的位置，请查看每个位置了解其需求。,你的作品将会发布到全球及所有选择加入的位置，请查看每个位置了解其需求。,您的創作將會發布到全球和選擇的位置，請查看個別位置了解其需求。
+Studio.PublishPlaceAs.OptInLocations.RequirementsLinkText,Requirements,Requirements,Requisitos,Exigences,要件,요구 사항,Requerimentos, ,要求,要求,需求
+Studio.PublishPlaceAs.Button.Submit,Submit,Submit,Enviar, ,送信,제출,Enviar, , , ,送出
+Studio.PublishPlaceAs.General.ReplyOK,OK,OK,Aceptar, ,OK,확인,OK, , , ,確定
+Studio.PublishPlaceAs.General.TermsDialogHeader,Terms of Use and Privacy Policy,Terms of Use and Privacy Policy,Términos de uso y política de privacidad, , ,이용 약관 및 개인정보 처리방침,Termos de Uso e Política de Privacidade, , , ,使用條款與隱私權政策
+Studio.PublishPlaceAs.General.TermsDialogBody,"In order to publish on the LuoBuLeSi app published and operated by Tencent, you need to register an account with Tencent, and accept Tencent’s Terms of Use and Privacy Policy. [link]","In order to publish on the LuoBuLeSi app published and operated by Tencent, you need to register an account with Tencent, and accept Tencent’s Terms of Use and Privacy Policy. [link]","Para publicar en la aplicación LuoBuLeSi, publicada y operada por Tencent, es necesario registrar una cuenta en Tencent y aceptar las condiciones de uso y la política de privacidad de Tencent. [link]", , ,"Tencent에서 게시하고 운영하는 LuoBuLeSi 앱에 게시하려면, Tencent 계정을 생성하고, Tencent의 이용 약관 및 개인정보 처리방침에 동의해야 합니다. [link]","Para publicar no aplicativo LuoBuLeSi, operado e publicado pela Tencent, você precisa registrar um conta com a Tencent e aceitar os Termos de Uso e Política de Privacidade da Tencent. [link]", , , ,若要在騰訊發行和營運的羅布樂思 App 發布作品，您必須註冊騰訊帳號並接受騰訊的使用條款與隱私權政策。[link]
+Studio.PublishPlaceAs.OptInLocations.EmailDialogHeader,Email for Review Feedback,Email for Review Feedback,Correo electrónico para recibir retroalimentación, ,レビューフィードバックのメール,검토 피드백 수신 이메일,E-mail para resultado da avaliação, , , ,審查詳細資料電子郵件
+Studio.PublishPlaceAs.OptInLocations.EmailDialogBody,"Your game will be reviewed by moderators to ensure that your game is compliant with Chinese content regulations. After your game is reviewed, we will send you review feedback. The review will take 3-5 days.","Your game will be reviewed by moderators to ensure that your game is compliant with Chinese content regulations. After your game is reviewed, we will send you review feedback. The review will take 3-5 days.","Tu juego será revisado por los moderadores para asegurar que cumpla con las normas de contenido chinas. Después de su revisión, te enviaremos una respuesta. La revisión tardará de 3 a 5 días.", , ,게임이 중국 콘텐츠 규정을 준수하는지 확인하기 위해 검열팀에서 게임을 검토합니다. 게임 검토가 완료되면 검토 피드백을 보내드립니다. 검토에는 3~5일이 소요됩니다.,"Seu jogo será avaliado por moderadores para garantir que segue as regras de conteúdo da China. Depois que seu jogo for avaliado, enviaremos o resultado da avaliação. A avaliação leva de 3 a 5 dias.", , , ,我們的管理員會審查您的遊戲，確保您的遊戲符合中國內容規定。審查完成後，我們會將詳細資料以電子郵件傳送給你。審查時間為 3 到 5 天。
+Studio.PublishPlaceAs.OptInLocations.EmailDialogDescription,Please enter the email where you would like to receive review feedback:,Please enter the email where you would like to receive review feedback:,Introduce el correo electrónico si quieres recibir retroalimentación de la revisión:, , ,검토 피드백을 받을 이메일 주소를 입력하세요:,Digite o e-mail no qual você gostaria de receber o resultado da avaliação:, , , ,請輸入要收到審查詳細資料的電子郵件地址：
+Studio.PublishPlaceAs.OptInLocations.ErrorEmailNotEqual,The emails you have entered do not match. Please try again.,The emails you have entered do not match. Please try again.,Los correos electrónicos que introduciste no coinciden. Inténtalo de nuevo., , ,입력하신 이메일이 일치하지 않습니다. 다시 시도하세요.,Os e-mails fornecidos não conferem. Tente novamente., , , ,輸入的電子郵件地址不符，請重新嘗試。
+Studio.PublishPlaceAs.OptInLocations.EmailAddress,Email address,Email address,Dirección de correo electrónico, ,メールアドレス,이메일 주소,Endereço de e-mail, , , ,電子郵件地址
+Studio.PublishPlaceAs.OptInLocations.ConfirmEmailAddress,Confirm email address,Confirm email address,Confirmar dirección de correo electrónico, ,メールアドレスの認証,이메일 주소 확인,Confirmar endereço de e-mail, , , ,確認電子郵件地址

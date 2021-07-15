@@ -1,5 +1,5 @@
-Key,Source,en-us,ko,zh-cn
-Studio.DeveloperInspector.Plugin.Name,Developer Inspector,Developer Inspector,개발자 검사기,开发者检查器
-Studio.DeveloperInspector.Plugin.Toolbar,Developer Inspector,Developer Inspector,개발자 검사기,开发者检查器
-Studio.DeveloperInspector.Plugin.Button,Inspect,Inspect,검사,检查
-Studio.DeveloperInspector.Plugin.Description,Opens the Developer Inspector.,Opens the Developer Inspector.,개발자 검사기를 엽니다.,打开开发者检查器。
+Key,Source,en-us,es-es,fr-fr,ja-jp,ko-kr,pt-br,zh-cjv,zh-cn,zh-tw
+Studio.DeveloperInspector.Plugin.Name,Developer Inspector,Developer Inspector,Inspector del desarrollador,Inspecteur développeur,開発者インスペクタ,개발자 검사기,Inspetor do desenvolvedor,开发者检查器,开发者检查器,開發者檢測器
+Studio.DeveloperInspector.Plugin.Toolbar,Developer Inspector,Developer Inspector,Inspector del desarrollador,Inspecteur développeur,開発者インスペクタ,개발자 검사기,Inspetor do desenvolvedor,开发者检查器,开发者检查器,開發者檢測器
+Studio.DeveloperInspector.Plugin.Button,Inspect,Inspect,Inspeccionar,Inspecter,検査,검사,Inspecionar,检查,检查,檢測
+Studio.DeveloperInspector.Plugin.Description,Opens the Developer Inspector.,Opens the Developer Inspector.,Abre el inspector del desarrollador.,Ouvrir Inspecteur des développeurs.,開発者インスペクタを開く。,개발자 검사기를 엽니다.,Abrir o Inspetor do desenvolvedor.,打开开发者检查器。,打开开发者检查器。,開啟開發者檢測器。
