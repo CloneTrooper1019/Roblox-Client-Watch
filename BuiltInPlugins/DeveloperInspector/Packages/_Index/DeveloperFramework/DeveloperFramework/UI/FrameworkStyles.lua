@@ -60,6 +60,7 @@ function FrameworkStyles.new()
 		Tooltip = newDefaults(),
 		TreeTable = newDefaults(),
 		TreeView = newDefaults(),
+		TreeViewRow = newDefaults(),
 
 		-- StudioUI Styles
 		AssetPreview = newDefaults(),

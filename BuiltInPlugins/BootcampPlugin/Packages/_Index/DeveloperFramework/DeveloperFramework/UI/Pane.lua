@@ -56,6 +56,9 @@ Pane.defaultProps = {
 	VerticalAlignment = Enum.VerticalAlignment.Center,
 }
 
+-- TODO RIDE-5172: Allow Typecheck to run and support additional props passed to underlying Frame
+-- Typecheck.wrap(Pane, script)
+
 function Pane:init()
 	self.onPress = function(_, input)
 		if isInputMainPress(input) then
