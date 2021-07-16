@@ -3398,6 +3398,7 @@ Class Studio : Instance [NotCreatable] [Service] [NotReplicated]
 	Property Enum.StudioScriptEditorColorPresets Studio.Script Editor Color Preset
 	Property Color3 Studio.Script Editor Scrollbar Background Color [NotReplicated]
 	Property Color3 Studio.Script Editor Scrollbar Handle Color [NotReplicated]
+	Property Color3 Studio.ScriptEditorMenuBorderColor {RobloxScriptSecurity} [Hidden] [NotReplicated]
 	Property Color3 Studio.Secondary Text Color [NotReplicated]
 	Property Color3 Studio.Selected Menu Item Background Color [NotReplicated]
 	Property Color3 Studio.Selected Text Color [NotReplicated]
@@ -5642,6 +5643,7 @@ Enum StudioScriptEditorColorCategories
 	EnumItem StudioScriptEditorColorCategories.MenuSelectedBackground : 34
 	EnumItem StudioScriptEditorColorCategories.MenuScrollbarBackground : 35
 	EnumItem StudioScriptEditorColorCategories.MenuScrollbarHandle : 36
+	EnumItem StudioScriptEditorColorCategories.MenuBorder : 37
 Enum StudioScriptEditorColorPresets
 	EnumItem StudioScriptEditorColorPresets.RobloxDefault : 0
 	EnumItem StudioScriptEditorColorPresets.Extra1 : 1

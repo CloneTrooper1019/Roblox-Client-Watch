@@ -1383,6 +1383,7 @@ Studio.App.Property.SIMD,,SIMD,SIMD
 Studio.App.Property.SchedulerDutyCycle,,Scheduler Duty Cycle,Scheduler Duty Cycle
 Studio.App.Property.SchedulerRate,,Scheduler Rate,Scheduler Rate
 Studio.App.Property.ScriptEditorColorPreset,The set of colors used in syntax highlighting in script editor,Script Editor Color Preset,Script Editor Color Preset
+Studio.App.Property.ScriptEditorMenuBorderColor,,Script Editor Menu Border,Script Editor Menu Border
 Studio.App.Property.ScriptEditorScrollbarBackgroundColor,,Script Editor Scrollbar Background,Script Editor Scrollbar Background
 Studio.App.Property.ScriptEditorScrollbarHandleColor,,Script Editor Scrollbar Handle,Script Editor Scrollbar Handle
 Studio.App.Property.ScriptEditorShouldShowPluginMethods,Autocomplete should show Plugin security level methods in Script Editor,Autocomplete Plugin-security methods,Autocomplete Plugin-security methods

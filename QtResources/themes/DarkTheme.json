@@ -38,7 +38,8 @@
             "MenuBackground": "#2E2E2E",
             "MenuSelectedBackground": "#265AA9",
             "MenuScrollbarBackground": "#2E2E2E",
-            "MenuScrollbarHandle": "#B3B3B3"
+            "MenuScrollbarHandle": "#B3B3B3",
+            "MenuBorder": "#000000"
         },
         "Extra1": {
             "Default": "#D4D4D4",
@@ -77,7 +78,8 @@
             "MenuBackground": "#2E2E2E",
             "MenuSelectedBackground": "#265AA9",
             "MenuScrollbarBackground": "#2E2E2E",
-            "MenuScrollbarHandle": "#B3B3B3"
+            "MenuScrollbarHandle": "#B3B3B3",
+            "MenuBorder": "#000000"
         },
         "Extra2": {
             "Default": "#F7F8F1",
@@ -116,7 +118,8 @@
             "MenuBackground": "#2E2E2E",
             "MenuSelectedBackground": "#265AA9",
             "MenuScrollbarBackground": "#2E2E2E",
-            "MenuScrollbarHandle": "#B3B3B3"
+            "MenuScrollbarHandle": "#B3B3B3",
+            "MenuBorder": "#000000"
         },
         "Custom": {
             "Default": "#CCCCCC",
@@ -155,7 +158,8 @@
             "MenuBackground": "#2E2E2E",
             "MenuSelectedBackground": "#265AA9",
             "MenuScrollbarBackground": "#2E2E2E",
-            "MenuScrollbarHandle": "#B3B3B3"
+            "MenuScrollbarHandle": "#B3B3B3",
+            "MenuBorder": "#000000"
         }
     },
     "Colors": [{

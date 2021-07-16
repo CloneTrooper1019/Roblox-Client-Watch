@@ -64334,6 +64334,28 @@
                     }
                 },
                 {
+                    "Category": "Script Editor Colors",
+                    "MemberType": "Property",
+                    "Name": "ScriptEditorMenuBorderColor",
+                    "Security": {
+                        "Read": "RobloxScriptSecurity",
+                        "Write": "RobloxScriptSecurity"
+                    },
+                    "Serialization": {
+                        "CanLoad": false,
+                        "CanSave": false
+                    },
+                    "Tags": [
+                        "Hidden",
+                        "NotReplicated"
+                    ],
+                    "ThreadSafety": "ReadSafe",
+                    "ValueType": {
+                        "Category": "DataType",
+                        "Name": "Color3"
+                    }
+                },
+                {
                     "Category": "Script Editor",
                     "MemberType": "Property",
                     "Name": "ScriptEditorShouldShowPluginMethods",
@@ -82745,6 +82767,10 @@
                 {
                     "Name": "MenuScrollbarHandle",
                     "Value": 36
+                },
+                {
+                    "Name": "MenuBorder",
+                    "Value": 37
                 }
             ],
             "Name": "StudioScriptEditorColorCategories"

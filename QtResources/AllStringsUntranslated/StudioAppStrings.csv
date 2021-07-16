@@ -1821,6 +1821,7 @@ Studio.App.Property.MenuItemBackgroundColor,,Menu Item Background,Menu Item Back
 Studio.App.Property.SelectedMenuItemBackgroundColor,,Selected Menu Item Background,Selected Menu Item Background
 Studio.App.Property.ScriptEditorScrollbarBackgroundColor,,Script Editor Scrollbar Background,Script Editor Scrollbar Background
 Studio.App.Property.ScriptEditorScrollbarHandleColor,,Script Editor Scrollbar Handle,Script Editor Scrollbar Handle
+Studio.App.Property.ScriptEditorMenuBorderColor,,Script Editor Menu Border,Script Editor Menu Border
 Studio.App.SettingsCategory.StudioOutput,,Output,Output
 Studio.App.Property.OutputLayoutMode,,Output Layout Mode,Output Layout Mode
 Studio.App.Property.ClearOutputOnStart,,Clear Output On Start,Clear Output On Start
