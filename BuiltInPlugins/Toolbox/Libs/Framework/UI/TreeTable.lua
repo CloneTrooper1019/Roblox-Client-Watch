@@ -16,6 +16,7 @@
 		number SelectedRow: The index of the currently selected row.
 		number SortIndex: The index of the current column that is being sorted.
 		any Footer: A Roact fragment or element to be displayed in the footer.
+		boolean DisableTooltip: Whether to disable tooltips that appear when hovering over cells where the text is truncated.
 		boolean ShowHeader: Whether to display the header. (defalt = true)
 		boolean ShowFooter: Whether to display the footer. (default = true if the Footer prop is non-nil)
 		Enum.SortDirection SortOrder: The order that the column is being sorted in.
@@ -54,6 +55,8 @@ local THEME_REFACTOR = Util.RefactorFlags.THEME_REFACTOR
 local TreeTable = Roact.PureComponent:extend("TreeTable")
 Typecheck.wrap(TreeTable, script)
 
+local FFlagToggleTreeTableTooltip = game:GetFastFlag("ToggleTreeTableTooltip")
+
 function TreeTable:init()
 	assert(THEME_REFACTOR, "TreeTable not supported in Theme1, please upgrade your plugin to Theme2")
 	self.onToggle = function(row)
@@ -85,6 +88,7 @@ function TreeTable:init()
 			OnToggle = self.onToggle,
 			Expansion = self.props.Expansion,
 			CellStyle = self.props.Stylizer,
+			DisableTooltip = FFlagToggleTreeTableTooltip and self.props.DisableTooltip or nil,
 		},
 	}
 end
@@ -122,6 +126,7 @@ function TreeTable:calculateItems(prevProps)
 				OnToggle = self.onToggle,
 				Expansion = props.Expansion,
 				CellStyle = props.Stylizer,
+				DisableTooltip = FFlagToggleTreeTableTooltip and props.DisableTooltip or nil,
 			}
 		end
 		local rows = nextState.rows or prevState.rows

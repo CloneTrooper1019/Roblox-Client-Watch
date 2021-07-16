@@ -51,6 +51,8 @@ local THEME_REFACTOR = Util.RefactorFlags.THEME_REFACTOR
 local TextLabel = Roact.PureComponent:extend("TextLabel")
 Typecheck.wrap(TextLabel, script)
 
+local FFlagToggleTreeTableTooltip = game:GetFastFlag("ToggleTreeTableTooltip")
+
 function TextLabel:render()
 	local layoutOrder = self.props.LayoutOrder
 	local anchorPoint = self.props.AnchorPoint
@@ -98,6 +100,10 @@ function TextLabel:render()
 		ZIndex = zIndex,
 	}
 
+	if FFlagToggleTreeTableTooltip then
+		textLabelProps[Roact.Ref] = self.props[Roact.Ref]
+	end
+	
 	if fitWidth then
 		local maximumWidth
 		if self.props.FitMaxWidth ~= nil then
