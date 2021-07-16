@@ -3319,6 +3319,7 @@ RBX::MaterialTool
 RBX::MaterialVerb
 RBX::Math::Random
 RBX::MatrixSerializerV1
+RBX::MatrixSerializerV2
 RBX::MechanicalJoint
 RBX::Mechanism
 RBX::MechanismInterpolationParallelManager
