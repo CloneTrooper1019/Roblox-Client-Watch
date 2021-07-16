@@ -1262,6 +1262,7 @@ AsyncDownloadBuffer
 AsyncHttpCache
 AsyncHttpQueue
 AsyncHttpQueueBadURLBlocked
+AsyncHttpQueueEnableNativeRetryOn429
 AsyncHttpQueueEnableNativeRetryOn503
 AsyncHttpQueueTrackRequestAnalytics
 AsyncMessageBox
@@ -5336,6 +5337,7 @@ BootcampCLI44172
 BootcampCLI44178
 BootcampCLI44180
 BootcampCLI44181
+BootcampCLI44235
 BootstrapperLauncher
 BootstrapperUpdate
 BorderColor
@@ -6214,7 +6216,6 @@ CinderBlock
 CIOSW[^adfikosvy
 CipherString
 Ciphersuites
-CIPT1FTyrPrt3pvFsgji
 Circle.png
 CircularList
 Circumflexsmall
@@ -7643,7 +7644,6 @@ CountSkinned
 CountTimeout
 CountWidth
 CoverageRef
-CpAr8JjrS4EvbUpwi5A4pUfLWNwku39By9bm1yhNx8c2
 CpuArchitecture
 CPULogicalCore
 CrackedLava
@@ -9375,6 +9375,7 @@ DFbxAMatrix
 DFbxMatrix
 DfNfXfbftf
 DGHASH_ASM
+DGl0VT3kFh
 DgNg`ghgpgxg
 DgNgXgbglgvg
 DGridAction
@@ -9804,7 +9805,6 @@ DrawRangeElements
 DrawTextBox
 DrawTimerRow
 DrawToolTip
-DraXTXT74yvY12Nfwx6ANl4D
 Drehmoment
 Drehungsraster
 Drehwerkzeuge
@@ -9868,6 +9868,7 @@ Dst.YBegin
 DSVideoCaptureEngine
 DTLS_RECORD_LAYER_new
 DTLSv1_listen
+DU8l7Oln0u
 DUARPassVREnabled
 DumpAction
 DumpErrorUploader
@@ -10145,7 +10146,6 @@ ECPKParameters_print_fp
 ECPrivateKey
 ECPublicKey
 Ecrypto\bn\bn_prime.c
-ECywTLlF6bx4ioQl8
 ED23AAF011E38B9D871882A8E559
 ED24AAF011E38B9D871882A8E559
 ED27AAF011E38B9D871882A8E559
@@ -10243,6 +10243,7 @@ Einstellungs
 Einstellungsdatei
 Einzelspiel
 Einzelspielermodus
+EjDaBxR7gEthSQB
 EJJJJJJJJJJJJJJJJJJJJ
 EJTU\^bcfguw
 ElapsedSeconds
@@ -11190,7 +11191,6 @@ FetchingComplete
 FetchUserAgreement
 FetchUserId
 FetchUsername
-Ff02rH6F0dG0xrmT8O
 FF65B11E38470F846885BB6FB
 FFFFFFFFFFFFFFF
 FFFFFFFFFFFFFFFFFFFFFFFF
@@ -11208,6 +11208,7 @@ FFlagStudioRecentGamesPageShowsOwner
 FFlagStudioToastNotificationsInLua
 FFoRLVHHHHoTJVF
 FHFRF\FfFpFzF
+FhHVNADflD9f71V1o1ScGTNbAuUilt
 FidelityRequestTriggered
 FieldOfView
 FieldOfViewMode
@@ -11594,7 +11595,6 @@ FloodedMessage
 FloorMaterial
 FloorMaterialInternal
 FlowLocation
-FlPG6MT3qenq1OIsN1hVly0PEX7o
 FlushDeferQueueOnInput
 FlushDeferQueueOnRunState
 FlushInstructionCache
@@ -11622,6 +11622,7 @@ FMODPlaybackDSP
 FMODReportDeviceInfo
 FmodResetDriverFix
 FMODSoundChannels
+FnBpRV2rx8zZQzVQVF8YK2C9oqfEoaIXI4tcEvaHQgDIpGAYT2OkpgOZ1vHjU
 FocusChange
 FocusChanged
 FocusConnection
@@ -13250,6 +13251,7 @@ GunCursor.png
 GunWaitCursor.png
 GvEphfEUiHHoD6hYFI4xWGpAnIHcklKQCxrf46kAhDGeZnqIgeGszlGdWafunGE8
 GVKUTS[BXIWH\KbHi
+GvQXYq9Yv0DDS
 GXGfGkGpGuG
 GyroscopeEnabled
 H_Key_dn.png
@@ -15120,6 +15122,7 @@ KKKKKKKKKKKK
 KKKKKKKKKKKKKKKKKKKKKK
 Klebeoberfl
 Kleinschreibung
+KlYGp0jSg3qzxU2EY8A6pQtSseCVwcw1Sqb9U
 KnownPrefixIndex
 KnownPublishRequest
 KodchiangUPC
@@ -16788,7 +16791,7 @@ MigrateTriangleMeshData3
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsI9zRp2OSccqdFx2
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAupANB3EbN9hFHHUj0eA
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzjPRQo9jc
-MIICCgKCAgEAsiTJ9LdcuF6MU
+MIICCgKCAgEAsixbAuJeOUDAfVCwYRlUnWtByOjK
 Millisecond
 MillisecondsBeforeHandlingReconnect
 MimeDataFromSelection
@@ -16844,7 +16847,6 @@ Mitbearbeiter
 Mitglieder
 Mitteilungen
 Mitwirkender
-Mmls2k4AR4jySBb1dSJMtJ
 MMW4IkDragCollisionsMode
 MMW4PartMaterial
 MMW4UserInputState
@@ -17128,7 +17130,6 @@ MpsRateLimit
 MpsRateLimitCapacity
 MpsRateLimitDuration
 MQDateTime
-MqKWvNlvuZemLLg
 MQListWidgetItem
 MQModelIndex
 MQStandardItem
@@ -17210,7 +17211,6 @@ MultTransposeMatrixf
 MusicalInstruments
 MutexLifetime
 MW4PartMaterial
-MydbN7R0ulHFTuBgXv8BXJ6bS3PFsxKQwa1
 MyModelsAction
 MyUniverses
 MyWatchTreeWidget
@@ -17301,9 +17301,7 @@ NavigationServiceWorker
 Navigationsmesh
 NavigationWaypointSpacing
 NavMeshTiles
-NB1EQrZIu4DiRkDaaBhVc9DoZQn
 Nb5Z3kLJHN6
-NBEiqQSM2OYfJrNVmMZoXoo
 NCONF_dump_bio
 NCONF_dump_fp
 NCONF_get_number_e
@@ -17547,6 +17545,8 @@ NfAddReport
 NfXf`fhfzf
 NHVVariant
 NinjaMask.mesh
+NirbYWee8miX33aj2qbWkJMjcCqtiwhuT
+NMC9Okum3oMDr
 NNNNNNNNNNNNNNNNNNNNNN
 NNNNNNNSSSSSSSSSSSSSSSSSSSSSS
 NNW4SizeMode
@@ -17870,7 +17870,6 @@ OgreWidgetShowEvent
 Oh44\h44\Q
 Ohungarumlaut
 OiCCPPhotoshop
-OK7TsuC38kidpMkUtJDWXgpL
 OldActiveElement
 OldBinaryStringLength
 OldExtents
@@ -19432,6 +19431,7 @@ PInitResData
 PirateHat.mesh
 PitchShiftSoundEffect
 PIUnsignedTBE
+PIUUX4Zj39laoaQFm1okmni2bQSCKSkskg252zu
 PivotAction
 PivotEditor
 PivotEditor.rbxm
@@ -19458,6 +19458,7 @@ PixelStorei
 PixelXDimension
 PixelYDimension
 PixmapRect
+PjodsEBmfRnaTa68hN9vwwYOFIdtlICweBUASh
 PKCS12_AUTHSAFES
 PKCS12_BAGS
 PKCS12_create
@@ -19894,6 +19895,7 @@ PluginWidgetRelayForPluginGui
 PluginWithInstancesAsChildren
 PluginWriteTemp
 PlusButtonPressed
+PMs1RNz4S3BnXi6TzayI3SKaB2hfnMENhtye9RvhLdJg
 POINT_SIZE
 PointBalanceCacheInvalidateTimeMs
 PointDataChanged
@@ -20375,6 +20377,7 @@ ProxyAction
 ProxyOverrideWidget
 Prozentsatz
 PSPECIFIED
+PsTAxpPj1rLTvWw6z1pSq4J2axf8UE0vPEgNPbKPUWx9
 PUBKEY_get0
 PUBKEY_set
 Publicando
@@ -20451,7 +20454,6 @@ QClipboard
 QColorDialog
 QCommonStyle
 QCoreApplication
-QCrL44siid4EsogUiTmxc9Iqpjb8qpCc6e3plF0enRqvh4smg6iWLVoj9h
 QCryptographicHash
 QDataStream
 QDebuggerClient
@@ -22684,6 +22686,7 @@ RigidityEnabled
 RigImporterErrorChecking
 RiseVelocity
 Rj0isQcnqX
+RLhrvrEjZMl9
 ROBLOSECURITY
 Roblox.Hybrid
 Roblox.Hybrid.Bridge.emitEvent
@@ -23021,7 +23024,6 @@ SATAUAVAWH
 Satisfiable
 Saturation
 SaturationF
-SAumojWmAOS7OI13jpsgCtbLpsaHw9vskuATBqbiEIoEGwfXsFsMAK55
 Sauvegarde
 Sauvegarder
 Sauvegardes
@@ -23970,7 +23972,6 @@ SetWindowLongPtrA
 SetWindowPos
 SetWindowsHookExA
 SetWindowTextA
-Sh0nKSY1iHRm8n7Ea9xkJAHLvsseI7LbLlzPcsx
 ShaderSource
 ShadingLanguage
 ShadowAtlas
@@ -24783,7 +24784,6 @@ SSLKEYLOGFILE
 SslServerName
 SslVerificationFail
 SSSSSSSSRRRRRRRRRRRRRRRRRRR
-SSY0s6nE0wto5CGNSX6UtGD2TLy
 Stack.length
 Stack.push
 Stack[callStack.length
@@ -28636,7 +28636,6 @@ StudioBulkImportUploadWarning
 StudioByPassQFatalInQQmlNotifier
 StudioCalloutsInLua
 StudioChangeD3D9PresentationInterval
-StudioChangeExternalLoginCookieFetchToUseGuac
 StudioChangeExternalLoginUrlToUseGuac
 StudioCharacterLoadTime
 StudioChat
@@ -29347,7 +29346,6 @@ SXNET_add_id_INTEGER
 SXNET_add_id_ulong
 SXNET_get_id_asc
 SXNET_get_id_ulong
-SxvAFilgMbOYdX0C1dtyKnyj2t20bh
 SymantecPKI
 SymbolicLinkAlreadyExist
 Symbolleistenposition
@@ -30926,6 +30924,7 @@ UAutocompleteLibraryMetadata
 UAutocompleteResultRoot
 UAutocompleteScore
 UAvatarData
+UB2cHiqEPwz4yCo98pQMgbP
 Ubad_adjustment
 Ubad_alloc_
 Ubad_day_of_month
@@ -30953,7 +30952,6 @@ UCharacterSpan
 Ucircumflex
 Ucircumflexsmall
 UCmdArgDescriptor
-UCmWpmUdc7i
 UColorBlock
 UCompletionItem
 UCompletionRequest
@@ -32597,7 +32595,6 @@ VHingeConstraint
 VHInitialize
 VHistoryDropdown
 VHopperBin
-VhQxJzIXsi
 Vhttp_network_handler
 Vhttp_pipeline
 Vhttp_pipeline_stage
@@ -33120,6 +33117,7 @@ VRandomAdaptionLogic
 Vrange_error
 VRbxAnalyticsService
 VRClientCoreFactory
+VRCWsA0y080
 VRDeviceName
 VReadynessInterface
 VReflection
@@ -33888,7 +33886,6 @@ WSAStartup
 WSAStringToAddressW
 WTHelperGetProvSignerFromChain
 WTHelperProvDataFromStateData
-Wu7C1jbmN23qHnOXkfJZVzsfUpDcCAwEAAQ
 WWWWWWWWWW
 WWWWWWWWWWWWWW
 WWWWWWWWWWWWWWWWWWWWWWW
@@ -33958,6 +33955,7 @@ XAEBVQString
 XAEBVTeleportSucceededInfo
 XAEBVvalue
 XAEBVwebsocket_incoming_message
+XAIksSvg4D8B2Oow07nnC4XntT45l5k
 XAlignment
 Xbad_alloc
 Xbad_function_call
@@ -33982,6 +33980,7 @@ XFREE86_GLYPH_RANGES
 XGetLastError
 XHW4DebuggerStatus
 XHW4Status_e
+XibPKx07LSf4rY7VBdEN4wZ5V7MeP5AUVHeyDSaswf
 XInputGetBatteryInformation
 XInputGetCapabilities
 XInputGetState
@@ -34022,6 +34021,7 @@ XPEAVReplicator
 XPEAVRobloxScriptDiffDoc
 XPEAVScriptingAnalysisScriptItem
 XPEBVInstance
+XQ5mgjUWWP5hLX3qCT4kZp4yQ
 XQColorDialog
 Xregex_error
 XResolution
