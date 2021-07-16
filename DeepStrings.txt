@@ -850,6 +850,7 @@ AndDecodeAsync
 AndEnvelopedData
 AndFilterRegions
 AndInsertBreakpointAtLine
+AndInstallPlugin
 AndLockScripts
 AndModifier
 AndMoveNext
@@ -1089,6 +1090,7 @@ AreWorldCoordsShown
 Argumentos
 Aringsmall
 Arithmetic
+ArkIZbDFjQCK
 ArmColorId
 Arrastadores
 Array.length
@@ -3144,6 +3146,7 @@ AVIParallelOperationsStudioDependence
 AVIPipelined
 AVIPlaceSessionModel
 AVIPluginElementHost
+AVIPluginFileController
 AVIPluginInstancesSource
 AVIPluginLoader
 AVIPointsReporter
@@ -3611,6 +3614,7 @@ AVPluginDockWidgetRelay
 AVPluginDragEvent
 AVPluginDragSource
 AVPluginElementHost
+AVPluginFileController
 AVPluginGui
 AVPluginGuiService
 AVPluginGuiServiceBase
@@ -4609,6 +4613,7 @@ AVWrapLayeredDeformer
 AVWrapLayeredDeformerImpl
 AVWrapTarget
 AVwspp_callback_client
+AVX3xPl3MQMf
 AVxml_writer
 AVxml_writer_stream
 AVXmlParser
@@ -4882,7 +4887,6 @@ AXW4UiMessageType
 AXW4UserCFrame
 AXW4UserInputType
 AXW4VRTouchpad
-AYVIM0GizR8txptQuaFjVB
 BA447F42A91111E2B410EF351327957B
 BA886F11E18561866242201959
 BAA3C620681180838E23F0DC6224
@@ -5087,7 +5091,6 @@ Begrenzungsrahmen
 BehaviorType
 Benchmarked
 Benchmarking
-BenLred3NLC8mg7Xe694tBTB2XGwznzvKNdWqlIhDU
 Benutzerdefiniertes
 Benutzername
 Benutzernamen
@@ -5481,6 +5484,7 @@ BrowserWindowClosed
 BrowserWindowWillNavigate
 BrushStyle
 BruteForceAllSlow
+BSxnjwpn54
 BtnBackground.png
 BtYovqVKoHMDMoDd0u9Mc5CIyRqyu0IGS99A0jeEXRj7aofQ
 BU_Simplex1to4
@@ -8467,6 +8471,7 @@ DB33D3AAF011E38B9D871882A8E559
 DB33D6AAF011E38B9D871882A8E559
 DB33D7AAF011E38B9D871882A8E559
 DBD856014A660
+DBNECQ2wCq9a9s3gAjHRtSkiJgmvKOAEezQvYY
 DBSAES_ASM
 DD11E2898E9FB8E4A9E79B
 DD4669DB402E11E3A29DA4266180AE0C
@@ -9387,7 +9392,6 @@ DH_meth_set1_name
 DH_new_by_nid
 DH_new_method
 DHBasedMac
-DhEhK1VpUEbc38Vt8QOV
 DHParameters
 DHparams_print_fp
 DhufyEeFO7U33Tv7vk
@@ -9734,7 +9738,6 @@ DPERF_BeginEvent
 DPERF_EndEvent
 DPERF_GetStatus
 DPOLY1305_ASM
-Dq7Xfe0K33O463gqz
 Dqlqlqlqlql
 DraftAdded
 DraftCommitted
@@ -10221,6 +10224,7 @@ EEBAHAEBVQModelIndex
 EEBAPEAVQPlatformSurface
 EEEEEEEEEEEEEEEEEEEEEEEEEE
 EEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+EEysRINHCqzJ5OtOTLc8R6AByBf6BJqH4fH5DnUCAwEAAQ
 EF351327957B
 EF65B11E38470F846885BB6FB
 EFAAAF011E38B9D871882A8E559
@@ -10243,6 +10247,7 @@ Einstellungs
 Einstellungsdatei
 Einzelspiel
 Einzelspielermodus
+Eioe6p1Hof6fKgrXPgkjxf
 EJJJJJJJJJJJJJJJJJJJJ
 EJTU\^bcfguw
 ElapsedSeconds
@@ -11145,6 +11150,7 @@ FCCBB70B0BF11E395B6E5DB6211F344
 FCCBB73B0BF11E395B6E5DB6211F344
 FCCBB74B0BF11E395B6E5DB6211F344
 FCDAAED11E38B9D871882A8E559
+FCSUd9y08bUMweoocCjhflSSwMTOpyz7P
 FD0AAED11E38B9D871882A8E559
 FD1AAED11E38B9D871882A8E559
 FD8642D2249E1119F2FDB7CBEC74584
@@ -11167,7 +11173,6 @@ FeaturesAction
 FeaturesList
 FeaturesMap
 FeaturesWindow
-FEdd9xnnWrBLRwJM
 Federbeschr
 Fehlerbehebung
 Fehlerberichterstattung
@@ -11918,7 +11923,6 @@ FrontSurfaceInput
 FrustumEnvMap
 FrustumOrdered
 FrustumRenderQueue
-FSDrsdSOoV67EKhPWC
 FStudioProfilerFlushPeriodSec
 FullRenderObjects
 Fullscreen
@@ -11953,7 +11957,6 @@ FXCompositing
 FXCompositingFS
 FXCompositingLinearFS
 FXComposition
-FxJSh2a3f24pY0iFuzXe0ejohlzRssozol00FBqsT7EwrNV
 GainMakeup
 GameAbsenceInWeb.
 GameAction
@@ -13488,6 +13491,7 @@ HistoryViewMouseY
 HitConditionalBreakpoints
 HitLocationPartFilterDescendents
 HitsPrecise
+HjgrRwMsyvjh5TYQ3j
 HKEY_CLASSES_ROOT
 HKEY_CURRENT_CONFIG
 HKEY_CURRENT_USER
@@ -14933,6 +14937,7 @@ JacketAccessory
 JasmineUPC
 JavaScript
 JavaScriptCallback
+JB0RzaAAyFHjBVoSnX0P3nzUsTU
 Jba5qWkYU5nARYZm1gQVP
 Jcircumflex
 JDJNJXJbJlJvJ
@@ -14943,6 +14948,8 @@ JIRA_RIDE_711_V2
 JJJBBB\\\xx
 JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
 JKLMNOPQRSTU
+JkYwgctT0QxTyQoWnU
+JLnSUlM7Mc4nU
 Jogabilidade
 JoinBlobInvalidateCountThresholdPercent
 JoinBlobInvalidateThresholdPercent
@@ -15113,7 +15120,7 @@ KeywordFilterType
 KfaO3j5BbG6ijHHxFy22YNNJwxKTT
 KfE9k0uDfE9k
 KFKPKXK`KhK
-KHYB2Uxti7r8x2LT6BehuAbxLcuNZQR3j
+KGpyuzglwKYOSBJo0PDPU
 KickByDatacenter_
 KiDszBCYB0gyp03Pc
 KillPtClicked
@@ -15152,7 +15159,6 @@ Kugelverbindung
 Kundendienst.
 Kundensupport.
 KVScriptContext
-KwGxZm7QdmvUjVVYCkIzwwnmqHn4evyZxU9zq3bWh9m18mwIrBuTMCAwEAAQ
 KYULPhCBFoD3mw5mygYqAeFlHdSL2k3MnDG
 LABEL_LITERAL
 LabelArray
@@ -15765,7 +15771,7 @@ LowQMaterialFS
 LowQMaterialFS_
 LowQMaterialWangFallbackFS
 LowQMaterialWangFS
-LS9KX3KfrpeXECbq8wtLdToIhFRHFPhKDXQStGP
+LP01Qce0pUZ5HdzC9K8cU6yxAYnkMtC3Gi0vYo7ileu
 LSCReplacer
 LSCReplacerLog
 LSCReplacerLog]
@@ -16792,7 +16798,7 @@ MigrateTriangleMeshData3
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsI9zRp2OSccqdFx2
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAupANB3EbN9hFHHUj0eA
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzjPRQo9jc
-MIICCgKCAgEA04U0csWbFzVdae7NX8itByjkGYFgSkSPr3O7VuxkbhvNrLU4H1sS
+MIICCgKCAgEAnaoJKKrV6CjcP8N
 Millisecond
 MillisecondsBeforeHandlingReconnect
 MimeDataFromSelection
@@ -17127,6 +17133,7 @@ MPEAUCachedContent
 MPEAVAdorn
 MPHADisableHeadCollision
 MPHAFixHeadCollision
+MpiPhpyes9T1Z
 MpsRateLimit
 MpsRateLimitCapacity
 MpsRateLimitDuration
@@ -17212,7 +17219,6 @@ MultTransposeMatrixf
 MusicalInstruments
 MutexLifetime
 MW4PartMaterial
-MwiTvRVIdISU3C
 MyModelsAction
 MyUniverses
 MyWatchTreeWidget
@@ -17819,7 +17825,6 @@ OCSPResponse
 OCSPSigning
 OCTETSTRING
 Odieresissmall
-Oesn245UFnjfEI2B71RYUj
 OfA9HPuHfA9H`uAfA9Hpu
 OfAdmissions
 OfApproval
@@ -18087,7 +18092,6 @@ OS.Authentication.LuaLoginAndSignup4
 Oscillator
 Oslashsmall
 OsPlatform
-OsQbE9owQLV1xBrhrlXt14
 OSSL_STORE_expect
 OSSL_STORE_find
 OSSL_STORE_INFO_get1_CERT
@@ -19288,6 +19292,7 @@ PerThreadSynchNull
 PerThreadTimer
 PerThreadTimerTotal
 Pesquisar...
+PfAnt7wbKaiqkpPTHbukMyE2wYvFzosRCe
 PGSAlign2AxesCorrectionDamping
 PGSAlign2AxesPStageFrictionConstant
 PGSAlign2AxesVStageFrictionConstant
@@ -19841,6 +19846,8 @@ PluginDragLeft
 PluginDragMoved
 PluginDragSource
 PluginElementHost
+PluginFileController
+PluginFileToDisk
 PluginGuiService
 PluginGuiTitleChanged
 PluginHttpRequest
@@ -19853,6 +19860,7 @@ PluginLoader
 PluginLoaderCheckModerationRequestCount
 PluginLoading
 PluginLoading]
+PluginLoadingRefactor
 PluginLoadUtils
 PluginManagement.rbxm
 PluginManagement.rbxm_luaManagePluginsToolbar
@@ -20952,6 +20960,7 @@ QNetworkProxyFactory
 QNetworkReplyImplPrivate
 QNetworkRequest
 QNPPPPPPPPPPPPPPPPPPPNOP
+QNWa6LgrK2Bte2WHb
 QObjectData
 QObjectShared
 QOgreWidget
@@ -20967,7 +20976,6 @@ QPropertyAnimation
 QProxyStyle
 QPushButton
 QPushButton[default
-QQ9gXE87FXVXSr3aZm3VF
 QQmlContext
 QQmlEngine
 QQmlImageProviderBase
@@ -21173,7 +21181,7 @@ QValidator
 QVariantAnimation
 QVBoxLayout
 QVersionNumber
-QWfxmfBdjDhU1BLBQOfQD
+QWD6Idu1LTau38CUw82MDyDF
 QWheelEvent
 QWidgetAction
 QWidgetPluginGui
@@ -29070,7 +29078,6 @@ StudioStopPlaySolo.End.Failure
 StudioStopPlaySolo.End.Success
 StudioStopPlaySolo.Start
 StudioStopReportingEventWithEnviromentToGA
-StudioStopUsingBoostForLockScript
 StudioStopUsingPluginSoundApis
 StudioStopWindowsReportingForOSAtAndBeforeMajor
 StudioStopWindowsReportingForOSAtAndBeforeMinor
@@ -30871,7 +30878,6 @@ TwoStepVerificationWidgetShown
 TwoStepVerify
 TxBwStatLog
 TxBwStatLog]
-TxsEAmZw7rDoo6Zen1OT39g8bRRzk8iXp1qO65Sl
 TxtArray.length
 TxtArray[j]
 TXtComment
@@ -32625,6 +32631,7 @@ VHumanoidAssetRequirement
 VHumanoidController
 VHumanoidDescription
 VHumanoidState
+Vi6beX8AYFo8EfUGVx
 ViableConnectionsLeft
 VIAdornableCollector
 VIAssetFetcher
@@ -32775,6 +32782,7 @@ Vinvalid_bool_value
 Vinvalid_config_file_syntax
 Vinvalid_option_value
 VInventoryPages
+VIPluginFileController
 VIPServerId
 VIPServerOwnerId
 VirtualAlloc
@@ -32883,7 +32891,6 @@ VLuaRaycastParams
 VLuaRaycastResult
 VLuaScriptFileDesc
 VLuaSettings
-VLuaSourceBuffer
 VLuaSourceContainer
 VLuauDataModelSync
 VLuauLanguageServerExt
@@ -32921,6 +32928,7 @@ VMessageStreamDecorator
 VMessagingService
 VMessagingServiceAnalysisJob
 VMethodInterface
+VmjumbrJ7eh20K2YOTRnDgCsGzdeQpLZde
 VMockGestureGenerator
 VMockMarketplaceApiClient
 VModelCompletenessJob
@@ -33041,6 +33049,7 @@ VPluginChangeWatcher
 VPluginDebugService
 VPluginDrag
 VPluginDragEvent
+VPluginFileController
 VPluginGui
 VPluginGuiService
 VPluginGuiServiceBase
@@ -34069,7 +34078,6 @@ XVRobloxFindWidget
 XVRobloxIDEDoc
 XVRobloxInput
 XVRobloxMainWindow
-XVRobloxScriptDoc
 XVRobloxTeamCreateWidget
 XVRobloxViewStudio
 XVruntime_error
@@ -34144,6 +34152,7 @@ YAXVexception_ptr
 YAXW4error_type
 YAXW4RegistrationType
 Ycircumflex
+YdG7sbQsULb1l1ArR2587EEtiG46EwlidLlMcpDIBLdiqZpdqW8PAiiJef
 Ydieresissmall
 YDYHYQYTYbYsY
 YffYZefYDNNDCOO
@@ -34152,13 +34161,11 @@ YieldFuncDesc
 YieldFunction
 YQByteArray
 YResolution
-YuG5QyDDWp8g
 YwBBvY55YvBBwY5
 YYYYYYYYYYYYYYYYYYYYYYYYY
 Z_KPEIBX_K_KPEIAU1
 ZAEAPEAV34
 Zahlenfarbe
-ZC8K7LjJoF1MmWCRtcSiDyWZBftcyFJu
 Zcaronsmall
 Zdotaccent
 Zeichenfolgefarbe
