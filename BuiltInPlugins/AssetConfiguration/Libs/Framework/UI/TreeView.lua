@@ -177,7 +177,7 @@ function TreeView:render()
 				Children = itemChildren or {},
 				OnToggle = self.onToggle,
 				OnPress = self.onSelect,
-				Expanded = props.Expansion[row.item]
+				Expanded = props.Expansion[row.item] or false
 			}, self.props.RowProps))
 		else
 			children[key] = props.RenderRow(row)
