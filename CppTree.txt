@@ -3980,7 +3980,7 @@ RBX::Reflection::BoundFuncDesc<class RBX::Player,class std::string cdecl(void),0
 RBX::Reflection::BoundFuncDesc<class RBX::Player,double cdecl(class std::string),1>
 RBX::Reflection::BoundFuncDesc<class RBX::Player,enum RBX::FriendService_FriendStatus cdecl(class std::shared_ptr<class RBX::Player>),1>
 RBX::Reflection::BoundFuncDesc<class RBX::Player,float cdecl(class RBX::Vector3),1>
-RBX::Reflection::BoundFuncDesc<class RBX::Player,int cdecl(void),0>
+RBX::Reflection::BoundFuncDesc<class RBX::Player,float cdecl(void),0>
 RBX::Reflection::BoundFuncDesc<class RBX::Player,void cdecl(__int64,bool),2>
 RBX::Reflection::BoundFuncDesc<class RBX::Player,void cdecl(bool),1>
 RBX::Reflection::BoundFuncDesc<class RBX::Player,void cdecl(class RBX::Vector3,bool),2>

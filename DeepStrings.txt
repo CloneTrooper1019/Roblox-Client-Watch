@@ -4898,6 +4898,7 @@ BackColors[nColorIndex]
 BackendAccoutrementState
 BackendProcessingUsesLaunchIntent
 Background
+BackgroundAppSuspendsAllSoundServices
 BackgroundColor
 BackgroundColor3
 BackgroundMode
@@ -5132,6 +5133,7 @@ BgUpdateRedirectsRejectInfluxHundredthsPercentage
 BHHHHHHHHHHHHHHHHHHHHHHHHHH
 BhHlLjJTiIfdnczsxX
 Bibliotheksausweises
+BiiAIn6I7dRMovcH1PLq3ehlKIjkVC6iMOhZM1k8Cr0UCAwEAAQ
 Bildlauffenster
 Bildschirm
 Bildschirmgr
@@ -6790,6 +6792,7 @@ ClusterSenderMaxJoinBandwidthBpsScaling
 ClusterSenderMaxUpdateBandwidthBps
 ClusterSenderMaxUpdateBandwidthBpsScaling
 CLzV..VzLM
+Cm02zPqWzauF6XJXIXtw6Qh
 CMAC_CTX_new
 CmdArgListPtr
 CmdBeginDebugUtilsLabelEXT
@@ -9090,6 +9093,7 @@ DEPRECATED_setAnalysisResult
 DEPRECATED_setResultLocation
 DEPRECATED_showFindAllDialog
 DEPRECATED_simulationActionActivated
+DEPRECATED_start
 DEPRECATED_StudioGameStateType_PlaySolo
 DEPRECATED_team_create_more.png
 DEPRECATED_teamCreateSave_Root
@@ -9369,7 +9373,6 @@ DF41709311E28987EB530EBA4742
 DF42709311E28987EB530EBA4742
 DFbxAMatrix
 DFbxMatrix
-DFFlagMicroprofilerRCCLeak
 DfNfXfbftf
 DGHASH_ASM
 DgNg`ghgpgxg
@@ -9614,7 +9617,6 @@ DListenerAttributes
 DMinMaxDistance
 DnsResolve
 DNSResponseMS
-Do7XUF9hTy2Oh6hHx6
 DocActivation
 DocActivationHistoryController
 DocChanged
@@ -9866,6 +9868,7 @@ DSVideoCaptureEngine
 DTLS_RECORD_LAYER_new
 DTLSv1_listen
 DUARPassVREnabled
+DUHaNwCg39PZlJMa6X3
 DumpAction
 DumpErrorUploader
 DumpFileCount
@@ -10241,6 +10244,7 @@ Einzelspiel
 Einzelspielermodus
 EJJJJJJJJJJJJJJJJJJJJ
 EJTU\^bcfguw
+EkDGEi8xPpA245rqlJQFayTL68aC
 ElapsedSeconds
 ElapsedTime
 ElasticBehavior
@@ -10454,7 +10458,7 @@ EnablePerfPlaytestId2
 EnablePerFrameSampling
 EnablePerfRenderStatsCollection2
 EnablePerfStatsCollection3
-EnablePlayerNetworkPing
+EnablePlayerNetworkPing2
 EnablePlugin
 EnablePointsHardwareBitDepth
 EnableQuickGameLaunch
@@ -10634,7 +10638,6 @@ EphemeralCounterWhitelist.json
 EphemeralStatsInfluxReportingEnabled
 EphemeralStatsInfluxReportingPriorityHundredthsPercent
 EphemeralStatsInfluxReportingThrottleHundredthsPercent
-Eq1B7uCyYLsRJeRnxPRTlYYUk
 EqualizerSoundEffect
 EquippedEmotes
 EquippedEmotesAddId
@@ -11915,7 +11918,6 @@ FrustumEnvMap
 FrustumOrdered
 FrustumRenderQueue
 FStudioProfilerFlushPeriodSec
-FtMWOSZRgR
 FullRenderObjects
 Fullscreen
 FullScreen
@@ -13503,6 +13505,7 @@ HlsResetFieldsOnSeek
 HlsSupportMasterPlaylist
 HlsUseSimplifiedRequestHandling
 HMACGostR3411
+HNdcvFZP1Sc
 HoldDuration
 Holzbretter
 HomeDataModel
@@ -14921,7 +14924,6 @@ IXPSystemShutoff
 IXPTestBrowserTrackerLayerName
 IXPTestSignupLandingLayerName
 IXPTestUserLayerName
-IZeqjquF7395
 J_J_JAEBVPackageHash
 J_Key_dn.png
 J_NW4CurrencyType
@@ -14932,10 +14934,8 @@ JavaScriptCallback
 Jba5qWkYU5nARYZm1gQVP
 Jcircumflex
 JDJNJXJbJlJvJ
-JDLB8kp4c7KRNTZ
 JHJRJ\JfJpJxJ
 JHW4MembershipType
-Ji19OIw5YS
 JIIIIIIIKI
 JIRA_RIDE_711_V2
 JJJBBB\\\xx
@@ -15044,7 +15044,6 @@ JW4HttpRequestResult
 JW4InfoType
 JW4TextFilterContext
 JW4ThumbnailType
-JxMKXwHbsqE8hF3tsK7aJyvZ7AG
 K\7IxU..UxI7\K
 K_Key_dn.png
 KaiTi_GB2312
@@ -15052,6 +15051,8 @@ Kameraempfindlichkeit
 Kamerageschwindigkeit
 Kameraposition
 Kamerazoom
+KbA78f8cejcVW
+KBrovNhRWr1pNIHo14G2zJuAm7cjx30ibLDAtUuJWILZwdpynKqLw9
 KBytesPerSec
 KeepAliveTimeout
 KeepChildLayoutState2
@@ -15469,6 +15470,7 @@ LmsInfluxDbHundredthsPercentage
 LmsPingExpBackoffMaxBackoffSeconds
 LmsPingExpBackoffMaxElapsedTimeSeconds
 LmsPingExponentialBackoff
+Lo3SJCM5z47aDJTUOaxxAKV2NaYowY73VwdRxsRmgiHBx4wflJDN1lr5keiK
 LOAD_CERT_CTRL
 Load_Package
 LoadAnimation
@@ -15762,7 +15764,6 @@ LowQMaterialFS
 LowQMaterialFS_
 LowQMaterialWangFallbackFS
 LowQMaterialWangFS
-LqDUjRmTjcZZRTY4De
 LSCReplacer
 LSCReplacerLog
 LSCReplacerLog]
@@ -16012,6 +16013,7 @@ LuauWatchdog
 LuaVersion
 LuaWebService
 LuckiestGuy
+LUFd0lGIyxxweV7zJG
 LuobuDevForumHost
 LuobuDevPublishLua
 LuobuDevPublishLuaTempOptIn
@@ -16097,6 +16099,7 @@ MarkTimeMs
 Marshalled
 Marshaller
 MarshallerType
+Mas8xlPRxclL8jfYNvvA4f2rN6BUGXbL
 MaskFromColor
 MaskWeight
 Massenaktualisierung
@@ -16243,6 +16246,7 @@ MaxWaitTimeBeforeForcePacketProcessMS
 MaxWaterFogDistance
 MaybeCutout
 MayBeLinkedSourceModified
+MD2ZmoyqKP
 MdiControls
 MDIManagerHost
 MEAA_JPEA_W_J
@@ -16771,6 +16775,7 @@ MicroProfilePlatformInfo4
 MicroprofilerDumpSkipsIncompleteFrames
 MicroprofilerExtraFrameInfo
 MicroprofilerFixWebServerDump
+MicroprofilerRCCLeak
 MicroProfilerSessionAnalytics
 MicroprofilerShortcutPressed
 MicroprofilerVariableBufferSize
@@ -16788,7 +16793,7 @@ MigrateTriangleMeshData3
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsI9zRp2OSccqdFx2
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAupANB3EbN9hFHHUj0eA
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzjPRQo9jc
-MIICCgKCAgEAwiRTtEawp6qethuabR0xhAK6GeqBIvYiyMmJJsWDTNpCJNI
+MIICCgKCAgEA0BLG2dzmPOIa9FB8qvZbMEHdNsbE8iz5nc8
 Millisecond
 MillisecondsBeforeHandlingReconnect
 MimeDataFromSelection
@@ -17208,7 +17213,6 @@ MultTransposeMatrixf
 MusicalInstruments
 MutexLifetime
 MW4PartMaterial
-MWCZZbGR2j8dnpG1CT8jU4mvuMAOWA
 MyModelsAction
 MyUniverses
 MyWatchTreeWidget
@@ -17543,7 +17547,6 @@ NfAddReport
 NfXf`fhfzf
 NHVVariant
 NinjaMask.mesh
-NMWj9SrHF5szI7Q8AG9PbzZIfWHdUj2RJdBtgd
 NNNNNNNNNNNNNNNNNNNNNN
 NNNNNNNSSSSSSSSSSSSSSSSSSSSSS
 NNW4SizeMode
@@ -17782,7 +17785,6 @@ ObjectWithIface7
 Objektmodell
 ObscuredBy
 ObtainUserAgentString
-OBxaDgmqq5rVJt0ZZkMS
 OccludeAll
 OccupancyDebugFS
 Occurances
@@ -17816,7 +17818,6 @@ OCSP_SINGLERESP
 OCSPResponse
 OCSPSigning
 OCTETSTRING
-OD6BYNKvJbNCiULXrdflvZkcUPLAnDIeIF0SVFLPPLZC6uYqd7Hj4EUCAwEAAQ
 Odieresissmall
 OfA9HPuHfA9H`uAfA9Hpu
 OfAdmissions
@@ -17872,7 +17873,6 @@ OiCCPPhotoshop
 OldActiveElement
 OldBinaryStringLength
 OldExtents
-OldKS7LzyFXLM8LkPpm7D7FxvKw0USW214
 OldMessagesFetched
 OldServers
 OleAut32.dll
@@ -17880,7 +17880,6 @@ OLEAUT32.dll
 OleInitialize
 OleLockRunning
 OleUninitialize
-OMcJI4XUzlybkOTlBf2
 OmitChildMinSizeBoundsForDefaultSizing
 OnAllScriptErrorsAction
 OnBadgeAwarded
@@ -19288,6 +19287,7 @@ PerThreadSynchNull
 PerThreadTimer
 PerThreadTimerTotal
 Pesquisar...
+PgaaFguYMawg0WuC5gFHhRpxsS1NI
 PGSAlign2AxesCorrectionDamping
 PGSAlign2AxesPStageFrictionConstant
 PGSAlign2AxesVStageFrictionConstant
@@ -21494,6 +21494,7 @@ RCCUpdateBroadphaseDtAverage_Datacenter_
 RccUseDataModelPatcher
 RCCWorldStepMsecDtPerNOU
 RcpReferenceTime
+Rct2WzxVEZyBkeFIETjhcwT7kfHkOQ5LnP2eisxSVMxFwCvjy7kYDr7TWMP
 ReachedTarget
 ReactionForceEnabled
 ReactionTorqueEnabled
@@ -22064,6 +22065,7 @@ RenderSurfaceAppearance_v2
 RenderTargetFlipping
 RenderTargetR8G8
 RenderTC2_4
+RenderTC2_TransformVertexSubset
 RenderTC2Async
 RenderTC2AtlasLODs
 RenderTC2BakeQueueSize
@@ -22896,6 +22898,7 @@ RSA_verify_PKCS1_PSS_mgf1
 RSAPrivateKey
 RSAPublicKey
 RTDynamicCast
+RTgjg1tKe4sNjGC
 RtlCaptureContext
 RtlCaptureStackBackTrace
 RtlLookupFunctionEntry
@@ -23449,6 +23452,7 @@ SecurityKeyRejected
 SecurityObject
 SecurityPolicy
 SecurityViolation
+SedG3fIPhXrxSstgSD7i5S9qKqXwBwrlReANlWVjk8wZHY7Bqou
 SeenFirstTimePopup
 Seilbeschr
 Selecciona
@@ -24662,7 +24666,6 @@ SplitterHasErrors
 SplitterProgressBar
 SplitterState
 SplittingCanceled
-SPmO7t8cb5j4SiGzV5wnMclE
 SpotLightAction
 SpreadAngle
 Sprechblasen
@@ -28719,6 +28722,7 @@ StudioFetchLatestVersionTimeIntervalMs
 StudioFetchPluginName
 StudioFileWatcherDelayMs
 StudioFilterChangePayAttentionToSelection
+StudioFindReplaceLSCReplacerRefactor
 StudioFindReplaceOverhaul
 StudioFixCalloutThemeChangedHandler
 StudioFixDataModelPluginLoaderMigrateToSessionizedEventIngest
@@ -29146,6 +29150,7 @@ StudioWindowsDpiScale
 StudioWorkspaceMonitorScriptChangeWhenPlaceIsReady
 StudioWorkspaceMonitorScriptGuidRegistered
 StudioWorkspaceRevisitFragmentScripts
+StudioWorkspaceSuspendOverride
 StudsBetweenTextures
 StudsCursor
 StudsOffset
@@ -29359,7 +29364,6 @@ SyncTimePosition
 SyncUpdate
 SyntaxCategories
 SyntaxHighlighting
-SyobDF16tZcfG5w3OsBwit1kUrKpxE97uT2u2AMhJCHronckg
 Syserror_map
 SystemAddress
 SystemButton
@@ -33462,6 +33466,7 @@ VWrapTarget
 Vwspp_callback_client
 VWSUATAUAVAW
 VWXYZ[\]^_`a
+VxCFu15zxOYKRApDeGx2Upy
 VXmlElement
 VYieldFunctions
 VYieldFunctionState
@@ -33800,7 +33805,6 @@ WM_ATLGETCONTROL
 WM_ATLGETHOST
 WMCreateProfileManager
 WMCreateSyncReader
-WMPBTjmyeASWWDkEcluO6BMgDv
 Wmvcore.dll
 WoodPlanks
 WorkersNeeded
@@ -33881,6 +33885,7 @@ WSAStartup
 WSAStringToAddressW
 WTHelperGetProvSignerFromChain
 WTHelperProvDataFromStateData
+Wu1fVI92Ke7B0BxhKMlSmqFmPDAdVGEfZp9KpN
 WWWWWWWWWW
 WWWWWWWWWWWWWW
 WWWWWWWWWWWWWWWWWWWWWWW
@@ -33969,7 +33974,6 @@ XboxPlayNextGame
 XboxPresencePolling
 XboxSaleAvatarPackageIds
 XboxUseNewValidUsernameCheck2
-XCfxhwGuYQ
 XFbxAMatrix
 XFREE86_GLYPH_RANGES
 XGetLastError
@@ -33981,7 +33985,6 @@ XInputGetState
 XInputSetState
 Xinvalid_argument
 Xlength_error
-XnNIz7R2jmScr4bByYW7K2htmat98Tl8CiIXUus7AutcUILDowF3s2sjcGm8
 Xout_of_range
 XP6AXAEBUTextFilterResult
 XP6AXAEBVQString
@@ -34148,13 +34151,14 @@ YAXW4RegistrationType
 Ycircumflex
 Ydieresissmall
 YDYHYQYTYbYsY
-YE50XYmqCsA
 YffYZefYDNNDCOO
 YieldEvent
 YieldFuncDesc
 YieldFunction
+YPH9eUDaKt
 YQByteArray
 YResolution
+YvtWSyo0LHF72nhnZvo1htVNJ
 YwBBvY55YvBBwY5
 YYYYYYYYYYYYYYYYYYYYYYYYY
 Z_KPEIBX_K_KPEIAU1
@@ -34167,7 +34171,6 @@ Zeilennummer
 ZeroZombies
 ZgnhKhWhci
 ZhniZzzzZbarAnmrAgneBlryCaveDroeGkerGrjuGuruGgnaHinaHrbeHariHadnKanaKooaLntaLmylMayrOlmaTuleTiahTtbiTopoBiarBsnaCrehCihtErmhKgnoMrmyMmagOrnuRhniScrySaahTiiiYtrsDhtoGlatIdhuBonaHglgTbgaTtrpCbmiLbniLamsOwahSelaTragUiguBtpoCgalGrahKulaToepXolySgnfTilaBxusXookNga
-ZhZTrHZZuQQKa5gyKe9iLKVPI7tjxxgpLI7Q
 ZIndexBehavior
 ZLcJhLcGhM
 ZNjlXiODrHUcaGRYt

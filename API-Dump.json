@@ -48872,7 +48872,7 @@
                     ],
                     "ReturnType": {
                         "Category": "Primitive",
-                        "Name": "int"
+                        "Name": "float"
                     },
                     "Security": "None",
                     "ThreadSafety": "Unsafe"

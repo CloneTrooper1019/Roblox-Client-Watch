@@ -2561,7 +2561,7 @@ Class Player : Instance
 	Function string Player:GetGameSessionID() {RobloxSecurity}
 	Function Dictionary Player:GetJoinData()
 	Function Mouse Player:GetMouse()
-	Function int Player:GetNetworkPing()
+	Function float Player:GetNetworkPing()
 	Function int Player:GetRankInGroup(int64 groupId) [Yields]
 	Function string Player:GetRoleInGroup(int64 groupId) [Yields]
 	Function bool Player:GetUnder13() {RobloxScriptSecurity}
