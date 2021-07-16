@@ -22,7 +22,7 @@ if DebugFlags.RunningUnderCLI() or DebugFlags.RunTests() then
 	if DebugFlags.RunDeveloperFrameworkTests() then
 		print("")
 		print("----- All Developer Framework Tests ------")
-		TestBootstrap:run({Plugin.Packages.Framework}, reporter)
+		TestBootstrap:run({Plugin.Packages._Index.DeveloperFramework.DeveloperFramework}, reporter)
 		print("----------------------------------")
 	end
 end

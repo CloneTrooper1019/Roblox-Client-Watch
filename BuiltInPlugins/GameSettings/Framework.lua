@@ -14,6 +14,7 @@ return strict({
 	Style = require(script.Style),
 	TestHelpers = require(script.TestHelpers),
 	UI = require(script.UI),
+	Url = require(script.RobloxAPI.Url),
 	Util = require(script.Util),
 	UIData = require(script.UI.UIFolderData),
 	Wrappers = require(script.Wrappers),

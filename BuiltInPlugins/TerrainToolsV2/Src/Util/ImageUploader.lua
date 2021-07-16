@@ -1,6 +1,6 @@
 local Plugin = script.Parent.Parent.Parent
 
-local Url = require(Plugin.Packages.Framework.RobloxAPI.Url)
+local Url = require(Plugin.Packages.Framework).Url
 
 local DATA_URL = Url.new().DATA_URL
 

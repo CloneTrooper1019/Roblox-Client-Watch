@@ -13,7 +13,7 @@ end
 require(script.Parent.defineLuaFlags)
 
 local FFlagEnableTerrainToolsStylizer = game:GetFastFlag("EnableTerrainToolsStylizer")
-local RefactorFlags = require(Plugin.Packages.Framework.Util.RefactorFlags)
+local RefactorFlags = require(Plugin.Packages._Index.DeveloperFramework.DeveloperFramework.Util.RefactorFlags)
 RefactorFlags.THEME_REFACTOR = FFlagEnableTerrainToolsStylizer
 
 game:DefineFastFlag("TerrainToolsRoactInspector", false)
