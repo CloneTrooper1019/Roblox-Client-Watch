@@ -2186,6 +2186,7 @@ FFlagBootcampCLI43605
 FFlagBootcampCLI43824
 FFlagBootcampCLI44172
 FFlagBootcampCLI44178
+FFlagBootcampCLI44180
 FFlagBootcampCLI44181
 FFlagBrowserServiceForAllPlatforms
 FFlagBubbleChatSettingsApi
@@ -2576,6 +2577,7 @@ FFlagFixMacStudioCommandKeyCode
 FFlagFixMacStudioMemorylessAssert
 FFlagFixMissingTrisOnD3D11
 FFlagFixNoTimeHudOnTeleport
+FFlagFixNumOfHiQualToLODOffsets
 FFlagFixOutBoundAccessInBoxMappedMesh
 FFlagFixPackageCreatorIDParsing
 FFlagFixPreferredSoundDeviceVR
@@ -2706,7 +2708,6 @@ FFlagImportMeshAnalytics2
 FFlagImportMeshPivot
 FFlagImprovedImmediateYieldFunction2
 FFlagImprovedInnerBoxBetaFeature
-FFlagIncreaseCircularAdornSideCount
 FFlagInfiniteTriangleMeshRecalcFixEnabled
 FFlagInfluxDbThreadPoolFix
 FFlagInitializeBeforeAuthentication2

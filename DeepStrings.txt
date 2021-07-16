@@ -5086,6 +5086,7 @@ Begrenzungsrahmen
 BehaviorType
 Benchmarked
 Benchmarking
+BEngbVKX3pcBkTcPne66OaMz9
 Benutzerdefiniertes
 Benutzername
 Benutzernamen
@@ -5334,6 +5335,7 @@ BootcampCLI43605
 BootcampCLI43824
 BootcampCLI44172
 BootcampCLI44178
+BootcampCLI44180
 BootcampCLI44181
 BootstrapperLauncher
 BootstrapperUpdate
@@ -5514,7 +5516,6 @@ BuiltInPlugin
 BuiltInPlugins
 BuiltInStandalonePluginLoadTime
 BuiltInStandalonePlugins
-BUjI8s3vzjw
 BulkAudioImportUse
 BulkAudioLoader
 BulkImport
@@ -5646,6 +5647,7 @@ CageMeshImporter
 CageOrigin
 CageOriginWorld
 CageType.Outer
+CaKazuy4yWaY1fvUXwTEuBqFnHDyorpWKK
 CalcAverage
 CalcBoxMappingForSkinnedMesh
 CalculateJumpDistance
@@ -6009,6 +6011,7 @@ CFrame.new
 CFrameOnly
 CFramePose
 CFrameValue
+CfwypiHrNd1Fz7WtuYo
 ChainCAFile
 ChainCAPath
 Chalkboard
@@ -6198,7 +6201,6 @@ ChildrenWaitingForTheirTurn[
 ChildSharedStringLength
 ChinRaiser
 ChinRaiserUpperLip
-CHMc9CCjNtF5
 Choisissez
 ChoosePixelFormat
 ChoosePixelFormatARB
@@ -8207,11 +8209,11 @@ CustomPhysics
 CustomSort
 CustomStatusAdded
 CustomStatusRemoved
-CvWfvxAc5LffGnUSCoI2wc
 CWindowImpl
 CWindowImplBaseT
 CWindowImplRoot
 CWinTraits
+CXcCAwEAAQ
 CxxFrameHandler3
 CxxThrowException
 CycleOffset
@@ -9379,7 +9381,6 @@ DGHASH_ASM
 DgNg`ghgpgxg
 DgNgXgbglgvg
 DGridAction
-DGzIqY3tGm8424pHhTLKh6ohrYdgpP8oSGFB8oI72ZuoDUE7EYV0nyVc8
 DH_check_ex
 DH_check_params_ex
 DH_check_pub_key_ex
@@ -9617,7 +9618,6 @@ DKECCAK1600_ASM
 DlcVersion
 DListenerAttributes
 DMinMaxDistance
-DNhAg5BYHxQJILNfNRnE4dQLsGnRna9gBEp5Puz
 DnsResolve
 DNSResponseMS
 DocActivation
@@ -9735,6 +9735,7 @@ DownSampleGlowTemporalLinear8x8FS
 DPERF_BeginEvent
 DPERF_EndEvent
 DPERF_GetStatus
+Dpi58smkgn4kDIi50diPZcAtwR5ajSImQ5bjtSbrMX7nkV5X8lUlB4ufL
 DPOLY1305_ASM
 Dqlqlqlqlql
 DraftAdded
@@ -11529,6 +11530,7 @@ FixMissingTrisOnD3D11
 FixMixedSlashPathInSandbox
 FixMovingPartsStat
 FixNoTimeHudOnTeleport
+FixNumOfHiQualToLODOffsets
 FixOptionalCFrameMemoryLeak
 FixOpusCodecFlush
 FixOutBoundAccessInBoxMappedMesh
@@ -11566,6 +11568,7 @@ FixWindowsClientCrashWithVersionHalfCount
 FixWorldModelHumanoidScalingInBuildRig
 FixWriteCombinedMemoryReadWrite
 FJFTF^FhFrF
+FjPztOMyzP91Ypgurk6JUNmskyfzVw8TedYtKzvqT17fLMlTszjJEWlJzp
 FlagCaptured
 FlagCreated
 FlagCursor.png
@@ -11622,7 +11625,6 @@ FMODPlaybackDSP
 FMODReportDeviceInfo
 FmodResetDriverFix
 FMODSoundChannels
-FNNYuDqAwy8BBl3cvbpljjfkS0wJHPasjCEbO68ys
 FocusChange
 FocusChanged
 FocusConnection
@@ -11954,7 +11956,6 @@ FXCompositing
 FXCompositingFS
 FXCompositingLinearFS
 FXComposition
-GA8q1yOp3kaZ0b5fSuAGR5Z9tA0KiFc9s9MhjeQVUUpycLxl
 GainMakeup
 GameAbsenceInWeb.
 GameAction
@@ -13015,6 +13016,7 @@ GlobalUsers.LuaApp.SpotlightTile
 GLSL.std.450
 Glsles3Mediump1
 GlslesMediump1
+Go9xzpx3gr7wC6fxMlr8jWSAqNRkBEwH3pSIYNgoazmMXmu4hRhVg
 GoodbyeChoiceActive
 GoodbyeChoiceActiveProperty
 GoodbyeDialog
@@ -14015,7 +14017,6 @@ IDispatchImpl
 IdleAnimation
 Idotaccent
 Idotaccent.a
-IdqBQdh4D2zKP
 IDraftsServiceHost
 IdsOrRanges
 IEAA_NPEBXAEBW4EFbxType
@@ -14213,7 +14214,6 @@ Incorporated.
 Incorporated0
 Incorporated1
 IncorporatedPaul
-IncreaseCircularAdornSideCount
 Increasing
 IncrementalPatchBuilder
 IncrementAsync
@@ -14717,6 +14717,7 @@ IpTextEdited
 IPTypeAndDataCenter
 IPublishedGamesStore
 IPV6_V6ONLY
+IqhTy0FIucNMhpzeonTphPDcRNg
 IRestartController
 IRobloxDoc
 IRobloxDocManager
@@ -14931,6 +14932,7 @@ IXPSystemShutoff
 IXPTestBrowserTrackerLayerName
 IXPTestSignupLandingLayerName
 IXPTestUserLayerName
+IYqN7QXt8BsWZTo
 J_J_JAEBVPackageHash
 J_Key_dn.png
 J_NW4CurrencyType
@@ -15058,6 +15060,7 @@ Kameraempfindlichkeit
 Kamerageschwindigkeit
 Kameraposition
 Kamerazoom
+KBra9AJbSqudcvLehFqP5
 KBytesPerSec
 KeepAliveTimeout
 KeepChildLayoutState2
@@ -15119,7 +15122,6 @@ KeywordFilterType
 KfaO3j5BbG6ijHHxFy22YNNJwxKTT
 KfE9k0uDfE9k
 KFKPKXK`KhK
-KhtHPwm9GOGpvcL
 KickByDatacenter_
 KiDszBCYB0gyp03Pc
 KillPtClicked
@@ -15154,7 +15156,6 @@ Kopplungsoberfl
 Korrodiertes
 KPEAVICHull
 KPEIBX_K_KPEIAU_iobuf
-KRH5EOUGyjrbwrff7vsI
 Kugelverbindung
 Kundendienst.
 Kundensupport.
@@ -15358,8 +15359,6 @@ LevelofDetail
 LevelOfDetail
 LevelOfDetailSetting
 LevelQuality
-LfI3C5Ehb8ybzuYUM0eiK
-LH5exxr5Wdf9FVh8y2
 LhF`F`F`F`F`
 Liberation
 LIBOVR_DLL_DIR
@@ -16798,7 +16797,7 @@ MigrateTriangleMeshData3
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsI9zRp2OSccqdFx2
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAupANB3EbN9hFHHUj0eA
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzjPRQo9jc
-MIICCgKCAgEA5UHRTsTQl6vB3lyCeXD0w8xo6UfprQbXqSk2nW
+MIICCgKCAgEAzBsngwwVViWsD8WGy2f5cKOzo
 Millisecond
 MillisecondsBeforeHandlingReconnect
 MimeDataFromSelection
@@ -17549,6 +17548,7 @@ NextSpawnLocation
 NextTabPage
 NfAddActVs
 NfAddReport
+NfpDzIc2wp2T9hp7wpEfiZHaDOAg2dj
 NfXf`fhfzf
 NHVVariant
 NinjaMask.mesh
@@ -17852,9 +17852,7 @@ OffsetYOriginal
 OffsetYTarget
 OffTeamCreateHttp
 OffTeamCreateMainThread
-OFfVsp5daYxYm6hfSa1iACAvqJtIUjQgwniNx9I0U15UHcAJ1XpiQIxvA
 OfInstances
-OfJ5DQwcMHzro6Tmr5z
 OfNestedPackages
 OfOperation
 OfPacketsSent
@@ -17955,6 +17953,7 @@ OnUnhandledScriptErrorsAction
 OnUserABTestLoadingStatusChanged
 OnUserLayerLoadingStatusChanged
 OOOOOOOOOOOOOOOOOOOOOOOO
+OOYSi5JygrHqXCI8TWWiqOryHtyK0Q3C9arUGb8J6
 OpaqueUseMaterialAndDistanceSort
 OpaqueWithAlphaDepthPass
 OpaqueWithAlphaNoDither
@@ -18229,6 +18228,7 @@ OverwritePublish
 Overwriting
 OwnPermission
 OwnProperty
+OYbWtNj4tL6mhG3tOUa7oIg
 Ozs8xYCf2Q05p4gHyX
 PA^A]A\_^[]
 PA^A]A\_^]
@@ -20962,7 +20962,6 @@ QNetworkProxyFactory
 QNetworkReplyImplPrivate
 QNetworkRequest
 QNPPPPPPPPPPPPPPPPPPPNOP
-QNv5uvXxDokOG1ZS
 QObjectData
 QObjectShared
 QOgreWidget
@@ -21187,7 +21186,6 @@ QWheelEvent
 QWidgetAction
 QWidgetPluginGui
 QWidgetWindow
-QX11h28AVMvrwMl0yu
 RaceConditionInExplorer
 RadialBlurFS
 RagdollBallSocketConstraint
@@ -29513,7 +29511,6 @@ TattletaleSwearWordDetected
 TattletaleUseNewWordListFeatures
 TattletaleUseOriginalWordList
 TCConnectionAborted
-TCOebDM6GJlhaPY0rkIJT9KhRIAglDSWCSs
 Tcommaaccent
 TCP_NODELAY
 TeachingCallouts
@@ -30675,6 +30672,7 @@ ToUniversalTime
 ToVersionNum
 TownAndCity
 ToWorldSpace
+Tp22hFBXUammQIFntBLDzRdyi1Kn005gq0YkzB9A2bNtDL
 TraceMessage
 TracerService
 TracerService]
@@ -30855,6 +30853,7 @@ TurnOnButtonClicked
 Tutoriales
 TutorialId
 TVijpW8m8aLsreZebWfEl5y9RFS7x6WZ555Z6MtZy
+TvjlDOomIGbhcgMHqD1qxwqd7zCXzf29u
 TweenEasingDirection
 TweenEasingStyle
 TweenInfo.new
@@ -33866,6 +33865,7 @@ WorldTrackJointInsertSplit
 Worttreffer
 WP1Lk7UmX3No0NAVVrlNv8vM1TKYodC60fXpXkwOnxGMHelMkfu58xsxIB9tXB4U
 WPACKET_start_sub_packet_len__
+Wpku5MNBiF
 WrapDeformer
 WrapDeformerContext
 WrapDeformerDispatcher
@@ -33887,7 +33887,6 @@ WritePlayerSecurity
 WritePluginSettingsFile
 WriteVoxels
 WroteToFile
-WrTRsV85A7SS4xHTA
 WS2_32.dll
 WSAAddressToStringW
 WSASocketW
@@ -33994,7 +33993,6 @@ XInputGetCapabilities
 XInputGetState
 XInputSetState
 Xinvalid_argument
-XkayVDRgsXRf7CQrQK
 Xlength_error
 Xout_of_range
 XP6AXAEBUTextFilterResult
@@ -34178,11 +34176,11 @@ Zdotaccent
 Zeichenfolgefarbe
 Zeilennummer
 ZeroZombies
+Zf7oR2s7A0vM8wofAUUbG2azxHAAbml6YvXFLqxYQDJByHy56lHQKbkC5DNovO68
 ZgnhKhWhci
 ZhniZzzzZbarAnmrAgneBlryCaveDroeGkerGrjuGuruGgnaHinaHrbeHariHadnKanaKooaLntaLmylMayrOlmaTuleTiahTtbiTopoBiarBsnaCrehCihtErmhKgnoMrmyMmagOrnuRhniScrySaahTiiiYtrsDhtoGlatIdhuBonaHglgTbgaTtrpCbmiLbniLamsOwahSelaTragUiguBtpoCgalGrahKulaToepXolySgnfTilaBxusXookNga
 ZIndexBehavior
 ZLcJhLcGhM
-ZlM8XnWysZTlwacX9vSWt4sfVSSb3kqNmNTvWAUcJ
 ZNjlXiODrHUcaGRYt
 ZntaLkerGlryCnmrArbeHbarAcrySaahTaveDgneBuruGrjuGayrOlmaTuleTadnKmylMhniSiahTooaLtbiTrmyMroeGgnaHihtErehCsnaCmagOrnuRrmhKgnoMariHanaKopoBinaHiiiYlatIhtoGtrsDhniZglgTonaHdhuBbgaTbmiLelaTbniLragUwahSamsOtrpCiarBiguBtpoCulaTgalGgnfTolySoepXrahKilaBxusXxnhPgahPoo
 ZoomActive
