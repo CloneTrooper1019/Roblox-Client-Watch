@@ -2602,7 +2602,6 @@ AVDEPRECATED_CreatePlaceInGameRequest
 AVDEPRECATED_GetAssetVersionNumberRequest
 AVDEPRECATED_GetDevForumPageRequest
 AVDEPRECATED_MeshUploadRequest
-AVDEPRECATED_PatchTeamCreateToggleRequest
 AVDEPRECATED_PersistentFifoComboBox
 AVDEPRECATED_UserNotificationClient
 AVDEPRECATEDAnalyticsReporter
@@ -5334,6 +5333,7 @@ BootcampCLI43594
 BootcampCLI43605
 BootcampCLI43824
 BootcampCLI44172
+BootcampCLI44174
 BootcampCLI44178
 BootcampCLI44180
 BootcampCLI44181
@@ -7646,6 +7646,7 @@ CountWidth
 CoverageRef
 CpuArchitecture
 CPULogicalCore
+CqoFMap1g2V0cZZOFJUWU5YPG97
 CrackedLava
 CrashAnalytics
 CrashDumpFileName
@@ -9062,7 +9063,6 @@ DEPRECATED_GetAssetVersionNumberRequest
 DEPRECATED_GetDevForumPageRequest
 DEPRECATED_getPackageHashData
 DEPRECATED_goToScriptErrorAction
-DEPRECATED_handleTeamCreateTurnOnFailure
 DEPRECATED_MeshUploadRequest
 DEPRECATED_onCreateGameFailure
 DEPRECATED_onCreateGameSuccess
@@ -9075,7 +9075,6 @@ DEPRECATED_onScriptSourcePropertyChanged
 DEPRECATED_onSimulationActionActivated
 DEPRECATED_packagePermissionsManager
 DEPRECATED_PackagePermissionsManager
-DEPRECATED_PatchTeamCreateToggleRequest
 DEPRECATED_PersistentFifoComboBox
 DEPRECATED_PlaySolo
 DEPRECATED_postPlacePackageRelationToSymbolicLinkEndpoint
@@ -9375,7 +9374,6 @@ DFbxAMatrix
 DFbxMatrix
 DfNfXfbftf
 DGHASH_ASM
-DGl0VT3kFh
 DgNg`ghgpgxg
 DgNgXgbglgvg
 DGridAction
@@ -9735,6 +9733,7 @@ DPERF_EndEvent
 DPERF_GetStatus
 DPOLY1305_ASM
 Dqlqlqlqlql
+DQVXkk0M1I8ne8ayaYVizo4hVtg9yNdSk
 DraftAdded
 DraftCommitted
 DraftOutdated
@@ -9868,7 +9867,6 @@ Dst.YBegin
 DSVideoCaptureEngine
 DTLS_RECORD_LAYER_new
 DTLSv1_listen
-DU8l7Oln0u
 DUARPassVREnabled
 DumpAction
 DumpErrorUploader
@@ -10243,7 +10241,6 @@ Einstellungs
 Einstellungsdatei
 Einzelspiel
 Einzelspielermodus
-EjDaBxR7gEthSQB
 EJJJJJJJJJJJJJJJJJJJJ
 EJTU\^bcfguw
 ElapsedSeconds
@@ -11207,8 +11204,8 @@ FFlagStudioEnableTeachingCallouts
 FFlagStudioRecentGamesPageShowsOwner
 FFlagStudioToastNotificationsInLua
 FFoRLVHHHHoTJVF
+Fh4VRGUYdgXktnVdLFUN9dPLIdmge8hm7
 FHFRF\FfFpFzF
-FhHVNADflD9f71V1o1ScGTNbAuUilt
 FidelityRequestTriggered
 FieldOfView
 FieldOfViewMode
@@ -11622,7 +11619,6 @@ FMODPlaybackDSP
 FMODReportDeviceInfo
 FmodResetDriverFix
 FMODSoundChannels
-FnBpRV2rx8zZQzVQVF8YK2C9oqfEoaIXI4tcEvaHQgDIpGAYT2OkpgOZ1vHjU
 FocusChange
 FocusChanged
 FocusConnection
@@ -13014,6 +13010,7 @@ GlobalUsers.LuaApp.SpotlightTile
 GLSL.std.450
 Glsles3Mediump1
 GlslesMediump1
+GM4Y08tFGv01
 GoodbyeChoiceActive
 GoodbyeChoiceActiveProperty
 GoodbyeDialog
@@ -13251,7 +13248,6 @@ GunCursor.png
 GunWaitCursor.png
 GvEphfEUiHHoD6hYFI4xWGpAnIHcklKQCxrf46kAhDGeZnqIgeGszlGdWafunGE8
 GVKUTS[BXIWH\KbHi
-GvQXYq9Yv0DDS
 GXGfGkGpGuG
 GyroscopeEnabled
 H_Key_dn.png
@@ -13425,6 +13421,7 @@ HeuristicMask
 HHAEBVQModelIndex
 HHHHHAEBVQString
 HHPEAVQObject
+HhRD5tnlPPcv1cNcPgTVwXd
 HHTT\AKKKKTYWAH
 HHUQPrivateSignal
 HHVQRegularExpression
@@ -13489,6 +13486,7 @@ HistoryViewMouseY
 HitConditionalBreakpoints
 HitLocationPartFilterDescendents
 HitsPrecise
+HJpaF0R1hrpid
 HKEY_CLASSES_ROOT
 HKEY_CURRENT_CONFIG
 HKEY_CURRENT_USER
@@ -13965,6 +13963,7 @@ HybridEvent
 HyIyPyVy]y^yey
 Iacutesmall
 IAEBVInstanceIdentifier
+IaoQftL9OCS7q0QuQmozQAn
 IAutocompleter
 IBeamCursor
 IBusyStateModel
@@ -14894,6 +14893,7 @@ ITRedirect
 IUniverseController
 IUpdateUIManager
 IUserDataStoreServiceBase
+IV0FiGVks4NXMiW8xMAVR
 IVRApplications_006
 IVRChaperone_003
 IVRChaperoneSetup_005
@@ -14911,6 +14911,7 @@ IVRTrackedCamera_003
 IWebBrowser2
 IWorldStage
 IXMLHTTPRequest2
+IxoErB33ULVY6n9sEYwqS
 IXPController
 IXPController]
 IXPLoadingStatus
@@ -14937,6 +14938,7 @@ JavaScriptCallback
 Jba5qWkYU5nARYZm1gQVP
 Jcircumflex
 JDJNJXJbJlJvJ
+Jg7ib1kCYZLa7UxZOGQW0hn
 JHJRJ\JfJpJxJ
 JHW4MembershipType
 JIIIIIIIKI
@@ -15122,7 +15124,6 @@ KKKKKKKKKKKK
 KKKKKKKKKKKKKKKKKKKKKK
 Klebeoberfl
 Kleinschreibung
-KlYGp0jSg3qzxU2EY8A6pQtSseCVwcw1Sqb9U
 KnownPrefixIndex
 KnownPublishRequest
 KodchiangUPC
@@ -15999,6 +16000,7 @@ LuauResolveModuleNameWithoutACurrentModule
 LuauScriptAnalyzer
 LuauSecondTypecheckKnowsTheDataModel
 LuauSupportLocalAndServerInitFiles
+LuauSyntheticNamesForInferredGenerics
 LuauTableCallMetamethodInCalls
 LuauTableTypeMaximumStringifierLength
 LuauTypeBasedDeprecation
@@ -16791,7 +16793,7 @@ MigrateTriangleMeshData3
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsI9zRp2OSccqdFx2
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAupANB3EbN9hFHHUj0eA
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzjPRQo9jc
-MIICCgKCAgEAsixbAuJeOUDAfVCwYRlUnWtByOjK
+MIICCgKCAgEAs0rZBemzrgrgAr
 Millisecond
 MillisecondsBeforeHandlingReconnect
 MimeDataFromSelection
@@ -17545,8 +17547,6 @@ NfAddReport
 NfXf`fhfzf
 NHVVariant
 NinjaMask.mesh
-NirbYWee8miX33aj2qbWkJMjcCqtiwhuT
-NMC9Okum3oMDr
 NNNNNNNNNNNNNNNNNNNNNN
 NNNNNNNSSSSSSSSSSSSSSSSSSSSSS
 NNW4SizeMode
@@ -17647,6 +17647,7 @@ NPEAVInstance
 NPEAVPrimitive
 NPEAVQString
 NPEAVQWidget
+NrDkR6Nl6HejoV3mjBFKfiyoASVtNMBL
 NSNNNNNNTNh0ii
 NSNNNNNNTNPVR
 NSNNNNNNTNPVV
@@ -18516,7 +18517,6 @@ PatchBegin
 PatchConfigParseException
 PatchDeploymentParseException
 PatchNotFound
-PatchTeamCreateToggleRequest
 Path.ComputeAsync
 PathAddBackslashA
 PathAppendA
@@ -18551,6 +18551,7 @@ PaysageCapteur
 PaysageDroite
 PaysageGauche
 PBKDF2PARAM
+PBpKaRMCIvFjW2
 PCDesktopClient
 PCDeviceWithResolution
 PCertReqData
@@ -19431,7 +19432,6 @@ PInitResData
 PirateHat.mesh
 PitchShiftSoundEffect
 PIUnsignedTBE
-PIUUX4Zj39laoaQFm1okmni2bQSCKSkskg252zu
 PivotAction
 PivotEditor
 PivotEditor.rbxm
@@ -19458,7 +19458,6 @@ PixelStorei
 PixelXDimension
 PixelYDimension
 PixmapRect
-PjodsEBmfRnaTa68hN9vwwYOFIdtlICweBUASh
 PKCS12_AUTHSAFES
 PKCS12_BAGS
 PKCS12_create
@@ -19895,7 +19894,6 @@ PluginWidgetRelayForPluginGui
 PluginWithInstancesAsChildren
 PluginWriteTemp
 PlusButtonPressed
-PMs1RNz4S3BnXi6TzayI3SKaB2hfnMENhtye9RvhLdJg
 POINT_SIZE
 PointBalanceCacheInvalidateTimeMs
 PointDataChanged
@@ -20377,7 +20375,6 @@ ProxyAction
 ProxyOverrideWidget
 Prozentsatz
 PSPECIFIED
-PsTAxpPj1rLTvWw6z1pSq4J2axf8UE0vPEgNPbKPUWx9
 PUBKEY_get0
 PUBKEY_set
 Publicando
@@ -20957,6 +20954,7 @@ QNetworkRequest
 QNPPPPPPPPPPPPPPPPPPPNOP
 QObjectData
 QObjectShared
+QOFyMYlztaVt4cOYZsFwIK1Mn7vBXjRWW98U29hw0mFwjYj41YfJAXMCAwEAAQ
 QOgreWidget
 QPaintDevice
 QPainterPath
@@ -20997,6 +20995,7 @@ QRegularExpressionMatch
 QRegularExpressionMatchIterator
 QResizeEvent
 QRubberBand
+QrxJ6p1noxh03
 QScrollArea
 QScrollBar
 QSemaphore
@@ -21497,6 +21496,8 @@ RCCUpdateBroadphaseDtAverage_Datacenter_
 RccUseDataModelPatcher
 RCCWorldStepMsecDtPerNOU
 RcpReferenceTime
+RcR0mHwZ85OrtNLhOoYVpNqSLnayGsf9fnOWUsqhblWX9x2MVWAS7
+RE6ZKqMwXfOj
 ReachedTarget
 ReactionForceEnabled
 ReactionTorqueEnabled
@@ -22686,7 +22687,6 @@ RigidityEnabled
 RigImporterErrorChecking
 RiseVelocity
 Rj0isQcnqX
-RLhrvrEjZMl9
 ROBLOSECURITY
 Roblox.Hybrid
 Roblox.Hybrid.Bridge.emitEvent
@@ -28864,7 +28864,6 @@ StudioMigrateCreatePlaceInGameRequestToStudioHttpRequest
 StudioMigrateGetAssetVersionNumberRequestToStudioHttpRequest
 StudioMigrateGetDevForumPageRequestToStudioHTTPRequest
 StudioMigrateGlobalToCJVInChina2
-StudioMigratePatchTeamCreateToggleRequestToStudioHTTPRequest
 StudioMigrateToSessionizedEventIngest
 StudioMode
 StudioModeChanged
@@ -29164,6 +29163,7 @@ StyleGuideModifier
 StyleOption
 StyleSheet
 StyleVersion
+Su5CQm0iNOfnIHc265hcCv6yCIsrycuF
 SUATAUAVAW
 SUATAUAVAWA
 SUATAUAVAWE
@@ -30243,6 +30243,7 @@ TitleBarProgress
 TitlebarText
 TitleBarVisible
 TJNLerU][Wr
+TJTXaG31lvEV0fLFjMR7p56gLyrc6IiN5jM4P
 TLS_AES_128_CCM_8_SHA256
 TLS_AES_128_CCM_SHA256
 TLS_AES_128_GCM_SHA256
@@ -30924,7 +30925,6 @@ UAutocompleteLibraryMetadata
 UAutocompleteResultRoot
 UAutocompleteScore
 UAvatarData
-UB2cHiqEPwz4yCo98pQMgbP
 Ubad_adjustment
 Ubad_alloc_
 Ubad_day_of_month
@@ -32250,7 +32250,6 @@ VDEPRECATED_GetAssetVersionNumberRequest
 VDEPRECATED_GetDevForumPageRequest
 VDEPRECATED_MeshUploadRequest
 VDEPRECATED_PackagePermissionsManager
-VDEPRECATED_PatchTeamCreateToggleRequest
 VDEPRECATED_RCCPackageListener
 VDEPRECATEDAnalyticsReporter
 VDepthOfFieldEffect
@@ -33117,7 +33116,6 @@ VRandomAdaptionLogic
 Vrange_error
 VRbxAnalyticsService
 VRClientCoreFactory
-VRCWsA0y080
 VRDeviceName
 VReadynessInterface
 VReflection
@@ -33955,7 +33953,6 @@ XAEBVQString
 XAEBVTeleportSucceededInfo
 XAEBVvalue
 XAEBVwebsocket_incoming_message
-XAIksSvg4D8B2Oow07nnC4XntT45l5k
 XAlignment
 Xbad_alloc
 Xbad_function_call
@@ -33980,7 +33977,6 @@ XFREE86_GLYPH_RANGES
 XGetLastError
 XHW4DebuggerStatus
 XHW4Status_e
-XibPKx07LSf4rY7VBdEN4wZ5V7MeP5AUVHeyDSaswf
 XInputGetBatteryInformation
 XInputGetCapabilities
 XInputGetState
@@ -34021,7 +34017,6 @@ XPEAVReplicator
 XPEAVRobloxScriptDiffDoc
 XPEAVScriptingAnalysisScriptItem
 XPEBVInstance
-XQ5mgjUWWP5hLX3qCT4kZp4yQ
 XQColorDialog
 Xregex_error
 XResolution
@@ -34160,6 +34155,7 @@ YieldFuncDesc
 YieldFunction
 YQByteArray
 YResolution
+YsIghWvHsPM3JAkfuANJoNzcwMWymeltH5BLLv0d
 YwBBvY55YvBBwY5
 YYYYYYYYYYYYYYYYYYYYYYYYY
 Z_KPEIBX_K_KPEIAU1
@@ -34174,6 +34170,7 @@ ZgnhKhWhci
 ZhniZzzzZbarAnmrAgneBlryCaveDroeGkerGrjuGuruGgnaHinaHrbeHariHadnKanaKooaLntaLmylMayrOlmaTuleTiahTtbiTopoBiarBsnaCrehCihtErmhKgnoMrmyMmagOrnuRhniScrySaahTiiiYtrsDhtoGlatIdhuBonaHglgTbgaTtrpCbmiLbniLamsOwahSelaTragUiguBtpoCgalGrahKulaToepXolySgnfTilaBxusXookNga
 ZIndexBehavior
 ZLcJhLcGhM
+ZMRPN2tVXs1MN20d
 ZNjlXiODrHUcaGRYt
 ZntaLkerGlryCnmrArbeHbarAcrySaahTaveDgneBuruGrjuGayrOlmaTuleTadnKmylMhniSiahTooaLtbiTrmyMroeGgnaHihtErehCsnaCmagOrnuRrmhKgnoMariHanaKopoBinaHiiiYlatIhtoGtrsDhniZglgTonaHdhuBbgaTbmiLelaTbniLragUwahSamsOtrpCiarBiguBtpoCulaTgalGgnfTolySoepXrahKilaBxusXxnhPgahPoo
 ZoomActive

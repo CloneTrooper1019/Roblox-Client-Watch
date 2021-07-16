@@ -953,7 +953,6 @@ DEPRECATED_CreatePlaceInGameRequest
 DEPRECATED_GetAssetVersionNumberRequest
 DEPRECATED_GetDevForumPageRequest
 DEPRECATED_MeshUploadRequest
-DEPRECATED_PatchTeamCreateToggleRequest
 DEPRECATED_PersistentFifoComboBox
 DEPRECATED_UserNotificationClient
 DetailsTableComponent
@@ -10287,7 +10286,6 @@ std::_Ref_count<class DEPRECATED_DataModelPackageManager>
 std::_Ref_count<class DEPRECATED_GetAssetVersionNumberRequest>
 std::_Ref_count<class DEPRECATED_GetDevForumPageRequest>
 std::_Ref_count<class DEPRECATED_MeshUploadRequest>
-std::_Ref_count<class DEPRECATED_PatchTeamCreateToggleRequest>
 std::_Ref_count<class DuplicateRowData>
 std::_Ref_count<class EmptyDataModelLifeCycleListener>
 std::_Ref_count<class EntityProperties>
