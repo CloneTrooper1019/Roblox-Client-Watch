@@ -11738,6 +11738,7 @@ FoundItems
 FoundThread
 FpFramebuffer
 FpsVariance
+FR5J6eR6KBLD9pqWU4ES6U5rqvOOCXmBB0KzL8SxI806N9rSNg8c6
 Fractional
 FRAGMENT_SCRIPT
 FragmentScript
@@ -13246,7 +13247,6 @@ GuiTrackInsertionOrder3
 GuiVertices
 GunCursor.png
 GunWaitCursor.png
-GuqgwNtpJEAtzEw1CvEhIWc8YoOiIaP
 GvEphfEUiHHoD6hYFI4xWGpAnIHcklKQCxrf46kAhDGeZnqIgeGszlGdWafunGE8
 GVKUTS[BXIWH\KbHi
 GXGfGkGpGuG
@@ -13419,7 +13419,6 @@ Herramienta
 Herramientas
 Herunterfahren
 HeuristicMask
-HF5vjx9PSzvkOazfOWYxb6rCPL8Tdq4NO8fmGa3SBt4T9YPoalPdG5s3
 HHAEBVQModelIndex
 HHHHHAEBVQString
 HHPEAVQObject
@@ -13956,7 +13955,6 @@ HW4MatchType
 HW4Orientation
 HW4PacketPriority
 HW4TransformationMode
-Hw8f9yX3sXOFUKH424GsBJ
 HwngSmldAskhBcraMaweNegsOgnaT
 HwngSmldAskhBcraMegsOgnaTaweNmnoGuhsNoyoSbnaZrgoDgnoGghoRakaMfdeMogoSdgoSmylEdnaNpnmHohcWsrhCkaiDstiKizeY
 HWYGOTH.ttf
@@ -14083,6 +14081,8 @@ IllegalTeleport
 ILoggedInUser
 ILoginManager
 ILuaCalloutTarget
+Im1Q7m6CEEZfxOGUlPt2uroyjtAZ7kB8E3JxXf
+IM4k6XPSdEkNi
 IMAEBVInstanceIdentifier
 ImageAssetPropertyItem
 ImageAtlas
@@ -14183,7 +14183,6 @@ ImprovedInnerBoxBetaFeatureRolloutPercent
 ImprovedInnerBoxBetaFeatureUrl
 Improvements
 Improvements.
-IMsXAcIoGXrOO
 In_old.png
 Inaccessible
 InAddBuffer
@@ -14713,8 +14712,6 @@ IpTextEdited
 IPTypeAndDataCenter
 IPublishedGamesStore
 IPV6_V6ONLY
-Iqt34pmdXNjzfTlUAqLTRL6VbbODxuTShSCRXau0TCcmCDrXAhaNWp3d0p7
-IqwRGRbAWEBt
 IRestartController
 IRobloxDoc
 IRobloxDocManager
@@ -15114,9 +15111,9 @@ KeyUpdateInfo
 KeyUsagePeriod
 KeywordFilterType
 KfaO3j5BbG6ijHHxFy22YNNJwxKTT
+KFcnn2syJbfHarEX8xwu6POink91TWTuwi1Lm0Ox0murgszaVnkBn7Z
 KfE9k0uDfE9k
 KFKPKXK`KhK
-KH3rYMfPzdNmTrgJ
 KickByDatacenter_
 KiDszBCYB0gyp03Pc
 KillPtClicked
@@ -15166,6 +15163,7 @@ LabelLayout
 LabelledData
 LadderRaycast
 Ladereihenfolge
+LALsYiVnaNetFblq2O7BEtktpObcaxhjV57HZyuZq8o
 LandedBalanceD
 LandedBalanceP
 LandedTolerance
@@ -15348,6 +15346,7 @@ Leistungsdiagnose
 LengthToWrite
 LessThan10
 LetterOrNumber
+LEVBQdpbfsLjzNrQ6ALvfhllW28OEoeZUCAwEAAQ
 LevelChanged
 LevelItemCount
 LevelofDetail
@@ -16793,7 +16792,7 @@ MigrateTriangleMeshData3
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsI9zRp2OSccqdFx2
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAupANB3EbN9hFHHUj0eA
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzjPRQo9jc
-MIICCgKCAgEAtJWOMt4uxHS19BUmBy7UpcKUrqA1OL1u7AMq6mrJU8ReTiSfECI0
+MIICCgKCAgEAuHMr3KUZ
 Millisecond
 MillisecondsBeforeHandlingReconnect
 MimeDataFromSelection
@@ -16849,6 +16848,7 @@ Mitbearbeiter
 Mitglieder
 Mitteilungen
 Mitwirkender
+MJo1h6P2lcSOoRCCJDzuqQOlgNlC3JwPKupSFzjZEdlwyOoENzu
 MMW4IkDragCollisionsMode
 MMW4PartMaterial
 MMW4UserInputState
@@ -17545,10 +17545,8 @@ NextTabPage
 NfAddActVs
 NfAddReport
 NfXf`fhfzf
-NHJ3HgKOQkneqX4eqwBb8d3BJgcrU8DjETaE00
 NHVVariant
 NinjaMask.mesh
-NIoOUdCPqnFvl
 NNNNNNNNNNNNNNNNNNNNNN
 NNNNNNNSSSSSSSSSSSSSSSSSSSSSS
 NNW4SizeMode
@@ -17872,7 +17870,6 @@ OgreWidgetShowEvent
 Oh44\h44\Q
 Ohungarumlaut
 OiCCPPhotoshop
-OIJxQvLyaNj
 OldActiveElement
 OldBinaryStringLength
 OldExtents
@@ -18065,7 +18062,6 @@ OrderArray[i]
 OrderedDataStore
 OrderFunction
 OrderFunctionMenu
-OreBqQzGkxnFgCxTsCnWhmG1ItyMoghjz7BrRRQULg4EhRVep
 OrFirstTier
 Organizaci
 Organization
@@ -18560,6 +18556,7 @@ PCertReqData
 PCertResTBS
 PCStudioApp
 PCStudioAppCJV
+PdpiocwJe4ym
 PE_MAX_NB_SUBFR
 PEAD1AEAPEAD
 PEAPEAVsgCObject
@@ -20913,6 +20910,7 @@ QGuiApplication
 QHBoxLayout
 QHeaderView
 QHoverEvent
+QiDVhXRdymHmwKEt2B2LfbVd
 QImageReader
 QInputDialog
 QInputMethodEvent
@@ -20957,6 +20955,7 @@ QNetworkProxyFactory
 QNetworkReplyImplPrivate
 QNetworkRequest
 QNPPPPPPPPPPPPPPPPPPPNOP
+QnPTmfu5FmGcbyYbHWpFzCC
 QObjectData
 QObjectShared
 QOgreWidget
@@ -21177,7 +21176,6 @@ QValidator
 QVariantAnimation
 QVBoxLayout
 QVersionNumber
-Qw2XfpFHPdpRDhf0b0d4JkJ6nWuiDwum1O3JeDVlRHLbpTZDGYcUCAwEAAQ
 QWheelEvent
 QWidgetAction
 QWidgetPluginGui
@@ -22977,6 +22975,7 @@ RVUseNanoSeconds
 RxIgnoredBytes
 RxIgnoredPackets
 RxRlReport
+RzPzEjojdwQU
 S_Key_dn.png
 SA_KPEAPEBV123
 SA_KPEAPEBVfacet
@@ -23973,6 +23972,7 @@ SetWindowLongPtrA
 SetWindowPos
 SetWindowsHookExA
 SetWindowTextA
+Sh2JzXFKhairel6HJJJp2z4uugVWZqf
 ShaderSource
 ShadingLanguage
 ShadowAtlas
@@ -31065,7 +31065,6 @@ UFormatRange
 Uforward_traversal_tag
 Uforwarding_posix_time_traits
 UGameIconDescription
-UGC_ShowRetryCount
 UGC_TeleportBackoffBaseMs
 UGC_TeleportMaxBackoffMs
 UGC_TeleportMaxElapsedTimeMs
@@ -31184,7 +31183,6 @@ UIViewportFrameWorkspace
 ULinkedScriptLoadData
 ULoadedImage
 ULuaCallbacks
-UM4UM0WABpScjaP9E2yEF4Q25z4s5oKIqVCy
 UMasteringMetadata
 Umbenennen
 UMeshResource
@@ -31389,6 +31387,7 @@ UnregisterResourceData
 UnregisterThumbstick
 Unresolved
 UNRESOLVED
+UNRhUH966VyVIl58vgC
 UnsafeLegacyRenegotiation
 UnsavedChanges
 UnSavedScripts
@@ -31558,7 +31557,6 @@ UPublishDiagnosticsNotification
 UQLatin1Char
 UQMetaObject
 UQPrivateSignal
-UqpWGNjXiTGeRWZtzVbzoAcTtFLdzf5TbYUjDlIURskuuPc0evj8tUIGDJIDiaw
 UQStringDataPtr
 URakNetSocket
 URawUntranslatedEntry
@@ -32498,6 +32496,7 @@ VException
 VExplosion
 VExpression
 VExtrudedPartInstance
+VEYabu7csL1xcyoffLcPd
 VFaceControls
 VFaceInstance
 VFakeAtlExtension
@@ -33082,7 +33081,6 @@ VPublishService
 VPVAdornment
 VPVInstance
 VpxSoftwareCodec
-VQ3xXzZKBwjo9siANQPquP84AJrpfglN58bU
 VQByteArray
 VQComboBox
 VQFileInfo
@@ -33550,6 +33548,7 @@ WaterWaveSize
 WaterWaveSpeed
 WaypointIdx
 WaypointSpacing
+WcaOChWaotFwf5XU8puOJvdiBoRjpj7lsOL
 WCharArray
 Wcircumflex
 WDU_Mbstatet
@@ -33885,7 +33884,6 @@ WSAStartup
 WSAStringToAddressW
 WTHelperGetProvSignerFromChain
 WTHelperProvDataFromStateData
-WUGrT5dCKgXnU0q4NU7JolsHrP
 WWWWWWWWWW
 WWWWWWWWWWWWWW
 WWWWWWWWWWWWWWWWWWWWWWW
@@ -33985,7 +33983,6 @@ XInputGetState
 XInputSetState
 Xinvalid_argument
 Xlength_error
-XmVbLXQby0CRBm8I4Dh1F5p
 Xout_of_range
 XP6AXAEBUTextFilterResult
 XP6AXAEBVQString
@@ -34027,6 +34024,7 @@ Xtime_get_ticks
 XUCompletionList
 XUnegotiation_response
 XUNetworkResult
+XUpHV76nCnif4Z0Wg8LJOHdpJERJYImAvEYw2kCGeew8btPV8t
 XUTextPosition
 XvAAuY44YuAAvX4
 XVAddImageDialog
@@ -34129,6 +34127,7 @@ YAHPEAU_Threadpool_chore
 YAHPEAVQStringList
 YAHW4RegistrationType
 YAIAEBVQString
+YaKv6xRWfkG9MOif
 YAlignment
 YAP6AXW4QtMsgType
 YAPEAU_iobuf
@@ -34148,6 +34147,7 @@ YAXPEBVQObject
 YAXVexception_ptr
 YAXW4error_type
 YAXW4RegistrationType
+YCaFdGa9gMsYBPP
 Ycircumflex
 Ydieresissmall
 YDYHYQYTYbYsY
@@ -34171,6 +34171,7 @@ ZeroZombies
 ZgnhKhWhci
 ZhniZzzzZbarAnmrAgneBlryCaveDroeGkerGrjuGuruGgnaHinaHrbeHariHadnKanaKooaLntaLmylMayrOlmaTuleTiahTtbiTopoBiarBsnaCrehCihtErmhKgnoMrmyMmagOrnuRhniScrySaahTiiiYtrsDhtoGlatIdhuBonaHglgTbgaTtrpCbmiLbniLamsOwahSelaTragUiguBtpoCgalGrahKulaToepXolySgnfTilaBxusXookNga
 ZIndexBehavior
+ZKdpWKwrk8C2HTV1yBKQxYv
 ZLcJhLcGhM
 ZNjlXiODrHUcaGRYt
 ZntaLkerGlryCnmrArbeHbarAcrySaahTaveDgneBuruGrjuGayrOlmaTuleTadnKmylMhniSiahTooaLtbiTrmyMroeGgnaHihtErehCsnaCmagOrnuRrmhKgnoMariHanaKopoBinaHiiiYlatIhtoGtrsDhniZglgTonaHdhuBbgaTbmiLelaTbniLragUwahSamsOtrpCiarBiguBtpoCulaTgalGgnfTolySoepXrahKilaBxusXxnhPgahPoo
