@@ -55,7 +55,7 @@ void main()
     gl_Position = v18;
     VARYING0 = (TEXCOORD0.xy * v14) + CB1[gl_InstanceID * 7 + 6].xy;
     VARYING1 = TEXCOORD0.zw * v16;
-    VARYING2 = CB1[gl_InstanceID * 7 + 4] * mix(COLOR0 * 0.0039215688593685626983642578125, vec4(1.0), vec4(float(CB1[gl_InstanceID * 7 + 3].w > 0.0)));
+    VARYING2 = CB1[gl_InstanceID * 7 + 4] * mix(COLOR0 * 0.0039215688593685626983642578125, vec4(1.0), vec4(max(sign(CB1[gl_InstanceID * 7 + 3].w), 0.0)));
     VARYING3 = v20;
     VARYING4 = vec4(CB0[7].xyz - v9, v18.w);
     VARYING5 = v22;

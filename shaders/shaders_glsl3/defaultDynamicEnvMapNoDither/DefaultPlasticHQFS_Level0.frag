@@ -100,7 +100,7 @@ void main()
     float f59 = f54.x;
     float f60 = f54.y;
     float f61 = f54.z;
-    vec3 f62 = ((((((((vec3(1.0) - (f46 * f27)) * CB0[10].xyz) * f39) + (CB0[12].xyz * clamp(-f37, 0.0, 1.0))) + ((f22.xyz * (f22.w * 120.0)).xyz * 1.0)) + ((vec3(1.0) - (f51 * f27)) * (((((((CB0[35].xyz * f56) + (CB0[37].xyz * f57)) + (CB0[39].xyz * f58)) + (CB0[36].xyz * f59)) + (CB0[38].xyz * f60)) + (CB0[40].xyz * f61)) + (((((((CB0[29].xyz * f56) + (CB0[31].xyz * f57)) + (CB0[33].xyz * f58)) + (CB0[30].xyz * f59)) + (CB0[32].xyz * f60)) + (CB0[34].xyz * f61)) * f24)))) + ((CB0[27].xyz + (CB0[28].xyz * f24)) * 1.0)) * mix((f15 * f15).xyz, f32, vec3(VARYING7.w))) + (((f46 * (((f47 + (f47 * f47)) / (((f48 * f48) * ((f42 * 3.0) + 0.5)) * ((f41 * 0.75) + 0.25))) * f39)) * CB0[10].xyz) + ((mix(f34, f32, vec3(f24)) * f51) * f27));
+    vec3 f62 = ((((((((vec3(1.0) - (f46 * f27)) * CB0[10].xyz) * f39) + (CB0[12].xyz * clamp(-f37, 0.0, 1.0))) + ((f22.xyz * (f22.w * 120.0)).xyz * 1.0)) + ((vec3(1.0) - (f51 * f27)) * (((((((CB0[35].xyz * f56) + (CB0[37].xyz * f57)) + (CB0[39].xyz * f58)) + (CB0[36].xyz * f59)) + (CB0[38].xyz * f60)) + (CB0[40].xyz * f61)) + (((((((CB0[29].xyz * f56) + (CB0[31].xyz * f57)) + (CB0[33].xyz * f58)) + (CB0[30].xyz * f59)) + (CB0[32].xyz * f60)) + (CB0[34].xyz * f61)) * f24)))) + (CB0[27].xyz + (CB0[28].xyz * f24))) * mix((f15 * f15).xyz, f32, vec3(VARYING7.w))) + (((f46 * (((f47 + (f47 * f47)) / (((f48 * f48) * ((f42 * 3.0) + 0.5)) * ((f41 * 0.75) + 0.25))) * f39)) * CB0[10].xyz) + ((mix(f34, f32, vec3(f24)) * f51) * f27));
     vec4 f63 = vec4(f62.x, f62.y, f62.z, vec4(0.0).w);
     f63.w = VARYING2.w;
     float f64 = clamp(exp2((CB0[13].z * f0) + CB0[13].x) - CB0[13].w, 0.0, 1.0);

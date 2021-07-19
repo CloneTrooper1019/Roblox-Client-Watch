@@ -65,7 +65,7 @@ void main()
     float f34 = clamp(exp2((CB0[13].z * length(VARYING5)) + CB0[13].x) - CB0[13].w, 0.0, 1.0);
     vec3 f35 = textureLod(PrefilteredEnvTexture, vec4(-VARYING5, 0.0).xyz, max(CB0[13].y, f34) * 5.0).xyz;
     bvec3 f36 = bvec3(CB0[13].w != 0.0);
-    vec3 f37 = sqrt(clamp(mix(vec3(f36.x ? CB0[14].xyz.x : f35.x, f36.y ? CB0[14].xyz.y : f35.y, f36.z ? CB0[14].xyz.z : f35.z), mix(f33 * CB2[0].w, (min((f12.xyz * (f12.w * 120.0)).xyz + (CB0[8].xyz + (CB0[9].xyz * f13.x)), vec3(CB0[16].w)) + (VARYING2 * ((VARYING4.w > 0.0) ? mix(f14, mix(min((f23 <= f27) ? 1.0 : clamp(((f28 / (f28 + (f29 * f29))) - 0.20000000298023223876953125) * 1.25, 0.0, 1.0), (f24 <= f30) ? 1.0 : clamp(((f31 / (f31 + (f32 * f32))) - 0.20000000298023223876953125) * 1.25, 0.0, 1.0)), f14, clamp((length(VARYING4.xyz - CB0[7].xyz) * CB0[46].y) - (CB0[46].x * CB0[46].y), 0.0, 1.0)), CB0[47].x) : 0.0))) * f33, vec3(CB2[0].z)).xyz, vec3(f34)).xyz * CB0[15].y, vec3(0.0), vec3(1.0)));
+    vec3 f37 = sqrt(clamp(mix(vec3(f36.x ? CB0[14].xyz.x : f35.x, f36.y ? CB0[14].xyz.y : f35.y, f36.z ? CB0[14].xyz.z : f35.z), mix(f33 * CB2[0].w, (min((f12.xyz * (f12.w * 120.0)).xyz + (CB0[8].xyz + (CB0[9].xyz * f13.x)), vec3(CB0[16].w)) + (VARYING2 * (((VARYING4.w * CB0[47].x) > 0.0) ? mix(min((f23 <= f27) ? 1.0 : clamp(((f28 / (f28 + (f29 * f29))) - 0.20000000298023223876953125) * 1.25, 0.0, 1.0), (f24 <= f30) ? 1.0 : clamp(((f31 / (f31 + (f32 * f32))) - 0.20000000298023223876953125) * 1.25, 0.0, 1.0)), f14, clamp((length(VARYING4.xyz - CB0[7].xyz) * CB0[46].y) - (CB0[46].x * CB0[46].y), 0.0, 1.0)) : f14))) * f33, vec3(CB2[0].z)).xyz, vec3(f34)).xyz * CB0[15].y, vec3(0.0), vec3(1.0)));
     _entryPointOutput = vec4(f37.x, f37.y, f37.z, f8.w);
 }
 

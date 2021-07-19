@@ -9,8 +9,8 @@ uniform sampler3D LightGridSkylightTexture;
 uniform samplerCube PrefilteredEnvTexture;
 uniform samplerCube PrefilteredEnvIndoorTexture;
 uniform sampler2D PrecomputedBRDFTexture;
-uniform sampler2D DiffuseMapTexture;
 uniform sampler2D Tc2DiffuseMapTexture;
+uniform sampler2D DiffuseMapTexture;
 
 in vec2 VARYING0;
 in vec2 VARYING1;
@@ -79,7 +79,7 @@ void main()
     float f53 = f47.y;
     float f54 = f47.z;
     vec3 f55 = (mix(textureLod(PrefilteredEnvIndoorTexture, f21, f20).xyz * f12, textureLod(PrefilteredEnvTexture, f21, f20).xyz * mix(CB0[26].xyz, CB0[25].xyz, vec3(clamp(f19.y * 1.58823525905609130859375, 0.0, 1.0))), vec3(f13)) * f43) * f17;
-    vec3 f56 = ((((((((f40 - (f35 * f39)) * CB0[10].xyz) * f28) + (CB0[12].xyz * (f38 * clamp(-f26, 0.0, 1.0)))) + (f44 * (((((((CB0[35].xyz * f49) + (CB0[37].xyz * f50)) + (CB0[39].xyz * f51)) + (CB0[36].xyz * f52)) + (CB0[38].xyz * f53)) + (CB0[40].xyz * f54)) + (((((((CB0[29].xyz * f49) + (CB0[31].xyz * f50)) + (CB0[33].xyz * f51)) + (CB0[30].xyz * f52)) + (CB0[32].xyz * f53)) + (CB0[34].xyz * f54)) * f13)))) + ((CB0[27].xyz + (CB0[28].xyz * f13)) * 1.0)) * f16) + (((f35 * (((f36 + (f36 * f36)) / (((f37 * f37) * ((f31 * 3.0) + 0.5)) * ((f30 * 0.75) + 0.25))) * f28)) * CB0[10].xyz) + f55)) + ((f12 * mix(f16, f55 * (1.0 / (max(max(f55.x, f55.y), f55.z) + 0.00999999977648258209228515625)), (vec3(1.0) - f44) * (f17 * (1.0 - f13)))) * 1.0);
+    vec3 f56 = ((((((((f40 - (f35 * f39)) * CB0[10].xyz) * f28) + (CB0[12].xyz * (f38 * clamp(-f26, 0.0, 1.0)))) + (f44 * (((((((CB0[35].xyz * f49) + (CB0[37].xyz * f50)) + (CB0[39].xyz * f51)) + (CB0[36].xyz * f52)) + (CB0[38].xyz * f53)) + (CB0[40].xyz * f54)) + (((((((CB0[29].xyz * f49) + (CB0[31].xyz * f50)) + (CB0[33].xyz * f51)) + (CB0[30].xyz * f52)) + (CB0[32].xyz * f53)) + (CB0[34].xyz * f54)) * f13)))) + (CB0[27].xyz + (CB0[28].xyz * f13))) * f16) + (((f35 * (((f36 + (f36 * f36)) / (((f37 * f37) * ((f31 * 3.0) + 0.5)) * ((f30 * 0.75) + 0.25))) * f28)) * CB0[10].xyz) + f55)) + ((f12 * mix(f16, f55 * (1.0 / (max(max(f55.x, f55.y), f55.z) + 0.00999999977648258209228515625)), (vec3(1.0) - f44) * (f17 * (1.0 - f13)))) * 1.0);
     float f57 = f3.w;
     vec4 f58 = vec4(f56.x, f56.y, f56.z, vec4(0.0).w);
     f58.w = f57;
@@ -98,5 +98,5 @@ void main()
 //$$PrefilteredEnvTexture=s15
 //$$PrefilteredEnvIndoorTexture=s14
 //$$PrecomputedBRDFTexture=s11
-//$$DiffuseMapTexture=s3
 //$$Tc2DiffuseMapTexture=s0
+//$$DiffuseMapTexture=s3

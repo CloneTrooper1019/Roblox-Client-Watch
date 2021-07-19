@@ -42,7 +42,7 @@ void main()
     v13.x = dot(CB1[gl_InstanceID * 7 + 3].xyz, v0[v2]);
     vec2 v14 = v13;
     v14.y = dot(CB1[gl_InstanceID * 7 + 3].xyz, v1[v2]);
-    vec4 v15 = CB1[gl_InstanceID * 7 + 4] * mix(COLOR0 * 0.0039215688593685626983642578125, vec4(1.0), vec4(float(CB1[gl_InstanceID * 7 + 3].w > 0.0)));
+    vec4 v15 = CB1[gl_InstanceID * 7 + 4] * mix(COLOR0 * 0.0039215688593685626983642578125, vec4(1.0), vec4(max(sign(CB1[gl_InstanceID * 7 + 3].w), 0.0)));
     vec3 v16 = CB0[7].xyz - v9;
     vec3 v17 = normalize(v16);
     vec3 v18 = v10 * ((dot(v10, v17) > 0.0) ? 1.0 : (-1.0));

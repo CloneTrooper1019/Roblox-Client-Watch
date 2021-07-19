@@ -84346,6 +84346,10 @@
                 {
                     "Name": "Rbf",
                     "Value": 5
+                },
+                {
+                    "Name": "OuterCage",
+                    "Value": 6
                 }
             ],
             "Name": "WrapLayerDebugMode"

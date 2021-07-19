@@ -26,7 +26,7 @@ void main()
 {
     int v2 = int(NORMAL.w);
     vec4 v3 = COLOR0 * 0.0039215688593685626983642578125;
-    float v4 = float(CB1[gl_InstanceID * 7 + 3].w > 0.0);
+    float v4 = max(sign(CB1[gl_InstanceID * 7 + 3].w), 0.0);
     vec3 v5 = normalize(((NORMAL.xyz * 0.0078740157186985015869140625) - vec3(1.0)) / (CB1[gl_InstanceID * 7 + 3].xyz + vec3(0.001000000047497451305389404296875)));
     vec3 v6 = POSITION.xyz * CB1[gl_InstanceID * 7 + 3].xyz;
     vec4 v7 = vec4(v6.x, v6.y, v6.z, POSITION.w);

@@ -20,7 +20,7 @@ void main()
 {
     vec2 f0 = VARYING1;
     f0.y = (fract(VARYING1.y) + VARYING7) * 0.25;
-    vec3 f1 = vec4(VARYING2.xyz * (texture2D(StudsMapTexture, f0).x * 2.0), VARYING2.w).xyz;
+    vec3 f1 = vec4((VARYING2.xyz * texture2D(StudsMapTexture, f0).x) * 2.0, VARYING2.w).xyz;
     vec3 f2 = VARYING6.xyz - (CB0[11].xyz * VARYING3.w);
     float f3 = clamp(dot(step(CB0[19].xyz, abs(VARYING3.xyz - CB0[18].xyz)), vec3(1.0)), 0.0, 1.0);
     vec3 f4 = VARYING3.yzx - (VARYING3.yzx * f3);

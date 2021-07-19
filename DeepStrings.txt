@@ -1187,6 +1187,7 @@ AssemblyMovedFromStep
 AssemblyRootPart
 AssemblySetPhase
 Assertion_Failure_Release
+AssertMainThreadFailure
 AssertWriteLockOnRemove
 Asset.ashx
 AssetCounter]
@@ -1412,6 +1413,7 @@ AudioImportConfirmationDialog
 AudioImportDetailedAnalytics
 AudioImportOptionsDialog
 AudioOcclusionMaxPiercedPrimitives
+AudioOcclusionUpdateRateMs
 AudioPreferredSoundDeviceIndex
 AudioResourceController
 AudioResourceMenu
@@ -5949,6 +5951,7 @@ CDB707B206811871F972B2A9311C9
 CDDDDDDDDD
 CDEFGHIJSTUVWXYZcdefghijstuvwxyz
 Cdotaccent
+CdrIV7DirIAq31qK9Q0HfPNULl7Qv
 CE583B11E29A3DBD856014A660
 Cedillasmall
 CelestialBodiesShown
@@ -6017,6 +6020,7 @@ CFrame.new
 CFrameOnly
 CFramePose
 CFrameValue
+CfU1LysMLkX3bs1xQvlnUd9vOUdCuL2Rd1bfD6SfsFXlqYUDrbpj4
 ChainCAFile
 ChainCAPath
 Chalkboard
@@ -6218,6 +6222,7 @@ CIDFontName
 CIDFontType
 CIDFontVersion
 CIDMapOffset
+CIjHQrUQg8d
 CinderBlock
 CIOSW[^adfikosvy
 CipherString
@@ -11075,6 +11080,7 @@ FastLogValueChanged]
 FastVarType
 FastVarValueType
 FastVisuallyMovingCounters4
+FatalAssertMainThread
 FavoritesCategory
 FB642AAED11E38B9D871882A8E559
 FB645AAED11E38B9D871882A8E559
@@ -11145,6 +11151,7 @@ FCCBB70B0BF11E395B6E5DB6211F344
 FCCBB73B0BF11E395B6E5DB6211F344
 FCCBB74B0BF11E395B6E5DB6211F344
 FCDAAED11E38B9D871882A8E559
+Fco3GA9BqXMT2Udr8vzOjqkSSIOysWVyeBZacRl86YSc
 FD0AAED11E38B9D871882A8E559
 FD1AAED11E38B9D871882A8E559
 FD8642D2249E1119F2FDB7CBEC74584
@@ -11564,6 +11571,7 @@ FixWindowsClientCrashWithVersionHalfCount
 FixWorldModelHumanoidScalingInBuildRig
 FixWriteCombinedMemoryReadWrite
 FJFTF^FhFrF
+FkTGWPEBps5C8
 FlagCaptured
 FlagCreated
 FlagCursor.png
@@ -11738,7 +11746,6 @@ FoundItems
 FoundThread
 FpFramebuffer
 FpsVariance
-FR5J6eR6KBLD9pqWU4ES6U5rqvOOCXmBB0KzL8SxI806N9rSNg8c6
 Fractional
 FRAGMENT_SCRIPT
 FragmentScript
@@ -13010,8 +13017,6 @@ GlobalUsers.GameSorts.GameGridV2
 GlobalUsers.LuaApp.HideGameStats
 GlobalUsers.LuaApp.SpotlightTile
 GLSL.std.450
-Glsles3Mediump1
-GlslesMediump1
 GoodbyeChoiceActive
 GoodbyeChoiceActiveProperty
 GoodbyeDialog
@@ -13563,6 +13568,7 @@ HPEAVVideoStream
 HPEBDPEBDV
 HPEBVQMimeData
 HQEAPEAVQGraphicsItem
+HRSWXFPHFDgR1L6Z7rM3nInzvQ3YgXkR
 HSoftware\ROBLOX
 HSRDataGeneration
 HSRDataSupportCluster
@@ -14081,8 +14087,6 @@ IllegalTeleport
 ILoggedInUser
 ILoginManager
 ILuaCalloutTarget
-Im1Q7m6CEEZfxOGUlPt2uroyjtAZ7kB8E3JxXf
-IM4k6XPSdEkNi
 IMAEBVInstanceIdentifier
 ImageAssetPropertyItem
 ImageAtlas
@@ -15046,6 +15050,7 @@ JW4HttpRequestResult
 JW4InfoType
 JW4TextFilterContext
 JW4ThumbnailType
+JYVfLCciSwlf4uK9
 K\7IxU..UxI7\K
 K_Key_dn.png
 KaiTi_GB2312
@@ -15054,6 +15059,7 @@ Kamerageschwindigkeit
 Kameraposition
 Kamerazoom
 KBytesPerSec
+KCYPVEFGgxaABEg1Gb1Ek
 KeepAliveTimeout
 KeepChildLayoutState2
 KeepPositionOnInsert
@@ -15111,7 +15117,7 @@ KeyUpdateInfo
 KeyUsagePeriod
 KeywordFilterType
 KfaO3j5BbG6ijHHxFy22YNNJwxKTT
-KFcnn2syJbfHarEX8xwu6POink91TWTuwi1Lm0Ox0murgszaVnkBn7Z
+KfBoNlO3Vx
 KfE9k0uDfE9k
 KFKPKXK`KhK
 KickByDatacenter_
@@ -15163,7 +15169,6 @@ LabelLayout
 LabelledData
 LadderRaycast
 Ladereihenfolge
-LALsYiVnaNetFblq2O7BEtktpObcaxhjV57HZyuZq8o
 LandedBalanceD
 LandedBalanceP
 LandedTolerance
@@ -15346,7 +15351,6 @@ Leistungsdiagnose
 LengthToWrite
 LessThan10
 LetterOrNumber
-LEVBQdpbfsLjzNrQ6ALvfhllW28OEoeZUCAwEAAQ
 LevelChanged
 LevelItemCount
 LevelofDetail
@@ -16792,7 +16796,7 @@ MigrateTriangleMeshData3
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsI9zRp2OSccqdFx2
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAupANB3EbN9hFHHUj0eA
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzjPRQo9jc
-MIICCgKCAgEAuHMr3KUZ
+MIICCgKCAgEA21r4tX
 Millisecond
 MillisecondsBeforeHandlingReconnect
 MimeDataFromSelection
@@ -16819,6 +16823,7 @@ MinimumSize
 MinimumTerrainStreamingRadiusRegions
 MinimumWidth
 MinkowskiPenetrationDepthSolver
+MinOccludableVolumeThousandths
 MinPartsForOptDragging
 MinPartSize
 MinPartSizeBetaFeature
@@ -16848,7 +16853,6 @@ Mitbearbeiter
 Mitglieder
 Mitteilungen
 Mitwirkender
-MJo1h6P2lcSOoRCCJDzuqQOlgNlC3JwPKupSFzjZEdlwyOoENzu
 MMW4IkDragCollisionsMode
 MMW4PartMaterial
 MMW4UserInputState
@@ -17728,6 +17732,7 @@ NW4FileSystemDir
 NW4PenStyle
 NW4RenderType
 NW4UserInputType
+NZwdFvzULlfyV
 Oacutesmall
 OAEPEncryptionSET
 OAUTHBEARER
@@ -18556,7 +18561,6 @@ PCertReqData
 PCertResTBS
 PCStudioApp
 PCStudioAppCJV
-PdpiocwJe4ym
 PE_MAX_NB_SUBFR
 PEAD1AEAPEAD
 PEAPEAVsgCObject
@@ -20910,7 +20914,6 @@ QGuiApplication
 QHBoxLayout
 QHeaderView
 QHoverEvent
-QiDVhXRdymHmwKEt2B2LfbVd
 QImageReader
 QInputDialog
 QInputMethodEvent
@@ -20955,7 +20958,6 @@ QNetworkProxyFactory
 QNetworkReplyImplPrivate
 QNetworkRequest
 QNPPPPPPPPPPPPPPPPPPPNOP
-QnPTmfu5FmGcbyYbHWpFzCC
 QObjectData
 QObjectShared
 QOgreWidget
@@ -22098,6 +22100,7 @@ RenderTextureManagerBudget
 RenderTextureManagerBudgetFor4k
 RenderThrottleLocalLights
 RenderType
+RenderUseHalfsiOS
 RenderUseTexturePackColor
 RenderVideo
 RenderView
@@ -22975,7 +22978,6 @@ RVUseNanoSeconds
 RxIgnoredBytes
 RxIgnoredPackets
 RxRlReport
-RzPzEjojdwQU
 S_Key_dn.png
 SA_KPEAPEBV123
 SA_KPEAPEBVfacet
@@ -23972,7 +23974,6 @@ SetWindowLongPtrA
 SetWindowPos
 SetWindowsHookExA
 SetWindowTextA
-Sh2JzXFKhairel6HJJJp2z4uugVWZqf
 ShaderSource
 ShadingLanguage
 ShadowAtlas
@@ -28712,7 +28713,6 @@ StudioEnableSignalRMetricsInUserNotificationClient
 StudioEnableTasksTracker
 StudioEnableTeachingCallouts
 StudioError
-StudioExitQuicklyOnFatalError
 StudioExplorerSuppressNewObjectMenu
 StudioExplorerWidgetScrollPerPixel
 StudioExportRetryRequestLimit
@@ -29054,6 +29054,7 @@ StudioShowDownloadForCloudPlace
 StudioShowHiddenInstancesForRbxp
 StudioShowHideABTestV2
 StudioShowUpdatedAboutDialog
+StudioShutdownCrashReporterOnFatalError
 StudioStartPlaySolo
 StudioStartPlaySolo.End.Failure
 StudioStartPlaySolo.End.Success
@@ -29568,6 +29569,7 @@ TeamTestDisconnect
 TeamTestGame
 Technologies
 Technology
+Teci1kH3kbtVKkbPELIpxxl
 TeeShirtAccessory
 Teilekoordinaten
 Teiloberfl
@@ -31387,7 +31389,6 @@ UnregisterResourceData
 UnregisterThumbstick
 Unresolved
 UNRESOLVED
-UNRhUH966VyVIl58vgC
 UnsafeLegacyRenegotiation
 UnsavedChanges
 UnSavedScripts
@@ -31916,6 +31917,7 @@ UWATAUAVAW
 UWATAUAVAWH
 Uweb_response
 UWebSocketNull
+UWEW5eWrXq7CwSpu01vAz5VoRiDQeYspy
 UWhiteList
 UWindowInputState
 UWindowShowMessageNotification
@@ -32496,7 +32498,6 @@ VException
 VExplosion
 VExpression
 VExtrudedPartInstance
-VEYabu7csL1xcyoffLcPd
 VFaceControls
 VFaceInstance
 VFakeAtlExtension
@@ -32626,6 +32627,7 @@ VHumanoidAssetRequirement
 VHumanoidController
 VHumanoidDescription
 VHumanoidState
+VI0rYQUNR7FD821Sic6z5sBnhkZRuaWP8bEEb7WsCAwEAAQ
 ViableConnectionsLeft
 VIAdornableCollector
 VIAssetFetcher
@@ -33469,6 +33471,7 @@ VXmlElement
 VYieldFunctions
 VYieldFunctionState
 VYieldFunctionStateObject_DEPRECATED
+VYLAVlcbeZvYTwsEEW
 W_Key_dn.png
 WaistAccessory
 WaistBack_Att
@@ -33548,7 +33551,6 @@ WaterWaveSize
 WaterWaveSpeed
 WaypointIdx
 WaypointSpacing
-WcaOChWaotFwf5XU8puOJvdiBoRjpj7lsOL
 WCharArray
 Wcircumflex
 WDU_Mbstatet
@@ -33855,6 +33857,7 @@ WorldTrackJointInsertSplit
 Worttreffer
 WP1Lk7UmX3No0NAVVrlNv8vM1TKYodC60fXpXkwOnxGMHelMkfu58xsxIB9tXB4U
 WPACKET_start_sub_packet_len__
+Wr3z7EEOHzgP3
 WrapDeformer
 WrapDeformerContext
 WrapDeformerDispatcher
@@ -33972,6 +33975,7 @@ XboxPlayNextGame
 XboxPresencePolling
 XboxSaleAvatarPackageIds
 XboxUseNewValidUsernameCheck2
+XE2soUgYEb6qsNCwEGyweDgwXwTmfJUhnOhJ
 XFbxAMatrix
 XFREE86_GLYPH_RANGES
 XGetLastError
@@ -33983,6 +33987,7 @@ XInputGetState
 XInputSetState
 Xinvalid_argument
 Xlength_error
+XNngRwnz48BsUbEKZQtA0vFC
 Xout_of_range
 XP6AXAEBUTextFilterResult
 XP6AXAEBVQString
@@ -34024,7 +34029,6 @@ Xtime_get_ticks
 XUCompletionList
 XUnegotiation_response
 XUNetworkResult
-XUpHV76nCnif4Z0Wg8LJOHdpJERJYImAvEYw2kCGeew8btPV8t
 XUTextPosition
 XvAAuY44YuAAvX4
 XVAddImageDialog
@@ -34127,7 +34131,6 @@ YAHPEAU_Threadpool_chore
 YAHPEAVQStringList
 YAHW4RegistrationType
 YAIAEBVQString
-YaKv6xRWfkG9MOif
 YAlignment
 YAP6AXW4QtMsgType
 YAPEAU_iobuf
@@ -34147,7 +34150,6 @@ YAXPEBVQObject
 YAXVexception_ptr
 YAXW4error_type
 YAXW4RegistrationType
-YCaFdGa9gMsYBPP
 Ycircumflex
 Ydieresissmall
 YDYHYQYTYbYsY
@@ -34171,7 +34173,6 @@ ZeroZombies
 ZgnhKhWhci
 ZhniZzzzZbarAnmrAgneBlryCaveDroeGkerGrjuGuruGgnaHinaHrbeHariHadnKanaKooaLntaLmylMayrOlmaTuleTiahTtbiTopoBiarBsnaCrehCihtErmhKgnoMrmyMmagOrnuRhniScrySaahTiiiYtrsDhtoGlatIdhuBonaHglgTbgaTtrpCbmiLbniLamsOwahSelaTragUiguBtpoCgalGrahKulaToepXolySgnfTilaBxusXookNga
 ZIndexBehavior
-ZKdpWKwrk8C2HTV1yBKQxYv
 ZLcJhLcGhM
 ZNjlXiODrHUcaGRYt
 ZntaLkerGlryCnmrArbeHbarAcrySaahTaveDgneBuruGrjuGayrOlmaTuleTadnKmylMhniSiahTooaLtbiTrmyMroeGgnaHihtErehCsnaCmagOrnuRrmhKgnoMariHanaKopoBinaHiiiYlatIhtoGtrsDhniZglgTonaHdhuBbgaTbmiLelaTbniLragUwahSamsOtrpCiarBiguBtpoCulaTgalGgnfTolySoepXrahKilaBxusXxnhPgahPoo
@@ -34187,6 +34188,7 @@ Zusammenfassung
 ZVLocalTouchedSignal
 ZVspecial_equipped_signal
 ZVTouchedSignal
+Zw36EmRuTh9sGTmyThcIOetge8FwBScbD2qUFQjLET0WG5kNC8CbTUQx
 Zwischenablage
 Zwischenspeicher
 Zwischenspeichergr

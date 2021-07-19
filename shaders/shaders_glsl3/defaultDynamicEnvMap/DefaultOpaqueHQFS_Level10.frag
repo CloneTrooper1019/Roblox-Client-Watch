@@ -12,8 +12,8 @@ uniform samplerCube PrefilteredEnvTexture;
 uniform samplerCube PrefilteredEnvIndoorTexture;
 uniform samplerCube PrefilteredEnvBlendTargetTexture;
 uniform sampler2D PrecomputedBRDFTexture;
-uniform sampler2D DiffuseMapTexture;
 uniform sampler2D Tc2DiffuseMapTexture;
+uniform sampler2D DiffuseMapTexture;
 
 in vec2 VARYING0;
 in vec2 VARYING1;
@@ -28,12 +28,12 @@ void main()
 {
     float f0 = length(VARYING4.xyz);
     vec3 f1 = VARYING4.xyz / vec3(f0);
-    vec4 f2 = texture(DiffuseMapTexture, VARYING0);
-    vec4 f3 = texture(Tc2DiffuseMapTexture, VARYING1);
+    vec4 f2 = texture(Tc2DiffuseMapTexture, VARYING1);
+    vec4 f3 = texture(DiffuseMapTexture, VARYING0);
     vec3 f4 = normalize(VARYING5.xyz) * (gl_FrontFacing ? 1.0 : (-1.0));
     vec3 f5 = -CB0[11].xyz;
     float f6 = dot(f4, f5);
-    vec3 f7 = (mix(f2, f3, vec4(f3.w)) * VARYING2).xyz;
+    vec3 f7 = (mix(f3, f2, vec4(f2.w)) * VARYING2).xyz;
     vec3 f8 = VARYING6.xyz - (CB0[11].xyz * VARYING3.w);
     float f9 = clamp(dot(step(CB0[19].xyz, abs(VARYING3.xyz - CB0[18].xyz)), vec3(1.0)), 0.0, 1.0);
     vec3 f10 = VARYING3.yzx - (VARYING3.yzx * f9);
@@ -84,7 +84,7 @@ void main()
     float f45 = VARYING6.w * f37;
     vec3 f46 = mix(vec3(0.039999999105930328369140625), f36, vec3(f45));
     vec3 f47 = normalize(f5 + f1);
-    float f48 = clamp(f6 * ((f6 > 0.0) ? mix(f17, mix(min((f26 <= f30) ? 1.0 : clamp(((f31 / (f31 + (f32 * f32))) - 0.20000000298023223876953125) * 1.25, 0.0, 1.0), (f27 <= f33) ? 1.0 : clamp(((f34 / (f34 + (f35 * f35))) - 0.20000000298023223876953125) * 1.25, 0.0, 1.0)), f17, clamp((length(f8 - CB0[7].xyz) * CB0[46].y) - (CB0[46].x * CB0[46].y), 0.0, 1.0)), CB0[47].x) : 0.0), 0.0, 1.0);
+    float f48 = clamp(f6 * (((f6 * CB0[47].x) > 0.0) ? mix(min((f26 <= f30) ? 1.0 : clamp(((f31 / (f31 + (f32 * f32))) - 0.20000000298023223876953125) * 1.25, 0.0, 1.0), (f27 <= f33) ? 1.0 : clamp(((f34 / (f34 + (f35 * f35))) - 0.20000000298023223876953125) * 1.25, 0.0, 1.0)), f17, clamp((length(f8 - CB0[7].xyz) * CB0[46].y) - (CB0[46].x * CB0[46].y), 0.0, 1.0)) : f17), 0.0, 1.0);
     float f49 = f38 * f38;
     float f50 = max(0.001000000047497451305389404296875, dot(f4, f47));
     float f51 = dot(f5, f47);
@@ -110,7 +110,7 @@ void main()
     float f71 = f66.x;
     float f72 = f66.y;
     float f73 = f66.z;
-    vec3 f74 = (((((((f60 - (f55 * f59)) * CB0[10].xyz) * f48) + ((f14.xyz * (f14.w * 120.0)).xyz * 1.0)) + ((f60 - (f63 * f59)) * (((((((CB0[35].xyz * f68) + (CB0[37].xyz * f69)) + (CB0[39].xyz * f70)) + (CB0[36].xyz * f71)) + (CB0[38].xyz * f72)) + (CB0[40].xyz * f73)) + (((((((CB0[29].xyz * f68) + (CB0[31].xyz * f69)) + (CB0[33].xyz * f70)) + (CB0[30].xyz * f71)) + (CB0[32].xyz * f72)) + (CB0[34].xyz * f73)) * f16)))) + ((CB0[27].xyz + (CB0[28].xyz * f16)) * 1.0)) * f36) + (((f55 * (((f56 + (f56 * f56)) / (((f57 * f57) * ((f51 * 3.0) + 0.5)) * ((f50 * 0.75) + 0.25))) * f48)) * CB0[10].xyz) + ((mix(f43, textureLod(PrefilteredEnvTexture, f41, f40).xyz * mix(CB0[26].xyz, CB0[25].xyz, vec3(clamp(f39.y * 1.58823525905609130859375, 0.0, 1.0))), vec3(f16)) * f63) * f37));
+    vec3 f74 = (((((((f60 - (f55 * f59)) * CB0[10].xyz) * f48) + ((f14.xyz * (f14.w * 120.0)).xyz * 1.0)) + ((f60 - (f63 * f59)) * (((((((CB0[35].xyz * f68) + (CB0[37].xyz * f69)) + (CB0[39].xyz * f70)) + (CB0[36].xyz * f71)) + (CB0[38].xyz * f72)) + (CB0[40].xyz * f73)) + (((((((CB0[29].xyz * f68) + (CB0[31].xyz * f69)) + (CB0[33].xyz * f70)) + (CB0[30].xyz * f71)) + (CB0[32].xyz * f72)) + (CB0[34].xyz * f73)) * f16)))) + (CB0[27].xyz + (CB0[28].xyz * f16))) * f36) + (((f55 * (((f56 + (f56 * f56)) / (((f57 * f57) * ((f51 * 3.0) + 0.5)) * ((f50 * 0.75) + 0.25))) * f48)) * CB0[10].xyz) + ((mix(f43, textureLod(PrefilteredEnvTexture, f41, f40).xyz * mix(CB0[26].xyz, CB0[25].xyz, vec3(clamp(f39.y * 1.58823525905609130859375, 0.0, 1.0))), vec3(f16)) * f63) * f37));
     vec4 f75 = vec4(f74.x, f74.y, f74.z, vec4(0.0).w);
     f75.w = 1.0;
     float f76 = clamp(exp2((CB0[13].z * f0) + CB0[13].x) - CB0[13].w, 0.0, 1.0);
@@ -129,5 +129,5 @@ void main()
 //$$PrefilteredEnvIndoorTexture=s14
 //$$PrefilteredEnvBlendTargetTexture=s2
 //$$PrecomputedBRDFTexture=s11
-//$$DiffuseMapTexture=s3
 //$$Tc2DiffuseMapTexture=s0
+//$$DiffuseMapTexture=s3
