@@ -50,7 +50,7 @@ game:DefineFastFlag("ToolboxRemoveGroupInventory2", false)
 game:DefineFastFlag("ToolboxReplaceUILibraryComponentsPt3", false)
 game:DefineFastFlag("RemoveUILibraryFromToolbox", false)
 
-game:DefineFastFlag("ToolboxFixCategoryUrlsCircularDependency", false)
+game:DefineFastFlag("ToolboxFixCategoryUrlsCircularDependency2", false)
 
 game:DefineFastFlag("ToolboxTrackRunMode", false)
 

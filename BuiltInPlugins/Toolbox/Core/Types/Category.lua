@@ -1,12 +1,12 @@
 --!nocheck
--- TODO Remove nocheck with FFlagToolboxFixCategoryUrlsCircularDependency
+-- TODO Remove nocheck with FFlagToolboxFixCategoryUrlsCircularDependency2
 local FFlagFixToolboxPluginScaling = game:DefineFastFlag("FixToolboxPluginScaling", false)
 local FFlagToolboxDisableMarketplaceAndRecentsForLuobu = game:GetFastFlag("ToolboxDisableMarketplaceAndRecentsForLuobu")
 local FFlagToolboxShowRobloxCreatedAssetsForLuobu = game:GetFastFlag("ToolboxShowRobloxCreatedAssetsForLuobu")
 local FFlagFixAudioAssetsForLuoBu = game:DefineFastFlag("FixAudioAssetsForLuoBu", false)
 local FFlagStudioCreatePluginPolicyService = game:GetFastFlag("StudioCreatePluginPolicyService")
 local FFlagToolboxRemoveGroupInventory2 = game:GetFastFlag("ToolboxRemoveGroupInventory2")
-local FFlagToolboxFixCategoryUrlsCircularDependency = game:GetFastFlag("ToolboxFixCategoryUrlsCircularDependency")
+local FFlagToolboxFixCategoryUrlsCircularDependency2 = game:GetFastFlag("ToolboxFixCategoryUrlsCircularDependency2")
 local FFlagUGCGroupUploads = game:GetFastFlag("UGCGroupUploads")
 local FFlagToolboxLegacyFetchGroupModelsAndPackages = game:GetFastFlag("ToolboxLegacyFetchGroupModelsAndPackages")
 
@@ -15,7 +15,7 @@ local CreatorInfoHelper = require(Plugin.Core.Util.CreatorInfoHelper)
 local DebugFlags = require(Plugin.Core.Util.DebugFlags)
 local AssetConfigUtil
 local getAllowedAssetTypeEnums
-if FFlagToolboxFixCategoryUrlsCircularDependency then
+if FFlagToolboxFixCategoryUrlsCircularDependency2 then
 	getAllowedAssetTypeEnums = require(Plugin.Core.Util.getAllowedAssetTypeEnums)
 else
 	AssetConfigUtil = require(Plugin.Core.Util.AssetConfigUtil)
@@ -553,7 +553,7 @@ function Category.getCategories(tabName, roles)
 		local categories = getCreationCategories()
 		if roles then
 			local allowedAssetTypeEnums
-			if FFlagToolboxFixCategoryUrlsCircularDependency then
+			if FFlagToolboxFixCategoryUrlsCircularDependency2 then
 				allowedAssetTypeEnums = getAllowedAssetTypeEnums(roles.allowedAssetTypesForRelease)
 			else
 				allowedAssetTypeEnums = AssetConfigUtil.getAllowedAssetTypeEnums(roles.allowedAssetTypesForRelease)

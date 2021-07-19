@@ -1,11 +1,11 @@
 --!nocheck
--- TODO Remove nocheck with FFlagToolboxFixCategoryUrlsCircularDependency
+-- TODO Remove nocheck with FFlagToolboxFixCategoryUrlsCircularDependency2
 local Plugin = script.Parent.Parent.Parent
 
-local FFlagToolboxFixCategoryUrlsCircularDependency = game:GetFastFlag("ToolboxFixCategoryUrlsCircularDependency")
+local FFlagToolboxFixCategoryUrlsCircularDependency2 = game:GetFastFlag("ToolboxFixCategoryUrlsCircularDependency2")
 
 local Category
-if FFlagToolboxFixCategoryUrlsCircularDependency then
+if FFlagToolboxFixCategoryUrlsCircularDependency2 then
 	Category = require(Plugin.Core.Types.Category)
 end
 local Url = require(Plugin.Libs.Http.Url)
@@ -154,7 +154,7 @@ function Urls.ToolboxEndpointMigration_constructGetToolboxItemsUrl(category, sor
 		useCreatorWhitelist = useCreatorWhitelist,
 	}
 
-	if not FFlagToolboxFixCategoryUrlsCircularDependency then
+	if not FFlagToolboxFixCategoryUrlsCircularDependency2 then
 		-- Category is required here as there is a circular dependency between Category and Urls
 		-- TODO STM-615: Move to file scope when circular dependency issues are fixed
 		Category = require(Plugin.Core.Types.Category)

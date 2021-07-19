@@ -7,7 +7,7 @@
 		callback onClose - called when the user presses the "cancel" button
 ]]
 
-local FFlagToolboxFixCategoryUrlsCircularDependency = game:GetFastFlag("ToolboxFixCategoryUrlsCircularDependency")
+local FFlagToolboxFixCategoryUrlsCircularDependency2 = game:GetFastFlag("ToolboxFixCategoryUrlsCircularDependency2")
 
 local Plugin = script.Parent.Parent.Parent.Parent
 
@@ -18,14 +18,11 @@ local RoactRodux = require(Libs.RoactRodux)
 local Util = Plugin.Core.Util
 local ContextHelper = require(Util.ContextHelper)
 local AssetConfigConstants = require(Util.AssetConfigConstants)
-local AssetConfigUtil
+local AssetConfigUtil = require(Util.AssetConfigUtil)
 local getAllowedAssetTypeEnums
-if FFlagToolboxFixCategoryUrlsCircularDependency then
+if FFlagToolboxFixCategoryUrlsCircularDependency2 then
 	getAllowedAssetTypeEnums = require(Util.getAllowedAssetTypeEnums)
-else
-	AssetConfigUtil = require(Util.AssetConfigUtil)
 end
-
 
 local Components = Plugin.Core.Components
 local NavButton = require(Components.NavButton)
@@ -73,7 +70,7 @@ function AssetTypeSelection:getSelectorItems(localizedContent)
 	-- only catalog item creators can upload hats
 
 	local allowedAssetTypes
-	if FFlagToolboxFixCategoryUrlsCircularDependency then
+	if FFlagToolboxFixCategoryUrlsCircularDependency2 then
 		allowedAssetTypes = getAllowedAssetTypeEnums(self.props.allowedAssetTypesForRelease)
 	else
 		allowedAssetTypes = AssetConfigUtil.getAllowedAssetTypeEnums(self.props.allowedAssetTypesForRelease)

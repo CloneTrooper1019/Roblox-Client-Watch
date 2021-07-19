@@ -15,6 +15,8 @@ local isCli = require(Plugin.Core.Util.isCli)
 local Localization = {}
 Localization.__index = Localization
 
+local FFlagToolboxHideSpuriousTranslationWarnings = game:DefineFastFlag("ToolboxHideSpuriousTranslationWarnings", false)
+
 local FFlagToolboxFixCommonWarnings2 = game:GetFastFlag("ToolboxFixCommonWarnings2")
 
 --[[
@@ -295,6 +297,8 @@ function Localization:_update(changedContent)
 	self._signal:fire(self.content)
 end
 
+local MISSING_TRANSLATION_ERROR_MESSAGE = "LocalizationTable or parent tables do not contain a translation"
+
 -- Attempts to localize key with args in the current translator
 -- If it fails, it attempts again in the default locale
 -- If it still fails, then it just falls back to using the key
@@ -312,8 +316,15 @@ function Localization:_safeLocalize(key, args)
 
 	if not success then
 		if DebugFlags.shouldDebugWarnings() then
-			warn(("Toolbox error in localizing key \"%s\" to locale \"%s\": %s"):format(
-				key, translator.LocaleId, translated))
+			if FFlagToolboxHideSpuriousTranslationWarnings then
+				if not string.find(translated, MISSING_TRANSLATION_ERROR_MESSAGE) then
+					warn(("Toolbox error in localizing key \"%s\" to locale \"%s\": %s"):format(
+						key, translator.LocaleId, translated))
+				end
+			else
+				warn(("Toolbox error in localizing key \"%s\" to locale \"%s\": %s"):format(
+					key, translator.LocaleId, translated))
+			end
 		end
 
 		local defaultTranslator = self:_getDefaultTranslator()
@@ -327,8 +338,15 @@ function Localization:_safeLocalize(key, args)
 
 		if not success then
 			if DebugFlags.shouldDebugWarnings() then
-				warn(("\tToolbox error in localizing key \"%s\" to default locale \"%s\": %s"):format(
-					key, defaultTranslator.LocaleId, translated))
+				if FFlagToolboxHideSpuriousTranslationWarnings then
+					if not string.find(translated, MISSING_TRANSLATION_ERROR_MESSAGE) then
+						warn(("\tToolbox error in localizing key \"%s\" to default locale \"%s\": %s"):format(
+							key, defaultTranslator.LocaleId, translated))		
+					end
+				else
+					warn(("\tToolbox error in localizing key \"%s\" to default locale \"%s\": %s"):format(
+						key, defaultTranslator.LocaleId, translated))
+				end
 			end
 			-- If we can't translate to real locale or default locale, fallback to returning the key
 			translated = key

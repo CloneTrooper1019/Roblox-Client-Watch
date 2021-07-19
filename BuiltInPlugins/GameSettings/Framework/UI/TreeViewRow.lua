@@ -12,6 +12,7 @@
 	Optional Props:
 		any BeforeToggle: An optional component to render before the toggle. Passed the Row props and the expected LayoutOrder.
 		any BeforeIcon: An optional component to render before the icon. Passed the Row props and the expected LayoutOrder.
+		any WrapperProps: Props inherited from withControl to be passed to the underlying Pane.
 ]]
 
 local Framework = script.Parent.Parent

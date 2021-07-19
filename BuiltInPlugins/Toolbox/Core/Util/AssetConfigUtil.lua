@@ -1,11 +1,11 @@
 --!nocheck
--- TODO Remove nocheck with FFlagToolboxFixCategoryUrlsCircularDependency
+-- TODO Remove nocheck with FFlagToolboxFixCategoryUrlsCircularDependency2
 local Plugin = script.Parent.Parent.Parent
 local Util = Plugin.Core.Util
 local AssetConfigConstants = require(Util.AssetConfigConstants)
 local getUserId = require(Util.getUserId)
 local Urls = require(Util.Urls)
-local FFlagToolboxFixCategoryUrlsCircularDependency = game:GetFastFlag("ToolboxFixCategoryUrlsCircularDependency")
+local FFlagToolboxFixCategoryUrlsCircularDependency2 = game:GetFastFlag("ToolboxFixCategoryUrlsCircularDependency2")
 
 local DFIntFileMaxSizeBytes = tonumber(settings():GetFVariable("FileMaxSizeBytes"))
 
@@ -188,7 +188,7 @@ function AssetConfigUtil.getOwnerDropDownContent(manageableGroups, localizedCont
 	return result
 end
 
-if not FFlagToolboxFixCategoryUrlsCircularDependency then
+if not FFlagToolboxFixCategoryUrlsCircularDependency2 then
 	function AssetConfigUtil.getAllowedAssetTypeEnums(allowedAssetTypesForRelease)
 		local result = {}
 		if allowedAssetTypesForRelease then
